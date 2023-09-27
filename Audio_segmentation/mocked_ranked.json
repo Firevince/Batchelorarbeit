@@ -1,0 +1,35 @@
+[
+  {
+    "id": 7,
+    "filename": "oriana-fallaci-kompromisslos-stolz-und-unbequem-1.mp3",
+    "seek": 5624,
+    "start": 56.24,
+    "end": 62.56,
+    "text": " Im Herbst 1967 reist sie das erste Mal als Kriegskorrespondentin nach Saigon,",
+    "tokens": [
+      50364, 4331, 3204, 9690, 33193, 319, 468, 2804, 1482, 20951, 5746, 3907,
+      35579, 21559, 19339, 6663, 47300, 5168, 6299, 47578, 11, 50680
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16354073234226393,
+    "compression_ratio": 1.4536082474226804,
+    "no_speech_prob": 0.238876610994339
+  },
+  {
+    "id": 58,
+    "filename": "1968-das-ausnahmejahr.mp3",
+    "seek": 41426,
+    "start": 426.65999999999997,
+    "end": 435.06,
+    "text": " des Jahres 1968 zum Kampf gegen die Hegemonialmacht Amerika. Mit einem internationalen Vietnamkongress,",
+    "tokens": [
+      50984, 730, 44360, 29930, 5919, 45126, 13953, 978, 634, 432, 3317, 831,
+      76, 3589, 42345, 13, 10821, 6827, 5058, 268, 11013, 74, 556, 735, 11,
+      51404
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13052624922532302,
+    "compression_ratio": 1.4486692015209126,
+    "no_speech_prob": 0.170701801776886
+  }
+]
