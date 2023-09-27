@@ -31,7 +31,7 @@ response = requests.post(graphql_url, json={"query": query})
 
 if response.status_code == 200:
     data = response.json()
-    download_dir = "./Podcast_files"
+    download_dir = "./Episode_files"
     os.makedirs(download_dir, exist_ok=True)
     for audio_data in data["data"]["programSet"]["items"]["nodes"]:
 

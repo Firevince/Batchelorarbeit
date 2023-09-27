@@ -18,7 +18,7 @@ def produce_snippets(ranked_json):
      
 
     for i, segment in enumerate(ranked_timestamped):
-        input_audio_file = "../Podcast_files/" + segment["filename"] 
+        input_audio_file = "../Episode_files/" + segment["filename"] 
         start = segment["start"] 
         end = segment["end"]    
         audio_segment = split_audio(input_audio_file, start, end)
