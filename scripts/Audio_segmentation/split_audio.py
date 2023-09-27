@@ -18,13 +18,13 @@ def produce_snippets(ranked_json):
      
 
     for i, segment in enumerate(ranked_timestamped):
-        input_audio_file = "Podcast_files/" + segment["filename"] 
+        input_audio_file = "../Podcast_files/" + segment["filename"] 
         start = segment["start"] 
         end = segment["end"]    
         audio_segment = split_audio(input_audio_file, start, end)
 
-        output_file = f"Audio_segmentation/audio_segments/segment_{i}.mp3"
+        output_file = f"audio_segments/segment_{i}.mp3"
         audio_segment.export(output_file, format="mp3")
         print(f"Segment {i} saved as {output_file}")
 
-produce_snippets("Audio_segmentation/mocked_ranked.json")
+produce_snippets("mocked_ranked.json")
