@@ -1,0 +1,3313 @@
+[
+  {
+    "id": 0,
+    "seek": 0,
+    "start": 0.0,
+    "end": 8.0,
+    "text": " Die ganze Welt des Wissens. Ein Podcast von bayern 2.",
+    "tokens": [
+      50364, 3229, 18898, 14761, 730, 343, 891, 694, 13, 6391, 29972, 2957,
+      13642, 1248, 568, 13, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2114171433722836,
+    "compression_ratio": 1.3991416309012876,
+    "no_speech_prob": 0.03356483206152916
+  },
+  {
+    "id": 1,
+    "seek": 0,
+    "start": 8.0,
+    "end": 16.92,
+    "text": " Wo sollen wir wohnen? Und wie sollen wir das \u00fcberhaupt bezahlen? Immer mehr Menschen sind",
+    "tokens": [
+      50764, 6622, 24713, 1987, 261, 2359, 268, 30, 2719, 3355, 24713, 1987,
+      1482, 20023, 10782, 21128, 30, 42676, 5417, 8397, 3290, 51210
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2114171433722836,
+    "compression_ratio": 1.3991416309012876,
+    "no_speech_prob": 0.03356483206152916
+  },
+  {
+    "id": 2,
+    "seek": 0,
+    "start": 16.92,
+    "end": 21.400000000000002,
+    "text": " in Deutschland mit diesen Fragen konfrontiert. Ein klarer Fall f\u00fcr den sozialen Wohnungsbau?",
+    "tokens": [
+      51210, 294, 14802, 2194, 12862, 25588, 5897, 11496, 4859, 13, 6391, 14743,
+      260, 7465, 2959, 1441, 31541, 268, 22741, 5846, 26820, 30, 51434
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2114171433722836,
+    "compression_ratio": 1.3991416309012876,
+    "no_speech_prob": 0.03356483206152916
+  },
+  {
+    "id": 3,
+    "seek": 0,
+    "start": 21.400000000000002,
+    "end": 27.240000000000002,
+    "text": " Nach dem zweiten Weltkrieg ging es gar nicht anders, da musste der Staat helfen. Und es",
+    "tokens": [
+      51434, 11815, 1371, 39943, 14761, 74, 5469, 70, 21924, 785, 3691, 1979,
+      17999, 11, 1120, 34497, 1163, 45559, 29966, 13, 2719, 785, 51726
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2114171433722836,
+    "compression_ratio": 1.3991416309012876,
+    "no_speech_prob": 0.03356483206152916
+  },
+  {
+    "id": 4,
+    "seek": 2724,
+    "start": 27.24,
+    "end": 31.88,
+    "text": " war eine Erfolgsgeschichte. Was ist daraus geworden? Ein R\u00fcckblick von Georg Kuber.",
+    "tokens": [
+      50364, 1516, 3018, 3300, 7082, 21559, 23378, 18972, 13, 3027, 1418, 274,
+      46483, 26281, 30, 6391, 35001, 38263, 2957, 10114, 591, 10261, 13, 50596
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1349953498159136,
+    "compression_ratio": 1.3956043956043955,
+    "no_speech_prob": 0.5098792314529419
+  },
+  {
+    "id": 5,
+    "seek": 2724,
+    "start": 31.88,
+    "end": 40.4,
+    "text": " Wir sind Rheinl\u00e4nder und sind am 19.10.1946 aus Bayern ausgewiesen worden, weil wir dort",
+    "tokens": [
+      50596, 4347, 3290, 497, 44448, 75, 16082, 674, 3290, 669, 1294, 13, 3279,
+      13, 3405, 16169, 3437, 29163, 3437, 21306, 30383, 14054, 11, 7689, 1987,
+      15775, 51022
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1349953498159136,
+    "compression_ratio": 1.3956043956043955,
+    "no_speech_prob": 0.5098792314529419
+  },
+  {
+    "id": 6,
+    "seek": 2724,
+    "start": 40.4,
+    "end": 45.84,
+    "text": " Fl\u00fcchtlingen Platz machen mussten. Man versprach uns in Bayern, wenn wir nach Essen zur\u00fcckkommen,",
+    "tokens": [
+      51022, 3235, 36458, 39900, 27595, 7069, 1038, 6266, 13, 2458, 1774, 1424,
+      608, 2693, 294, 29163, 11, 4797, 1987, 5168, 42098, 15089, 13675, 11,
+      51294
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1349953498159136,
+    "compression_ratio": 1.3956043956043955,
+    "no_speech_prob": 0.5098792314529419
+  },
+  {
+    "id": 7,
+    "seek": 2724,
+    "start": 45.84,
+    "end": 53.0,
+    "text": " finden wir dort ordnungsgem\u00e4\u00dfe Unterk\u00fcnfte. Leider war dem nicht so. Nach 18-t\u00e4giger Fahrt hat man uns",
+    "tokens": [
+      51294, 20734, 1987, 15775, 4792, 77, 5846, 432, 22437, 11451, 12065, 74,
+      3412, 16268, 13, 1456, 1438, 1516, 1371, 1979, 370, 13, 11815, 2443, 12,
+      83, 50041, 4810, 19843, 83, 2385, 587, 2693, 51652
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1349953498159136,
+    "compression_ratio": 1.3956043956043955,
+    "no_speech_prob": 0.5098792314529419
+  },
+  {
+    "id": 8,
+    "seek": 5300,
+    "start": 53.48,
+    "end": 62.56,
+    "text": " nach Frechen dirigiert, wo wir am 3. November 1946 ankamen. Hunger und Wohnungsnot pr\u00e4gen die ersten",
+    "tokens": [
+      50388, 5168, 6142, 2470, 35243, 4859, 11, 6020, 1987, 669, 805, 13, 7674,
+      46062, 30890, 22403, 13, 46549, 674, 22741, 5846, 2247, 582, 737, 1766,
+      978, 17324, 50842
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1419799699695832,
+    "compression_ratio": 1.4736842105263157,
+    "no_speech_prob": 0.0396260991692543
+  },
+  {
+    "id": 9,
+    "seek": 5300,
+    "start": 62.56,
+    "end": 68.44,
+    "text": " Jahre nach dem Ende des zweiten Weltkriegs. Viele Familien leben in Notunterk\u00fcnften und Lagern,",
+    "tokens": [
+      50842, 15557, 5168, 1371, 15152, 730, 39943, 14761, 74, 5469, 21559, 13,
+      36022, 36451, 26392, 294, 1726, 21777, 74, 3412, 14513, 674, 24886, 1248,
+      11, 51136
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1419799699695832,
+    "compression_ratio": 1.4736842105263157,
+    "no_speech_prob": 0.0396260991692543
+  },
+  {
+    "id": 10,
+    "seek": 5300,
+    "start": 68.44,
+    "end": 74.48,
+    "text": " so wie hier in Frechen bei K\u00f6ln. Und man sieht es den Frauen an, die hier um mich herum sitzen,",
+    "tokens": [
+      51136, 370, 3355, 3296, 294, 6142, 2470, 4643, 591, 13072, 77, 13, 2719,
+      587, 14289, 785, 1441, 24191, 364, 11, 978, 3296, 1105, 6031, 49675,
+      44998, 11, 51438
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1419799699695832,
+    "compression_ratio": 1.4736842105263157,
+    "no_speech_prob": 0.0396260991692543
+  },
+  {
+    "id": 11,
+    "seek": 5300,
+    "start": 74.48,
+    "end": 81.16,
+    "text": " dass ihnen ein Heim fehlt. In ihren Gesichtern kann man ablesen, dass sie schon seit zwei Jahren",
+    "tokens": [
+      51438, 2658, 24623, 1343, 634, 332, 47994, 13, 682, 22347, 47777, 1248,
+      4028, 587, 410, 904, 268, 11, 2658, 2804, 4981, 16452, 12002, 13080, 51772
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1419799699695832,
+    "compression_ratio": 1.4736842105263157,
+    "no_speech_prob": 0.0396260991692543
+  },
+  {
+    "id": 12,
+    "seek": 8116,
+    "start": 81.56,
+    "end": 89.6,
+    "text": " oder fast seit drei Jahren in Massenquartieren wirklich hausen m\u00fcssen. Eine Reportage aus dem",
+    "tokens": [
+      50384, 4513, 2370, 16452, 16809, 13080, 294, 376, 8356, 358, 446, 5695,
+      9696, 324, 301, 268, 9013, 13, 17664, 16057, 609, 3437, 1371, 50786
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12341052239094305,
+    "compression_ratio": 1.4132841328413284,
+    "no_speech_prob": 0.015902657061815262
+  },
+  {
+    "id": 13,
+    "seek": 8116,
+    "start": 89.6,
+    "end": 97.64,
+    "text": " Jahr 1948. Die St\u00e4dte sind ausgebombt. Besonders betroffen sind die Innenst\u00e4dte, wo 50 bis 90%",
+    "tokens": [
+      50786, 11674, 38833, 13, 3229, 745, 16837, 975, 3290, 3437, 10848, 3548,
+      83, 13, 8190, 49308, 778, 30594, 3290, 978, 43617, 372, 16837, 975, 11,
+      6020, 2625, 7393, 4289, 4, 51188
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12341052239094305,
+    "compression_ratio": 1.4132841328413284,
+    "no_speech_prob": 0.015902657061815262
+  },
+  {
+    "id": 14,
+    "seek": 8116,
+    "start": 97.64,
+    "end": 104.16,
+    "text": " der Wohnungen zerst\u00f6rt sind. Viele Obdachlose werden in l\u00e4ndliche Gebiete evakuiert. Au\u00dferdem",
+    "tokens": [
+      51188, 1163, 22741, 5084, 710, 16398, 11454, 3290, 13, 36022, 4075, 67,
+      608, 75, 541, 4604, 294, 287, 5524, 10185, 24984, 40462, 1073, 15803,
+      4859, 13, 47834, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12341052239094305,
+    "compression_ratio": 1.4132841328413284,
+    "no_speech_prob": 0.015902657061815262
+  },
+  {
+    "id": 15,
+    "seek": 8116,
+    "start": 104.16,
+    "end": 109.88,
+    "text": " suchen 12 Millionen Vertriebene und Fl\u00fcchtlinge aus den ehemals deutschen Ostgebieten und der",
+    "tokens": [
+      51514, 44470, 2272, 26096, 21044, 31775, 1450, 674, 3235, 36458, 1688, 68,
+      3437, 1441, 7670, 443, 1124, 39707, 34140, 10848, 25868, 674, 1163, 51800
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12341052239094305,
+    "compression_ratio": 1.4132841328413284,
+    "no_speech_prob": 0.015902657061815262
+  },
+  {
+    "id": 16,
+    "seek": 10988,
+    "start": 109.88,
+    "end": 115.64,
+    "text": " sowjetischen Besatzungszone nach einer Bleibe. Insgesamt fehlen in Westdeutschland damals rund",
+    "tokens": [
+      50364, 19766, 7108, 6282, 8190, 10300, 5846, 16896, 5168, 6850, 30721,
+      47622, 13, 9442, 34818, 34741, 6698, 294, 4055, 1479, 3648, 339, 1661,
+      26067, 23096, 50652
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11524586928518195,
+    "compression_ratio": 1.4538745387453875,
+    "no_speech_prob": 0.03730260953307152
+  },
+  {
+    "id": 17,
+    "seek": 10988,
+    "start": 115.64,
+    "end": 121.6,
+    "text": " sechs Millionen Wohnungen. Bis zur W\u00e4hrungsreform hat man eigentlich haupts\u00e4chlich versucht,",
+    "tokens": [
+      50652, 41945, 26096, 22741, 5084, 13, 25271, 7147, 343, 12021, 5846, 265,
+      837, 2385, 587, 10926, 324, 84, 39280, 18195, 36064, 11, 50950
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11524586928518195,
+    "compression_ratio": 1.4538745387453875,
+    "no_speech_prob": 0.03730260953307152
+  },
+  {
+    "id": 18,
+    "seek": 10988,
+    "start": 121.6,
+    "end": 127.96,
+    "text": " Tr\u00fcmmer zu beseitigen und notd\u00fcrftig irgendwas in Stand zu setzen, was kriegszerst\u00f6rt war. Die",
+    "tokens": [
+      50950, 1765, 8966, 936, 2164, 272, 1130, 270, 3213, 674, 406, 67, 1655,
+      34765, 47090, 294, 9133, 2164, 35877, 11, 390, 25766, 21559, 4527, 372,
+      11454, 1516, 13, 3229, 51268
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11524586928518195,
+    "compression_ratio": 1.4538745387453875,
+    "no_speech_prob": 0.03730260953307152
+  },
+  {
+    "id": 19,
+    "seek": 10988,
+    "start": 127.96,
+    "end": 136.32,
+    "text": " Architekturhistorikerin Hilde Strobl. Sie arbeitet am Architekturmuseum der TU M\u00fcnchen. Der Wohnungsmarkt",
+    "tokens": [
+      51268, 10984, 642, 2320, 374, 71, 23882, 17314, 259, 389, 15956, 42196,
+      5199, 13, 3559, 49907, 669, 10984, 642, 2320, 374, 76, 5816, 1163, 42408,
+      35840, 2470, 13, 5618, 22741, 5846, 38552, 51686
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11524586928518195,
+    "compression_ratio": 1.4538745387453875,
+    "no_speech_prob": 0.03730260953307152
+  },
+  {
+    "id": 20,
+    "seek": 13632,
+    "start": 136.32,
+    "end": 141.72,
+    "text": " ist damals streng reguliert. Die Wohnungen werden zwangsbewirtschaftet, so wie auch schon zu",
+    "tokens": [
+      50364, 1418, 26067, 2242, 872, 9837, 4859, 13, 3229, 22741, 5084, 4604,
+      11873, 28686, 650, 38877, 302, 11, 370, 3355, 2168, 4981, 2164, 50634
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08535985804315824,
+    "compression_ratio": 1.5737704918032787,
+    "no_speech_prob": 0.11906266212463379
+  },
+  {
+    "id": 21,
+    "seek": 13632,
+    "start": 141.72,
+    "end": 148.28,
+    "text": " Kriegszeiten. Hausbesitzer k\u00f6nnen nicht frei \u00fcber ihre Wohnungen verf\u00fcgen. Die Wohnungs\u00e4mter sorgen",
+    "tokens": [
+      50634, 35579, 21559, 1381, 6009, 13, 22725, 6446, 16845, 6310, 1979,
+      32542, 4502, 14280, 22741, 5084, 40660, 45336, 13, 3229, 22741, 5846,
+      9559, 391, 47972, 50962
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08535985804315824,
+    "compression_ratio": 1.5737704918032787,
+    "no_speech_prob": 0.11906266212463379
+  },
+  {
+    "id": 22,
+    "seek": 13632,
+    "start": 148.28,
+    "end": 154.88,
+    "text": " daf\u00fcr, dass Ausgebombte und Fl\u00fcchtlinge unterkommen. K\u00fcndigungen sind faktisch unm\u00f6glich und auch das",
+    "tokens": [
+      50962, 13747, 11, 2658, 9039, 10848, 3548, 975, 674, 3235, 36458, 1688,
+      68, 8662, 13675, 13, 591, 9541, 328, 5084, 3290, 21310, 5494, 19334,
+      16277, 674, 2168, 1482, 51292
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08535985804315824,
+    "compression_ratio": 1.5737704918032787,
+    "no_speech_prob": 0.11906266212463379
+  },
+  {
+    "id": 23,
+    "seek": 13632,
+    "start": 154.88,
+    "end": 160.72,
+    "text": " Mietniveau ist staatlich festgelegt. Diese sogenannte Zwangsbewirtschaftung von R\u00e4umen,",
+    "tokens": [
+      51292, 376, 1684, 77, 488, 1459, 1418, 28836, 1739, 6633, 432, 22745, 13,
+      18993, 37467, 9358, 1176, 19031, 82, 650, 38877, 1063, 2957, 497, 737,
+      16988, 11, 51584
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08535985804315824,
+    "compression_ratio": 1.5737704918032787,
+    "no_speech_prob": 0.11906266212463379
+  },
+  {
+    "id": 24,
+    "seek": 13632,
+    "start": 160.72,
+    "end": 164.68,
+    "text": " die kn\u00fcpfte auch an was an, was man schon in der Weimarer Republik zur Zeit der gro\u00dfen",
+    "tokens": [
+      51584, 978, 444, 42693, 16268, 2168, 364, 390, 364, 11, 390, 587, 4981,
+      294, 1163, 492, 49396, 260, 3696, 48620, 7147, 9394, 1163, 23076, 51782
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08535985804315824,
+    "compression_ratio": 1.5737704918032787,
+    "no_speech_prob": 0.11906266212463379
+  },
+  {
+    "id": 25,
+    "seek": 16468,
+    "start": 164.68,
+    "end": 172.64000000000001,
+    "text": " Wohnungsnot gemacht hat. N\u00e4mlich, dass auch L\u00e4den, Dachb\u00f6den, Keller als Wohnraum benutzt",
+    "tokens": [
+      50364, 22741, 5846, 2247, 12293, 2385, 13, 426, 9559, 1739, 11, 2658,
+      2168, 441, 737, 1556, 11, 413, 608, 65, 973, 1556, 11, 48352, 3907, 22741,
+      31502, 38424, 2682, 50762
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14238403393672064,
+    "compression_ratio": 1.4661016949152543,
+    "no_speech_prob": 0.23881465196609497
+  },
+  {
+    "id": 26,
+    "seek": 16468,
+    "start": 172.64000000000001,
+    "end": 181.0,
+    "text": " wurden. Und was auch ein interessanter Faktor ist, dass eigentlich diese ganzen Lager, die",
+    "tokens": [
+      50762, 21105, 13, 2719, 390, 2168, 1343, 12478, 39918, 479, 5886, 284,
+      1418, 11, 2658, 10926, 6705, 23966, 441, 3557, 11, 978, 51180
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14238403393672064,
+    "compression_ratio": 1.4661016949152543,
+    "no_speech_prob": 0.23881465196609497
+  },
+  {
+    "id": 27,
+    "seek": 16468,
+    "start": 181.0,
+    "end": 188.56,
+    "text": " ehemaligen KZs der Nationalsozialisten zum Teil auch als Notunterkunft benutzt wurden,",
+    "tokens": [
+      51180, 7670, 443, 304, 3213, 591, 57, 82, 1163, 4862, 539, 17787, 4821,
+      5919, 16357, 2168, 3907, 1726, 21777, 74, 19333, 38424, 2682, 21105, 11,
+      51558
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14238403393672064,
+    "compression_ratio": 1.4661016949152543,
+    "no_speech_prob": 0.23881465196609497
+  },
+  {
+    "id": 28,
+    "seek": 16468,
+    "start": 188.56,
+    "end": 193.24,
+    "text": " dann nach dem zweiten Weltkrieg, um die Fl\u00fcchtlingsstr\u00f6me unterzubringen.",
+    "tokens": [
+      51558, 3594, 5168, 1371, 39943, 14761, 74, 5469, 70, 11, 1105, 978, 3235,
+      36458, 20823, 9733, 973, 1398, 8662, 40566, 2937, 268, 13, 51792
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14238403393672064,
+    "compression_ratio": 1.4661016949152543,
+    "no_speech_prob": 0.23881465196609497
+  },
+  {
+    "id": 29,
+    "seek": 19468,
+    "start": 195.68,
+    "end": 202.48000000000002,
+    "text": " Erst nach Gr\u00fcndung der Bundesrepublik wird mit dem Wohnungsneubau im gro\u00dfen Stile begonnen,",
+    "tokens": [
+      50414, 31183, 5168, 2606, 9541, 1063, 1163, 14031, 19919, 48620, 4578,
+      2194, 1371, 22741, 5846, 716, 836, 1459, 566, 23076, 745, 794, 4612,
+      34269, 11, 50754
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11708147629447606,
+    "compression_ratio": 1.4273858921161826,
+    "no_speech_prob": 0.004467939026653767
+  },
+  {
+    "id": 30,
+    "seek": 19468,
+    "start": 202.48000000000002,
+    "end": 207.4,
+    "text": " wie von Konrad Adenauer bereits im Wahlkampf 1949 angek\u00fcndigt.",
+    "tokens": [
+      50754, 3355, 2957, 12718, 6206, 316, 1556, 18120, 23703, 566, 27437, 74,
+      30157, 46476, 15495, 74, 9541, 5828, 13, 51000
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11708147629447606,
+    "compression_ratio": 1.4273858921161826,
+    "no_speech_prob": 0.004467939026653767
+  },
+  {
+    "id": 31,
+    "seek": 19468,
+    "start": 207.4,
+    "end": 214.0,
+    "text": " Wenn wir uns klar machen, dass im Bundesgebiet ein Bedarf von etwa 6 Millionen Wohnungen besteht,",
+    "tokens": [
+      51000, 7899, 1987, 2693, 14743, 7069, 11, 2658, 566, 14031, 10848, 1684,
+      1343, 19893, 30224, 2957, 28369, 1386, 26096, 22741, 5084, 43680, 11,
+      51330
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11708147629447606,
+    "compression_ratio": 1.4273858921161826,
+    "no_speech_prob": 0.004467939026653767
+  },
+  {
+    "id": 32,
+    "seek": 19468,
+    "start": 214.0,
+    "end": 220.52,
+    "text": " wissen wir, dass man nur unter Aktivierung aller privaten und \u00f6ffentlichen Mittel diese",
+    "tokens": [
+      51330, 16331, 1987, 11, 2658, 587, 4343, 8662, 32850, 592, 11651, 8722,
+      2915, 7186, 674, 34603, 268, 35079, 6705, 51656
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11708147629447606,
+    "compression_ratio": 1.4273858921161826,
+    "no_speech_prob": 0.004467939026653767
+  },
+  {
+    "id": 33,
+    "seek": 22052,
+    "start": 220.52,
+    "end": 228.60000000000002,
+    "text": " Aufgabe l\u00f6sen kann. Es gab nun angesichts der Gr\u00f6\u00dfe dieser Aufgabe erstmalig ein Wohnungsbauministerium.",
+    "tokens": [
+      50364, 40070, 25209, 6748, 4028, 13, 2313, 17964, 8905, 31138, 44508,
+      1163, 45778, 11451, 9053, 40070, 38607, 328, 1343, 22741, 5846, 4231,
+      7112, 1964, 2197, 13, 50768
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16060875012324408,
+    "compression_ratio": 1.4980237154150198,
+    "no_speech_prob": 0.22752593457698822
+  },
+  {
+    "id": 34,
+    "seek": 22052,
+    "start": 228.60000000000002,
+    "end": 234.36,
+    "text": " Tilmann Haarlander, Professor f\u00fcr Wohn- und Architektursozialogie. Auf dem freien",
+    "tokens": [
+      50768, 45141, 14912, 4064, 289, 1661, 260, 11, 8419, 2959, 22741, 12, 674,
+      10984, 642, 2320, 2156, 15151, 831, 39031, 13, 9462, 1371, 2130, 1053,
+      51056
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16060875012324408,
+    "compression_ratio": 1.4980237154150198,
+    "no_speech_prob": 0.22752593457698822
+  },
+  {
+    "id": 35,
+    "seek": 22052,
+    "start": 234.36,
+    "end": 240.96,
+    "text": " Wohnungsmarkt haben es besonders Geringverdiener schwer, damals wie heute. Dass der Staat den",
+    "tokens": [
+      51056, 22741, 5846, 38552, 3084, 785, 25258, 460, 1794, 331, 67, 1053,
+      260, 23809, 11, 26067, 3355, 9801, 13, 22306, 1163, 45559, 1441, 51386
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16060875012324408,
+    "compression_ratio": 1.4980237154150198,
+    "no_speech_prob": 0.22752593457698822
+  },
+  {
+    "id": 36,
+    "seek": 22052,
+    "start": 240.96,
+    "end": 246.0,
+    "text": " Wohnungsmarkt nicht sich selbst \u00fcberlassen kann, sondern eingreift, ist in der Nachkriegszeit",
+    "tokens": [
+      51386, 22741, 5846, 38552, 1979, 3041, 13053, 4502, 44898, 4028, 11,
+      11465, 17002, 265, 2008, 11, 1418, 294, 1163, 11815, 74, 5469, 21559,
+      13712, 51638
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16060875012324408,
+    "compression_ratio": 1.4980237154150198,
+    "no_speech_prob": 0.22752593457698822
+  },
+  {
+    "id": 37,
+    "seek": 24600,
+    "start": 246.0,
+    "end": 253.44,
+    "text": " wohnungspolitischer Konsens, quer durch alle Parteien. So verabschiedet der Bundestag 1950",
+    "tokens": [
+      50364, 261, 2359, 1063, 4952, 33704, 19674, 48163, 694, 11, 7083, 7131,
+      5430, 47689, 1053, 13, 407, 1306, 455, 6145, 1091, 302, 1163, 43825, 559,
+      18141, 50736
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.132661595064051,
+    "compression_ratio": 1.4588235294117646,
+    "no_speech_prob": 0.1094859167933464
+  },
+  {
+    "id": 38,
+    "seek": 24600,
+    "start": 253.44,
+    "end": 259.64,
+    "text": " auch mit den Stimmen der Opposition das erste Wohnungsbaugesetz. Ein Gesetz, mit dem wichtige",
+    "tokens": [
+      50736, 2168, 2194, 1441, 745, 32076, 1163, 15666, 5830, 1482, 20951,
+      22741, 5846, 4231, 39064, 10074, 13, 6391, 20685, 11, 2194, 1371, 46276,
+      51046
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.132661595064051,
+    "compression_ratio": 1.4588235294117646,
+    "no_speech_prob": 0.1094859167933464
+  },
+  {
+    "id": 39,
+    "seek": 24600,
+    "start": 259.64,
+    "end": 266.56,
+    "text": " Weichen gestellt werden. Es zielte an, breite Schichten der Bev\u00f6lkerung zu f\u00f6rdern. Also das",
+    "tokens": [
+      51046, 492, 18613, 42259, 4604, 13, 2313, 710, 1187, 975, 364, 11, 1403,
+      642, 2065, 24681, 1163, 48313, 1063, 2164, 4816, 35520, 13, 2743, 1482,
+      51392
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.132661595064051,
+    "compression_ratio": 1.4588235294117646,
+    "no_speech_prob": 0.1094859167933464
+  },
+  {
+    "id": 40,
+    "seek": 24600,
+    "start": 266.56,
+    "end": 274.04,
+    "text": " war im Unterschied zum Arbeit der Wohnungsbau, wie wir ihn in den 20er Jahren erlebt hatten,",
+    "tokens": [
+      51392, 1516, 566, 41414, 5919, 18604, 1163, 22741, 5846, 26820, 11, 3355,
+      1987, 14534, 294, 1441, 945, 260, 13080, 47372, 20441, 11, 51766
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.132661595064051,
+    "compression_ratio": 1.4588235294117646,
+    "no_speech_prob": 0.1094859167933464
+  },
+  {
+    "id": 41,
+    "seek": 27404,
+    "start": 274.08000000000004,
+    "end": 283.32,
+    "text": " nun wirklich der Versuch durch mischte Strukturen im Wohnen zu entwickeln. Und wir gehen heute",
+    "tokens": [
+      50366, 8905, 9696, 1163, 12226, 625, 7131, 3346, 10553, 745, 19977, 9873,
+      566, 22741, 268, 2164, 28449, 32099, 13, 2719, 1987, 13230, 9801, 50828
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13334644862583706,
+    "compression_ratio": 1.383419689119171,
+    "no_speech_prob": 0.05028543621301651
+  },
+  {
+    "id": 42,
+    "seek": 27404,
+    "start": 283.32,
+    "end": 290.96000000000004,
+    "text": " davon aus, dass damals etwa 75 Prozent der Bev\u00f6lkerung prinzipiell zugangsberechtigt",
+    "tokens": [
+      50828, 18574, 3437, 11, 2658, 26067, 28369, 9562, 29726, 1163, 48313,
+      1063, 3024, 27268, 32562, 33507, 28686, 18582, 4701, 5828, 51210
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13334644862583706,
+    "compression_ratio": 1.383419689119171,
+    "no_speech_prob": 0.05028543621301651
+  },
+  {
+    "id": 43,
+    "seek": 27404,
+    "start": 290.96000000000004,
+    "end": 296.96000000000004,
+    "text": " war zu diesem sozialen Wohnungsbau. Weitere entscheidende Rahmenstellungen waren dann,",
+    "tokens": [
+      51210, 1516, 2164, 10975, 31541, 268, 22741, 5846, 26820, 13, 492, 270,
+      323, 28398, 327, 5445, 39070, 17816, 5084, 11931, 3594, 11, 51510
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13334644862583706,
+    "compression_ratio": 1.383419689119171,
+    "no_speech_prob": 0.05028543621301651
+  },
+  {
+    "id": 44,
+    "seek": 29696,
+    "start": 296.96,
+    "end": 304.84,
+    "text": " man entschloss sich keine Dauerbindung einzuf\u00fchren. Keine Dauerbindung bedeutet, Wohnungen sind nicht",
+    "tokens": [
+      50364, 587, 12834, 11439, 772, 3041, 9252, 413, 18120, 65, 41442, 21586,
+      2947, 29540, 13, 3189, 533, 413, 18120, 65, 41442, 27018, 11, 22741, 5084,
+      3290, 1979, 50758
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12238184910900188,
+    "compression_ratio": 1.55859375,
+    "no_speech_prob": 0.05827212333679199
+  },
+  {
+    "id": 45,
+    "seek": 29696,
+    "start": 304.84,
+    "end": 310.84,
+    "text": " dauerhaft Sozialwohnungen, sondern werden nach 30 Jahren oder auch schon fr\u00fcher f\u00fcr alle zug\u00e4nglich.",
+    "tokens": [
+      50758, 1120, 5486, 25127, 36867, 86, 2359, 5084, 11, 11465, 4604, 5168,
+      2217, 13080, 4513, 2168, 4981, 32349, 2959, 5430, 33507, 9935, 1739, 13,
+      51058
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12238184910900188,
+    "compression_ratio": 1.55859375,
+    "no_speech_prob": 0.05827212333679199
+  },
+  {
+    "id": 46,
+    "seek": 29696,
+    "start": 310.84,
+    "end": 316.52,
+    "text": " Nat\u00fcrlich zu h\u00f6heren Mieten. Was vielleicht noch interessant ist zu erw\u00e4hnen, ist, dass das erste",
+    "tokens": [
+      51058, 33172, 2164, 48045, 268, 376, 25868, 13, 3027, 12547, 3514, 37748,
+      1418, 2164, 21715, 6860, 2866, 11, 1418, 11, 2658, 1482, 20951, 51342
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12238184910900188,
+    "compression_ratio": 1.55859375,
+    "no_speech_prob": 0.05827212333679199
+  },
+  {
+    "id": 47,
+    "seek": 29696,
+    "start": 316.52,
+    "end": 321.84,
+    "text": " Wohnungsbaugesetz sich haupts\u00e4chlich auf den Mietwohnungsbau konzentrierte und weniger auf",
+    "tokens": [
+      51342, 22741, 5846, 4231, 39064, 10074, 3041, 324, 84, 39280, 18195, 2501,
+      1441, 376, 1684, 86, 2359, 5846, 26820, 5897, 14185, 470, 10634, 674,
+      23224, 2501, 51608
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12238184910900188,
+    "compression_ratio": 1.55859375,
+    "no_speech_prob": 0.05827212333679199
+  },
+  {
+    "id": 48,
+    "seek": 32184,
+    "start": 321.84,
+    "end": 329.28,
+    "text": " die Schaffung von Eigentum. Die staatliche F\u00f6rderung des Wohnungsbaus erfolgt auf verschiedenen",
+    "tokens": [
+      50364, 978, 2065, 2518, 1063, 2957, 462, 25002, 449, 13, 3229, 28836,
+      10185, 20665, 1068, 1063, 730, 22741, 5846, 4231, 301, 1189, 7082, 10463,
+      2501, 41043, 50736
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09437825841811097,
+    "compression_ratio": 1.5185185185185186,
+    "no_speech_prob": 0.08258688449859619
+  },
+  {
+    "id": 49,
+    "seek": 32184,
+    "start": 329.28,
+    "end": 335.03999999999996,
+    "text": " Wegen. Der Staat baut selbst, zum Beispiel in Form der st\u00e4dtischen und landeseigenen",
+    "tokens": [
+      50736, 492, 1766, 13, 5618, 45559, 272, 1375, 13053, 11, 5919, 13772, 294,
+      10126, 1163, 342, 16837, 83, 6282, 674, 2117, 1130, 3213, 268, 51024
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09437825841811097,
+    "compression_ratio": 1.5185185185185186,
+    "no_speech_prob": 0.08258688449859619
+  },
+  {
+    "id": 50,
+    "seek": 32184,
+    "start": 335.03999999999996,
+    "end": 341.12,
+    "text": " Wohnungsbaugesellschaften. Aber der Staat springt auch ein und subventioniert den Wohnungsbau,",
+    "tokens": [
+      51024, 22741, 5846, 4231, 39064, 22055, 268, 13, 5992, 1163, 45559, 5587,
+      83, 2168, 1343, 674, 1422, 6411, 4859, 1441, 22741, 5846, 26820, 11, 51328
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09437825841811097,
+    "compression_ratio": 1.5185185185185186,
+    "no_speech_prob": 0.08258688449859619
+  },
+  {
+    "id": 51,
+    "seek": 32184,
+    "start": 341.12,
+    "end": 347.2,
+    "text": " indem er \u00f6ffentliche Darlehen gibt und auf Steuern oder Geb\u00fchren verzichtet, die beim Bau",
+    "tokens": [
+      51328, 37185, 1189, 34603, 68, 7803, 306, 2932, 6089, 674, 2501, 3592, 84,
+      1248, 4513, 24984, 29540, 43945, 40387, 11, 978, 13922, 28772, 51632
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09437825841811097,
+    "compression_ratio": 1.5185185185185186,
+    "no_speech_prob": 0.08258688449859619
+  },
+  {
+    "id": 52,
+    "seek": 34720,
+    "start": 347.2,
+    "end": 353.8,
+    "text": " eines Hauses anfallen. Ein weiteres Instrument sind die steuerlichen Abschreibungsm\u00f6glichkeiten.",
+    "tokens": [
+      50364, 18599, 4064, 8355, 364, 24425, 13, 6391, 8988, 279, 39785, 2206,
+      3290, 978, 2126, 5486, 10193, 5813, 339, 38606, 5846, 76, 16277, 21049,
+      13, 50694
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14593470922791132,
+    "compression_ratio": 1.492,
+    "no_speech_prob": 0.2065097987651825
+  },
+  {
+    "id": 53,
+    "seek": 34720,
+    "start": 353.8,
+    "end": 358.32,
+    "text": " Je besser sie sind, desto mehr lohnt es sich f\u00fcr die Bauwirtschaft zu bauen.",
+    "tokens": [
+      50694, 2588, 18021, 2804, 3290, 11, 2677, 78, 5417, 46957, 580, 785, 3041,
+      2959, 978, 28772, 38877, 2164, 43787, 13, 50920
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14593470922791132,
+    "compression_ratio": 1.492,
+    "no_speech_prob": 0.2065097987651825
+  },
+  {
+    "id": 54,
+    "seek": 34720,
+    "start": 358.32,
+    "end": 366.44,
+    "text": " Was gebaut wurde, waren am Anfang eher auf sogar st\u00e4dtischen und nicht unbedingt au\u00dferst\u00e4dtischen",
+    "tokens": [
+      50920, 3027, 49203, 11191, 11, 11931, 669, 25856, 24332, 2501, 19485, 342,
+      16837, 83, 6282, 674, 1979, 41211, 39428, 372, 16837, 83, 6282, 51326
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14593470922791132,
+    "compression_ratio": 1.492,
+    "no_speech_prob": 0.2065097987651825
+  },
+  {
+    "id": 55,
+    "seek": 34720,
+    "start": 366.44,
+    "end": 374.32,
+    "text": " Fl\u00e4chen entstehende mehrst\u00f6ckige Wohnanlagen, die oft sehr g\u00fcnstig gebaut waren. Also es gibt",
+    "tokens": [
+      51326, 3235, 45118, 35955, 71, 5445, 5417, 372, 973, 547, 3969, 22741,
+      282, 29177, 11, 978, 11649, 5499, 14472, 372, 328, 49203, 11931, 13, 2743,
+      785, 6089, 51720
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14593470922791132,
+    "compression_ratio": 1.492,
+    "no_speech_prob": 0.2065097987651825
+  },
+  {
+    "id": 56,
+    "seek": 37432,
+    "start": 374.32,
+    "end": 381.71999999999997,
+    "text": " einzelne H\u00e4user, die um Baumaterial zu sparen, die Ziegel hochkant gestellt haben, dadurch entstanden",
+    "tokens": [
+      50364, 36731, 716, 45763, 18088, 11, 978, 1105, 40165, 40364, 2164, 637,
+      4484, 11, 978, 46340, 10345, 19783, 74, 394, 42259, 3084, 11, 35472, 948,
+      33946, 50734
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14859009714959895,
+    "compression_ratio": 1.441860465116279,
+    "no_speech_prob": 0.12743327021598816
+  },
+  {
+    "id": 57,
+    "seek": 37432,
+    "start": 381.71999999999997,
+    "end": 388.6,
+    "text": " d\u00fcnnere W\u00e4nde. Es gibt viele H\u00e4user mit Durchgangszimmern, was man sp\u00e4ter nicht mehr",
+    "tokens": [
+      50734, 274, 3412, 77, 323, 343, 26973, 13, 2313, 6089, 9693, 45763, 18088,
+      2194, 28557, 19619, 15453, 14477, 77, 11, 390, 587, 24196, 1979, 5417,
+      51078
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14859009714959895,
+    "compression_ratio": 1.441860465116279,
+    "no_speech_prob": 0.12743327021598816
+  },
+  {
+    "id": 58,
+    "seek": 37432,
+    "start": 388.6,
+    "end": 395.28,
+    "text": " so gemacht hat, um eben so schnell wie m\u00f6glich Wohnraum zu schaffen. Von der Wohnungsnot sind",
+    "tokens": [
+      51078, 370, 12293, 2385, 11, 1105, 11375, 370, 17589, 3355, 16294, 22741,
+      31502, 2164, 30888, 13, 20700, 1163, 22741, 5846, 2247, 3290, 51412
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14859009714959895,
+    "compression_ratio": 1.441860465116279,
+    "no_speech_prob": 0.12743327021598816
+  },
+  {
+    "id": 59,
+    "seek": 37432,
+    "start": 395.28,
+    "end": 400.88,
+    "text": " damals alle Schichten betroffen, reich wie arm. Akademiker und Sozialhilfeempf\u00e4nger,",
+    "tokens": [
+      51412, 26067, 5430, 2065, 24681, 778, 30594, 11, 319, 480, 3355, 3726, 13,
+      9629, 49290, 17314, 674, 36867, 42829, 2106, 15970, 69, 35174, 11, 51692
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14859009714959895,
+    "compression_ratio": 1.441860465116279,
+    "no_speech_prob": 0.12743327021598816
+  },
+  {
+    "id": 60,
+    "seek": 40088,
+    "start": 400.88,
+    "end": 407.68,
+    "text": " Ausgebombte und Vertriebene. Oft ist es so, dass Familien mit h\u00f6herem Einkommen schneller eine",
+    "tokens": [
+      50364, 9039, 10848, 3548, 975, 674, 21044, 31775, 1450, 13, 37112, 1418,
+      785, 370, 11, 2658, 36451, 2194, 13531, 6703, 76, 49128, 5132, 43865,
+      3018, 50704
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17025486160727107,
+    "compression_ratio": 1.6324503311258278,
+    "no_speech_prob": 0.18675608932971954
+  },
+  {
+    "id": 61,
+    "seek": 40088,
+    "start": 407.68,
+    "end": 413.52,
+    "text": " Sozialwohnung bekommen als einkommensschwache. Wir haben ja einen Wohnungssuchenden hier bei uns und",
+    "tokens": [
+      50704, 36867, 86, 2359, 1063, 19256, 3907, 308, 475, 1204, 694, 6145, 86,
+      6000, 13, 4347, 3084, 2784, 4891, 50087, 3810, 625, 8896, 3296, 4643,
+      2693, 674, 50996
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17025486160727107,
+    "compression_ratio": 1.6324503311258278,
+    "no_speech_prob": 0.18675608932971954
+  },
+  {
+    "id": 62,
+    "seek": 40088,
+    "start": 413.52,
+    "end": 418.52,
+    "text": " der soll uns jetzt einmal schildern, wie sieht das eigentlich nun in der Praxis aus. Ich bin seit 50",
+    "tokens": [
+      50996, 1163, 7114, 2693, 4354, 11078, 956, 793, 1248, 11, 3355, 14289,
+      1482, 10926, 8905, 294, 1163, 12133, 39637, 3437, 13, 3141, 5171, 16452,
+      2625, 51246
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17025486160727107,
+    "compression_ratio": 1.6324503311258278,
+    "no_speech_prob": 0.18675608932971954
+  },
+  {
+    "id": 63,
+    "seek": 40088,
+    "start": 418.52,
+    "end": 424.56,
+    "text": " hier in Berlin, es sind 40 praktisch, und suche seit 50 eine Wohnung. Bekam dann so eine Wohnlaube,",
+    "tokens": [
+      51246, 3296, 294, 13848, 11, 785, 3290, 3356, 33721, 5494, 11, 674, 1270,
+      68, 16452, 2625, 3018, 50087, 13, 879, 74, 335, 3594, 370, 3018, 22741,
+      875, 1977, 11, 51548
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17025486160727107,
+    "compression_ratio": 1.6324503311258278,
+    "no_speech_prob": 0.18675608932971954
+  },
+  {
+    "id": 64,
+    "seek": 40088,
+    "start": 424.56,
+    "end": 430.76,
+    "text": " die unwohnbar war, die \u00fcberhaupt nicht definierbar war als Wohnung und letzten Endes bekam ich",
+    "tokens": [
+      51548, 978, 14853, 2359, 5356, 1516, 11, 978, 20023, 1979, 1561, 811,
+      5356, 1516, 3907, 50087, 674, 18226, 6967, 279, 9393, 335, 1893, 51858
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17025486160727107,
+    "compression_ratio": 1.6324503311258278,
+    "no_speech_prob": 0.18675608932971954
+  },
+  {
+    "id": 65,
+    "seek": 43076,
+    "start": 430.84,
+    "end": 437.4,
+    "text": " eine N\u00fcssenh\u00fctte. Eine Wellblechh\u00fctte mit halbrundem Dach und etwa 40 Quadratmeter Grundfl\u00e4che.",
+    "tokens": [
+      50368, 3018, 426, 774, 8718, 71, 7695, 975, 13, 17664, 1042, 638, 339, 71,
+      7695, 975, 2194, 7523, 1443, 997, 443, 413, 608, 674, 28369, 3356, 29619,
+      4481, 33058, 13941, 3423, 32664, 13, 50696
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17328796657264656,
+    "compression_ratio": 1.5541795665634675,
+    "no_speech_prob": 0.0004728102358058095
+  },
+  {
+    "id": 66,
+    "seek": 43076,
+    "start": 437.4,
+    "end": 442.8,
+    "text": " Das ist der gr\u00f6\u00dfte Mist, m\u00f6chte ich sagen, der \u00fcberhaupt existiert hier in Berlin. Die ist so nass",
+    "tokens": [
+      50696, 2846, 1418, 1163, 20691, 975, 20166, 11, 14570, 1893, 8360, 11,
+      1163, 20023, 2514, 4859, 3296, 294, 13848, 13, 3229, 1418, 370, 297, 640,
+      50966
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17328796657264656,
+    "compression_ratio": 1.5541795665634675,
+    "no_speech_prob": 0.0004728102358058095
+  },
+  {
+    "id": 67,
+    "seek": 43076,
+    "start": 442.8,
+    "end": 447.0,
+    "text": " und so feucht. Ich habe jetzt bereits schon ein Kind ins Krankenhaus bringen m\u00fcssen diese Woche. Da",
+    "tokens": [
+      50966, 674, 370, 579, 10084, 13, 3141, 6015, 4354, 23703, 4981, 1343,
+      9242, 1028, 39950, 23321, 27519, 9013, 6705, 24511, 13, 3933, 51176
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17328796657264656,
+    "compression_ratio": 1.5541795665634675,
+    "no_speech_prob": 0.0004728102358058095
+  },
+  {
+    "id": 68,
+    "seek": 43076,
+    "start": 447.0,
+    "end": 452.08,
+    "text": " m\u00fcssen wir mit sieben Personen drin hausen, also eine Wohnung zu bekommen von irgendein Vermieter.",
+    "tokens": [
+      51176, 9013, 1987, 2194, 2804, 1799, 40942, 24534, 324, 301, 268, 11, 611,
+      3018, 50087, 2164, 19256, 2957, 3418, 27429, 259, 20185, 1684, 260, 13,
+      51430
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17328796657264656,
+    "compression_ratio": 1.5541795665634675,
+    "no_speech_prob": 0.0004728102358058095
+  },
+  {
+    "id": 69,
+    "seek": 43076,
+    "start": 452.08,
+    "end": 457.2,
+    "text": " Da hei\u00dft es dann immer, haben sie Kinder? Ja, Kinder haben wir. F\u00fcnfe. Ja, sie kriegen Bescheid,",
+    "tokens": [
+      51430, 3933, 13139, 785, 3594, 5578, 11, 3084, 2804, 14193, 30, 3530, 11,
+      14193, 3084, 1987, 13, 479, 3412, 2106, 13, 3530, 11, 2804, 46882, 8190,
+      1876, 327, 11, 51686
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17328796657264656,
+    "compression_ratio": 1.5541795665634675,
+    "no_speech_prob": 0.0004728102358058095
+  },
+  {
+    "id": 70,
+    "seek": 45720,
+    "start": 457.52,
+    "end": 461.88,
+    "text": " so bekomme ich vielleicht schon zwei oder drei Jahre Bescheid von diesen Vermietern. Und das",
+    "tokens": [
+      50380, 370, 9393, 15117, 1893, 12547, 4981, 12002, 4513, 16809, 15557,
+      8190, 1876, 327, 2957, 12862, 20185, 1684, 1248, 13, 2719, 1482, 50598
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14664347839355468,
+    "compression_ratio": 1.5286195286195285,
+    "no_speech_prob": 0.05030176043510437
+  },
+  {
+    "id": 71,
+    "seek": 45720,
+    "start": 461.88,
+    "end": 467.28,
+    "text": " Wohnungsamt als solche, wenn man dahin kommt, ja wir haben 4.000 oder 5.000 Wohnungssuchende",
+    "tokens": [
+      50598, 22741, 5846, 16887, 3907, 29813, 11, 4797, 587, 16800, 259, 10047,
+      11, 2784, 1987, 3084, 1017, 13, 1360, 4513, 1025, 13, 1360, 50087, 3810,
+      625, 5445, 50868
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14664347839355468,
+    "compression_ratio": 1.5286195286195285,
+    "no_speech_prob": 0.05030176043510437
+  },
+  {
+    "id": 72,
+    "seek": 45720,
+    "start": 467.28,
+    "end": 471.71999999999997,
+    "text": " oder Dringlichkeitsf\u00e4lle und noch mehr Wohnungssuchende. So muss man sich ein und",
+    "tokens": [
+      50868, 4513, 2491, 278, 1739, 330, 1208, 69, 31447, 674, 3514, 5417,
+      50087, 3810, 625, 5445, 13, 407, 6425, 587, 3041, 1343, 674, 51090
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14664347839355468,
+    "compression_ratio": 1.5286195286195285,
+    "no_speech_prob": 0.05030176043510437
+  },
+  {
+    "id": 73,
+    "seek": 45720,
+    "start": 471.71999999999997,
+    "end": 478.88,
+    "text": " andere mal abfertigen lassen auf ein Wohnungsamt. 1956 beschlie\u00dft der Bundestag nach l\u00e4ngeren",
+    "tokens": [
+      51090, 10490, 2806, 410, 34784, 3213, 16168, 2501, 1343, 22741, 5846,
+      16887, 13, 46379, 17498, 24476, 83, 1163, 43825, 559, 5168, 22566, 5170,
+      51448
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14664347839355468,
+    "compression_ratio": 1.5286195286195285,
+    "no_speech_prob": 0.05030176043510437
+  },
+  {
+    "id": 74,
+    "seek": 45720,
+    "start": 478.88,
+    "end": 485.48,
+    "text": " Debatten, das Bauen von Eigenheimen st\u00e4rker zu f\u00f6rdern. Sozialpolitik als Instrument im",
+    "tokens": [
+      51448, 42167, 1147, 11, 1482, 363, 11715, 2957, 30586, 18673, 268, 33527,
+      5767, 2164, 4816, 35520, 13, 36867, 46424, 3907, 39785, 2206, 566, 51778
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14664347839355468,
+    "compression_ratio": 1.5286195286195285,
+    "no_speech_prob": 0.05030176043510437
+  },
+  {
+    "id": 75,
+    "seek": 48548,
+    "start": 485.48,
+    "end": 492.04,
+    "text": " Kalten Krieg. Das ist der Gedanke dahinter auf Seiten der CDU. Wer ein eigenes Haus besitzt,",
+    "tokens": [
+      50364, 12655, 1147, 35579, 70, 13, 2846, 1418, 1163, 28166, 282, 330,
+      16800, 5106, 2501, 45200, 1163, 19181, 13, 14255, 1343, 10446, 279, 22725,
+      4097, 270, 2682, 11, 50692
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09685042297955855,
+    "compression_ratio": 1.4236641221374047,
+    "no_speech_prob": 0.09262169897556305
+  },
+  {
+    "id": 76,
+    "seek": 48548,
+    "start": 492.04,
+    "end": 498.96000000000004,
+    "text": " ist weniger anf\u00e4llig f\u00fcr sozialistische Ideologien. In der DDR l\u00e4uft der Wohnungsbau",
+    "tokens": [
+      50692, 1418, 23224, 33709, 10053, 328, 2959, 31541, 468, 7864, 13090,
+      1132, 1053, 13, 682, 1163, 49272, 31807, 1163, 22741, 5846, 26820, 51038
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09685042297955855,
+    "compression_ratio": 1.4236641221374047,
+    "no_speech_prob": 0.09262169897556305
+  },
+  {
+    "id": 77,
+    "seek": 48548,
+    "start": 498.96000000000004,
+    "end": 504.92,
+    "text": " nach planwirtschaftlichen Vorgaben. Es entstehen gro\u00dfe Plattenbausiedlungen. Jeder soll sich eine",
+    "tokens": [
+      51038, 5168, 1393, 38877, 10193, 691, 4646, 25071, 13, 2313, 35955, 2932,
+      19691, 17461, 1147, 4231, 301, 1091, 45434, 13, 47274, 7114, 3041, 3018,
+      51336
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09685042297955855,
+    "compression_ratio": 1.4236641221374047,
+    "no_speech_prob": 0.09262169897556305
+  },
+  {
+    "id": 78,
+    "seek": 48548,
+    "start": 504.92,
+    "end": 510.72,
+    "text": " Wohnung leisten k\u00f6nnen, so das Ziel. Die Mieten werden deshalb auf konstant niedrigem Niveau",
+    "tokens": [
+      51336, 50087, 47013, 6310, 11, 370, 1482, 25391, 13, 3229, 376, 25868,
+      4604, 28457, 2501, 34208, 394, 32488, 7065, 443, 426, 488, 1459, 51626
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09685042297955855,
+    "compression_ratio": 1.4236641221374047,
+    "no_speech_prob": 0.09262169897556305
+  },
+  {
+    "id": 79,
+    "seek": 51072,
+    "start": 510.72,
+    "end": 516.6,
+    "text": " gehalten. Allerdings wird daf\u00fcr auch wenig in den Bestand investiert. In Westdeutschland",
+    "tokens": [
+      50364, 1519, 15022, 13, 1057, 28519, 4578, 13747, 2168, 20911, 294, 1441,
+      9752, 474, 1963, 4859, 13, 682, 4055, 1479, 3648, 339, 1661, 50658
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1289052087433484,
+    "compression_ratio": 1.4106463878326996,
+    "no_speech_prob": 0.46008017659187317
+  },
+  {
+    "id": 80,
+    "seek": 51072,
+    "start": 516.6,
+    "end": 522.72,
+    "text": " wird hingegen schon bald dar\u00fcber diskutiert, den Wohnungsmarkt zu liberalisieren. Er soll mehr nach",
+    "tokens": [
+      50658, 4578, 24895, 8113, 4981, 21096, 21737, 36760, 4859, 11, 1441,
+      22741, 5846, 38552, 2164, 13767, 271, 5695, 13, 3300, 7114, 5417, 5168,
+      50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1289052087433484,
+    "compression_ratio": 1.4106463878326996,
+    "no_speech_prob": 0.46008017659187317
+  },
+  {
+    "id": 81,
+    "seek": 51072,
+    "start": 522.72,
+    "end": 528.4,
+    "text": " dem Mechanismus von Angebot und Nachfrage funktionieren. Trotz heftiger Kritik von",
+    "tokens": [
+      50964, 1371, 30175, 25327, 2957, 44301, 310, 674, 11815, 40449, 20454,
+      5695, 13, 1765, 18530, 43674, 4810, 46372, 1035, 2957, 51248
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1289052087433484,
+    "compression_ratio": 1.4106463878326996,
+    "no_speech_prob": 0.46008017659187317
+  },
+  {
+    "id": 82,
+    "seek": 51072,
+    "start": 528.4,
+    "end": 535.36,
+    "text": " Opposition, Mieterverb\u00e4nden und Gewerkschaften wird 1960 schlie\u00dflich das Gesetz \u00fcber den Abbau",
+    "tokens": [
+      51248, 15666, 5830, 11, 376, 1684, 260, 25809, 5524, 268, 674, 19063, 260,
+      1694, 7118, 268, 4578, 16157, 956, 44697, 1482, 20685, 4502, 1441, 2847,
+      26820, 51596
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1289052087433484,
+    "compression_ratio": 1.4106463878326996,
+    "no_speech_prob": 0.46008017659187317
+  },
+  {
+    "id": 83,
+    "seek": 53536,
+    "start": 535.36,
+    "end": 540.6,
+    "text": " der Wohnungszwangswirtschaft und \u00fcber ein soziales Miet- und Wohnungsrecht im Bundestag",
+    "tokens": [
+      50364, 1163, 22741, 5846, 14406, 28686, 38877, 674, 4502, 1343, 31541,
+      279, 376, 1684, 12, 674, 22741, 5846, 31495, 566, 43825, 559, 50626
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10277784438360305,
+    "compression_ratio": 1.528225806451613,
+    "no_speech_prob": 0.20671071112155914
+  },
+  {
+    "id": 84,
+    "seek": 53536,
+    "start": 540.6,
+    "end": 546.76,
+    "text": " verabschiedet. Die Rechte der Vermieter werden gest\u00e4rkt. Sie k\u00f6nnen nun die Mieten von Altbau-",
+    "tokens": [
+      50626, 1306, 455, 6145, 1091, 302, 13, 3229, 1300, 10553, 1163, 20185,
+      1684, 260, 4604, 7219, 2713, 2320, 13, 3559, 6310, 8905, 978, 376, 25868,
+      2957, 15992, 26820, 12, 50934
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10277784438360305,
+    "compression_ratio": 1.528225806451613,
+    "no_speech_prob": 0.20671071112155914
+  },
+  {
+    "id": 85,
+    "seek": 53536,
+    "start": 546.76,
+    "end": 553.2,
+    "text": " Wohnungen, die bis dahin gebunden waren, wieder erh\u00f6hen. Aber noch nicht in jeder Stadt. Nur wenn",
+    "tokens": [
+      50934, 22741, 5084, 11, 978, 7393, 16800, 259, 21125, 10028, 11931, 11,
+      6216, 49058, 2932, 13, 5992, 3514, 1979, 294, 19610, 20550, 13, 17612,
+      4797, 51256
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10277784438360305,
+    "compression_ratio": 1.528225806451613,
+    "no_speech_prob": 0.20671071112155914
+  },
+  {
+    "id": 86,
+    "seek": 53536,
+    "start": 553.2,
+    "end": 559.6,
+    "text": " sich die Wohnungssituation entspannt hat und es ausreichend viele Wohnungen gibt. Und? Wer ein",
+    "tokens": [
+      51256, 3041, 978, 50087, 3810, 19306, 12834, 36424, 2385, 674, 785, 3437,
+      12594, 521, 9693, 22741, 5084, 6089, 13, 2719, 30, 14255, 1343, 51576
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10277784438360305,
+    "compression_ratio": 1.528225806451613,
+    "no_speech_prob": 0.20671071112155914
+  },
+  {
+    "id": 87,
+    "seek": 55960,
+    "start": 559.6,
+    "end": 566.64,
+    "text": " zu geringes Einkommen hat, kann seit 1965 Wohngeld beantragen. Der staatlich gef\u00f6rderte",
+    "tokens": [
+      50364, 2164, 290, 1794, 279, 49128, 5132, 2385, 11, 4028, 16452, 33809,
+      343, 1445, 872, 5957, 312, 394, 20663, 13, 5618, 28836, 1739, 11271, 2311,
+      67, 10634, 50716
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12842234169564595,
+    "compression_ratio": 1.351219512195122,
+    "no_speech_prob": 0.28717634081840515
+  },
+  {
+    "id": 88,
+    "seek": 55960,
+    "start": 566.64,
+    "end": 574.76,
+    "text": " Wohnungsbau geht dennoch weiter, auch unter der gro\u00dfen Koalition aus CDU und SPD. Lauritz Lauritzen",
+    "tokens": [
+      50716, 22741, 5846, 26820, 7095, 1441, 41608, 8988, 11, 2168, 8662, 1163,
+      23076, 10509, 31897, 3437, 19181, 674, 19572, 13, 29906, 6862, 29906, 270,
+      2904, 51122
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12842234169564595,
+    "compression_ratio": 1.351219512195122,
+    "no_speech_prob": 0.28717634081840515
+  },
+  {
+    "id": 89,
+    "seek": 55960,
+    "start": 574.76,
+    "end": 582.0400000000001,
+    "text": " von der SPD ist Minister f\u00fcr St\u00e4dtebau und Wohnungswesen. 1967 kann er den Neubau der",
+    "tokens": [
+      51122, 2957, 1163, 19572, 1418, 6506, 2959, 745, 16837, 975, 26820, 674,
+      22741, 5846, 86, 17403, 13, 33193, 4028, 1189, 1441, 1734, 836, 1459,
+      1163, 51486
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12842234169564595,
+    "compression_ratio": 1.351219512195122,
+    "no_speech_prob": 0.28717634081840515
+  },
+  {
+    "id": 90,
+    "seek": 58204,
+    "start": 582.04,
+    "end": 587.8,
+    "text": " 10-Millionsten-Wohnung seit 1949 feiern. Die H\u00e4lfte der gebauten Wohnungen entstammen",
+    "tokens": [
+      50364, 1266, 12, 44, 11836, 6266, 12, 54, 2359, 1063, 16452, 46476, 579,
+      49584, 13, 3229, 389, 9063, 16268, 1163, 49203, 268, 22741, 5084, 948,
+      372, 11248, 50652
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14819592106951415,
+    "compression_ratio": 1.6620209059233448,
+    "no_speech_prob": 0.5065950751304626
+  },
+  {
+    "id": 91,
+    "seek": 58204,
+    "start": 587.8,
+    "end": 592.4399999999999,
+    "text": " ja dem sozialen Wohnungsbau. Die H\u00e4lfte sind Sozialwohnungen und was noch wesentlich",
+    "tokens": [
+      50652, 2784, 1371, 31541, 268, 22741, 5846, 26820, 13, 3229, 389, 9063,
+      16268, 3290, 36867, 86, 2359, 5084, 674, 390, 3514, 38384, 7698, 50884
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14819592106951415,
+    "compression_ratio": 1.6620209059233448,
+    "no_speech_prob": 0.5065950751304626
+  },
+  {
+    "id": 92,
+    "seek": 58204,
+    "start": 592.4399999999999,
+    "end": 597.64,
+    "text": " erfreulicher ist, sie sind in ihrer Ausstattung seit dem Beginn des sozialen Wohnungsbaus wesentlich",
+    "tokens": [
+      50884, 1189, 19325, 425, 14934, 1418, 11, 2804, 3290, 294, 23990, 9039,
+      372, 1591, 1063, 16452, 1371, 20660, 77, 730, 31541, 268, 22741, 5846,
+      4231, 301, 38384, 7698, 51144
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14819592106951415,
+    "compression_ratio": 1.6620209059233448,
+    "no_speech_prob": 0.5065950751304626
+  },
+  {
+    "id": 93,
+    "seek": 58204,
+    "start": 597.64,
+    "end": 603.0,
+    "text": " verbessert worden, auch was ihre Gr\u00f6\u00dfe angeht. W\u00e4hrend die Gr\u00f6\u00dfe fr\u00fcher etwa bei 55 Quadratmeter",
+    "tokens": [
+      51144, 49112, 911, 14054, 11, 2168, 390, 14280, 45778, 11451, 15495, 357,
+      13, 40084, 4542, 978, 45778, 11451, 32349, 28369, 4643, 12330, 29619,
+      4481, 33058, 51412
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14819592106951415,
+    "compression_ratio": 1.6620209059233448,
+    "no_speech_prob": 0.5065950751304626
+  },
+  {
+    "id": 94,
+    "seek": 58204,
+    "start": 603.0,
+    "end": 609.64,
+    "text": " je Wohnung lag, liegt sie heute bei 82. Heute hat fast jede Sozialwohnung Bad und WC. Wir haben hier",
+    "tokens": [
+      51412, 1506, 50087, 8953, 11, 22421, 2804, 9801, 4643, 29097, 13, 27978,
+      2385, 2370, 34039, 36867, 86, 2359, 1063, 11523, 674, 343, 34, 13, 4347,
+      3084, 3296, 51744
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14819592106951415,
+    "compression_ratio": 1.6620209059233448,
+    "no_speech_prob": 0.5065950751304626
+  },
+  {
+    "id": 95,
+    "seek": 60964,
+    "start": 609.72,
+    "end": 614.28,
+    "text": " also eine Ausstattungsgrad erreicht, der f\u00fcr den gesamten Wohnungsbau einfach Schrittmacher",
+    "tokens": [
+      50368, 611, 3018, 9039, 372, 1591, 5846, 7165, 46250, 11, 1163, 2959,
+      1441, 39746, 1147, 22741, 5846, 26820, 7281, 33062, 76, 4062, 50596
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1047212710747352,
+    "compression_ratio": 1.5654008438818565,
+    "no_speech_prob": 0.03619914874434471
+  },
+  {
+    "id": 96,
+    "seek": 60964,
+    "start": 614.28,
+    "end": 624.0,
+    "text": " gewesen ist. Die Erfolgsgeschichte des sozialen Wohnungsbaus ist eng mit dem Aufstieg der",
+    "tokens": [
+      50596, 27653, 1418, 13, 3229, 3300, 7082, 21559, 23378, 18972, 730, 31541,
+      268, 22741, 5846, 4231, 301, 1418, 1741, 2194, 1371, 9462, 372, 20408,
+      1163, 51082
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1047212710747352,
+    "compression_ratio": 1.5654008438818565,
+    "no_speech_prob": 0.03619914874434471
+  },
+  {
+    "id": 97,
+    "seek": 60964,
+    "start": 624.0,
+    "end": 629.72,
+    "text": " gemeinn\u00fctzigen Wohnungswirtschaft verbunden. Wohnungsbaugesellschaften, die steuerbeg\u00fcnstigt",
+    "tokens": [
+      51082, 18111, 7729, 7695, 89, 3213, 22741, 5846, 38877, 9595, 10028, 13,
+      22741, 5846, 4231, 39064, 22055, 268, 11, 978, 2126, 5486, 650, 70, 36656,
+      5828, 51368
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1047212710747352,
+    "compression_ratio": 1.5654008438818565,
+    "no_speech_prob": 0.03619914874434471
+  },
+  {
+    "id": 98,
+    "seek": 60964,
+    "start": 629.72,
+    "end": 635.0,
+    "text": " sind, daf\u00fcr aber nur sehr beschr\u00e4nkt Gewinne erzielen d\u00fcrfen. Die Mieten sind in der Regel",
+    "tokens": [
+      51368, 3290, 11, 13747, 4340, 4343, 5499, 17498, 33766, 2320, 19063, 259,
+      716, 1189, 89, 12844, 29493, 13, 3229, 376, 25868, 3290, 294, 1163, 33139,
+      51632
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1047212710747352,
+    "compression_ratio": 1.5654008438818565,
+    "no_speech_prob": 0.03619914874434471
+  },
+  {
+    "id": 99,
+    "seek": 63500,
+    "start": 635.0,
+    "end": 639.96,
+    "text": " g\u00fcnstiger, weil die Unternehmen nicht darauf ausgerichtet sind, ihren Profit zu maximieren.",
+    "tokens": [
+      50364, 14472, 372, 4810, 11, 7689, 978, 27577, 1979, 18654, 3437, 1321,
+      40387, 3290, 11, 22347, 6039, 270, 2164, 5138, 5695, 13, 50612
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13581988925025576,
+    "compression_ratio": 1.375968992248062,
+    "no_speech_prob": 0.09795264899730682
+  },
+  {
+    "id": 100,
+    "seek": 63500,
+    "start": 639.96,
+    "end": 646.2,
+    "text": " Die gewerkschaftseigene Neue Heimat war so ein Unternehmen. Eines der bekanntesten",
+    "tokens": [
+      50612, 3229, 6906, 260, 1694, 7118, 405, 328, 1450, 1734, 622, 634, 33862,
+      1516, 370, 1343, 27577, 13, 462, 1652, 1163, 39167, 38743, 50924
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13581988925025576,
+    "compression_ratio": 1.375968992248062,
+    "no_speech_prob": 0.09795264899730682
+  },
+  {
+    "id": 101,
+    "seek": 63500,
+    "start": 646.2,
+    "end": 652.8,
+    "text": " Bauprojekte Neuperlach, Deutschlands gr\u00f6\u00dfte Satellitenstadt auf der gr\u00fcnen Wiese am Ortsrand",
+    "tokens": [
+      50924, 6777, 1010, 340, 27023, 975, 1734, 12879, 75, 608, 11, 12699,
+      10230, 20691, 975, 318, 10810, 6009, 34511, 2501, 1163, 677, 774, 2866,
+      343, 39158, 669, 1610, 1373, 3699, 51254
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13581988925025576,
+    "compression_ratio": 1.375968992248062,
+    "no_speech_prob": 0.09795264899730682
+  },
+  {
+    "id": 102,
+    "seek": 63500,
+    "start": 652.8,
+    "end": 661.76,
+    "text": " von M\u00fcnchen, geplant f\u00fcr 74.000 Bewohner. Grundsteinlegung ist 1967. Das Leben in",
+    "tokens": [
+      51254, 2957, 35840, 2470, 11, 1519, 13067, 2959, 28868, 13, 1360, 40512,
+      49935, 13, 13941, 9089, 6363, 1063, 1418, 33193, 13, 2846, 15399, 294,
+      51702
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13581988925025576,
+    "compression_ratio": 1.375968992248062,
+    "no_speech_prob": 0.09795264899730682
+  },
+  {
+    "id": 103,
+    "seek": 66176,
+    "start": 661.76,
+    "end": 667.84,
+    "text": " Sozialwohnungen hat lange Zeit kein schlechtes Image. Im Gegensatz zu heute, wo viele bei sozialem",
+    "tokens": [
+      50364, 36867, 86, 2359, 5084, 2385, 18131, 9394, 13424, 32427, 279, 29903,
+      13, 4331, 27826, 694, 10300, 2164, 9801, 11, 6020, 9693, 4643, 31541, 443,
+      50668
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11917820343604454,
+    "compression_ratio": 1.454183266932271,
+    "no_speech_prob": 0.13101236522197723
+  },
+  {
+    "id": 104,
+    "seek": 66176,
+    "start": 667.84,
+    "end": 674.64,
+    "text": " Wohnungsbau an Ghettoartige Hochhaussiedlungen und soziale Brennpunkte denken. Ein Grund f\u00fcr diesen",
+    "tokens": [
+      50668, 22741, 5846, 26820, 364, 460, 40556, 446, 3969, 29193, 1641, 2023,
+      1091, 45434, 674, 31541, 68, 31200, 77, 27133, 975, 28780, 13, 6391,
+      13941, 2959, 12862, 51008
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11917820343604454,
+    "compression_ratio": 1.454183266932271,
+    "no_speech_prob": 0.13101236522197723
+  },
+  {
+    "id": 105,
+    "seek": 66176,
+    "start": 674.64,
+    "end": 680.36,
+    "text": " Wandel liegt in der Belegungspolitik. Fr\u00fcher war ein breiterer Querschnitt der Gesellschaft",
+    "tokens": [
+      51008, 343, 26406, 22421, 294, 1163, 879, 6363, 1063, 4952, 33704, 1035,
+      13, 1526, 27775, 1516, 1343, 1403, 1681, 260, 2326, 433, 32064, 1163,
+      30006, 51294
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11917820343604454,
+    "compression_ratio": 1.454183266932271,
+    "no_speech_prob": 0.13101236522197723
+  },
+  {
+    "id": 106,
+    "seek": 66176,
+    "start": 680.36,
+    "end": 685.0,
+    "text": " zugangsberechtigt. Heute nur noch die Einkommensschwachen Schichten. Der",
+    "tokens": [
+      51294, 33507, 28686, 18582, 4701, 5828, 13, 27978, 4343, 3514, 978, 49128,
+      1204, 694, 6145, 86, 11646, 2065, 24681, 13, 5618, 51526
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11917820343604454,
+    "compression_ratio": 1.454183266932271,
+    "no_speech_prob": 0.13101236522197723
+  },
+  {
+    "id": 107,
+    "seek": 68500,
+    "start": 685.84,
+    "end": 694.32,
+    "text": " In den 60er Jahren entwickelt sich diese Schere zwischen denen, die es sich leisten k\u00f6nnen,",
+    "tokens": [
+      50406, 682, 1441, 4060, 260, 13080, 43208, 3041, 6705, 2065, 323, 19875,
+      19998, 11, 978, 785, 3041, 47013, 6310, 11, 50830
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1670628786087036,
+    "compression_ratio": 1.4190476190476191,
+    "no_speech_prob": 0.48297184705734253
+  },
+  {
+    "id": 108,
+    "seek": 68500,
+    "start": 694.32,
+    "end": 702.28,
+    "text": " im Zuge der Suburbanisierung, also der Stadtflucht aus den damals unwirtlichen Innenst\u00e4dten, in die",
+    "tokens": [
+      50830, 566, 1176, 7181, 1163, 8511, 374, 5144, 32531, 11, 611, 1163,
+      20550, 3423, 10084, 3437, 1441, 26067, 14853, 2498, 10193, 43617, 372,
+      16837, 1147, 11, 294, 978, 51228
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1670628786087036,
+    "compression_ratio": 1.4190476190476191,
+    "no_speech_prob": 0.48297184705734253
+  },
+  {
+    "id": 109,
+    "seek": 68500,
+    "start": 702.28,
+    "end": 709.56,
+    "text": " Einfamilien-Rheinhausgebiete im Umland der St\u00e4dte zu ziehen. Das sind die beg\u00fcterteren Mittelschichten",
+    "tokens": [
+      51228, 6391, 69, 335, 388, 1053, 12, 49, 675, 6727, 301, 10848, 40462,
+      566, 3301, 1661, 1163, 745, 16837, 975, 2164, 40645, 13, 2846, 3290, 978,
+      4612, 774, 391, 391, 268, 18784, 1625, 339, 24681, 51592
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1670628786087036,
+    "compression_ratio": 1.4190476190476191,
+    "no_speech_prob": 0.48297184705734253
+  },
+  {
+    "id": 110,
+    "seek": 70956,
+    "start": 709.56,
+    "end": 716.64,
+    "text": " und andererseits denen, die angewiesen waren auf Zuweisung einer Sozialwohnung in den sich",
+    "tokens": [
+      50364, 674, 48108, 44033, 19998, 11, 978, 15495, 86, 30383, 11931, 2501,
+      23164, 35033, 1063, 6850, 36867, 86, 2359, 1063, 294, 1441, 3041, 50718
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1650579105723988,
+    "compression_ratio": 1.4621513944223108,
+    "no_speech_prob": 0.032078299671411514
+  },
+  {
+    "id": 111,
+    "seek": 70956,
+    "start": 716.64,
+    "end": 724.28,
+    "text": " zunehmend turmartig aufw\u00f6lbenden sozialen Wohnungsbaugebieten an den Stadtr\u00e4dern.",
+    "tokens": [
+      50718, 710, 2613, 8587, 521, 3243, 76, 446, 328, 2501, 86, 13072, 65,
+      8896, 31541, 268, 22741, 5846, 26820, 10848, 25868, 364, 1441, 20550,
+      11397, 35520, 13, 51100
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1650579105723988,
+    "compression_ratio": 1.4621513944223108,
+    "no_speech_prob": 0.032078299671411514
+  },
+  {
+    "id": 112,
+    "seek": 70956,
+    "start": 724.28,
+    "end": 728.7199999999999,
+    "text": " Auch in den Medien sind die Trabantenst\u00e4dte schon bald nicht mehr gut angesehen.",
+    "tokens": [
+      51100, 13382, 294, 1441, 44030, 3290, 978, 314, 5305, 29646, 372, 16837,
+      975, 4981, 21096, 1979, 5417, 5228, 2562, 18380, 13, 51322
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1650579105723988,
+    "compression_ratio": 1.4621513944223108,
+    "no_speech_prob": 0.032078299671411514
+  },
+  {
+    "id": 113,
+    "seek": 70956,
+    "start": 728.7199999999999,
+    "end": 730.92,
+    "text": " Menschen im Experiment",
+    "tokens": [51322, 8397, 566, 37933, 51432],
+    "temperature": 0.0,
+    "avg_logprob": -0.1650579105723988,
+    "compression_ratio": 1.4621513944223108,
+    "no_speech_prob": 0.032078299671411514
+  },
+  {
+    "id": 114,
+    "seek": 70956,
+    "start": 730.92,
+    "end": 736.8,
+    "text": " \u00dcberschreibt der Spiegel 1970 eine mehrseitige Abrechnung mit dem M\u00e4rkischen Viertel,",
+    "tokens": [
+      51432, 10713, 1616, 339, 31174, 1163, 1738, 414, 10345, 14577, 3018, 5417,
+      405, 270, 3969, 316, 2672, 1377, 1063, 2194, 1371, 46084, 74, 6282, 691,
+      4859, 338, 11, 51726
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1650579105723988,
+    "compression_ratio": 1.4621513944223108,
+    "no_speech_prob": 0.032078299671411514
+  },
+  {
+    "id": 115,
+    "seek": 73680,
+    "start": 736.8,
+    "end": 743.5999999999999,
+    "text": " einer Gro\u00dfsiedlung in Westberlin, in der 60.000 Menschen leben. In Hochh\u00e4usern mit kaputten",
+    "tokens": [
+      50364, 6850, 34534, 82, 1091, 17850, 294, 4055, 607, 5045, 11, 294, 1163,
+      4060, 13, 1360, 8397, 26392, 13, 682, 29193, 71, 31611, 1248, 2194, 13816,
+      325, 1147, 50704
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11553982628716362,
+    "compression_ratio": 1.5158227848101267,
+    "no_speech_prob": 0.11899887770414352
+  },
+  {
+    "id": 116,
+    "seek": 73680,
+    "start": 743.5999999999999,
+    "end": 749.12,
+    "text": " T\u00fcr\u00f6ffnern, beschmierten Fahrstuhlkabinen und viel Konfliktpotenzial zwischen den Bewohnern.",
+    "tokens": [
+      50704, 16728, 30453, 1193, 77, 11, 17498, 76, 29632, 19843, 372, 3232, 75,
+      74, 455, 5636, 674, 5891, 12718, 3423, 9874, 17698, 11368, 831, 19875,
+      1441, 40512, 49935, 77, 13, 50980
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11553982628716362,
+    "compression_ratio": 1.5158227848101267,
+    "no_speech_prob": 0.11899887770414352
+  },
+  {
+    "id": 117,
+    "seek": 73680,
+    "start": 749.12,
+    "end": 754.28,
+    "text": " Ein weiteres Problem der Gro\u00dfsiedlungen war, dass geplante Infrastrukturen, Schulen, \u00f6ffentliche",
+    "tokens": [
+      50980, 6391, 8988, 279, 11676, 1163, 34534, 82, 1091, 45434, 1516, 11,
+      2658, 1519, 564, 2879, 38425, 19977, 9873, 11, 41909, 11, 34603, 68, 51238
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11553982628716362,
+    "compression_ratio": 1.5158227848101267,
+    "no_speech_prob": 0.11899887770414352
+  },
+  {
+    "id": 118,
+    "seek": 73680,
+    "start": 754.28,
+    "end": 760.52,
+    "text": " Einrichtungen, Gesch\u00e4fte, Arbeitspl\u00e4tze zum gro\u00dfen Teil eben nicht mehr geschaffen wurden,",
+    "tokens": [
+      51238, 6391, 12836, 5084, 11, 14241, 737, 16268, 11, 23262, 564, 30179,
+      5919, 23076, 16357, 11375, 1979, 5417, 13511, 19182, 21105, 11, 51550
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11553982628716362,
+    "compression_ratio": 1.5158227848101267,
+    "no_speech_prob": 0.11899887770414352
+  },
+  {
+    "id": 119,
+    "seek": 73680,
+    "start": 760.52,
+    "end": 766.4399999999999,
+    "text": " nicht mehr entstanden sind, weil mit der Krise in den 70er Jahren es einen Wirtschaftswandel gab.",
+    "tokens": [
+      51550, 1979, 5417, 948, 33946, 3290, 11, 7689, 2194, 1163, 6332, 908, 294,
+      1441, 5285, 260, 13080, 785, 4891, 29412, 25884, 26406, 17964, 13, 51846
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11553982628716362,
+    "compression_ratio": 1.5158227848101267,
+    "no_speech_prob": 0.11899887770414352
+  },
+  {
+    "id": 120,
+    "seek": 76644,
+    "start": 766.44,
+    "end": 769.5200000000001,
+    "text": " Das Wirtschaftswunder war am Grunde beendet.",
+    "tokens": [
+      50364, 2846, 29412, 25884, 6617, 1516, 669, 13941, 68, 312, 521, 302, 13,
+      50518
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1748765862506369,
+    "compression_ratio": 1.469298245614035,
+    "no_speech_prob": 0.007009855471551418
+  },
+  {
+    "id": 121,
+    "seek": 76644,
+    "start": 769.5200000000001,
+    "end": 780.2,
+    "text": " Unter der sozial-liberalen Koalition erreicht der Wohnungsbau eine letzte Rekordmarke. 1973 werden",
+    "tokens": [
+      50518, 12065, 1163, 31541, 12, 2081, 607, 21745, 10509, 31897, 46250,
+      1163, 22741, 5846, 26820, 3018, 35236, 497, 916, 765, 6209, 330, 13,
+      33530, 4604, 51052
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1748765862506369,
+    "compression_ratio": 1.469298245614035,
+    "no_speech_prob": 0.007009855471551418
+  },
+  {
+    "id": 122,
+    "seek": 76644,
+    "start": 780.2,
+    "end": 787.72,
+    "text": " mehr als 700.000 Wohnungen fertiggestellt. Zum Vergleich, 2018 waren es rund 300.000 im Jahr.",
+    "tokens": [
+      51052, 5417, 3907, 15204, 13, 1360, 22741, 5084, 31362, 26293, 13, 23906,
+      47998, 11, 6096, 11931, 785, 23096, 6641, 13, 1360, 566, 11674, 13, 51428
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1748765862506369,
+    "compression_ratio": 1.469298245614035,
+    "no_speech_prob": 0.007009855471551418
+  },
+  {
+    "id": 123,
+    "seek": 76644,
+    "start": 787.72,
+    "end": 794.2800000000001,
+    "text": " Und diese 700.000 Wohnungen lassen sich, zum ersten Mal in der bundesrepublikanischen Geschichte,",
+    "tokens": [
+      51428, 2719, 6705, 15204, 13, 1360, 22741, 5084, 16168, 3041, 11, 5919,
+      17324, 5746, 294, 1163, 13882, 279, 19919, 48620, 282, 6282, 28896, 11,
+      51756
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1748765862506369,
+    "compression_ratio": 1.469298245614035,
+    "no_speech_prob": 0.007009855471551418
+  },
+  {
+    "id": 124,
+    "seek": 79428,
+    "start": 794.28,
+    "end": 800.92,
+    "text": " nicht alle vermieten. Ein Schock f\u00fcr die Wohnungswirtschaft, der allerdings ein Umdenken",
+    "tokens": [
+      50364, 1979, 5430, 26319, 25868, 13, 6391, 2065, 1560, 2959, 978, 22741,
+      5846, 38877, 11, 1163, 35489, 1343, 3301, 1556, 2653, 50696
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12388087655896339,
+    "compression_ratio": 1.474074074074074,
+    "no_speech_prob": 0.08028031140565872
+  },
+  {
+    "id": 125,
+    "seek": 79428,
+    "start": 800.92,
+    "end": 809.4,
+    "text": " bef\u00f6rdert. 1975 ist das europ\u00e4ische Denkmalschutzjahr. Die historischen Stadtquartiere werden nun",
+    "tokens": [
+      50696, 312, 15610, 49799, 13, 32454, 1418, 1482, 22139, 737, 7864, 6458,
+      17950, 1124, 34816, 73, 5398, 13, 3229, 4058, 6282, 20550, 358, 446,
+      14412, 4604, 8905, 51120
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12388087655896339,
+    "compression_ratio": 1.474074074074074,
+    "no_speech_prob": 0.08028031140565872
+  },
+  {
+    "id": 126,
+    "seek": 79428,
+    "start": 809.4,
+    "end": 815.6,
+    "text": " wiederentdeckt. Die Aufwertung verschiedener Stadtteile f\u00fchrt allerdings auch dazu, dass sich so mancher",
+    "tokens": [
+      51120, 6216, 317, 1479, 19951, 13, 3229, 9462, 26521, 1063, 22263, 7971,
+      20550, 975, 794, 39671, 35489, 2168, 13034, 11, 2658, 3041, 370, 587,
+      6759, 51430
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12388087655896339,
+    "compression_ratio": 1.474074074074074,
+    "no_speech_prob": 0.08028031140565872
+  },
+  {
+    "id": 127,
+    "seek": 79428,
+    "start": 815.6,
+    "end": 821.36,
+    "text": " Alteingesessene die Mieten dort nicht mehr leisten kann und fortziehen muss. Ein Verdr\u00e4ngungsprozess,",
+    "tokens": [
+      51430, 967, 975, 278, 279, 442, 1450, 978, 376, 25868, 15775, 1979, 5417,
+      47013, 4028, 674, 5009, 28768, 6425, 13, 6391, 4281, 16753, 9935, 5846,
+      4318, 37575, 11, 51718
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12388087655896339,
+    "compression_ratio": 1.474074074074074,
+    "no_speech_prob": 0.08028031140565872
+  },
+  {
+    "id": 128,
+    "seek": 82136,
+    "start": 821.84,
+    "end": 828.44,
+    "text": " der bis heute anh\u00e4lt. Mittlerweile bekannt unter dem Schlagwort Gentrifizierung. Anfang",
+    "tokens": [
+      50388, 1163, 7393, 9801, 18931, 15510, 13, 18784, 36055, 39167, 8662,
+      1371, 16420, 559, 13802, 33070, 22575, 590, 11651, 13, 25856, 50718
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1174552387661404,
+    "compression_ratio": 1.4094827586206897,
+    "no_speech_prob": 0.046015698462724686
+  },
+  {
+    "id": 129,
+    "seek": 82136,
+    "start": 828.44,
+    "end": 832.72,
+    "text": " der 80er Jahre spricht man schon wieder von Wohnungsnot in der Republik.",
+    "tokens": [
+      50718, 1163, 4688, 260, 15557, 42088, 587, 4981, 6216, 2957, 22741, 5846,
+      2247, 294, 1163, 3696, 48620, 13, 50932
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1174552387661404,
+    "compression_ratio": 1.4094827586206897,
+    "no_speech_prob": 0.046015698462724686
+  },
+  {
+    "id": 130,
+    "seek": 82136,
+    "start": 832.72,
+    "end": 843.36,
+    "text": " Der Regierungswechsel in Bonn 1982, Kanzler wird Helmut Kohl, hat auch Folgen f\u00fcr die",
+    "tokens": [
+      50932, 5618, 4791, 40908, 26934, 294, 7368, 77, 31352, 11, 591, 3910,
+      1918, 4578, 6128, 38326, 591, 12768, 11, 2385, 2168, 15255, 1766, 2959,
+      978, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1174552387661404,
+    "compression_ratio": 1.4094827586206897,
+    "no_speech_prob": 0.046015698462724686
+  },
+  {
+    "id": 131,
+    "seek": 82136,
+    "start": 843.36,
+    "end": 848.64,
+    "text": " Wohnungspolitik. Der soziale Wohnungsbau wird zur\u00fcckgefahren, genauso wie der",
+    "tokens": [
+      51464, 50087, 4952, 33704, 1035, 13, 5618, 31541, 68, 22741, 5846, 26820,
+      4578, 15089, 13529, 7079, 11, 37694, 3355, 1163, 51728
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1174552387661404,
+    "compression_ratio": 1.4094827586206897,
+    "no_speech_prob": 0.046015698462724686
+  },
+  {
+    "id": 132,
+    "seek": 84864,
+    "start": 848.64,
+    "end": 854.36,
+    "text": " K\u00fcndigungsschutz von Mietern. Ma\u00dfnahmen, um die freie Marktwirtschaft weiter zu st\u00e4rken.",
+    "tokens": [
+      50364, 591, 9541, 21034, 3810, 34816, 2957, 376, 1684, 1248, 13, 36626,
+      11, 1105, 978, 2130, 414, 3934, 20270, 32896, 8988, 2164, 33527, 2653, 13,
+      50650
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10817278664687584,
+    "compression_ratio": 1.4377358490566037,
+    "no_speech_prob": 0.18689535558223724
+  },
+  {
+    "id": 133,
+    "seek": 84864,
+    "start": 854.36,
+    "end": 861.3199999999999,
+    "text": " Schon lange stand der soziale Wohnungsbau wegen Fehlbelegungen in der Kritik. Seinem Image schadet",
+    "tokens": [
+      50650, 46049, 18131, 1463, 1163, 31541, 68, 22741, 5846, 26820, 32855,
+      3697, 22950, 650, 6363, 5084, 294, 1163, 46372, 1035, 13, 1100, 259, 443,
+      29903, 956, 345, 302, 50998
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10817278664687584,
+    "compression_ratio": 1.4377358490566037,
+    "no_speech_prob": 0.18689535558223724
+  },
+  {
+    "id": 134,
+    "seek": 84864,
+    "start": 861.3199999999999,
+    "end": 866.6,
+    "text": " auch der Skandal um den gewerkschaftseigenen Baukonzern Neue Heimat, der in den 80er Jahren",
+    "tokens": [
+      50998, 2168, 1163, 7324, 18905, 1105, 1441, 6906, 260, 1694, 7118, 405,
+      3213, 268, 28772, 18295, 89, 1248, 1734, 622, 634, 33862, 11, 1163, 294,
+      1441, 4688, 260, 13080, 51262
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10817278664687584,
+    "compression_ratio": 1.4377358490566037,
+    "no_speech_prob": 0.18689535558223724
+  },
+  {
+    "id": 135,
+    "seek": 84864,
+    "start": 866.6,
+    "end": 873.24,
+    "text": " hohe Wellen schl\u00e4gt. Der Spiegel deckt Korruption und Missmanagement auf. Dazu kommen Schulden in",
+    "tokens": [
+      51262, 1106, 675, 1042, 268, 956, 22882, 10463, 13, 5618, 1738, 414,
+      10345, 9341, 83, 21690, 11266, 674, 5275, 1601, 11129, 2501, 13, 34667,
+      11729, 50153, 268, 294, 51594
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10817278664687584,
+    "compression_ratio": 1.4377358490566037,
+    "no_speech_prob": 0.18689535558223724
+  },
+  {
+    "id": 136,
+    "seek": 87324,
+    "start": 873.24,
+    "end": 879.6,
+    "text": " Milliardenh\u00f6he. Die Neue Heimat mit 400.000 Wohnungen, die gr\u00f6\u00dfte Wohnungsgesellschaft in",
+    "tokens": [
+      50364, 44784, 33195, 675, 13, 3229, 1734, 622, 634, 33862, 2194, 8423, 13,
+      1360, 22741, 5084, 11, 978, 20691, 975, 22741, 5846, 2880, 22055, 294,
+      50682
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.20244624740199038,
+    "compression_ratio": 1.6751592356687899,
+    "no_speech_prob": 0.19655290246009827
+  },
+  {
+    "id": 137,
+    "seek": 87324,
+    "start": 879.6,
+    "end": 883.92,
+    "text": " der Bundesrepublik, ist nicht mehr zu retten. Die Wohnungen werden verkauft.",
+    "tokens": [
+      50682, 1163, 14031, 19919, 48620, 11, 1418, 1979, 5417, 2164, 1533, 1147,
+      13, 3229, 22741, 5084, 4604, 22328, 28245, 13, 50898
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.20244624740199038,
+    "compression_ratio": 1.6751592356687899,
+    "no_speech_prob": 0.19655290246009827
+  },
+  {
+    "id": 138,
+    "seek": 87324,
+    "start": 883.92,
+    "end": 887.76,
+    "text": " Es ist nicht meiner Reihe, w\u00fcrde ich sagen. Die Leute, die hier zum Beispiel wohnen,",
+    "tokens": [
+      50898, 2313, 1418, 1979, 385, 4564, 34549, 675, 11, 11942, 1893, 8360, 13,
+      3229, 13495, 11, 978, 3296, 5919, 13772, 261, 2359, 268, 11, 51090
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.20244624740199038,
+    "compression_ratio": 1.6751592356687899,
+    "no_speech_prob": 0.19655290246009827
+  },
+  {
+    "id": 139,
+    "seek": 87324,
+    "start": 887.76,
+    "end": 891.6800000000001,
+    "text": " wohnen alle 20 und 30 Jahre hier, seitdem die Wohnungen bestehen, haben ihre Wohnung tipptopp",
+    "tokens": [
+      51090, 261, 2359, 268, 5430, 945, 674, 2217, 15557, 3296, 11, 16452,
+      10730, 978, 22741, 5084, 22245, 2932, 11, 3084, 14280, 50087, 256, 2488,
+      83, 17158, 51286
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.20244624740199038,
+    "compression_ratio": 1.6751592356687899,
+    "no_speech_prob": 0.19655290246009827
+  },
+  {
+    "id": 140,
+    "seek": 87324,
+    "start": 891.6800000000001,
+    "end": 895.96,
+    "text": " in Ordnung. Die Neue Heimat hat kaum was investiert und jetzt werden sie so absolviert.",
+    "tokens": [
+      51286, 294, 29388, 15539, 13, 3229, 1734, 622, 634, 33862, 2385, 36443,
+      390, 1963, 4859, 674, 4354, 4604, 2804, 370, 7305, 85, 4859, 13, 51500
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.20244624740199038,
+    "compression_ratio": 1.6751592356687899,
+    "no_speech_prob": 0.19655290246009827
+  },
+  {
+    "id": 141,
+    "seek": 87324,
+    "start": 895.96,
+    "end": 900.6800000000001,
+    "text": " Beschissen, verrat. Ich wohne jetzt seit 30 Jahren hier, ich finde es einfach unerh\u00f6rt,",
+    "tokens": [
+      51500, 30860, 10987, 11, 1306, 4481, 13, 3141, 48471, 716, 4354, 16452,
+      2217, 13080, 3296, 11, 1893, 17841, 785, 7281, 517, 260, 71, 11454, 11,
+      51736
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.20244624740199038,
+    "compression_ratio": 1.6751592356687899,
+    "no_speech_prob": 0.19655290246009827
+  },
+  {
+    "id": 142,
+    "seek": 90068,
+    "start": 900.92,
+    "end": 906.7399999999999,
+    "text": " dass sie so etwas mit einem machen. Auch in der Folge dieses Skandals wird 1990 die",
+    "tokens": [
+      50376, 2658, 2804, 370, 9569, 2194, 6827, 7069, 13, 13382, 294, 1163,
+      43597, 12113, 7324, 474, 1124, 4578, 13384, 978, 50667
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11631935889567804,
+    "compression_ratio": 1.4922480620155039,
+    "no_speech_prob": 0.12573061883449554
+  },
+  {
+    "id": 143,
+    "seek": 90068,
+    "start": 906.7399999999999,
+    "end": 912.76,
+    "text": " Wohnungsgemeinn\u00fctzigkeit abgeschafft. Das hei\u00dft, die gemeinn\u00fctzigen Wohnungsgesellschaften verlieren",
+    "tokens": [
+      50667, 22741, 5846, 31964, 7729, 7695, 89, 16626, 410, 23378, 29445, 13,
+      2846, 13139, 11, 978, 18111, 7729, 7695, 89, 3213, 22741, 5846, 2880,
+      22055, 268, 49331, 268, 50968
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11631935889567804,
+    "compression_ratio": 1.4922480620155039,
+    "no_speech_prob": 0.12573061883449554
+  },
+  {
+    "id": 144,
+    "seek": 90068,
+    "start": 912.76,
+    "end": 919.2399999999999,
+    "text": " damit ihre Steuerprivilegien. Gleichzeitig fallen Beschr\u00e4nkungen und Auflagen. Der Beginn eines",
+    "tokens": [
+      50968, 9479, 14280, 44250, 79, 29994, 794, 70, 1053, 13, 33858, 32075,
+      11547, 30860, 33766, 74, 5084, 674, 9462, 29177, 13, 5618, 20660, 77,
+      18599, 51292
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11631935889567804,
+    "compression_ratio": 1.4922480620155039,
+    "no_speech_prob": 0.12573061883449554
+  },
+  {
+    "id": 145,
+    "seek": 90068,
+    "start": 919.2399999999999,
+    "end": 925.04,
+    "text": " gro\u00dfen Ausverkaufes, der oft zu Lasten der Mieter geht, die nach einem Verkauf in der Regel h\u00f6here",
+    "tokens": [
+      51292, 23076, 9039, 331, 74, 9507, 279, 11, 1163, 11649, 2164, 5264, 268,
+      1163, 376, 1684, 260, 7095, 11, 978, 5168, 6827, 4281, 74, 9507, 294,
+      1163, 33139, 13531, 6703, 51582
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11631935889567804,
+    "compression_ratio": 1.4922480620155039,
+    "no_speech_prob": 0.12573061883449554
+  },
+  {
+    "id": 146,
+    "seek": 92504,
+    "start": 925.04,
+    "end": 930.92,
+    "text": " Mieten zahlen m\u00fcssen. Die Abschaffung der Wohnungsgemeinn\u00fctzigkeit und damit die Privatisierung",
+    "tokens": [
+      50364, 376, 25868, 710, 21128, 9013, 13, 3229, 5813, 339, 2518, 1063,
+      1163, 22741, 5846, 31964, 7729, 7695, 89, 16626, 674, 9479, 978, 8087,
+      23352, 32531, 50658
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1291034172992317,
+    "compression_ratio": 1.6311111111111112,
+    "no_speech_prob": 0.4980405271053314
+  },
+  {
+    "id": 147,
+    "seek": 92504,
+    "start": 930.92,
+    "end": 937.7199999999999,
+    "text": " der von der gemeinn\u00fctzigen Wohnungswirtschaft verwalteten Millionenbest\u00e4nde an Mietwohnungen,",
+    "tokens": [
+      50658, 1163, 2957, 1163, 18111, 7729, 7695, 89, 3213, 22741, 5846, 38877,
+      24615, 3198, 19865, 26096, 25331, 26973, 364, 376, 1684, 86, 2359, 5084,
+      11, 50998
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1291034172992317,
+    "compression_ratio": 1.6311111111111112,
+    "no_speech_prob": 0.4980405271053314
+  },
+  {
+    "id": 148,
+    "seek": 92504,
+    "start": 937.7199999999999,
+    "end": 946.1999999999999,
+    "text": " das war schon ein gravierender und besonders umstrittener Eingriff auf dem Weg der",
+    "tokens": [
+      50998, 1482, 1516, 4981, 1343, 7427, 811, 3216, 674, 25258, 1105, 9733,
+      2987, 260, 462, 278, 81, 3661, 2501, 1371, 18919, 1163, 51422
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1291034172992317,
+    "compression_ratio": 1.6311111111111112,
+    "no_speech_prob": 0.4980405271053314
+  },
+  {
+    "id": 149,
+    "seek": 92504,
+    "start": 946.1999999999999,
+    "end": 953.28,
+    "text": " Liberalisierung der Wohnungswirtschaft und des Wohnungsmarktes. Bund, L\u00e4nder und Kommunen",
+    "tokens": [
+      51422, 36020, 32531, 1163, 22741, 5846, 38877, 674, 730, 22741, 5846,
+      5638, 7269, 13, 10203, 11, 43441, 674, 42566, 51776
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1291034172992317,
+    "compression_ratio": 1.6311111111111112,
+    "no_speech_prob": 0.4980405271053314
+  },
+  {
+    "id": 150,
+    "seek": 95328,
+    "start": 953.28,
+    "end": 959.52,
+    "text": " verkaufen Teile ihres Wohnungsbestandes an private Investoren. Die Stadt Dresden sogar den",
+    "tokens": [
+      50364, 22328, 20748, 1989, 794, 5096, 495, 22741, 5846, 25331, 474, 279,
+      364, 4551, 14008, 10948, 13, 3229, 20550, 413, 495, 1556, 19485, 1441,
+      50676
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10472795367240906,
+    "compression_ratio": 1.4331983805668016,
+    "no_speech_prob": 0.04081675410270691
+  },
+  {
+    "id": 151,
+    "seek": 95328,
+    "start": 959.52,
+    "end": 967.1999999999999,
+    "text": " kompletten Bestand. Insgesamt werden so allein zwischen 1995 und 2010 mehr als eine Million",
+    "tokens": [
+      50676, 5207, 14657, 1147, 9752, 474, 13, 9442, 34818, 4604, 370, 37673,
+      19875, 22601, 674, 9657, 5417, 3907, 3018, 33959, 51060
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10472795367240906,
+    "compression_ratio": 1.4331983805668016,
+    "no_speech_prob": 0.04081675410270691
+  },
+  {
+    "id": 152,
+    "seek": 95328,
+    "start": 967.1999999999999,
+    "end": 973.72,
+    "text": " Wohnungen privatisiert. Eine Strategie, die vielleicht kurzfristig die Haushalte saniert,",
+    "tokens": [
+      51060, 22741, 5084, 31856, 42266, 13, 17664, 30064, 414, 11, 978, 12547,
+      20465, 48754, 328, 978, 39581, 304, 975, 6645, 4859, 11, 51386
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10472795367240906,
+    "compression_ratio": 1.4331983805668016,
+    "no_speech_prob": 0.04081675410270691
+  },
+  {
+    "id": 153,
+    "seek": 95328,
+    "start": 973.72,
+    "end": 979.56,
+    "text": " aber die staatlichen Akteure wichtiger Handlungsspielr\u00e4ume beraubt. So warnt der",
+    "tokens": [
+      51386, 4340, 978, 28836, 10193, 9629, 975, 540, 48840, 8854, 17850, 3810,
+      36037, 11397, 2540, 272, 1663, 836, 83, 13, 407, 1516, 580, 1163, 51678
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10472795367240906,
+    "compression_ratio": 1.4331983805668016,
+    "no_speech_prob": 0.04081675410270691
+  },
+  {
+    "id": 154,
+    "seek": 97956,
+    "start": 979.56,
+    "end": 986.16,
+    "text": " damalige M\u00fcnchner Oberb\u00fcrgermeister Christian Ude 1999 beispielsweise vor dem Verkauf von",
+    "tokens": [
+      50364, 2422, 304, 3969, 35840, 339, 1193, 27664, 49057, 70, 31081, 1964,
+      5778, 624, 1479, 19952, 40152, 4245, 1371, 4281, 74, 9507, 2957, 50694
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10458097652513154,
+    "compression_ratio": 1.4696969696969697,
+    "no_speech_prob": 0.18682251870632172
+  },
+  {
+    "id": 155,
+    "seek": 97956,
+    "start": 986.16,
+    "end": 992.68,
+    "text": " bundeseigenen Eisenbahnerwohnungen in M\u00fcnchen. Wir brauchen hier jede Reserve, deswegen habe",
+    "tokens": [
+      50694, 13882, 1130, 3213, 268, 35619, 37346, 1193, 86, 2359, 5084, 294,
+      35840, 2470, 13, 4347, 19543, 3296, 34039, 26049, 11, 26482, 6015, 51020
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10458097652513154,
+    "compression_ratio": 1.4696969696969697,
+    "no_speech_prob": 0.18682251870632172
+  },
+  {
+    "id": 156,
+    "seek": 97956,
+    "start": 992.68,
+    "end": 999.04,
+    "text": " ich eingeleitet mit dem Hinweis, dass der soziale Wohnungsanteil schon unter zehn Prozent liegt und",
+    "tokens": [
+      51020, 1893, 30061, 306, 16341, 2194, 1371, 29571, 35033, 11, 2658, 1163,
+      31541, 68, 22741, 5846, 2879, 388, 4981, 8662, 33975, 29726, 22421, 674,
+      51338
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10458097652513154,
+    "compression_ratio": 1.4696969696969697,
+    "no_speech_prob": 0.18682251870632172
+  },
+  {
+    "id": 157,
+    "seek": 97956,
+    "start": 999.04,
+    "end": 1005.52,
+    "text": " weiter fallen wird. Da ist man ganz nerv\u00f6s, wenn irgendwo weitere Wohnungsbest\u00e4nde der \u00f6ffentlichen",
+    "tokens": [
+      51338, 8988, 11547, 4578, 13, 3933, 1418, 587, 6312, 5724, 11310, 11,
+      4797, 40865, 30020, 22741, 5846, 25331, 26973, 1163, 34603, 268, 51662
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10458097652513154,
+    "compression_ratio": 1.4696969696969697,
+    "no_speech_prob": 0.18682251870632172
+  },
+  {
+    "id": 158,
+    "seek": 100552,
+    "start": 1005.52,
+    "end": 1010.0,
+    "text": " Hand auch noch wegschmelzen. Nach der Wiedervereinigung kommt es zu einer kurzen",
+    "tokens": [
+      50364, 8854, 2168, 3514, 15565, 6145, 10909, 2904, 13, 11815, 1163, 343,
+      1091, 1978, 323, 259, 21034, 10047, 785, 2164, 6850, 10072, 2904, 50588
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10469173431396485,
+    "compression_ratio": 1.548494983277592,
+    "no_speech_prob": 0.21689273416996002
+  },
+  {
+    "id": 159,
+    "seek": 100552,
+    "start": 1010.0,
+    "end": 1015.3199999999999,
+    "text": " Renaissance der staatlichen Wohnungspolitik, vor allem bei der Sanierung der maroden Alt- und",
+    "tokens": [
+      50588, 32642, 1163, 28836, 10193, 50087, 4952, 33704, 1035, 11, 4245,
+      17585, 4643, 1163, 5271, 11651, 1163, 1849, 33482, 15992, 12, 674, 50854
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10469173431396485,
+    "compression_ratio": 1.548494983277592,
+    "no_speech_prob": 0.21689273416996002
+  },
+  {
+    "id": 160,
+    "seek": 100552,
+    "start": 1015.3199999999999,
+    "end": 1021.16,
+    "text": " Plattenbauviertel in Ostdeutschland. Seit dem Ende der 90er Jahre zieht sich der Staat allerdings",
+    "tokens": [
+      50854, 17461, 1147, 26820, 85, 4859, 338, 294, 34140, 1479, 3648, 339,
+      1661, 13, 34321, 1371, 15152, 1163, 4289, 260, 15557, 16503, 357, 3041,
+      1163, 45559, 35489, 51146
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10469173431396485,
+    "compression_ratio": 1.548494983277592,
+    "no_speech_prob": 0.21689273416996002
+  },
+  {
+    "id": 161,
+    "seek": 100552,
+    "start": 1021.16,
+    "end": 1028.08,
+    "text": " immer mehr aus dem sozialen Wohnungsbau zur\u00fcck. Nach der F\u00f6deralismusreform 2006 liegt die",
+    "tokens": [
+      51146, 5578, 5417, 3437, 1371, 31541, 268, 22741, 5846, 26820, 15089, 13,
+      11815, 1163, 479, 973, 1068, 304, 25327, 265, 837, 14062, 22421, 978,
+      51492
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10469173431396485,
+    "compression_ratio": 1.548494983277592,
+    "no_speech_prob": 0.21689273416996002
+  },
+  {
+    "id": 162,
+    "seek": 100552,
+    "start": 1028.08,
+    "end": 1033.24,
+    "text": " Verantwortung f\u00fcr den sozialen Wohnungsbau und die Wohnraumf\u00f6rderung generell bei den L\u00e4ndern.",
+    "tokens": [
+      51492, 43423, 2959, 1441, 31541, 268, 22741, 5846, 26820, 674, 978, 22741,
+      31502, 15610, 1068, 1063, 41553, 285, 4643, 1441, 48321, 13, 51750
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10469173431396485,
+    "compression_ratio": 1.548494983277592,
+    "no_speech_prob": 0.21689273416996002
+  },
+  {
+    "id": 163,
+    "seek": 103324,
+    "start": 1033.24,
+    "end": 1039.64,
+    "text": " Seitdem stehen auch St\u00e4dte und Kommunen st\u00e4rker in der Verantwortung. Aber man hat aus der Geschichte",
+    "tokens": [
+      50364, 34321, 10730, 19777, 2168, 745, 16837, 975, 674, 42566, 33527,
+      5767, 294, 1163, 43423, 13, 5992, 587, 2385, 3437, 1163, 28896, 50684
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12013473334135832,
+    "compression_ratio": 1.547244094488189,
+    "no_speech_prob": 0.006900795269757509
+  },
+  {
+    "id": 164,
+    "seek": 103324,
+    "start": 1039.64,
+    "end": 1045.92,
+    "text": " gelernt. Statt auf Gro\u00dfsiedlungen wie Neuperlach zu setzen, achten viele St\u00e4dte und Gemeinden",
+    "tokens": [
+      50684, 49224, 13, 745, 1591, 2501, 34534, 82, 1091, 45434, 3355, 1734,
+      12879, 75, 608, 2164, 35877, 11, 2800, 1147, 9693, 745, 16837, 975, 674,
+      31266, 10291, 50998
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12013473334135832,
+    "compression_ratio": 1.547244094488189,
+    "no_speech_prob": 0.006900795269757509
+  },
+  {
+    "id": 165,
+    "seek": 103324,
+    "start": 1045.92,
+    "end": 1051.92,
+    "text": " stattdessen darauf, dass bei Neubauvorhaben ein Teil der Wohnungen sozial gebunden ist, damit auch",
+    "tokens": [
+      50998, 25675, 67, 12431, 18654, 11, 2658, 4643, 1734, 836, 1459, 8453,
+      7821, 268, 1343, 16357, 1163, 22741, 5084, 31541, 21125, 10028, 1418, 11,
+      9479, 2168, 51298
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12013473334135832,
+    "compression_ratio": 1.547244094488189,
+    "no_speech_prob": 0.006900795269757509
+  },
+  {
+    "id": 166,
+    "seek": 103324,
+    "start": 1051.92,
+    "end": 1057.68,
+    "text": " einkommensschwache Chancen auf eine bezahlbare Wohnung haben. Der soziale Wohnungsbau hat sich",
+    "tokens": [
+      51298, 308, 475, 1204, 694, 6145, 86, 6000, 761, 4463, 268, 2501, 3018,
+      10782, 10722, 30682, 50087, 3084, 13, 5618, 31541, 68, 22741, 5846, 26820,
+      2385, 3041, 51586
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12013473334135832,
+    "compression_ratio": 1.547244094488189,
+    "no_speech_prob": 0.006900795269757509
+  },
+  {
+    "id": 167,
+    "seek": 105768,
+    "start": 1057.68,
+    "end": 1063.1200000000001,
+    "text": " ausdifferenziert. W\u00e4hrend man in den 50er Jahren oft eine Typ von Wohnung gebaut hat,",
+    "tokens": [
+      50364, 3437, 67, 12612, 11368, 4859, 13, 40084, 4542, 587, 294, 1441,
+      2625, 260, 13080, 11649, 3018, 17722, 2957, 50087, 49203, 2385, 11, 50636
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.168130839954723,
+    "compression_ratio": 1.5158730158730158,
+    "no_speech_prob": 0.17252492904663086
+  },
+  {
+    "id": 168,
+    "seek": 105768,
+    "start": 1063.1200000000001,
+    "end": 1069.5600000000002,
+    "text": " die dann f\u00fcr alle passen musste und die Zielgruppe war in erster Linie Familien. Und in den 80er Jahren",
+    "tokens": [
+      50636, 978, 3594, 2959, 5430, 1320, 268, 34497, 674, 978, 25391, 37768,
+      68, 1516, 294, 1189, 3120, 9355, 414, 36451, 13, 2719, 294, 1441, 4688,
+      260, 13080, 50958
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.168130839954723,
+    "compression_ratio": 1.5158730158730158,
+    "no_speech_prob": 0.17252492904663086
+  },
+  {
+    "id": 169,
+    "seek": 105768,
+    "start": 1069.5600000000002,
+    "end": 1075.96,
+    "text": " beginnt sich ein, ich nenne es einfach mal Themenwohnen, heraus zu kristallisieren, dass man",
+    "tokens": [
+      50958, 1841, 580, 3041, 1343, 11, 1893, 297, 13295, 785, 7281, 2806,
+      39229, 86, 2359, 268, 11, 25089, 2164, 350, 12940, 336, 271, 5695, 11,
+      2658, 587, 51278
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.168130839954723,
+    "compression_ratio": 1.5158730158730158,
+    "no_speech_prob": 0.17252492904663086
+  },
+  {
+    "id": 170,
+    "seek": 105768,
+    "start": 1075.96,
+    "end": 1086.1200000000001,
+    "text": " Wohnungsbau f\u00f6rderte f\u00fcr integrative Wohnprojekte, f\u00fcr alten Wohnungen, f\u00fcr betreutes Wohnen,",
+    "tokens": [
+      51278, 22741, 5846, 26820, 4816, 67, 10634, 2959, 3572, 1166, 22741, 4318,
+      27023, 975, 11, 2959, 41217, 22741, 5084, 11, 2959, 778, 265, 1819, 22741,
+      268, 11, 51786
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.168130839954723,
+    "compression_ratio": 1.5158730158730158,
+    "no_speech_prob": 0.17252492904663086
+  },
+  {
+    "id": 171,
+    "seek": 108612,
+    "start": 1086.28,
+    "end": 1094.7199999999998,
+    "text": " f\u00fcr behindertengerechtes Wohnen. Das hei\u00dft, man hat vielmehr versucht, bestimmte Gesellschaftsgruppen",
+    "tokens": [
+      50372, 2959, 2261, 911, 1501, 48561, 279, 22741, 268, 13, 2846, 13139, 11,
+      587, 2385, 5891, 1398, 1703, 36064, 11, 35180, 975, 30006, 82, 37768, 268,
+      50794
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1379086569453893,
+    "compression_ratio": 1.3856502242152466,
+    "no_speech_prob": 0.005551790352910757
+  },
+  {
+    "id": 172,
+    "seek": 108612,
+    "start": 1094.7199999999998,
+    "end": 1103.1999999999998,
+    "text": " zu treffen mit den F\u00f6rderungen, die den Wohnungsbau betrafen. Die Architekturhistorikerin Hilde Strobl.",
+    "tokens": [
+      50794, 2164, 37620, 2194, 1441, 20665, 1068, 5084, 11, 978, 1441, 22741,
+      5846, 26820, 778, 424, 6570, 13, 3229, 10984, 642, 2320, 374, 71, 23882,
+      17314, 259, 389, 15956, 42196, 5199, 13, 51218
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1379086569453893,
+    "compression_ratio": 1.3856502242152466,
+    "no_speech_prob": 0.005551790352910757
+  },
+  {
+    "id": 173,
+    "seek": 108612,
+    "start": 1103.1999999999998,
+    "end": 1110.1999999999998,
+    "text": " Die Gro\u00dfsiedlungen und Trabantenst\u00e4dte werden inzwischen neu bewertet und teilweise rehabilitiert.",
+    "tokens": [
+      51218, 3229, 34534, 82, 1091, 45434, 674, 314, 5305, 29646, 372, 16837,
+      975, 4604, 294, 47115, 22510, 17897, 911, 302, 674, 46748, 26043, 270,
+      4859, 13, 51568
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1379086569453893,
+    "compression_ratio": 1.3856502242152466,
+    "no_speech_prob": 0.005551790352910757
+  },
+  {
+    "id": 174,
+    "seek": 111020,
+    "start": 1110.2,
+    "end": 1117.0800000000002,
+    "text": " Neu Perlach ist sch\u00f6n, lautet eine Studie der TU M\u00fcnchen. Einer der Herausgeber ist Professor",
+    "tokens": [
+      50364, 1734, 84, 3026, 75, 608, 1418, 13527, 11, 635, 20364, 3018, 4541,
+      414, 1163, 42408, 35840, 2470, 13, 462, 4564, 1163, 36795, 432, 607, 1418,
+      8419, 50708
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14046502580829695,
+    "compression_ratio": 1.482213438735178,
+    "no_speech_prob": 0.037306610494852066
+  },
+  {
+    "id": 175,
+    "seek": 111020,
+    "start": 1117.0800000000002,
+    "end": 1122.6000000000001,
+    "text": " Andreas Hild. Den Menschen, die dort leben, denen geht es ja gut und denen gef\u00e4llt das auch da.",
+    "tokens": [
+      50708, 38785, 389, 793, 13, 6458, 8397, 11, 978, 15775, 26392, 11, 19998,
+      7095, 785, 2784, 5228, 674, 19998, 11271, 25333, 1482, 2168, 1120, 13,
+      50984
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14046502580829695,
+    "compression_ratio": 1.482213438735178,
+    "no_speech_prob": 0.037306610494852066
+  },
+  {
+    "id": 176,
+    "seek": 111020,
+    "start": 1122.6000000000001,
+    "end": 1129.4,
+    "text": " Die leben dort gerne und im Prinzip muss das schon etwas damit zu tun haben, dass es sch\u00f6n ist dort.",
+    "tokens": [
+      50984, 3229, 26392, 15775, 15689, 674, 566, 47572, 6425, 1482, 4981, 9569,
+      9479, 2164, 4267, 3084, 11, 2658, 785, 13527, 1418, 15775, 13, 51324
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14046502580829695,
+    "compression_ratio": 1.482213438735178,
+    "no_speech_prob": 0.037306610494852066
+  },
+  {
+    "id": 177,
+    "seek": 111020,
+    "start": 1129.4,
+    "end": 1137.2,
+    "text": " Der soziale Wohnungsbau war wichtig f\u00fcr den Wiederaufbau nach dem Krieg, um die",
+    "tokens": [
+      51324, 5618, 31541, 68, 22741, 5846, 26820, 1516, 13621, 2959, 1441,
+      45742, 9507, 26820, 5168, 1371, 35579, 70, 11, 1105, 978, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14046502580829695,
+    "compression_ratio": 1.482213438735178,
+    "no_speech_prob": 0.037306610494852066
+  },
+  {
+    "id": 178,
+    "seek": 113720,
+    "start": 1137.2,
+    "end": 1142.8,
+    "text": " Wohnungsnot zu \u00fcberwinden und bezahlbaren Wohnraum f\u00fcr breite Schichten der Bev\u00f6lkerung zu schaffen.",
+    "tokens": [
+      50364, 22741, 5846, 2247, 2164, 4502, 86, 10291, 674, 10782, 10722, 43552,
+      22741, 31502, 2959, 1403, 642, 2065, 24681, 1163, 48313, 1063, 2164,
+      30888, 13, 50644
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11091977578622324,
+    "compression_ratio": 1.4980842911877394,
+    "no_speech_prob": 0.24744300544261932
+  },
+  {
+    "id": 179,
+    "seek": 113720,
+    "start": 1142.8,
+    "end": 1148.64,
+    "text": " Die Wohnungspolitik war eine zentrale S\u00e4ule der Nachkriegsordnung, wichtig auch f\u00fcr die",
+    "tokens": [
+      50644, 3229, 50087, 4952, 33704, 1035, 1516, 3018, 710, 317, 47282, 318,
+      737, 2271, 1163, 11815, 74, 5469, 21559, 31829, 11, 13621, 2168, 2959,
+      978, 50936
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11091977578622324,
+    "compression_ratio": 1.4980842911877394,
+    "no_speech_prob": 0.24744300544261932
+  },
+  {
+    "id": 180,
+    "seek": 113720,
+    "start": 1148.64,
+    "end": 1154.64,
+    "text": " politische Stabilit\u00e4t der Bundesrepublik. Der Bestand an Sozialwohnungen schmilzt nun allerdings",
+    "tokens": [
+      50936, 2453, 7864, 745, 5177, 14053, 1163, 14031, 19919, 48620, 13, 5618,
+      9752, 474, 364, 36867, 86, 2359, 5084, 956, 28674, 2682, 8905, 35489,
+      51236
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11091977578622324,
+    "compression_ratio": 1.4980842911877394,
+    "no_speech_prob": 0.24744300544261932
+  },
+  {
+    "id": 181,
+    "seek": 113720,
+    "start": 1154.64,
+    "end": 1161.16,
+    "text": " schon seit Jahrzehnten kontinuierlich ab. Durch Privatisierung und das Auslaufen der Sozialbindung,",
+    "tokens": [
+      51236, 4981, 16452, 11674, 1381, 71, 14970, 14373, 259, 84, 811, 1739,
+      410, 13, 28557, 8087, 23352, 32531, 674, 1482, 9039, 875, 19890, 1163,
+      36867, 65, 41442, 11, 51562
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11091977578622324,
+    "compression_ratio": 1.4980842911877394,
+    "no_speech_prob": 0.24744300544261932
+  },
+  {
+    "id": 182,
+    "seek": 116116,
+    "start": 1161.16,
+    "end": 1168.1200000000001,
+    "text": " da nicht in gleichem Ma\u00dfe neue Sozialwohnungen entstehen. 1990 gab es in Deutschland noch",
+    "tokens": [
+      50364, 1120, 1979, 294, 11699, 443, 4042, 11451, 16842, 36867, 86, 2359,
+      5084, 35955, 2932, 13, 13384, 17964, 785, 294, 14802, 3514, 50712
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14157022344003808,
+    "compression_ratio": 1.528225806451613,
+    "no_speech_prob": 0.18688715994358063
+  },
+  {
+    "id": 183,
+    "seek": 116116,
+    "start": 1168.1200000000001,
+    "end": 1173.88,
+    "text": " rund drei Millionen Sozialwohnungen. Inzwischen sind es nur noch etwa ein Drittel, gut eine",
+    "tokens": [
+      50712, 23096, 16809, 26096, 36867, 86, 2359, 5084, 13, 682, 47115, 3290,
+      785, 4343, 3514, 28369, 1343, 2491, 47265, 11, 5228, 3018, 51000
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14157022344003808,
+    "compression_ratio": 1.528225806451613,
+    "no_speech_prob": 0.18688715994358063
+  },
+  {
+    "id": 184,
+    "seek": 116116,
+    "start": 1173.88,
+    "end": 1181.0800000000002,
+    "text": " Million. Und das bei gleichzeitig immer weiter steigenden Mieten. Ein Beratergremium der Bundesrepublik",
+    "tokens": [
+      51000, 33959, 13, 2719, 1482, 4643, 44242, 5578, 8988, 2126, 328, 8896,
+      376, 25868, 13, 6391, 5637, 771, 70, 2579, 2197, 1163, 14031, 19919,
+      48620, 51360
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14157022344003808,
+    "compression_ratio": 1.528225806451613,
+    "no_speech_prob": 0.18688715994358063
+  },
+  {
+    "id": 185,
+    "seek": 116116,
+    "start": 1181.0800000000002,
+    "end": 1187.96,
+    "text": " empfiehlt dennoch im Sommer 2018, der soziale Wohnungsbau sollte nicht wiederbelebt, sondern",
+    "tokens": [
+      51360, 4012, 69, 414, 71, 2282, 1441, 41608, 566, 35022, 6096, 11, 1163,
+      31541, 68, 22741, 5846, 26820, 18042, 1979, 6216, 650, 306, 4517, 11,
+      11465, 51704
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14157022344003808,
+    "compression_ratio": 1.528225806451613,
+    "no_speech_prob": 0.18688715994358063
+  },
+  {
+    "id": 186,
+    "seek": 118796,
+    "start": 1187.96,
+    "end": 1193.6000000000001,
+    "text": " im Gegenteil zur\u00fcckgefahren werden, weil hierbei eine Fehlleitung von Subventionen droht.",
+    "tokens": [
+      50364, 566, 27826, 1576, 388, 15089, 13529, 7079, 4604, 11, 7689, 3296,
+      21845, 3018, 35576, 2447, 35563, 2957, 8511, 6411, 268, 3789, 357, 13,
+      50646
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12266076161311223,
+    "compression_ratio": 1.5870307167235496,
+    "no_speech_prob": 0.29365450143814087
+  },
+  {
+    "id": 187,
+    "seek": 118796,
+    "start": 1193.6000000000001,
+    "end": 1199.6000000000001,
+    "text": " Der Wirtschaftswissenschaftler Friedrich Breyer. Soziale Wohnungsbau kann niemals dazu f\u00fchren,",
+    "tokens": [
+      50646, 5618, 29412, 25884, 26657, 1918, 17605, 10794, 7090, 7224, 13,
+      36867, 68, 22741, 5846, 26820, 4028, 2838, 34978, 13034, 35498, 11, 50946
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12266076161311223,
+    "compression_ratio": 1.5870307167235496,
+    "no_speech_prob": 0.29365450143814087
+  },
+  {
+    "id": 188,
+    "seek": 118796,
+    "start": 1199.6000000000001,
+    "end": 1204.52,
+    "text": " dass alle Bed\u00fcrfte in eine Sozialwohnung bekommen. Also soziale Wohnungsbau l\u00f6st das Problem nicht,",
+    "tokens": [
+      50946, 2658, 5430, 19893, 1655, 16268, 294, 3018, 36867, 86, 2359, 1063,
+      19256, 13, 2743, 31541, 68, 22741, 5846, 26820, 25209, 372, 1482, 11676,
+      1979, 11, 51192
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12266076161311223,
+    "compression_ratio": 1.5870307167235496,
+    "no_speech_prob": 0.29365450143814087
+  },
+  {
+    "id": 189,
+    "seek": 118796,
+    "start": 1204.52,
+    "end": 1209.56,
+    "text": " um das es geht. Es komme immer wieder zu Fehlbelegungen, monieren die Kritiker des",
+    "tokens": [
+      51192, 1105, 1482, 785, 7095, 13, 2313, 31194, 5578, 6216, 2164, 3697,
+      22950, 650, 6363, 5084, 11, 1108, 5695, 978, 46372, 17314, 730, 51444
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12266076161311223,
+    "compression_ratio": 1.5870307167235496,
+    "no_speech_prob": 0.29365450143814087
+  },
+  {
+    "id": 190,
+    "seek": 118796,
+    "start": 1209.56,
+    "end": 1215.64,
+    "text": " sozialen Wohnungsbaus. Mieter blieben oft in Sozialwohnungen, auch wenn ihr Einkommen steigt.",
+    "tokens": [
+      51444, 31541, 268, 22741, 5846, 4231, 301, 13, 376, 1684, 260, 888, 38243,
+      11649, 294, 36867, 86, 2359, 5084, 11, 2168, 4797, 5553, 49128, 5132,
+      2126, 5828, 13, 51748
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12266076161311223,
+    "compression_ratio": 1.5870307167235496,
+    "no_speech_prob": 0.29365450143814087
+  },
+  {
+    "id": 191,
+    "seek": 121564,
+    "start": 1215.64,
+    "end": 1222.72,
+    "text": " Au\u00dferdem besteht die Gefahr, dass sich Wohnblocks mit Sozialwohnungen zu Gettos entwickeln. Und auch",
+    "tokens": [
+      50364, 47834, 43680, 978, 17873, 5398, 11, 2658, 3041, 22741, 15962, 2761,
+      2194, 36867, 86, 2359, 5084, 2164, 460, 3093, 329, 28449, 32099, 13, 2719,
+      2168, 50718
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1438031545499476,
+    "compression_ratio": 1.6166666666666667,
+    "no_speech_prob": 0.18216277658939362
+  },
+  {
+    "id": 192,
+    "seek": 121564,
+    "start": 1222.72,
+    "end": 1227.8000000000002,
+    "text": " die Vermieter gef\u00f6rderter Wohnungen w\u00fcrden unter den Berechtigten diejenigen mit h\u00f6herem Einkommen",
+    "tokens": [
+      50718, 978, 20185, 1684, 260, 11271, 2311, 1068, 391, 22741, 5084, 27621,
+      8662, 1441, 17684, 4701, 41498, 978, 48176, 2194, 13531, 6703, 76, 49128,
+      5132, 50972
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1438031545499476,
+    "compression_ratio": 1.6166666666666667,
+    "no_speech_prob": 0.18216277658939362
+  },
+  {
+    "id": 193,
+    "seek": 121564,
+    "start": 1227.8000000000002,
+    "end": 1232.8000000000002,
+    "text": " bevorzugen. Gerade die Bezieher besonders niedriger Einkommen f\u00e4nden deswegen nicht",
+    "tokens": [
+      50972, 37591, 89, 27915, 13, 48175, 978, 879, 3283, 511, 25258, 32488, 81,
+      4810, 49128, 5132, 283, 5524, 268, 26482, 1979, 51222
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1438031545499476,
+    "compression_ratio": 1.6166666666666667,
+    "no_speech_prob": 0.18216277658939362
+  },
+  {
+    "id": 194,
+    "seek": 121564,
+    "start": 1232.8000000000002,
+    "end": 1237.8000000000002,
+    "text": " so leicht eine Sozialwohnung. Und deswegen muss man sich eben nach einem anderen Instrument umschauen.",
+    "tokens": [
+      51222, 370, 28333, 3018, 36867, 86, 2359, 1063, 13, 2719, 26482, 6425,
+      587, 3041, 11375, 5168, 6827, 11122, 39785, 2206, 1105, 6145, 11715, 13,
+      51472
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1438031545499476,
+    "compression_ratio": 1.6166666666666667,
+    "no_speech_prob": 0.18216277658939362
+  },
+  {
+    "id": 195,
+    "seek": 121564,
+    "start": 1237.8000000000002,
+    "end": 1243.72,
+    "text": " Und wir sind der Meinung, sozialer Wohnungsbau sollte zur\u00fcckgefahren werden, wenn \u00fcberhaupt",
+    "tokens": [
+      51472, 2719, 1987, 3290, 1163, 36519, 11, 31541, 260, 22741, 5846, 26820,
+      18042, 15089, 13529, 7079, 4604, 11, 4797, 20023, 51768
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1438031545499476,
+    "compression_ratio": 1.6166666666666667,
+    "no_speech_prob": 0.18216277658939362
+  },
+  {
+    "id": 196,
+    "seek": 124372,
+    "start": 1243.72,
+    "end": 1249.28,
+    "text": " Politiker meinen sozialen Wohnungsbau aus wahltaktischen Gr\u00fcnden sagen wir mal aufrecht",
+    "tokens": [
+      50364, 13812, 17314, 22738, 31541, 268, 22741, 5846, 26820, 3437, 261,
+      10722, 83, 5886, 6282, 2606, 27687, 8360, 1987, 2806, 2501, 31495, 50642
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1355443842270795,
+    "compression_ratio": 1.5140845070422535,
+    "no_speech_prob": 0.0694655105471611
+  },
+  {
+    "id": 197,
+    "seek": 124372,
+    "start": 1249.28,
+    "end": 1254.16,
+    "text": " erhalten zu m\u00fcssen. Dann nur mit einer konsequenten Fehlbelegungsabgabe und nur in",
+    "tokens": [
+      50642, 38051, 2164, 9013, 13, 7455, 4343, 2194, 6850, 47020, 28842, 268,
+      3697, 22950, 650, 6363, 5846, 455, 70, 4488, 674, 4343, 294, 50886
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1355443842270795,
+    "compression_ratio": 1.5140845070422535,
+    "no_speech_prob": 0.0694655105471611
+  },
+  {
+    "id": 198,
+    "seek": 124372,
+    "start": 1254.16,
+    "end": 1260.32,
+    "text": " durchmischten Wohngebieten. Eine Gruppe von 200 Wissenschaftlern, die zum Thema Wohnen und",
+    "tokens": [
+      50886, 7131, 45634, 21043, 22741, 10848, 25868, 13, 17664, 10459, 19833,
+      2957, 2331, 38774, 75, 1248, 11, 978, 5919, 16306, 22741, 268, 674, 51194
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1355443842270795,
+    "compression_ratio": 1.5140845070422535,
+    "no_speech_prob": 0.0694655105471611
+  },
+  {
+    "id": 199,
+    "seek": 124372,
+    "start": 1260.32,
+    "end": 1266.04,
+    "text": " Stadtentwicklung forscht, widerspricht. Wenn Wohnen unbezahlbar werde, bedrohe dies den",
+    "tokens": [
+      51194, 20550, 317, 16038, 17850, 32299, 4701, 11, 5274, 433, 79, 12836,
+      13, 7899, 22741, 268, 517, 650, 39670, 5356, 24866, 11, 2901, 340, 675,
+      2714, 1441, 51480
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1355443842270795,
+    "compression_ratio": 1.5140845070422535,
+    "no_speech_prob": 0.0694655105471611
+  },
+  {
+    "id": 200,
+    "seek": 124372,
+    "start": 1266.04,
+    "end": 1270.56,
+    "text": " gesellschaftlichen Zusammenhalt. Der Markt versagt in der Bereitstellung eines",
+    "tokens": [
+      51480, 5019, 22055, 10193, 29442, 20731, 13, 5618, 39774, 1774, 7665, 294,
+      1163, 17684, 270, 30016, 18599, 51706
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1355443842270795,
+    "compression_ratio": 1.5140845070422535,
+    "no_speech_prob": 0.0694655105471611
+  },
+  {
+    "id": 201,
+    "seek": 127056,
+    "start": 1270.56,
+    "end": 1276.56,
+    "text": " sozial vertr\u00e4glichen Wohnungsangebotes, weshalb es der entschiedenen Intervention der \u00f6ffentlichen",
+    "tokens": [
+      50364, 31541, 6509, 11397, 8856, 268, 22741, 5846, 933, 65, 17251, 11,
+      38384, 13209, 785, 1163, 49807, 268, 5751, 6411, 1163, 34603, 268, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16183965451249452,
+    "compression_ratio": 1.5348837209302326,
+    "no_speech_prob": 0.18914368748664856
+  },
+  {
+    "id": 202,
+    "seek": 127056,
+    "start": 1276.56,
+    "end": 1282.76,
+    "text": " Hand bedarf. Hei\u00dft es in einem offenen Brief unter der \u00dcberschrift f\u00fcr eine wirklich soziale",
+    "tokens": [
+      50664, 8854, 2901, 30224, 13, 634, 11539, 785, 294, 6827, 766, 20317,
+      39805, 8662, 1163, 10713, 1616, 339, 35742, 2959, 3018, 9696, 31541, 68,
+      50974
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16183965451249452,
+    "compression_ratio": 1.5348837209302326,
+    "no_speech_prob": 0.18914368748664856
+  },
+  {
+    "id": 203,
+    "seek": 127056,
+    "start": 1282.76,
+    "end": 1288.3999999999999,
+    "text": " Wohnungspolitik. Wohnen in den St\u00e4dten muss f\u00fcr Menschen aller Einkommensgruppen m\u00f6glich sein.",
+    "tokens": [
+      50974, 50087, 4952, 33704, 1035, 13, 22741, 268, 294, 1441, 745, 16837,
+      1147, 6425, 2959, 8397, 8722, 49128, 1204, 694, 37768, 268, 16294, 6195,
+      13, 51256
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16183965451249452,
+    "compression_ratio": 1.5348837209302326,
+    "no_speech_prob": 0.18914368748664856
+  },
+  {
+    "id": 204,
+    "seek": 127056,
+    "start": 1288.3999999999999,
+    "end": 1295.08,
+    "text": " Deshalb bedarf es mehr sozialen Wohnungsbaus, um alle Bed\u00fcrftigen zu versorgen. Keinesfalls weniger.",
+    "tokens": [
+      51256, 27969, 2901, 30224, 785, 5417, 31541, 268, 22741, 5846, 4231, 301,
+      11, 1105, 5430, 19893, 1655, 844, 3213, 2164, 1774, 284, 1766, 13, 3189,
+      1652, 18542, 23224, 13, 51590
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16183965451249452,
+    "compression_ratio": 1.5348837209302326,
+    "no_speech_prob": 0.18914368748664856
+  },
+  {
+    "id": 205,
+    "seek": 129508,
+    "start": 1295.08,
+    "end": 1304.08,
+    "text": " Der soziale Wohnungsbau. Eine Erfolgsgeschichte und heute ein umstrittenes Konzept, das aber",
+    "tokens": [
+      50364, 5618, 31541, 68, 22741, 5846, 26820, 13, 17664, 3300, 7082, 21559,
+      23378, 18972, 674, 9801, 1343, 1105, 9733, 2987, 279, 12718, 32082, 11,
+      1482, 4340, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1773660418013452,
+    "compression_ratio": 1.310880829015544,
+    "no_speech_prob": 0.08750373125076294
+  },
+  {
+    "id": 206,
+    "seek": 129508,
+    "start": 1304.08,
+    "end": 1309.6399999999999,
+    "text": " weiter aktuell bleibt. Zumindest solange die Mieten steigen und bezahlbarer Wohnraum,",
+    "tokens": [
+      50814, 8988, 36267, 24814, 13, 23906, 33155, 1404, 933, 978, 376, 25868,
+      2126, 3213, 674, 10782, 10722, 5356, 260, 22741, 31502, 11, 51092
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1773660418013452,
+    "compression_ratio": 1.310880829015544,
+    "no_speech_prob": 0.08750373125076294
+  },
+  {
+    "id": 207,
+    "seek": 129508,
+    "start": 1309.6399999999999,
+    "end": 1314.52,
+    "text": " gerade in Gro\u00dfst\u00e4dten, f\u00fcr viele Menschen immer schwerer zu finden ist.",
+    "tokens": [
+      51092, 12117, 294, 34534, 372, 16837, 1147, 11, 2959, 9693, 8397, 5578,
+      23809, 260, 2164, 20734, 1418, 13, 51336
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1773660418013452,
+    "compression_ratio": 1.310880829015544,
+    "no_speech_prob": 0.08750373125076294
+  },
+  {
+    "id": 208,
+    "seek": 131452,
+    "start": 1314.52,
+    "end": 1325.44,
+    "text": " Sie h\u00f6rten Sozialer Wohnungsbau Geschichte eines umstrittenen Konzepts von Georg Kuber.",
+    "tokens": [
+      50364, 3559, 42651, 1147, 36867, 260, 22741, 5846, 26820, 28896, 18599,
+      1105, 9733, 2987, 268, 12718, 46342, 1373, 2957, 10114, 591, 10261, 13,
+      50910
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.23449838017842856,
+    "compression_ratio": 1.319047619047619,
+    "no_speech_prob": 0.7674323320388794
+  },
+  {
+    "id": 209,
+    "seek": 131452,
+    "start": 1325.44,
+    "end": 1332.8,
+    "text": " Es sprachen Rahel Komtes und Michael Hafner. Technik Gerhard Wichow. Regie Sabine Kienh\u00f6fer.",
+    "tokens": [
+      50910, 2313, 6103, 11646, 17844, 338, 14286, 7269, 674, 5116, 47933, 1193,
+      13, 8337, 1035, 9409, 21491, 343, 480, 305, 13, 4791, 414, 13915, 533,
+      591, 1053, 33195, 612, 13, 51278
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.23449838017842856,
+    "compression_ratio": 1.319047619047619,
+    "no_speech_prob": 0.7674323320388794
+  },
+  {
+    "id": 210,
+    "seek": 131452,
+    "start": 1332.8,
+    "end": 1340.68,
+    "text": " Redaktion Nicole Ruchlak. Das war Radio Wissen, ein Podcast von Bayern 2. Wenn Sie keine Folge",
+    "tokens": [
+      51278, 4477, 5886, 313, 18532, 497, 625, 41472, 13, 2846, 1516, 17296,
+      343, 10987, 11, 1343, 29972, 2957, 29163, 568, 13, 7899, 3559, 9252,
+      43597, 51672
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.23449838017842856,
+    "compression_ratio": 1.319047619047619,
+    "no_speech_prob": 0.7674323320388794
+  },
+  {
+    "id": 211,
+    "seek": 134068,
+    "start": 1340.68,
+    "end": 1347.04,
+    "text": " mehr verpassen wollen, abonnieren Sie Radio Wissen unter Bayern2.de slash Podcast und \u00fcberall,",
+    "tokens": [
+      50364, 5417, 1306, 44270, 11253, 11, 40676, 5695, 3559, 17296, 343, 10987,
+      8662, 29163, 17, 13, 1479, 17330, 29972, 674, 38035, 11, 50682
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.3150211274623871,
+    "compression_ratio": 1.0943396226415094,
+    "no_speech_prob": 0.8189354538917542
+  },
+  {
+    "id": 212,
+    "seek": 134068,
+    "start": 1347.04,
+    "end": 1348.3600000000001,
+    "text": " wo es Podcasts gibt.",
+    "tokens": [50682, 6020, 785, 29972, 82, 6089, 13, 50748],
+    "temperature": 0.0,
+    "avg_logprob": -0.3150211274623871,
+    "compression_ratio": 1.0943396226415094,
+    "no_speech_prob": 0.8189354538917542
+  }
+]

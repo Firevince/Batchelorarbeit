@@ -1,0 +1,3244 @@
+[
+  {
+    "id": 0,
+    "seek": 0,
+    "start": 0.0,
+    "end": 21.8,
+    "text": " Die Selbstoffenbarung ist ein Boomen des literarischen Genres geworden. Wer autofiktional",
+    "tokens": [
+      50364, 3229, 29712, 4506, 268, 5356, 1063, 1418, 1343, 3286, 4726, 730,
+      2733, 289, 6282, 3632, 495, 26281, 13, 14255, 1476, 2670, 9874, 1966,
+      51454
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16544134800250715,
+    "compression_ratio": 1.288888888888889,
+    "no_speech_prob": 0.12558460235595703
+  },
+  {
+    "id": 1,
+    "seek": 0,
+    "start": 21.8,
+    "end": 27.32,
+    "text": " schreibt, hat mehr als ein narzisstisches Anliegen. Im eigenen Erleben spiegeln sich",
+    "tokens": [
+      51454, 956, 31174, 11, 2385, 5417, 3907, 1343, 6714, 89, 45802, 35889,
+      1107, 6302, 1766, 13, 4331, 28702, 3300, 41467, 637, 20408, 9878, 3041,
+      51730
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16544134800250715,
+    "compression_ratio": 1.288888888888889,
+    "no_speech_prob": 0.12558460235595703
+  },
+  {
+    "id": 2,
+    "seek": 2732,
+    "start": 27.32,
+    "end": 32.36,
+    "text": " pr\u00e4gende gesellschaftliche Themen wie Identit\u00e4tssuche oder auch Klassenkampf.",
+    "tokens": [
+      50364, 582, 737, 27429, 5019, 22055, 10185, 39229, 3355, 25905, 13187,
+      1373, 82, 17545, 4513, 2168, 16053, 8356, 74, 30157, 13, 50616
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17226026659813998,
+    "compression_ratio": 1.3811475409836065,
+    "no_speech_prob": 0.7678337693214417
+  },
+  {
+    "id": 3,
+    "seek": 2732,
+    "start": 32.36,
+    "end": 44.56,
+    "text": " Ein Haus im 17. arrondissement in Paris. Am Ende der Passage Cardinet. Am Mittwoch,",
+    "tokens": [
+      50616, 6391, 22725, 566, 3282, 13, 5539, 684, 31931, 294, 8380, 13, 2012,
+      15152, 1163, 10319, 609, 11877, 259, 302, 13, 2012, 18784, 6120, 339, 11,
+      51226
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17226026659813998,
+    "compression_ratio": 1.3811475409836065,
+    "no_speech_prob": 0.7678337693214417
+  },
+  {
+    "id": 4,
+    "seek": 2732,
+    "start": 44.56,
+    "end": 51.28,
+    "text": " den 8. Januar, fuhr ich nach Paris. Es ist ein schneeregnerischer Tag im Jahr 1964,",
+    "tokens": [
+      51226, 1441, 1649, 13, 4956, 20766, 11, 8536, 1703, 1893, 5168, 8380, 13,
+      2313, 1418, 1343, 28643, 323, 70, 1193, 19674, 11204, 566, 11674, 34314,
+      11, 51562
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17226026659813998,
+    "compression_ratio": 1.3811475409836065,
+    "no_speech_prob": 0.7678337693214417
+  },
+  {
+    "id": 5,
+    "seek": 2732,
+    "start": 51.28,
+    "end": 57.08,
+    "text": " als sich die Ich-Erz\u00e4hlerin aus der Provinz auf den Weg macht mit 400 Fr. in der Tasche,",
+    "tokens": [
+      51562, 3907, 3041, 978, 3141, 12, 36, 19390, 6860, 22417, 3437, 1163,
+      1705, 4796, 89, 2501, 1441, 18919, 10857, 2194, 8423, 1526, 13, 294, 1163,
+      27293, 1876, 11, 51852
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17226026659813998,
+    "compression_ratio": 1.3811475409836065,
+    "no_speech_prob": 0.7678337693214417
+  },
+  {
+    "id": 6,
+    "seek": 5708,
+    "start": 57.16,
+    "end": 63.44,
+    "text": " um die Frau zu treffen und alle praktischen Details zu kl\u00e4ren. Den Termin, die Bezahlung.",
+    "tokens": [
+      50368, 1105, 978, 13930, 2164, 37620, 674, 5430, 33721, 6282, 42811, 2164,
+      9671, 21465, 13, 6458, 19835, 259, 11, 978, 879, 39670, 1063, 13, 50682
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1325942629859561,
+    "compression_ratio": 1.497907949790795,
+    "no_speech_prob": 0.04740990325808525
+  },
+  {
+    "id": 7,
+    "seek": 5708,
+    "start": 63.44,
+    "end": 68.12,
+    "text": " Wir folgen der jungen Frau, die diese Geschichte erz\u00e4hlt, eine Stiege hinauf.",
+    "tokens": [
+      50682, 4347, 3339, 1766, 1163, 361, 5084, 13930, 11, 978, 6705, 28896,
+      47110, 11, 3018, 745, 414, 432, 41844, 2947, 13, 50916
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1325942629859561,
+    "compression_ratio": 1.497907949790795,
+    "no_speech_prob": 0.04740990325808525
+  },
+  {
+    "id": 8,
+    "seek": 5708,
+    "start": 68.12,
+    "end": 73.47999999999999,
+    "text": " Tausende junger Frauen sind eine Treppe hochgestiegen und haben an eine T\u00fcr geklopft.",
+    "tokens": [
+      50916, 6551, 301, 5445, 14202, 260, 24191, 3290, 3018, 8648, 19833, 19783,
+      2629, 33633, 674, 3084, 364, 3018, 16728, 14037, 75, 404, 844, 13, 51184
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1325942629859561,
+    "compression_ratio": 1.497907949790795,
+    "no_speech_prob": 0.04740990325808525
+  },
+  {
+    "id": 9,
+    "seek": 5708,
+    "start": 73.47999999999999,
+    "end": 82.16,
+    "text": " Da stehen wir fast hinter ihr als Leserinnen und Leser. Sp\u00fcren ihr Unbehagen, als eine Frau \u00f6ffnet.",
+    "tokens": [
+      51184, 3933, 19777, 1987, 2370, 23219, 5553, 3907, 6965, 260, 11399, 674,
+      6965, 260, 13, 1738, 774, 1095, 5553, 1156, 29437, 4698, 11, 3907, 3018,
+      13930, 4044, 602, 7129, 13, 51618
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1325942629859561,
+    "compression_ratio": 1.497907949790795,
+    "no_speech_prob": 0.04740990325808525
+  },
+  {
+    "id": 10,
+    "seek": 8216,
+    "start": 82.16,
+    "end": 89.84,
+    "text": " In Kittel-Sch\u00fcrze und gepunkteten Pantoffeln ein Geschirrtuch in der Hand. Worum geht es, Mademoiselle?",
+    "tokens": [
+      50364, 682, 591, 47265, 12, 31560, 1655, 1381, 674, 30979, 14797, 19865,
+      430, 394, 4506, 9878, 1343, 14241, 347, 17721, 625, 294, 1163, 8854, 13,
+      26363, 449, 7095, 785, 11, 5326, 443, 7376, 4434, 30, 50748
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16609679328070748,
+    "compression_ratio": 1.4291497975708503,
+    "no_speech_prob": 0.4526824951171875
+  },
+  {
+    "id": 11,
+    "seek": 8216,
+    "start": 89.84,
+    "end": 95.36,
+    "text": " Wir wissen es. 64 Seiten lang sind wir vorbereitet worden, was kommt.",
+    "tokens": [
+      50748, 4347, 16331, 785, 13, 12145, 45200, 2265, 3290, 1987, 48391, 16341,
+      14054, 11, 390, 10047, 13, 51024
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16609679328070748,
+    "compression_ratio": 1.4291497975708503,
+    "no_speech_prob": 0.4526824951171875
+  },
+  {
+    "id": 12,
+    "seek": 8216,
+    "start": 95.36,
+    "end": 101.28,
+    "text": " Ihr w\u00fcrde ich das Innere meines Bauches \u00fcberlassen. Hier w\u00fcrde sich alles abspielen.",
+    "tokens": [
+      51024, 14773, 11942, 1893, 1482, 34066, 323, 385, 1652, 6777, 625, 279,
+      4502, 44898, 13, 10886, 11942, 3041, 7874, 1950, 79, 12844, 13, 51320
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16609679328070748,
+    "compression_ratio": 1.4291497975708503,
+    "no_speech_prob": 0.4526824951171875
+  },
+  {
+    "id": 13,
+    "seek": 8216,
+    "start": 101.28,
+    "end": 107.08,
+    "text": " Eine Engelmacherin w\u00fcrde den illegalen Eingriff vornehmen, einen Schwangerschaftsabbruch.",
+    "tokens": [
+      51320, 17664, 2469, 338, 76, 4062, 259, 11942, 1441, 11905, 268, 462, 278,
+      81, 3661, 4245, 14669, 11, 4891, 17576, 11186, 7118, 82, 455, 1443, 625,
+      13, 51610
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16609679328070748,
+    "compression_ratio": 1.4291497975708503,
+    "no_speech_prob": 0.4526824951171875
+  },
+  {
+    "id": 14,
+    "seek": 10708,
+    "start": 107.56,
+    "end": 111.32,
+    "text": " Eine einfache Frau, wenig wertgesch\u00e4tzt f\u00fcr ihre Arbeit im Krankenhaus,",
+    "tokens": [
+      50388, 17664, 38627, 6000, 13930, 11, 20911, 47659, 23378, 3628, 2682,
+      2959, 14280, 18604, 566, 39950, 23321, 11, 50576
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1675765627906436,
+    "compression_ratio": 1.4476987447698744,
+    "no_speech_prob": 0.4219168722629547
+  },
+  {
+    "id": 15,
+    "seek": 10708,
+    "start": 111.32,
+    "end": 118.16,
+    "text": " die hier in dieser sch\u00e4bigen Wohnung, in dieser Notlage aber \u00fcber dieselbe Macht verf\u00fcgte,",
+    "tokens": [
+      50576, 978, 3296, 294, 9053, 956, 737, 65, 3213, 50087, 11, 294, 9053,
+      1726, 22519, 4340, 4502, 21258, 650, 40873, 40660, 25644, 975, 11, 50918
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1675765627906436,
+    "compression_ratio": 1.4476987447698744,
+    "no_speech_prob": 0.4219168722629547
+  },
+  {
+    "id": 16,
+    "seek": 10708,
+    "start": 118.16,
+    "end": 126.32,
+    "text": " wie die \u00c4rzte, die sie kaum gr\u00fc\u00dften. Die Sprache kargpr\u00e4zise. Alles wird benannt.",
+    "tokens": [
+      50918, 3355, 978, 13700, 19390, 975, 11, 978, 2804, 36443, 677, 774, 2536,
+      1147, 13, 3229, 7702, 6000, 7917, 70, 1424, 737, 89, 908, 13, 27633, 4578,
+      3271, 39878, 13, 51326
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1675765627906436,
+    "compression_ratio": 1.4476987447698744,
+    "no_speech_prob": 0.4219168722629547
+  },
+  {
+    "id": 17,
+    "seek": 10708,
+    "start": 126.32,
+    "end": 133.04,
+    "text": " Die Stimmung, die Ger\u00e4tschaften, der Eingriff und auch die verschobenen Machtverh\u00e4ltnisse,",
+    "tokens": [
+      51326, 3229, 745, 38412, 11, 978, 9409, 737, 22165, 268, 11, 1163, 462,
+      278, 81, 3661, 674, 2168, 978, 20563, 996, 20317, 40873, 331, 28068,
+      31481, 11, 51662
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1675765627906436,
+    "compression_ratio": 1.4476987447698744,
+    "no_speech_prob": 0.4219168722629547
+  },
+  {
+    "id": 18,
+    "seek": 13304,
+    "start": 133.04,
+    "end": 138.79999999999998,
+    "text": " wenn so ein illegaler Schwangerschaftsabbruch vorgenommen wird, im Frankreich der 1960er Jahre.",
+    "tokens": [
+      50364, 4797, 370, 1343, 11905, 260, 17576, 11186, 7118, 82, 455, 1443,
+      625, 4245, 29270, 4578, 11, 566, 6823, 12594, 1163, 16157, 260, 15557, 13,
+      50652
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1434298833211263,
+    "compression_ratio": 1.3791666666666667,
+    "no_speech_prob": 0.23344214260578156
+  },
+  {
+    "id": 19,
+    "seek": 13304,
+    "start": 138.79999999999998,
+    "end": 146.48,
+    "text": " Es ist ihre Abtreibung. Die franz\u00f6sische Schriftstellerin Annie Ernaud hat sie \u00fcberlebt,",
+    "tokens": [
+      50652, 2313, 1418, 14280, 2847, 3599, 897, 1063, 13, 3229, 431, 3910,
+      11310, 7864, 2065, 35742, 372, 14983, 259, 26781, 3300, 629, 532, 2385,
+      2804, 4502, 306, 4517, 11, 51036
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1434298833211263,
+    "compression_ratio": 1.3791666666666667,
+    "no_speech_prob": 0.23344214260578156
+  },
+  {
+    "id": 20,
+    "seek": 13304,
+    "start": 146.48,
+    "end": 153.35999999999999,
+    "text": " w\u00e4re beinahe nach Komplikationen verblutet. 1999, dreieinhalb Jahrzehnte sp\u00e4ter,",
+    "tokens": [
+      51036, 14558, 312, 259, 545, 68, 5168, 14286, 564, 1035, 399, 268, 1306,
+      5199, 20364, 13, 19952, 11, 22540, 414, 259, 13209, 11674, 1381, 71, 9358,
+      24196, 11, 51380
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1434298833211263,
+    "compression_ratio": 1.3791666666666667,
+    "no_speech_prob": 0.23344214260578156
+  },
+  {
+    "id": 21,
+    "seek": 13304,
+    "start": 153.35999999999999,
+    "end": 159.04,
+    "text": " schreibt sie einen Roman dar\u00fcber und nennt ihn das Ereignis.",
+    "tokens": [
+      51380, 956, 31174, 2804, 4891, 8566, 21737, 674, 16399, 580, 14534, 1482,
+      462, 265, 788, 271, 13, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1434298833211263,
+    "compression_ratio": 1.3791666666666667,
+    "no_speech_prob": 0.23344214260578156
+  },
+  {
+    "id": 22,
+    "seek": 15904,
+    "start": 159.04,
+    "end": 167.95999999999998,
+    "text": " Aber ist es ein Roman? Sie hat das Geschehen ja selbst erlebt, schreibt in der Ich-Form,",
+    "tokens": [
+      50364, 5992, 1418, 785, 1343, 8566, 30, 3559, 2385, 1482, 6761, 1876,
+      2932, 2784, 13053, 47372, 11, 956, 31174, 294, 1163, 3141, 12, 49855, 11,
+      50810
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1102978541300847,
+    "compression_ratio": 1.467479674796748,
+    "no_speech_prob": 0.0032220471184700727
+  },
+  {
+    "id": 23,
+    "seek": 15904,
+    "start": 167.95999999999998,
+    "end": 175.0,
+    "text": " verbirgt sich f\u00fcr die Tatsachen. Wir wissen Zeit, Ort, Chronologie, Wetter, Zugverbindungen.",
+    "tokens": [
+      50810, 9595, 347, 10463, 3041, 2959, 978, 314, 1720, 11646, 13, 4347,
+      16331, 9394, 11, 22921, 11, 34038, 20121, 11, 343, 27296, 11, 34722,
+      25809, 471, 5084, 13, 51162
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1102978541300847,
+    "compression_ratio": 1.467479674796748,
+    "no_speech_prob": 0.0032220471184700727
+  },
+  {
+    "id": 24,
+    "seek": 15904,
+    "start": 175.0,
+    "end": 181.72,
+    "text": " Dennoch ist es kein dokumentarischer Bericht. Es ist eine tiefe Erinnerung an etwas,",
+    "tokens": [
+      51162, 6458, 41608, 1418, 785, 13424, 40858, 289, 19674, 5637, 1405, 13,
+      2313, 1418, 3018, 7582, 2106, 3300, 19166, 1063, 364, 9569, 11, 51498
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1102978541300847,
+    "compression_ratio": 1.467479674796748,
+    "no_speech_prob": 0.0032220471184700727
+  },
+  {
+    "id": 25,
+    "seek": 15904,
+    "start": 181.72,
+    "end": 187.56,
+    "text": " das lange in ihr war und zu einer literarischen Sprache finden sollte, weil es nicht nur eine",
+    "tokens": [
+      51498, 1482, 18131, 294, 5553, 1516, 674, 2164, 6850, 2733, 289, 6282,
+      7702, 6000, 20734, 18042, 11, 7689, 785, 1979, 4343, 3018, 51790
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1102978541300847,
+    "compression_ratio": 1.467479674796748,
+    "no_speech_prob": 0.0032220471184700727
+  },
+  {
+    "id": 26,
+    "seek": 18756,
+    "start": 187.56,
+    "end": 192.56,
+    "text": " individuelle Erfahrung war, sondern ein Ereignis, das auch das Leben sehr vieler",
+    "tokens": [
+      50364, 2461, 23635, 49318, 1516, 11, 11465, 1343, 462, 265, 788, 271, 11,
+      1482, 2168, 1482, 15399, 5499, 5891, 260, 50614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12253523789919339,
+    "compression_ratio": 1.5122950819672132,
+    "no_speech_prob": 0.3268255293369293
+  },
+  {
+    "id": 27,
+    "seek": 18756,
+    "start": 192.56,
+    "end": 198.92000000000002,
+    "text": " anderer Frauen ersch\u00fcttert. Auf diese Weise hat Annie Ernaud das eigene Erleben zur Literatur",
+    "tokens": [
+      50614, 48108, 24191, 41673, 7695, 391, 83, 13, 9462, 6705, 41947, 2385,
+      26781, 3300, 629, 532, 1482, 38549, 3300, 41467, 7147, 16090, 19493, 50932
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12253523789919339,
+    "compression_ratio": 1.5122950819672132,
+    "no_speech_prob": 0.3268255293369293
+  },
+  {
+    "id": 28,
+    "seek": 18756,
+    "start": 198.92000000000002,
+    "end": 205.48000000000002,
+    "text": " gemacht, hat \u00fcber ihre Herkunft, das Arbeitermilieu geschrieben, \u00fcber die Scham, die sie empfand,",
+    "tokens": [
+      50932, 12293, 11, 2385, 4502, 14280, 3204, 74, 19333, 11, 1482, 1587,
+      29565, 28674, 19347, 47397, 11, 4502, 978, 2065, 335, 11, 978, 2804, 4012,
+      69, 474, 11, 51260
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12253523789919339,
+    "compression_ratio": 1.5122950819672132,
+    "no_speech_prob": 0.3268255293369293
+  },
+  {
+    "id": 29,
+    "seek": 18756,
+    "start": 205.48000000000002,
+    "end": 211.64000000000001,
+    "text": " und auch den Verrat, den es zugleich bedeutete, ihrer Klasse entkommen zu wollen, in B\u00fcchern",
+    "tokens": [
+      51260, 674, 2168, 1441, 4281, 4481, 11, 1441, 785, 33507, 8445, 22466,
+      325, 3498, 11, 23990, 591, 40255, 948, 13675, 2164, 11253, 11, 294, 37186,
+      339, 1248, 51568
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12253523789919339,
+    "compression_ratio": 1.5122950819672132,
+    "no_speech_prob": 0.3268255293369293
+  },
+  {
+    "id": 30,
+    "seek": 21164,
+    "start": 211.72,
+    "end": 219.2,
+    "text": " wie eine Frau, die Jahre, Erinnerungen eines M\u00e4dchens. Die Erinnerung ist eine Form der",
+    "tokens": [
+      50368, 3355, 3018, 13930, 11, 978, 15557, 11, 3300, 19166, 5084, 18599,
+      49182, 339, 694, 13, 3229, 3300, 19166, 1063, 1418, 3018, 10126, 1163,
+      50742
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13419637562316142,
+    "compression_ratio": 1.4404145077720207,
+    "no_speech_prob": 0.3204745054244995
+  },
+  {
+    "id": 31,
+    "seek": 21164,
+    "start": 219.2,
+    "end": 226.64,
+    "text": " Erkenntnis. Ich erinnere mich an Orte und Tatsachen, die der Geschichte geh\u00f6ren. So kann",
+    "tokens": [
+      50742, 3300, 41838, 10661, 13, 3141, 1189, 7729, 323, 6031, 364, 1610,
+      975, 674, 314, 1720, 11646, 11, 978, 1163, 28896, 13218, 26377, 13, 407,
+      4028, 51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13419637562316142,
+    "compression_ratio": 1.4404145077720207,
+    "no_speech_prob": 0.3204745054244995
+  },
+  {
+    "id": 32,
+    "seek": 21164,
+    "start": 226.64,
+    "end": 232.64,
+    "text": " ich etwas rekonstruieren, dass das Intime \u00fcbersteigt. Zu erfinden w\u00fcrde nur etwas \u00fcberdecken und",
+    "tokens": [
+      51114, 1893, 9569, 33881, 4068, 894, 5695, 11, 2658, 1482, 5681, 1312,
+      4502, 2941, 5828, 13, 23164, 20228, 10291, 11942, 4343, 9569, 4502, 1479,
+      13029, 674, 51414
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13419637562316142,
+    "compression_ratio": 1.4404145077720207,
+    "no_speech_prob": 0.3204745054244995
+  },
+  {
+    "id": 33,
+    "seek": 23264,
+    "start": 232.64,
+    "end": 240.79999999999998,
+    "text": " deshalb erfinde ich nicht, ich grabe. Annie Ernaud sagt immer, sie gr\u00e4bt, sie nimmt Bodenproben",
+    "tokens": [
+      50364, 28457, 20228, 8274, 1893, 1979, 11, 1893, 1295, 650, 13, 26781,
+      3300, 629, 532, 15764, 5578, 11, 2804, 677, 737, 4517, 11, 2804, 38891,
+      34971, 4318, 1799, 50772
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13705499848323083,
+    "compression_ratio": 1.6655172413793105,
+    "no_speech_prob": 0.12734107673168182
+  },
+  {
+    "id": 34,
+    "seek": 23264,
+    "start": 240.79999999999998,
+    "end": 246.67999999999998,
+    "text": " der Vergangenheit und holt die ans Licht. Sie will halt eben nicht besch\u00f6nigen. Sie sagt,",
+    "tokens": [
+      50772, 1163, 26610, 10784, 8480, 674, 4091, 83, 978, 1567, 32917, 13,
+      3559, 486, 12479, 11375, 1979, 17498, 3239, 3213, 13, 3559, 15764, 11,
+      51066
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13705499848323083,
+    "compression_ratio": 1.6655172413793105,
+    "no_speech_prob": 0.12734107673168182
+  },
+  {
+    "id": 35,
+    "seek": 23264,
+    "start": 246.67999999999998,
+    "end": 251.83999999999997,
+    "text": " ich will dazu beitragen, solche Lebensrealit\u00e4ten sichtbar zu machen und wenn ich das nicht",
+    "tokens": [
+      51066, 1893, 486, 13034, 312, 270, 20663, 11, 29813, 21530, 9342, 49289,
+      262, 1405, 5356, 2164, 7069, 674, 4797, 1893, 1482, 1979, 51324
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13705499848323083,
+    "compression_ratio": 1.6655172413793105,
+    "no_speech_prob": 0.12734107673168182
+  },
+  {
+    "id": 36,
+    "seek": 23264,
+    "start": 251.83999999999997,
+    "end": 257.0,
+    "text": " auserz\u00e4hle, dann trage ich zu einer Verschleierung dieser Verh\u00e4ltnisse bei. Und ihr geht es eben",
+    "tokens": [
+      51324, 3437, 260, 23242, 306, 11, 3594, 944, 432, 1893, 2164, 6850, 12226,
+      339, 306, 11651, 9053, 4281, 28068, 31481, 4643, 13, 2719, 5553, 7095,
+      785, 11375, 51582
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13705499848323083,
+    "compression_ratio": 1.6655172413793105,
+    "no_speech_prob": 0.12734107673168182
+  },
+  {
+    "id": 37,
+    "seek": 23264,
+    "start": 257.0,
+    "end": 262.59999999999997,
+    "text": " darum, auch Kritik zu \u00fcben an gesellschaftlichen Missst\u00e4nden und an gesellschaftlichen Tabuisierungen,",
+    "tokens": [
+      51582, 27313, 11, 2168, 46372, 1035, 2164, 3304, 1799, 364, 5019, 22055,
+      10193, 5275, 16913, 268, 674, 364, 5019, 22055, 10193, 14106, 8479, 811,
+      5084, 11, 51862
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13705499848323083,
+    "compression_ratio": 1.6655172413793105,
+    "no_speech_prob": 0.12734107673168182
+  },
+  {
+    "id": 38,
+    "seek": 26260,
+    "start": 262.6,
+    "end": 267.56,
+    "text": " und das kann man nur, wenn man die Dinge auch wirklich beim Namen benennt. Sonja Fink ist die",
+    "tokens": [
+      50364, 674, 1482, 4028, 587, 4343, 11, 4797, 587, 978, 25102, 2168, 9696,
+      13922, 38771, 3271, 268, 580, 13, 5185, 2938, 479, 475, 1418, 978, 50612
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12050946553548177,
+    "compression_ratio": 1.4903474903474903,
+    "no_speech_prob": 0.003823975333943963
+  },
+  {
+    "id": 39,
+    "seek": 26260,
+    "start": 267.56,
+    "end": 273.76000000000005,
+    "text": " deutsche \u00dcbersetzerin von Annie Ernaud. Erst durch ihre seit 2017 bei Suhrkamp erscheinenden",
+    "tokens": [
+      50612, 47502, 10713, 1616, 302, 4527, 259, 2957, 26781, 3300, 629, 532,
+      13, 31183, 7131, 14280, 16452, 6591, 4643, 2746, 1703, 74, 1215, 33743,
+      1876, 259, 8896, 50922
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12050946553548177,
+    "compression_ratio": 1.4903474903474903,
+    "no_speech_prob": 0.003823975333943963
+  },
+  {
+    "id": 40,
+    "seek": 26260,
+    "start": 273.76000000000005,
+    "end": 280.24,
+    "text": " \u00dcbersetzungen ist Annie Ernaud einem gr\u00f6\u00dferen Lesepublikum in Deutschland bekannt. Aber Annie",
+    "tokens": [
+      50922, 10713, 1616, 10074, 5084, 1418, 26781, 3300, 629, 532, 6827, 20691,
+      5170, 6965, 595, 48620, 449, 294, 14802, 39167, 13, 5992, 26781, 51246
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12050946553548177,
+    "compression_ratio": 1.4903474903474903,
+    "no_speech_prob": 0.003823975333943963
+  },
+  {
+    "id": 41,
+    "seek": 26260,
+    "start": 280.24,
+    "end": 287.44,
+    "text": " Ernaud, 1940 in der Normandie geboren, hat ihre ersten Romane schon in den 1970er Jahren geschrieben.",
+    "tokens": [
+      51246, 3300, 629, 532, 11, 24158, 294, 1163, 8702, 474, 414, 21125, 10948,
+      11, 2385, 14280, 17324, 10141, 1929, 4981, 294, 1441, 14577, 260, 13080,
+      47397, 13, 51606
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12050946553548177,
+    "compression_ratio": 1.4903474903474903,
+    "no_speech_prob": 0.003823975333943963
+  },
+  {
+    "id": 42,
+    "seek": 28744,
+    "start": 287.44,
+    "end": 295.28,
+    "text": " 2022 erhielt sie den Literatur-Nobelpreis mit 82 Jahren. F\u00fcr sie ist es halt wirklich eine",
+    "tokens": [
+      50364, 20229, 1189, 71, 18940, 2804, 1441, 16090, 19493, 12, 45, 996, 338,
+      3712, 271, 2194, 29097, 13080, 13, 14990, 2804, 1418, 785, 12479, 9696,
+      3018, 50756
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1461137612660726,
+    "compression_ratio": 1.6070175438596492,
+    "no_speech_prob": 0.04333310201764107
+  },
+  {
+    "id": 43,
+    "seek": 28744,
+    "start": 295.28,
+    "end": 301.28,
+    "text": " Mischung aus autobiografischen, literarischen und soziologischen Schreiben. Bei der Autofriktion",
+    "tokens": [
+      50756, 376, 5494, 1063, 3437, 45747, 19815, 6282, 11, 2733, 289, 6282,
+      674, 370, 3992, 1132, 6282, 2065, 25946, 13, 16188, 1163, 6049, 2670, 470,
+      9780, 51056
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1461137612660726,
+    "compression_ratio": 1.6070175438596492,
+    "no_speech_prob": 0.04333310201764107
+  },
+  {
+    "id": 44,
+    "seek": 28744,
+    "start": 301.28,
+    "end": 305.84,
+    "text": " mit dem soziologischen Blick kommen halt immer eine Analyse der gesellschaftlichen Verh\u00e4ltnisse",
+    "tokens": [
+      51056, 2194, 1371, 370, 3992, 1132, 6282, 32556, 11729, 12479, 5578, 3018,
+      1107, 5222, 405, 1163, 5019, 22055, 10193, 4281, 28068, 31481, 51284
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1461137612660726,
+    "compression_ratio": 1.6070175438596492,
+    "no_speech_prob": 0.04333310201764107
+  },
+  {
+    "id": 45,
+    "seek": 28744,
+    "start": 305.84,
+    "end": 310.72,
+    "text": " dazu und damit auch der Machtverh\u00e4ltnisse vor allem, die in so einer Gesellschaft bestehen",
+    "tokens": [
+      51284, 13034, 674, 9479, 2168, 1163, 40873, 331, 28068, 31481, 4245,
+      17585, 11, 978, 294, 370, 6850, 30006, 22245, 2932, 51528
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1461137612660726,
+    "compression_ratio": 1.6070175438596492,
+    "no_speech_prob": 0.04333310201764107
+  },
+  {
+    "id": 46,
+    "seek": 28744,
+    "start": 310.72,
+    "end": 314.84,
+    "text": " und der Hierarchien und das kann halt ganz verschiedene Bereiche betreffen, also",
+    "tokens": [
+      51528, 674, 1163, 10886, 1178, 1053, 674, 1482, 4028, 12479, 6312, 35411,
+      17684, 9304, 778, 265, 15945, 11, 611, 51734
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1461137612660726,
+    "compression_ratio": 1.6070175438596492,
+    "no_speech_prob": 0.04333310201764107
+  },
+  {
+    "id": 47,
+    "seek": 31484,
+    "start": 314.84,
+    "end": 320.84,
+    "text": " Geschlechterverh\u00e4ltnisse oder Klassenverh\u00e4ltnisse. Autosoziografisches Schreiben nennt Annie Ernaud",
+    "tokens": [
+      50364, 14241, 306, 26690, 331, 28068, 31481, 4513, 16053, 8356, 331,
+      28068, 31481, 13, 6049, 9869, 3992, 19815, 35889, 2065, 25946, 16399, 580,
+      26781, 3300, 629, 532, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17686584078032394,
+    "compression_ratio": 1.5870445344129556,
+    "no_speech_prob": 0.34074774384498596
+  },
+  {
+    "id": 48,
+    "seek": 31484,
+    "start": 320.84,
+    "end": 327.35999999999996,
+    "text": " das selbst. Die feine Nuansierung n\u00fctzt ihr aber nichts, denn f\u00fcr die Allgemeinheit gilt sie als",
+    "tokens": [
+      50664, 1482, 13053, 13, 3229, 579, 533, 13612, 599, 11651, 297, 7695,
+      2682, 5553, 4340, 13004, 11, 10471, 2959, 978, 1057, 31964, 259, 8480,
+      29487, 2804, 3907, 50990
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17686584078032394,
+    "compression_ratio": 1.5870445344129556,
+    "no_speech_prob": 0.34074774384498596
+  },
+  {
+    "id": 49,
+    "seek": 31484,
+    "start": 327.35999999999996,
+    "end": 334.52,
+    "text": " Mutter des autofiktionalen Schreibens, als Personifizierung eines Genres. Die Autofiktion",
+    "tokens": [
+      50990, 31517, 730, 1476, 2670, 9874, 1966, 268, 2065, 38606, 694, 11,
+      3907, 8443, 351, 590, 11651, 18599, 3632, 495, 13, 3229, 6049, 2670, 9874,
+      313, 51348
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17686584078032394,
+    "compression_ratio": 1.5870445344129556,
+    "no_speech_prob": 0.34074774384498596
+  },
+  {
+    "id": 50,
+    "seek": 31484,
+    "start": 334.52,
+    "end": 343.0,
+    "text": " boomt derzeit, aber neu ist sie nicht. Was f\u00fcr ein merkw\u00fcrdiger Begriff, autofiktionales Schreiben.",
+    "tokens": [
+      51348, 9351, 83, 1163, 13712, 11, 4340, 22510, 1418, 2804, 1979, 13, 3027,
+      2959, 1343, 43541, 86, 39717, 4810, 879, 32783, 11, 1476, 2670, 9874,
+      1966, 279, 2065, 25946, 13, 51772
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17686584078032394,
+    "compression_ratio": 1.5870445344129556,
+    "no_speech_prob": 0.34074774384498596
+  },
+  {
+    "id": 51,
+    "seek": 34300,
+    "start": 343.0,
+    "end": 350.2,
+    "text": " Klingt wie ein Twitter, zittert irgendwo zwischen Autobiografie und Fiktion, erzeugt Widerspruch.",
+    "tokens": [
+      50364, 591, 45219, 3355, 1343, 5794, 11, 710, 3904, 83, 40865, 19875,
+      6049, 19293, 19815, 414, 674, 479, 9874, 313, 11, 1189, 19303, 83, 343,
+      6936, 45788, 13, 50724
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13637269100296162,
+    "compression_ratio": 1.503875968992248,
+    "no_speech_prob": 0.03512592241168022
+  },
+  {
+    "id": 52,
+    "seek": 34300,
+    "start": 350.2,
+    "end": 358.32,
+    "text": " Ist das Erz\u00e4hlte dann wahr oder eben doch erfunden? Eine autobiografische Hochstapelei oder ein",
+    "tokens": [
+      50724, 12810, 1482, 3300, 23242, 75, 975, 3594, 21628, 4513, 11375, 9243,
+      20228, 10028, 30, 17664, 45747, 19815, 7864, 29193, 9140, 494, 35436,
+      4513, 1343, 51130
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13637269100296162,
+    "compression_ratio": 1.503875968992248,
+    "no_speech_prob": 0.03512592241168022
+  },
+  {
+    "id": 53,
+    "seek": 34300,
+    "start": 358.32,
+    "end": 365.16,
+    "text": " besonders ichhaltiger Roman? Aber, speist sich anders herum gefragt, nicht jeder Roman aus dem",
+    "tokens": [
+      51130, 25258, 1893, 20731, 4810, 8566, 30, 5992, 11, 768, 468, 3041,
+      17999, 49675, 42638, 11, 1979, 19610, 8566, 3437, 1371, 51472
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13637269100296162,
+    "compression_ratio": 1.503875968992248,
+    "no_speech_prob": 0.03512592241168022
+  },
+  {
+    "id": 54,
+    "seek": 34300,
+    "start": 365.16,
+    "end": 372.92,
+    "text": " Erfahrungsschatz seiner Autorinnen und Autoren. Was ist anders? Es ist vertragt. Der franz\u00f6sische",
+    "tokens": [
+      51472, 49318, 3810, 339, 10300, 23114, 6049, 284, 11399, 674, 6049, 10948,
+      13, 3027, 1418, 17999, 30, 2313, 1418, 6509, 32243, 13, 5618, 431, 3910,
+      11310, 7864, 51860
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13637269100296162,
+    "compression_ratio": 1.503875968992248,
+    "no_speech_prob": 0.03512592241168022
+  },
+  {
+    "id": 55,
+    "seek": 37292,
+    "start": 372.92,
+    "end": 379.44,
+    "text": " Literaturwissenschaftler Serge Dubrovsky hat in den 1970er Jahren mit einem Bild gearbeitet,",
+    "tokens": [
+      50364, 16090, 19493, 86, 26657, 1918, 18885, 16488, 24088, 25810, 2385,
+      294, 1441, 14577, 260, 13080, 2194, 6827, 15746, 7394, 32401, 11, 50690
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12385207873124343,
+    "compression_ratio": 1.5140562248995983,
+    "no_speech_prob": 0.003171612275764346
+  },
+  {
+    "id": 56,
+    "seek": 37292,
+    "start": 379.44,
+    "end": 385.68,
+    "text": " um dieses schwebende Verfahren zwischen autobiografischem und romanhaftem zu benennen.",
+    "tokens": [
+      50690, 1105, 12113, 956, 826, 65, 5445, 24583, 7079, 19875, 45747, 19815,
+      5494, 443, 674, 41362, 25127, 443, 2164, 3271, 16043, 13, 51002
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12385207873124343,
+    "compression_ratio": 1.5140562248995983,
+    "no_speech_prob": 0.003171612275764346
+  },
+  {
+    "id": 57,
+    "seek": 37292,
+    "start": 385.68,
+    "end": 394.68,
+    "text": " Laut Dubrovsky sei man bei einem autofiktionalen Text gefangen im Drehkreuz, im Zwischenraum der",
+    "tokens": [
+      51002, 47344, 16488, 24088, 25810, 10842, 587, 4643, 6827, 1476, 2670,
+      9874, 1966, 268, 18643, 11271, 10784, 566, 413, 9017, 27885, 3334, 11,
+      566, 29385, 6282, 31502, 1163, 51452
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12385207873124343,
+    "compression_ratio": 1.5140562248995983,
+    "no_speech_prob": 0.003171612275764346
+  },
+  {
+    "id": 58,
+    "seek": 37292,
+    "start": 394.68,
+    "end": 401.52000000000004,
+    "text": " Gattungen, die gleichzeitig und somit widerspr\u00fcchlich den autobiografischen und den romanesken Pakt",
+    "tokens": [
+      51452, 460, 1591, 5084, 11, 978, 44242, 674, 3307, 270, 5274, 433, 48715,
+      339, 1739, 1441, 45747, 19815, 6282, 674, 1441, 41362, 279, 2653, 430,
+      5886, 51794
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12385207873124343,
+    "compression_ratio": 1.5140562248995983,
+    "no_speech_prob": 0.003171612275764346
+  },
+  {
+    "id": 59,
+    "seek": 40152,
+    "start": 401.52,
+    "end": 409.12,
+    "text": " geschlossen haben. Ein Pakt. Als Leser oder Leserin entscheidet man dann, ob man einer erfundenen",
+    "tokens": [
+      50364, 5019, 29002, 3084, 13, 6391, 430, 5886, 13, 12948, 6965, 260, 4513,
+      6965, 31602, 28398, 39741, 587, 3594, 11, 1111, 587, 6850, 20228, 10028,
+      268, 50744
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11036987839458144,
+    "compression_ratio": 1.5310077519379846,
+    "no_speech_prob": 0.00669165188446641
+  },
+  {
+    "id": 60,
+    "seek": 40152,
+    "start": 409.12,
+    "end": 415.32,
+    "text": " oder einer wirklich erlebten Geschichte folgen will. Was nat\u00fcrlich f\u00fcr zwei v\u00f6llig unterschiedliche",
+    "tokens": [
+      50744, 4513, 6850, 9696, 26826, 65, 1147, 28896, 3339, 1766, 486, 13,
+      3027, 8762, 2959, 12002, 35670, 30058, 10185, 51054
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11036987839458144,
+    "compression_ratio": 1.5310077519379846,
+    "no_speech_prob": 0.00669165188446641
+  },
+  {
+    "id": 61,
+    "seek": 40152,
+    "start": 415.32,
+    "end": 422.71999999999997,
+    "text": " Wahrnehmungen ein und desselben Texte sorgt. Oder aber man stellt fest, der Text bleibt ambivalent,",
+    "tokens": [
+      51054, 36357, 716, 8587, 5084, 1343, 674, 6874, 338, 1799, 18643, 68, 262,
+      36698, 13, 20988, 4340, 587, 38582, 6633, 11, 1163, 18643, 24814, 3913,
+      3576, 317, 11, 51424
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11036987839458144,
+    "compression_ratio": 1.5310077519379846,
+    "no_speech_prob": 0.00669165188446641
+  },
+  {
+    "id": 62,
+    "seek": 40152,
+    "start": 422.71999999999997,
+    "end": 430.59999999999997,
+    "text": " ein offenes Spiel. Die Dreht\u00fcr schwingt hin und her zwischen Fakten und Fiktion. Die Lesenden",
+    "tokens": [
+      51424, 1343, 766, 25973, 14266, 13, 3229, 31635, 357, 1655, 956, 7904, 83,
+      14102, 674, 720, 19875, 479, 514, 1147, 674, 479, 9874, 313, 13, 3229,
+      6965, 8896, 51818
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11036987839458144,
+    "compression_ratio": 1.5310077519379846,
+    "no_speech_prob": 0.00669165188446641
+  },
+  {
+    "id": 63,
+    "seek": 43060,
+    "start": 430.6,
+    "end": 438.76000000000005,
+    "text": " geraten ins Stolpern. Ins R\u00e4tseln kann das sein? Glauben, stocken, zweifeln, stecken also fest in",
+    "tokens": [
+      50364, 5713, 7186, 1028, 745, 401, 610, 77, 13, 9442, 497, 3628, 790, 77,
+      4028, 1482, 6195, 30, 460, 20798, 268, 11, 4127, 268, 11, 8733, 351, 9878,
+      11, 2126, 13029, 611, 6633, 294, 50772
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12388912836710612,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.1293136030435562
+  },
+  {
+    "id": 64,
+    "seek": 43060,
+    "start": 438.76000000000005,
+    "end": 446.6,
+    "text": " der Dreht\u00fcr oder drehen durch. Entwickelt hat sich diese verunsichernde Variante des autobiografischen",
+    "tokens": [
+      50772, 1163, 31635, 357, 1655, 4513, 22540, 2932, 7131, 13, 3951, 22295,
+      25798, 2385, 3041, 6705, 1306, 26684, 14934, 16404, 32511, 2879, 730,
+      45747, 19815, 6282, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12388912836710612,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.1293136030435562
+  },
+  {
+    "id": 65,
+    "seek": 43060,
+    "start": 446.6,
+    "end": 452.92,
+    "text": " aus dem Gef\u00fchl eines Mangels. Also die klassische Autobiografie, die geht auch sehr stark von dem",
+    "tokens": [
+      51164, 3437, 1371, 29715, 18599, 35487, 1625, 13, 2743, 978, 42917, 7864,
+      6049, 19293, 19815, 414, 11, 978, 7095, 2168, 5499, 17417, 2957, 1371,
+      51480
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12388912836710612,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.1293136030435562
+  },
+  {
+    "id": 66,
+    "seek": 43060,
+    "start": 452.92,
+    "end": 458.40000000000003,
+    "text": " Modell des Bildungs- und Entwicklungsgedankens aus, dass sich jemand einfach kontinuierlich",
+    "tokens": [
+      51480, 6583, 898, 730, 15746, 5846, 12, 674, 29397, 49876, 3004, 657, 694,
+      3437, 11, 2658, 3041, 21717, 7281, 14373, 259, 84, 811, 1739, 51754
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12388912836710612,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.1293136030435562
+  },
+  {
+    "id": 67,
+    "seek": 45840,
+    "start": 458.4,
+    "end": 464.08,
+    "text": " weiterentwickelt. Aber im Leben gibt es auch R\u00fcckschl\u00e4ge und deswegen hat eigentlich schon",
+    "tokens": [
+      50364, 8988, 317, 22295, 25798, 13, 5992, 566, 15399, 6089, 785, 2168,
+      497, 41687, 11439, 737, 432, 674, 26482, 2385, 10926, 4981, 50648
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13187381073280616,
+    "compression_ratio": 1.4696969696969697,
+    "no_speech_prob": 0.2873072028160095
+  },
+  {
+    "id": 68,
+    "seek": 45840,
+    "start": 464.08,
+    "end": 470.35999999999996,
+    "text": " die moderne Autobiografie nach anderen Mustern gesucht. Erl\u00e4utert die Literaturwissenschaftlerin",
+    "tokens": [
+      50648, 978, 10494, 716, 6049, 19293, 19815, 414, 5168, 11122, 13252, 1248,
+      5019, 10084, 13, 3300, 22882, 325, 911, 978, 16090, 19493, 86, 26657,
+      22417, 50962
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13187381073280616,
+    "compression_ratio": 1.4696969696969697,
+    "no_speech_prob": 0.2873072028160095
+  },
+  {
+    "id": 69,
+    "seek": 45840,
+    "start": 470.35999999999996,
+    "end": 477.79999999999995,
+    "text": " Martina Wagner-Igelhaff. Die Professorin lehrt an der Universit\u00e4t M\u00fcnster. Die Autofiktion betreibt",
+    "tokens": [
+      50962, 5807, 1426, 38146, 12, 40, 10345, 71, 2518, 13, 3229, 8419, 259,
+      476, 1703, 83, 364, 1163, 14052, 14053, 35840, 3120, 13, 3229, 6049, 2670,
+      9874, 313, 778, 31174, 51334
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13187381073280616,
+    "compression_ratio": 1.4696969696969697,
+    "no_speech_prob": 0.2873072028160095
+  },
+  {
+    "id": 70,
+    "seek": 45840,
+    "start": 477.79999999999995,
+    "end": 484.84,
+    "text": " ein raffiniertes Spiel der Selbstdarstellung. Das Ich kann ein Er sein oder eine Sie. Kann sich",
+    "tokens": [
+      51334, 1343, 367, 2518, 259, 4859, 279, 14266, 1163, 29712, 20327, 30016,
+      13, 2846, 3141, 4028, 1343, 3300, 6195, 4513, 3018, 3559, 13, 29074, 3041,
+      51686
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13187381073280616,
+    "compression_ratio": 1.4696969696969697,
+    "no_speech_prob": 0.2873072028160095
+  },
+  {
+    "id": 71,
+    "seek": 48484,
+    "start": 484.84,
+    "end": 490.84,
+    "text": " abspalten zu einer angeblichen Freundin, die die eigene Geschichte erz\u00e4hlt. Kann den gleichen",
+    "tokens": [
+      50364, 1950, 79, 23276, 2164, 6850, 364, 10848, 10193, 29685, 259, 11,
+      978, 978, 38549, 28896, 47110, 13, 29074, 1441, 49069, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09651985797253283,
+    "compression_ratio": 1.5182186234817814,
+    "no_speech_prob": 0.13462819159030914
+  },
+  {
+    "id": 72,
+    "seek": 48484,
+    "start": 490.84,
+    "end": 496.67999999999995,
+    "text": " Namen tragen und trotzdem nicht identisch sein. Von daher kann man die Autofiktion schon auch",
+    "tokens": [
+      50664, 38771, 44737, 674, 28325, 1979, 2473, 5494, 6195, 13, 20700, 36971,
+      4028, 587, 978, 6049, 2670, 9874, 313, 4981, 2168, 50956
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09651985797253283,
+    "compression_ratio": 1.5182186234817814,
+    "no_speech_prob": 0.13462819159030914
+  },
+  {
+    "id": 73,
+    "seek": 48484,
+    "start": 496.67999999999995,
+    "end": 503.12,
+    "text": " als ein experimentelles Genre betrachten, n\u00e4mlich auszuprobieren, wie sich tats\u00e4chlich reale",
+    "tokens": [
+      50956, 3907, 1343, 5120, 19787, 3632, 265, 778, 81, 20806, 11, 21219,
+      3437, 89, 1010, 16614, 5695, 11, 3355, 3041, 20796, 957, 68, 51278
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09651985797253283,
+    "compression_ratio": 1.5182186234817814,
+    "no_speech_prob": 0.13462819159030914
+  },
+  {
+    "id": 74,
+    "seek": 48484,
+    "start": 503.12,
+    "end": 509.28,
+    "text": " Lebensgeschichten mit der Fantastik verbinden lassen. Und es ist durchaus die M\u00f6glichkeit,",
+    "tokens": [
+      51278, 21530, 23378, 24681, 2194, 1163, 12885, 525, 1035, 9595, 10291,
+      16168, 13, 2719, 785, 1418, 42840, 978, 30662, 11, 51586
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09651985797253283,
+    "compression_ratio": 1.5182186234817814,
+    "no_speech_prob": 0.13462819159030914
+  },
+  {
+    "id": 75,
+    "seek": 50928,
+    "start": 509.28,
+    "end": 518.24,
+    "text": " wenn man fiktionale Elemente mit hinein nimmt, dass man Dinge offenbaren kann. Die Fiktion kann",
+    "tokens": [
+      50364, 4797, 587, 283, 9874, 313, 1220, 20900, 68, 2194, 47551, 259,
+      38891, 11, 2658, 587, 25102, 35253, 43552, 4028, 13, 3229, 479, 9874, 313,
+      4028, 50812
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13914910634358724,
+    "compression_ratio": 1.4663212435233162,
+    "no_speech_prob": 0.06179187819361687
+  },
+  {
+    "id": 76,
+    "seek": 50928,
+    "start": 518.24,
+    "end": 524.56,
+    "text": " sozusagen auch einen Schutzmantel darstellen und Dinge einfacher und leichter erz\u00e4hlbar machen.",
+    "tokens": [
+      50812, 33762, 2168, 4891, 37469, 76, 394, 338, 4072, 17538, 674, 25102,
+      38627, 4062, 674, 28333, 260, 28337, 75, 5356, 7069, 13, 51128
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13914910634358724,
+    "compression_ratio": 1.4663212435233162,
+    "no_speech_prob": 0.06179187819361687
+  },
+  {
+    "id": 77,
+    "seek": 50928,
+    "start": 524.56,
+    "end": 533.64,
+    "text": " Das Experimentieren mit dem Ich. Im Erfinden kann man Wahrheiten offenbaren, im Verstecken",
+    "tokens": [
+      51128, 2846, 37933, 5695, 2194, 1371, 3141, 13, 4331, 3300, 43270, 4028,
+      587, 36357, 38754, 35253, 43552, 11, 566, 4281, 2941, 13029, 51582
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13914910634358724,
+    "compression_ratio": 1.4663212435233162,
+    "no_speech_prob": 0.06179187819361687
+  },
+  {
+    "id": 78,
+    "seek": 53364,
+    "start": 533.64,
+    "end": 540.6,
+    "text": " sich zeigen. Das Paradoxe der Autofiktion erwirkt jede definitorische Eindeutigkeit.",
+    "tokens": [
+      50364, 3041, 24687, 13, 2846, 3457, 23029, 68, 1163, 6049, 2670, 9874,
+      313, 21715, 347, 2320, 34039, 1561, 3029, 7864, 462, 8274, 325, 16626, 13,
+      50712
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12498359169278826,
+    "compression_ratio": 1.5454545454545454,
+    "no_speech_prob": 0.4142521619796753
+  },
+  {
+    "id": 79,
+    "seek": 53364,
+    "start": 540.6,
+    "end": 550.3199999999999,
+    "text": " H\u00f6ren wir die B\u00fcchnerpreistr\u00e4gerin Felicitas Hoppe. Sie hat Hoppe geschrieben. Eine Autofiktion \u00fcber",
+    "tokens": [
+      50712, 389, 26377, 1987, 978, 37186, 339, 1193, 3712, 468, 11397, 1321,
+      259, 13298, 8876, 296, 13438, 494, 13, 3559, 2385, 13438, 494, 47397, 13,
+      17664, 6049, 2670, 9874, 313, 4502, 51198
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12498359169278826,
+    "compression_ratio": 1.5454545454545454,
+    "no_speech_prob": 0.4142521619796753
+  },
+  {
+    "id": 80,
+    "seek": 53364,
+    "start": 550.3199999999999,
+    "end": 556.56,
+    "text": " eine Person ihres Namens, die augenscheinlich alle ihre bisherigen B\u00fccher geschrieben hat. Dar\u00fcber",
+    "tokens": [
+      51198, 3018, 8443, 5096, 495, 10684, 694, 11, 978, 14501, 694, 1876, 259,
+      1739, 5430, 14280, 33598, 3213, 37186, 6759, 47397, 2385, 13, 7803, 12670,
+      51510
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12498359169278826,
+    "compression_ratio": 1.5454545454545454,
+    "no_speech_prob": 0.4142521619796753
+  },
+  {
+    "id": 81,
+    "seek": 53364,
+    "start": 556.56,
+    "end": 563.4399999999999,
+    "text": " hinaus sich als Sprachwunder ausgibt, alle Sprachen der Welt zu verstehen und eine Vielzahl weiterer",
+    "tokens": [
+      51510, 46056, 3041, 3907, 7702, 608, 86, 6617, 3437, 70, 13651, 11, 5430,
+      7702, 11646, 1163, 14761, 2164, 37352, 674, 3018, 35931, 39670, 8988, 260,
+      51854
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12498359169278826,
+    "compression_ratio": 1.5454545454545454,
+    "no_speech_prob": 0.4142521619796753
+  },
+  {
+    "id": 82,
+    "seek": 56344,
+    "start": 563.44,
+    "end": 570.12,
+    "text": " fantastischer Selbstbehauptungen streut. Ich versuche etwas Neues zu formen aus dem, was schon",
+    "tokens": [
+      50364, 30665, 19674, 29712, 650, 19276, 5084, 2242, 325, 13, 3141, 1774,
+      17545, 9569, 1734, 1247, 2164, 1254, 268, 3437, 1371, 11, 390, 4981, 50698
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11357174632705261,
+    "compression_ratio": 1.589430894308943,
+    "no_speech_prob": 0.0031722269486635923
+  },
+  {
+    "id": 83,
+    "seek": 56344,
+    "start": 570.12,
+    "end": 575.96,
+    "text": " da ist. Und ich glaube, es ist eher der Blickwinkel und die Perspektive, mit der ich auf die Dinge",
+    "tokens": [
+      50698, 1120, 1418, 13, 2719, 1893, 13756, 11, 785, 1418, 24332, 1163,
+      32556, 9136, 7124, 674, 978, 14006, 23533, 488, 11, 2194, 1163, 1893,
+      2501, 978, 25102, 50990
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11357174632705261,
+    "compression_ratio": 1.589430894308943,
+    "no_speech_prob": 0.0031722269486635923
+  },
+  {
+    "id": 84,
+    "seek": 56344,
+    "start": 575.96,
+    "end": 580.7600000000001,
+    "text": " schaue. Es sind nicht die Dinge selbst, die ich erfinde, sondern die Art, wie ich mit ihnen umgehe,",
+    "tokens": [
+      50990, 956, 64, 622, 13, 2313, 3290, 1979, 978, 25102, 13053, 11, 978,
+      1893, 20228, 8274, 11, 11465, 978, 5735, 11, 3355, 1893, 2194, 24623,
+      1105, 432, 675, 11, 51230
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11357174632705261,
+    "compression_ratio": 1.589430894308943,
+    "no_speech_prob": 0.0031722269486635923
+  },
+  {
+    "id": 85,
+    "seek": 56344,
+    "start": 580.7600000000001,
+    "end": 588.2800000000001,
+    "text": " ist vielleicht manchmal ein wenig absonderlich oder fantastisch. Das mag sein, aber das Material,",
+    "tokens": [
+      51230, 1418, 12547, 32092, 1343, 20911, 1950, 8548, 1739, 4513, 30665,
+      5494, 13, 2846, 2258, 6195, 11, 4340, 1482, 29160, 11, 51606
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11357174632705261,
+    "compression_ratio": 1.589430894308943,
+    "no_speech_prob": 0.0031722269486635923
+  },
+  {
+    "id": 86,
+    "seek": 58828,
+    "start": 588.28,
+    "end": 593.56,
+    "text": " mit dem ich arbeite, ist ganz der Realit\u00e4t verhaftet. Vielleicht kann man es so sagen",
+    "tokens": [
+      50364, 2194, 1371, 1893, 40476, 642, 11, 1418, 6312, 1163, 8467, 14053,
+      1306, 25127, 302, 13, 29838, 4028, 587, 785, 370, 8360, 50628
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1227830925373116,
+    "compression_ratio": 1.510548523206751,
+    "no_speech_prob": 0.2998712360858917
+  },
+  {
+    "id": 87,
+    "seek": 58828,
+    "start": 593.56,
+    "end": 599.52,
+    "text": " f\u00fcr die Autofiktion. Bleibt man beim Konzept, aus dem eigenen Leben zu schildern, kann man",
+    "tokens": [
+      50628, 2959, 978, 6049, 2670, 9874, 313, 13, 30721, 13651, 587, 13922,
+      12718, 32082, 11, 3437, 1371, 28702, 15399, 2164, 956, 793, 1248, 11,
+      4028, 587, 50926
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1227830925373116,
+    "compression_ratio": 1.510548523206751,
+    "no_speech_prob": 0.2998712360858917
+  },
+  {
+    "id": 88,
+    "seek": 58828,
+    "start": 599.52,
+    "end": 605.9599999999999,
+    "text": " dieses nicht verf\u00e4lschen. Die Gestaltung aber ist elastisch. Es gibt tausend und eine Art,",
+    "tokens": [
+      50926, 12113, 1979, 40660, 9063, 82, 2470, 13, 3229, 39909, 29631, 4340,
+      1418, 806, 525, 5494, 13, 2313, 6089, 1846, 301, 521, 674, 3018, 5735, 11,
+      51248
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1227830925373116,
+    "compression_ratio": 1.510548523206751,
+    "no_speech_prob": 0.2998712360858917
+  },
+  {
+    "id": 89,
+    "seek": 58828,
+    "start": 605.9599999999999,
+    "end": 611.88,
+    "text": " die eigene Geschichte zu variieren. Oder anders gefragt, wie viele Geschichten bin ich?",
+    "tokens": [
+      51248, 978, 38549, 28896, 2164, 3034, 5695, 13, 20988, 17999, 42638, 11,
+      3355, 9693, 14241, 24681, 5171, 1893, 30, 51544
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1227830925373116,
+    "compression_ratio": 1.510548523206751,
+    "no_speech_prob": 0.2998712360858917
+  },
+  {
+    "id": 90,
+    "seek": 61188,
+    "start": 611.88,
+    "end": 621.0,
+    "text": " Dies ist ein aufrichtiges Buch, Leser. Es warnt dich schon beim Eintritt. So bin ich selber, Leser,",
+    "tokens": [
+      50364, 10796, 1418, 1343, 2501, 12836, 20609, 25818, 11, 6965, 260, 13,
+      2313, 1516, 580, 10390, 4981, 13922, 462, 686, 18579, 13, 407, 5171, 1893,
+      23888, 11, 6965, 260, 11, 50820
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12114830674796269,
+    "compression_ratio": 1.4,
+    "no_speech_prob": 0.23350918292999268
+  },
+  {
+    "id": 91,
+    "seek": 61188,
+    "start": 621.0,
+    "end": 629.04,
+    "text": " der einzige Inhalt meines Buches. Schrieb Michel de Montaigne 1580 in der Einleitung zu seinen",
+    "tokens": [
+      50820, 1163, 47743, 682, 20731, 385, 1652, 25818, 279, 13, 2065, 31775,
+      23709, 368, 7947, 64, 26341, 2119, 4702, 294, 1163, 6391, 306, 35563,
+      2164, 24427, 51222
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12114830674796269,
+    "compression_ratio": 1.4,
+    "no_speech_prob": 0.23350918292999268
+  },
+  {
+    "id": 92,
+    "seek": 61188,
+    "start": 629.04,
+    "end": 635.88,
+    "text": " Essays. Man k\u00f6nnte sagen, die Moderne mit autofiktionalem Einschlag fing im 16. Jahrhundert",
+    "tokens": [
+      51222, 14357, 3772, 13, 2458, 17646, 8360, 11, 978, 42067, 716, 2194,
+      1476, 2670, 9874, 1966, 443, 22790, 40869, 3823, 566, 3165, 13, 11674, 71,
+      34267, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12114830674796269,
+    "compression_ratio": 1.4,
+    "no_speech_prob": 0.23350918292999268
+  },
+  {
+    "id": 93,
+    "seek": 63588,
+    "start": 636.32,
+    "end": 643.48,
+    "text": " mit Montaigne an. Und war ein Trick. Sehr geschickt darin, seine gelehrten Weltbetrachtungen",
+    "tokens": [
+      50386, 2194, 7947, 64, 26341, 364, 13, 2719, 1516, 1343, 43367, 13, 32028,
+      13511, 40522, 4072, 259, 11, 15925, 20234, 1703, 1147, 14761, 10671, 81,
+      3589, 5084, 50744
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13271385431289673,
+    "compression_ratio": 1.3857677902621723,
+    "no_speech_prob": 0.3481096029281616
+  },
+  {
+    "id": 94,
+    "seek": 63588,
+    "start": 643.48,
+    "end": 649.56,
+    "text": " in pers\u00f6nliches Erleben zu betten. Bis heute unterhaltsam. Auch in weiteren B\u00fcchern wie",
+    "tokens": [
+      50744, 294, 42699, 279, 3300, 41467, 2164, 778, 1147, 13, 25271, 9801,
+      8662, 4947, 1373, 335, 13, 13382, 294, 44036, 37186, 339, 1248, 3355,
+      51048
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13271385431289673,
+    "compression_ratio": 1.3857677902621723,
+    "no_speech_prob": 0.3481096029281616
+  },
+  {
+    "id": 95,
+    "seek": 63588,
+    "start": 649.56,
+    "end": 656.04,
+    "text": " dem Reisetagebuch durch Italien. Man liest anders, wenn man sp\u00fcrt, der Verfasser wurde von",
+    "tokens": [
+      51048, 1371, 1300, 42907, 609, 39742, 7131, 8158, 1053, 13, 2458, 375,
+      377, 17999, 11, 4797, 587, 637, 1655, 83, 11, 1163, 24583, 12129, 11191,
+      2957, 51372
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13271385431289673,
+    "compression_ratio": 1.3857677902621723,
+    "no_speech_prob": 0.3481096029281616
+  },
+  {
+    "id": 96,
+    "seek": 63588,
+    "start": 656.04,
+    "end": 662.76,
+    "text": " Nierenkoliken geplagt. 200 Jahre sp\u00e4ter offenbart der Philosophenkollege Jean-Jacques Rousseau",
+    "tokens": [
+      51372, 426, 5695, 74, 401, 19640, 1519, 564, 7665, 13, 2331, 15557, 24196,
+      35253, 47504, 1163, 31182, 404, 2932, 74, 1833, 2828, 13854, 12, 31736,
+      7519, 497, 28521, 1459, 51708
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13271385431289673,
+    "compression_ratio": 1.3857677902621723,
+    "no_speech_prob": 0.3481096029281616
+  },
+  {
+    "id": 97,
+    "seek": 66276,
+    "start": 662.76,
+    "end": 668.84,
+    "text": " eigene innere Befindlichkeiten in seinen Bekenntnissen. Eine Revolutionierung der",
+    "tokens": [
+      50364, 38549, 7714, 323, 879, 35072, 1739, 21049, 294, 24427, 879, 41838,
+      77, 10987, 13, 17664, 16617, 11651, 1163, 50668
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11858356915987454,
+    "compression_ratio": 1.476,
+    "no_speech_prob": 0.029743582010269165
+  },
+  {
+    "id": 98,
+    "seek": 66276,
+    "start": 668.84,
+    "end": 677.4,
+    "text": " klassischen Autobiografie. Zwei Jahrzehnte sp\u00e4ter, 1808, r\u00e4umt Johann Wolfgang von Goethe auf mit dem",
+    "tokens": [
+      50668, 42917, 6282, 6049, 19293, 19815, 414, 13, 1176, 17849, 11674, 1381,
+      71, 9358, 24196, 11, 11971, 23, 11, 39442, 449, 83, 34094, 16634, 19619,
+      2957, 1037, 302, 675, 2501, 2194, 1371, 51096
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11858356915987454,
+    "compression_ratio": 1.476,
+    "no_speech_prob": 0.029743582010269165
+  },
+  {
+    "id": 99,
+    "seek": 66276,
+    "start": 677.4,
+    "end": 684.0,
+    "text": " Vertrauen in die absolute autobiografische Wahrhaftigkeit. Man kann zum Beispiel an Goethes",
+    "tokens": [
+      51096, 21044, 46640, 294, 978, 8236, 45747, 19815, 7864, 36357, 25127,
+      16626, 13, 2458, 4028, 5919, 13772, 364, 1037, 302, 8076, 51426
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11858356915987454,
+    "compression_ratio": 1.476,
+    "no_speech_prob": 0.029743582010269165
+  },
+  {
+    "id": 100,
+    "seek": 66276,
+    "start": 684.0,
+    "end": 689.88,
+    "text": " Autobiografie Dichtung und Wahrheit denken. Das ist ein Text, den wir heute als Autofiktion",
+    "tokens": [
+      51426, 6049, 19293, 19815, 414, 413, 1405, 1063, 674, 36357, 8480, 28780,
+      13, 2846, 1418, 1343, 18643, 11, 1441, 1987, 9801, 3907, 6049, 2670, 9874,
+      313, 51720
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11858356915987454,
+    "compression_ratio": 1.476,
+    "no_speech_prob": 0.029743582010269165
+  },
+  {
+    "id": 101,
+    "seek": 68988,
+    "start": 689.88,
+    "end": 695.68,
+    "text": " bezeichnen w\u00fcrden. Und der tr\u00e4gt ja auch schon diesen Titel Dichtung und Wahrheit. Weil Goethe",
+    "tokens": [
+      50364, 312, 32338, 2866, 27621, 13, 2719, 1163, 33367, 10463, 2784, 2168,
+      4981, 12862, 14489, 338, 413, 1405, 1063, 674, 36357, 8480, 13, 18665,
+      1037, 302, 675, 50654
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12949255741003787,
+    "compression_ratio": 1.5182186234817814,
+    "no_speech_prob": 0.5303907990455627
+  },
+  {
+    "id": 102,
+    "seek": 68988,
+    "start": 695.68,
+    "end": 702.72,
+    "text": " ganz klar gesagt hat, also wenn ich wirklich berichten w\u00fcrde, was ich Tag f\u00fcr Tag getan habe,",
+    "tokens": [
+      50654, 6312, 14743, 12260, 2385, 11, 611, 4797, 1893, 9696, 5948, 24681,
+      11942, 11, 390, 1893, 11204, 2959, 11204, 45599, 6015, 11, 51006
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12949255741003787,
+    "compression_ratio": 1.5182186234817814,
+    "no_speech_prob": 0.5303907990455627
+  },
+  {
+    "id": 103,
+    "seek": 68988,
+    "start": 702.72,
+    "end": 708.92,
+    "text": " das w\u00e4re total langweilig. Das wollte niemand lesen. Erst die M\u00f6glichkeit der Dichtung,",
+    "tokens": [
+      51006, 1482, 14558, 3217, 2265, 826, 388, 328, 13, 2846, 24509, 32390,
+      1512, 268, 13, 31183, 978, 30662, 1163, 413, 1405, 1063, 11, 51316
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12949255741003787,
+    "compression_ratio": 1.5182186234817814,
+    "no_speech_prob": 0.5303907990455627
+  },
+  {
+    "id": 104,
+    "seek": 68988,
+    "start": 708.92,
+    "end": 714.84,
+    "text": " und er spricht auch tats\u00e4chlich in seiner Zeit schon von Fiktion, macht diesen Text lesbar.",
+    "tokens": [
+      51316, 674, 1189, 42088, 2168, 20796, 294, 23114, 9394, 4981, 2957, 479,
+      9874, 313, 11, 10857, 12862, 18643, 1512, 5356, 13, 51612
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12949255741003787,
+    "compression_ratio": 1.5182186234817814,
+    "no_speech_prob": 0.5303907990455627
+  },
+  {
+    "id": 105,
+    "seek": 71484,
+    "start": 714.84,
+    "end": 721.12,
+    "text": " Und Goethe, so die Literaturwissenschaftlerin Martina Wagner-Egelhaf, hat das fiktive Prinzip",
+    "tokens": [
+      50364, 2719, 1037, 302, 675, 11, 370, 978, 16090, 19493, 86, 26657, 22417,
+      5807, 1426, 38146, 12, 36, 10345, 1641, 69, 11, 2385, 1482, 283, 9874,
+      488, 47572, 50678
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12062314518711023,
+    "compression_ratio": 1.5506072874493928,
+    "no_speech_prob": 0.047406841069459915
+  },
+  {
+    "id": 106,
+    "seek": 71484,
+    "start": 721.12,
+    "end": 727.6,
+    "text": " auch eingesetzt. Und das impliziert schon bei Goethe, dass er Details seines Lebens erfunden hat. Er",
+    "tokens": [
+      50678, 2168, 49821, 3524, 13, 2719, 1482, 8484, 43590, 4981, 4643, 1037,
+      302, 675, 11, 2658, 1189, 42811, 369, 1652, 21530, 20228, 10028, 2385, 13,
+      3300, 51002
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12062314518711023,
+    "compression_ratio": 1.5506072874493928,
+    "no_speech_prob": 0.047406841069459915
+  },
+  {
+    "id": 107,
+    "seek": 71484,
+    "start": 727.6,
+    "end": 733.08,
+    "text": " beschreibt Episoden, die die Goethe-Forschung nie verifizieren konnte und von denen man ausgeht,",
+    "tokens": [
+      51002, 17498, 31174, 9970, 271, 33482, 11, 978, 978, 1037, 302, 675, 12,
+      37, 27457, 1063, 2838, 1306, 351, 590, 5695, 24058, 674, 2957, 19998, 587,
+      31899, 357, 11, 51276
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12062314518711023,
+    "compression_ratio": 1.5506072874493928,
+    "no_speech_prob": 0.047406841069459915
+  },
+  {
+    "id": 108,
+    "seek": 71484,
+    "start": 733.08,
+    "end": 738.64,
+    "text": " dass er das erfunden hat. Und er hat auch Fakten umgestellt, Dinge, die sp\u00e4ter passierten,",
+    "tokens": [
+      51276, 2658, 1189, 1482, 20228, 10028, 2385, 13, 2719, 1189, 2385, 2168,
+      479, 514, 1147, 1105, 26293, 11, 25102, 11, 978, 24196, 1320, 29632, 11,
+      51554
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12062314518711023,
+    "compression_ratio": 1.5506072874493928,
+    "no_speech_prob": 0.047406841069459915
+  },
+  {
+    "id": 109,
+    "seek": 73864,
+    "start": 738.64,
+    "end": 743.12,
+    "text": " fr\u00fcher passieren lassen und so weiter. Also Goethe war eigentlich schon ein fr\u00fcher",
+    "tokens": [
+      50364, 32349, 46223, 16168, 674, 370, 8988, 13, 2743, 1037, 302, 675,
+      1516, 10926, 4981, 1343, 32349, 50588
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12440216418394108,
+    "compression_ratio": 1.4453441295546559,
+    "no_speech_prob": 0.1292387843132019
+  },
+  {
+    "id": 110,
+    "seek": 73864,
+    "start": 743.12,
+    "end": 749.08,
+    "text": " Autofiktionalist, ohne dass man diesen Begriff hatte. Wenn Goethe gewusst h\u00e4tte,",
+    "tokens": [
+      50588, 6049, 2670, 9874, 1966, 468, 11, 15716, 2658, 587, 12862, 879,
+      32783, 13299, 13, 7899, 1037, 302, 675, 6906, 26340, 20041, 11, 50886
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12440216418394108,
+    "compression_ratio": 1.4453441295546559,
+    "no_speech_prob": 0.1292387843132019
+  },
+  {
+    "id": 111,
+    "seek": 73864,
+    "start": 749.08,
+    "end": 755.16,
+    "text": " dass 200 Jahre sp\u00e4ter seitenlange Beschreibungen \u00fcber Kinderschnuller oder das Waschen von",
+    "tokens": [
+      50886, 2658, 2331, 15557, 24196, 369, 6009, 75, 933, 30860, 38606, 5084,
+      4502, 9242, 433, 1377, 858, 260, 4513, 1482, 3027, 2470, 2957, 51190
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12440216418394108,
+    "compression_ratio": 1.4453441295546559,
+    "no_speech_prob": 0.1292387843132019
+  },
+  {
+    "id": 112,
+    "seek": 73864,
+    "start": 755.16,
+    "end": 763.12,
+    "text": " Kartoffeln in der Sp\u00fcle einen Lesesog entwickeln und einen Boom ausl\u00f6sen konnten. Die Idee war,",
+    "tokens": [
+      51190, 27365, 4506, 9878, 294, 1163, 1738, 774, 306, 4891, 6965, 279, 664,
+      28449, 32099, 674, 4891, 15523, 3437, 75, 973, 6748, 38216, 13, 3229,
+      32651, 1516, 11, 51588
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12440216418394108,
+    "compression_ratio": 1.4453441295546559,
+    "no_speech_prob": 0.1292387843132019
+  },
+  {
+    "id": 113,
+    "seek": 76312,
+    "start": 763.12,
+    "end": 771.88,
+    "text": " meinem Leben so nahe zu kommen wie m\u00f6glich. Literatur als Versuch, das eigene Leben zu fassen,",
+    "tokens": [
+      50364, 24171, 15399, 370, 17170, 68, 2164, 11729, 3355, 16294, 13, 16090,
+      19493, 3907, 12226, 625, 11, 1482, 38549, 15399, 2164, 283, 8356, 11,
+      50802
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19768238067626953,
+    "compression_ratio": 1.4097560975609755,
+    "no_speech_prob": 0.08027289062738419
+  },
+  {
+    "id": 114,
+    "seek": 76312,
+    "start": 771.88,
+    "end": 779.12,
+    "text": " in dem vieltausendseitigen Zyklus Min Kamp, mein Kampf. Damit wurde der norwegische Schriftsteller",
+    "tokens": [
+      50802, 294, 1371, 5891, 1328, 301, 521, 405, 270, 3213, 1176, 46127, 3063,
+      2829, 591, 1215, 11, 10777, 45126, 13, 24495, 11191, 1163, 6051, 12517,
+      7864, 2065, 35742, 372, 14983, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19768238067626953,
+    "compression_ratio": 1.4097560975609755,
+    "no_speech_prob": 0.08027289062738419
+  },
+  {
+    "id": 115,
+    "seek": 76312,
+    "start": 779.12,
+    "end": 786.6,
+    "text": " Karl-Uwe Knausgott in den Zehnerjahren unerwartet zum Literaturstar. Im Lesefluss seitenlanger",
+    "tokens": [
+      51164, 20405, 12, 52, 826, 591, 629, 301, 70, 1521, 294, 1441, 4853, 71,
+      1193, 73, 7079, 517, 260, 29587, 302, 5919, 16090, 19493, 9710, 13, 4331,
+      441, 1130, 3423, 2023, 369, 6009, 75, 3176, 51538
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19768238067626953,
+    "compression_ratio": 1.4097560975609755,
+    "no_speech_prob": 0.08027289062738419
+  },
+  {
+    "id": 116,
+    "seek": 78660,
+    "start": 786.6,
+    "end": 793.08,
+    "text": " Alltagsbetrachtungen und Ausschweifungen kann es vorkommen, dass beim Aussieben all dessen mal",
+    "tokens": [
+      50364, 1057, 83, 12109, 10671, 81, 3589, 5084, 674, 21286, 339, 826, 351,
+      5084, 4028, 785, 371, 1284, 5132, 11, 2658, 13922, 21286, 38243, 439,
+      6874, 268, 2806, 50688
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09236735656481831,
+    "compression_ratio": 1.4787644787644787,
+    "no_speech_prob": 0.3203599452972412
+  },
+  {
+    "id": 117,
+    "seek": 78660,
+    "start": 793.08,
+    "end": 799.76,
+    "text": " ein Goldnaget h\u00e4ngen bleibt. Eine essayistische oder philosophische Betrachtung. Im Grunde aber",
+    "tokens": [
+      50688, 1343, 6731, 77, 559, 302, 276, 43921, 24814, 13, 17664, 16238, 468,
+      7864, 4513, 14529, 7864, 6279, 81, 3589, 1063, 13, 4331, 13941, 68, 4340,
+      51022
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09236735656481831,
+    "compression_ratio": 1.4787644787644787,
+    "no_speech_prob": 0.3203599452972412
+  },
+  {
+    "id": 118,
+    "seek": 78660,
+    "start": 799.76,
+    "end": 807.72,
+    "text": " ist es ein Sog hinein in ein fremdes Leben, in einen sehr intimen Kosmos. Knausgott schrieb",
+    "tokens": [
+      51022, 1418, 785, 1343, 407, 70, 47551, 259, 294, 1343, 2130, 76, 14792,
+      15399, 11, 294, 4891, 5499, 560, 19676, 36909, 3415, 13, 591, 629, 301,
+      70, 1521, 956, 31775, 51420
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09236735656481831,
+    "compression_ratio": 1.4787644787644787,
+    "no_speech_prob": 0.3203599452972412
+  },
+  {
+    "id": 119,
+    "seek": 78660,
+    "start": 807.72,
+    "end": 814.24,
+    "text": " \u00fcber das erb\u00e4rmliche Sterben des alkoholkranken Vaters, die Exzesse der \u00dcberforderung in Familie",
+    "tokens": [
+      51420, 4502, 1482, 1189, 65, 2713, 76, 10185, 33539, 1799, 730, 37688,
+      1445, 401, 38553, 18493, 691, 16749, 11, 978, 2111, 89, 7357, 1163, 18086,
+      30943, 1063, 294, 26021, 51746
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09236735656481831,
+    "compression_ratio": 1.4787644787644787,
+    "no_speech_prob": 0.3203599452972412
+  },
+  {
+    "id": 120,
+    "seek": 81424,
+    "start": 814.24,
+    "end": 821.44,
+    "text": " und Partnerschaft, die eigenen Abgr\u00fcnde. Unter Namensnennung aller Beteiligten. Die Vorw\u00fcrfe",
+    "tokens": [
+      50364, 674, 28058, 7118, 11, 978, 28702, 2847, 861, 25596, 13, 12065,
+      10684, 694, 77, 1857, 1063, 8722, 363, 3498, 388, 41498, 13, 3229, 12231,
+      86, 1655, 2106, 50724
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11921122978473532,
+    "compression_ratio": 1.4210526315789473,
+    "no_speech_prob": 0.1519392877817154
+  },
+  {
+    "id": 121,
+    "seek": 81424,
+    "start": 821.44,
+    "end": 829.0,
+    "text": " kamen kn\u00fcppeldick. Knausgott bediene einen Voyerismus, liefere ihm nahestehende Menschen aus. Das war",
+    "tokens": [
+      50724, 9727, 268, 444, 774, 427, 5957, 618, 13, 591, 629, 301, 70, 1521,
+      2901, 10174, 4891, 25563, 260, 25327, 11, 4544, 69, 323, 16021, 17170,
+      8887, 71, 5445, 8397, 3437, 13, 2846, 1516, 51102
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11921122978473532,
+    "compression_ratio": 1.4210526315789473,
+    "no_speech_prob": 0.1519392877817154
+  },
+  {
+    "id": 122,
+    "seek": 81424,
+    "start": 829.0,
+    "end": 834.6,
+    "text": " nicht falsch. Seine Frau und Mutter der gemeinsamen Kinder lie\u00df sich in die Psychiatrie einweisen,",
+    "tokens": [
+      51102, 1979, 43340, 13, 1100, 533, 13930, 674, 31517, 1163, 22971, 22403,
+      14193, 4544, 2536, 3041, 294, 978, 17303, 7676, 5469, 1343, 40196, 11,
+      51382
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11921122978473532,
+    "compression_ratio": 1.4210526315789473,
+    "no_speech_prob": 0.1519392877817154
+  },
+  {
+    "id": 123,
+    "seek": 81424,
+    "start": 834.6,
+    "end": 842.92,
+    "text": " die Ehe ging kaputt. Warum riskiert ein Schriftsteller das? In den B\u00fcchern gibt",
+    "tokens": [
+      51382, 978, 462, 675, 21924, 13816, 13478, 13, 25541, 3148, 4859, 1343,
+      2065, 35742, 372, 14983, 1482, 30, 682, 1441, 37186, 339, 1248, 6089,
+      51798
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11921122978473532,
+    "compression_ratio": 1.4210526315789473,
+    "no_speech_prob": 0.1519392877817154
+  },
+  {
+    "id": 124,
+    "seek": 84292,
+    "start": 842.92,
+    "end": 849.04,
+    "text": " Knausgott Hinweise. Er habe den Glauben an die Literatur verloren inmitten der Inflation",
+    "tokens": [
+      50364, 591, 629, 301, 70, 1521, 29571, 13109, 13, 3300, 6015, 1441, 460,
+      20798, 268, 364, 978, 16090, 19493, 44884, 41052, 2987, 1163, 682, 3423,
+      399, 50670
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1443218933908563,
+    "compression_ratio": 1.4538461538461538,
+    "no_speech_prob": 0.1892513930797577
+  },
+  {
+    "id": 125,
+    "seek": 84292,
+    "start": 849.04,
+    "end": 855.5999999999999,
+    "text": " ausgedachter Geschichten einer wirklichkeitsgetreuen Welt. Man k\u00f6nnte auch vermuten, ihn nervte das",
+    "tokens": [
+      50670, 3437, 3004, 3589, 260, 14241, 24681, 6850, 9696, 330, 1208, 847,
+      265, 7801, 14761, 13, 2458, 17646, 2168, 26319, 7886, 11, 14534, 5724,
+      975, 1482, 50998
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1443218933908563,
+    "compression_ratio": 1.4538461538461538,
+    "no_speech_prob": 0.1892513930797577
+  },
+  {
+    "id": 126,
+    "seek": 84292,
+    "start": 855.5999999999999,
+    "end": 862.5999999999999,
+    "text": " Einlullende daran. Man muss diese radikale Selbstbezogenheit nicht m\u00f6gen. Aber Knausgott",
+    "tokens": [
+      50998, 6391, 75, 858, 5445, 24520, 13, 2458, 6425, 6705, 2843, 1035, 1220,
+      29712, 650, 42120, 8480, 1979, 7667, 1766, 13, 5992, 591, 629, 301, 70,
+      1521, 51348
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1443218933908563,
+    "compression_ratio": 1.4538461538461538,
+    "no_speech_prob": 0.1892513930797577
+  },
+  {
+    "id": 127,
+    "seek": 84292,
+    "start": 862.5999999999999,
+    "end": 869.4399999999999,
+    "text": " traf einen Nerv. Alle sechs B\u00e4nde von Minnkamp wurden Bestseller. Und der Autor zum literarischen",
+    "tokens": [
+      51348, 944, 69, 4891, 426, 1978, 13, 25318, 41945, 363, 26973, 2957, 2829,
+      77, 74, 1215, 21105, 9752, 405, 4658, 13, 2719, 1163, 6049, 284, 5919,
+      2733, 289, 6282, 51690
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1443218933908563,
+    "compression_ratio": 1.4538461538461538,
+    "no_speech_prob": 0.1892513930797577
+  },
+  {
+    "id": 128,
+    "seek": 86944,
+    "start": 869.44,
+    "end": 876.2,
+    "text": " Model einer neuen m\u00e4nnlichen Innerlichkeit. Mit br\u00fcchiger Seelenlandschaft, Abst\u00fcrzen, Verwundungen.",
+    "tokens": [
+      50364, 17105, 6850, 21387, 39550, 10193, 36705, 41096, 13, 10821, 738,
+      774, 339, 4810, 1100, 14818, 10230, 7118, 11, 46853, 1655, 2904, 11, 4281,
+      86, 997, 5084, 13, 50702
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1614259806546298,
+    "compression_ratio": 1.380281690140845,
+    "no_speech_prob": 0.5383859872817993
+  },
+  {
+    "id": 129,
+    "seek": 86944,
+    "start": 876.2,
+    "end": 888.6400000000001,
+    "text": " Mit einer erfundenen Romanfigur h\u00e4tte er das wohl kaum vermocht. Heute, dasselbe zu empfinden,",
+    "tokens": [
+      50702, 10821, 6850, 20228, 10028, 268, 8566, 20646, 374, 20041, 1189,
+      1482, 24531, 36443, 1306, 3280, 4701, 13, 27978, 11, 2658, 338, 650, 2164,
+      4012, 43270, 11, 51324
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1614259806546298,
+    "compression_ratio": 1.380281690140845,
+    "no_speech_prob": 0.5383859872817993
+  },
+  {
+    "id": 130,
+    "seek": 86944,
+    "start": 888.6400000000001,
+    "end": 897.5200000000001,
+    "text": " wie damals, ist unm\u00f6glich. So Annie Ernaud in ihrem Roman das Ereignis. Aber wie erinnert man",
+    "tokens": [
+      51324, 3355, 26067, 11, 1418, 19334, 16277, 13, 407, 26781, 3300, 629,
+      532, 294, 30859, 8566, 1482, 462, 265, 788, 271, 13, 5992, 3355, 1189,
+      7729, 911, 587, 51768
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1614259806546298,
+    "compression_ratio": 1.380281690140845,
+    "no_speech_prob": 0.5383859872817993
+  },
+  {
+    "id": 131,
+    "seek": 89752,
+    "start": 897.52,
+    "end": 905.36,
+    "text": " sich dann? Und ist dieser so schwer zugreifenden Erinnerung zu trauen? In ihrem Roman das Ereignis,",
+    "tokens": [
+      50364, 3041, 3594, 30, 2719, 1418, 9053, 370, 23809, 33507, 265, 351,
+      8896, 3300, 19166, 1063, 2164, 944, 7801, 30, 682, 30859, 8566, 1482, 462,
+      265, 788, 271, 11, 50756
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11263502495629447,
+    "compression_ratio": 1.5019157088122606,
+    "no_speech_prob": 0.32732129096984863
+  },
+  {
+    "id": 132,
+    "seek": 89752,
+    "start": 905.36,
+    "end": 912.16,
+    "text": " wie auch in all ihren anderen B\u00fcchern, macht Annie Ernaud diesen Suchprozess zum Thema. Auch",
+    "tokens": [
+      50756, 3355, 2168, 294, 439, 22347, 11122, 37186, 339, 1248, 11, 10857,
+      26781, 3300, 629, 532, 12862, 9653, 4318, 37575, 5919, 16306, 13, 13382,
+      51096
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11263502495629447,
+    "compression_ratio": 1.5019157088122606,
+    "no_speech_prob": 0.32732129096984863
+  },
+  {
+    "id": 133,
+    "seek": 89752,
+    "start": 912.16,
+    "end": 917.48,
+    "text": " das macht das Faszinosum ihrer Lekt\u00fcre aus, dass man meint, ihr dabei \u00fcber die Schulter zu schauen.",
+    "tokens": [
+      51096, 1482, 10857, 1482, 479, 19601, 15220, 449, 23990, 441, 8192, 39951,
+      3437, 11, 2658, 587, 385, 686, 11, 5553, 14967, 4502, 978, 21223, 391,
+      2164, 25672, 13, 51362
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11263502495629447,
+    "compression_ratio": 1.5019157088122606,
+    "no_speech_prob": 0.32732129096984863
+  },
+  {
+    "id": 134,
+    "seek": 89752,
+    "start": 917.48,
+    "end": 925.28,
+    "text": " Vor allem werde ich mich bem\u00fchen, in jedes einzelne Bild einzutauchen, bis ich das k\u00f6rperliche",
+    "tokens": [
+      51362, 12231, 17585, 24866, 1893, 6031, 7577, 774, 2932, 11, 294, 36119,
+      36731, 716, 15746, 21586, 12093, 11285, 11, 7393, 1893, 1482, 350, 25533,
+      10185, 51752
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11263502495629447,
+    "compression_ratio": 1.5019157088122606,
+    "no_speech_prob": 0.32732129096984863
+  },
+  {
+    "id": 135,
+    "seek": 92528,
+    "start": 925.28,
+    "end": 932.48,
+    "text": " Empfinden habe, zu ihm vorzudringen, bis mir Worte einfallen, von denen ich sagen kann, das ist es.",
+    "tokens": [
+      50364, 8599, 43270, 6015, 11, 2164, 16021, 4245, 89, 532, 2937, 268, 11,
+      7393, 3149, 343, 12752, 1343, 24425, 11, 2957, 19998, 1893, 8360, 4028,
+      11, 1482, 1418, 785, 13, 50724
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10457091331481934,
+    "compression_ratio": 1.5059288537549407,
+    "no_speech_prob": 0.61433345079422
+  },
+  {
+    "id": 136,
+    "seek": 92528,
+    "start": 932.48,
+    "end": 940.1999999999999,
+    "text": " Das erlebende Ich ist ein anderes als das Erinnernde. Es bleibt eine un\u00fcberwindbare",
+    "tokens": [
+      50724, 2846, 26826, 65, 5445, 3141, 1418, 1343, 31426, 3907, 1482, 3300,
+      19166, 16404, 13, 2313, 24814, 3018, 517, 12670, 12199, 30682, 51110
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10457091331481934,
+    "compression_ratio": 1.5059288537549407,
+    "no_speech_prob": 0.61433345079422
+  },
+  {
+    "id": 137,
+    "seek": 92528,
+    "start": 940.1999999999999,
+    "end": 948.3199999999999,
+    "text": " Distanz zum damaligen Ich, ein Riss, ein Spalt. Es kann nur eine Ann\u00e4herung sein an ein dynamisch",
+    "tokens": [
+      51110, 9840, 3910, 5919, 2422, 304, 3213, 3141, 11, 1343, 497, 891, 11,
+      1343, 1738, 3198, 13, 2313, 4028, 4343, 3018, 8860, 737, 511, 1063, 6195,
+      364, 1343, 5999, 5494, 51516
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10457091331481934,
+    "compression_ratio": 1.5059288537549407,
+    "no_speech_prob": 0.61433345079422
+  },
+  {
+    "id": 138,
+    "seek": 92528,
+    "start": 948.3199999999999,
+    "end": 954.24,
+    "text": " sich ver\u00e4nderndes Inneres, meint die \u00dcbersetzerin von Annie Ernaud Sonja Fink. Unser Ich ist ja",
+    "tokens": [
+      51516, 3041, 1306, 16082, 273, 279, 36705, 279, 11, 385, 686, 978, 10713,
+      1616, 302, 4527, 259, 2957, 26781, 3300, 629, 532, 5185, 2938, 479, 475,
+      13, 1156, 12484, 3141, 1418, 2784, 51812
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10457091331481934,
+    "compression_ratio": 1.5059288537549407,
+    "no_speech_prob": 0.61433345079422
+  },
+  {
+    "id": 139,
+    "seek": 95424,
+    "start": 954.24,
+    "end": 957.44,
+    "text": " ohnehin eine Konstruktion. Wir kommen ja nicht mit einem fertigen Ich zur Welt,",
+    "tokens": [
+      50364, 15716, 10876, 3018, 44200, 894, 9780, 13, 4347, 11729, 2784, 1979,
+      2194, 6827, 10700, 3213, 3141, 7147, 14761, 11, 50524
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16948607710541272,
+    "compression_ratio": 1.5770491803278688,
+    "no_speech_prob": 0.07363110035657883
+  },
+  {
+    "id": 140,
+    "seek": 95424,
+    "start": 957.44,
+    "end": 965.36,
+    "text": " sondern unser Ich bildet sich heraus im Laufe der Kindheit, der Jugend und bis zum hohen Alter und",
+    "tokens": [
+      50524, 11465, 12977, 3141, 22105, 302, 3041, 25089, 566, 47979, 2106,
+      1163, 9242, 8480, 11, 1163, 35303, 674, 7393, 5919, 1106, 2932, 32608,
+      674, 50920
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16948607710541272,
+    "compression_ratio": 1.5770491803278688,
+    "no_speech_prob": 0.07363110035657883
+  },
+  {
+    "id": 141,
+    "seek": 95424,
+    "start": 965.36,
+    "end": 969.44,
+    "text": " zum Tod. Wir stricken eigentlich die ganze Zeit an unserem Ich und das tun wir eben \u00fcber Sprache und",
+    "tokens": [
+      50920, 5919, 2465, 13, 4347, 1056, 3830, 10926, 978, 18898, 9394, 364,
+      26792, 3141, 674, 1482, 4267, 1987, 11375, 4502, 7702, 6000, 674, 51124
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16948607710541272,
+    "compression_ratio": 1.5770491803278688,
+    "no_speech_prob": 0.07363110035657883
+  },
+  {
+    "id": 142,
+    "seek": 95424,
+    "start": 969.44,
+    "end": 975.48,
+    "text": " das tun wir \u00fcber Erz\u00e4hlung. Annie Ernaud hat immer Tagebuch geschrieben und nat\u00fcrlich kann sie jetzt",
+    "tokens": [
+      51124, 1482, 4267, 1987, 4502, 3300, 23242, 17850, 13, 26781, 3300, 629,
+      532, 2385, 5578, 29724, 39742, 47397, 674, 8762, 4028, 2804, 4354, 51426
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16948607710541272,
+    "compression_ratio": 1.5770491803278688,
+    "no_speech_prob": 0.07363110035657883
+  },
+  {
+    "id": 143,
+    "seek": 95424,
+    "start": 975.48,
+    "end": 981.6,
+    "text": " als \u00fcber 80-J\u00e4hrige auf Tagebuchnotizen zur\u00fcckgreifen und hat so ein bisschen Zugang zu ihrem",
+    "tokens": [
+      51426, 3907, 4502, 4688, 12, 41, 12021, 3969, 2501, 29724, 39742, 2247,
+      23161, 15089, 33248, 25076, 674, 2385, 370, 1343, 10763, 34722, 656, 2164,
+      30859, 51732
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16948607710541272,
+    "compression_ratio": 1.5770491803278688,
+    "no_speech_prob": 0.07363110035657883
+  },
+  {
+    "id": 144,
+    "seek": 98160,
+    "start": 982.08,
+    "end": 987.12,
+    "text": " Ich. Erinnerndes Schreiben ist eine Rekonstruktion mit Entscheidungen,",
+    "tokens": [
+      50388, 3141, 13, 3300, 19166, 273, 279, 2065, 25946, 1418, 3018, 497, 916,
+      4068, 894, 9780, 2194, 30862, 5084, 11, 50640
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1532659625062848,
+    "compression_ratio": 1.5042372881355932,
+    "no_speech_prob": 0.4142647385597229
+  },
+  {
+    "id": 145,
+    "seek": 98160,
+    "start": 987.12,
+    "end": 992.9200000000001,
+    "text": " die in der Gegenwart getroffen werden. Naja, was ist ein authentisches Ich? Ich w\u00fcrde sagen,",
+    "tokens": [
+      50640, 978, 294, 1163, 38631, 29587, 483, 30594, 4604, 13, 426, 12908, 11,
+      390, 1418, 1343, 9214, 35889, 3141, 30, 3141, 11942, 8360, 11, 50930
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1532659625062848,
+    "compression_ratio": 1.5042372881355932,
+    "no_speech_prob": 0.4142647385597229
+  },
+  {
+    "id": 146,
+    "seek": 98160,
+    "start": 992.9200000000001,
+    "end": 1000.0,
+    "text": " Authentizit\u00e4t ist, wenn das eigene Empfinden \u00fcbereinstimmt mit dem, was man von sich zeigen",
+    "tokens": [
+      50930, 40231, 317, 590, 14053, 1418, 11, 4797, 1482, 38549, 8599, 43270,
+      3304, 18582, 13911, 15314, 2194, 1371, 11, 390, 587, 2957, 3041, 24687,
+      51284
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1532659625062848,
+    "compression_ratio": 1.5042372881355932,
+    "no_speech_prob": 0.4142647385597229
+  },
+  {
+    "id": 147,
+    "seek": 98160,
+    "start": 1000.0,
+    "end": 1006.2,
+    "text": " kann. Und das ist eben das, worum es dann auch beim autofiktionalen Schreiben geht, dass man die",
+    "tokens": [
+      51284, 4028, 13, 2719, 1482, 1418, 11375, 1482, 11, 469, 449, 785, 3594,
+      2168, 13922, 1476, 2670, 9874, 1966, 268, 2065, 25946, 7095, 11, 2658,
+      587, 978, 51594
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1532659625062848,
+    "compression_ratio": 1.5042372881355932,
+    "no_speech_prob": 0.4142647385597229
+  },
+  {
+    "id": 148,
+    "seek": 100620,
+    "start": 1006.2,
+    "end": 1011.6800000000001,
+    "text": " eigene Wahrhaftigkeit findet und andere daran teilhaben l\u00e4sst. Ganz offensichtlich f\u00fchlt sich",
+    "tokens": [
+      50364, 38549, 36357, 25127, 16626, 27752, 674, 10490, 24520, 33200, 7821,
+      268, 29335, 13, 32496, 766, 694, 41971, 18813, 2282, 3041, 50638
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13375356860626908,
+    "compression_ratio": 1.607843137254902,
+    "no_speech_prob": 0.2873169481754303
+  },
+  {
+    "id": 149,
+    "seek": 100620,
+    "start": 1011.6800000000001,
+    "end": 1017.84,
+    "text": " Annie Ernaud dieser Wahrhaftigkeit verpflichtet und zwar in gleichem Ma\u00dfe sich selbst gegen\u00fcber wie",
+    "tokens": [
+      50638, 26781, 3300, 629, 532, 9053, 36357, 25127, 16626, 1306, 45430, 302,
+      674, 19054, 294, 11699, 443, 4042, 11451, 3041, 13053, 41830, 3355, 50946
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13375356860626908,
+    "compression_ratio": 1.607843137254902,
+    "no_speech_prob": 0.2873169481754303
+  },
+  {
+    "id": 150,
+    "seek": 100620,
+    "start": 1017.84,
+    "end": 1024.4,
+    "text": " auch der \u00d6ffentlichkeit. Jahrelang kreist sie \u00fcber ihren Themen, ihren Traumata, entwirft immer neue",
+    "tokens": [
+      50946, 2168, 1163, 9158, 22805, 9238, 13, 12443, 4419, 656, 350, 265, 468,
+      2804, 4502, 22347, 39229, 11, 22347, 5403, 449, 3274, 11, 948, 43327, 844,
+      5578, 16842, 51274
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13375356860626908,
+    "compression_ratio": 1.607843137254902,
+    "no_speech_prob": 0.2873169481754303
+  },
+  {
+    "id": 151,
+    "seek": 100620,
+    "start": 1024.4,
+    "end": 1030.3600000000001,
+    "text": " Fassungen, entdeckte beim Schreiben \u00fcber ihren Schwangerschaftsabbruch, dass sie den Moment,",
+    "tokens": [
+      51274, 479, 640, 5084, 11, 948, 1479, 547, 975, 13922, 2065, 25946, 4502,
+      22347, 17576, 11186, 7118, 82, 455, 1443, 625, 11, 2658, 2804, 1441,
+      19093, 11, 51572
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13375356860626908,
+    "compression_ratio": 1.607843137254902,
+    "no_speech_prob": 0.2873169481754303
+  },
+  {
+    "id": 152,
+    "seek": 100620,
+    "start": 1030.3600000000001,
+    "end": 1036.04,
+    "text": " in dem sie den Phtos verlor, bereits in einer \u00e4lteren Fassung beschrieben hatte, mit identischen",
+    "tokens": [
+      51572, 294, 1371, 2804, 1441, 430, 357, 329, 1306, 6746, 11, 23703, 294,
+      6850, 3078, 75, 391, 268, 479, 40828, 17498, 24027, 13299, 11, 2194, 2473,
+      6282, 51856
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13375356860626908,
+    "compression_ratio": 1.607843137254902,
+    "no_speech_prob": 0.2873169481754303
+  },
+  {
+    "id": 153,
+    "seek": 103604,
+    "start": 1036.04,
+    "end": 1043.28,
+    "text": " Worten. Die Sprache ist Indikator f\u00fcr die Wahrhaftigkeit ihres Erlebens. Die Unf\u00e4higkeit,",
+    "tokens": [
+      50364, 22748, 268, 13, 3229, 7702, 6000, 1418, 2333, 1035, 1639, 2959,
+      978, 36357, 25127, 16626, 5096, 495, 3300, 28512, 694, 13, 3229, 8170,
+      6860, 16626, 11, 50726
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09660812559581938,
+    "compression_ratio": 1.5040650406504066,
+    "no_speech_prob": 0.010983452200889587
+  },
+  {
+    "id": 154,
+    "seek": 103604,
+    "start": 1043.28,
+    "end": 1048.8799999999999,
+    "text": " die Dinge mit anderen Worten zu beschreiben, die untrennbare Verkn\u00fcpfung einer vergangenen",
+    "tokens": [
+      50726, 978, 25102, 2194, 11122, 22748, 268, 2164, 17498, 25946, 11, 978,
+      1701, 1095, 77, 30682, 4281, 5457, 774, 25302, 1063, 6850, 20209, 10784,
+      268, 51006
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09660812559581938,
+    "compression_ratio": 1.5040650406504066,
+    "no_speech_prob": 0.010983452200889587
+  },
+  {
+    "id": 155,
+    "seek": 103604,
+    "start": 1048.8799999999999,
+    "end": 1054.84,
+    "text": " Realit\u00e4t mit einem Bild unter Ausschluss aller anderen, ist in meinen Augen der Beweis,",
+    "tokens": [
+      51006, 8467, 14053, 2194, 6827, 15746, 8662, 21286, 41372, 8722, 11122,
+      11, 1418, 294, 22738, 29692, 1163, 879, 35033, 11, 51304
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09660812559581938,
+    "compression_ratio": 1.5040650406504066,
+    "no_speech_prob": 0.010983452200889587
+  },
+  {
+    "id": 156,
+    "seek": 103604,
+    "start": 1054.84,
+    "end": 1063.44,
+    "text": " dass ich das Ereignis tats\u00e4chlich erlebt habe, und zwar genauso. Das genaue Erinnern, das exakte",
+    "tokens": [
+      51304, 2658, 1893, 1482, 462, 265, 788, 271, 20796, 47372, 6015, 11, 674,
+      19054, 37694, 13, 2846, 1049, 64, 622, 3300, 19166, 77, 11, 1482, 454,
+      48036, 51734
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09660812559581938,
+    "compression_ratio": 1.5040650406504066,
+    "no_speech_prob": 0.010983452200889587
+  },
+  {
+    "id": 157,
+    "seek": 106344,
+    "start": 1063.44,
+    "end": 1070.28,
+    "text": " Beschreiben, die Akribie der Fakten, die fast wissenschaftliche Pr\u00e4zision der Gef\u00fchle. Diese",
+    "tokens": [
+      50364, 30860, 25946, 11, 978, 9629, 2024, 414, 1163, 479, 514, 1147, 11,
+      978, 2370, 261, 26657, 10185, 2114, 737, 89, 1991, 1163, 17873, 7254, 306,
+      13, 18993, 50706
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10619413072817793,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.4142166078090668
+  },
+  {
+    "id": 158,
+    "seek": 106344,
+    "start": 1070.28,
+    "end": 1076.44,
+    "text": " Form der Autofiktion ist nicht Spiel, sondern bittere Ernst, wobei federleicht geschrieben von",
+    "tokens": [
+      50706, 10126, 1163, 6049, 2670, 9874, 313, 1418, 1979, 14266, 11, 11465,
+      272, 593, 323, 24147, 372, 11, 6020, 21845, 38024, 306, 1405, 47397, 2957,
+      51014
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10619413072817793,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.4142166078090668
+  },
+  {
+    "id": 159,
+    "seek": 106344,
+    "start": 1076.44,
+    "end": 1083.56,
+    "text": " Annie Ernaud. Sie hat ein soziologisches Anliegen, will anhand der eigenen autobiografischen",
+    "tokens": [
+      51014, 26781, 3300, 629, 532, 13, 3559, 2385, 1343, 370, 3992, 1132,
+      35889, 1107, 6302, 1766, 11, 486, 364, 5543, 1163, 28702, 45747, 19815,
+      6282, 51370
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10619413072817793,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.4142166078090668
+  },
+  {
+    "id": 160,
+    "seek": 106344,
+    "start": 1083.56,
+    "end": 1089.92,
+    "text": " Erlebnisse das Zeit-, Generationen- und Gesellschaftstypische zeigen, das tabuisierte,",
+    "tokens": [
+      51370, 3300, 306, 19404, 7746, 1482, 9394, 24246, 23898, 268, 12, 674,
+      30006, 25134, 79, 7864, 24687, 11, 1482, 4421, 8479, 23123, 11, 51688
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10619413072817793,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.4142166078090668
+  },
+  {
+    "id": 161,
+    "seek": 108992,
+    "start": 1089.92,
+    "end": 1096.52,
+    "text": " die sozialen Machtverh\u00e4ltnisse und die Ungerechtigkeit. Das will auch Idoir Louis,",
+    "tokens": [
+      50364, 978, 31541, 268, 40873, 331, 28068, 31481, 674, 978, 43559, 48561,
+      16626, 13, 2846, 486, 2168, 286, 2595, 347, 9763, 11, 50694
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14378880519492954,
+    "compression_ratio": 1.4031007751937985,
+    "no_speech_prob": 0.15187273919582367
+  },
+  {
+    "id": 162,
+    "seek": 108992,
+    "start": 1096.52,
+    "end": 1102.2,
+    "text": " Popstar der franz\u00f6sischen Literaturszene und dar\u00fcber hinaus. Er war so weit wie m\u00f6glich",
+    "tokens": [
+      50694, 10215, 9710, 1163, 431, 3910, 11310, 6282, 16090, 267, 2156, 89,
+      1450, 674, 21737, 46056, 13, 3300, 1516, 370, 15306, 3355, 16294, 50978
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14378880519492954,
+    "compression_ratio": 1.4031007751937985,
+    "no_speech_prob": 0.15187273919582367
+  },
+  {
+    "id": 163,
+    "seek": 108992,
+    "start": 1102.2,
+    "end": 1109.3600000000001,
+    "text": " geflohen vor dem Dorf in dem er aufwuchs. Jetzt kehrt er im Schreiben zur\u00fcck, in die Armut und",
+    "tokens": [
+      50978, 11271, 752, 2932, 4245, 1371, 13643, 69, 294, 1371, 1189, 2501, 86,
+      37503, 13, 12592, 803, 1703, 83, 1189, 566, 2065, 25946, 15089, 11, 294,
+      978, 11893, 325, 674, 51336
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14378880519492954,
+    "compression_ratio": 1.4031007751937985,
+    "no_speech_prob": 0.15187273919582367
+  },
+  {
+    "id": 164,
+    "seek": 108992,
+    "start": 1109.3600000000001,
+    "end": 1114.68,
+    "text": " Gewalt seiner provinziellen Herkunft, wo den m\u00e4nnlichen Mitgliedern der Gesellschaft wenig",
+    "tokens": [
+      51336, 19063, 3198, 23114, 17629, 3283, 19191, 3204, 74, 19333, 11, 6020,
+      1441, 39550, 10193, 44167, 1091, 1248, 1163, 30006, 20911, 51602
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14378880519492954,
+    "compression_ratio": 1.4031007751937985,
+    "no_speech_prob": 0.15187273919582367
+  },
+  {
+    "id": 165,
+    "seek": 111468,
+    "start": 1114.68,
+    "end": 1122.4,
+    "text": " andere Perspektiven vor Augen stehen als Schulabbruch, Fabrikjob, Maloche, Trinken, Pr\u00fcgeln und",
+    "tokens": [
+      50364, 10490, 14006, 23533, 5709, 4245, 29692, 19777, 3907, 21223, 455,
+      1443, 625, 11, 17440, 14456, 50208, 11, 5746, 78, 1876, 11, 1765, 35061,
+      11, 2114, 25644, 9878, 674, 50750
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1356620891119844,
+    "compression_ratio": 1.3409090909090908,
+    "no_speech_prob": 0.44827035069465637
+  },
+  {
+    "id": 166,
+    "seek": 111468,
+    "start": 1122.4,
+    "end": 1130.04,
+    "text": " reproduzierte M\u00e4nnlichkeitsmythen, die ein Schwulsein wie das von Edie, wie Idoir Louis dort noch hie\u00df,",
+    "tokens": [
+      50750, 11408, 89, 23123, 376, 24507, 1739, 330, 1208, 2226, 19096, 11,
+      978, 1343, 17576, 425, 33042, 3355, 1482, 2957, 3977, 414, 11, 3355, 286,
+      2595, 347, 9763, 15775, 3514, 276, 39245, 11, 51132
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1356620891119844,
+    "compression_ratio": 1.3409090909090908,
+    "no_speech_prob": 0.44827035069465637
+  },
+  {
+    "id": 167,
+    "seek": 111468,
+    "start": 1130.04,
+    "end": 1139.0800000000002,
+    "text": " herabsetzen. Paradoxerweise hat die Pariser Verlagswelt das erste Manuskript aus dem sp\u00e4ter",
+    "tokens": [
+      51132, 720, 17243, 24797, 13, 3457, 23029, 44071, 2385, 978, 3457, 6694,
+      4281, 75, 12109, 33458, 1482, 20951, 2458, 301, 74, 470, 662, 3437, 1371,
+      24196, 51584
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1356620891119844,
+    "compression_ratio": 1.3409090909090908,
+    "no_speech_prob": 0.44827035069465637
+  },
+  {
+    "id": 168,
+    "seek": 113908,
+    "start": 1139.08,
+    "end": 1144.8799999999999,
+    "text": " der Roman, das Ende von Edie wurde, abgelehnt. Man hielt die Geschichte f\u00fcr \u00fcbertrieben,",
+    "tokens": [
+      50364, 1163, 8566, 11, 1482, 15152, 2957, 3977, 414, 11191, 11, 37301,
+      14557, 580, 13, 2458, 276, 18940, 978, 28896, 2959, 3304, 4290, 24027, 11,
+      50654
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10460862074748124,
+    "compression_ratio": 1.4798387096774193,
+    "no_speech_prob": 0.369681179523468
+  },
+  {
+    "id": 169,
+    "seek": 113908,
+    "start": 1144.8799999999999,
+    "end": 1152.04,
+    "text": " f\u00fcr ausgedacht. Vielleicht mag Idoir Louis deshalb keine erfundenen Charaktere. Bei ihnen",
+    "tokens": [
+      50654, 2959, 3437, 3004, 3589, 13, 29838, 2258, 286, 2595, 347, 9763,
+      28457, 9252, 20228, 10028, 268, 4327, 5886, 323, 13, 16188, 24623, 51012
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10460862074748124,
+    "compression_ratio": 1.4798387096774193,
+    "no_speech_prob": 0.369681179523468
+  },
+  {
+    "id": 170,
+    "seek": 113908,
+    "start": 1152.04,
+    "end": 1158.84,
+    "text": " k\u00f6nnten die Lesenden immer sagen, alles halb so schlimm, ist ja nur erfunden. So aber benennt",
+    "tokens": [
+      51012, 37411, 978, 6965, 8896, 5578, 8360, 11, 7874, 7523, 65, 370, 48821,
+      11, 1418, 2784, 4343, 20228, 10028, 13, 407, 4340, 3271, 268, 580, 51352
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10460862074748124,
+    "compression_ratio": 1.4798387096774193,
+    "no_speech_prob": 0.369681179523468
+  },
+  {
+    "id": 171,
+    "seek": 113908,
+    "start": 1158.84,
+    "end": 1163.6799999999998,
+    "text": " Idoir Louis die sozialen Missst\u00e4nde, die ihm selbst oder seiner Familie widerfahren sind,",
+    "tokens": [
+      51352, 286, 2595, 347, 9763, 978, 31541, 268, 5275, 16913, 68, 11, 978,
+      16021, 13053, 4513, 23114, 26021, 11842, 34394, 3290, 11, 51594
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10460862074748124,
+    "compression_ratio": 1.4798387096774193,
+    "no_speech_prob": 0.369681179523468
+  },
+  {
+    "id": 172,
+    "seek": 116368,
+    "start": 1163.68,
+    "end": 1171.68,
+    "text": " mit S\u00e4tzen wie Faustschl\u00e4gen und mit vielen Ausrufezeichen. Hier sind es drei. Man muss sich",
+    "tokens": [
+      50364, 2194, 318, 45721, 3355, 12710, 381, 6145, 22882, 1766, 674, 2194,
+      19885, 9039, 894, 2106, 1381, 18613, 13, 10886, 3290, 785, 16809, 13,
+      2458, 6425, 3041, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1320020306494928,
+    "compression_ratio": 1.4271844660194175,
+    "no_speech_prob": 0.5456680059432983
+  },
+  {
+    "id": 173,
+    "seek": 116368,
+    "start": 1171.68,
+    "end": 1176.88,
+    "text": " doch wiederholen, bis sie uns zuh\u00f6ren, um sie zum Zuh\u00f6ren zu zwingen. Wir m\u00fcssten doch eigentlich",
+    "tokens": [
+      50764, 9243, 6216, 5449, 268, 11, 7393, 2804, 2693, 2164, 71, 26377, 11,
+      1105, 2804, 5919, 1176, 3232, 26377, 2164, 710, 7904, 268, 13, 4347,
+      28802, 6266, 9243, 10926, 51024
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1320020306494928,
+    "compression_ratio": 1.4271844660194175,
+    "no_speech_prob": 0.5456680059432983
+  },
+  {
+    "id": 174,
+    "seek": 116368,
+    "start": 1176.88,
+    "end": 1187.4,
+    "text": " schreien. Ich schreibe, also schreie ich, k\u00f6nnte das verk\u00fcrzte Credo von Idoir Louis lauten. Ich",
+    "tokens": [
+      51024, 956, 265, 1053, 13, 3141, 956, 10271, 650, 11, 611, 956, 265, 414,
+      1893, 11, 17646, 1482, 22328, 1655, 45127, 47560, 78, 2957, 286, 2595,
+      347, 9763, 635, 7886, 13, 3141, 51550
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1320020306494928,
+    "compression_ratio": 1.4271844660194175,
+    "no_speech_prob": 0.5456680059432983
+  },
+  {
+    "id": 175,
+    "seek": 118740,
+    "start": 1187.4,
+    "end": 1195.8000000000002,
+    "text": " erfinde nicht, ich grabe, ist das von Anni Erno. Diese Bekenntnisse in autofiktionaler Form wurden",
+    "tokens": [
+      50364, 20228, 8274, 1979, 11, 1893, 1295, 650, 11, 1418, 1482, 2957, 1107,
+      3722, 3300, 1771, 13, 18993, 879, 41838, 31481, 294, 1476, 2670, 9874,
+      1966, 260, 10126, 21105, 50784
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12657471264109893,
+    "compression_ratio": 1.4796747967479675,
+    "no_speech_prob": 0.4066542685031891
+  },
+  {
+    "id": 176,
+    "seek": 118740,
+    "start": 1195.8000000000002,
+    "end": 1201.48,
+    "text": " als Befreiungsschlag empfunden, auch unter deutschen Autorinnen und Autoren. Schon lange",
+    "tokens": [
+      50784, 3907, 879, 42072, 1063, 3810, 40869, 4012, 69, 10028, 11, 2168,
+      8662, 39707, 6049, 284, 11399, 674, 6049, 10948, 13, 46049, 18131, 51068
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12657471264109893,
+    "compression_ratio": 1.4796747967479675,
+    "no_speech_prob": 0.4066542685031891
+  },
+  {
+    "id": 177,
+    "seek": 118740,
+    "start": 1201.48,
+    "end": 1206.72,
+    "text": " hatte man in Deutschland nicht mehr so viel gelesen \u00fcber Klasse und Kampf. Zum Beispiel,",
+    "tokens": [
+      51068, 13299, 587, 294, 14802, 1979, 5417, 370, 5891, 4087, 17403, 4502,
+      591, 40255, 674, 45126, 13, 23906, 13772, 11, 51330
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12657471264109893,
+    "compression_ratio": 1.4796747967479675,
+    "no_speech_prob": 0.4066542685031891
+  },
+  {
+    "id": 178,
+    "seek": 118740,
+    "start": 1206.72,
+    "end": 1212.68,
+    "text": " wie \u00fcberwindet man als Arbeiterkind mit halbt\u00fcrkischer Herkunft die sozialen Grenzen",
+    "tokens": [
+      51330, 3355, 4502, 12199, 302, 587, 3907, 1587, 29565, 14445, 2194, 7523,
+      4517, 1655, 74, 19674, 3204, 74, 19333, 978, 31541, 268, 24913, 2904,
+      51628
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12657471264109893,
+    "compression_ratio": 1.4796747967479675,
+    "no_speech_prob": 0.4066542685031891
+  },
+  {
+    "id": 179,
+    "seek": 121268,
+    "start": 1212.68,
+    "end": 1219.48,
+    "text": " in der deutschen Gesellschaft? Wie begegnet man als junge schwarze Frau in der DDR,",
+    "tokens": [
+      50364, 294, 1163, 39707, 30006, 30, 9233, 41832, 4568, 302, 587, 3907,
+      47877, 956, 6925, 1381, 13930, 294, 1163, 49272, 11, 50704
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14922037242371358,
+    "compression_ratio": 1.3842364532019704,
+    "no_speech_prob": 0.6214731335639954
+  },
+  {
+    "id": 180,
+    "seek": 121268,
+    "start": 1219.48,
+    "end": 1229.3600000000001,
+    "text": " Rassismus und Homophobie? Wie rettet man sich vor dem deutschen Kleinb\u00fcrger-Patriarchat und der",
+    "tokens": [
+      50704, 497, 640, 25327, 674, 20903, 5317, 996, 414, 30, 9233, 1533, 83,
+      302, 587, 3041, 4245, 1371, 39707, 33327, 49057, 1321, 12, 29331, 470,
+      1178, 267, 674, 1163, 51198
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14922037242371358,
+    "compression_ratio": 1.3842364532019704,
+    "no_speech_prob": 0.6214731335639954
+  },
+  {
+    "id": 181,
+    "seek": 121268,
+    "start": 1229.3600000000001,
+    "end": 1239.68,
+    "text": " Scham \u00fcber eine dicke Mutter? In den Texten liegt eine Dringlichkeit. Es ist ein sehr k\u00f6rperliches",
+    "tokens": [
+      51198, 2065, 335, 4502, 3018, 14285, 330, 31517, 30, 682, 1441, 18643,
+      268, 22421, 3018, 2491, 278, 41096, 13, 2313, 1418, 1343, 5499, 350,
+      25533, 45502, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14922037242371358,
+    "compression_ratio": 1.3842364532019704,
+    "no_speech_prob": 0.6214731335639954
+  },
+  {
+    "id": 182,
+    "seek": 123968,
+    "start": 1239.68,
+    "end": 1246.24,
+    "text": " Schreiben. Nicht nur um Gewalt, Begehren und Dem\u00fctigungen zu benennen. Nicht nur um Verletzungen",
+    "tokens": [
+      50364, 2065, 25946, 13, 22629, 4343, 1105, 19063, 3198, 11, 879, 27057,
+      1095, 674, 4686, 7695, 328, 5084, 2164, 3271, 16043, 13, 22629, 4343,
+      1105, 4281, 2631, 89, 5084, 50692
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11998786401311191,
+    "compression_ratio": 1.5753968253968254,
+    "no_speech_prob": 0.6782585978507996
+  },
+  {
+    "id": 183,
+    "seek": 123968,
+    "start": 1246.24,
+    "end": 1252.64,
+    "text": " und Schmerz sichtbar zu machen. Vielmehr werden Erfahrungen regelrecht nach au\u00dfen gest\u00fclpt und",
+    "tokens": [
+      50692, 674, 2065, 936, 89, 262, 1405, 5356, 2164, 7069, 13, 35931, 1398,
+      1703, 4604, 34137, 5084, 40504, 31495, 5168, 1609, 8989, 7219, 10548, 662,
+      674, 51012
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11998786401311191,
+    "compression_ratio": 1.5753968253968254,
+    "no_speech_prob": 0.6782585978507996
+  },
+  {
+    "id": 184,
+    "seek": 123968,
+    "start": 1252.64,
+    "end": 1257.8400000000001,
+    "text": " in eine Sprache \u00fcberf\u00fchrt. Das hat nat\u00fcrlich etwas mit den gesellschaftlichen Entwicklungen zu tun,",
+    "tokens": [
+      51012, 294, 3018, 7702, 6000, 4502, 69, 19647, 13, 2846, 2385, 8762, 9569,
+      2194, 1441, 5019, 22055, 10193, 29397, 45434, 2164, 4267, 11, 51272
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11998786401311191,
+    "compression_ratio": 1.5753968253968254,
+    "no_speech_prob": 0.6782585978507996
+  },
+  {
+    "id": 185,
+    "seek": 123968,
+    "start": 1257.8400000000001,
+    "end": 1264.48,
+    "text": " dass man in der Gegenwart beginnt mit diesen Themen auch offener umzugehen. Das ist ja nicht nur in",
+    "tokens": [
+      51272, 2658, 587, 294, 1163, 38631, 29587, 1841, 580, 2194, 12862, 39229,
+      2168, 766, 7971, 1105, 46285, 2932, 13, 2846, 1418, 2784, 1979, 4343, 294,
+      51604
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11998786401311191,
+    "compression_ratio": 1.5753968253968254,
+    "no_speech_prob": 0.6782585978507996
+  },
+  {
+    "id": 186,
+    "seek": 126448,
+    "start": 1264.48,
+    "end": 1271.4,
+    "text": " der Literatur der Fall. Me Too ist ein Thema oder auch Diversit\u00e4t und Geschlecht. Es gab",
+    "tokens": [
+      50364, 1163, 16090, 19493, 1163, 7465, 13, 1923, 11395, 1418, 1343, 16306,
+      4513, 2168, 413, 1762, 14053, 674, 14241, 306, 4701, 13, 2313, 17964,
+      50710
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16022186279296874,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.5253461599349976
+  },
+  {
+    "id": 187,
+    "seek": 126448,
+    "start": 1271.4,
+    "end": 1277.44,
+    "text": " nat\u00fcrlich \u00e4hnliche Entwicklungen auch schon in der Vergangenheit. Wenn wir an die 70er Jahre denken,",
+    "tokens": [
+      50710, 8762, 3078, 12071, 10185, 29397, 45434, 2168, 4981, 294, 1163,
+      26610, 10784, 8480, 13, 7899, 1987, 364, 978, 5285, 260, 15557, 28780, 11,
+      51012
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16022186279296874,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.5253461599349976
+  },
+  {
+    "id": 188,
+    "seek": 126448,
+    "start": 1277.44,
+    "end": 1283.68,
+    "text": " auch die 80er Jahre, das ist eine Zeit, da sprechen wir von der neuen Subjektivit\u00e4t. Und da haben",
+    "tokens": [
+      51012, 2168, 978, 4688, 260, 15557, 11, 1482, 1418, 3018, 9394, 11, 1120,
+      27853, 1987, 2957, 1163, 21387, 8511, 14930, 592, 14053, 13, 2719, 1120,
+      3084, 51324
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16022186279296874,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.5253461599349976
+  },
+  {
+    "id": 189,
+    "seek": 126448,
+    "start": 1283.68,
+    "end": 1290.76,
+    "text": " eigentlich vor allem auch angefangen, Frauen \u00fcber sich und \u00fcber ihren K\u00f6rper zu schreiben. So sind",
+    "tokens": [
+      51324, 10926, 4245, 17585, 2168, 43907, 10784, 11, 24191, 4502, 3041, 674,
+      4502, 22347, 33501, 2164, 48546, 13, 407, 3290, 51678
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16022186279296874,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.5253461599349976
+  },
+  {
+    "id": 190,
+    "seek": 129076,
+    "start": 1290.8,
+    "end": 1295.6,
+    "text": " eigentlich jetzt auch die gegenw\u00e4rtigen Sozioautobiografien zu sehen, dass sie eben",
+    "tokens": [
+      50366, 10926, 4354, 2168, 978, 13953, 86, 24802, 3213, 407, 89, 1004,
+      1375, 19293, 19815, 1053, 2164, 11333, 11, 2658, 2804, 11375, 50606
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15082442454802683,
+    "compression_ratio": 1.4396887159533074,
+    "no_speech_prob": 0.054939139634370804
+  },
+  {
+    "id": 191,
+    "seek": 129076,
+    "start": 1295.6,
+    "end": 1302.28,
+    "text": " Themen aufgreifen, die bislang eher tabuisiert waren. Das Label Autofiktion verkauft sich so gut,",
+    "tokens": [
+      50606, 39229, 2501, 33248, 25076, 11, 978, 272, 5788, 656, 24332, 4421,
+      8479, 4859, 11931, 13, 2846, 10137, 338, 6049, 2670, 9874, 313, 22328,
+      28245, 3041, 370, 5228, 11, 50940
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15082442454802683,
+    "compression_ratio": 1.4396887159533074,
+    "no_speech_prob": 0.054939139634370804
+  },
+  {
+    "id": 192,
+    "seek": 129076,
+    "start": 1302.28,
+    "end": 1308.44,
+    "text": " dass manche Kritik mit H\u00e4me daherkommt. Solche Bekenntnisse seien Selfie-Literatur von der",
+    "tokens": [
+      50940, 2658, 587, 1876, 46372, 1035, 2194, 45763, 1398, 36971, 74, 22230,
+      13, 7026, 1876, 879, 41838, 31481, 369, 1053, 16348, 414, 12, 43, 1681,
+      19493, 2957, 1163, 51248
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15082442454802683,
+    "compression_ratio": 1.4396887159533074,
+    "no_speech_prob": 0.054939139634370804
+  },
+  {
+    "id": 193,
+    "seek": 129076,
+    "start": 1308.44,
+    "end": 1315.2,
+    "text": " Psycho-Couch, Tagebuch-Erg\u00fcsse, narzisstische Selbstdarstellungen. Das mag manchmal zutreffen.",
+    "tokens": [
+      51248, 17303, 78, 12, 34, 2220, 11, 29724, 39742, 12, 28135, 70, 16608,
+      405, 11, 6714, 89, 45802, 7864, 29712, 20327, 17816, 5084, 13, 2846, 2258,
+      32092, 710, 325, 265, 15945, 13, 51586
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15082442454802683,
+    "compression_ratio": 1.4396887159533074,
+    "no_speech_prob": 0.054939139634370804
+  },
+  {
+    "id": 194,
+    "seek": 131520,
+    "start": 1315.2,
+    "end": 1324.24,
+    "text": " Ein ganzes Genre, darunter exzellente Literatur, kann man so nicht diffamieren. Es scheint viel",
+    "tokens": [
+      50364, 6391, 6312, 279, 3632, 265, 11, 4072, 21777, 454, 89, 898, 1576,
+      16090, 19493, 11, 4028, 587, 370, 1979, 7593, 335, 5695, 13, 2313, 47906,
+      5891, 50816
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1223336548364463,
+    "compression_ratio": 1.4549019607843137,
+    "no_speech_prob": 0.12582534551620483
+  },
+  {
+    "id": 195,
+    "seek": 131520,
+    "start": 1324.24,
+    "end": 1330.3600000000001,
+    "text": " mehr so, dass das ernsthafte Bed\u00fcrfnis, im Selbsterlebten zu sch\u00fcrfen, auf eine gro\u00dfe",
+    "tokens": [
+      50816, 5417, 370, 11, 2658, 1482, 43412, 1641, 16268, 19893, 1655, 69,
+      10661, 11, 566, 10736, 65, 3120, 28512, 1147, 2164, 956, 1655, 6570, 11,
+      2501, 3018, 19691, 51122
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1223336548364463,
+    "compression_ratio": 1.4549019607843137,
+    "no_speech_prob": 0.12582534551620483
+  },
+  {
+    "id": 196,
+    "seek": 131520,
+    "start": 1330.3600000000001,
+    "end": 1335.4,
+    "text": " Empfangsbereitschaft bei den Lesenden trifft. So schildert es die \u00dcbersetzerin Sonja Fink.",
+    "tokens": [
+      51122, 8599, 19134, 82, 18582, 1208, 7118, 4643, 1441, 6965, 8896, 36956,
+      844, 13, 407, 956, 793, 911, 785, 978, 10713, 1616, 302, 4527, 259, 5185,
+      2938, 479, 475, 13, 51374
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1223336548364463,
+    "compression_ratio": 1.4549019607843137,
+    "no_speech_prob": 0.12582534551620483
+  },
+  {
+    "id": 197,
+    "seek": 131520,
+    "start": 1335.4,
+    "end": 1341.3600000000001,
+    "text": " Immer wenn ich Auftritte habe mit Ania Nau oder auch allein zu den B\u00fcchern als \u00dcbersetzerin,",
+    "tokens": [
+      51374, 42676, 4797, 1893, 39119, 81, 9786, 6015, 2194, 1107, 654, 426,
+      1459, 4513, 2168, 37673, 2164, 1441, 37186, 339, 1248, 3907, 10713, 1616,
+      302, 4527, 259, 11, 51672
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1223336548364463,
+    "compression_ratio": 1.4549019607843137,
+    "no_speech_prob": 0.12582534551620483
+  },
+  {
+    "id": 198,
+    "seek": 134136,
+    "start": 1341.36,
+    "end": 1346.52,
+    "text": " und jetzt war ich auch mit Eduard Louis auf Lesereise, also man bekommt wirklich diese Reaktion,",
+    "tokens": [
+      50364, 674, 4354, 1516, 1893, 2168, 2194, 31900, 515, 9763, 2501, 6965,
+      323, 908, 11, 611, 587, 33429, 9696, 6705, 1300, 5886, 313, 11, 50622
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15279217064380646,
+    "compression_ratio": 1.6342281879194631,
+    "no_speech_prob": 0.16009506583213806
+  },
+  {
+    "id": 199,
+    "seek": 134136,
+    "start": 1346.52,
+    "end": 1351.08,
+    "text": " was das mit den Menschen macht, dass die tief ber\u00fchrt sind von dieser Literatur und von diesen",
+    "tokens": [
+      50622, 390, 1482, 2194, 1441, 8397, 10857, 11, 2658, 978, 45100, 5948,
+      19647, 3290, 2957, 9053, 16090, 19493, 674, 2957, 12862, 50850
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15279217064380646,
+    "compression_ratio": 1.6342281879194631,
+    "no_speech_prob": 0.16009506583213806
+  },
+  {
+    "id": 200,
+    "seek": 134136,
+    "start": 1351.08,
+    "end": 1356.0,
+    "text": " B\u00fcchern und sich darin wiederfinden. Und das spricht ja daf\u00fcr, dass es da absolut n\u00f6tig war,",
+    "tokens": [
+      50850, 37186, 339, 1248, 674, 3041, 4072, 259, 6216, 43270, 13, 2719,
+      1482, 42088, 2784, 13747, 11, 2658, 785, 1120, 18757, 297, 12082, 328,
+      1516, 11, 51096
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15279217064380646,
+    "compression_ratio": 1.6342281879194631,
+    "no_speech_prob": 0.16009506583213806
+  },
+  {
+    "id": 201,
+    "seek": 134136,
+    "start": 1356.0,
+    "end": 1362.52,
+    "text": " dass da mal was ge\u00f6ffnet wird, was halt vorher in der Literatur nicht so vorkam. Man k\u00f6nnte also",
+    "tokens": [
+      51096, 2658, 1120, 2806, 390, 1519, 30453, 7129, 4578, 11, 390, 12479,
+      29195, 294, 1163, 16090, 19493, 1979, 370, 371, 1284, 335, 13, 2458,
+      17646, 611, 51422
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15279217064380646,
+    "compression_ratio": 1.6342281879194631,
+    "no_speech_prob": 0.16009506583213806
+  },
+  {
+    "id": 202,
+    "seek": 134136,
+    "start": 1362.52,
+    "end": 1369.8799999999999,
+    "text": " auch sagen, in den autofiktionalen Romanen der Gegenwart findet sich die gegenw\u00e4rtige Gesellschaft",
+    "tokens": [
+      51422, 2168, 8360, 11, 294, 1441, 1476, 2670, 9874, 1966, 268, 8566, 268,
+      1163, 38631, 29587, 27752, 3041, 978, 13953, 86, 24802, 3969, 30006, 51790
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15279217064380646,
+    "compression_ratio": 1.6342281879194631,
+    "no_speech_prob": 0.16009506583213806
+  },
+  {
+    "id": 203,
+    "seek": 136988,
+    "start": 1369.88,
+    "end": 1392.0800000000002,
+    "text": " in Teilen selbst. Autofiktion, wer schreibt hier eigentlich? Ein Radio Wissen von Barbara Knopf.",
+    "tokens": [
+      50364, 294, 16357, 268, 13053, 13, 6049, 2670, 9874, 313, 11, 2612, 956,
+      31174, 3296, 10926, 30, 6391, 17296, 343, 10987, 2957, 19214, 10519,
+      21828, 13, 51474
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19761511964618034,
+    "compression_ratio": 1.3013698630136987,
+    "no_speech_prob": 0.42910176515579224
+  },
+  {
+    "id": 204,
+    "seek": 136988,
+    "start": 1392.0800000000002,
+    "end": 1398.0800000000002,
+    "text": " Ohne ich kein Schreiben, klar. Gleichzeitig kann das Schreiben eine Form sein, um sich selbst",
+    "tokens": [
+      51474, 876, 716, 1893, 13424, 2065, 25946, 11, 14743, 13, 33858, 32075,
+      4028, 1482, 2065, 25946, 3018, 10126, 6195, 11, 1105, 3041, 13053, 51774
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19761511964618034,
+    "compression_ratio": 1.3013698630136987,
+    "no_speech_prob": 0.42910176515579224
+  },
+  {
+    "id": 205,
+    "seek": 139808,
+    "start": 1398.36,
+    "end": 1403.32,
+    "text": " besser kennenzulernen. Wie Schreiben zur Selbsterfahrung werden kann, erz\u00e4hlt die",
+    "tokens": [
+      50378, 18021, 36272, 11368, 425, 25657, 13, 9233, 2065, 25946, 7147,
+      10736, 65, 3120, 20868, 1063, 4604, 4028, 11, 47110, 978, 50626
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1471183256669478,
+    "compression_ratio": 1.197452229299363,
+    "no_speech_prob": 0.38420695066452026
+  },
+  {
+    "id": 206,
+    "seek": 139808,
+    "start": 1403.32,
+    "end": 1410.04,
+    "text": " Radio Wissen Folge neue Subjektivit\u00e4t. Zu finden in der ARD-Audiothek und \u00fcberall, wo es Podcasts gibt.",
+    "tokens": [
+      50626, 17296, 343, 10987, 43597, 16842, 8511, 14930, 592, 14053, 13,
+      23164, 20734, 294, 1163, 8943, 35, 12, 15591, 6471, 675, 74, 674, 38035,
+      11, 6020, 785, 29972, 82, 6089, 13, 50962
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1471183256669478,
+    "compression_ratio": 1.197452229299363,
+    "no_speech_prob": 0.38420695066452026
+  }
+]

@@ -1,0 +1,3190 @@
+[
+  {
+    "id": 0,
+    "seek": 0,
+    "start": 0.0,
+    "end": 21.2,
+    "text": " Die Corona-Pandemie und auch der Krieg in der Ukraine haben gezeigt, wie anf\u00e4llig Lieferketten",
+    "tokens": [
+      50364, 3229, 18075, 12, 47, 474, 32163, 674, 2168, 1163, 35579, 70, 294,
+      1163, 14081, 3084, 48661, 11, 3355, 33709, 10053, 328, 11197, 612, 5758,
+      1147, 51424
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15693080171625665,
+    "compression_ratio": 1.271523178807947,
+    "no_speech_prob": 0.10645134001970291
+  },
+  {
+    "id": 1,
+    "seek": 0,
+    "start": 21.2,
+    "end": 27.0,
+    "text": " sind bei geopolitischen Ver\u00e4nderungen. Deutschland und Europa versuchen, diesen internationalen",
+    "tokens": [
+      51424, 3290, 4643, 46615, 6282, 4281, 16082, 5084, 13, 14802, 674, 16642,
+      34749, 11, 12862, 5058, 268, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15693080171625665,
+    "compression_ratio": 1.271523178807947,
+    "no_speech_prob": 0.10645134001970291
+  },
+  {
+    "id": 2,
+    "seek": 2700,
+    "start": 27.0,
+    "end": 32.84,
+    "text": " Warenverkehr robuster zu machen \u2013 durch neue Gesetze. Firmen, Unternehmen haben dann an solchen",
+    "tokens": [
+      50364, 343, 4484, 331, 22833, 3870, 8393, 2164, 7069, 1662, 7131, 16842,
+      6761, 302, 1381, 13, 28164, 2558, 11, 27577, 3084, 3594, 364, 46281, 50656
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17688212675206802,
+    "compression_ratio": 1.3827751196172249,
+    "no_speech_prob": 0.7110007405281067
+  },
+  {
+    "id": 3,
+    "seek": 2700,
+    "start": 32.84,
+    "end": 38.44,
+    "text": " strengeren Vorgaben teils ganz sch\u00f6n zu knabbern, wenn's an die Umsetzung geht, sehen aber auch die",
+    "tokens": [
+      50656, 2242, 872, 5170, 691, 4646, 25071, 535, 4174, 6312, 13527, 2164,
+      444, 455, 26848, 11, 4797, 311, 364, 978, 46963, 38584, 7095, 11, 11333,
+      4340, 2168, 978, 50936
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17688212675206802,
+    "compression_ratio": 1.3827751196172249,
+    "no_speech_prob": 0.7110007405281067
+  },
+  {
+    "id": 4,
+    "seek": 2700,
+    "start": 38.44,
+    "end": 51.28,
+    "text": " Vorteile. Sch\u00f6n, wie das klingt. Zack, zack, wie am Schn\u00fcrchen. Alles greift ineinander,",
+    "tokens": [
+      50936, 46968, 794, 13, 41060, 11, 3355, 1482, 350, 45219, 13, 36034, 11,
+      710, 501, 11, 3355, 669, 45748, 1655, 2470, 13, 27633, 6066, 2008, 7167,
+      20553, 11, 51578
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17688212675206802,
+    "compression_ratio": 1.3827751196172249,
+    "no_speech_prob": 0.7110007405281067
+  },
+  {
+    "id": 5,
+    "seek": 5128,
+    "start": 51.6,
+    "end": 59.760000000000005,
+    "text": " am Ende kommt etwas Brauchbares heraus. Wenn es um Lieferketten geht, auch Wertsch\u00f6pfungsketten",
+    "tokens": [
+      50380, 669, 15152, 10047, 9569, 4991, 625, 4231, 495, 25089, 13, 7899,
+      785, 1105, 11197, 612, 5758, 1147, 7095, 11, 2168, 37205, 6145, 973,
+      25302, 1063, 5161, 30759, 50788
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09878073542951102,
+    "compression_ratio": 1.3891625615763548,
+    "no_speech_prob": 0.26845598220825195
+  },
+  {
+    "id": 6,
+    "seek": 5128,
+    "start": 59.760000000000005,
+    "end": 66.44,
+    "text": " genannt, ist dieser Perfektionismus ein Traum. Lieferketten verbinden den Rohstoff, seine",
+    "tokens": [
+      50788, 1049, 39878, 11, 1418, 9053, 3026, 69, 8192, 313, 25327, 1343,
+      5403, 449, 13, 11197, 612, 5758, 1147, 9595, 10291, 1441, 27490, 23636,
+      11, 15925, 51122
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09878073542951102,
+    "compression_ratio": 1.3891625615763548,
+    "no_speech_prob": 0.26845598220825195
+  },
+  {
+    "id": 7,
+    "seek": 5128,
+    "start": 66.44,
+    "end": 72.92,
+    "text": " Verarbeitung, die Herstellung, den Transport und den Verkauf der fertigen Ware \u2013 und zwar von",
+    "tokens": [
+      51122, 4281, 24024, 1063, 11, 978, 3204, 30016, 11, 1441, 22309, 674,
+      1441, 4281, 74, 9507, 1163, 10700, 3213, 49978, 1662, 674, 19054, 2957,
+      51446
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09878073542951102,
+    "compression_ratio": 1.3891625615763548,
+    "no_speech_prob": 0.26845598220825195
+  },
+  {
+    "id": 8,
+    "seek": 7292,
+    "start": 72.92,
+    "end": 83.6,
+    "text": " Anfang bis Ende. Sie sind komplex und anf\u00e4llig. Lieferketten sind die Achillesferse des globalen",
+    "tokens": [
+      50364, 25856, 7393, 15152, 13, 3559, 3290, 5207, 18945, 674, 33709, 10053,
+      328, 13, 11197, 612, 5758, 1147, 3290, 978, 15847, 14835, 612, 405, 730,
+      4338, 268, 50898
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12437298857135537,
+    "compression_ratio": 1.365,
+    "no_speech_prob": 0.4296269416809082
+  },
+  {
+    "id": 9,
+    "seek": 7292,
+    "start": 83.6,
+    "end": 89.68,
+    "text": " Kapitalismus, der Konsumgesellschaft und des \u00dcberflusses, in dem wir leben. Rei\u00dfen sie,",
+    "tokens": [
+      50898, 21216, 1686, 25327, 11, 1163, 48163, 449, 2880, 22055, 674, 730,
+      18086, 3423, 2023, 279, 11, 294, 1371, 1987, 26392, 13, 1300, 6230, 268,
+      2804, 11, 51202
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12437298857135537,
+    "compression_ratio": 1.365,
+    "no_speech_prob": 0.4296269416809082
+  },
+  {
+    "id": 10,
+    "seek": 7292,
+    "start": 89.68,
+    "end": 95.72,
+    "text": " bricht alles zusammen. Das haben uns die Corona-Pandemie und der Krieg in der Ukraine",
+    "tokens": [
+      51202, 738, 1405, 7874, 14311, 13, 2846, 3084, 2693, 978, 18075, 12, 47,
+      474, 32163, 674, 1163, 35579, 70, 294, 1163, 14081, 51504
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12437298857135537,
+    "compression_ratio": 1.365,
+    "no_speech_prob": 0.4296269416809082
+  },
+  {
+    "id": 11,
+    "seek": 9572,
+    "start": 95.72,
+    "end": 100.88,
+    "text": " vor Augen gef\u00fchrt. Nach vielen Jahren, in denen die Globalisierung und die globalen",
+    "tokens": [
+      50364, 4245, 29692, 11271, 19647, 13, 11815, 19885, 13080, 11, 294, 19998,
+      978, 14465, 32531, 674, 978, 4338, 268, 50622
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14361529704953027,
+    "compression_ratio": 1.5454545454545454,
+    "no_speech_prob": 0.3302936851978302
+  },
+  {
+    "id": 12,
+    "seek": 9572,
+    "start": 100.88,
+    "end": 107.72,
+    "text": " Warnstr\u00f6me sehr gut funktioniert haben, zumindest rein von der \u00f6konomischen Perspektive, zeigt uns",
+    "tokens": [
+      50622, 343, 1083, 9733, 973, 1398, 5499, 5228, 26160, 3084, 11, 38082,
+      6561, 2957, 1163, 4044, 74, 12481, 6282, 14006, 23533, 488, 11, 29250,
+      2693, 50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14361529704953027,
+    "compression_ratio": 1.5454545454545454,
+    "no_speech_prob": 0.3302936851978302
+  },
+  {
+    "id": 13,
+    "seek": 9572,
+    "start": 107.72,
+    "end": 112.75999999999999,
+    "text": " das, dass Lieferketten vielleicht auch f\u00fcr andere Probleme hin gest\u00fctzt werden m\u00fcssen. Ein Beispiel",
+    "tokens": [
+      50964, 1482, 11, 2658, 11197, 612, 5758, 1147, 12547, 2168, 2959, 10490,
+      32891, 14102, 7219, 7695, 2682, 4604, 9013, 13, 6391, 13772, 51216
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14361529704953027,
+    "compression_ratio": 1.5454545454545454,
+    "no_speech_prob": 0.3302936851978302
+  },
+  {
+    "id": 14,
+    "seek": 9572,
+    "start": 112.75999999999999,
+    "end": 119.64,
+    "text": " war ja auch der Frachter, der im Suelskanal festgesteckt hat und dort nicht nur selber die",
+    "tokens": [
+      51216, 1516, 2784, 2168, 1163, 1526, 3589, 260, 11, 1163, 566, 2746, 1625,
+      5225, 304, 6633, 2629, 68, 19951, 2385, 674, 15775, 1979, 4343, 23888,
+      978, 51560
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14361529704953027,
+    "compression_ratio": 1.5454545454545454,
+    "no_speech_prob": 0.3302936851978302
+  },
+  {
+    "id": 15,
+    "seek": 9572,
+    "start": 119.64,
+    "end": 124.36,
+    "text": " Ware nicht mehr weiterbringen konnte, sondern den gesamten Kanal blockiert hat. Und Lieferketten",
+    "tokens": [
+      51560, 49978, 1979, 5417, 8988, 39455, 24058, 11, 11465, 1441, 39746,
+      1147, 38643, 3461, 4859, 2385, 13, 2719, 11197, 612, 5758, 1147, 51796
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14361529704953027,
+    "compression_ratio": 1.5454545454545454,
+    "no_speech_prob": 0.3302936851978302
+  },
+  {
+    "id": 16,
+    "seek": 12436,
+    "start": 124.36,
+    "end": 129.68,
+    "text": " sollten schon in der Lage sein, gerade f\u00fcr wichtige Produkte wie Arzneimittel solche",
+    "tokens": [
+      50364, 29096, 4981, 294, 1163, 41555, 6195, 11, 12117, 2959, 46276, 11793,
+      18844, 3355, 1587, 43077, 332, 47265, 29813, 50630
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12357788250364106,
+    "compression_ratio": 1.5833333333333333,
+    "no_speech_prob": 0.012421360239386559
+  },
+  {
+    "id": 17,
+    "seek": 12436,
+    "start": 129.68,
+    "end": 138.52,
+    "text": " Probleme zu \u00fcberdehnen. Also Pandemie und auch der Krieg sind nat\u00fcrlich Ereignisse gewesen,",
+    "tokens": [
+      50630, 32891, 2164, 4502, 1479, 71, 2866, 13, 2743, 44694, 674, 2168,
+      1163, 35579, 70, 3290, 8762, 462, 265, 788, 7746, 27653, 11, 51072
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12357788250364106,
+    "compression_ratio": 1.5833333333333333,
+    "no_speech_prob": 0.012421360239386559
+  },
+  {
+    "id": 18,
+    "seek": 12436,
+    "start": 138.52,
+    "end": 143.48,
+    "text": " wo wir gemerkt haben, wie abh\u00e4ngig wir von funktionierenden Lieferketten sind. Diese",
+    "tokens": [
+      51072, 6020, 1987, 7173, 49015, 3084, 11, 3355, 410, 34591, 328, 1987,
+      2957, 20454, 811, 8896, 11197, 612, 5758, 1147, 3290, 13, 18993, 51320
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12357788250364106,
+    "compression_ratio": 1.5833333333333333,
+    "no_speech_prob": 0.012421360239386559
+  },
+  {
+    "id": 19,
+    "seek": 12436,
+    "start": 143.48,
+    "end": 147.96,
+    "text": " Abh\u00e4ngigkeit war \u00fcberhaupt nicht bekannt. Wie kriegen wir es hin, dass Lieferketten robuster",
+    "tokens": [
+      51320, 2847, 34591, 16626, 1516, 20023, 1979, 39167, 13, 9233, 46882,
+      1987, 785, 14102, 11, 2658, 11197, 612, 5758, 1147, 3870, 8393, 51544
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12357788250364106,
+    "compression_ratio": 1.5833333333333333,
+    "no_speech_prob": 0.012421360239386559
+  },
+  {
+    "id": 20,
+    "seek": 12436,
+    "start": 147.96,
+    "end": 153.07999999999998,
+    "text": " werden, krisensicherer, dass wir schneller in der Lage sind, uns anzupassen?",
+    "tokens": [
+      51544, 4604, 11, 350, 5714, 694, 14934, 260, 11, 2658, 1987, 43865, 294,
+      1163, 41555, 3290, 11, 2693, 364, 89, 1010, 8356, 30, 51800
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12357788250364106,
+    "compression_ratio": 1.5833333333333333,
+    "no_speech_prob": 0.012421360239386559
+  },
+  {
+    "id": 21,
+    "seek": 15436,
+    "start": 154.84,
+    "end": 160.64000000000001,
+    "text": " Insbesondere in den letzten drei Jahren haben wir sehr viel zum Thema Wertschimpfungskette und",
+    "tokens": [
+      50388, 9442, 44222, 294, 1441, 18226, 16809, 13080, 3084, 1987, 5499,
+      5891, 5919, 16306, 37205, 6145, 8814, 69, 1063, 5161, 3007, 674, 50678
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16664937463137183,
+    "compression_ratio": 1.4198473282442747,
+    "no_speech_prob": 0.0025501088239252567
+  },
+  {
+    "id": 22,
+    "seek": 15436,
+    "start": 160.64000000000001,
+    "end": 167.68,
+    "text": " Abh\u00e4ngigkeit von China geschrieben. F\u00fcr Florian Sachs, Wirtschaftsmathematiker an der Universit\u00e4t",
+    "tokens": [
+      50678, 2847, 34591, 16626, 2957, 3533, 47397, 13, 14990, 8328, 952, 25626,
+      82, 11, 29412, 82, 24761, 8615, 17314, 364, 1163, 14052, 14053, 51030
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16664937463137183,
+    "compression_ratio": 1.4198473282442747,
+    "no_speech_prob": 0.0025501088239252567
+  },
+  {
+    "id": 23,
+    "seek": 15436,
+    "start": 167.68,
+    "end": 172.84,
+    "text": " K\u00f6ln, Axel Schulte, Ingenieur und Wirtschaftswissenschaftler am Fraunhofer Institut in",
+    "tokens": [
+      51030, 591, 13072, 77, 11, 20118, 338, 2065, 723, 68, 11, 682, 1766,
+      20679, 674, 29412, 25884, 26657, 1918, 669, 5849, 409, 1289, 612, 33897,
+      325, 294, 51288
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16664937463137183,
+    "compression_ratio": 1.4198473282442747,
+    "no_speech_prob": 0.0025501088239252567
+  },
+  {
+    "id": 24,
+    "seek": 15436,
+    "start": 172.84,
+    "end": 178.0,
+    "text": " Dortmund und f\u00fcr die Professorin f\u00fcr Volkswirtschaftslehre Lysandra Flach in M\u00fcnchen,",
+    "tokens": [
+      51288, 32308, 35578, 674, 2959, 978, 8419, 259, 2959, 30213, 38877, 82,
+      14557, 265, 441, 749, 18401, 3235, 608, 294, 35840, 2470, 11, 51546
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16664937463137183,
+    "compression_ratio": 1.4198473282442747,
+    "no_speech_prob": 0.0025501088239252567
+  },
+  {
+    "id": 25,
+    "seek": 17800,
+    "start": 178.0,
+    "end": 185.8,
+    "text": " steht der Welthandel nach den Ereignissen seit 2020 an einem Wendepunkt. Deutschland ist besonders",
+    "tokens": [
+      50364, 16361, 1163, 3778, 392, 26406, 5168, 1441, 462, 265, 788, 10987,
+      16452, 4808, 364, 6827, 343, 521, 595, 14797, 13, 14802, 1418, 25258,
+      50754
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12192200978597005,
+    "compression_ratio": 1.372093023255814,
+    "no_speech_prob": 0.1596641093492508
+  },
+  {
+    "id": 26,
+    "seek": 17800,
+    "start": 185.8,
+    "end": 192.48,
+    "text": " stark betroffen. Nach Angaben des Statistischen Bundesamtes hat sich Deutschlands Export\u00fcberschuss",
+    "tokens": [
+      50754, 17417, 778, 30594, 13, 11815, 4521, 25071, 730, 16249, 468, 6282,
+      14031, 335, 7269, 2385, 3041, 12699, 10230, 50130, 774, 1616, 36695, 51088
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12192200978597005,
+    "compression_ratio": 1.372093023255814,
+    "no_speech_prob": 0.1596641093492508
+  },
+  {
+    "id": 27,
+    "seek": 17800,
+    "start": 192.48,
+    "end": 203.48,
+    "text": " von 2021 auf 2022 sprunghaft reduziert, von 175 auf 81 Milliarden Euro. Dieser R\u00fcckgang um mehr",
+    "tokens": [
+      51088, 2957, 7201, 2501, 20229, 6103, 1063, 25127, 40674, 4859, 11, 2957,
+      41165, 2501, 30827, 44784, 3010, 13, 39609, 35001, 19619, 1105, 5417,
+      51638
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12192200978597005,
+    "compression_ratio": 1.372093023255814,
+    "no_speech_prob": 0.1596641093492508
+  },
+  {
+    "id": 28,
+    "seek": 20348,
+    "start": 203.48,
+    "end": 210.23999999999998,
+    "text": " als die H\u00e4lfte hat einen Grund. Die Lieferketten waren wegen Lockdowns gerissen. Wir befragen auch",
+    "tokens": [
+      50364, 3907, 978, 389, 9063, 16268, 2385, 4891, 13941, 13, 3229, 11197,
+      612, 5758, 1147, 11931, 32855, 16736, 5093, 82, 5713, 10987, 13, 4347,
+      21312, 20663, 2168, 50702
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12272682189941406,
+    "compression_ratio": 1.5333333333333334,
+    "no_speech_prob": 0.20119081437587738
+  },
+  {
+    "id": 29,
+    "seek": 20348,
+    "start": 210.23999999999998,
+    "end": 218.79999999999998,
+    "text": " am IFO-Institut jeden Monat deutsche Unternehmen, ob sie Materialengp\u00e4sse haben. Wir befragen seit",
+    "tokens": [
+      50702, 669, 286, 18067, 12, 28411, 270, 325, 12906, 4713, 267, 47502,
+      27577, 11, 1111, 2804, 29160, 1501, 79, 13555, 405, 3084, 13, 4347, 21312,
+      20663, 16452, 51130
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12272682189941406,
+    "compression_ratio": 1.5333333333333334,
+    "no_speech_prob": 0.20119081437587738
+  },
+  {
+    "id": 30,
+    "seek": 20348,
+    "start": 218.79999999999998,
+    "end": 224.51999999999998,
+    "text": " 70 Jahren Unternehmen. Wir haben w\u00e4hrend der Pandemie immer wieder Rekordwerte erreicht. Das",
+    "tokens": [
+      51130, 5285, 13080, 27577, 13, 4347, 3084, 33624, 1163, 44694, 5578, 6216,
+      497, 916, 765, 86, 10634, 46250, 13, 2846, 51416
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12272682189941406,
+    "compression_ratio": 1.5333333333333334,
+    "no_speech_prob": 0.20119081437587738
+  },
+  {
+    "id": 31,
+    "seek": 20348,
+    "start": 224.51999999999998,
+    "end": 232.67999999999998,
+    "text": " hei\u00dft, Lieferkettenst\u00f6rungen gab es in so gut wie alle Bereiche. Das IFO-Institut analysiert im",
+    "tokens": [
+      51416, 13139, 11, 11197, 612, 5758, 1147, 372, 2311, 5084, 17964, 785,
+      294, 370, 5228, 3355, 5430, 17684, 9304, 13, 2846, 286, 18067, 12, 28411,
+      270, 325, 23014, 4859, 566, 51824
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12272682189941406,
+    "compression_ratio": 1.5333333333333334,
+    "no_speech_prob": 0.20119081437587738
+  },
+  {
+    "id": 32,
+    "seek": 23268,
+    "start": 232.76000000000002,
+    "end": 239.0,
+    "text": " Auftrag von Ministerien oder Handelskammern wirtschaftsrelevante Themen. Viele Unternehmen",
+    "tokens": [
+      50368, 39119, 3731, 2957, 6506, 1053, 4513, 8854, 1625, 39917, 44243,
+      1987, 22165, 82, 265, 28316, 2879, 39229, 13, 36022, 27577, 50680
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06810253357218805,
+    "compression_ratio": 1.4313725490196079,
+    "no_speech_prob": 0.03457997366786003
+  },
+  {
+    "id": 33,
+    "seek": 23268,
+    "start": 239.0,
+    "end": 244.72,
+    "text": " haben schon etwas unternommen, um k\u00fcnftig Lieferengp\u00e4sse zu vermeiden. Mehr Zulieferer,",
+    "tokens": [
+      50680, 3084, 4981, 9569, 517, 2231, 5132, 11, 1105, 350, 3412, 34765,
+      11197, 612, 1501, 79, 13555, 405, 2164, 40064, 4380, 13, 30782, 1176, 425,
+      414, 612, 260, 11, 50966
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06810253357218805,
+    "compression_ratio": 1.4313725490196079,
+    "no_speech_prob": 0.03457997366786003
+  },
+  {
+    "id": 34,
+    "seek": 23268,
+    "start": 244.72,
+    "end": 251.52,
+    "text": " st\u00e4rker \u00fcberwachte Lieferketten, mehr Produkte in Lagerhaltung. Und auch uns Verbrauchern ist",
+    "tokens": [
+      50966, 33527, 5767, 4502, 86, 26136, 11197, 612, 5758, 1147, 11, 5417,
+      11793, 18844, 294, 441, 3557, 20731, 1063, 13, 2719, 2168, 2693, 4281,
+      6198, 625, 1248, 1418, 51306
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06810253357218805,
+    "compression_ratio": 1.4313725490196079,
+    "no_speech_prob": 0.03457997366786003
+  },
+  {
+    "id": 35,
+    "seek": 23268,
+    "start": 251.52,
+    "end": 257.76,
+    "text": " klar geworden, wie anf\u00e4llig Lieferwege f\u00fcr geopolitische Ver\u00e4nderungen sind. Getreide",
+    "tokens": [
+      51306, 14743, 26281, 11, 3355, 33709, 10053, 328, 11197, 612, 826, 432,
+      2959, 46615, 7864, 4281, 16082, 5084, 3290, 13, 3240, 265, 482, 51618
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06810253357218805,
+    "compression_ratio": 1.4313725490196079,
+    "no_speech_prob": 0.03457997366786003
+  },
+  {
+    "id": 36,
+    "seek": 25776,
+    "start": 257.76,
+    "end": 264.92,
+    "text": " aus der Ukraine und das Erdgas aus Russland sind nur zwei Beispiele. Aber es fehlen auch Autos oder",
+    "tokens": [
+      50364, 3437, 1163, 14081, 674, 1482, 3300, 67, 10549, 3437, 3878, 1661,
+      3290, 4343, 12002, 879, 7631, 15949, 13, 5992, 785, 34741, 6698, 2168,
+      6049, 329, 4513, 50722
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14064042073375774,
+    "compression_ratio": 1.503787878787879,
+    "no_speech_prob": 0.3552406132221222
+  },
+  {
+    "id": 37,
+    "seek": 25776,
+    "start": 264.92,
+    "end": 272.8,
+    "text": " Medikamente. Diese Entwicklungen erfordern auch eine Neujustierung der Au\u00dfenwirtschaftspolitik,",
+    "tokens": [
+      50722, 3982, 1035, 3439, 13, 18993, 29397, 45434, 1189, 7404, 1248, 2168,
+      3018, 1734, 4579, 381, 11651, 1163, 12160, 8989, 38877, 4952, 33704, 1035,
+      11, 51116
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14064042073375774,
+    "compression_ratio": 1.503787878787879,
+    "no_speech_prob": 0.3552406132221222
+  },
+  {
+    "id": 38,
+    "seek": 25776,
+    "start": 272.8,
+    "end": 279.36,
+    "text": " da nimmt die nicht nur die \u00f6konomische, sondern auch sicherheitspolitische Fragen einschlie\u00dfen.",
+    "tokens": [
+      51116, 1120, 38891, 978, 1979, 4343, 978, 4044, 74, 12481, 7864, 11,
+      11465, 2168, 18623, 24260, 27461, 7864, 25588, 21889, 339, 38665, 13,
+      51444
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14064042073375774,
+    "compression_ratio": 1.503787878787879,
+    "no_speech_prob": 0.3552406132221222
+  },
+  {
+    "id": 39,
+    "seek": 25776,
+    "start": 279.36,
+    "end": 286.8,
+    "text": " Und es handelt sich dabei um einen Balanceakt. Weil einerseits ist es entscheidend, Abh\u00e4ngigkeiten zu",
+    "tokens": [
+      51444, 2719, 785, 1011, 2018, 3041, 14967, 1105, 4891, 41899, 5886, 13,
+      18665, 6850, 44033, 1418, 785, 28398, 327, 521, 11, 2847, 34591, 37545,
+      2164, 51816
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14064042073375774,
+    "compression_ratio": 1.503787878787879,
+    "no_speech_prob": 0.3552406132221222
+  },
+  {
+    "id": 40,
+    "seek": 28680,
+    "start": 286.8,
+    "end": 293.72,
+    "text": " identifizieren und Strategien zur Minimierung von globalen Risiken zu entwickeln. Andererseits",
+    "tokens": [
+      50364, 2473, 351, 590, 5695, 674, 30064, 1053, 7147, 2829, 332, 11651,
+      2957, 4338, 268, 30897, 19640, 2164, 28449, 32099, 13, 400, 29566, 44033,
+      50710
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11949048861108645,
+    "compression_ratio": 1.476,
+    "no_speech_prob": 0.046696536242961884
+  },
+  {
+    "id": 41,
+    "seek": 28680,
+    "start": 293.72,
+    "end": 301.8,
+    "text": " m\u00fcssen wir uns fragen, welche Kosten mehr Autarkie oder sogar ein Verzicht, der enormen",
+    "tokens": [
+      50710, 9013, 1987, 2693, 39129, 11, 24311, 47391, 5417, 6049, 809, 414,
+      4513, 19485, 1343, 4281, 89, 1405, 11, 1163, 8473, 268, 51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11949048861108645,
+    "compression_ratio": 1.476,
+    "no_speech_prob": 0.046696536242961884
+  },
+  {
+    "id": 42,
+    "seek": 28680,
+    "start": 301.8,
+    "end": 309.24,
+    "text": " Vorteile globale Lieferketten mit sich bringen w\u00fcrden. Aber was hei\u00dft das genau? Sollten wir",
+    "tokens": [
+      51114, 46968, 794, 16125, 1220, 11197, 612, 5758, 1147, 2194, 3041, 27519,
+      27621, 13, 5992, 390, 13139, 1482, 12535, 30, 407, 285, 1147, 1987, 51486
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11949048861108645,
+    "compression_ratio": 1.476,
+    "no_speech_prob": 0.046696536242961884
+  },
+  {
+    "id": 43,
+    "seek": 28680,
+    "start": 309.24,
+    "end": 316.04,
+    "text": " die Globalisierung hinterfragen? Brauchen Handelswege bessere Kontrollen? Soll Deutschland",
+    "tokens": [
+      51486, 978, 14465, 32531, 23219, 69, 20663, 30, 4991, 11285, 8854, 1625,
+      826, 432, 42410, 323, 20629, 3970, 268, 30, 407, 285, 14802, 51826
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11949048861108645,
+    "compression_ratio": 1.476,
+    "no_speech_prob": 0.046696536242961884
+  },
+  {
+    "id": 44,
+    "seek": 31604,
+    "start": 316.04,
+    "end": 322.84000000000003,
+    "text": " neue und vielf\u00e4ltigere Beziehungen aufbauen mit zuverl\u00e4ssigen Lieferanten? Wie kommen wir aus der",
+    "tokens": [
+      50364, 16842, 674, 5891, 69, 15510, 328, 323, 879, 28213, 5084, 2501, 65,
+      11715, 2194, 2164, 331, 22882, 3810, 3213, 11197, 612, 29646, 30, 9233,
+      11729, 1987, 3437, 1163, 50704
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10130768826133327,
+    "compression_ratio": 1.476923076923077,
+    "no_speech_prob": 0.007693743333220482
+  },
+  {
+    "id": 45,
+    "seek": 31604,
+    "start": 322.84000000000003,
+    "end": 330.44,
+    "text": " Abh\u00e4ngigkeit von China heraus? Wieder mehr in Deutschland oder Europa produzieren? Deutschland",
+    "tokens": [
+      50704, 2847, 34591, 16626, 2957, 3533, 25089, 30, 45742, 5417, 294, 14802,
+      4513, 16642, 28093, 5695, 30, 14802, 51084
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10130768826133327,
+    "compression_ratio": 1.476923076923077,
+    "no_speech_prob": 0.007693743333220482
+  },
+  {
+    "id": 46,
+    "seek": 31604,
+    "start": 330.44,
+    "end": 338.12,
+    "text": " hat sich f\u00fcr verschiedene Strategien entschieden. Denn es steht viel auf dem Spiel. 2022 exportierte",
+    "tokens": [
+      51084, 2385, 3041, 2959, 35411, 30064, 1053, 49807, 13, 19027, 785, 16361,
+      5891, 2501, 1371, 14266, 13, 20229, 10725, 23123, 51468
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10130768826133327,
+    "compression_ratio": 1.476923076923077,
+    "no_speech_prob": 0.007693743333220482
+  },
+  {
+    "id": 47,
+    "seek": 31604,
+    "start": 338.12,
+    "end": 344.08000000000004,
+    "text": " Deutschland nach Angaben des Statistischen Bundesamtes Waren im Wert von 1,6 Billionen",
+    "tokens": [
+      51468, 14802, 5168, 4521, 25071, 730, 16249, 468, 6282, 14031, 335, 7269,
+      343, 4484, 566, 37205, 2957, 502, 11, 21, 5477, 17068, 51766
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10130768826133327,
+    "compression_ratio": 1.476923076923077,
+    "no_speech_prob": 0.007693743333220482
+  },
+  {
+    "id": 48,
+    "seek": 34408,
+    "start": 344.47999999999996,
+    "end": 353.52,
+    "text": " Euro und importierte Waren im Wert von 1,5 Billionen Euro. Nie zuvor war der Wert der Ex- und Importe h\u00f6her.",
+    "tokens": [
+      50384, 3010, 674, 974, 23123, 343, 4484, 566, 37205, 2957, 502, 11, 20,
+      5477, 17068, 3010, 13, 12016, 2164, 8453, 1516, 1163, 37205, 1163, 2111,
+      12, 674, 8270, 12752, 48045, 13, 50836
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.154747182672674,
+    "compression_ratio": 1.3846153846153846,
+    "no_speech_prob": 0.355032354593277
+  },
+  {
+    "id": 49,
+    "seek": 34408,
+    "start": 353.52,
+    "end": 364.2,
+    "text": " Eine Strategie ist das seit Anfang 2023 geltende Gesetz \u00fcber die unternehmerischen Sorgfaltspflichten",
+    "tokens": [
+      50836, 17664, 30064, 414, 1418, 1482, 16452, 25856, 44377, 290, 2018,
+      5445, 20685, 4502, 978, 8662, 38370, 6282, 318, 4646, 36474, 1373, 45430,
+      268, 51370
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.154747182672674,
+    "compression_ratio": 1.3846153846153846,
+    "no_speech_prob": 0.355032354593277
+  },
+  {
+    "id": 50,
+    "seek": 34408,
+    "start": 364.2,
+    "end": 371.47999999999996,
+    "text": " zur Vermeidung von Menschenrechtsverletzungen in Lieferketten. Kurz Lieferkettengesetz. Dabei",
+    "tokens": [
+      51370, 7147, 20185, 68, 327, 1063, 2957, 8397, 265, 19549, 331, 2631, 89,
+      5084, 294, 11197, 612, 5758, 1147, 13, 45307, 11197, 612, 5758, 1147,
+      33506, 13, 39606, 51734
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.154747182672674,
+    "compression_ratio": 1.3846153846153846,
+    "no_speech_prob": 0.355032354593277
+  },
+  {
+    "id": 51,
+    "seek": 37148,
+    "start": 371.48,
+    "end": 377.32,
+    "text": " m\u00fcssen Unternehmen nachweisen, dass entlang ihrer Lieferkette keine Menschenrechte verletzt werden.",
+    "tokens": [
+      50364, 9013, 27577, 5168, 40196, 11, 2658, 948, 25241, 23990, 11197, 612,
+      74, 3007, 9252, 8397, 265, 10553, 1306, 2631, 2682, 4604, 13, 50656
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.136860500682484,
+    "compression_ratio": 1.5192307692307692,
+    "no_speech_prob": 0.04669664800167084
+  },
+  {
+    "id": 52,
+    "seek": 37148,
+    "start": 377.32,
+    "end": 384.28000000000003,
+    "text": " Aber das gilt vorerst nur f\u00fcr Unternehmen mit 3000 Mitarbeitern und mehr. Und dar\u00fcber hinaus nur f\u00fcr",
+    "tokens": [
+      50656, 5992, 1482, 29487, 4245, 16398, 4343, 2959, 27577, 2194, 20984,
+      32900, 9407, 1248, 674, 5417, 13, 2719, 21737, 46056, 4343, 2959, 51004
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.136860500682484,
+    "compression_ratio": 1.5192307692307692,
+    "no_speech_prob": 0.04669664800167084
+  },
+  {
+    "id": 53,
+    "seek": 37148,
+    "start": 384.28000000000003,
+    "end": 391.40000000000003,
+    "text": " deren direkte Handelspartner. Florian Sachs analysiert an der Universit\u00e4t K\u00f6ln Lieferketten.",
+    "tokens": [
+      51004, 48300, 1264, 18844, 8854, 1625, 6971, 1193, 13, 8328, 952, 25626,
+      82, 23014, 4859, 364, 1163, 14052, 14053, 591, 13072, 77, 11197, 612,
+      5758, 1147, 13, 51360
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.136860500682484,
+    "compression_ratio": 1.5192307692307692,
+    "no_speech_prob": 0.04669664800167084
+  },
+  {
+    "id": 54,
+    "seek": 37148,
+    "start": 391.40000000000003,
+    "end": 398.0,
+    "text": " Am Ende liegt es auch mit Eigeninteresse der Unternehmen. Denn nat\u00fcrlich, wenn ich kurzfristig",
+    "tokens": [
+      51360, 2012, 15152, 22421, 785, 2168, 2194, 30586, 5106, 7357, 1163,
+      27577, 13, 19027, 8762, 11, 4797, 1893, 20465, 48754, 328, 51690
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.136860500682484,
+    "compression_ratio": 1.5192307692307692,
+    "no_speech_prob": 0.04669664800167084
+  },
+  {
+    "id": 55,
+    "seek": 39800,
+    "start": 398.0,
+    "end": 402.16,
+    "text": " meine Lieferkette nicht \u00fcberwache, habe ich die M\u00f6glichkeit, h\u00f6here Gewinne zu erzielen.",
+    "tokens": [
+      50364, 10946, 11197, 612, 74, 3007, 1979, 4502, 86, 6000, 11, 6015, 1893,
+      978, 30662, 11, 13531, 6703, 19063, 259, 716, 2164, 1189, 89, 12844, 13,
+      50572
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15478823306786754,
+    "compression_ratio": 1.4983922829581993,
+    "no_speech_prob": 0.32337814569473267
+  },
+  {
+    "id": 56,
+    "seek": 39800,
+    "start": 402.16,
+    "end": 408.24,
+    "text": " Langfristig gibt es dann aber, wenn man die moralischen Implikationen von solchen Menschenrechtsverletzungen",
+    "tokens": [
+      50572, 13313, 48754, 328, 6089, 785, 3594, 4340, 11, 4797, 587, 978, 9723,
+      6282, 4331, 564, 1035, 399, 268, 2957, 46281, 8397, 265, 19549, 331, 2631,
+      89, 5084, 50876
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15478823306786754,
+    "compression_ratio": 1.4983922829581993,
+    "no_speech_prob": 0.32337814569473267
+  },
+  {
+    "id": 57,
+    "seek": 39800,
+    "start": 408.24,
+    "end": 413.92,
+    "text": " erstmal beiseite l\u00e4sst. Wenn so ein Skandal ausbricht und mein Markenwert einbricht und",
+    "tokens": [
+      50876, 38607, 312, 908, 642, 29335, 13, 7899, 370, 1343, 7324, 18905,
+      3437, 65, 12836, 674, 10777, 3934, 268, 26521, 1343, 65, 12836, 674, 51160
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15478823306786754,
+    "compression_ratio": 1.4983922829581993,
+    "no_speech_prob": 0.32337814569473267
+  },
+  {
+    "id": 58,
+    "seek": 39800,
+    "start": 413.92,
+    "end": 420.56,
+    "text": " demzufolge auch das Vertrauen von Kreditgebern, von Investoren, dann erzeugt das enorme Kosten.",
+    "tokens": [
+      51160, 1371, 39467, 401, 432, 2168, 1482, 21044, 46640, 2957, 591, 20046,
+      432, 26848, 11, 2957, 14008, 10948, 11, 3594, 1189, 19303, 83, 1482,
+      33648, 47391, 13, 51492
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15478823306786754,
+    "compression_ratio": 1.4983922829581993,
+    "no_speech_prob": 0.32337814569473267
+  },
+  {
+    "id": 59,
+    "seek": 39800,
+    "start": 420.56,
+    "end": 426.92,
+    "text": " Ein Ungl\u00fcck wie der Einsturz der Textilfabrik 2013 in Bangladesch zum Beispiel.",
+    "tokens": [
+      51492, 6391, 43559, 75, 6536, 3355, 1163, 6391, 372, 374, 89, 1163, 18643,
+      388, 69, 455, 14456, 9012, 294, 32123, 2977, 339, 5919, 13772, 13, 51810
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15478823306786754,
+    "compression_ratio": 1.4983922829581993,
+    "no_speech_prob": 0.32337814569473267
+  },
+  {
+    "id": 60,
+    "seek": 42692,
+    "start": 426.92,
+    "end": 435.04,
+    "text": " Motivation ist eine Sache, Machbarkeit etwas anderes. Axel Schulte vom Fraunhofer Institut.",
+    "tokens": [
+      50364, 8956, 592, 399, 1418, 3018, 31452, 11, 12089, 5356, 9238, 9569,
+      31426, 13, 20118, 338, 2065, 723, 68, 10135, 5849, 409, 1289, 612, 33897,
+      325, 13, 50770
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15450022539754552,
+    "compression_ratio": 1.5728476821192052,
+    "no_speech_prob": 0.048833198845386505
+  },
+  {
+    "id": 61,
+    "seek": 42692,
+    "start": 435.04,
+    "end": 440.12,
+    "text": " Ein ganz wichtiger Punkt ist nat\u00fcrlich die Transparenz. Die Transparenz haben wir heute nicht.",
+    "tokens": [
+      50770, 6391, 6312, 48840, 25487, 1418, 8762, 978, 6531, 79, 4484, 89, 13,
+      3229, 6531, 79, 4484, 89, 3084, 1987, 9801, 1979, 13, 51024
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15450022539754552,
+    "compression_ratio": 1.5728476821192052,
+    "no_speech_prob": 0.048833198845386505
+  },
+  {
+    "id": 62,
+    "seek": 42692,
+    "start": 440.12,
+    "end": 444.52000000000004,
+    "text": " Wenn man sich eine Lieferkette jetzt vorstellt \u00fcber eine Verbindung von Lieferanten \u00fcber",
+    "tokens": [
+      51024, 7899, 587, 3041, 3018, 11197, 612, 74, 3007, 4354, 4245, 372,
+      12783, 4502, 3018, 27034, 41442, 2957, 11197, 612, 29646, 4502, 51244
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15450022539754552,
+    "compression_ratio": 1.5728476821192052,
+    "no_speech_prob": 0.048833198845386505
+  },
+  {
+    "id": 63,
+    "seek": 42692,
+    "start": 444.52000000000004,
+    "end": 449.20000000000005,
+    "text": " Vorlieferanten bis hin zum Rohstoff und am Ende auch bis zum Handverbraucher, dann sind da viele",
+    "tokens": [
+      51244, 12231, 6302, 612, 29646, 7393, 14102, 5919, 27490, 23636, 674, 669,
+      15152, 2168, 7393, 5919, 8854, 331, 6198, 41843, 11, 3594, 3290, 1120,
+      9693, 51478
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15450022539754552,
+    "compression_ratio": 1.5728476821192052,
+    "no_speech_prob": 0.048833198845386505
+  },
+  {
+    "id": 64,
+    "seek": 42692,
+    "start": 449.20000000000005,
+    "end": 453.96000000000004,
+    "text": " Parteien involviert, die miteinander interagieren. Aber die kennen sich viel h\u00e4ufig gar nicht. Man",
+    "tokens": [
+      51478, 47689, 1053, 2499, 85, 4859, 11, 978, 43127, 728, 559, 5695, 13,
+      5992, 978, 28445, 3041, 5891, 47543, 3691, 1979, 13, 2458, 51716
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15450022539754552,
+    "compression_ratio": 1.5728476821192052,
+    "no_speech_prob": 0.048833198845386505
+  },
+  {
+    "id": 65,
+    "seek": 45396,
+    "start": 453.96,
+    "end": 459.2,
+    "text": " kennt immer nur den direkten Partner. Es gibt Untersuchungen, dass etwa nur ein Drittel der",
+    "tokens": [
+      50364, 37682, 5578, 4343, 1441, 1264, 47120, 32736, 13, 2313, 6089, 30240,
+      625, 5084, 11, 2658, 28369, 4343, 1343, 2491, 47265, 1163, 50626
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14934347581493762,
+    "compression_ratio": 1.5966666666666667,
+    "no_speech_prob": 0.04332727566361427
+  },
+  {
+    "id": 66,
+    "seek": 45396,
+    "start": 459.2,
+    "end": 464.2,
+    "text": " Unternehmen, je nach Branche, \u00fcberhaupt mehr kennt als den direkten Lieferanten, mit denen man eine",
+    "tokens": [
+      50626, 27577, 11, 1506, 5168, 1603, 22806, 11, 20023, 5417, 37682, 3907,
+      1441, 1264, 47120, 11197, 612, 29646, 11, 2194, 19998, 587, 3018, 50876
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14934347581493762,
+    "compression_ratio": 1.5966666666666667,
+    "no_speech_prob": 0.04332727566361427
+  },
+  {
+    "id": 67,
+    "seek": 45396,
+    "start": 464.2,
+    "end": 470.15999999999997,
+    "text": " vertragliche Beziehung hat. Aber wenn der Besitzer einer Textilfabrik die Anforderungen des Gesetzes",
+    "tokens": [
+      50876, 6509, 3731, 10185, 879, 28213, 1063, 2385, 13, 5992, 4797, 1163,
+      8190, 16845, 6850, 18643, 388, 69, 455, 14456, 978, 1107, 30943, 5084,
+      730, 20685, 279, 51174
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14934347581493762,
+    "compression_ratio": 1.5966666666666667,
+    "no_speech_prob": 0.04332727566361427
+  },
+  {
+    "id": 68,
+    "seek": 45396,
+    "start": 470.15999999999997,
+    "end": 475.59999999999997,
+    "text": " nicht erf\u00fcllt, muss der Unternehmer sich neue Vertragspartner suchen, die den hohen deutschen",
+    "tokens": [
+      51174, 1979, 20228, 49976, 11, 6425, 1163, 12065, 38370, 3041, 16842,
+      21044, 3731, 4952, 446, 1193, 44470, 11, 978, 1441, 1106, 2932, 39707,
+      51446
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14934347581493762,
+    "compression_ratio": 1.5966666666666667,
+    "no_speech_prob": 0.04332727566361427
+  },
+  {
+    "id": 69,
+    "seek": 45396,
+    "start": 475.59999999999997,
+    "end": 482.79999999999995,
+    "text": " Anspr\u00fcchen gerecht werden. Lysandra Flach vom IFO-Institut ist skeptisch. Das Gesetz wird",
+    "tokens": [
+      51446, 14590, 48715, 2470, 18635, 4701, 4604, 13, 441, 749, 18401, 3235,
+      608, 10135, 286, 18067, 12, 28411, 270, 325, 1418, 19128, 5494, 13, 2846,
+      20685, 4578, 51806
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14934347581493762,
+    "compression_ratio": 1.5966666666666667,
+    "no_speech_prob": 0.04332727566361427
+  },
+  {
+    "id": 70,
+    "seek": 48280,
+    "start": 482.8,
+    "end": 489.16,
+    "text": " geringere Auswirkungen auf die Arbeitsbedingungen in Entwicklungsl\u00e4ndern haben. Also die",
+    "tokens": [
+      50364, 290, 1794, 323, 48500, 18610, 5084, 2501, 978, 23262, 2883, 278,
+      5084, 294, 29397, 49876, 75, 28856, 3084, 13, 2743, 978, 50682
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12467052459716797,
+    "compression_ratio": 1.5772357723577235,
+    "no_speech_prob": 0.10952844470739365
+  },
+  {
+    "id": 71,
+    "seek": 48280,
+    "start": 489.16,
+    "end": 494.68,
+    "text": " Entwicklungsl\u00e4nder haben Alternativen, au\u00dfer dem Handeln mit Europa, zum Beispiel mehr Handel mit",
+    "tokens": [
+      50682, 29397, 49876, 75, 16082, 3084, 23830, 267, 5709, 11, 39428, 1371,
+      8854, 9878, 2194, 16642, 11, 5919, 13772, 5417, 8854, 338, 2194, 50958
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12467052459716797,
+    "compression_ratio": 1.5772357723577235,
+    "no_speech_prob": 0.10952844470739365
+  },
+  {
+    "id": 72,
+    "seek": 48280,
+    "start": 494.68,
+    "end": 503.12,
+    "text": " Kindern oder mehr Handel mit anderen L\u00e4ndern, die weniger restriktiv sind. Die Zahl der Zulieferer",
+    "tokens": [
+      50958, 43987, 4513, 5417, 8854, 338, 2194, 11122, 48321, 11, 978, 23224,
+      1472, 470, 2320, 592, 3290, 13, 3229, 42592, 1163, 1176, 425, 414, 612,
+      260, 51380
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12467052459716797,
+    "compression_ratio": 1.5772357723577235,
+    "no_speech_prob": 0.10952844470739365
+  },
+  {
+    "id": 73,
+    "seek": 48280,
+    "start": 503.12,
+    "end": 509.40000000000003,
+    "text": " k\u00f6nnte also schrumpfen. Deutsche Unternehmen w\u00fcrden abh\u00e4ngig von einigen wenigen. Das macht sie",
+    "tokens": [
+      51380, 17646, 611, 956, 81, 1420, 6570, 13, 45567, 27577, 27621, 410,
+      34591, 328, 2957, 1343, 3213, 11472, 3213, 13, 2846, 10857, 2804, 51694
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12467052459716797,
+    "compression_ratio": 1.5772357723577235,
+    "no_speech_prob": 0.10952844470739365
+  },
+  {
+    "id": 74,
+    "seek": 50940,
+    "start": 509.4,
+    "end": 519.0,
+    "text": " anf\u00e4lliger. Ein Problem f\u00fcr sichere Lieferketten. Also das Handelsnetz diversifizieren. Europa tut",
+    "tokens": [
+      50364, 33709, 10053, 4810, 13, 6391, 11676, 2959, 3041, 323, 11197, 612,
+      5758, 1147, 13, 2743, 1482, 8854, 1625, 7129, 89, 6111, 351, 590, 5695,
+      13, 16642, 3672, 50844
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10756020979447799,
+    "compression_ratio": 1.437984496124031,
+    "no_speech_prob": 0.3618522584438324
+  },
+  {
+    "id": 75,
+    "seek": 50940,
+    "start": 519.0,
+    "end": 524.3199999999999,
+    "text": " das gerade. Bei einem Gipfel mit dem Verband lateinamerikanischer und karibischer Staaten,",
+    "tokens": [
+      50844, 1482, 12117, 13, 16188, 6827, 460, 647, 29874, 2194, 1371, 4281,
+      4235, 3469, 259, 13530, 16048, 19674, 674, 7917, 897, 19674, 16959, 7186,
+      11, 51110
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10756020979447799,
+    "compression_ratio": 1.437984496124031,
+    "no_speech_prob": 0.3618522584438324
+  },
+  {
+    "id": 76,
+    "seek": 50940,
+    "start": 524.3199999999999,
+    "end": 531.56,
+    "text": " kurz SELAC, im Juli 2023, wurden gegenseitige Interessen, vor allem wirtschaftliche, bekundet.",
+    "tokens": [
+      51110, 20465, 318, 3158, 4378, 11, 566, 7174, 72, 44377, 11, 21105, 23982,
+      1288, 270, 3969, 5751, 12431, 11, 4245, 17585, 1987, 22165, 10185, 11,
+      9393, 997, 302, 13, 51472
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10756020979447799,
+    "compression_ratio": 1.437984496124031,
+    "no_speech_prob": 0.3618522584438324
+  },
+  {
+    "id": 77,
+    "seek": 50940,
+    "start": 531.56,
+    "end": 537.48,
+    "text": " Europa braucht dringend Rohstoffe f\u00fcr die Energiewende und will die Handelswege nun",
+    "tokens": [
+      51472, 16642, 22623, 1224, 278, 521, 27490, 23636, 68, 2959, 978, 48195,
+      1093, 5445, 674, 486, 978, 8854, 1625, 826, 432, 8905, 51768
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10756020979447799,
+    "compression_ratio": 1.437984496124031,
+    "no_speech_prob": 0.3618522584438324
+  },
+  {
+    "id": 78,
+    "seek": 53748,
+    "start": 537.48,
+    "end": 543.36,
+    "text": " nach S\u00fcdwesten ausbauen und diesmal von vorneherein durchsetzen, welche Konditionen",
+    "tokens": [
+      50364, 5168, 25697, 67, 8750, 268, 3437, 65, 11715, 674, 2714, 5579, 2957,
+      32025, 6703, 259, 7131, 3854, 2904, 11, 24311, 591, 684, 849, 268, 50658
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12133398056030273,
+    "compression_ratio": 1.4600760456273765,
+    "no_speech_prob": 0.27445200085639954
+  },
+  {
+    "id": 79,
+    "seek": 53748,
+    "start": 543.36,
+    "end": 553.44,
+    "text": " f\u00fcr die Nachhaltigkeit gelten sollen. Anfang 2022 hat Europa die europ\u00e4ische Lieferkettenrichtlinie",
+    "tokens": [
+      50658, 2959, 978, 11815, 20731, 16626, 4087, 1147, 24713, 13, 25856,
+      20229, 2385, 16642, 978, 22139, 737, 7864, 11197, 612, 5758, 1147, 12836,
+      5045, 414, 51162
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12133398056030273,
+    "compression_ratio": 1.4600760456273765,
+    "no_speech_prob": 0.27445200085639954
+  },
+  {
+    "id": 80,
+    "seek": 53748,
+    "start": 553.44,
+    "end": 560.88,
+    "text": " auf den Weg gebracht. Vorbilder sind das deutsche und das franz\u00f6sische Lieferkettengesetz. Gro\u00dfe",
+    "tokens": [
+      51162, 2501, 1441, 18919, 40744, 13, 12231, 16248, 260, 3290, 1482, 47502,
+      674, 1482, 431, 3910, 11310, 7864, 11197, 612, 5758, 1147, 33506, 13,
+      12981, 11451, 51534
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12133398056030273,
+    "compression_ratio": 1.4600760456273765,
+    "no_speech_prob": 0.27445200085639954
+  },
+  {
+    "id": 81,
+    "seek": 53748,
+    "start": 560.88,
+    "end": 567.04,
+    "text": " Unternehmen m\u00fcssen dabei einen sogenannten Klimaplan erstellen. Darin w\u00fcrden dann beispielsweise",
+    "tokens": [
+      51534, 27577, 9013, 14967, 4891, 37467, 14970, 25136, 64, 16554, 11301,
+      8581, 13, 7803, 259, 27621, 3594, 40152, 51842
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12133398056030273,
+    "compression_ratio": 1.4600760456273765,
+    "no_speech_prob": 0.27445200085639954
+  },
+  {
+    "id": 82,
+    "seek": 56704,
+    "start": 567.04,
+    "end": 573.5999999999999,
+    "text": " auch die Emissionen eines Frachters von Asien nach Europa erscheinen. Der Klimapreis der Waren wird",
+    "tokens": [
+      50364, 2168, 978, 3968, 3106, 268, 18599, 1526, 3589, 433, 2957, 1018,
+      1053, 5168, 16642, 33743, 1876, 5636, 13, 5618, 25136, 64, 3712, 271,
+      1163, 343, 4484, 4578, 50692
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10961941572336051,
+    "compression_ratio": 1.4699248120300752,
+    "no_speech_prob": 0.005553177557885647
+  },
+  {
+    "id": 83,
+    "seek": 56704,
+    "start": 573.5999999999999,
+    "end": 580.76,
+    "text": " mitberechnet und ver\u00e4ndert die Gesamtbilanz. Dann w\u00fcrde klar, massenweise Waren vom anderen Ende",
+    "tokens": [
+      50692, 2194, 18582, 46248, 674, 45990, 978, 6761, 16887, 15384, 3910, 13,
+      7455, 11942, 14743, 11, 2758, 268, 13109, 343, 4484, 10135, 11122, 15152,
+      51050
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10961941572336051,
+    "compression_ratio": 1.4699248120300752,
+    "no_speech_prob": 0.005553177557885647
+  },
+  {
+    "id": 84,
+    "seek": 56704,
+    "start": 580.76,
+    "end": 588.92,
+    "text": " der Welt zu importieren, ist nicht rentabel. Um die absolute Transparenz vom Rohstoff bis zum",
+    "tokens": [
+      51050, 1163, 14761, 2164, 974, 5695, 11, 1418, 1979, 6214, 18657, 13,
+      3301, 978, 8236, 6531, 79, 4484, 89, 10135, 27490, 23636, 7393, 5919,
+      51458
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10961941572336051,
+    "compression_ratio": 1.4699248120300752,
+    "no_speech_prob": 0.005553177557885647
+  },
+  {
+    "id": 85,
+    "seek": 56704,
+    "start": 588.92,
+    "end": 596.76,
+    "text": " Endprodukt zu erreichen, w\u00e4re ein Werkzeug ganz wichtig. Blockchain. Den Begriff kennen viele von",
+    "tokens": [
+      51458, 6967, 14314, 2320, 2164, 39464, 11, 14558, 1343, 42911, 19303,
+      6312, 13621, 13, 48916, 13, 6458, 879, 32783, 28445, 9693, 2957, 51850
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10961941572336051,
+    "compression_ratio": 1.4699248120300752,
+    "no_speech_prob": 0.005553177557885647
+  },
+  {
+    "id": 86,
+    "seek": 59676,
+    "start": 596.8,
+    "end": 604.3199999999999,
+    "text": " den Kryptow\u00e4hrungen. Eine Blockchain, also eine Blockkette, ist im Grunde genommen nur eine Liste",
+    "tokens": [
+      50366, 1441, 37747, 662, 305, 12021, 5084, 13, 17664, 48916, 11, 611,
+      3018, 17500, 74, 3007, 11, 1418, 566, 13941, 68, 38715, 4343, 3018, 441,
+      8375, 50742
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10975360870361328,
+    "compression_ratio": 1.4922480620155039,
+    "no_speech_prob": 0.0033759181387722492
+  },
+  {
+    "id": 87,
+    "seek": 59676,
+    "start": 604.3199999999999,
+    "end": 610.0,
+    "text": " aus digitalen Daten setzen. Sie kann beliebig durch weitere solcher digitalen Bl\u00f6cke erweitert",
+    "tokens": [
+      50742, 3437, 4562, 268, 31126, 35877, 13, 3559, 4028, 1351, 37660, 7131,
+      30020, 1404, 6759, 4562, 268, 2177, 973, 18627, 1189, 28019, 911, 51026
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10975360870361328,
+    "compression_ratio": 1.4922480620155039,
+    "no_speech_prob": 0.0033759181387722492
+  },
+  {
+    "id": 88,
+    "seek": 59676,
+    "start": 610.0,
+    "end": 616.72,
+    "text": " werden. Der springende Punkt, sie sind alle miteinander verkn\u00fcpft. Dieser dezentrale",
+    "tokens": [
+      51026, 4604, 13, 5618, 5587, 5445, 25487, 11, 2804, 3290, 5430, 43127,
+      1306, 5457, 42693, 844, 13, 39609, 368, 14185, 47282, 51362
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10975360870361328,
+    "compression_ratio": 1.4922480620155039,
+    "no_speech_prob": 0.0033759181387722492
+  },
+  {
+    "id": 89,
+    "seek": 59676,
+    "start": 616.72,
+    "end": 623.2,
+    "text": " Datenspeicher ist allen Teilnehmern eines Netzwerks zug\u00e4nglich, kann aber von ihnen im Nachhinein nicht",
+    "tokens": [
+      51362, 9315, 694, 494, 14934, 1418, 18440, 16357, 38370, 77, 18599, 38889,
+      1554, 1694, 33507, 9935, 1739, 11, 4028, 4340, 2957, 24623, 566, 11815,
+      71, 533, 259, 1979, 51686
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10975360870361328,
+    "compression_ratio": 1.4922480620155039,
+    "no_speech_prob": 0.0033759181387722492
+  },
+  {
+    "id": 90,
+    "seek": 62320,
+    "start": 623.2,
+    "end": 628.48,
+    "text": " ver\u00e4ndert werden. Axel Schulte. Und die gesamte Historie dessen, was in dem Vorblock und den",
+    "tokens": [
+      50364, 45990, 4604, 13, 20118, 338, 2065, 723, 68, 13, 2719, 978, 39746,
+      975, 9038, 17473, 6874, 268, 11, 390, 294, 1371, 12231, 28830, 674, 1441,
+      50628
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13368244621697373,
+    "compression_ratio": 1.6013071895424837,
+    "no_speech_prob": 0.25630927085876465
+  },
+  {
+    "id": 91,
+    "seek": 62320,
+    "start": 628.48,
+    "end": 633.4000000000001,
+    "text": " Vorbl\u00f6cken steht, ist in dem n\u00e4chsten Block wieder verankert. Das hei\u00dft, sie erreichen dadurch eine",
+    "tokens": [
+      50628, 12231, 5199, 973, 13029, 16361, 11, 1418, 294, 1371, 19101, 17500,
+      6216, 1306, 657, 911, 13, 2846, 13139, 11, 2804, 39464, 35472, 3018, 50874
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13368244621697373,
+    "compression_ratio": 1.6013071895424837,
+    "no_speech_prob": 0.25630927085876465
+  },
+  {
+    "id": 92,
+    "seek": 62320,
+    "start": 633.4000000000001,
+    "end": 641.5600000000001,
+    "text": " R\u00fcckverfolgbarkeit und eine Unver\u00e4nderbarkeit von Informationen, die wiederum erneut Vertrauen",
+    "tokens": [
+      50874, 35001, 331, 23910, 5356, 9238, 674, 3018, 1156, 331, 16082, 5356,
+      9238, 2957, 46753, 11, 978, 6216, 449, 1189, 716, 325, 21044, 46640, 51282
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13368244621697373,
+    "compression_ratio": 1.6013071895424837,
+    "no_speech_prob": 0.25630927085876465
+  },
+  {
+    "id": 93,
+    "seek": 62320,
+    "start": 641.5600000000001,
+    "end": 647.4000000000001,
+    "text": " schaffen. Also wir k\u00f6nnen nicht mehr R\u00fcckwerk und Daten manipulieren. Und damit sind wir bei einem",
+    "tokens": [
+      51282, 30888, 13, 2743, 1987, 6310, 1979, 5417, 35001, 26833, 674, 31126,
+      9258, 425, 5695, 13, 2719, 9479, 3290, 1987, 4643, 6827, 51574
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13368244621697373,
+    "compression_ratio": 1.6013071895424837,
+    "no_speech_prob": 0.25630927085876465
+  },
+  {
+    "id": 94,
+    "seek": 62320,
+    "start": 647.4000000000001,
+    "end": 652.96,
+    "text": " Punkt, wenn wir an Lieferketten denken, der extrem wichtig ist. Wie k\u00f6nnen wir R\u00fcckverfolgung",
+    "tokens": [
+      51574, 25487, 11, 4797, 1987, 364, 11197, 612, 5758, 1147, 28780, 11,
+      1163, 4040, 13621, 1418, 13, 9233, 6310, 1987, 35001, 331, 23910, 1063,
+      51852
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13368244621697373,
+    "compression_ratio": 1.6013071895424837,
+    "no_speech_prob": 0.25630927085876465
+  },
+  {
+    "id": 95,
+    "seek": 65296,
+    "start": 653.0400000000001,
+    "end": 658.24,
+    "text": " machen, wer was gemacht hat in der Lieferkette, wer welchen Anteil hatte, welche Rohstoffe",
+    "tokens": [
+      50368, 7069, 11, 2612, 390, 12293, 2385, 294, 1163, 11197, 612, 74, 3007,
+      11, 2612, 2214, 2470, 5130, 30684, 13299, 11, 24311, 27490, 23636, 68,
+      50628
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.18351246061779203,
+    "compression_ratio": 1.5176470588235293,
+    "no_speech_prob": 0.0009696808410808444
+  },
+  {
+    "id": 96,
+    "seek": 65296,
+    "start": 658.24,
+    "end": 663.36,
+    "text": " tats\u00e4chlich letztlich in unsere Produkte eingegangen sind und auch welche Lieferanten dahinterstehen.",
+    "tokens": [
+      50628, 20796, 35262, 1739, 294, 14339, 11793, 18844, 17002, 1146, 10784,
+      3290, 674, 2168, 24311, 11197, 612, 29646, 16800, 5106, 2941, 2932, 13,
+      50884
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.18351246061779203,
+    "compression_ratio": 1.5176470588235293,
+    "no_speech_prob": 0.0009696808410808444
+  },
+  {
+    "id": 97,
+    "seek": 65296,
+    "start": 663.36,
+    "end": 671.52,
+    "text": " Klingt super. Nur muss dann eben auch alles digitalisiert werden. Von der Koltanmene im Congo",
+    "tokens": [
+      50884, 591, 45219, 1687, 13, 17612, 6425, 3594, 11375, 2168, 7874, 4562,
+      42266, 4604, 13, 20700, 1163, 591, 4837, 282, 76, 1450, 566, 42839, 51292
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.18351246061779203,
+    "compression_ratio": 1.5176470588235293,
+    "no_speech_prob": 0.0009696808410808444
+  },
+  {
+    "id": 98,
+    "seek": 65296,
+    "start": 671.52,
+    "end": 678.96,
+    "text": " bis zum zusammengebauten Handy, vom Baumwollfeld in Indien bis zum T-Shirt im deutschen Laden. Dann",
+    "tokens": [
+      51292, 7393, 5919, 14311, 42858, 268, 47006, 11, 10135, 40165, 86, 1833,
+      25115, 294, 2333, 1053, 7393, 5919, 314, 12, 7774, 2498, 566, 39707,
+      45555, 13, 7455, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.18351246061779203,
+    "compression_ratio": 1.5176470588235293,
+    "no_speech_prob": 0.0009696808410808444
+  },
+  {
+    "id": 99,
+    "seek": 67896,
+    "start": 678.96,
+    "end": 685.52,
+    "text": " k\u00f6nnte alles geahndet werden. Die Menschenrechtsverst\u00f6\u00dfe, Kinderarbeit, Zwangsarbeit,",
+    "tokens": [
+      50364, 17646, 7874, 1519, 545, 273, 302, 4604, 13, 3229, 8397, 265, 19549,
+      331, 372, 973, 11451, 11, 14193, 24024, 11, 1176, 19031, 82, 24024, 11,
+      50692
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14439918458923812,
+    "compression_ratio": 1.5477707006369428,
+    "no_speech_prob": 0.22229179739952087
+  },
+  {
+    "id": 100,
+    "seek": 67896,
+    "start": 685.52,
+    "end": 692.2,
+    "text": " auch Nachhaltigkeit, wie viele Emissionen wurden entlang der Lieferkette verursacht. Es gibt Labels",
+    "tokens": [
+      50692, 2168, 11815, 20731, 16626, 11, 3355, 9693, 3968, 3106, 268, 21105,
+      948, 25241, 1163, 11197, 612, 74, 3007, 1306, 2156, 3589, 13, 2313, 6089,
+      10137, 1625, 51026
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14439918458923812,
+    "compression_ratio": 1.5477707006369428,
+    "no_speech_prob": 0.22229179739952087
+  },
+  {
+    "id": 101,
+    "seek": 67896,
+    "start": 692.2,
+    "end": 697.0,
+    "text": " wie Fairtrade. Jetzt, wenn wir nicht sicherstellen k\u00f6nnen, was dahinter steht und wo die Daten",
+    "tokens": [
+      51026, 3355, 12157, 6903, 762, 13, 12592, 11, 4797, 1987, 1979, 18623,
+      17538, 6310, 11, 390, 16800, 5106, 16361, 674, 6020, 978, 31126, 51266
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14439918458923812,
+    "compression_ratio": 1.5477707006369428,
+    "no_speech_prob": 0.22229179739952087
+  },
+  {
+    "id": 102,
+    "seek": 67896,
+    "start": 697.0,
+    "end": 701.36,
+    "text": " tats\u00e4chlich herkommen und ob sie nicht manipuliert wurden, k\u00f6nnen wir mit diesem Label am Ende des",
+    "tokens": [
+      51266, 20796, 720, 13675, 674, 1111, 2804, 1979, 9258, 425, 4859, 21105,
+      11, 6310, 1987, 2194, 10975, 10137, 338, 669, 15152, 730, 51484
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14439918458923812,
+    "compression_ratio": 1.5477707006369428,
+    "no_speech_prob": 0.22229179739952087
+  },
+  {
+    "id": 103,
+    "seek": 67896,
+    "start": 701.36,
+    "end": 708.2,
+    "text": " Tages gar nichts anfangen. Der enorme Aufwand der globalen Durchdigitalisierung l\u00e4sst sich erahnen.",
+    "tokens": [
+      51484, 33601, 3691, 13004, 33709, 10784, 13, 5618, 33648, 9462, 33114,
+      1163, 4338, 268, 28557, 25259, 1686, 32531, 29335, 3041, 1189, 545, 2866,
+      13, 51826
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14439918458923812,
+    "compression_ratio": 1.5477707006369428,
+    "no_speech_prob": 0.22229179739952087
+  },
+  {
+    "id": 104,
+    "seek": 70820,
+    "start": 708.5200000000001,
+    "end": 714.2,
+    "text": " Wir brauchen nat\u00fcrlich Systeme, wo wir Daten \u00fcberhaupt verarbeiten k\u00f6nnen. Wir brauchen",
+    "tokens": [
+      50380, 4347, 19543, 8762, 8910, 68, 11, 6020, 1987, 31126, 20023, 1306,
+      43918, 6310, 13, 4347, 19543, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17155442126961643,
+    "compression_ratio": 1.6894977168949772,
+    "no_speech_prob": 0.0022513086441904306
+  },
+  {
+    "id": 105,
+    "seek": 70820,
+    "start": 714.2,
+    "end": 720.6,
+    "text": " Speichermedien. Wir brauchen Netze, wo Daten \u00fcbertragen werden. Und wir brauchen auch eine",
+    "tokens": [
+      50664, 3550, 480, 966, 292, 1053, 13, 4347, 19543, 6188, 1381, 11, 6020,
+      31126, 3304, 4290, 20663, 4604, 13, 2719, 1987, 19543, 2168, 3018, 50984
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17155442126961643,
+    "compression_ratio": 1.6894977168949772,
+    "no_speech_prob": 0.0022513086441904306
+  },
+  {
+    "id": 106,
+    "seek": 70820,
+    "start": 720.6,
+    "end": 726.76,
+    "text": " Digitalisierung im Vorfeld. Heute passiert ja viel noch Papierbasiert. Deswegen brauchen wir",
+    "tokens": [
+      50984, 15522, 32531, 566, 12231, 25115, 13, 27978, 21671, 2784, 5891,
+      3514, 15919, 811, 16342, 4859, 13, 24864, 19543, 1987, 51292
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17155442126961643,
+    "compression_ratio": 1.6894977168949772,
+    "no_speech_prob": 0.0022513086441904306
+  },
+  {
+    "id": 107,
+    "seek": 70820,
+    "start": 726.76,
+    "end": 733.84,
+    "text": " nat\u00fcrlich die Anstrengungen national, international, global der Digitalisierung. Und auch die",
+    "tokens": [
+      51292, 8762, 978, 1107, 26421, 872, 5084, 4048, 11, 5058, 11, 4338, 1163,
+      15522, 32531, 13, 2719, 2168, 978, 51646
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17155442126961643,
+    "compression_ratio": 1.6894977168949772,
+    "no_speech_prob": 0.0022513086441904306
+  },
+  {
+    "id": 108,
+    "seek": 73384,
+    "start": 733.84,
+    "end": 739.64,
+    "text": " Anf\u00e4lligkeit so einer digitalen Lieferkette f\u00fcr Internetkriminalit\u00e4t kann man sich vorstellen.",
+    "tokens": [
+      50364, 1107, 69, 10053, 16626, 370, 6850, 4562, 268, 11197, 612, 74, 3007,
+      2959, 7703, 74, 46885, 14053, 4028, 587, 3041, 34346, 13, 50654
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14745897100877392,
+    "compression_ratio": 1.5235109717868338,
+    "no_speech_prob": 0.14939339458942413
+  },
+  {
+    "id": 109,
+    "seek": 73384,
+    "start": 739.64,
+    "end": 745.12,
+    "text": " Datenklau, Industriespionage oder einfach nur die Zerst\u00f6rung von wichtiger Information,",
+    "tokens": [
+      50654, 31126, 74, 875, 84, 11, 16018, 2244, 79, 313, 609, 4513, 7281,
+      4343, 978, 1176, 16398, 46676, 2957, 48840, 15357, 11, 50928
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14745897100877392,
+    "compression_ratio": 1.5235109717868338,
+    "no_speech_prob": 0.14939339458942413
+  },
+  {
+    "id": 110,
+    "seek": 73384,
+    "start": 745.12,
+    "end": 751.9200000000001,
+    "text": " um die Lieferkette lahmzulegen. Cyberkriminalit\u00e4t ist definitiv ein Thema. Also wir haben zuk\u00fcnftig",
+    "tokens": [
+      50928, 1105, 978, 11197, 612, 74, 3007, 26532, 76, 89, 2271, 1766, 13,
+      22935, 74, 46885, 14053, 1418, 28781, 592, 1343, 16306, 13, 2743, 1987,
+      3084, 50151, 3412, 34765, 51268
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14745897100877392,
+    "compression_ratio": 1.5235109717868338,
+    "no_speech_prob": 0.14939339458942413
+  },
+  {
+    "id": 111,
+    "seek": 73384,
+    "start": 751.9200000000001,
+    "end": 757.6,
+    "text": " durch Supercomputer mit extremer Rechenleistung nat\u00fcrlich auch viel mehr M\u00f6glichkeiten,",
+    "tokens": [
+      51268, 7131, 4548, 1112, 13849, 2194, 1279, 265, 936, 1300, 2470, 46820,
+      1063, 8762, 2168, 5891, 5417, 42627, 11, 51552
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14745897100877392,
+    "compression_ratio": 1.5235109717868338,
+    "no_speech_prob": 0.14939339458942413
+  },
+  {
+    "id": 112,
+    "seek": 73384,
+    "start": 757.6,
+    "end": 763.4000000000001,
+    "text": " Sicherheitsma\u00dfnahmen f\u00fcr Schl\u00fcsselungstechnologien einzusetzen, die viel leistungsf\u00e4higer sind als die,",
+    "tokens": [
+      51552, 25292, 24260, 1696, 2536, 24221, 2959, 16420, 37838, 1063, 2941,
+      1377, 1132, 1053, 1343, 16236, 24797, 11, 978, 5891, 476, 468, 5846,
+      44616, 4810, 3290, 3907, 978, 11, 51842
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14745897100877392,
+    "compression_ratio": 1.5235109717868338,
+    "no_speech_prob": 0.14939339458942413
+  },
+  {
+    "id": 113,
+    "seek": 76340,
+    "start": 763.4,
+    "end": 770.52,
+    "text": " die wir heute haben. Die transparente Lieferkette ist also derzeit noch unrealistisch. Es braucht",
+    "tokens": [
+      50364, 978, 1987, 9801, 3084, 13, 3229, 12737, 68, 11197, 612, 74, 3007,
+      1418, 611, 1163, 13712, 3514, 25754, 468, 5494, 13, 2313, 22623, 50720
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12942526817321778,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.0001767293142620474
+  },
+  {
+    "id": 114,
+    "seek": 76340,
+    "start": 770.52,
+    "end": 776.52,
+    "text": " erst mal die globale digitale Infrastruktur, Datennetz, Rechenzentren und so weiter. Vom",
+    "tokens": [
+      50720, 11301, 2806, 978, 16125, 1220, 14293, 1220, 38425, 31543, 11,
+      31126, 7129, 89, 11, 1300, 2470, 14185, 1095, 674, 370, 8988, 13, 691,
+      298, 51020
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12942526817321778,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.0001767293142620474
+  },
+  {
+    "id": 115,
+    "seek": 76340,
+    "start": 776.52,
+    "end": 782.76,
+    "text": " Kongo bis nach K\u00f6ln sozusagen. Je l\u00e4nger eine Lieferkette ist, desto schwieriger wird nat\u00fcrlich",
+    "tokens": [
+      51020, 9832, 78, 7393, 5168, 591, 13072, 77, 33762, 13, 2588, 40935, 3018,
+      11197, 612, 74, 3007, 1418, 11, 2677, 78, 27546, 4810, 4578, 8762, 51332
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12942526817321778,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.0001767293142620474
+  },
+  {
+    "id": 116,
+    "seek": 76340,
+    "start": 782.76,
+    "end": 791.16,
+    "text": " auch ihre Digitalisierung. Deshalb hei\u00dft eine weitere L\u00f6sung Re-Regionalisierung. Lysandra",
+    "tokens": [
+      51332, 2168, 14280, 15522, 32531, 13, 27969, 13139, 3018, 30020, 46934,
+      1300, 12, 40888, 1966, 32531, 13, 441, 749, 18401, 51752
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12942526817321778,
+    "compression_ratio": 1.5,
+    "no_speech_prob": 0.0001767293142620474
+  },
+  {
+    "id": 117,
+    "seek": 79116,
+    "start": 791.16,
+    "end": 798.3199999999999,
+    "text": " Flach vom IFO-Institut hat dazu Unternehmen befragt. F\u00fcr viele Unternehmen und vor allem kleinere und",
+    "tokens": [
+      50364, 3235, 608, 10135, 286, 18067, 12, 28411, 270, 325, 2385, 13034,
+      27577, 21312, 32243, 13, 14990, 9693, 27577, 674, 4245, 17585, 29231, 323,
+      674, 50722
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14368511648739085,
+    "compression_ratio": 1.573643410852713,
+    "no_speech_prob": 0.19621528685092926
+  },
+  {
+    "id": 118,
+    "seek": 79116,
+    "start": 798.3199999999999,
+    "end": 805.28,
+    "text": " mittlere Unternehmen ist eine st\u00e4rkere Regionalisierung der Lieferkette eine Alternative. Das bedeutet",
+    "tokens": [
+      50722, 19130, 29904, 27577, 1418, 3018, 33527, 74, 323, 30341, 32531,
+      1163, 11197, 612, 74, 3007, 3018, 23830, 1166, 13, 2846, 27018, 51070
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14368511648739085,
+    "compression_ratio": 1.573643410852713,
+    "no_speech_prob": 0.19621528685092926
+  },
+  {
+    "id": 119,
+    "seek": 79116,
+    "start": 805.28,
+    "end": 811.56,
+    "text": " h\u00e4ufig h\u00f6here Kosten. Laut Umfragen des IFO-Instituts wollen vier von f\u00fcnf Unternehmen,",
+    "tokens": [
+      51070, 47543, 13531, 6703, 47391, 13, 47344, 3301, 69, 20663, 730, 286,
+      18067, 12, 28411, 270, 3648, 11253, 17634, 2957, 28723, 27577, 11, 51384
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14368511648739085,
+    "compression_ratio": 1.573643410852713,
+    "no_speech_prob": 0.19621528685092926
+  },
+  {
+    "id": 120,
+    "seek": 79116,
+    "start": 811.56,
+    "end": 819.0799999999999,
+    "text": " die sehr stark auf Vorleistungen aus China angewiesen sind, die Importe aus China reduzieren und stattdessen",
+    "tokens": [
+      51384, 978, 5499, 17417, 2501, 12231, 46820, 5084, 3437, 3533, 15495, 86,
+      30383, 3290, 11, 978, 8270, 12752, 3437, 3533, 40674, 5695, 674, 25675,
+      67, 12431, 51760
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14368511648739085,
+    "compression_ratio": 1.573643410852713,
+    "no_speech_prob": 0.19621528685092926
+  },
+  {
+    "id": 121,
+    "seek": 81908,
+    "start": 819.08,
+    "end": 825.84,
+    "text": " weitere Zulieferer innerhalb der EU suchen. Das Problem dabei liegt aber in den Produktionskosten.",
+    "tokens": [
+      50364, 30020, 1176, 425, 414, 612, 260, 48460, 1163, 10887, 44470, 13,
+      2846, 11676, 14967, 22421, 4340, 294, 1441, 44599, 626, 74, 18946, 13,
+      50702
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14038348950837787,
+    "compression_ratio": 1.5139442231075697,
+    "no_speech_prob": 0.05658402666449547
+  },
+  {
+    "id": 122,
+    "seek": 81908,
+    "start": 825.84,
+    "end": 833.0,
+    "text": " Deutschland kann als Industriestandort zwar mit Wissen und Infrastrukturpunkten, wegen der hohen",
+    "tokens": [
+      50702, 14802, 4028, 3907, 16018, 470, 377, 474, 477, 19054, 2194, 343,
+      10987, 674, 38425, 31543, 27133, 1147, 11, 32855, 1163, 1106, 2932, 51060
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14038348950837787,
+    "compression_ratio": 1.5139442231075697,
+    "no_speech_prob": 0.05658402666449547
+  },
+  {
+    "id": 123,
+    "seek": 81908,
+    "start": 833.0,
+    "end": 838.1600000000001,
+    "text": " Stromkosten und den weltweit sechs h\u00f6chsten Lohnkosten, steht Deutschland in diesem Bereich",
+    "tokens": [
+      51060, 39126, 74, 18946, 674, 1441, 43119, 28019, 41945, 13531, 339, 6266,
+      441, 2359, 74, 18946, 11, 16361, 14802, 294, 10975, 26489, 51318
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14038348950837787,
+    "compression_ratio": 1.5139442231075697,
+    "no_speech_prob": 0.05658402666449547
+  },
+  {
+    "id": 124,
+    "seek": 81908,
+    "start": 838.1600000000001,
+    "end": 843.84,
+    "text": " aber deutlich schlechter da als die gro\u00dfen Konkurrenten in Asien beispielsweise. Wir haben",
+    "tokens": [
+      51318, 4340, 24344, 22664, 26690, 1120, 3907, 978, 23076, 12718, 33503,
+      1753, 268, 294, 1018, 1053, 40152, 13, 4347, 3084, 51602
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14038348950837787,
+    "compression_ratio": 1.5139442231075697,
+    "no_speech_prob": 0.05658402666449547
+  },
+  {
+    "id": 125,
+    "seek": 84384,
+    "start": 843.84,
+    "end": 849.5600000000001,
+    "text": " in einer Studie die Kosten einer R\u00fcckverlagerung der Produktion quantifiziert und bei einer",
+    "tokens": [
+      50364, 294, 6850, 4541, 414, 978, 47391, 6850, 35001, 331, 75, 3557, 1063,
+      1163, 11793, 9780, 4426, 351, 43590, 674, 4643, 6850, 50650
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.163787841796875,
+    "compression_ratio": 1.5755102040816327,
+    "no_speech_prob": 0.394157737493515
+  },
+  {
+    "id": 126,
+    "seek": 84384,
+    "start": 849.5600000000001,
+    "end": 856.36,
+    "text": " R\u00fcckverlagerung der Produktion nach Deutschland w\u00fcrde das deutsche BIP langfristig um 10% geringer",
+    "tokens": [
+      50650, 35001, 331, 75, 3557, 1063, 1163, 11793, 9780, 5168, 14802, 11942,
+      1482, 47502, 363, 9139, 2265, 48754, 328, 1105, 1266, 4, 290, 1794, 260,
+      50990
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.163787841796875,
+    "compression_ratio": 1.5755102040816327,
+    "no_speech_prob": 0.394157737493515
+  },
+  {
+    "id": 127,
+    "seek": 84384,
+    "start": 856.36,
+    "end": 862.64,
+    "text": " sein. Das hei\u00dft also wir w\u00e4ren deutlich \u00e4rmer. Deswegen handelt es sich um einen Balanceakt.",
+    "tokens": [
+      50990, 6195, 13, 2846, 13139, 611, 1987, 43933, 24344, 3775, 936, 13,
+      24864, 1011, 2018, 785, 3041, 1105, 4891, 41899, 5886, 13, 51304
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.163787841796875,
+    "compression_ratio": 1.5755102040816327,
+    "no_speech_prob": 0.394157737493515
+  },
+  {
+    "id": 128,
+    "seek": 84384,
+    "start": 862.64,
+    "end": 870.36,
+    "text": " Einerseits m\u00fcssten wir kritische Abh\u00e4ngigkeiten identifizieren, aber andererseits muss es auch",
+    "tokens": [
+      51304, 462, 4564, 44033, 28802, 6266, 1987, 42825, 7864, 2847, 34591,
+      37545, 2473, 351, 590, 5695, 11, 4340, 48108, 44033, 6425, 785, 2168,
+      51690
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.163787841796875,
+    "compression_ratio": 1.5755102040816327,
+    "no_speech_prob": 0.394157737493515
+  },
+  {
+    "id": 129,
+    "seek": 87036,
+    "start": 870.36,
+    "end": 878.0,
+    "text": " klar sein, dass eine R\u00fcckverlagerung der Produktion m\u00f6glicherweise zu h\u00f6here Kosten f\u00fchrt.",
+    "tokens": [
+      50364, 14743, 6195, 11, 2658, 3018, 35001, 331, 75, 3557, 1063, 1163,
+      11793, 9780, 16294, 44071, 2164, 13531, 6703, 47391, 39671, 13, 50746
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16979213861318734,
+    "compression_ratio": 1.423529411764706,
+    "no_speech_prob": 0.1478153020143509
+  },
+  {
+    "id": 130,
+    "seek": 87036,
+    "start": 878.0,
+    "end": 886.36,
+    "text": " Beispiel Medikamente. 70% aller Wirkstoffe, die wir brauchen, kommen heute aus China.",
+    "tokens": [
+      50746, 13772, 3982, 1035, 3439, 13, 5285, 4, 8722, 4347, 74, 23636, 68,
+      11, 978, 1987, 19543, 11, 11729, 9801, 3437, 3533, 13, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16979213861318734,
+    "compression_ratio": 1.423529411764706,
+    "no_speech_prob": 0.1478153020143509
+  },
+  {
+    "id": 131,
+    "seek": 87036,
+    "start": 886.36,
+    "end": 892.8000000000001,
+    "text": " Wir haben aktuell beispielsweise bei 500 Medikamenten Lieferengp\u00e4sse heute. Da sind ganz wichtige",
+    "tokens": [
+      51164, 4347, 3084, 36267, 40152, 4643, 5923, 3982, 1035, 2466, 268, 11197,
+      612, 1501, 79, 13555, 405, 9801, 13, 3933, 3290, 6312, 46276, 51486
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16979213861318734,
+    "compression_ratio": 1.423529411764706,
+    "no_speech_prob": 0.1478153020143509
+  },
+  {
+    "id": 132,
+    "seek": 87036,
+    "start": 892.8000000000001,
+    "end": 898.2,
+    "text": " Medikamente dabei. Paracetamol, Ibuprofen, Basisantibiotika, Penicillin nat\u00fcrlich.",
+    "tokens": [
+      51486, 3982, 1035, 3439, 14967, 13, 3457, 326, 302, 335, 401, 11, 40790,
+      1010, 340, 6570, 11, 5859, 271, 394, 897, 6471, 5439, 11, 10571, 299, 373,
+      259, 8762, 13, 51756
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16979213861318734,
+    "compression_ratio": 1.423529411764706,
+    "no_speech_prob": 0.1478153020143509
+  },
+  {
+    "id": 133,
+    "seek": 89820,
+    "start": 898.2,
+    "end": 905.2,
+    "text": " Nachzulesen ist das in der Lieferkettenengpass-Datenbank des Bundesinstituts f\u00fcr Arzneimittel und",
+    "tokens": [
+      50364, 11815, 89, 3473, 268, 1418, 1482, 294, 1163, 11197, 612, 5758,
+      1147, 1501, 9216, 12, 35, 7186, 25423, 730, 14031, 13911, 270, 3648, 2959,
+      1587, 43077, 332, 47265, 674, 50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15958184781281845,
+    "compression_ratio": 1.360730593607306,
+    "no_speech_prob": 0.0038239348214119673
+  },
+  {
+    "id": 134,
+    "seek": 89820,
+    "start": 905.2,
+    "end": 914.76,
+    "text": " Medizinprodukte. Beispiel Halbleiter. Winzig kleine Festk\u00f6rper, die auf Mikrochips montiert sind.",
+    "tokens": [
+      50714, 3982, 36367, 14314, 18844, 13, 13772, 13896, 638, 1681, 13, 10427,
+      36168, 22278, 12993, 74, 25533, 11, 978, 2501, 16380, 340, 339, 2600,
+      8143, 4859, 3290, 13, 51192
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15958184781281845,
+    "compression_ratio": 1.360730593607306,
+    "no_speech_prob": 0.0038239348214119673
+  },
+  {
+    "id": 135,
+    "seek": 89820,
+    "start": 914.76,
+    "end": 921.9200000000001,
+    "text": " Mikrochips, das sind nur wenige Millimeter gro\u00dfe Schaltkreise, die elektronische Ger\u00e4te zum Laufen",
+    "tokens": [
+      51192, 16380, 340, 339, 2600, 11, 1482, 3290, 4343, 11472, 3969, 7190,
+      9685, 19691, 2065, 3198, 27885, 908, 11, 978, 26991, 2044, 7864, 9409,
+      737, 975, 5919, 441, 20748, 51550
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15958184781281845,
+    "compression_ratio": 1.360730593607306,
+    "no_speech_prob": 0.0038239348214119673
+  },
+  {
+    "id": 136,
+    "seek": 92192,
+    "start": 921.92,
+    "end": 927.88,
+    "text": " bringen. Mikrochips und ihre Bauteile, die Halbleiter, sind elementar wichtig f\u00fcr die",
+    "tokens": [
+      50364, 27519, 13, 16380, 340, 339, 2600, 674, 14280, 6777, 1169, 794, 11,
+      978, 13896, 638, 1681, 11, 3290, 4478, 289, 13621, 2959, 978, 50662
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1637588464296781,
+    "compression_ratio": 1.4779116465863453,
+    "no_speech_prob": 0.25046905875205994
+  },
+  {
+    "id": 137,
+    "seek": 92192,
+    "start": 927.88,
+    "end": 934.76,
+    "text": " Digitalisierung. Und sie haben geopolitische Relevanz. In einem elektrischen Auto sind bis zu",
+    "tokens": [
+      50662, 15522, 32531, 13, 2719, 2804, 3084, 46615, 7864, 1300, 28316, 3910,
+      13, 682, 6827, 26991, 5714, 2470, 13738, 3290, 7393, 2164, 51006
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1637588464296781,
+    "compression_ratio": 1.4779116465863453,
+    "no_speech_prob": 0.25046905875205994
+  },
+  {
+    "id": 138,
+    "seek": 92192,
+    "start": 934.76,
+    "end": 941.4799999999999,
+    "text": " 1300 Chips, also Halbleiter, verbaut. Allein 600 bis 900 im Antriebstraat. Das ist ein Auto.",
+    "tokens": [
+      51006, 48156, 761, 2600, 11, 611, 13896, 638, 1681, 11, 9595, 1375, 13,
+      25318, 259, 11849, 7393, 22016, 566, 5130, 31775, 19639, 267, 13, 2846,
+      1418, 1343, 13738, 13, 51342
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1637588464296781,
+    "compression_ratio": 1.4779116465863453,
+    "no_speech_prob": 0.25046905875205994
+  },
+  {
+    "id": 139,
+    "seek": 92192,
+    "start": 941.4799999999999,
+    "end": 948.24,
+    "text": " Und jetzt kommt die Geopolitik ins Spiel, denn die meisten Mikrochips kommen heute aus Taiwan.",
+    "tokens": [
+      51342, 2719, 4354, 10047, 978, 2876, 39176, 1035, 1028, 14266, 11, 10471,
+      978, 29708, 16380, 340, 339, 2600, 11729, 9801, 3437, 12296, 13, 51680
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1637588464296781,
+    "compression_ratio": 1.4779116465863453,
+    "no_speech_prob": 0.25046905875205994
+  },
+  {
+    "id": 140,
+    "seek": 94824,
+    "start": 948.24,
+    "end": 955.44,
+    "text": " Seine v\u00f6lkerrechtliche Stellung ist umstritten und Gegenstand des Taiwan-Konflikts. Die Inselgruppe",
+    "tokens": [
+      50364, 1100, 533, 371, 40268, 31495, 10185, 37364, 1063, 1418, 1105, 9733,
+      2987, 674, 38631, 1115, 730, 12296, 12, 42, 266, 3423, 1035, 1373, 13,
+      3229, 682, 790, 37768, 68, 50724
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14250790856101297,
+    "compression_ratio": 1.435251798561151,
+    "no_speech_prob": 0.10801078379154205
+  },
+  {
+    "id": 141,
+    "seek": 94824,
+    "start": 955.44,
+    "end": 961.36,
+    "text": " ist ein technisch hochentwickelter Industriestaat, auf den die Volksrepublik China Anspr\u00fcche erhebt.",
+    "tokens": [
+      50724, 1418, 1343, 1537, 5494, 19783, 317, 22295, 7124, 391, 16018, 470,
+      7841, 267, 11, 2501, 1441, 978, 30213, 19919, 48620, 3533, 14590, 48715,
+      1876, 1189, 675, 4517, 13, 51020
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14250790856101297,
+    "compression_ratio": 1.435251798561151,
+    "no_speech_prob": 0.10801078379154205
+  },
+  {
+    "id": 142,
+    "seek": 94824,
+    "start": 961.36,
+    "end": 967.16,
+    "text": " Eine milit\u00e4rische Eroberung ist nicht mehr ausgeschlossen. Wenn dort was passiert, haben wir",
+    "tokens": [
+      51020, 17664, 19142, 2713, 7864, 462, 340, 607, 1063, 1418, 1979, 5417,
+      3437, 2880, 29002, 13, 7899, 15775, 390, 21671, 11, 3084, 1987, 51310
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14250790856101297,
+    "compression_ratio": 1.435251798561151,
+    "no_speech_prob": 0.10801078379154205
+  },
+  {
+    "id": 143,
+    "seek": 94824,
+    "start": 967.16,
+    "end": 972.64,
+    "text": " weltweit nat\u00fcrlich sofort ein Riesenproblem, weil 60 Prozent der Halbleiter, 65 Prozent mittlerweile,",
+    "tokens": [
+      51310, 43119, 28019, 8762, 33168, 1343, 497, 30383, 47419, 11, 7689, 4060,
+      29726, 1163, 13896, 638, 1681, 11, 11624, 29726, 41999, 11, 51584
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14250790856101297,
+    "compression_ratio": 1.435251798561151,
+    "no_speech_prob": 0.10801078379154205
+  },
+  {
+    "id": 144,
+    "seek": 97264,
+    "start": 972.64,
+    "end": 980.6,
+    "text": " aus Taiwan kommen. Und es geht noch weiter. 65 Prozent der gesamten Rohstoffe, die die EU zum",
+    "tokens": [
+      50364, 3437, 12296, 11729, 13, 2719, 785, 7095, 3514, 8988, 13, 11624,
+      29726, 1163, 39746, 1147, 27490, 23636, 68, 11, 978, 978, 10887, 5919,
+      50762
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09440066264225887,
+    "compression_ratio": 1.4269662921348314,
+    "no_speech_prob": 0.26220428943634033
+  },
+  {
+    "id": 145,
+    "seek": 97264,
+    "start": 980.6,
+    "end": 987.8,
+    "text": " Bau von Elektromotoren f\u00fcr Autos braucht, kommen allein aus China. Ein anderes Beispiel sind die",
+    "tokens": [
+      50762, 28772, 2957, 40321, 4397, 310, 10948, 2959, 6049, 329, 22623, 11,
+      11729, 37673, 3437, 3533, 13, 6391, 31426, 13772, 3290, 978, 51122
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09440066264225887,
+    "compression_ratio": 1.4269662921348314,
+    "no_speech_prob": 0.26220428943634033
+  },
+  {
+    "id": 146,
+    "seek": 97264,
+    "start": 987.8,
+    "end": 994.3199999999999,
+    "text": " Kabelb\u00e4ume in Autos, also die geb\u00fcndelten Leitungen, die das Fahrgestell wie Adern durchziehen.",
+    "tokens": [
+      51122, 591, 18657, 65, 737, 2540, 294, 6049, 329, 11, 611, 978, 21125,
+      9541, 338, 1147, 1456, 270, 5084, 11, 978, 1482, 19843, 2629, 898, 3355,
+      316, 35520, 7131, 28768, 13, 51448
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09440066264225887,
+    "compression_ratio": 1.4269662921348314,
+    "no_speech_prob": 0.26220428943634033
+  },
+  {
+    "id": 147,
+    "seek": 97264,
+    "start": 994.3199999999999,
+    "end": 1000.76,
+    "text": " Sie werden trotz permanenter Automatisierung noch immer von Hand gefertigt, weil dazu viele",
+    "tokens": [
+      51448, 3559, 4604, 504, 18530, 10996, 260, 24619, 267, 32531, 3514, 5578,
+      2957, 8854, 1519, 34784, 5828, 11, 7689, 13034, 9693, 51770
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09440066264225887,
+    "compression_ratio": 1.4269662921348314,
+    "no_speech_prob": 0.26220428943634033
+  },
+  {
+    "id": 148,
+    "seek": 100076,
+    "start": 1000.76,
+    "end": 1006.4,
+    "text": " Bewegungsabl\u00e4ufe n\u00f6tig sind. Das ist das Nervensystem des Autos. Wenn das fehlt, stockt die",
+    "tokens": [
+      50364, 46757, 5846, 455, 22882, 84, 2106, 297, 12082, 328, 3290, 13, 2846,
+      1418, 1482, 36536, 553, 28215, 730, 6049, 329, 13, 7899, 1482, 47994, 11,
+      4127, 83, 978, 50646
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13780990353337041,
+    "compression_ratio": 1.4684014869888475,
+    "no_speech_prob": 0.2016012817621231
+  },
+  {
+    "id": 149,
+    "seek": 100076,
+    "start": 1006.4,
+    "end": 1012.16,
+    "text": " Produktion. Und wir haben eine gro\u00dfe Abh\u00e4ngigkeit von der Ukraine, was das Thema Kabelb\u00e4ume betrifft.",
+    "tokens": [
+      50646, 11793, 9780, 13, 2719, 1987, 3084, 3018, 19691, 2847, 34591, 16626,
+      2957, 1163, 14081, 11, 390, 1482, 16306, 591, 18657, 65, 737, 2540, 778,
+      22575, 844, 13, 50934
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13780990353337041,
+    "compression_ratio": 1.4684014869888475,
+    "no_speech_prob": 0.2016012817621231
+  },
+  {
+    "id": 150,
+    "seek": 100076,
+    "start": 1012.16,
+    "end": 1017.4399999999999,
+    "text": " Das ist erst nach dem Einmarsch Russlands in der Ukraine bekannt geworden. Da wurden n\u00e4mlich",
+    "tokens": [
+      50934, 2846, 1418, 11301, 5168, 1371, 6391, 76, 685, 339, 3878, 10230,
+      294, 1163, 14081, 39167, 26281, 13, 3933, 21105, 21219, 51198
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13780990353337041,
+    "compression_ratio": 1.4684014869888475,
+    "no_speech_prob": 0.2016012817621231
+  },
+  {
+    "id": 151,
+    "seek": 100076,
+    "start": 1017.4399999999999,
+    "end": 1025.48,
+    "text": " sofort diese Lieferengp\u00e4sse transparent, weil die Produktion nat\u00fcrlich stoppt. Beispiel Solarzellen.",
+    "tokens": [
+      51198, 33168, 6705, 11197, 612, 1501, 79, 13555, 405, 12737, 11, 7689,
+      978, 11793, 9780, 8762, 1590, 662, 13, 13772, 22385, 89, 8581, 13, 51600
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13780990353337041,
+    "compression_ratio": 1.4684014869888475,
+    "no_speech_prob": 0.2016012817621231
+  },
+  {
+    "id": 152,
+    "seek": 102548,
+    "start": 1025.48,
+    "end": 1032.84,
+    "text": " Die Produktion wurde in den vergangenen Jahren immer mehr nach China verlagert. Eine weitere",
+    "tokens": [
+      50364, 3229, 11793, 9780, 11191, 294, 1441, 20209, 10784, 268, 13080,
+      5578, 5417, 5168, 3533, 19441, 559, 911, 13, 17664, 30020, 50732
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12357365973641939,
+    "compression_ratio": 1.4659090909090908,
+    "no_speech_prob": 0.010325330309569836
+  },
+  {
+    "id": 153,
+    "seek": 102548,
+    "start": 1032.84,
+    "end": 1039.68,
+    "text": " Lehre aus Pandemie- und Kriegserfahrungen ist es, die Produktion zur\u00fcck zu verlagern. Der",
+    "tokens": [
+      50732, 42631, 265, 3437, 44694, 12, 674, 35579, 21559, 260, 20868, 5084,
+      1418, 785, 11, 978, 11793, 9780, 15089, 2164, 19441, 559, 1248, 13, 5618,
+      51074
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12357365973641939,
+    "compression_ratio": 1.4659090909090908,
+    "no_speech_prob": 0.010325330309569836
+  },
+  {
+    "id": 154,
+    "seek": 102548,
+    "start": 1039.68,
+    "end": 1046.64,
+    "text": " US-amerikanische Mikrochip-Hersteller Intel plant im Magdeburger Gewerbegebiet Eulenberg eine riesige",
+    "tokens": [
+      51074, 2546, 12, 13530, 16048, 7864, 16380, 340, 339, 647, 12, 39, 16398,
+      14983, 19762, 3709, 566, 6395, 1479, 41787, 19063, 260, 650, 10848, 1684,
+      462, 35671, 6873, 3018, 23932, 3969, 51422
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12357365973641939,
+    "compression_ratio": 1.4659090909090908,
+    "no_speech_prob": 0.010325330309569836
+  },
+  {
+    "id": 155,
+    "seek": 102548,
+    "start": 1046.64,
+    "end": 1053.1200000000001,
+    "text": " Fabrik, die 10.000 Arbeitsstellen schaffen soll. Eine der gr\u00f6\u00dften Firmenansiedlungen in Deutschland",
+    "tokens": [
+      51422, 17440, 14456, 11, 978, 1266, 13, 1360, 23262, 17538, 30888, 7114,
+      13, 17664, 1163, 20691, 1147, 28164, 2558, 599, 1091, 45434, 294, 14802,
+      51746
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12357365973641939,
+    "compression_ratio": 1.4659090909090908,
+    "no_speech_prob": 0.010325330309569836
+  },
+  {
+    "id": 156,
+    "seek": 105312,
+    "start": 1053.12,
+    "end": 1060.76,
+    "text": " der vergangenen Jahrzehnte und die gr\u00f6\u00dfte Mikrochip-Fabrik Europas. Ab 2027 sollen dort",
+    "tokens": [
+      50364, 1163, 20209, 10784, 268, 11674, 1381, 71, 9358, 674, 978, 20691,
+      975, 16380, 340, 339, 647, 12, 37, 455, 14456, 12201, 296, 13, 2847, 945,
+      10076, 24713, 15775, 50746
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09971305167320932,
+    "compression_ratio": 1.4324324324324325,
+    "no_speech_prob": 0.2809296250343323
+  },
+  {
+    "id": 157,
+    "seek": 105312,
+    "start": 1060.76,
+    "end": 1066.2399999999998,
+    "text": " Halbleiter produziert werden, die vor allem den Bedarf der deutschen Automobilindustrie befriedigen",
+    "tokens": [
+      50746, 13896, 638, 1681, 28093, 4859, 4604, 11, 978, 4245, 17585, 1441,
+      19893, 30224, 1163, 39707, 24619, 21725, 50046, 21312, 2428, 3213, 51020
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09971305167320932,
+    "compression_ratio": 1.4324324324324325,
+    "no_speech_prob": 0.2809296250343323
+  },
+  {
+    "id": 158,
+    "seek": 105312,
+    "start": 1066.2399999999998,
+    "end": 1073.56,
+    "text": " sollen, darunter den von VW in Niedersachsen und Tesla in Brandenburg. So soll ein Teil der",
+    "tokens": [
+      51020, 24713, 11, 4072, 21777, 1441, 2957, 691, 54, 294, 426, 1091, 433,
+      31625, 674, 13666, 294, 11119, 268, 8342, 13, 407, 7114, 1343, 16357,
+      1163, 51386
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09971305167320932,
+    "compression_ratio": 1.4324324324324325,
+    "no_speech_prob": 0.2809296250343323
+  },
+  {
+    "id": 159,
+    "seek": 105312,
+    "start": 1073.56,
+    "end": 1079.52,
+    "text": " deutschen Industrie weniger anf\u00e4llig f\u00fcr internationale Krisen werden. Aber k\u00f6nnte man",
+    "tokens": [
+      51386, 39707, 16018, 5469, 23224, 33709, 10053, 328, 2959, 19257, 1220,
+      28486, 268, 4604, 13, 5992, 17646, 587, 51684
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09971305167320932,
+    "compression_ratio": 1.4324324324324325,
+    "no_speech_prob": 0.2809296250343323
+  },
+  {
+    "id": 160,
+    "seek": 107952,
+    "start": 1079.52,
+    "end": 1085.48,
+    "text": " beispielsweise auch Jeans wieder in Europa produzieren lassen? Florian Sachs von der",
+    "tokens": [
+      50364, 40152, 2168, 2588, 599, 6216, 294, 16642, 28093, 5695, 16168, 30,
+      8328, 952, 25626, 82, 2957, 1163, 50662
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13441345179192374,
+    "compression_ratio": 1.5218855218855218,
+    "no_speech_prob": 0.19125866889953613
+  },
+  {
+    "id": 161,
+    "seek": 107952,
+    "start": 1085.48,
+    "end": 1091.16,
+    "text": " Universit\u00e4t K\u00f6ln sieht das durchaus. Wie sehe eine deutsche Jeansfabrik aus?",
+    "tokens": [
+      50662, 14052, 14053, 591, 13072, 77, 14289, 1482, 42840, 13, 9233, 35995,
+      3018, 47502, 2588, 599, 69, 455, 14456, 3437, 30, 50946
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13441345179192374,
+    "compression_ratio": 1.5218855218855218,
+    "no_speech_prob": 0.19125866889953613
+  },
+  {
+    "id": 162,
+    "seek": 107952,
+    "start": 1091.16,
+    "end": 1097.16,
+    "text": " Hoch technologisiert, um die Arbeitskosten m\u00f6glichst gering zu halten und trotzdem sind",
+    "tokens": [
+      50946, 29193, 1537, 1132, 42266, 11, 1105, 978, 23262, 74, 18946, 44850,
+      290, 1794, 2164, 27184, 674, 28325, 3290, 51246
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13441345179192374,
+    "compression_ratio": 1.5218855218855218,
+    "no_speech_prob": 0.19125866889953613
+  },
+  {
+    "id": 163,
+    "seek": 107952,
+    "start": 1097.16,
+    "end": 1102.8799999999999,
+    "text": " diese Produkte aber deutlich teurer als importierte Ware. Und viele Menschen sind vielleicht auch",
+    "tokens": [
+      51246, 6705, 11793, 18844, 4340, 24344, 535, 9858, 3907, 974, 23123,
+      49978, 13, 2719, 9693, 8397, 3290, 12547, 2168, 51532
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13441345179192374,
+    "compression_ratio": 1.5218855218855218,
+    "no_speech_prob": 0.19125866889953613
+  },
+  {
+    "id": 164,
+    "seek": 107952,
+    "start": 1102.8799999999999,
+    "end": 1107.4,
+    "text": " finanziell nicht in der Lage, dann die Entscheidung zu treffen und ein Produkt zu kaufen, was doppelt",
+    "tokens": [
+      51532, 3682, 3283, 285, 1979, 294, 1163, 41555, 11, 3594, 978, 44667,
+      2164, 37620, 674, 1343, 44599, 2164, 42083, 11, 390, 44862, 2018, 51758
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13441345179192374,
+    "compression_ratio": 1.5218855218855218,
+    "no_speech_prob": 0.19125866889953613
+  },
+  {
+    "id": 165,
+    "seek": 110740,
+    "start": 1107.4,
+    "end": 1111.64,
+    "text": " so teuer ist und daf\u00fcr aus Deutschland kommt und diese Probleme in der Lieferkette nicht hat.",
+    "tokens": [
+      50364, 370, 535, 5486, 1418, 674, 13747, 3437, 14802, 10047, 674, 6705,
+      32891, 294, 1163, 11197, 612, 74, 3007, 1979, 2385, 13, 50576
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13981106749966613,
+    "compression_ratio": 1.548951048951049,
+    "no_speech_prob": 0.18676027655601501
+  },
+  {
+    "id": 166,
+    "seek": 110740,
+    "start": 1111.64,
+    "end": 1117.92,
+    "text": " Eine weitere M\u00f6glichkeit Lieferketten zu optimieren bzw. sie robuster zu machen,",
+    "tokens": [
+      50576, 17664, 30020, 30662, 11197, 612, 5758, 1147, 2164, 5028, 5695,
+      39998, 13, 2804, 3870, 8393, 2164, 7069, 11, 50890
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13981106749966613,
+    "compression_ratio": 1.548951048951049,
+    "no_speech_prob": 0.18676027655601501
+  },
+  {
+    "id": 167,
+    "seek": 110740,
+    "start": 1117.92,
+    "end": 1123.52,
+    "text": " ist die erh\u00f6hte Lagerhaltung. Bei Medikamenten aus China und Indien zum Beispiel.",
+    "tokens": [
+      50890, 1418, 978, 49058, 23904, 441, 3557, 20731, 1063, 13, 16188, 3982,
+      1035, 2466, 268, 3437, 3533, 674, 2333, 1053, 5919, 13772, 13, 51170
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13981106749966613,
+    "compression_ratio": 1.548951048951049,
+    "no_speech_prob": 0.18676027655601501
+  },
+  {
+    "id": 168,
+    "seek": 110740,
+    "start": 1123.52,
+    "end": 1129.8400000000001,
+    "text": " Wenn man das m\u00f6chte, dann muss man das auf irgendeiner Weise verhandeln, dass die Krankenkassen,",
+    "tokens": [
+      51170, 7899, 587, 1482, 14570, 11, 3594, 6425, 587, 1482, 2501, 3418,
+      27429, 4564, 41947, 1306, 5543, 9878, 11, 2658, 978, 39950, 74, 8356, 11,
+      51486
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13981106749966613,
+    "compression_ratio": 1.548951048951049,
+    "no_speech_prob": 0.18676027655601501
+  },
+  {
+    "id": 169,
+    "seek": 110740,
+    "start": 1129.8400000000001,
+    "end": 1134.52,
+    "text": " die dort Vertr\u00e4ge mit den Pharmaunternehmen abschlie\u00dfen, das mit aufnehmen m\u00fcssen,",
+    "tokens": [
+      51486, 978, 15775, 21044, 40917, 2194, 1441, 2623, 36159, 21777, 14669,
+      1950, 339, 38665, 11, 1482, 2194, 2501, 14669, 9013, 11, 51720
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13981106749966613,
+    "compression_ratio": 1.548951048951049,
+    "no_speech_prob": 0.18676027655601501
+  },
+  {
+    "id": 170,
+    "seek": 113452,
+    "start": 1134.68,
+    "end": 1141.32,
+    "text": " solche Regelungen, dass auch solche Best\u00e4nde vorgehalten werden. Und im Zweifelsfalle wird die Kosten,",
+    "tokens": [
+      50372, 29813, 33139, 5084, 11, 2658, 2168, 29813, 9752, 26973, 4245, 432,
+      15022, 4604, 13, 2719, 566, 32475, 351, 1625, 6691, 68, 4578, 978, 47391,
+      11, 50704
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1828330562960717,
+    "compression_ratio": 1.6598639455782314,
+    "no_speech_prob": 0.2868846356868744
+  },
+  {
+    "id": 171,
+    "seek": 113452,
+    "start": 1141.32,
+    "end": 1146.72,
+    "text": " die dadurch entstehen, denn Sicherheitsbest\u00e4nde sind ja nichts anderes als Produkte, die irgendwo",
+    "tokens": [
+      50704, 978, 35472, 35955, 2932, 11, 10471, 25292, 24260, 25331, 26973,
+      3290, 2784, 13004, 31426, 3907, 11793, 18844, 11, 978, 40865, 50974
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1828330562960717,
+    "compression_ratio": 1.6598639455782314,
+    "no_speech_prob": 0.2868846356868744
+  },
+  {
+    "id": 172,
+    "seek": 113452,
+    "start": 1146.72,
+    "end": 1151.8799999999999,
+    "text": " in einem Lager liegen, die verursachen Kosten und sei es nur die Miete oder die Bewachung dieses",
+    "tokens": [
+      50974, 294, 6827, 441, 3557, 35100, 11, 978, 1306, 2156, 11646, 47391,
+      674, 10842, 785, 4343, 978, 376, 40462, 4513, 978, 40512, 608, 1063,
+      12113, 51232
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1828330562960717,
+    "compression_ratio": 1.6598639455782314,
+    "no_speech_prob": 0.2868846356868744
+  },
+  {
+    "id": 173,
+    "seek": 113452,
+    "start": 1151.8799999999999,
+    "end": 1156.72,
+    "text": " Lagers von den eigentlichen gebundenen Kapital im Produkt, gar nicht zu sprechen,",
+    "tokens": [
+      51232, 441, 8776, 2957, 1441, 10926, 268, 21125, 10028, 268, 21216, 1686,
+      566, 44599, 11, 3691, 1979, 2164, 27853, 11, 51474
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1828330562960717,
+    "compression_ratio": 1.6598639455782314,
+    "no_speech_prob": 0.2868846356868744
+  },
+  {
+    "id": 174,
+    "seek": 113452,
+    "start": 1156.72,
+    "end": 1162.6399999999999,
+    "text": " irgendwie muss die Kosten, die daf\u00fcr anfallen, am Ende bezahlen und durch die starke Verhandlungsposition",
+    "tokens": [
+      51474, 20759, 6425, 978, 47391, 11, 978, 13747, 364, 24425, 11, 669,
+      15152, 10782, 21128, 674, 7131, 978, 3543, 330, 4281, 5543, 17850, 4952,
+      5830, 51770
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1828330562960717,
+    "compression_ratio": 1.6598639455782314,
+    "no_speech_prob": 0.2868846356868744
+  },
+  {
+    "id": 175,
+    "seek": 116264,
+    "start": 1162.76,
+    "end": 1168.2,
+    "text": " der Pharmakonzerne ist schon davon auszugehen, dass am Ende dann die Konsumenten, in dem Fall die",
+    "tokens": [
+      50370, 1163, 2623, 36159, 18295, 4527, 716, 1418, 4981, 18574, 3437,
+      46285, 2932, 11, 2658, 669, 15152, 3594, 978, 48163, 2206, 268, 11, 294,
+      1371, 7465, 978, 50642
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13984690579501066,
+    "compression_ratio": 1.5113636363636365,
+    "no_speech_prob": 0.0015730237355455756
+  },
+  {
+    "id": 176,
+    "seek": 116264,
+    "start": 1168.2,
+    "end": 1175.88,
+    "text": " Krankenversicherten, dann h\u00f6here Kosten zu zahlen h\u00e4tten. Die Bedeutung von globalen Lieferketten",
+    "tokens": [
+      50642, 39950, 840, 480, 39990, 11, 3594, 13531, 6703, 47391, 2164, 710,
+      21128, 33278, 13, 3229, 363, 4858, 325, 1063, 2957, 4338, 268, 11197, 612,
+      5758, 1147, 51026
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13984690579501066,
+    "compression_ratio": 1.5113636363636365,
+    "no_speech_prob": 0.0015730237355455756
+  },
+  {
+    "id": 177,
+    "seek": 116264,
+    "start": 1175.88,
+    "end": 1181.8400000000001,
+    "text": " geht weit \u00fcber das hinaus, was wir mit ihnen verbinden. Sie erm\u00f6glichen nicht nur den Warentransport",
+    "tokens": [
+      51026, 7095, 15306, 4502, 1482, 46056, 11, 390, 1987, 2194, 24623, 9595,
+      10291, 13, 3559, 25253, 16277, 268, 1979, 4343, 1441, 343, 1898, 25392,
+      2707, 51324
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13984690579501066,
+    "compression_ratio": 1.5113636363636365,
+    "no_speech_prob": 0.0015730237355455756
+  },
+  {
+    "id": 178,
+    "seek": 116264,
+    "start": 1181.8400000000001,
+    "end": 1188.8000000000002,
+    "text": " quer \u00fcber den Globus, sie halten auch unser System am Laufen. Sie bedienen unsere Bequemlichkeit,",
+    "tokens": [
+      51324, 7083, 4502, 1441, 10786, 21441, 11, 2804, 27184, 2168, 12977, 8910,
+      669, 441, 20748, 13, 3559, 2901, 22461, 14339, 879, 358, 443, 41096, 11,
+      51672
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13984690579501066,
+    "compression_ratio": 1.5113636363636365,
+    "no_speech_prob": 0.0015730237355455756
+  },
+  {
+    "id": 179,
+    "seek": 118880,
+    "start": 1188.8,
+    "end": 1195.76,
+    "text": " garantieren den \u00dcberfluss, kurbeln unseren Konsum an. Wollen wir wirklich, dass Lieferketten",
+    "tokens": [
+      50364, 22251, 5695, 1441, 18086, 3423, 2023, 11, 10072, 5390, 77, 25305,
+      48163, 449, 364, 13, 343, 26669, 1987, 9696, 11, 2658, 11197, 612, 5758,
+      1147, 50712
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1304875708915092,
+    "compression_ratio": 1.5354330708661417,
+    "no_speech_prob": 0.0346047542989254
+  },
+  {
+    "id": 180,
+    "seek": 118880,
+    "start": 1195.76,
+    "end": 1201.72,
+    "text": " sicherer, transparenter und nachhaltiger werden, m\u00fcssen wir unser Verbraucherverhalten \u00fcberdenken.",
+    "tokens": [
+      50712, 18623, 260, 11, 16165, 391, 674, 5168, 20731, 4810, 4604, 11, 9013,
+      1987, 12977, 4281, 6198, 41843, 331, 15022, 4502, 1556, 2653, 13, 51010
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1304875708915092,
+    "compression_ratio": 1.5354330708661417,
+    "no_speech_prob": 0.0346047542989254
+  },
+  {
+    "id": 181,
+    "seek": 118880,
+    "start": 1201.72,
+    "end": 1207.8,
+    "text": " Axel Schulte. Letztlich am Ende des Tages sind wir ja diejenigen, die die Lieferketten erst treiben.",
+    "tokens": [
+      51010, 20118, 338, 2065, 723, 68, 13, 961, 2682, 1739, 669, 15152, 730,
+      33601, 3290, 1987, 2784, 978, 48176, 11, 978, 978, 11197, 612, 5758, 1147,
+      11301, 2192, 13771, 13, 51314
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1304875708915092,
+    "compression_ratio": 1.5354330708661417,
+    "no_speech_prob": 0.0346047542989254
+  },
+  {
+    "id": 182,
+    "seek": 118880,
+    "start": 1207.8,
+    "end": 1213.0,
+    "text": " Jede Lieferkette braucht zun\u00e4chst mal einen Bedarf. Und wir, jeder einzelne von uns definiert",
+    "tokens": [
+      51314, 508, 4858, 11197, 612, 74, 3007, 22623, 710, 42121, 2806, 4891,
+      19893, 30224, 13, 2719, 1987, 11, 19610, 36731, 716, 2957, 2693, 1561,
+      4859, 51574
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1304875708915092,
+    "compression_ratio": 1.5354330708661417,
+    "no_speech_prob": 0.0346047542989254
+  },
+  {
+    "id": 183,
+    "seek": 121300,
+    "start": 1213.0,
+    "end": 1218.8,
+    "text": " diesen Bedarf. Also \u00fcbrigens auch, wie schnell wir letztlich die Produkte, die wir bestellen,",
+    "tokens": [
+      50364, 12862, 19893, 30224, 13, 2743, 38215, 2168, 11, 3355, 17589, 1987,
+      35262, 1739, 978, 11793, 18844, 11, 978, 1987, 1151, 8581, 11, 50654
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16313742618171537,
+    "compression_ratio": 1.4817813765182186,
+    "no_speech_prob": 0.1519164890050888
+  },
+  {
+    "id": 184,
+    "seek": 121300,
+    "start": 1218.8,
+    "end": 1224.0,
+    "text": " an der Haust\u00fcr haben wollen. Wir wollen alles im Grunde jederzeit, am besten sofort.",
+    "tokens": [
+      50654, 364, 1163, 4064, 381, 1655, 3084, 11253, 13, 4347, 11253, 7874,
+      566, 13941, 68, 19610, 13712, 11, 669, 30930, 33168, 13, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16313742618171537,
+    "compression_ratio": 1.4817813765182186,
+    "no_speech_prob": 0.1519164890050888
+  },
+  {
+    "id": 185,
+    "seek": 121300,
+    "start": 1224.0,
+    "end": 1231.08,
+    "text": " Mit jedem Kauf im Onlineshop aktivieren wir eine Lieferkette. Welchen Weg legt unser Produkt",
+    "tokens": [
+      50914, 10821, 36538, 44590, 566, 1282, 11045, 9050, 31658, 5695, 1987,
+      3018, 11197, 612, 74, 3007, 13, 3778, 2470, 18919, 1676, 83, 12977, 44599,
+      51268
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16313742618171537,
+    "compression_ratio": 1.4817813765182186,
+    "no_speech_prob": 0.1519164890050888
+  },
+  {
+    "id": 186,
+    "seek": 121300,
+    "start": 1231.08,
+    "end": 1238.16,
+    "text": " dabei zur\u00fcck? Wer hat es gefertigt und unter welchen Bedingungen? Solche Fragen sollten wir",
+    "tokens": [
+      51268, 14967, 15089, 30, 14255, 2385, 785, 1519, 34784, 5828, 674, 8662,
+      2214, 2470, 363, 9794, 5084, 30, 7026, 1876, 25588, 29096, 1987, 51622
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16313742618171537,
+    "compression_ratio": 1.4817813765182186,
+    "no_speech_prob": 0.1519164890050888
+  },
+  {
+    "id": 187,
+    "seek": 123816,
+    "start": 1238.24,
+    "end": 1243.96,
+    "text": " uns \u00f6fter stellen, um die Produkte vielleicht zu w\u00e4hlen, wo man eben vertrauen kann, vertrauen",
+    "tokens": [
+      50368, 2693, 4044, 828, 24407, 11, 1105, 978, 11793, 18844, 12547, 2164,
+      24787, 6698, 11, 6020, 587, 11375, 6509, 46640, 4028, 11, 6509, 46640,
+      50654
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13760186488332313,
+    "compression_ratio": 1.6535211267605634,
+    "no_speech_prob": 0.2562008500099182
+  },
+  {
+    "id": 188,
+    "seek": 123816,
+    "start": 1243.96,
+    "end": 1248.44,
+    "text": " m\u00f6chte darauf, dass sie eben nachhaltig sind, dass sie bestimmte Anforderungen erf\u00fcllen. Ich glaube,",
+    "tokens": [
+      50654, 14570, 18654, 11, 2658, 2804, 11375, 5168, 20731, 328, 3290, 11,
+      2658, 2804, 35180, 975, 1107, 30943, 5084, 20228, 774, 19191, 13, 3141,
+      13756, 11, 50878
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13760186488332313,
+    "compression_ratio": 1.6535211267605634,
+    "no_speech_prob": 0.2562008500099182
+  },
+  {
+    "id": 189,
+    "seek": 123816,
+    "start": 1248.44,
+    "end": 1253.2,
+    "text": " das ist wichtig. Es wird das Problem aber nicht l\u00f6sen, weil im Grunde der Bedarf steigen wird.",
+    "tokens": [
+      50878, 1482, 1418, 13621, 13, 2313, 4578, 1482, 11676, 4340, 1979, 25209,
+      6748, 11, 7689, 566, 13941, 68, 1163, 19893, 30224, 2126, 3213, 4578, 13,
+      51116
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13760186488332313,
+    "compression_ratio": 1.6535211267605634,
+    "no_speech_prob": 0.2562008500099182
+  },
+  {
+    "id": 190,
+    "seek": 123816,
+    "start": 1253.2,
+    "end": 1257.96,
+    "text": " Auch die Geschwindigkeit wird steigen, auch global gesehen. Es gibt eben viele L\u00e4nder und Regionen,",
+    "tokens": [
+      51116, 13382, 978, 14241, 12199, 16626, 4578, 2126, 3213, 11, 2168, 4338,
+      21535, 13, 2313, 6089, 11375, 9693, 43441, 674, 4791, 17068, 11, 51354
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13760186488332313,
+    "compression_ratio": 1.6535211267605634,
+    "no_speech_prob": 0.2562008500099182
+  },
+  {
+    "id": 191,
+    "seek": 123816,
+    "start": 1257.96,
+    "end": 1263.28,
+    "text": " die sie auch noch im Entwicklungsstatus befinden. Und diese Bedarfe, die treiben nat\u00fcrlich auch",
+    "tokens": [
+      51354, 978, 2804, 2168, 3514, 566, 29397, 49876, 19435, 301, 21312, 10291,
+      13, 2719, 6705, 19893, 289, 2106, 11, 978, 2192, 13771, 8762, 2168, 51620
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13760186488332313,
+    "compression_ratio": 1.6535211267605634,
+    "no_speech_prob": 0.2562008500099182
+  },
+  {
+    "id": 192,
+    "seek": 123816,
+    "start": 1263.28,
+    "end": 1267.24,
+    "text": " letztlich wiederum die Lieferketten und die Fertigung. Wir haben keine andere Wahl als besser",
+    "tokens": [
+      51620, 35262, 1739, 6216, 449, 978, 11197, 612, 5758, 1147, 674, 978, 479,
+      911, 21034, 13, 4347, 3084, 9252, 10490, 27437, 3907, 18021, 51818
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13760186488332313,
+    "compression_ratio": 1.6535211267605634,
+    "no_speech_prob": 0.2562008500099182
+  },
+  {
+    "id": 193,
+    "seek": 126724,
+    "start": 1267.32,
+    "end": 1272.36,
+    "text": " zu werden, sowohl in den Fertigungsverfahren, aber eben auch in den Beschaffungsprozessen und in",
+    "tokens": [
+      50368, 2164, 4604, 11, 19766, 12768, 294, 1441, 479, 911, 328, 5846, 331,
+      34394, 11, 4340, 11375, 2168, 294, 1441, 30860, 2518, 5846, 4318, 89,
+      12431, 674, 294, 50620
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1049051109803926,
+    "compression_ratio": 1.5933609958506223,
+    "no_speech_prob": 0.0037064701318740845
+  },
+  {
+    "id": 194,
+    "seek": 126724,
+    "start": 1272.36,
+    "end": 1280.04,
+    "text": " den Lieferketten. Daf\u00fcr pl\u00e4diert Axel Schulte. Lieferketten perfektionieren. Dazu sollten wir",
+    "tokens": [
+      50620, 1441, 11197, 612, 5758, 1147, 13, 35865, 499, 16837, 4859, 20118,
+      338, 2065, 723, 68, 13, 11197, 612, 5758, 1147, 49134, 313, 5695, 13,
+      34667, 29096, 1987, 51004
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1049051109803926,
+    "compression_ratio": 1.5933609958506223,
+    "no_speech_prob": 0.0037064701318740845
+  },
+  {
+    "id": 195,
+    "seek": 126724,
+    "start": 1280.04,
+    "end": 1286.72,
+    "text": " unser Produktionssystem regionalisieren, so weit es geht, weniger konsumieren und mehr Waren",
+    "tokens": [
+      51004, 12977, 44599, 626, 28215, 10964, 271, 5695, 11, 370, 15306, 785,
+      7095, 11, 23224, 27896, 449, 5695, 674, 5417, 343, 4484, 51338
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1049051109803926,
+    "compression_ratio": 1.5933609958506223,
+    "no_speech_prob": 0.0037064701318740845
+  },
+  {
+    "id": 196,
+    "seek": 126724,
+    "start": 1286.72,
+    "end": 1293.84,
+    "text": " recyceln. Denn je weniger Produkte wir von weit her kaufen, desto weniger strapazieren wir globale",
+    "tokens": [
+      51338, 12036, 4933, 77, 13, 19027, 1506, 23224, 11793, 18844, 1987, 2957,
+      15306, 720, 42083, 11, 2677, 78, 23224, 18359, 921, 5695, 1987, 16125,
+      1220, 51694
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1049051109803926,
+    "compression_ratio": 1.5933609958506223,
+    "no_speech_prob": 0.0037064701318740845
+  },
+  {
+    "id": 197,
+    "seek": 129384,
+    "start": 1293.84,
+    "end": 1303.32,
+    "text": " Handelsketten. Aber die Realit\u00e4t sieht momentan anders aus. Wir wollen immer mehr, alles am besten",
+    "tokens": [
+      50364, 8854, 1625, 5758, 1147, 13, 5992, 978, 8467, 14053, 14289, 1623,
+      282, 17999, 3437, 13, 4347, 11253, 5578, 5417, 11, 7874, 669, 30930, 50838
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09371439615885417,
+    "compression_ratio": 1.5038167938931297,
+    "no_speech_prob": 0.12396224588155746
+  },
+  {
+    "id": 198,
+    "seek": 129384,
+    "start": 1303.32,
+    "end": 1310.1599999999999,
+    "text": " sofort. Die Ware soll nachhaltig gefertigt und auch noch g\u00fcnstig sein. Wenn wir uns Gedanken machen",
+    "tokens": [
+      50838, 33168, 13, 3229, 49978, 7114, 5168, 20731, 328, 1519, 34784, 5828,
+      674, 2168, 3514, 14472, 372, 328, 6195, 13, 7899, 1987, 2693, 44612, 7069,
+      51180
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09371439615885417,
+    "compression_ratio": 1.5038167938931297,
+    "no_speech_prob": 0.12396224588155746
+  },
+  {
+    "id": 199,
+    "seek": 129384,
+    "start": 1310.1599999999999,
+    "end": 1316.0,
+    "text": " zu den Hintergr\u00fcnden, uns klar wird, was alles passieren muss, damit ein online bestelltes",
+    "tokens": [
+      51180, 2164, 1441, 35006, 861, 27687, 11, 2693, 14743, 4578, 11, 390,
+      7874, 46223, 6425, 11, 9479, 1343, 2950, 1151, 898, 7269, 51472
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09371439615885417,
+    "compression_ratio": 1.5038167938931297,
+    "no_speech_prob": 0.12396224588155746
+  },
+  {
+    "id": 200,
+    "seek": 129384,
+    "start": 1316.0,
+    "end": 1322.84,
+    "text": " Paket am Folgetag bei uns an der Haust\u00fcr steht, dann m\u00fcssten wir unsere Anspr\u00fcche neu \u00fcberdenken.",
+    "tokens": [
+      51472, 11543, 302, 669, 15255, 847, 559, 4643, 2693, 364, 1163, 4064, 381,
+      1655, 16361, 11, 3594, 28802, 6266, 1987, 14339, 14590, 48715, 1876,
+      22510, 4502, 1556, 2653, 13, 51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09371439615885417,
+    "compression_ratio": 1.5038167938931297,
+    "no_speech_prob": 0.12396224588155746
+  },
+  {
+    "id": 201,
+    "seek": 132384,
+    "start": 1323.84,
+    "end": 1331.9199999999998,
+    "text": " Brigitte Kramer, der Welthandel am Wendepunkt. Lieferketten m\u00fcssen robuster und nachhaltiger",
+    "tokens": [
+      50364, 29675, 9786, 591, 44772, 11, 1163, 3778, 392, 26406, 669, 343, 521,
+      595, 14797, 13, 11197, 612, 5758, 1147, 9013, 3870, 8393, 674, 5168,
+      20731, 4810, 50768
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1693328994888443,
+    "compression_ratio": 1.463235294117647,
+    "no_speech_prob": 0.16004838049411774
+  },
+  {
+    "id": 202,
+    "seek": 132384,
+    "start": 1331.9199999999998,
+    "end": 1337.1599999999999,
+    "text": " werden. Mehr Radio Wissen folgen gibt's in der ARD-Audiothek und \u00fcberall dort, wo's Podcasts",
+    "tokens": [
+      50768, 4604, 13, 30782, 17296, 343, 10987, 3339, 1766, 6089, 311, 294,
+      1163, 8943, 35, 12, 15591, 6471, 675, 74, 674, 38035, 15775, 11, 6020,
+      311, 29972, 82, 51030
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1693328994888443,
+    "compression_ratio": 1.463235294117647,
+    "no_speech_prob": 0.16004838049411774
+  },
+  {
+    "id": 203,
+    "seek": 132384,
+    "start": 1337.1599999999999,
+    "end": 1341.9599999999998,
+    "text": " gibt. Zum Beispiel auch eine Folge \u00fcber die Geschichte der Steuern oder eine mit dem Titel",
+    "tokens": [
+      51030, 6089, 13, 23906, 13772, 2168, 3018, 43597, 4502, 978, 28896, 1163,
+      3592, 84, 1248, 4513, 3018, 2194, 1371, 14489, 338, 51270
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1693328994888443,
+    "compression_ratio": 1.463235294117647,
+    "no_speech_prob": 0.16004838049411774
+  },
+  {
+    "id": 204,
+    "seek": 132384,
+    "start": 1341.9599999999998,
+    "end": 1347.84,
+    "text": " Grenzen und Mauern. Warum sich Staaten abschotten. Mehr Informationen zu diesem St\u00fcck bekommen Sie",
+    "tokens": [
+      51270, 24913, 2904, 674, 32858, 1248, 13, 25541, 3041, 16959, 7186, 1950,
+      339, 310, 1147, 13, 30782, 46753, 2164, 10975, 31146, 19256, 3559, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1693328994888443,
+    "compression_ratio": 1.463235294117647,
+    "no_speech_prob": 0.16004838049411774
+  },
+  {
+    "id": 205,
+    "seek": 132384,
+    "start": 1347.84,
+    "end": 1348.56,
+    "text": " in den Show Notes.",
+    "tokens": [51564, 294, 1441, 6895, 41360, 13, 51600],
+    "temperature": 0.0,
+    "avg_logprob": -0.1693328994888443,
+    "compression_ratio": 1.463235294117647,
+    "no_speech_prob": 0.16004838049411774
+  }
+]

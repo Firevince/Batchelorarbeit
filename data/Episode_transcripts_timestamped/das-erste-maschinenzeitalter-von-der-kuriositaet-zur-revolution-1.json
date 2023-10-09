@@ -1,0 +1,3193 @@
+[
+  {
+    "id": 0,
+    "seek": 0,
+    "start": 0.0,
+    "end": 13.92,
+    "text": " Radio Wissen. Die ganze Welt des Wissens. Ein Podcast von bayern 2 in der ARD-Audiothek.",
+    "tokens": [
+      50364, 17296, 343, 10987, 13, 3229, 18898, 14761, 730, 343, 891, 694, 13,
+      6391, 29972, 2957, 13642, 1248, 568, 294, 1163, 8943, 35, 12, 15591, 6471,
+      675, 74, 13, 51060
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2382568291255406,
+    "compression_ratio": 1.2066666666666668,
+    "no_speech_prob": 0.11547069251537323
+  },
+  {
+    "id": 1,
+    "seek": 0,
+    "start": 13.92,
+    "end": 27.2,
+    "text": " Mein Name ist Frank Littmann. Ich bin Kurator f\u00fcr Automatisierungstechnik hier im Deutschen",
+    "tokens": [
+      51060, 18382, 13866, 1418, 6823, 441, 593, 14912, 13, 3141, 5171, 16481,
+      1639, 2959, 24619, 267, 32531, 2941, 1377, 1035, 3296, 566, 45070, 51724
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2382568291255406,
+    "compression_ratio": 1.2066666666666668,
+    "no_speech_prob": 0.11547069251537323
+  },
+  {
+    "id": 2,
+    "seek": 2720,
+    "start": 27.2,
+    "end": 33.2,
+    "text": " Museum. Ich lese jetzt mal einen sch\u00f6nen Satz von Hermann von Helmholtz. Das war ein Physiker in",
+    "tokens": [
+      50364, 10967, 13, 3141, 287, 1130, 4354, 2806, 4891, 25032, 2866, 5344,
+      89, 2957, 21842, 969, 2957, 6128, 76, 71, 4837, 89, 13, 2846, 1516, 1343,
+      15542, 17314, 294, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1447926718613197,
+    "compression_ratio": 1.4269662921348314,
+    "no_speech_prob": 0.8101521730422974
+  },
+  {
+    "id": 3,
+    "seek": 2720,
+    "start": 33.2,
+    "end": 41.4,
+    "text": " Berlin. Der hat 1854 mit Blick auf die Automaten, die es damals gab, gesagt, jetzt zitiere ich,",
+    "tokens": [
+      50664, 13848, 13, 5618, 2385, 2443, 19563, 2194, 32556, 2501, 978, 24619,
+      7186, 11, 978, 785, 26067, 17964, 11, 12260, 11, 4354, 710, 8707, 323,
+      1893, 11, 51074
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1447926718613197,
+    "compression_ratio": 1.4269662921348314,
+    "no_speech_prob": 0.8101521730422974
+  },
+  {
+    "id": 4,
+    "seek": 2720,
+    "start": 41.4,
+    "end": 48.4,
+    "text": " das Ziel also, welche sich die erfinderischen K\u00f6pfe der vergangenen Jahrhunderte vorsteckten,",
+    "tokens": [
+      51074, 1482, 25391, 611, 11, 24311, 3041, 978, 20228, 5669, 6282, 43197,
+      79, 2106, 1163, 20209, 10784, 268, 11674, 71, 997, 10634, 4245, 2941, 547,
+      1147, 11, 51424
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1447926718613197,
+    "compression_ratio": 1.4269662921348314,
+    "no_speech_prob": 0.8101521730422974
+  },
+  {
+    "id": 5,
+    "seek": 2720,
+    "start": 48.4,
+    "end": 54.56,
+    "text": " war k\u00fchn gew\u00e4hlt und wurde mit einem Aufwande von Scharfsinn verfolgt, der nicht wenig zur",
+    "tokens": [
+      51424, 1516, 350, 7254, 77, 6906, 43376, 674, 11191, 2194, 6827, 9462, 86,
+      11123, 2957, 2065, 289, 16883, 7729, 1306, 7082, 10463, 11, 1163, 1979,
+      20911, 7147, 51732
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1447926718613197,
+    "compression_ratio": 1.4269662921348314,
+    "no_speech_prob": 0.8101521730422974
+  },
+  {
+    "id": 6,
+    "seek": 5456,
+    "start": 54.56,
+    "end": 60.440000000000005,
+    "text": " Bereicherung der mechanischen Mittel beigetragen hat, mit deren Hilfe die sp\u00e4tere Zeit einen",
+    "tokens": [
+      50364, 17684, 48659, 1163, 4236, 6282, 35079, 312, 328, 302, 20663, 2385,
+      11, 2194, 48300, 37448, 978, 637, 3628, 323, 9394, 4891, 50658
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12011968971479058,
+    "compression_ratio": 1.634453781512605,
+    "no_speech_prob": 0.7410587072372437
+  },
+  {
+    "id": 7,
+    "seek": 5456,
+    "start": 60.440000000000005,
+    "end": 66.84,
+    "text": " fruchtbringenden Weg zu verfolgen verstand. Wir suchen jetzt nicht mehr solche Maschinen zu bauen,",
+    "tokens": [
+      50658, 431, 10084, 1443, 278, 8896, 18919, 2164, 1306, 7082, 1766, 1306,
+      1115, 13, 4347, 44470, 4354, 1979, 5417, 29813, 5224, 339, 5636, 2164,
+      43787, 11, 50978
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12011968971479058,
+    "compression_ratio": 1.634453781512605,
+    "no_speech_prob": 0.7410587072372437
+  },
+  {
+    "id": 8,
+    "seek": 5456,
+    "start": 66.84,
+    "end": 73.0,
+    "text": " welche die tausend verschiedenen Dienstleistungen eines Menschen vollziehen, sondern verlangen im",
+    "tokens": [
+      50978, 24311, 978, 1846, 301, 521, 41043, 43932, 46820, 5084, 18599, 8397,
+      15593, 28768, 11, 11465, 19441, 10784, 566, 51286
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12011968971479058,
+    "compression_ratio": 1.634453781512605,
+    "no_speech_prob": 0.7410587072372437
+  },
+  {
+    "id": 9,
+    "seek": 5456,
+    "start": 73.0,
+    "end": 79.56,
+    "text": " Gegenteil, dass eine Maschine eine Dienstleistung, aber anstelle von tausend Menschen, verrichtet.",
+    "tokens": [
+      51286, 27826, 1576, 388, 11, 2658, 3018, 5224, 36675, 3018, 43932, 46820,
+      1063, 11, 4340, 364, 372, 4434, 2957, 1846, 301, 521, 8397, 11, 1306,
+      12836, 302, 13, 51614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12011968971479058,
+    "compression_ratio": 1.634453781512605,
+    "no_speech_prob": 0.7410587072372437
+  },
+  {
+    "id": 10,
+    "seek": 7956,
+    "start": 79.56,
+    "end": 86.58,
+    "text": " Dieses Zitat ist so kompliziert formuliert, dass es f\u00fcr Nichtwissenschaftlerohren kaum",
+    "tokens": [
+      50364, 39201, 1176, 14032, 1418, 370, 24526, 43590, 49990, 4859, 11, 2658,
+      785, 2959, 22629, 86, 26657, 1918, 1445, 1095, 36443, 50715
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11417538569523739,
+    "compression_ratio": 1.515923566878981,
+    "no_speech_prob": 0.0018672971054911613
+  },
+  {
+    "id": 11,
+    "seek": 7956,
+    "start": 86.58,
+    "end": 92.32000000000001,
+    "text": " verst\u00e4ndlich ist. Dabei ist der Sinn denkbar einfach. Hermann von Helmholtz hielt die Maschinen und",
+    "tokens": [
+      50715, 1306, 16913, 1739, 1418, 13, 39606, 1418, 1163, 37962, 21285, 5356,
+      7281, 13, 21842, 969, 2957, 6128, 76, 71, 4837, 89, 276, 18940, 978, 5224,
+      339, 5636, 674, 51002
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11417538569523739,
+    "compression_ratio": 1.515923566878981,
+    "no_speech_prob": 0.0018672971054911613
+  },
+  {
+    "id": 12,
+    "seek": 7956,
+    "start": 92.32000000000001,
+    "end": 97.96000000000001,
+    "text": " Automaten seiner Zeit f\u00fcr grundverschieden von denen der Vergangenheit. Diese seien zwar oft",
+    "tokens": [
+      51002, 24619, 7186, 23114, 9394, 2959, 30886, 840, 40433, 2957, 19998,
+      1163, 26610, 10784, 8480, 13, 18993, 369, 1053, 19054, 11649, 51284
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11417538569523739,
+    "compression_ratio": 1.515923566878981,
+    "no_speech_prob": 0.0018672971054911613
+  },
+  {
+    "id": 13,
+    "seek": 7956,
+    "start": 97.96000000000001,
+    "end": 103.32000000000001,
+    "text": " genial konstruiert gewesen, h\u00e4tten aber letztlich nur den Selbstzweck des blo\u00dfen Funktionierens",
+    "tokens": [
+      51284, 48228, 34208, 894, 4859, 27653, 11, 33278, 4340, 35262, 1739, 4343,
+      1441, 29712, 89, 826, 547, 730, 1749, 8989, 11166, 9780, 811, 694, 51552
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11417538569523739,
+    "compression_ratio": 1.515923566878981,
+    "no_speech_prob": 0.0018672971054911613
+  },
+  {
+    "id": 14,
+    "seek": 7956,
+    "start": 103.32000000000001,
+    "end": 108.96000000000001,
+    "text": " erf\u00fcllt, indem sie zum Beispiel verbl\u00fcffend lebensecht einen Trompeter imitierten. Seien also",
+    "tokens": [
+      51552, 20228, 49976, 11, 37185, 2804, 5919, 13772, 1306, 5199, 774, 602,
+      521, 17111, 1288, 4701, 4891, 1765, 298, 7275, 260, 566, 270, 29632, 13,
+      1100, 1053, 611, 51834
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11417538569523739,
+    "compression_ratio": 1.515923566878981,
+    "no_speech_prob": 0.0018672971054911613
+  },
+  {
+    "id": 15,
+    "seek": 10896,
+    "start": 108.96,
+    "end": 115.72,
+    "text": " mehr oder weniger technische Spielerei gewesen. 100 Jahre sp\u00e4ter, also zu von Helmholtz Zeiten,",
+    "tokens": [
+      50364, 5417, 4513, 23224, 1537, 7864, 14266, 40256, 27653, 13, 2319,
+      15557, 24196, 11, 611, 2164, 2957, 6128, 76, 71, 4837, 89, 48334, 11,
+      50702
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09838305021587171,
+    "compression_ratio": 1.419607843137255,
+    "no_speech_prob": 0.0010003139032050967
+  },
+  {
+    "id": 16,
+    "seek": 10896,
+    "start": 115.72,
+    "end": 120.96,
+    "text": " st\u00fcnde beim Daseinszweck des Automaten und der Maschine dagegen nicht mehr der Showeffekt",
+    "tokens": [
+      50702, 342, 25596, 13922, 413, 651, 1292, 89, 826, 547, 730, 24619, 7186,
+      674, 1163, 5224, 36675, 45387, 1979, 5417, 1163, 6895, 30774, 8192, 50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09838305021587171,
+    "compression_ratio": 1.419607843137255,
+    "no_speech_prob": 0.0010003139032050967
+  },
+  {
+    "id": 17,
+    "seek": 10896,
+    "start": 120.96,
+    "end": 126.16,
+    "text": " im Vordergrund, sondern die N\u00fctzlichkeit. Insbesondere in Form m\u00f6glichst gro\u00dfer",
+    "tokens": [
+      50964, 566, 691, 4687, 23701, 11, 11465, 978, 426, 7695, 16813, 9238, 13,
+      9442, 44222, 294, 10126, 44850, 46220, 51224
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09838305021587171,
+    "compression_ratio": 1.419607843137255,
+    "no_speech_prob": 0.0010003139032050967
+  },
+  {
+    "id": 18,
+    "seek": 10896,
+    "start": 126.16,
+    "end": 135.56,
+    "text": " Arbeitserleichterung f\u00fcr m\u00f6glichst viele Menschen. Historisch betrachtet ist das freilich",
+    "tokens": [
+      51224, 23262, 260, 306, 1405, 260, 1063, 2959, 44850, 9693, 8397, 13,
+      25108, 5494, 778, 81, 48833, 1418, 1482, 2130, 388, 480, 51694
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09838305021587171,
+    "compression_ratio": 1.419607843137255,
+    "no_speech_prob": 0.0010003139032050967
+  },
+  {
+    "id": 19,
+    "seek": 13556,
+    "start": 135.76,
+    "end": 141.64000000000001,
+    "text": " nur teilweise richtig. Maschinen und Automaten existierten schon in der Antike. Fraglos dienten",
+    "tokens": [
+      50374, 4343, 46748, 13129, 13, 5224, 339, 5636, 674, 24619, 7186, 2514,
+      29632, 4981, 294, 1163, 5130, 1123, 13, 479, 3731, 9389, 1026, 317, 268,
+      50668
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10871959578060934,
+    "compression_ratio": 1.4627329192546583,
+    "no_speech_prob": 0.27487656474113464
+  },
+  {
+    "id": 20,
+    "seek": 13556,
+    "start": 141.64000000000001,
+    "end": 147.0,
+    "text": " die meisten davon auch wirklich nur dem Zweck, beim Publikum Staunen hervorzurufen. Da gab es",
+    "tokens": [
+      50668, 978, 29708, 18574, 2168, 9696, 4343, 1371, 32475, 547, 11, 13922,
+      21808, 13462, 449, 16959, 409, 268, 720, 8453, 50210, 19890, 13, 3933,
+      17964, 785, 50936
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10871959578060934,
+    "compression_ratio": 1.4627329192546583,
+    "no_speech_prob": 0.27487656474113464
+  },
+  {
+    "id": 21,
+    "seek": 13556,
+    "start": 147.0,
+    "end": 152.08,
+    "text": " zum Beispiel Tempeltore, die sich wie von Geisterhand von selbst \u00f6ffneten. Priesterstatuen,",
+    "tokens": [
+      50936, 5919, 13772, 8095, 79, 2018, 418, 11, 978, 3041, 3355, 2957, 2876,
+      1964, 5543, 2957, 13053, 4044, 602, 43462, 13, 8087, 3011, 19435, 7801,
+      11, 51190
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10871959578060934,
+    "compression_ratio": 1.4627329192546583,
+    "no_speech_prob": 0.27487656474113464
+  },
+  {
+    "id": 22,
+    "seek": 13556,
+    "start": 152.08,
+    "end": 158.0,
+    "text": " die ohne fremdes Zutun Trankopfer spendeten. Weihwasserautomaten mit M\u00fcnzeinwurf. Es gab",
+    "tokens": [
+      51190, 978, 15716, 2130, 76, 14792, 1176, 325, 409, 1765, 657, 404, 612,
+      3496, 19865, 13, 492, 4247, 48309, 1375, 298, 7186, 2194, 35840, 1381,
+      259, 31515, 13, 2313, 17964, 51486
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10871959578060934,
+    "compression_ratio": 1.4627329192546583,
+    "no_speech_prob": 0.27487656474113464
+  },
+  {
+    "id": 23,
+    "seek": 13556,
+    "start": 158.0,
+    "end": 163.88,
+    "text": " sogenannte Eolsb\u00e4lle. Sich dank der R\u00fccksto\u00dfkraft durch D\u00fcsen geleiteten Wasserdampf scheinbar",
+    "tokens": [
+      51486, 37467, 9358, 462, 19385, 65, 31447, 13, 47135, 35121, 1163, 35001,
+      20875, 2536, 47288, 7131, 41835, 6748, 20234, 16341, 268, 42998, 7783,
+      30157, 25690, 259, 5356, 51780
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10871959578060934,
+    "compression_ratio": 1.4627329192546583,
+    "no_speech_prob": 0.27487656474113464
+  },
+  {
+    "id": 24,
+    "seek": 16388,
+    "start": 163.88,
+    "end": 169.07999999999998,
+    "text": " wie von selbst drehende Metallkugeln. Andererseits verf\u00fcgten bereits die alten",
+    "tokens": [
+      50364, 3355, 2957, 13053, 274, 9017, 5445, 49447, 74, 697, 9878, 13, 400,
+      29566, 44033, 40660, 25644, 1147, 23703, 978, 41217, 50624
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11307250050937429,
+    "compression_ratio": 1.5422535211267605,
+    "no_speech_prob": 0.07151564210653305
+  },
+  {
+    "id": 25,
+    "seek": 16388,
+    "start": 169.07999999999998,
+    "end": 173.6,
+    "text": " Griechen \u00fcber mechanische Taxameter, die im Mietkutschergewerbe eine genaue",
+    "tokens": [
+      50624, 2606, 414, 2470, 4502, 4236, 7864, 23263, 335, 2398, 11, 978, 566,
+      376, 1684, 74, 3648, 6759, 432, 1554, 650, 3018, 1049, 64, 622, 50850
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11307250050937429,
+    "compression_ratio": 1.5422535211267605,
+    "no_speech_prob": 0.07151564210653305
+  },
+  {
+    "id": 26,
+    "seek": 16388,
+    "start": 173.6,
+    "end": 178.35999999999999,
+    "text": " Fahrpreisermittlung erm\u00f6glichten. Es gab Wasserm\u00fchlen, die nicht nur Korn malten,",
+    "tokens": [
+      50850, 19843, 3712, 271, 966, 593, 17850, 25253, 50023, 20238, 268, 13,
+      2313, 17964, 42998, 966, 7254, 6698, 11, 978, 1979, 4343, 591, 1865, 2806,
+      1147, 11, 51088
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11307250050937429,
+    "compression_ratio": 1.5422535211267605,
+    "no_speech_prob": 0.07151564210653305
+  },
+  {
+    "id": 27,
+    "seek": 16388,
+    "start": 178.35999999999999,
+    "end": 184.92,
+    "text": " sondern auch Felder bew\u00e4sserten oder die Energie f\u00fcr Holz- und Steins\u00e4gewerke lieferten. Es gab",
+    "tokens": [
+      51088, 11465, 2168, 13298, 1068, 17897, 49045, 39990, 4513, 978, 35309,
+      2959, 45455, 12, 674, 3592, 1292, 737, 432, 1554, 330, 4544, 612, 1147,
+      13, 2313, 17964, 51416
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11307250050937429,
+    "compression_ratio": 1.5422535211267605,
+    "no_speech_prob": 0.07151564210653305
+  },
+  {
+    "id": 28,
+    "seek": 16388,
+    "start": 184.92,
+    "end": 190.44,
+    "text": " mit der Muskelkraft von Tieren oder Menschen bewegte G\u00f6pel- und Laufr\u00e4der, die M\u00fchlen antrieben",
+    "tokens": [
+      51416, 2194, 1163, 3569, 7124, 47288, 2957, 314, 5695, 4513, 8397, 312,
+      12517, 975, 47894, 20071, 12, 674, 441, 9507, 11397, 1068, 11, 978, 376,
+      7254, 6698, 2511, 24027, 51692
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11307250050937429,
+    "compression_ratio": 1.5422535211267605,
+    "no_speech_prob": 0.07151564210653305
+  },
+  {
+    "id": 29,
+    "seek": 19044,
+    "start": 190.44,
+    "end": 196.88,
+    "text": " oder Baukr\u00e4ne. Auch Steine, Brands\u00e4tze oder Pfeile schleudernde oder abschie\u00dfende Gesch\u00fctze",
+    "tokens": [
+      50364, 4513, 28772, 42319, 716, 13, 13382, 3592, 533, 11, 11119, 82,
+      30179, 4513, 430, 2106, 794, 22664, 28230, 16404, 4513, 1950, 339, 39245,
+      5445, 14241, 7695, 1381, 50686
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12108184727093646,
+    "compression_ratio": 1.4822006472491909,
+    "no_speech_prob": 0.23333871364593506
+  },
+  {
+    "id": 30,
+    "seek": 19044,
+    "start": 196.88,
+    "end": 201.84,
+    "text": " m\u00fcssen trotz ihrer m\u00f6rderischen Bestimmung letztlich als Nutzmaschinen begriffen werden.",
+    "tokens": [
+      50686, 9013, 504, 18530, 23990, 275, 2311, 1068, 6282, 9752, 38412, 35262,
+      1739, 3907, 426, 12950, 3799, 339, 5636, 312, 32783, 268, 4604, 13, 50934
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12108184727093646,
+    "compression_ratio": 1.4822006472491909,
+    "no_speech_prob": 0.23333871364593506
+  },
+  {
+    "id": 31,
+    "seek": 19044,
+    "start": 201.84,
+    "end": 207.36,
+    "text": " Dar\u00fcber hinaus gab es von jeher Automaten und Maschinen, die sowohl n\u00fctzlich sein,",
+    "tokens": [
+      50934, 7803, 12670, 46056, 17964, 785, 2957, 1506, 511, 24619, 7186, 674,
+      5224, 339, 5636, 11, 978, 19766, 12768, 297, 7695, 16813, 6195, 11, 51210
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12108184727093646,
+    "compression_ratio": 1.4822006472491909,
+    "no_speech_prob": 0.23333871364593506
+  },
+  {
+    "id": 32,
+    "seek": 19044,
+    "start": 207.36,
+    "end": 213.07999999999998,
+    "text": " als auch Staunen hervorrufen konnten. In diese Kategorie geh\u00f6ren zum Beispiel die Anfang des",
+    "tokens": [
+      51210, 3907, 2168, 16959, 409, 268, 720, 8453, 894, 6570, 38216, 13, 682,
+      6705, 591, 2968, 17473, 13218, 26377, 5919, 13772, 978, 25856, 730, 51496
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12108184727093646,
+    "compression_ratio": 1.4822006472491909,
+    "no_speech_prob": 0.23333871364593506
+  },
+  {
+    "id": 33,
+    "seek": 19044,
+    "start": 213.07999999999998,
+    "end": 218.44,
+    "text": " 20. Jahrhunderts in einem Schiffswrack gefundenen \u00dcberreste des sogenannten Mechanismus von",
+    "tokens": [
+      51496, 945, 13, 11674, 71, 34267, 82, 294, 6827, 2065, 17643, 7449, 501,
+      36923, 268, 18086, 265, 2941, 730, 37467, 14970, 30175, 25327, 2957, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12108184727093646,
+    "compression_ratio": 1.4822006472491909,
+    "no_speech_prob": 0.23333871364593506
+  },
+  {
+    "id": 34,
+    "seek": 21844,
+    "start": 218.44,
+    "end": 224.92,
+    "text": " Antikythera. Das war ein astronomisch-technisches Wunderwerk, das wohl um die Mitte des ersten",
+    "tokens": [
+      50364, 5130, 1035, 88, 616, 64, 13, 2846, 1516, 1343, 26302, 5494, 12,
+      29113, 35889, 343, 6617, 26833, 11, 1482, 24531, 1105, 978, 41526, 730,
+      17324, 50688
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12538483359596947,
+    "compression_ratio": 1.4591439688715953,
+    "no_speech_prob": 0.2217838168144226
+  },
+  {
+    "id": 35,
+    "seek": 21844,
+    "start": 224.92,
+    "end": 230.04,
+    "text": " Jahrhunderts vor Christus hergestellt wurde. Mithilfe unz\u00e4hliger Zahnr\u00e4der, Federn,",
+    "tokens": [
+      50688, 11674, 71, 34267, 82, 4245, 2040, 301, 720, 26293, 11191, 13, 376,
+      355, 388, 2106, 517, 23242, 75, 4810, 1176, 12140, 11397, 1068, 11, 7772,
+      1248, 11, 50944
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12538483359596947,
+    "compression_ratio": 1.4591439688715953,
+    "no_speech_prob": 0.2217838168144226
+  },
+  {
+    "id": 36,
+    "seek": 21844,
+    "start": 230.04,
+    "end": 235.6,
+    "text": " Skalen und Zeiger konnte es zum Beispiel Daten nach verschiedenen \u00e4gyptischen und griechischen",
+    "tokens": [
+      50944, 7324, 21745, 674, 4853, 4810, 24058, 785, 5919, 13772, 31126, 5168,
+      41043, 3078, 9176, 6282, 674, 677, 414, 339, 6282, 51222
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12538483359596947,
+    "compression_ratio": 1.4591439688715953,
+    "no_speech_prob": 0.2217838168144226
+  },
+  {
+    "id": 37,
+    "seek": 21844,
+    "start": 235.6,
+    "end": 242.24,
+    "text": " Kalendern berechnen. Auskunft \u00fcber den Stand von Sonne, Mond, Planeten geben. Ja, es konnte sogar",
+    "tokens": [
+      51222, 12655, 521, 1248, 13375, 1377, 268, 13, 9039, 74, 19333, 4502,
+      1441, 9133, 2957, 5185, 716, 11, 7492, 11, 8112, 19865, 17191, 13, 3530,
+      11, 785, 24058, 19485, 51554
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12538483359596947,
+    "compression_ratio": 1.4591439688715953,
+    "no_speech_prob": 0.2217838168144226
+  },
+  {
+    "id": 38,
+    "seek": 24224,
+    "start": 242.24,
+    "end": 248.8,
+    "text": " Sonnen- und Mondfinsternisse exakt vorhersagen. Im Mittelalter und der fr\u00fchen Neuzeit traten dann",
+    "tokens": [
+      50364, 5185, 2866, 12, 674, 7492, 5194, 372, 1248, 7746, 454, 5886, 4245,
+      71, 433, 4698, 13, 4331, 35079, 43420, 674, 1163, 431, 774, 2932, 1734,
+      84, 13712, 504, 7186, 3594, 50692
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11666014319971989,
+    "compression_ratio": 1.4072727272727272,
+    "no_speech_prob": 0.24696864187717438
+  },
+  {
+    "id": 39,
+    "seek": 24224,
+    "start": 248.8,
+    "end": 253.76000000000002,
+    "text": " Windm\u00fchlen als Energielieferanten neben die Wasserm\u00fchlen. Und auch technische Spielereien",
+    "tokens": [
+      50692, 6320, 76, 7254, 6698, 3907, 48195, 1187, 414, 612, 29646, 36098,
+      978, 42998, 966, 7254, 6698, 13, 2719, 2168, 1537, 7864, 14266, 323, 1053,
+      50940
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11666014319971989,
+    "compression_ratio": 1.4072727272727272,
+    "no_speech_prob": 0.24696864187717438
+  },
+  {
+    "id": 40,
+    "seek": 24224,
+    "start": 253.76000000000002,
+    "end": 262.08,
+    "text": " gab es weiterhin. So kr\u00e4hte ab 1353 im Stra\u00dfburger M\u00fcnster gut 200 Jahre lang zu jeder vollen Stunde",
+    "tokens": [
+      50940, 17964, 785, 42480, 13, 407, 15913, 737, 23904, 410, 3705, 19584,
+      566, 12875, 2536, 41787, 35840, 3120, 5228, 2331, 15557, 2265, 2164,
+      19610, 15593, 268, 42781, 51356
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11666014319971989,
+    "compression_ratio": 1.4072727272727272,
+    "no_speech_prob": 0.24696864187717438
+  },
+  {
+    "id": 41,
+    "seek": 24224,
+    "start": 262.08,
+    "end": 268.56,
+    "text": " ein Hahn aus Eisen, Kupfer und Holz und schlug gleichzeitig mit den Fl\u00fcgeln. Heute befindet",
+    "tokens": [
+      51356, 1343, 45303, 3437, 35619, 11, 591, 1010, 612, 674, 45455, 674, 956,
+      75, 697, 44242, 2194, 1441, 3235, 25644, 9878, 13, 27978, 21312, 49419,
+      51680
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11666014319971989,
+    "compression_ratio": 1.4072727272727272,
+    "no_speech_prob": 0.24696864187717438
+  },
+  {
+    "id": 42,
+    "seek": 26856,
+    "start": 268.56,
+    "end": 273.96,
+    "text": " er sich im Museum der Saat dekorativ. Leider funktioniert er nicht mehr. Gleichwohl gilt er",
+    "tokens": [
+      50364, 1189, 3041, 566, 10967, 1163, 6299, 267, 368, 19339, 10662, 13,
+      1456, 1438, 26160, 1189, 1979, 5417, 13, 33858, 33849, 29487, 1189, 50634
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1584796733684368,
+    "compression_ratio": 1.4365671641791045,
+    "no_speech_prob": 0.16409863531589508
+  },
+  {
+    "id": 43,
+    "seek": 26856,
+    "start": 273.96,
+    "end": 279.44,
+    "text": " als \u00e4ltester erhaltener Automat \u00fcberhaupt. Es gab aber nicht nur mechanische Tiere,",
+    "tokens": [
+      50634, 3907, 3078, 2282, 3011, 38051, 260, 24619, 267, 20023, 13, 2313,
+      17964, 4340, 1979, 4343, 4236, 7864, 38810, 11, 50908
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1584796733684368,
+    "compression_ratio": 1.4365671641791045,
+    "no_speech_prob": 0.16409863531589508
+  },
+  {
+    "id": 44,
+    "seek": 26856,
+    "start": 279.44,
+    "end": 285.92,
+    "text": " sondern auch Menschen. So begr\u00fc\u00dfte ab 1602 auf der Empfangstreppe des Gildehauses der Bremer",
+    "tokens": [
+      50908, 11465, 2168, 8397, 13, 407, 38972, 774, 2536, 975, 410, 3165,
+      12756, 2501, 1163, 8599, 19134, 26421, 19833, 730, 460, 15956, 1641, 8355,
+      1163, 7090, 936, 51232
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1584796733684368,
+    "compression_ratio": 1.4365671641791045,
+    "no_speech_prob": 0.16409863531589508
+  },
+  {
+    "id": 45,
+    "seek": 26856,
+    "start": 285.92,
+    "end": 293.44,
+    "text": " Kaufmannschaft der sogenannte Complementarius die G\u00e4ste. Eine mannshohe Holzfigur in Schmucker-Ritter-R\u00fcstung.",
+    "tokens": [
+      51232, 44590, 14912, 37363, 1163, 37467, 9358, 2432, 43704, 27440, 978,
+      460, 737, 2941, 13, 17664, 587, 3695, 1289, 675, 45455, 20646, 374, 294,
+      2065, 76, 15032, 12, 49, 3904, 12, 49, 44244, 1063, 13, 51608
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1584796733684368,
+    "compression_ratio": 1.4365671641791045,
+    "no_speech_prob": 0.16409863531589508
+  },
+  {
+    "id": 46,
+    "seek": 29344,
+    "start": 293.44,
+    "end": 299.4,
+    "text": " Der Frankfurter Ratsherr Zararias Conrad von Uffenbach beschrieb sie anl\u00e4sslich eines",
+    "tokens": [
+      50364, 5618, 32571, 374, 391, 497, 1720, 511, 81, 41580, 35027, 2656,
+      6206, 2957, 624, 15945, 32096, 17498, 31775, 2804, 364, 22882, 3810, 1739,
+      18599, 50662
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17368022815601245,
+    "compression_ratio": 1.3875968992248062,
+    "no_speech_prob": 0.14399519562721252
+  },
+  {
+    "id": 47,
+    "seek": 29344,
+    "start": 299.4,
+    "end": 307.8,
+    "text": " Bremenbesuchs im Jahr 1710 folgenderma\u00dfen. Vorne an der T\u00fcre steht ein geharnischter Mann,",
+    "tokens": [
+      50662, 7090, 2558, 6446, 37503, 566, 11674, 3282, 3279, 3339, 9395, 39994,
+      8989, 13, 12231, 716, 364, 1163, 314, 39951, 2126, 357, 1343, 13218, 1083,
+      271, 26690, 16892, 11, 51082
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17368022815601245,
+    "compression_ratio": 1.3875968992248062,
+    "no_speech_prob": 0.14399519562721252
+  },
+  {
+    "id": 48,
+    "seek": 29344,
+    "start": 307.8,
+    "end": 315.04,
+    "text": " welcher, wenn man hineintritt, allemal beide Arme bewegt und zwar mit der Linken mit einem",
+    "tokens": [
+      51082, 2214, 6759, 11, 4797, 587, 47551, 686, 18579, 11, 17585, 304,
+      35831, 1587, 1398, 46638, 10463, 674, 19054, 2194, 1163, 8466, 268, 2194,
+      6827, 51444
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17368022815601245,
+    "compression_ratio": 1.3875968992248062,
+    "no_speech_prob": 0.14399519562721252
+  },
+  {
+    "id": 49,
+    "seek": 29344,
+    "start": 315.04,
+    "end": 322.76,
+    "text": " Speer das Visier aufhebt und das h\u00f6lzerne, angestrichene Gesicht zeigt. Dieses ist auf",
+    "tokens": [
+      51444, 3550, 260, 1482, 10410, 811, 2501, 675, 4517, 674, 1482, 276,
+      13072, 4527, 716, 11, 2562, 377, 10794, 1450, 47777, 29250, 13, 39201,
+      1418, 2501, 51830
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17368022815601245,
+    "compression_ratio": 1.3875968992248062,
+    "no_speech_prob": 0.14399519562721252
+  },
+  {
+    "id": 50,
+    "seek": 32276,
+    "start": 322.76,
+    "end": 328.4,
+    "text": " folgende manier gemacht, dass wenn man auf die erste Treppe tritt, sich die Treppe etwa zwei",
+    "tokens": [
+      50364, 3339, 27429, 587, 811, 12293, 11, 2658, 4797, 587, 2501, 978,
+      20951, 8648, 19833, 504, 593, 11, 3041, 978, 8648, 19833, 28369, 12002,
+      50646
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.122308349609375,
+    "compression_ratio": 1.5696202531645569,
+    "no_speech_prob": 0.04532446712255478
+  },
+  {
+    "id": 51,
+    "seek": 32276,
+    "start": 328.4,
+    "end": 335.0,
+    "text": " Zoll unvermerkt hinunter beugt und vermutlich durch eine eiserne Feder so drunter liegt,",
+    "tokens": [
+      50646, 1176, 1833, 517, 331, 936, 2320, 14102, 21777, 312, 697, 83, 674,
+      26319, 21678, 7131, 3018, 308, 6694, 716, 45545, 370, 1224, 21777, 22421,
+      11, 50976
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.122308349609375,
+    "compression_ratio": 1.5696202531645569,
+    "no_speech_prob": 0.04532446712255478
+  },
+  {
+    "id": 52,
+    "seek": 32276,
+    "start": 335.0,
+    "end": 342.4,
+    "text": " den einen Arm bewegt. Tritt man hernach auf die zweite Treppe, hebt sich eben also der andere",
+    "tokens": [
+      50976, 1441, 4891, 11893, 46638, 10463, 13, 1765, 593, 587, 720, 77, 608,
+      2501, 978, 37456, 8648, 19833, 11, 28339, 3041, 11375, 611, 1163, 10490,
+      51346
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.122308349609375,
+    "compression_ratio": 1.5696202531645569,
+    "no_speech_prob": 0.04532446712255478
+  },
+  {
+    "id": 53,
+    "seek": 32276,
+    "start": 342.4,
+    "end": 350.08,
+    "text": " Arm jetzt zum Gru\u00df. Automaten, Maschinen und mechanische Ger\u00e4tschaften unterschiedlichster Art",
+    "tokens": [
+      51346, 11893, 4354, 5919, 10459, 2536, 13, 24619, 7186, 11, 5224, 339,
+      5636, 674, 4236, 7864, 9409, 737, 22165, 268, 30058, 1739, 3120, 5735,
+      51730
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.122308349609375,
+    "compression_ratio": 1.5696202531645569,
+    "no_speech_prob": 0.04532446712255478
+  },
+  {
+    "id": 54,
+    "seek": 35008,
+    "start": 350.32,
+    "end": 355.44,
+    "text": " besa\u00dfen im 18. Jahrhundert also bereits eine lange Tradition. Was sich etwa ab 17. Jahrhundert",
+    "tokens": [
+      50376, 4097, 64, 8989, 566, 2443, 13, 11674, 71, 34267, 611, 23703, 3018,
+      18131, 22017, 849, 13, 3027, 3041, 28369, 410, 3282, 13, 11674, 71, 34267,
+      50632
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.120311485637318,
+    "compression_ratio": 1.444015444015444,
+    "no_speech_prob": 0.0627414882183075
+  },
+  {
+    "id": 55,
+    "seek": 35008,
+    "start": 355.44,
+    "end": 360.8,
+    "text": " wirklich \u00e4nderte, war, dass vor allem der Bau k\u00fcnstlicher Lebewesen pl\u00f6tzlich einen gewaltigen",
+    "tokens": [
+      50632, 9696, 24981, 10634, 11, 1516, 11, 2658, 4245, 17585, 1163, 28772,
+      350, 36656, 25215, 1456, 47465, 17403, 49033, 4891, 6906, 3198, 3213,
+      50900
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.120311485637318,
+    "compression_ratio": 1.444015444015444,
+    "no_speech_prob": 0.0627414882183075
+  },
+  {
+    "id": 56,
+    "seek": 35008,
+    "start": 360.8,
+    "end": 369.84,
+    "text": " Aufschwung nahm. Damals stand das Zeitalter der Aufkl\u00e4rung in voller Bl\u00fcte. Eine Epoche,",
+    "tokens": [
+      50900, 9462, 6145, 86, 1063, 17170, 76, 13, 5885, 1124, 1463, 1482, 4853,
+      1686, 391, 1163, 9462, 45988, 1063, 294, 1650, 4658, 2177, 774, 975, 13,
+      17664, 462, 2259, 1876, 11, 51352
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.120311485637318,
+    "compression_ratio": 1.444015444015444,
+    "no_speech_prob": 0.0627414882183075
+  },
+  {
+    "id": 57,
+    "seek": 35008,
+    "start": 369.84,
+    "end": 375.56,
+    "text": " in der sich zunehmend die moderne, vernunftbetonte und wissenschaftsorientierte Welt sich",
+    "tokens": [
+      51352, 294, 1163, 3041, 710, 2613, 8587, 521, 978, 10494, 716, 11, 35793,
+      19333, 10671, 10219, 674, 261, 26657, 82, 19521, 23123, 14761, 3041, 51638
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.120311485637318,
+    "compression_ratio": 1.444015444015444,
+    "no_speech_prob": 0.0627414882183075
+  },
+  {
+    "id": 58,
+    "seek": 37556,
+    "start": 375.56,
+    "end": 381.28000000000003,
+    "text": " durchsetzte. Bereits um die Mitte des 17. Jahrhunderts hatte der franz\u00f6sische Philosoph,",
+    "tokens": [
+      50364, 7131, 3854, 45127, 13, 17684, 1208, 1105, 978, 41526, 730, 3282,
+      13, 11674, 71, 34267, 82, 13299, 1163, 431, 3910, 11310, 7864, 31182,
+      5317, 11, 50650
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17355769148496825,
+    "compression_ratio": 1.4517374517374517,
+    "no_speech_prob": 0.1621028482913971
+  },
+  {
+    "id": 59,
+    "seek": 37556,
+    "start": 381.28000000000003,
+    "end": 387.84000000000003,
+    "text": " Mathematiker und Physiker Ren\u00e9 Descartes die Ansicht vertreten, dass es sich beim Tier letztlich",
+    "tokens": [
+      50650, 15776, 8615, 17314, 674, 15542, 17314, 12883, 526, 3885, 44672,
+      279, 978, 14590, 1405, 1306, 3599, 1147, 11, 2658, 785, 3041, 13922,
+      24224, 35262, 1739, 50978
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17355769148496825,
+    "compression_ratio": 1.4517374517374517,
+    "no_speech_prob": 0.1621028482913971
+  },
+  {
+    "id": 60,
+    "seek": 37556,
+    "start": 387.84000000000003,
+    "end": 394.48,
+    "text": " um nichts anderes handle als um einen fleisch gewordenen technischen Apparat. 100 Jahre sp\u00e4ter",
+    "tokens": [
+      50978, 1105, 13004, 31426, 4813, 3907, 1105, 4891, 7025, 5494, 26281, 268,
+      1537, 6282, 3132, 18452, 13, 2319, 15557, 24196, 51310
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17355769148496825,
+    "compression_ratio": 1.4517374517374517,
+    "no_speech_prob": 0.1621028482913971
+  },
+  {
+    "id": 61,
+    "seek": 37556,
+    "start": 394.48,
+    "end": 400.88,
+    "text": " behauptete der Arzt Julien-Aufrey de la M\u00e9trie dasselbe auch vom Menschen und verfasste ein",
+    "tokens": [
+      51310, 1540, 13343, 3498, 1163, 1587, 2682, 7174, 1053, 12, 32, 2947,
+      7950, 368, 635, 376, 4051, 5469, 2658, 338, 650, 2168, 10135, 8397, 674,
+      40660, 296, 2941, 1343, 51630
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.17355769148496825,
+    "compression_ratio": 1.4517374517374517,
+    "no_speech_prob": 0.1621028482913971
+  },
+  {
+    "id": 62,
+    "seek": 40088,
+    "start": 400.88,
+    "end": 406.96,
+    "text": " f\u00fcr Furore sorgendes Werk mit dem Titel L'Homme-Machine, der Mensch als Maschine.",
+    "tokens": [
+      50364, 2959, 479, 7052, 265, 262, 4646, 34533, 42911, 2194, 1371, 14489,
+      338, 441, 6, 39, 15117, 12, 44, 34922, 11, 1163, 27773, 3907, 5224, 36675,
+      13, 50668
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14127429793862736,
+    "compression_ratio": 1.4567901234567902,
+    "no_speech_prob": 0.1795828491449356
+  },
+  {
+    "id": 63,
+    "seek": 40088,
+    "start": 406.96,
+    "end": 412.0,
+    "text": " Da konnte es kaum ausbleiben, dass man sich bald an die Umsetzung solcher Theorien in die Praxis",
+    "tokens": [
+      50668, 3933, 24058, 785, 36443, 3437, 638, 13771, 11, 2658, 587, 3041,
+      21096, 364, 978, 46963, 38584, 1404, 6759, 440, 284, 1053, 294, 978,
+      12133, 39637, 50920
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14127429793862736,
+    "compression_ratio": 1.4567901234567902,
+    "no_speech_prob": 0.1795828491449356
+  },
+  {
+    "id": 64,
+    "seek": 40088,
+    "start": 412.0,
+    "end": 418.2,
+    "text": " machte. Zur h\u00f6chsten Meisterschaft brachte es dabei ein gewisser Jacques de Vaucanson. 1709 in",
+    "tokens": [
+      50920, 10857, 68, 13, 30518, 13531, 339, 6266, 1923, 7423, 7118, 738,
+      26136, 785, 14967, 1343, 6906, 23714, 42691, 368, 691, 7113, 34195, 13,
+      3282, 13811, 294, 51230
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14127429793862736,
+    "compression_ratio": 1.4567901234567902,
+    "no_speech_prob": 0.1795828491449356
+  },
+  {
+    "id": 65,
+    "seek": 40088,
+    "start": 418.2,
+    "end": 424.12,
+    "text": " Grenoble geboren, offenbarte er bereits als Kind ein au\u00dfergew\u00f6hnliches mechanisches Talent. Nach",
+    "tokens": [
+      51230, 24913, 78, 638, 21125, 10948, 11, 35253, 65, 11026, 1189, 23703,
+      3907, 9242, 1343, 39428, 21306, 973, 35646, 279, 4236, 35889, 44081, 13,
+      11815, 51526
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14127429793862736,
+    "compression_ratio": 1.4567901234567902,
+    "no_speech_prob": 0.1795828491449356
+  },
+  {
+    "id": 66,
+    "seek": 40088,
+    "start": 424.12,
+    "end": 429.92,
+    "text": " ausgiebigen anatomischen Studien bef\u00e4higte es ihn zur Konstruktion kompliziertester Menschen und",
+    "tokens": [
+      51526, 3437, 9997, 65, 3213, 21618, 298, 6282, 49496, 21312, 6860, 328,
+      975, 785, 14534, 7147, 44200, 894, 9780, 24526, 43590, 3011, 8397, 674,
+      51816
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.14127429793862736,
+    "compression_ratio": 1.4567901234567902,
+    "no_speech_prob": 0.1795828491449356
+  },
+  {
+    "id": 67,
+    "seek": 42992,
+    "start": 429.92,
+    "end": 435.84000000000003,
+    "text": " tier\u00e4hnliche Automaten. Das Wort Roboter war noch nicht bekannt. Vielmehr bezeichnete man damals",
+    "tokens": [
+      50364, 12362, 6860, 77, 10185, 24619, 7186, 13, 2846, 22748, 5424, 21585,
+      1516, 3514, 1979, 39167, 13, 35931, 1398, 1703, 312, 32338, 77, 3498, 587,
+      26067, 50660
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16396294609975007,
+    "compression_ratio": 1.4651162790697674,
+    "no_speech_prob": 0.08239074051380157
+  },
+  {
+    "id": 68,
+    "seek": 42992,
+    "start": 435.84000000000003,
+    "end": 441.84000000000003,
+    "text": " k\u00fcnstliche Menschen meist als Androiden. De Vaucanson's Gesch\u00f6pfe wirkten so lebensnah,",
+    "tokens": [
+      50660, 350, 36656, 10185, 8397, 36894, 3907, 400, 340, 4380, 13, 1346,
+      691, 7113, 34195, 311, 14241, 973, 79, 2106, 1987, 47120, 370, 17111, 694,
+      12411, 11, 50960
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16396294609975007,
+    "compression_ratio": 1.4651162790697674,
+    "no_speech_prob": 0.08239074051380157
+  },
+  {
+    "id": 69,
+    "seek": 42992,
+    "start": 441.84000000000003,
+    "end": 447.76,
+    "text": " dass selbst ein n\u00fcchterner Denker wie Voltaire begeistert schw\u00e4rmte. Der k\u00fchne De Vaucanson",
+    "tokens": [
+      50960, 2658, 13053, 1343, 297, 774, 26690, 1193, 6458, 5767, 3355, 8911,
+      1328, 621, 41832, 1964, 83, 17932, 2713, 76, 975, 13, 5618, 350, 7254,
+      716, 1346, 691, 7113, 34195, 51256
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16396294609975007,
+    "compression_ratio": 1.4651162790697674,
+    "no_speech_prob": 0.08239074051380157
+  },
+  {
+    "id": 70,
+    "seek": 42992,
+    "start": 447.76,
+    "end": 455.32,
+    "text": " schien die Natur nachahmend und wetteifern mit Prometheus das Feuer vom Himmel zu holen, um die",
+    "tokens": [
+      51256, 956, 1053, 978, 34571, 5168, 545, 76, 521, 674, 6630, 975, 351,
+      1248, 2194, 2114, 649, 42209, 1482, 39972, 10135, 5920, 10909, 2164, 4091,
+      268, 11, 1105, 978, 51634
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16396294609975007,
+    "compression_ratio": 1.4651162790697674,
+    "no_speech_prob": 0.08239074051380157
+  },
+  {
+    "id": 71,
+    "seek": 45532,
+    "start": 455.32,
+    "end": 462.04,
+    "text": " K\u00f6rper zu beleben. De Vaucanson's bekannteste Sch\u00f6pfungen waren ein lebensgro\u00dfer Querfl\u00f6tenspieler,",
+    "tokens": [
+      50364, 33501, 2164, 29620, 1799, 13, 1346, 691, 7113, 34195, 311, 39167,
+      8887, 2065, 973, 25302, 5084, 11931, 1343, 17111, 694, 17427, 30369,
+      36149, 3423, 12082, 694, 36037, 260, 11, 50700
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12238579281305863,
+    "compression_ratio": 1.5271317829457365,
+    "no_speech_prob": 0.5447878241539001
+  },
+  {
+    "id": 72,
+    "seek": 45532,
+    "start": 462.04,
+    "end": 468.76,
+    "text": " ein ebenfalls lebensgro\u00dfer Hirte, der gleichzeitig Fl\u00f6teblasen und Trommel schlagen konnte sowie",
+    "tokens": [
+      50700, 1343, 48977, 17111, 694, 17427, 30369, 23192, 975, 11, 1163, 44242,
+      3235, 973, 975, 5199, 296, 268, 674, 1765, 1204, 338, 956, 29177, 24058,
+      35874, 51036
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12238579281305863,
+    "compression_ratio": 1.5271317829457365,
+    "no_speech_prob": 0.5447878241539001
+  },
+  {
+    "id": 73,
+    "seek": 45532,
+    "start": 468.76,
+    "end": 475.15999999999997,
+    "text": " eine Ente aus Metall, die ihr Sch\u00f6pfer selbst folgenderma\u00dfen beschrieb. Es handelt sich um",
+    "tokens": [
+      51036, 3018, 3951, 68, 3437, 49447, 11, 978, 5553, 2065, 973, 79, 612,
+      13053, 3339, 9395, 39994, 8989, 17498, 31775, 13, 2313, 1011, 2018, 3041,
+      1105, 51356
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12238579281305863,
+    "compression_ratio": 1.5271317829457365,
+    "no_speech_prob": 0.5447878241539001
+  },
+  {
+    "id": 74,
+    "seek": 45532,
+    "start": 475.15999999999997,
+    "end": 483.12,
+    "text": " eine Ente, bei der ich die Mechanik der Eingeweide zeige, die an den Funktionen Trinken, Essen und",
+    "tokens": [
+      51356, 3018, 3951, 68, 11, 4643, 1163, 1893, 978, 30175, 1035, 1163, 462,
+      8735, 826, 482, 5277, 3969, 11, 978, 364, 1441, 11166, 9780, 268, 1765,
+      35061, 11, 42098, 674, 51754
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12238579281305863,
+    "compression_ratio": 1.5271317829457365,
+    "no_speech_prob": 0.5447878241539001
+  },
+  {
+    "id": 75,
+    "seek": 48312,
+    "start": 483.12,
+    "end": 490.28000000000003,
+    "text": " Verdauung beteiligt sind. Die Art und Weise, auf die alle Teile, die f\u00fcr diese T\u00e4tigkeit notwendig",
+    "tokens": [
+      50364, 41257, 1459, 1063, 778, 30684, 5828, 3290, 13, 3229, 5735, 674,
+      41947, 11, 2501, 978, 5430, 1989, 794, 11, 978, 2959, 6705, 314, 3628,
+      16626, 41308, 328, 50722
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07497078704833984,
+    "compression_ratio": 1.5038461538461538,
+    "no_speech_prob": 0.21954326331615448
+  },
+  {
+    "id": 76,
+    "seek": 48312,
+    "start": 490.28000000000003,
+    "end": 497.36,
+    "text": " sind, zusammenspielen, wird pr\u00e4zise nachgeahmt. Die Ente streckt ihren Hals, um die K\u00f6rner aus",
+    "tokens": [
+      50722, 3290, 11, 11548, 5136, 694, 79, 12844, 11, 4578, 582, 737, 89, 908,
+      5168, 432, 545, 42744, 13, 3229, 3951, 68, 2242, 19951, 22347, 389, 1124,
+      11, 1105, 978, 591, 2311, 1193, 3437, 51076
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07497078704833984,
+    "compression_ratio": 1.5038461538461538,
+    "no_speech_prob": 0.21954326331615448
+  },
+  {
+    "id": 77,
+    "seek": 48312,
+    "start": 497.36,
+    "end": 503.48,
+    "text": " der Hand zu picken, schluckt sie, verdaut sie und scheidet sie, vollst\u00e4ndig verdaut, durch die",
+    "tokens": [
+      51076, 1163, 8854, 2164, 1888, 268, 11, 956, 75, 47800, 2804, 11, 6387,
+      1375, 2804, 674, 25690, 39741, 2804, 11, 15593, 16913, 328, 6387, 1375,
+      11, 7131, 978, 51382
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07497078704833984,
+    "compression_ratio": 1.5038461538461538,
+    "no_speech_prob": 0.21954326331615448
+  },
+  {
+    "id": 78,
+    "seek": 48312,
+    "start": 503.48,
+    "end": 511.24,
+    "text": " gew\u00f6hnlichen Kan\u00e4le, wieder aus. Alle Vorg\u00e4nge sind von der Natur kopiert. Die Nahrung wird im",
+    "tokens": [
+      51382, 6906, 973, 12071, 10193, 11120, 737, 306, 11, 6216, 3437, 13,
+      25318, 691, 4646, 29091, 3290, 2957, 1163, 34571, 28920, 4859, 13, 3229,
+      426, 5398, 1063, 4578, 566, 51770
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07497078704833984,
+    "compression_ratio": 1.5038461538461538,
+    "no_speech_prob": 0.21954326331615448
+  },
+  {
+    "id": 79,
+    "seek": 51124,
+    "start": 511.24,
+    "end": 517.28,
+    "text": " Magen chemisch verdaut, wie bei echten Tieren. Das verdauerte Material wird durch Schl\u00e4uche",
+    "tokens": [
+      50364, 376, 4698, 4771, 5494, 6387, 1375, 11, 3355, 4643, 308, 21043, 314,
+      5695, 13, 2846, 6387, 1459, 10634, 29160, 4578, 7131, 16420, 737, 17545,
+      50666
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13925358984205458,
+    "compression_ratio": 1.4325396825396826,
+    "no_speech_prob": 0.07913841307163239
+  },
+  {
+    "id": 80,
+    "seek": 51124,
+    "start": 517.28,
+    "end": 523.36,
+    "text": " weiterbef\u00f6rdert bis zum Anus, wo ein Schlie\u00dfmuskel seine Ausscheidung erm\u00f6glicht.",
+    "tokens": [
+      50666, 8988, 650, 15610, 49799, 7393, 5919, 1107, 301, 11, 6020, 1343,
+      2065, 24476, 18761, 7124, 15925, 21286, 1876, 327, 1063, 25253, 50023,
+      20238, 13, 50970
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13925358984205458,
+    "compression_ratio": 1.4325396825396826,
+    "no_speech_prob": 0.07913841307163239
+  },
+  {
+    "id": 81,
+    "seek": 51124,
+    "start": 523.36,
+    "end": 534.44,
+    "text": " Gegen Entgelt f\u00fchrte er die drei Figuren mit gro\u00dfem Erfolg in Paris und der franz\u00f6sischen",
+    "tokens": [
+      50970, 38631, 3951, 70, 2018, 283, 11986, 975, 1189, 978, 16809, 22443,
+      9873, 2194, 17253, 443, 45232, 294, 8380, 674, 1163, 431, 3910, 11310,
+      6282, 51524
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13925358984205458,
+    "compression_ratio": 1.4325396825396826,
+    "no_speech_prob": 0.07913841307163239
+  },
+  {
+    "id": 82,
+    "seek": 51124,
+    "start": 534.44,
+    "end": 539.8,
+    "text": " Provinz vor, aber auch im italienischen und englischen Ausland. Und er wurde buchst\u00e4blich",
+    "tokens": [
+      51524, 1705, 4796, 89, 4245, 11, 4340, 2168, 566, 22366, 1053, 6282, 674,
+      1741, 75, 6282, 9039, 1661, 13, 2719, 1189, 11191, 272, 625, 24019, 65,
+      1739, 51792
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13925358984205458,
+    "compression_ratio": 1.4325396825396826,
+    "no_speech_prob": 0.07913841307163239
+  },
+  {
+    "id": 83,
+    "seek": 53980,
+    "start": 539.8,
+    "end": 544.04,
+    "text": " reich damit, denn das Publikum war bereit f\u00fcr die Eintrittskarten einen Betrag zu bezahlen,",
+    "tokens": [
+      50364, 319, 480, 9479, 11, 10471, 1482, 21808, 13462, 449, 1516, 38758,
+      2959, 978, 462, 686, 18579, 5161, 11719, 4891, 6279, 3731, 2164, 10782,
+      21128, 11, 50576
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11995973659835699,
+    "compression_ratio": 1.5366666666666666,
+    "no_speech_prob": 0.2936747670173645
+  },
+  {
+    "id": 84,
+    "seek": 53980,
+    "start": 544.04,
+    "end": 549.3599999999999,
+    "text": " der dem durchschnittlichen Wochenlohn eines Handwerkers entsprach. Der absolute H\u00f6hepunkt",
+    "tokens": [
+      50576, 1163, 1371, 7131, 82, 32064, 10193, 23126, 752, 12071, 18599, 8854,
+      1554, 24259, 12834, 1424, 608, 13, 5618, 8236, 389, 23817, 595, 14797,
+      50842
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11995973659835699,
+    "compression_ratio": 1.5366666666666666,
+    "no_speech_prob": 0.2936747670173645
+  },
+  {
+    "id": 85,
+    "seek": 53980,
+    "start": 549.3599999999999,
+    "end": 553.76,
+    "text": " der Vorstellung war selbstredend stets dann erreicht, wenn die mechanische Ente ihr",
+    "tokens": [
+      50842, 1163, 12231, 30016, 1516, 13053, 986, 521, 342, 1385, 3594, 46250,
+      11, 4797, 978, 4236, 7864, 3951, 68, 5553, 51062
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11995973659835699,
+    "compression_ratio": 1.5366666666666666,
+    "no_speech_prob": 0.2936747670173645
+  },
+  {
+    "id": 86,
+    "seek": 53980,
+    "start": 553.76,
+    "end": 559.92,
+    "text": " Gesch\u00e4ftchen verrichtete. Manche behaupteten, dass das pasteuse gr\u00fcnliche Ausscheidungsprodukt",
+    "tokens": [
+      51062, 40440, 2470, 1306, 12836, 3498, 13, 2458, 1876, 1540, 13343, 19865,
+      11, 2658, 1482, 9163, 438, 677, 3412, 10185, 21286, 1876, 327, 5846,
+      14314, 2320, 51370
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11995973659835699,
+    "compression_ratio": 1.5366666666666666,
+    "no_speech_prob": 0.2936747670173645
+  },
+  {
+    "id": 87,
+    "seek": 53980,
+    "start": 559.92,
+    "end": 566.3599999999999,
+    "text": " sogar etwas streng roch. Aber auch sonst hatte die aus vergoldetem Kupfer gefertigte mechanische",
+    "tokens": [
+      51370, 19485, 9569, 2242, 872, 744, 339, 13, 5992, 2168, 26309, 13299,
+      978, 3437, 1306, 1571, 348, 302, 443, 591, 1010, 612, 1519, 34784, 328,
+      975, 4236, 7864, 51692
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11995973659835699,
+    "compression_ratio": 1.5366666666666666,
+    "no_speech_prob": 0.2936747670173645
+  },
+  {
+    "id": 88,
+    "seek": 56636,
+    "start": 566.36,
+    "end": 572.64,
+    "text": " Ente einiges zu bieten. Sie konnte quaken, watscheln, mit den Fl\u00fcgeln schlagen und nicht",
+    "tokens": [
+      50364, 3951, 68, 1343, 20609, 2164, 272, 25868, 13, 3559, 24058, 421,
+      9846, 11, 261, 1720, 339, 9878, 11, 2194, 1441, 3235, 25644, 9878, 956,
+      29177, 674, 1979, 50678
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1386186363053148,
+    "compression_ratio": 1.5163398692810457,
+    "no_speech_prob": 0.5988068580627441
+  },
+  {
+    "id": 89,
+    "seek": 56636,
+    "start": 572.64,
+    "end": 577.6,
+    "text": " nur fressen, sondern auch trinken. F\u00fcr die Herstellung des Darms hatte De Vaucanson",
+    "tokens": [
+      50678, 4343, 283, 735, 268, 11, 11465, 2168, 504, 35061, 13, 14990, 978,
+      3204, 30016, 730, 7803, 2592, 13299, 1346, 691, 7113, 34195, 50926
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1386186363053148,
+    "compression_ratio": 1.5163398692810457,
+    "no_speech_prob": 0.5988068580627441
+  },
+  {
+    "id": 90,
+    "seek": 56636,
+    "start": 577.6,
+    "end": 582.44,
+    "text": " \u00fcbrigens eigens den Gummischlauch erfunden. Trotz des gro\u00dfen Erfolgs wurde De Vaucanson",
+    "tokens": [
+      50926, 38215, 9728, 694, 1441, 460, 40879, 5494, 875, 625, 20228, 10028,
+      13, 1765, 18530, 730, 23076, 3300, 7082, 21559, 11191, 1346, 691, 7113,
+      34195, 51168
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1386186363053148,
+    "compression_ratio": 1.5163398692810457,
+    "no_speech_prob": 0.5988068580627441
+  },
+  {
+    "id": 91,
+    "seek": 56636,
+    "start": 582.44,
+    "end": 588.72,
+    "text": " der Automaten bald wieder \u00fcberdr\u00f6ssig. Schon 1743, nur f\u00fcnf Jahre nachdem er den Fl\u00f6tenspieler",
+    "tokens": [
+      51168, 1163, 24619, 7186, 21096, 6216, 4502, 16753, 973, 3810, 328, 13,
+      46049, 3282, 17201, 11, 4343, 28723, 15557, 5168, 10730, 1189, 1441, 3235,
+      12082, 694, 36037, 260, 51482
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1386186363053148,
+    "compression_ratio": 1.5163398692810457,
+    "no_speech_prob": 0.5988068580627441
+  },
+  {
+    "id": 92,
+    "seek": 56636,
+    "start": 588.72,
+    "end": 594.36,
+    "text": " fertiggestellt hatte, verkaufte er die beiden Androiden und die Ente an eine Investorengemeinschaft.",
+    "tokens": [
+      51482, 31362, 26293, 13299, 11, 22328, 1459, 16268, 1189, 978, 23446, 400,
+      340, 4380, 674, 978, 3951, 68, 364, 3018, 14008, 10948, 31964, 1292, 7118,
+      13, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1386186363053148,
+    "compression_ratio": 1.5163398692810457,
+    "no_speech_prob": 0.5988068580627441
+  },
+  {
+    "id": 93,
+    "seek": 59436,
+    "start": 594.36,
+    "end": 599.6,
+    "text": " Die ging damit weiterhin auf Tournee und verdiente sich ebenfalls dumm und d\u00e4mlich.",
+    "tokens": [
+      50364, 3229, 21924, 9479, 42480, 2501, 13077, 48210, 674, 6387, 8413,
+      3041, 48977, 16784, 76, 674, 274, 9559, 1739, 13, 50626
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1406947523355484,
+    "compression_ratio": 1.4696485623003195,
+    "no_speech_prob": 0.005217486061155796
+  },
+  {
+    "id": 94,
+    "seek": 59436,
+    "start": 599.6,
+    "end": 604.5600000000001,
+    "text": " Nach dem Verkauf seiner drei bekanntesten Figuren befasste sich De Vaucanson nur noch",
+    "tokens": [
+      50626, 11815, 1371, 4281, 74, 9507, 23114, 16809, 39167, 38743, 22443,
+      9873, 21312, 296, 2941, 3041, 1346, 691, 7113, 34195, 4343, 3514, 50874
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1406947523355484,
+    "compression_ratio": 1.4696485623003195,
+    "no_speech_prob": 0.005217486061155796
+  },
+  {
+    "id": 95,
+    "seek": 59436,
+    "start": 604.5600000000001,
+    "end": 610.52,
+    "text": " gelegentlich mit dem Bau k\u00fcnstlicher Lebewesen. So konstruierte er sp\u00e4ter eine mechanische Schlange,",
+    "tokens": [
+      50874, 1519, 6363, 7698, 2194, 1371, 28772, 350, 36656, 25215, 1456,
+      47465, 17403, 13, 407, 34208, 894, 23123, 1189, 24196, 3018, 4236, 7864,
+      16420, 933, 11, 51172
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1406947523355484,
+    "compression_ratio": 1.4696485623003195,
+    "no_speech_prob": 0.005217486061155796
+  },
+  {
+    "id": 96,
+    "seek": 59436,
+    "start": 610.52,
+    "end": 616.52,
+    "text": " die bei der Premiere der Trag\u00f6die Cleopatra von Jean-Fran\u00e7ois Marmontel, der Titelheldin",
+    "tokens": [
+      51172, 978, 4643, 1163, 39724, 1163, 314, 3731, 973, 11231, 8834, 404,
+      33593, 2957, 13854, 12, 37, 4257, 1138, 7376, 2039, 28720, 338, 11, 1163,
+      14489, 338, 23504, 259, 51472
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1406947523355484,
+    "compression_ratio": 1.4696485623003195,
+    "no_speech_prob": 0.005217486061155796
+  },
+  {
+    "id": 97,
+    "seek": 59436,
+    "start": 616.52,
+    "end": 623.36,
+    "text": " \u00fcberzeugend realistisch in den Busen biss. Die \u00c4ra sensationeller Automatenmenschen war damit",
+    "tokens": [
+      51472, 48598, 521, 957, 468, 5494, 294, 1441, 8006, 268, 272, 891, 13,
+      3229, 13700, 424, 20069, 14983, 24619, 7186, 45743, 2470, 1516, 9479,
+      51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1406947523355484,
+    "compression_ratio": 1.4696485623003195,
+    "no_speech_prob": 0.005217486061155796
+  },
+  {
+    "id": 98,
+    "seek": 62336,
+    "start": 623.36,
+    "end": 629.08,
+    "text": " noch lange nicht zu Ende. Ab 1770 schufen die Schweizer Uhrmacher Pierre Jacquet-Draud und",
+    "tokens": [
+      50364, 3514, 18131, 1979, 2164, 15152, 13, 2847, 3282, 5867, 956, 19890,
+      978, 24343, 6545, 30084, 76, 4062, 28461, 9538, 19343, 12, 35, 424, 532,
+      674, 50650
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1332957148551941,
+    "compression_ratio": 1.4548387096774194,
+    "no_speech_prob": 0.06748738884925842
+  },
+  {
+    "id": 99,
+    "seek": 62336,
+    "start": 629.08,
+    "end": 635.28,
+    "text": " sein Sohn Henri-Louis zusammen mit einigen Mitarbeitern drei rund 70 Zentimeter hohe Androiden.",
+    "tokens": [
+      50650, 6195, 407, 12071, 45365, 12, 46316, 271, 14311, 2194, 1343, 3213,
+      32900, 9407, 1248, 16809, 23096, 5285, 44091, 9685, 1106, 675, 400, 340,
+      4380, 13, 50960
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1332957148551941,
+    "compression_ratio": 1.4548387096774194,
+    "no_speech_prob": 0.06748738884925842
+  },
+  {
+    "id": 100,
+    "seek": 62336,
+    "start": 635.28,
+    "end": 641.24,
+    "text": " Sie stellten einen Schreiber, eine Organistin und einen Zeichner dar. Ihre Bewegungsabl\u00e4ufe",
+    "tokens": [
+      50960, 3559, 30787, 1147, 4891, 2065, 265, 5331, 11, 3018, 12538, 468,
+      259, 674, 4891, 4853, 480, 1193, 4072, 13, 26247, 46757, 5846, 455, 22882,
+      84, 2106, 51258
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1332957148551941,
+    "compression_ratio": 1.4548387096774194,
+    "no_speech_prob": 0.06748738884925842
+  },
+  {
+    "id": 101,
+    "seek": 62336,
+    "start": 641.24,
+    "end": 646.04,
+    "text": " wurden durch austauschbare Nockenscheiben gesteuert. Deshalb konnten sie verschiedene",
+    "tokens": [
+      51258, 21105, 7131, 34916, 8463, 339, 30682, 883, 547, 694, 1876, 13771,
+      7219, 23685, 911, 13, 27969, 38216, 2804, 35411, 51498
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1332957148551941,
+    "compression_ratio": 1.4548387096774194,
+    "no_speech_prob": 0.06748738884925842
+  },
+  {
+    "id": 102,
+    "seek": 62336,
+    "start": 646.04,
+    "end": 651.44,
+    "text": " Texte schreiben, Musikst\u00fccke spielen und Zeichnungen anfertigen. Und sie k\u00f6nnen das",
+    "tokens": [
+      51498, 18643, 68, 48546, 11, 14156, 372, 37383, 30950, 674, 4853, 480, 77,
+      5084, 364, 34784, 3213, 13, 2719, 2804, 6310, 1482, 51768
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1332957148551941,
+    "compression_ratio": 1.4548387096774194,
+    "no_speech_prob": 0.06748738884925842
+  },
+  {
+    "id": 103,
+    "seek": 65144,
+    "start": 651.44,
+    "end": 656.32,
+    "text": " noch immer. Im Museum von Nuchatel in der Schweiz kann man sie noch heute bestaunen.",
+    "tokens": [
+      50364, 3514, 5578, 13, 4331, 10967, 2957, 426, 625, 267, 338, 294, 1163,
+      46834, 4028, 587, 2804, 3514, 9801, 1151, 64, 409, 268, 13, 50608
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16679661544327884,
+    "compression_ratio": 1.439516129032258,
+    "no_speech_prob": 0.12233760952949524
+  },
+  {
+    "id": 104,
+    "seek": 65144,
+    "start": 656.32,
+    "end": 664.84,
+    "text": " Sie funktionieren nach wie vor einwandfrei. Neben genialen Feinmechanikern gab es unter den",
+    "tokens": [
+      50608, 3559, 20454, 5695, 5168, 3355, 4245, 1343, 33114, 42072, 13, 48193,
+      48228, 268, 3697, 259, 1398, 3484, 1035, 1248, 17964, 785, 8662, 1441,
+      51034
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16679661544327884,
+    "compression_ratio": 1.439516129032258,
+    "no_speech_prob": 0.12233760952949524
+  },
+  {
+    "id": 105,
+    "seek": 65144,
+    "start": 664.84,
+    "end": 670.84,
+    "text": " Androidenbauern jedoch auch Scharlatane. Da erregte zum Beispiel seit Anfang der 1780er",
+    "tokens": [
+      51034, 400, 340, 4380, 26820, 1248, 46311, 2168, 2065, 6843, 267, 1929,
+      13, 3933, 1189, 3375, 975, 5919, 13772, 16452, 25856, 1163, 3282, 4702,
+      260, 51334
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16679661544327884,
+    "compression_ratio": 1.439516129032258,
+    "no_speech_prob": 0.12233760952949524
+  },
+  {
+    "id": 106,
+    "seek": 65144,
+    "start": 670.84,
+    "end": 675.5200000000001,
+    "text": " Jahre der Pressburger Wolfgang von Kempelen in verschiedenen deutschen und \u00f6sterreichischen",
+    "tokens": [
+      51334, 15557, 1163, 6776, 41787, 16634, 19619, 2957, 591, 15970, 14818,
+      294, 41043, 39707, 674, 4044, 34111, 6282, 51568
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16679661544327884,
+    "compression_ratio": 1.439516129032258,
+    "no_speech_prob": 0.12233760952949524
+  },
+  {
+    "id": 107,
+    "seek": 67552,
+    "start": 676.12,
+    "end": 681.8,
+    "text": " St\u00e4dten sowie in London und Paris gro\u00dfes Aufsehen mit dem sogenannten Schacht\u00fcrken.",
+    "tokens": [
+      50394, 745, 16837, 1147, 35874, 294, 7042, 674, 8380, 48875, 9462, 27750,
+      2194, 1371, 37467, 14970, 2065, 3589, 1655, 2653, 13, 50678
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1254779427452425,
+    "compression_ratio": 1.4884615384615385,
+    "no_speech_prob": 0.4250551760196686
+  },
+  {
+    "id": 108,
+    "seek": 67552,
+    "start": 681.8,
+    "end": 687.68,
+    "text": " Da behandelte es sich um eine t\u00fcrkisch bekleidete Figur, die hinter einem gro\u00dfen Kasten sa\u00df und",
+    "tokens": [
+      50678, 3933, 1540, 26406, 975, 785, 3041, 1105, 3018, 39219, 74, 5494,
+      9393, 306, 327, 3498, 22443, 374, 11, 978, 23219, 6827, 23076, 591, 47552,
+      601, 2536, 674, 50972
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1254779427452425,
+    "compression_ratio": 1.4884615384615385,
+    "no_speech_prob": 0.4250551760196686
+  },
+  {
+    "id": 109,
+    "seek": 67552,
+    "start": 687.68,
+    "end": 694.1999999999999,
+    "text": " anscheinend dank ausgekl\u00fcgelter Mechanik meisterhaft Schach spielen konnte. In Wahrheit war das nicht",
+    "tokens": [
+      50972, 1567, 1876, 259, 521, 35121, 31899, 7837, 774, 10345, 391, 30175,
+      1035, 385, 1964, 25127, 2065, 608, 30950, 24058, 13, 682, 36357, 8480,
+      1516, 1482, 1979, 51298
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1254779427452425,
+    "compression_ratio": 1.4884615384615385,
+    "no_speech_prob": 0.4250551760196686
+  },
+  {
+    "id": 110,
+    "seek": 67552,
+    "start": 694.1999999999999,
+    "end": 701.04,
+    "text": " der Fall. Noch heute ist der Ausdruck get\u00fcrkt f\u00fcr betr\u00fcgerisch gebr\u00e4uchlich. Er geht eindeutig",
+    "tokens": [
+      51298, 1163, 7465, 13, 38116, 9801, 1418, 1163, 9039, 67, 8161, 483, 1655,
+      2320, 2959, 778, 31759, 1321, 5494, 1519, 1443, 737, 625, 1739, 13, 3300,
+      7095, 308, 8274, 325, 328, 51640
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1254779427452425,
+    "compression_ratio": 1.4884615384615385,
+    "no_speech_prob": 0.4250551760196686
+  },
+  {
+    "id": 111,
+    "seek": 70104,
+    "start": 701.36,
+    "end": 706.48,
+    "text": " auf den Schacht\u00fcrken zur\u00fcck. Frank Dittmann vom Deutschen Museum in M\u00fcnchen erl\u00e4utert warum.",
+    "tokens": [
+      50380, 2501, 1441, 2065, 3589, 1655, 2653, 15089, 13, 6823, 413, 593,
+      14912, 10135, 45070, 10967, 294, 35840, 2470, 1189, 22882, 325, 911,
+      24331, 13, 50636
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1509881466627121,
+    "compression_ratio": 1.6357142857142857,
+    "no_speech_prob": 0.3129686117172241
+  },
+  {
+    "id": 112,
+    "seek": 70104,
+    "start": 706.48,
+    "end": 711.68,
+    "text": " Da ist es ja so, dass dort die Mechanik nur vorget\u00e4uscht wird. Da gibt es Zahnr\u00e4der,",
+    "tokens": [
+      50636, 3933, 1418, 785, 2784, 370, 11, 2658, 15775, 978, 30175, 1035,
+      4343, 4245, 847, 31611, 4701, 4578, 13, 3933, 6089, 785, 1176, 12140,
+      11397, 1068, 11, 50896
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1509881466627121,
+    "compression_ratio": 1.6357142857142857,
+    "no_speech_prob": 0.3129686117172241
+  },
+  {
+    "id": 113,
+    "seek": 70104,
+    "start": 711.68,
+    "end": 716.24,
+    "text": " die sich drehen und dann konnten auch gute Schachspieler dort gegen den Schacht\u00fcrken",
+    "tokens": [
+      50896, 978, 3041, 22540, 2932, 674, 3594, 38216, 2168, 21476, 2065, 608,
+      4952, 1187, 260, 15775, 13953, 1441, 2065, 3589, 1655, 2653, 51124
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1509881466627121,
+    "compression_ratio": 1.6357142857142857,
+    "no_speech_prob": 0.3129686117172241
+  },
+  {
+    "id": 114,
+    "seek": 70104,
+    "start": 716.24,
+    "end": 721.1999999999999,
+    "text": " spielen und viele haben auch verloren. In Wirklichkeit war ein Mensch drin, ein Schachspieler,",
+    "tokens": [
+      51124, 30950, 674, 9693, 3084, 2168, 44884, 13, 682, 4347, 9056, 9238,
+      1516, 1343, 27773, 24534, 11, 1343, 2065, 608, 4952, 1187, 260, 11, 51372
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1509881466627121,
+    "compression_ratio": 1.6357142857142857,
+    "no_speech_prob": 0.3129686117172241
+  },
+  {
+    "id": 115,
+    "seek": 70104,
+    "start": 721.1999999999999,
+    "end": 726.9599999999999,
+    "text": " der dort sozusagen gespielt hat. Das Mechanische war im Grunde die Bewegung des Arms. Also im",
+    "tokens": [
+      51372, 1163, 15775, 33762, 5019, 43929, 2385, 13, 2846, 30175, 7864, 1516,
+      566, 13941, 68, 978, 46757, 1063, 730, 42561, 13, 2743, 566, 51660
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1509881466627121,
+    "compression_ratio": 1.6357142857142857,
+    "no_speech_prob": 0.3129686117172241
+  },
+  {
+    "id": 116,
+    "seek": 72696,
+    "start": 726.96,
+    "end": 731.36,
+    "text": " Grunde ist es kein Automat, wie wir uns das heute vorstellen w\u00fcrden, sondern eher ein Apparat,",
+    "tokens": [
+      50364, 13941, 68, 1418, 785, 13424, 24619, 267, 11, 3355, 1987, 2693,
+      1482, 9801, 34346, 27621, 11, 11465, 24332, 1343, 3132, 18452, 11, 50584
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10990271360977837,
+    "compression_ratio": 1.5346153846153847,
+    "no_speech_prob": 0.015892622992396355
+  },
+  {
+    "id": 117,
+    "seek": 72696,
+    "start": 731.36,
+    "end": 735.84,
+    "text": " wie Zauberk\u00fcnstler sie heute verwenden. Der Mensch war nicht etwa in der Figur des Schachspielers",
+    "tokens": [
+      50584, 3355, 1176, 1459, 607, 74, 36656, 1918, 2804, 9801, 24615, 8896,
+      13, 5618, 27773, 1516, 1979, 28369, 294, 1163, 22443, 374, 730, 2065, 608,
+      4952, 1187, 433, 50808
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10990271360977837,
+    "compression_ratio": 1.5346153846153847,
+    "no_speech_prob": 0.015892622992396355
+  },
+  {
+    "id": 118,
+    "seek": 72696,
+    "start": 735.84,
+    "end": 741.72,
+    "text": " verborgen, sondern im Kasten unter dem Schachbrett, in dem angeblich die komplizierte Technik des",
+    "tokens": [
+      50808, 1306, 3918, 1766, 11, 11465, 566, 591, 47552, 8662, 1371, 2065,
+      608, 65, 14313, 11, 294, 1371, 364, 10848, 1739, 978, 24526, 590, 23123,
+      8337, 1035, 730, 51102
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10990271360977837,
+    "compression_ratio": 1.5346153846153847,
+    "no_speech_prob": 0.015892622992396355
+  },
+  {
+    "id": 119,
+    "seek": 72696,
+    "start": 741.72,
+    "end": 751.4000000000001,
+    "text": " T\u00fcrken untergebracht war. Die meisten Automatenbauer waren indes \u00e4u\u00dferst seri\u00f6s. Wohlstellten auch sie",
+    "tokens": [
+      51102, 16728, 2653, 8662, 432, 23404, 1516, 13, 3229, 29708, 24619, 7186,
+      65, 18120, 11931, 1016, 279, 3078, 43796, 16398, 816, 72, 11310, 13, 343,
+      12768, 17816, 1147, 2168, 2804, 51586
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10990271360977837,
+    "compression_ratio": 1.5346153846153847,
+    "no_speech_prob": 0.015892622992396355
+  },
+  {
+    "id": 120,
+    "seek": 75140,
+    "start": 751.4,
+    "end": 756.84,
+    "text": " ihre Androiden gegen Geld zur Schau, aber diese funktionierten tats\u00e4chlich. Und manche,",
+    "tokens": [
+      50364, 14280, 400, 340, 4380, 13953, 16535, 7147, 2065, 1459, 11, 4340,
+      6705, 20454, 29632, 20796, 13, 2719, 587, 1876, 11, 50636
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.136710986495018,
+    "compression_ratio": 1.4918032786885247,
+    "no_speech_prob": 0.17069607973098755
+  },
+  {
+    "id": 121,
+    "seek": 75140,
+    "start": 756.84,
+    "end": 762.9599999999999,
+    "text": " allen voran Jacques de Vaucanson, wandten sich im Lauf der Zeit vom Bau spielerischer Automaten ab",
+    "tokens": [
+      50636, 18440, 4245, 282, 42691, 368, 691, 7113, 34195, 11, 14304, 1147,
+      3041, 566, 441, 9507, 1163, 9394, 10135, 28772, 637, 1187, 260, 19674,
+      24619, 7186, 410, 50942
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.136710986495018,
+    "compression_ratio": 1.4918032786885247,
+    "no_speech_prob": 0.17069607973098755
+  },
+  {
+    "id": 122,
+    "seek": 75140,
+    "start": 762.9599999999999,
+    "end": 769.92,
+    "text": " und dem n\u00fctzlicher Maschinen zu. An seiner Person kamen fast exemplarisch den exakten Moment",
+    "tokens": [
+      50942, 674, 1371, 297, 7695, 16813, 260, 5224, 339, 5636, 2164, 13, 1107,
+      23114, 8443, 9727, 268, 2370, 24112, 289, 5494, 1441, 454, 514, 1147,
+      19093, 51290
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.136710986495018,
+    "compression_ratio": 1.4918032786885247,
+    "no_speech_prob": 0.17069607973098755
+  },
+  {
+    "id": 123,
+    "seek": 75140,
+    "start": 769.92,
+    "end": 775.3199999999999,
+    "text": " festmachen, in dem sich die Technik zunehmend von der Erzielung reiner Show-Effekte entfernte",
+    "tokens": [
+      51290, 6633, 43981, 11, 294, 1371, 3041, 978, 8337, 1035, 710, 2613, 8587,
+      521, 2957, 1163, 3300, 42280, 1063, 319, 4564, 6895, 12, 36, 602, 916,
+      975, 41940, 9358, 51560
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.136710986495018,
+    "compression_ratio": 1.4918032786885247,
+    "no_speech_prob": 0.17069607973098755
+  },
+  {
+    "id": 124,
+    "seek": 75140,
+    "start": 775.3199999999999,
+    "end": 779.56,
+    "text": " und \u00fcberging zur Entwicklung von Apparaten zur Steigerung der Arbeitsleistung.",
+    "tokens": [
+      51560, 674, 4502, 3249, 7147, 39654, 2957, 3132, 289, 7186, 7147, 3592,
+      4810, 1063, 1163, 23262, 46820, 1063, 13, 51772
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.136710986495018,
+    "compression_ratio": 1.4918032786885247,
+    "no_speech_prob": 0.17069607973098755
+  },
+  {
+    "id": 125,
+    "seek": 78140,
+    "start": 781.4,
+    "end": 792.72,
+    "text": " 1741 war de Vaucanson von der k\u00f6niglichen Regierung die Oberaufsicht \u00fcber das franz\u00f6sische",
+    "tokens": [
+      50364, 3282, 17344, 1516, 368, 691, 7113, 34195, 2957, 1163, 4798, 328,
+      10193, 42979, 978, 27664, 9507, 82, 1405, 4502, 1482, 431, 3910, 11310,
+      7864, 50930
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12472476409031795,
+    "compression_ratio": 1.5098814229249011,
+    "no_speech_prob": 0.005138705018907785
+  },
+  {
+    "id": 126,
+    "seek": 78140,
+    "start": 792.72,
+    "end": 798.1999999999999,
+    "text": " Seidenmanufakturwesen \u00fcbertragen worden, weil er als international hoch angesehener Fachmann f\u00fcr",
+    "tokens": [
+      50930, 1100, 4380, 1601, 2947, 5886, 374, 86, 17403, 3304, 4290, 20663,
+      14054, 11, 7689, 1189, 3907, 5058, 19783, 2562, 18380, 260, 38213, 14912,
+      2959, 51204
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12472476409031795,
+    "compression_ratio": 1.5098814229249011,
+    "no_speech_prob": 0.005138705018907785
+  },
+  {
+    "id": 127,
+    "seek": 78140,
+    "start": 798.1999999999999,
+    "end": 803.76,
+    "text": " Mechanik und Mitglied der erlaubten franz\u00f6sischen Akademie der Wissenschaften daf\u00fcr geeignet",
+    "tokens": [
+      51204, 30175, 1035, 674, 44167, 1091, 1163, 1189, 20798, 1147, 431, 3910,
+      11310, 6282, 9629, 345, 32163, 1163, 38774, 268, 13747, 24105, 788, 302,
+      51482
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12472476409031795,
+    "compression_ratio": 1.5098814229249011,
+    "no_speech_prob": 0.005138705018907785
+  },
+  {
+    "id": 128,
+    "seek": 78140,
+    "start": 803.76,
+    "end": 809.16,
+    "text": " schien, die gegen\u00fcber der Englischen ins Hintertreffen geratene franz\u00f6sische Textilindustrie",
+    "tokens": [
+      51482, 956, 1053, 11, 978, 41830, 1163, 2469, 75, 6282, 1028, 35006, 3599,
+      15945, 5713, 267, 1450, 431, 3910, 11310, 7864, 18643, 388, 50046, 51752
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12472476409031795,
+    "compression_ratio": 1.5098814229249011,
+    "no_speech_prob": 0.005138705018907785
+  },
+  {
+    "id": 129,
+    "seek": 80916,
+    "start": 809.16,
+    "end": 815.0,
+    "text": " wieder auf Vordermann zu bringen. De Vaucanson l\u00f6ste die Aufgabe mit gewohnter Bravour. Er",
+    "tokens": [
+      50364, 6216, 2501, 691, 765, 966, 969, 2164, 27519, 13, 1346, 691, 7113,
+      34195, 25209, 2941, 978, 40070, 2194, 6906, 2359, 391, 4991, 85, 396, 13,
+      3300, 50656
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13561731524172083,
+    "compression_ratio": 1.4291187739463602,
+    "no_speech_prob": 0.23849904537200928
+  },
+  {
+    "id": 130,
+    "seek": 80916,
+    "start": 815.0,
+    "end": 820.52,
+    "text": " rationalisierte die Produktions- und Arbeitsabl\u00e4ufe, richtete gro\u00dfe Mustermanufakturen ein,",
+    "tokens": [
+      50656, 15090, 271, 23123, 978, 44599, 626, 12, 674, 23262, 455, 22882, 84,
+      2106, 11, 22136, 3498, 19691, 376, 8393, 1601, 2947, 5886, 9873, 1343, 11,
+      50932
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13561731524172083,
+    "compression_ratio": 1.4291187739463602,
+    "no_speech_prob": 0.23849904537200928
+  },
+  {
+    "id": 131,
+    "seek": 80916,
+    "start": 820.52,
+    "end": 827.68,
+    "text": " konstruierte leistungsf\u00e4hige Spinnmaschinen und mechanische Webst\u00fchle. Dabei baute er auf die",
+    "tokens": [
+      50932, 34208, 894, 23123, 476, 468, 5846, 44616, 3969, 1738, 7729, 3799,
+      339, 5636, 674, 4236, 7864, 9573, 372, 7254, 306, 13, 39606, 4773, 1169,
+      1189, 2501, 978, 51290
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13561731524172083,
+    "compression_ratio": 1.4291187739463602,
+    "no_speech_prob": 0.23849904537200928
+  },
+  {
+    "id": 132,
+    "seek": 80916,
+    "start": 827.68,
+    "end": 833.12,
+    "text": " Leistung seiner Landsleute Basile Bouchon und Jean-Baptiste Falcon auf, die sich schon rund",
+    "tokens": [
+      51290, 39577, 1063, 23114, 30527, 306, 1169, 5859, 794, 363, 2220, 266,
+      674, 13854, 12, 33, 2796, 8375, 15202, 1671, 2501, 11, 978, 3041, 4981,
+      23096, 51562
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13561731524172083,
+    "compression_ratio": 1.4291187739463602,
+    "no_speech_prob": 0.23849904537200928
+  },
+  {
+    "id": 133,
+    "seek": 83312,
+    "start": 833.2,
+    "end": 839.64,
+    "text": " 20 Jahre zuvor mit der Entwicklung automatischer bzw. halbautomatischer Webst\u00fchle befasst hatten.",
+    "tokens": [
+      50368, 945, 15557, 2164, 8453, 2194, 1163, 39654, 28034, 19674, 39998, 13,
+      7523, 65, 1375, 34295, 19674, 9573, 372, 7254, 306, 21312, 48435, 20441,
+      13, 50690
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12071898859790248,
+    "compression_ratio": 1.5137254901960784,
+    "no_speech_prob": 0.30944862961769104
+  },
+  {
+    "id": 134,
+    "seek": 83312,
+    "start": 839.64,
+    "end": 845.76,
+    "text": " Doch er ging weit dar\u00fcber hinaus, indem er seine Webst\u00fchle mit Messingzylindern ausstattete,",
+    "tokens": [
+      50690, 21533, 1189, 21924, 15306, 21737, 46056, 11, 37185, 1189, 15925,
+      9573, 372, 7254, 306, 2194, 9847, 278, 1229, 75, 471, 1248, 3437, 372,
+      1591, 3498, 11, 50996
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12071898859790248,
+    "compression_ratio": 1.5137254901960784,
+    "no_speech_prob": 0.30944862961769104
+  },
+  {
+    "id": 135,
+    "seek": 83312,
+    "start": 845.76,
+    "end": 853.28,
+    "text": " die mit gelochten Pappkarten umspannt waren. Diese wiederum wurden durch Metallstifte abgetastet",
+    "tokens": [
+      50996, 978, 2194, 4087, 8997, 1147, 430, 1746, 74, 11719, 1105, 4952,
+      39878, 11931, 13, 18993, 6216, 449, 21105, 7131, 49447, 372, 351, 975,
+      410, 847, 525, 302, 51372
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12071898859790248,
+    "compression_ratio": 1.5137254901960784,
+    "no_speech_prob": 0.30944862961769104
+  },
+  {
+    "id": 136,
+    "seek": 83312,
+    "start": 853.28,
+    "end": 859.6800000000001,
+    "text": " und erm\u00f6glichten es somit, dass de Vaucansons Webst\u00fchle vorprogrammierte Muster in die Stoffe",
+    "tokens": [
+      51372, 674, 25253, 50023, 20238, 268, 785, 3307, 270, 11, 2658, 368, 691,
+      7113, 599, 892, 9573, 372, 7254, 306, 4245, 32726, 76, 23123, 376, 8393,
+      294, 978, 745, 4506, 68, 51692
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12071898859790248,
+    "compression_ratio": 1.5137254901960784,
+    "no_speech_prob": 0.30944862961769104
+  },
+  {
+    "id": 137,
+    "seek": 85968,
+    "start": 859.68,
+    "end": 865.8,
+    "text": " weben konnten. Das war die Geburtsstunde der modernen Lochkartensteuerung. De Vaucansons",
+    "tokens": [
+      50364, 321, 1799, 38216, 13, 2846, 1516, 978, 2876, 13243, 1373, 372,
+      13271, 1163, 4363, 268, 49912, 74, 11719, 2941, 5486, 1063, 13, 1346, 691,
+      7113, 599, 892, 50670
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13517365736119888,
+    "compression_ratio": 1.611683848797251,
+    "no_speech_prob": 0.26482269167900085
+  },
+  {
+    "id": 138,
+    "seek": 85968,
+    "start": 865.8,
+    "end": 870.4799999999999,
+    "text": " Webstuhl konnte selbst komplizierte Muster in einem Bruchteil der Zeit weben, die man von Hand",
+    "tokens": [
+      50670, 9573, 372, 3232, 75, 24058, 13053, 24526, 590, 23123, 376, 8393,
+      294, 6827, 1603, 625, 30766, 1163, 9394, 321, 1799, 11, 978, 587, 2957,
+      8854, 50904
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13517365736119888,
+    "compression_ratio": 1.611683848797251,
+    "no_speech_prob": 0.26482269167900085
+  },
+  {
+    "id": 139,
+    "seek": 85968,
+    "start": 870.4799999999999,
+    "end": 877.0,
+    "text": " dazu brauchte. Aber er war seinerzeit weit voraus. Noch war Menschenarbeit billiger als die Anschaffung",
+    "tokens": [
+      50904, 13034, 45522, 975, 13, 5992, 1189, 1516, 23114, 13712, 15306, 371,
+      3252, 301, 13, 38116, 1516, 8397, 24024, 2961, 4810, 3907, 978, 45062,
+      2518, 1063, 51230
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13517365736119888,
+    "compression_ratio": 1.611683848797251,
+    "no_speech_prob": 0.26482269167900085
+  },
+  {
+    "id": 140,
+    "seek": 85968,
+    "start": 877.0,
+    "end": 882.4,
+    "text": " von Maschinen. Doch ein gutes halbes Jahrhundert sp\u00e4ter verbesserte ein gewisser Joseph-Marie",
+    "tokens": [
+      51230, 2957, 5224, 339, 5636, 13, 21533, 1343, 45859, 7523, 6446, 11674,
+      71, 34267, 24196, 49112, 10634, 1343, 6906, 23714, 11170, 12, 16639, 414,
+      51500
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13517365736119888,
+    "compression_ratio": 1.611683848797251,
+    "no_speech_prob": 0.26482269167900085
+  },
+  {
+    "id": 141,
+    "seek": 85968,
+    "start": 882.4,
+    "end": 887.68,
+    "text": " Jacquard Jacques de Vaucansons Konzept und verhalf dem Lochkarten gesteuerten Webstuhl",
+    "tokens": [
+      51500, 49770, 515, 42691, 368, 691, 7113, 599, 892, 12718, 32082, 674,
+      1306, 25461, 1371, 49912, 74, 11719, 7219, 23685, 39990, 9573, 372, 3232,
+      75, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13517365736119888,
+    "compression_ratio": 1.611683848797251,
+    "no_speech_prob": 0.26482269167900085
+  },
+  {
+    "id": 142,
+    "seek": 88768,
+    "start": 887.68,
+    "end": 893.2399999999999,
+    "text": " endg\u00fcltig zum Durchbruch. Gleichzeitig wurde auch die Herstellung von Zwirnen und F\u00e4den in",
+    "tokens": [
+      50364, 917, 70, 774, 2282, 328, 5919, 28557, 1443, 625, 13, 33858, 32075,
+      11191, 2168, 978, 3204, 30016, 2957, 29385, 347, 2866, 674, 479, 737,
+      1556, 294, 50642
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11357473072252776,
+    "compression_ratio": 1.4481481481481482,
+    "no_speech_prob": 0.28688734769821167
+  },
+  {
+    "id": 143,
+    "seek": 88768,
+    "start": 893.2399999999999,
+    "end": 900.88,
+    "text": " industriellem Ma\u00dfstab m\u00f6glich. Schon 1757 dichtete der englische Pfarrer John Dyer begeistert \u00fcber",
+    "tokens": [
+      50642, 2735, 5469, 285, 443, 28645, 372, 455, 16294, 13, 46049, 3282,
+      19004, 48774, 3498, 1163, 1741, 75, 7864, 17331, 2284, 260, 2619, 413,
+      7224, 41832, 1964, 83, 4502, 51024
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11357473072252776,
+    "compression_ratio": 1.4481481481481482,
+    "no_speech_prob": 0.28688734769821167
+  },
+  {
+    "id": 144,
+    "seek": 88768,
+    "start": 900.88,
+    "end": 908.0799999999999,
+    "text": " die neuartigen Spinnmaschinen in seiner Heimat. Dann zeigt man uns die neueste Maschine. Sie macht",
+    "tokens": [
+      51024, 978, 22510, 446, 3213, 1738, 7729, 3799, 339, 5636, 294, 23114,
+      634, 33862, 13, 7455, 29250, 587, 2693, 978, 22510, 8887, 5224, 36675, 13,
+      3559, 10857, 51384
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11357473072252776,
+    "compression_ratio": 1.4481481481481482,
+    "no_speech_prob": 0.28688734769821167
+  },
+  {
+    "id": 145,
+    "seek": 88768,
+    "start": 908.0799999999999,
+    "end": 914.4399999999999,
+    "text": " die l\u00e4sst gefroren gar vieler Menschenh\u00e4nde \u00fcberfl\u00fcssig. Dies alles wird \u00fcberwacht von einem",
+    "tokens": [
+      51384, 978, 29335, 11271, 340, 1095, 3691, 5891, 260, 8397, 71, 26973,
+      4502, 3423, 35207, 328, 13, 10796, 7874, 4578, 4502, 86, 3589, 2957, 6827,
+      51702
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11357473072252776,
+    "compression_ratio": 1.4481481481481482,
+    "no_speech_prob": 0.28688734769821167
+  },
+  {
+    "id": 146,
+    "seek": 91444,
+    "start": 914.44,
+    "end": 920.5600000000001,
+    "text": " einzigen Mann, der uns erkl\u00e4rt, wie sich die Krempelwolle um die sich drehenden Zylinder",
+    "tokens": [
+      50364, 21586, 3213, 16892, 11, 1163, 2693, 27570, 24802, 11, 3355, 3041,
+      978, 23625, 2455, 338, 86, 1833, 68, 1105, 978, 3041, 274, 9017, 8896,
+      1176, 5088, 5669, 50670
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11720710847435928,
+    "compression_ratio": 1.455223880597015,
+    "no_speech_prob": 0.09661471098661423
+  },
+  {
+    "id": 147,
+    "seek": 91444,
+    "start": 920.5600000000001,
+    "end": 927.32,
+    "text": " schmiegt, von wo sie weitergeleitet zu dem Kreis aufrichter Spindeln, die in raschen Wirbeln sie zu",
+    "tokens": [
+      50670, 956, 25210, 10463, 11, 2957, 6020, 2804, 8988, 432, 306, 16341,
+      2164, 1371, 23625, 271, 2501, 12836, 260, 1738, 471, 9878, 11, 978, 294,
+      26815, 2470, 4347, 5390, 77, 2804, 2164, 51008
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11720710847435928,
+    "compression_ratio": 1.455223880597015,
+    "no_speech_prob": 0.09661471098661423
+  },
+  {
+    "id": 148,
+    "seek": 91444,
+    "start": 927.32,
+    "end": 934.72,
+    "text": " langen feinen F\u00e4den zwirnen. Dank solcher Spinnmaschinen und mechanischer Webst\u00fchle explodierte",
+    "tokens": [
+      51008, 2265, 268, 579, 5636, 479, 737, 1556, 11873, 347, 2866, 13, 14148,
+      1404, 6759, 1738, 7729, 3799, 339, 5636, 674, 4236, 19674, 9573, 372,
+      7254, 306, 1490, 378, 23123, 51378
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11720710847435928,
+    "compression_ratio": 1.455223880597015,
+    "no_speech_prob": 0.09661471098661423
+  },
+  {
+    "id": 149,
+    "seek": 91444,
+    "start": 934.72,
+    "end": 940.72,
+    "text": " die Textilproduktion Ende des 18. Jahrhunderts geradezu. In manchen Regionen, Englands beispielsweise,",
+    "tokens": [
+      51378, 978, 18643, 388, 14314, 9780, 15152, 730, 2443, 13, 11674, 71,
+      34267, 82, 12117, 11728, 13, 682, 587, 2470, 4791, 17068, 11, 8196, 82,
+      40152, 11, 51678
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11720710847435928,
+    "compression_ratio": 1.455223880597015,
+    "no_speech_prob": 0.09661471098661423
+  },
+  {
+    "id": 150,
+    "seek": 94072,
+    "start": 940.72,
+    "end": 947.44,
+    "text": " verdreifachte sich zwischen 1780 und 1790 die Zahl der Webst\u00fchle. \u00dcberdies stand mit der",
+    "tokens": [
+      50364, 6387, 265, 351, 26136, 3041, 19875, 3282, 4702, 674, 3282, 7771,
+      978, 42592, 1163, 9573, 372, 7254, 306, 13, 18086, 22018, 1463, 2194,
+      1163, 50700
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09884410526441491,
+    "compression_ratio": 1.3639575971731448,
+    "no_speech_prob": 0.03356269747018814
+  },
+  {
+    "id": 151,
+    "seek": 94072,
+    "start": 947.44,
+    "end": 952.88,
+    "text": " Dampfmaschine jetzt auch noch eine Energie- und Antriebsquelle zur Verf\u00fcgung, die eine Produktion",
+    "tokens": [
+      50700, 413, 30157, 3799, 36675, 4354, 2168, 3514, 3018, 35309, 12, 674,
+      5130, 5469, 929, 32743, 7147, 43026, 11, 978, 3018, 11793, 9780, 50972
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09884410526441491,
+    "compression_ratio": 1.3639575971731448,
+    "no_speech_prob": 0.03356269747018814
+  },
+  {
+    "id": 152,
+    "seek": 94072,
+    "start": 952.88,
+    "end": 964.52,
+    "text": " in wahrhaft industriellem Ma\u00dfstab erm\u00f6glichte. Auch ihre Anf\u00e4nge waren eher bescheiden. Schon",
+    "tokens": [
+      50972, 294, 21628, 25127, 2735, 5469, 285, 443, 28645, 372, 455, 25253,
+      50023, 20238, 68, 13, 13382, 14280, 1107, 69, 29091, 11931, 24332, 4097,
+      1876, 4380, 13, 46049, 51554
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09884410526441491,
+    "compression_ratio": 1.3639575971731448,
+    "no_speech_prob": 0.03356269747018814
+  },
+  {
+    "id": 153,
+    "seek": 94072,
+    "start": 964.52,
+    "end": 969.88,
+    "text": " seit Beginn des 18. Jahrhunderts waren in Gro\u00dfbritannien zum Entw\u00e4ssern von Steinkohle-Bergwerken",
+    "tokens": [
+      51554, 16452, 20660, 77, 730, 2443, 13, 11674, 71, 34267, 82, 11931, 294,
+      34534, 1443, 270, 969, 1053, 5919, 3951, 86, 49045, 1248, 2957, 3592, 475,
+      1445, 306, 12, 33, 17025, 1554, 2653, 51822
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09884410526441491,
+    "compression_ratio": 1.3639575971731448,
+    "no_speech_prob": 0.03356269747018814
+  },
+  {
+    "id": 154,
+    "seek": 96988,
+    "start": 969.88,
+    "end": 977.56,
+    "text": " Dampfmaschinen im Einsatz. Aber die waren nicht sehr leistungsf\u00e4hig. Erst 1769 gelang es dem Schotten",
+    "tokens": [
+      50364, 413, 30157, 3799, 339, 5636, 566, 38474, 13, 5992, 978, 11931,
+      1979, 5499, 476, 468, 5846, 44616, 328, 13, 31183, 3282, 30908, 4087, 656,
+      785, 1371, 2065, 310, 1147, 50748
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09077060431764837,
+    "compression_ratio": 1.4328358208955223,
+    "no_speech_prob": 0.058304015547037125
+  },
+  {
+    "id": 155,
+    "seek": 96988,
+    "start": 977.56,
+    "end": 983.96,
+    "text": " James Watt, den Wirkungsgrad der Dampfmaschine entscheidend zu erh\u00f6hen. Von da an bildete die",
+    "tokens": [
+      50748, 5678, 343, 1591, 11, 1441, 4347, 74, 5846, 7165, 1163, 413, 30157,
+      3799, 36675, 28398, 327, 521, 2164, 49058, 2932, 13, 20700, 1120, 364,
+      22105, 3498, 978, 51068
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09077060431764837,
+    "compression_ratio": 1.4328358208955223,
+    "no_speech_prob": 0.058304015547037125
+  },
+  {
+    "id": 156,
+    "seek": 96988,
+    "start": 983.96,
+    "end": 990.04,
+    "text": " Dampfmaschine buchst\u00e4blich die treibende Kraft der industriellen Revolution. Niemand wei\u00df genau,",
+    "tokens": [
+      51068, 413, 30157, 3799, 36675, 272, 625, 24019, 65, 1739, 978, 2192, 897,
+      5445, 31313, 1163, 2735, 5469, 19191, 16617, 13, 426, 39362, 13385, 12535,
+      11, 51372
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09077060431764837,
+    "compression_ratio": 1.4328358208955223,
+    "no_speech_prob": 0.058304015547037125
+  },
+  {
+    "id": 157,
+    "seek": 96988,
+    "start": 990.04,
+    "end": 995.68,
+    "text": " warum die Technik gerade im 18. Jahrhundert einen wahren Quantensprung vollf\u00fchrte. Die",
+    "tokens": [
+      51372, 24331, 978, 8337, 1035, 12117, 566, 2443, 13, 11674, 71, 34267,
+      4891, 261, 7079, 26968, 694, 1424, 1063, 15593, 29189, 975, 13, 3229,
+      51654
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09077060431764837,
+    "compression_ratio": 1.4328358208955223,
+    "no_speech_prob": 0.058304015547037125
+  },
+  {
+    "id": 158,
+    "seek": 99568,
+    "start": 995.68,
+    "end": 1000.3599999999999,
+    "text": " wesentlichen Voraussetzungen daf\u00fcr w\u00e4ren ja auch schon im Hellenismus oder im Alten Rom oder China",
+    "tokens": [
+      50364, 38384, 7698, 268, 691, 3252, 2023, 10074, 5084, 13747, 43933, 2784,
+      2168, 4981, 566, 12090, 268, 25327, 4513, 566, 967, 1147, 10141, 4513,
+      3533, 50598
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09957409622077655,
+    "compression_ratio": 1.5434083601286173,
+    "no_speech_prob": 0.07798248529434204
+  },
+  {
+    "id": 159,
+    "seek": 99568,
+    "start": 1000.3599999999999,
+    "end": 1006.52,
+    "text": " gegeben gewesen. Doch ist auff\u00e4llig, dass die industrielle Revolution zeitlich mit Revolutionen",
+    "tokens": [
+      50598, 32572, 27653, 13, 21533, 1418, 257, 1245, 10053, 328, 11, 2658,
+      978, 2735, 5469, 2447, 16617, 49367, 1739, 2194, 16617, 268, 50906
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09957409622077655,
+    "compression_ratio": 1.5434083601286173,
+    "no_speech_prob": 0.07798248529434204
+  },
+  {
+    "id": 160,
+    "seek": 99568,
+    "start": 1006.52,
+    "end": 1012.04,
+    "text": " auch auf wichtigen anderen Gebieten zusammenfiel. Da w\u00e4re einmal der gewaltige Fortschritt auf",
+    "tokens": [
+      50906, 2168, 2501, 26244, 3213, 11122, 24984, 25868, 14311, 69, 1187, 13,
+      3933, 14558, 11078, 1163, 6906, 3198, 3969, 479, 3299, 339, 18579, 2501,
+      51182
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09957409622077655,
+    "compression_ratio": 1.5434083601286173,
+    "no_speech_prob": 0.07798248529434204
+  },
+  {
+    "id": 161,
+    "seek": 99568,
+    "start": 1012.04,
+    "end": 1017.68,
+    "text": " medizinischem und hygienischem Gebiet zu nennen. So wurde gegen Ende des 18. Jahrhunderts zum",
+    "tokens": [
+      51182, 1205, 36367, 5494, 443, 674, 24470, 1053, 5494, 443, 24984, 1684,
+      2164, 297, 16043, 13, 407, 11191, 13953, 15152, 730, 2443, 13, 11674, 71,
+      34267, 82, 5919, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09957409622077655,
+    "compression_ratio": 1.5434083601286173,
+    "no_speech_prob": 0.07798248529434204
+  },
+  {
+    "id": 162,
+    "seek": 99568,
+    "start": 1017.68,
+    "end": 1023.12,
+    "text": " Beispiel die Pockenschutzimpfung entwickelt. Da gingen die Bauern von der uralten Dreifelder",
+    "tokens": [
+      51464, 13772, 978, 430, 1560, 26590, 12950, 8814, 69, 1063, 43208, 13,
+      3933, 290, 12343, 978, 28772, 1248, 2957, 1163, 344, 2155, 1147, 31635,
+      351, 338, 1068, 51736
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09957409622077655,
+    "compression_ratio": 1.5434083601286173,
+    "no_speech_prob": 0.07798248529434204
+  },
+  {
+    "id": 163,
+    "seek": 102312,
+    "start": 1023.12,
+    "end": 1029.2,
+    "text": " Wirtschaft zum modernen Fruchtwechsel \u00fcber und bauten verst\u00e4rkt die aus Amerika stammende Kartoffel",
+    "tokens": [
+      50364, 29412, 5919, 4363, 268, 1526, 10084, 26934, 4502, 674, 272, 1375,
+      268, 48960, 2713, 2320, 978, 3437, 42345, 342, 5136, 5445, 27365, 4506,
+      338, 50668
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1162905370382438,
+    "compression_ratio": 1.5177993527508091,
+    "no_speech_prob": 0.296844482421875
+  },
+  {
+    "id": 164,
+    "seek": 102312,
+    "start": 1029.2,
+    "end": 1035.2,
+    "text": " als neues Grundnahrungsmittel an. Da f\u00fchrte der vernunftgl\u00e4ubige Zeitgeist der Aufkl\u00e4rung dazu,",
+    "tokens": [
+      50668, 3907, 43979, 13941, 77, 5398, 5846, 33960, 364, 13, 3933, 283,
+      11986, 975, 1163, 35793, 19333, 7191, 737, 836, 3969, 9394, 432, 468,
+      1163, 9462, 45988, 1063, 13034, 11, 50968
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1162905370382438,
+    "compression_ratio": 1.5177993527508091,
+    "no_speech_prob": 0.296844482421875
+  },
+  {
+    "id": 165,
+    "seek": 102312,
+    "start": 1035.2,
+    "end": 1041.2,
+    "text": " dass das B\u00fcrgertum die alten Autorit\u00e4ten des kirchlichen und weltlichen Adels pl\u00f6tzlich in",
+    "tokens": [
+      50968, 2658, 1482, 22596, 70, 911, 449, 978, 41217, 6049, 284, 49289, 730,
+      33497, 339, 10193, 674, 43119, 10193, 1999, 1625, 49033, 294, 51268
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1162905370382438,
+    "compression_ratio": 1.5177993527508091,
+    "no_speech_prob": 0.296844482421875
+  },
+  {
+    "id": 166,
+    "seek": 102312,
+    "start": 1041.2,
+    "end": 1046.96,
+    "text": " Zweifel zog. Den Adel, der ja nur das Geld ausgegeben hat, aber nicht angelegt hat,",
+    "tokens": [
+      51268, 32475, 351, 338, 710, 664, 13, 6458, 1999, 338, 11, 1163, 2784,
+      4343, 1482, 16535, 31899, 16702, 2385, 11, 4340, 1979, 15495, 22745, 2385,
+      11, 51556
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1162905370382438,
+    "compression_ratio": 1.5177993527508091,
+    "no_speech_prob": 0.296844482421875
+  },
+  {
+    "id": 167,
+    "seek": 102312,
+    "start": 1046.96,
+    "end": 1050.68,
+    "text": " ja, den will man nat\u00fcrlich weghaben. Und der franz\u00f6sischen Revolution wird das auch sehr",
+    "tokens": [
+      51556, 2784, 11, 1441, 486, 587, 8762, 15565, 7821, 268, 13, 2719, 1163,
+      431, 3910, 11310, 6282, 16617, 4578, 1482, 2168, 5499, 51742
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1162905370382438,
+    "compression_ratio": 1.5177993527508091,
+    "no_speech_prob": 0.296844482421875
+  },
+  {
+    "id": 168,
+    "seek": 105068,
+    "start": 1051.3600000000001,
+    "end": 1058.44,
+    "text": " resolut bevollf\u00fchrt. Wir sind eigentlich die Gestalter dieser Welt. Wir nutzen unsere Ressourcen,",
+    "tokens": [
+      50398, 7923, 325, 312, 20654, 69, 19647, 13, 4347, 3290, 10926, 978,
+      39909, 43420, 9053, 14761, 13, 4347, 36905, 14339, 497, 442, 396, 13037,
+      11, 50752
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15255865529805673,
+    "compression_ratio": 1.6388888888888888,
+    "no_speech_prob": 0.39796772599220276
+  },
+  {
+    "id": 169,
+    "seek": 105068,
+    "start": 1058.44,
+    "end": 1061.64,
+    "text": " also auch finanziellen Ressourcen, aber auch materiellen Ressourcen nicht einfach zur",
+    "tokens": [
+      50752, 611, 2168, 3682, 3283, 19191, 497, 442, 396, 13037, 11, 4340, 2168,
+      2389, 414, 19191, 497, 442, 396, 13037, 1979, 7281, 7147, 50912
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15255865529805673,
+    "compression_ratio": 1.6388888888888888,
+    "no_speech_prob": 0.39796772599220276
+  },
+  {
+    "id": 170,
+    "seek": 105068,
+    "start": 1061.64,
+    "end": 1067.5600000000002,
+    "text": " Repr\u00e4sentation, wie das der Adel gemacht hat, sondern wir tun das, um anderen Menschen die",
+    "tokens": [
+      50912, 3696, 11397, 49315, 399, 11, 3355, 1482, 1163, 1999, 338, 12293,
+      2385, 11, 11465, 1987, 4267, 1482, 11, 1105, 11122, 8397, 978, 51208
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15255865529805673,
+    "compression_ratio": 1.6388888888888888,
+    "no_speech_prob": 0.39796772599220276
+  },
+  {
+    "id": 171,
+    "seek": 105068,
+    "start": 1067.5600000000002,
+    "end": 1072.04,
+    "text": " M\u00f6glichkeit zu geben, f\u00fcr sich Einkommen zu erwirtschaften, also Arbeitern in dem Sinne. Das",
+    "tokens": [
+      51208, 30662, 2164, 17191, 11, 2959, 3041, 49128, 5132, 2164, 21715,
+      32896, 268, 11, 611, 18604, 1248, 294, 1371, 47041, 13, 2846, 51432
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15255865529805673,
+    "compression_ratio": 1.6388888888888888,
+    "no_speech_prob": 0.39796772599220276
+  },
+  {
+    "id": 172,
+    "seek": 105068,
+    "start": 1072.04,
+    "end": 1076.88,
+    "text": " ist nat\u00fcrlich eine ganz andere Sicht und gegen\u00fcber den feudalen Strukturen ist das nat\u00fcrlich auch",
+    "tokens": [
+      51432, 1418, 8762, 3018, 6312, 10490, 36615, 674, 41830, 1441, 36377,
+      21745, 745, 19977, 9873, 1418, 1482, 8762, 2168, 51674
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15255865529805673,
+    "compression_ratio": 1.6388888888888888,
+    "no_speech_prob": 0.39796772599220276
+  },
+  {
+    "id": 173,
+    "seek": 107688,
+    "start": 1076.88,
+    "end": 1082.3600000000001,
+    "text": " richtig ein Fortschritt, klar. Der Fortschritt auf allen m\u00f6glichen Gebieten ging einher mit",
+    "tokens": [
+      50364, 13129, 1343, 479, 3299, 339, 18579, 11, 14743, 13, 5618, 479, 3299,
+      339, 18579, 2501, 18440, 16294, 268, 24984, 25868, 21924, 1343, 511, 2194,
+      50638
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09963163496955993,
+    "compression_ratio": 1.5525423728813559,
+    "no_speech_prob": 0.30615493655204773
+  },
+  {
+    "id": 174,
+    "seek": 107688,
+    "start": 1082.3600000000001,
+    "end": 1087.96,
+    "text": " einem gewaltigen Bev\u00f6lkerungswachstum. Dieses bot einmal steigende Abseitsm\u00f6glichkeiten f\u00fcr",
+    "tokens": [
+      50638, 6827, 6906, 3198, 3213, 48313, 5846, 50038, 372, 449, 13, 39201,
+      10592, 11078, 2126, 328, 5445, 2847, 44033, 76, 16277, 21049, 2959, 50918
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09963163496955993,
+    "compression_ratio": 1.5525423728813559,
+    "no_speech_prob": 0.30615493655204773
+  },
+  {
+    "id": 175,
+    "seek": 107688,
+    "start": 1087.96,
+    "end": 1093.3200000000002,
+    "text": " die Massenprodukte der neuen Industrien sowie einen ausreichenden Bestand an Arbeitskr\u00e4ften",
+    "tokens": [
+      50918, 978, 376, 8356, 14314, 18844, 1163, 21387, 16018, 27378, 35874,
+      4891, 3437, 12594, 8896, 9752, 474, 364, 23262, 42319, 14513, 51186
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09963163496955993,
+    "compression_ratio": 1.5525423728813559,
+    "no_speech_prob": 0.30615493655204773
+  },
+  {
+    "id": 176,
+    "seek": 107688,
+    "start": 1093.3200000000002,
+    "end": 1099.6000000000001,
+    "text": " in den Produktionsanlagen. Das war positiv. Andererseits f\u00fchrte das gro\u00dfe Angebot an",
+    "tokens": [
+      51186, 294, 1441, 44599, 626, 282, 29177, 13, 2846, 1516, 40806, 13, 400,
+      29566, 44033, 283, 11986, 975, 1482, 19691, 44301, 310, 364, 51500
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09963163496955993,
+    "compression_ratio": 1.5525423728813559,
+    "no_speech_prob": 0.30615493655204773
+  },
+  {
+    "id": 177,
+    "seek": 107688,
+    "start": 1099.6000000000001,
+    "end": 1105.3200000000002,
+    "text": " Arbeitswilligen zu Niedrigstl\u00f6hnen, Ausbeutung und schrecklichem Elend innerhalb der sich",
+    "tokens": [
+      51500, 23262, 17044, 3213, 2164, 426, 1091, 7065, 372, 75, 23817, 2866,
+      11, 9039, 650, 325, 1063, 674, 956, 14954, 1739, 443, 2699, 521, 48460,
+      1163, 3041, 51786
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09963163496955993,
+    "compression_ratio": 1.5525423728813559,
+    "no_speech_prob": 0.30615493655204773
+  },
+  {
+    "id": 178,
+    "seek": 110532,
+    "start": 1105.32,
+    "end": 1111.1599999999999,
+    "text": " neu bildenden Gesellschaftsklasse des Industrie-Polittariats. Das war \u00e4u\u00dferst negativ.",
+    "tokens": [
+      50364, 22510, 22105, 8896, 30006, 5161, 40255, 730, 16018, 5469, 12, 47,
+      401, 593, 3504, 1720, 13, 2846, 1516, 3078, 43796, 16398, 2485, 10662, 13,
+      50656
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16731460421693092,
+    "compression_ratio": 1.4329501915708813,
+    "no_speech_prob": 0.022272249683737755
+  },
+  {
+    "id": 179,
+    "seek": 110532,
+    "start": 1115.1599999999999,
+    "end": 1120.84,
+    "text": " So verlor die Technik ohne es zu wollen, w\u00e4hrend des 18. Jahrhunderts durch die Hinwendung zur",
+    "tokens": [
+      50856, 407, 1306, 6746, 978, 8337, 1035, 15716, 785, 2164, 11253, 11,
+      33624, 730, 2443, 13, 11674, 71, 34267, 82, 7131, 978, 29571, 20128, 1063,
+      7147, 51140
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16731460421693092,
+    "compression_ratio": 1.4329501915708813,
+    "no_speech_prob": 0.022272249683737755
+  },
+  {
+    "id": 180,
+    "seek": 110532,
+    "start": 1120.84,
+    "end": 1126.8,
+    "text": " reinen N\u00fctzlichkeit ihre Unschuld. Die durch die industrielle Revolution hervorgerufenen",
+    "tokens": [
+      51140, 319, 5636, 426, 7695, 16813, 9238, 14280, 1156, 6145, 13432, 13,
+      3229, 7131, 978, 2735, 5469, 2447, 16617, 720, 8453, 1321, 19890, 268,
+      51438
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16731460421693092,
+    "compression_ratio": 1.4329501915708813,
+    "no_speech_prob": 0.022272249683737755
+  },
+  {
+    "id": 181,
+    "seek": 110532,
+    "start": 1126.8,
+    "end": 1132.72,
+    "text": " sozialen Probleme bestimmten den Fortgang der europ\u00e4ischen Geschichte bis weit ins 20. Jahrhundert",
+    "tokens": [
+      51438, 31541, 268, 32891, 35180, 1147, 1441, 11002, 19619, 1163, 22139,
+      43599, 28896, 7393, 15306, 1028, 945, 13, 11674, 71, 34267, 51734
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.16731460421693092,
+    "compression_ratio": 1.4329501915708813,
+    "no_speech_prob": 0.022272249683737755
+  },
+  {
+    "id": 182,
+    "seek": 113272,
+    "start": 1133.2,
+    "end": 1139.3600000000001,
+    "text": " ma\u00dfgeblich mit. Als die Dampfmaschine in Gestalt von Dampfschiff und Eisenbahn im 19. Jahrhundert",
+    "tokens": [
+      50388, 463, 2536, 10848, 1739, 2194, 13, 12948, 978, 413, 30157, 3799,
+      36675, 294, 39909, 3198, 2957, 413, 30157, 6145, 3661, 674, 35619, 39865,
+      566, 1294, 13, 11674, 71, 34267, 50696
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11118439496573755,
+    "compression_ratio": 1.44043321299639,
+    "no_speech_prob": 0.08849281072616577
+  },
+  {
+    "id": 183,
+    "seek": 113272,
+    "start": 1139.3600000000001,
+    "end": 1145.2,
+    "text": " auch noch die Dimensionen Raum und Zeit auf einen Bruchteil des vorher gewohnten Zusammenschrumpfen",
+    "tokens": [
+      50696, 2168, 3514, 978, 20975, 3378, 268, 31359, 674, 9394, 2501, 4891,
+      1603, 625, 30766, 730, 29195, 6906, 1445, 14970, 18742, 5136, 26590, 81,
+      1420, 6570, 50988
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11118439496573755,
+    "compression_ratio": 1.44043321299639,
+    "no_speech_prob": 0.08849281072616577
+  },
+  {
+    "id": 184,
+    "seek": 113272,
+    "start": 1145.2,
+    "end": 1149.96,
+    "text": " lie\u00df, wurde das zun\u00e4chst eher als Bedrohung und nicht als Er\u00f6ffnung v\u00f6llig neuer M\u00f6glichkeiten",
+    "tokens": [
+      50988, 4544, 2536, 11, 11191, 1482, 710, 42121, 24332, 3907, 19893, 340,
+      71, 1063, 674, 1979, 3907, 3300, 30453, 15539, 35670, 408, 5486, 42627,
+      51226
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11118439496573755,
+    "compression_ratio": 1.44043321299639,
+    "no_speech_prob": 0.08849281072616577
+  },
+  {
+    "id": 185,
+    "seek": 113272,
+    "start": 1149.96,
+    "end": 1157.28,
+    "text": " betrachtet. Nicht nur K\u00f6nig Ludwig I. von Bayern, ein geistig eher r\u00fcckw\u00e4rtsgewandter Monarch und",
+    "tokens": [
+      51226, 778, 81, 48833, 13, 22629, 4343, 29077, 328, 30550, 33313, 286, 13,
+      2957, 29163, 11, 1343, 1519, 468, 328, 24332, 367, 6536, 86, 2713, 1373,
+      21306, 474, 391, 4713, 1178, 674, 51592
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11118439496573755,
+    "compression_ratio": 1.44043321299639,
+    "no_speech_prob": 0.08849281072616577
+  },
+  {
+    "id": 186,
+    "seek": 115728,
+    "start": 1157.28,
+    "end": 1161.36,
+    "text": " Hobbydichter, wehnte sich damals schier am Rand des Weltuntergangs.",
+    "tokens": [
+      50364, 49705, 67, 1405, 260, 11, 321, 71, 9358, 3041, 26067, 956, 811,
+      669, 23614, 730, 14761, 21777, 19619, 82, 13, 50568
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.23101508099099863,
+    "compression_ratio": 0.9305555555555556,
+    "no_speech_prob": 0.2968427836894989
+  },
+  {
+    "id": 187,
+    "seek": 118728,
+    "start": 1187.28,
+    "end": 1193.72,
+    "text": " Nirgends daheim streift \u00fcber die Erde und steht sowie der Dampf und steht das",
+    "tokens": [
+      50364, 44813, 70, 2581, 16800, 68, 332, 2242, 2008, 4502, 978, 43720, 674,
+      16361, 35874, 1163, 413, 30157, 674, 16361, 1482, 50686
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.18700184645476164,
+    "compression_ratio": 1.4602510460251046,
+    "no_speech_prob": 0.08875829726457596
+  },
+  {
+    "id": 188,
+    "seek": 118728,
+    "start": 1193.72,
+    "end": 1200.04,
+    "text": " Menschengeschlecht. Seinen Lauf den Umw\u00e4lzenden hat der Rennwagen begonnen.",
+    "tokens": [
+      50686, 27773, 1501, 22320, 306, 4701, 13, 1100, 5636, 441, 9507, 1441,
+      3301, 86, 9063, 89, 8896, 2385, 1163, 497, 1857, 28717, 4612, 34269, 13,
+      51002
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.18700184645476164,
+    "compression_ratio": 1.4602510460251046,
+    "no_speech_prob": 0.08875829726457596
+  },
+  {
+    "id": 189,
+    "seek": 118728,
+    "start": 1200.04,
+    "end": 1209.04,
+    "text": " Aus sp\u00e4terer Sicht erwies sich die Dampfmaschine dagegen verkehrs- und energie-technisch als \u00e4u\u00dferst",
+    "tokens": [
+      51002, 9039, 24196, 260, 36615, 21715, 530, 3041, 978, 413, 30157, 3799,
+      36675, 45387, 1306, 22833, 82, 12, 674, 2043, 9997, 12, 29113, 5494, 3907,
+      3078, 43796, 16398, 51452
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.18700184645476164,
+    "compression_ratio": 1.4602510460251046,
+    "no_speech_prob": 0.08875829726457596
+  },
+  {
+    "id": 190,
+    "seek": 118728,
+    "start": 1209.04,
+    "end": 1214.04,
+    "text": " begr\u00fc\u00dfenswerte Erfindung. Denn sie machte, anders als herk\u00f6mmliche Energielieferanten,",
+    "tokens": [
+      51452, 38972, 774, 2536, 694, 86, 10634, 3300, 35072, 1063, 13, 19027,
+      2804, 10857, 68, 11, 17999, 3907, 720, 34990, 2174, 10185, 48195, 1187,
+      414, 612, 29646, 11, 51702
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.18700184645476164,
+    "compression_ratio": 1.4602510460251046,
+    "no_speech_prob": 0.08875829726457596
+  },
+  {
+    "id": 191,
+    "seek": 121404,
+    "start": 1214.04,
+    "end": 1221.12,
+    "text": " ja erstmals in der Geschichte Energie immer und \u00fcberall verf\u00fcgbar. Und als dann die Dampfmaschine",
+    "tokens": [
+      50364, 2784, 11301, 34978, 294, 1163, 28896, 35309, 5578, 674, 38035,
+      40660, 25644, 5356, 13, 2719, 3907, 3594, 978, 413, 30157, 3799, 36675,
+      50718
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15047618321010045,
+    "compression_ratio": 1.697508896797153,
+    "no_speech_prob": 0.2386588305234909
+  },
+  {
+    "id": 192,
+    "seek": 121404,
+    "start": 1221.12,
+    "end": 1225.6399999999999,
+    "text": " in die Dampflock eingebaut wurde, hat auch die Dampfmaschine selbst noch den Transport der",
+    "tokens": [
+      50718, 294, 978, 413, 30157, 4102, 30061, 65, 1375, 11191, 11, 2385, 2168,
+      978, 413, 30157, 3799, 36675, 13053, 3514, 1441, 22309, 1163, 50944
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15047618321010045,
+    "compression_ratio": 1.697508896797153,
+    "no_speech_prob": 0.2386588305234909
+  },
+  {
+    "id": 193,
+    "seek": 121404,
+    "start": 1225.6399999999999,
+    "end": 1230.24,
+    "text": " Kohle \u00fcbernommen. Das Entscheidende ist, dass die Dampfmaschine im Grunde die Bewegungsenergie,",
+    "tokens": [
+      50944, 30861, 306, 4502, 77, 5132, 13, 2846, 30862, 5445, 1418, 11, 2658,
+      978, 413, 30157, 3799, 36675, 566, 13941, 68, 978, 46757, 5846, 7971,
+      9997, 11, 51174
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15047618321010045,
+    "compression_ratio": 1.697508896797153,
+    "no_speech_prob": 0.2386588305234909
+  },
+  {
+    "id": 194,
+    "seek": 121404,
+    "start": 1230.24,
+    "end": 1234.68,
+    "text": " die mechanische Energie, die man halt f\u00fcr die Verarbeitung brauchte, an jedem beliebigen Ort,",
+    "tokens": [
+      51174, 978, 4236, 7864, 35309, 11, 978, 587, 12479, 2959, 978, 4281,
+      24024, 1063, 45522, 975, 11, 364, 36538, 1351, 65, 3213, 22921, 11, 51396
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15047618321010045,
+    "compression_ratio": 1.697508896797153,
+    "no_speech_prob": 0.2386588305234909
+  },
+  {
+    "id": 195,
+    "seek": 121404,
+    "start": 1234.68,
+    "end": 1239.44,
+    "text": " zu jeder beliebigen Zeit verf\u00fcgbar gemacht hat, w\u00e4hrend Wasserkraft sich \u00fcber die Jahre hin",
+    "tokens": [
+      51396, 2164, 19610, 1351, 65, 3213, 9394, 40660, 25644, 5356, 12293, 2385,
+      11, 33624, 42998, 10608, 4469, 3041, 4502, 978, 15557, 14102, 51634
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15047618321010045,
+    "compression_ratio": 1.697508896797153,
+    "no_speech_prob": 0.2386588305234909
+  },
+  {
+    "id": 196,
+    "seek": 123944,
+    "start": 1239.44,
+    "end": 1246.6000000000001,
+    "text": " ver\u00e4ndert und auch nicht an jeder Stelle verf\u00fcgbar ist. Inzwischen ist nat\u00fcrlich auch die im 18.",
+    "tokens": [
+      50364, 45990, 674, 2168, 1979, 364, 19610, 26629, 40660, 25644, 5356,
+      1418, 13, 682, 47115, 1418, 8762, 2168, 978, 566, 2443, 13, 50722
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13109841245286008,
+    "compression_ratio": 1.4291187739463602,
+    "no_speech_prob": 0.08255366235971451
+  },
+  {
+    "id": 197,
+    "seek": 123944,
+    "start": 1246.6000000000001,
+    "end": 1252.8,
+    "text": " Jahrhundert entwickelte Dampfmaschine l\u00e4ngst ein alter Hut. Aber sie hat zweifellos den Grundstein",
+    "tokens": [
+      50722, 11674, 71, 34267, 28449, 7124, 975, 413, 30157, 3799, 36675, 22566,
+      372, 1343, 11337, 39012, 13, 5992, 2804, 2385, 8733, 863, 285, 329, 1441,
+      13941, 9089, 51032
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13109841245286008,
+    "compression_ratio": 1.4291187739463602,
+    "no_speech_prob": 0.08255366235971451
+  },
+  {
+    "id": 198,
+    "seek": 123944,
+    "start": 1252.8,
+    "end": 1259.68,
+    "text": " daf\u00fcr gelegt, dass Maschinen heutzutage fast \u00fcberall auf der Welt alles produzieren und",
+    "tokens": [
+      51032, 13747, 1519, 22745, 11, 2658, 5224, 339, 5636, 415, 12950, 325,
+      609, 2370, 38035, 2501, 1163, 14761, 7874, 28093, 5695, 674, 51376
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13109841245286008,
+    "compression_ratio": 1.4291187739463602,
+    "no_speech_prob": 0.08255366235971451
+  },
+  {
+    "id": 199,
+    "seek": 123944,
+    "start": 1259.68,
+    "end": 1264.44,
+    "text": " menschliche Arbeitsleistung in vielen Bereichen durch mechanische ersetzen k\u00f6nnen.",
+    "tokens": [
+      51376, 10923, 339, 10185, 23262, 46820, 1063, 294, 19885, 17684, 18613,
+      7131, 4236, 7864, 33743, 24797, 6310, 13, 51614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.13109841245286008,
+    "compression_ratio": 1.4291187739463602,
+    "no_speech_prob": 0.08255366235971451
+  },
+  {
+    "id": 200,
+    "seek": 126944,
+    "start": 1269.44,
+    "end": 1282.48,
+    "text": " Sie h\u00f6rten das erste Maschinenzeitalter von der Kuriosit\u00e4t zur Revolution von Ulrich Zvack.",
+    "tokens": [
+      50364, 3559, 42651, 1147, 1482, 20951, 5224, 339, 5636, 1381, 1686, 391,
+      2957, 1163, 16481, 2717, 14053, 7147, 16617, 2957, 24853, 10794, 1176, 85,
+      501, 13, 51016
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.3352149214063372,
+    "compression_ratio": 1.1741935483870967,
+    "no_speech_prob": 0.3622319996356964
+  },
+  {
+    "id": 201,
+    "seek": 126944,
+    "start": 1282.48,
+    "end": 1290.48,
+    "text": " Es sprachen Thomas Leubel, Ivar Kosiewicz und Oliver N\u00e4gele, Ton und Technik Christiane",
+    "tokens": [
+      51016, 2313, 6103, 11646, 8500, 1456, 836, 338, 11, 286, 8517, 36909,
+      1093, 17946, 674, 23440, 32731, 432, 306, 11, 11385, 674, 8337, 1035,
+      5778, 68, 51416
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.3352149214063372,
+    "compression_ratio": 1.1741935483870967,
+    "no_speech_prob": 0.3622319996356964
+  },
+  {
+    "id": 202,
+    "seek": 129048,
+    "start": 1290.48,
+    "end": 1296.72,
+    "text": " Voitz. Regie Christiane Klenz. Eine Sendung von Radio Wissen.",
+    "tokens": [
+      50364, 7518, 6862, 13, 4791, 414, 5778, 68, 16053, 11368, 13, 17664,
+      17908, 1063, 2957, 17296, 343, 10987, 13, 50676
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.36273166111537386,
+    "compression_ratio": 0.9242424242424242,
+    "no_speech_prob": 0.28614306449890137
+  }
+]

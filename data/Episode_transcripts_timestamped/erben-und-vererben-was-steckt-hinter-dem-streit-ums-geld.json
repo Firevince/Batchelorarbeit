@@ -1,0 +1,5415 @@
+[
+  {
+    "id": 0,
+    "seek": 0,
+    "start": 0.0,
+    "end": 8.0,
+    "text": " Radio Wissen. Die ganze Welt des Wissens. Ein Podcast von bayern 2.",
+    "tokens": [
+      50364, 17296, 343, 10987, 13, 3229, 18898, 14761, 730, 343, 891, 694, 13,
+      6391, 29972, 2957, 13642, 1248, 568, 13, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2276567882961697,
+    "compression_ratio": 1.3333333333333333,
+    "no_speech_prob": 0.07150013744831085
+  },
+  {
+    "id": 1,
+    "seek": 0,
+    "start": 8.0,
+    "end": 16.52,
+    "text": " Radio Wissen. Heute geht's ums Erben und Ver-Erben und um die Frage,",
+    "tokens": [
+      50764, 17296, 343, 10987, 13, 27978, 7095, 311, 1105, 82, 3300, 1799, 674,
+      4281, 12, 28135, 1799, 674, 1105, 978, 13685, 11, 51190
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2276567882961697,
+    "compression_ratio": 1.3333333333333333,
+    "no_speech_prob": 0.07150013744831085
+  },
+  {
+    "id": 2,
+    "seek": 0,
+    "start": 16.52,
+    "end": 20.68,
+    "text": " warum es in Familien so oft Streitereien ums Geld gibt.",
+    "tokens": [
+      51190, 24331, 785, 294, 36451, 370, 11649, 19597, 270, 323, 1053, 1105,
+      82, 16535, 6089, 13, 51398
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2276567882961697,
+    "compression_ratio": 1.3333333333333333,
+    "no_speech_prob": 0.07150013744831085
+  },
+  {
+    "id": 3,
+    "seek": 2068,
+    "start": 20.68,
+    "end": 27.72,
+    "text": " Es war einmal ein M\u00fcller, der hatte drei S\u00f6hne.",
+    "tokens": [
+      50364, 2313, 1516, 11078, 1343, 21295, 4658, 11, 1163, 13299, 16809, 318,
+      23817, 716, 13, 50716
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15741146935356987,
+    "compression_ratio": 1.4458874458874458,
+    "no_speech_prob": 0.034078728407621384
+  },
+  {
+    "id": 4,
+    "seek": 2068,
+    "start": 27.72,
+    "end": 32.480000000000004,
+    "text": " In vielen M\u00e4rchen geht es um einen Generationswechsel,",
+    "tokens": [
+      50716, 682, 19885, 46084, 2470, 7095, 785, 1105, 4891, 15409, 763, 26934,
+      11, 50954
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15741146935356987,
+    "compression_ratio": 1.4458874458874458,
+    "no_speech_prob": 0.034078728407621384
+  },
+  {
+    "id": 5,
+    "seek": 2068,
+    "start": 32.480000000000004,
+    "end": 35.2,
+    "text": " der nicht gerade reibungslos funktioniert.",
+    "tokens": [
+      50954, 1163, 1979, 12117, 319, 897, 5846, 9389, 26160, 13, 51090
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15741146935356987,
+    "compression_ratio": 1.4458874458874458,
+    "no_speech_prob": 0.034078728407621384
+  },
+  {
+    "id": 6,
+    "seek": 2068,
+    "start": 35.2,
+    "end": 39.92,
+    "text": " Als der Vater stirbt, erbt der \u00e4lteste Sohn die M\u00fchle,",
+    "tokens": [
+      51090, 12948, 1163, 36173, 8946, 4517, 11, 1189, 4517, 1163, 3078, 2282,
+      8887, 407, 12071, 978, 376, 7254, 306, 11, 51326
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15741146935356987,
+    "compression_ratio": 1.4458874458874458,
+    "no_speech_prob": 0.034078728407621384
+  },
+  {
+    "id": 7,
+    "seek": 2068,
+    "start": 39.92,
+    "end": 42.64,
+    "text": " der zweite bekommt immerhin den Esel,",
+    "tokens": [
+      51326, 1163, 37456, 33429, 5578, 10876, 1441, 462, 790, 11, 51462
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15741146935356987,
+    "compression_ratio": 1.4458874458874458,
+    "no_speech_prob": 0.034078728407621384
+  },
+  {
+    "id": 8,
+    "seek": 2068,
+    "start": 42.64,
+    "end": 45.84,
+    "text": " aber f\u00fcr den dritten bleibt nur noch der Kater.",
+    "tokens": [
+      51462, 4340, 2959, 1441, 1224, 2987, 24814, 4343, 3514, 1163, 591, 771,
+      13, 51622
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15741146935356987,
+    "compression_ratio": 1.4458874458874458,
+    "no_speech_prob": 0.034078728407621384
+  },
+  {
+    "id": 9,
+    "seek": 2068,
+    "start": 45.84,
+    "end": 49.2,
+    "text": " So ungerecht kann es tats\u00e4chlich laufen.",
+    "tokens": [51622, 407, 29038, 48561, 4028, 785, 20796, 41647, 13, 51790],
+    "temperature": 0.0,
+    "avg_logprob": -0.15741146935356987,
+    "compression_ratio": 1.4458874458874458,
+    "no_speech_prob": 0.034078728407621384
+  },
+  {
+    "id": 10,
+    "seek": 4920,
+    "start": 49.24,
+    "end": 53.2,
+    "text": " Die eine kriegt das Haus, ihre Schwester die Aktienfonds",
+    "tokens": [
+      50366, 3229, 3018, 25766, 10463, 1482, 22725, 11, 14280, 17576, 3011, 978,
+      32850, 1053, 69, 10166, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15009271687474743,
+    "compression_ratio": 1.4140625,
+    "no_speech_prob": 0.010167866945266724
+  },
+  {
+    "id": 11,
+    "seek": 4920,
+    "start": 53.2,
+    "end": 56.32,
+    "text": " und f\u00fcr die J\u00fcngste bleibt nur der Pflichtanteil.",
+    "tokens": [
+      50564, 674, 2959, 978, 508, 36216, 2941, 24814, 4343, 1163, 17331, 20238,
+      2879, 388, 13, 50720
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15009271687474743,
+    "compression_ratio": 1.4140625,
+    "no_speech_prob": 0.010167866945266724
+  },
+  {
+    "id": 12,
+    "seek": 4920,
+    "start": 56.32,
+    "end": 60.72,
+    "text": " Das ist bitter. Umso mehr, als sich im realen Leben,",
+    "tokens": [
+      50720, 2846, 1418, 13871, 13, 3301, 539, 5417, 11, 3907, 3041, 566, 957,
+      268, 15399, 11, 50940
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15009271687474743,
+    "compression_ratio": 1.4140625,
+    "no_speech_prob": 0.010167866945266724
+  },
+  {
+    "id": 13,
+    "seek": 4920,
+    "start": 60.72,
+    "end": 64.0,
+    "text": " anders als im M\u00e4rchen, ein r\u00e4udiger Kater",
+    "tokens": [
+      50940, 17999, 3907, 566, 46084, 2470, 11, 1343, 39442, 532, 4810, 591,
+      771, 51104
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15009271687474743,
+    "compression_ratio": 1.4140625,
+    "no_speech_prob": 0.010167866945266724
+  },
+  {
+    "id": 14,
+    "seek": 4920,
+    "start": 64.0,
+    "end": 66.64,
+    "text": " letztlich wohl kaum als Volltreffer entpuppt.",
+    "tokens": [
+      51104, 35262, 1739, 24531, 36443, 3907, 39602, 3599, 38145, 948, 79,
+      10504, 83, 13, 51236
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15009271687474743,
+    "compression_ratio": 1.4140625,
+    "no_speech_prob": 0.010167866945266724
+  },
+  {
+    "id": 15,
+    "seek": 4920,
+    "start": 66.64,
+    "end": 71.92,
+    "text": " In vielen Familien herrschen Zank und \u00c4rger oder eisige K\u00e4lte",
+    "tokens": [
+      51236, 682, 19885, 36451, 720, 22943, 2470, 1176, 657, 674, 34403, 1321,
+      4513, 308, 271, 3969, 591, 9063, 975, 51500
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15009271687474743,
+    "compression_ratio": 1.4140625,
+    "no_speech_prob": 0.010167866945266724
+  },
+  {
+    "id": 16,
+    "seek": 4920,
+    "start": 71.92,
+    "end": 74.84,
+    "text": " wegen irgendeiner dummen Erbschaftsgeschichte.",
+    "tokens": [
+      51500, 32855, 3418, 27429, 4564, 16784, 2558, 3300, 929, 7118, 82, 23378,
+      18972, 13, 51646
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.15009271687474743,
+    "compression_ratio": 1.4140625,
+    "no_speech_prob": 0.010167866945266724
+  },
+  {
+    "id": 17,
+    "seek": 7484,
+    "start": 74.84,
+    "end": 78.24000000000001,
+    "text": " Es gibt diesen bl\u00f6den Witz,",
+    "tokens": [50364, 2313, 6089, 12862, 888, 973, 1556, 343, 6862, 11, 50534],
+    "temperature": 0.0,
+    "avg_logprob": -0.22976335853037208,
+    "compression_ratio": 1.406926406926407,
+    "no_speech_prob": 0.023324579000473022
+  },
+  {
+    "id": 18,
+    "seek": 7484,
+    "start": 78.24000000000001,
+    "end": 81.60000000000001,
+    "text": " sprechen sie noch miteinander oder haben sie geerbt?",
+    "tokens": [
+      50534, 27853, 2804, 3514, 43127, 4513, 3084, 2804, 1519, 260, 4517, 30,
+      50702
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.22976335853037208,
+    "compression_ratio": 1.406926406926407,
+    "no_speech_prob": 0.023324579000473022
+  },
+  {
+    "id": 19,
+    "seek": 7484,
+    "start": 81.60000000000001,
+    "end": 85.4,
+    "text": " Der ist gar nicht so bl\u00f6d, weil es ist die Realit\u00e4t.",
+    "tokens": [
+      50702, 5618, 1418, 3691, 1979, 370, 888, 29747, 11, 7689, 785, 1418, 978,
+      8467, 14053, 13, 50892
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.22976335853037208,
+    "compression_ratio": 1.406926406926407,
+    "no_speech_prob": 0.023324579000473022
+  },
+  {
+    "id": 20,
+    "seek": 7484,
+    "start": 85.4,
+    "end": 91.08000000000001,
+    "text": " Die Psychologin Gabriele R\u00fccci ber\u00e4t als Familientherapeutin",
+    "tokens": [
+      50892, 3229, 17303, 1132, 259, 50053, 306, 497, 774, 66, 537, 5948, 3628,
+      3907, 15672, 1196, 511, 64, 22282, 259, 51176
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.22976335853037208,
+    "compression_ratio": 1.406926406926407,
+    "no_speech_prob": 0.023324579000473022
+  },
+  {
+    "id": 21,
+    "seek": 7484,
+    "start": 91.08000000000001,
+    "end": 94.60000000000001,
+    "text": " oft genug Menschen, die in Erbstreitigkeiten verwickelt sind.",
+    "tokens": [
+      51176, 11649, 33194, 8397, 11, 978, 294, 3300, 9690, 265, 270, 37545,
+      1306, 22295, 25798, 3290, 13, 51352
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.22976335853037208,
+    "compression_ratio": 1.406926406926407,
+    "no_speech_prob": 0.023324579000473022
+  },
+  {
+    "id": 22,
+    "seek": 7484,
+    "start": 94.60000000000001,
+    "end": 98.76,
+    "text": " Sie hat ein Buch geschrieben, das den bezeichneten Titel tr\u00e4gt",
+    "tokens": [
+      51352, 3559, 2385, 1343, 25818, 47397, 11, 1482, 1441, 312, 32338, 43462,
+      14489, 338, 33367, 10463, 51560
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.22976335853037208,
+    "compression_ratio": 1.406926406926407,
+    "no_speech_prob": 0.023324579000473022
+  },
+  {
+    "id": 23,
+    "seek": 9876,
+    "start": 98.76,
+    "end": 101.0,
+    "text": " Erbenb\u00fcchse der Pandora.",
+    "tokens": [
+      50364, 3300, 1799, 65, 774, 339, 405, 1163, 16995, 3252, 13, 50476
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1781603771707286,
+    "compression_ratio": 1.4819277108433735,
+    "no_speech_prob": 0.08382844924926758
+  },
+  {
+    "id": 24,
+    "seek": 9876,
+    "start": 101.0,
+    "end": 105.44,
+    "text": " Die aus der Mythologie bekannte unheilvolle B\u00fcchse der Pandora",
+    "tokens": [
+      50476, 3229, 3437, 1163, 26371, 20121, 312, 5225, 9358, 517, 675, 388,
+      20654, 68, 37186, 339, 405, 1163, 16995, 3252, 50698
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1781603771707286,
+    "compression_ratio": 1.4819277108433735,
+    "no_speech_prob": 0.08382844924926758
+  },
+  {
+    "id": 25,
+    "seek": 9876,
+    "start": 105.44,
+    "end": 107.60000000000001,
+    "text": " scheint sich n\u00e4mlich besonders gern",
+    "tokens": [50698, 47906, 3041, 21219, 25258, 38531, 50806],
+    "temperature": 0.0,
+    "avg_logprob": -0.1781603771707286,
+    "compression_ratio": 1.4819277108433735,
+    "no_speech_prob": 0.08382844924926758
+  },
+  {
+    "id": 26,
+    "seek": 9876,
+    "start": 107.60000000000001,
+    "end": 110.76,
+    "text": " mit dem Tod von Vater und oder Mutter zu \u00f6ffnen.",
+    "tokens": [
+      50806, 2194, 1371, 2465, 2957, 36173, 674, 4513, 31517, 2164, 4044, 602,
+      2866, 13, 50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1781603771707286,
+    "compression_ratio": 1.4819277108433735,
+    "no_speech_prob": 0.08382844924926758
+  },
+  {
+    "id": 27,
+    "seek": 9876,
+    "start": 110.76,
+    "end": 114.76,
+    "text": " Bzw. in dem Moment, in dem die Frage beantwortet wird,",
+    "tokens": [
+      50964, 363, 14406, 13, 294, 1371, 19093, 11, 294, 1371, 978, 13685, 312,
+      21655, 302, 4578, 11, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1781603771707286,
+    "compression_ratio": 1.4819277108433735,
+    "no_speech_prob": 0.08382844924926758
+  },
+  {
+    "id": 28,
+    "seek": 9876,
+    "start": 114.76,
+    "end": 118.84,
+    "text": " was und wie viel hinterlassen die Eltern eigentlich wem.",
+    "tokens": [
+      51164, 390, 674, 3355, 5891, 23219, 44898, 978, 29101, 10926, 321, 76, 13,
+      51368
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1781603771707286,
+    "compression_ratio": 1.4819277108433735,
+    "no_speech_prob": 0.08382844924926758
+  },
+  {
+    "id": 29,
+    "seek": 9876,
+    "start": 118.84,
+    "end": 122.76,
+    "text": " Gabriele R\u00fccci kann dann immer wieder beobachten,",
+    "tokens": [
+      51368, 50053, 306, 497, 774, 66, 537, 4028, 3594, 5578, 6216, 312, 996,
+      20806, 11, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1781603771707286,
+    "compression_ratio": 1.4819277108433735,
+    "no_speech_prob": 0.08382844924926758
+  },
+  {
+    "id": 30,
+    "seek": 9876,
+    "start": 122.76,
+    "end": 125.2,
+    "text": " was f\u00fcr Emotionen aufbrechen",
+    "tokens": [51564, 390, 2959, 3968, 310, 17068, 2501, 2672, 2470, 51686],
+    "temperature": 0.0,
+    "avg_logprob": -0.1781603771707286,
+    "compression_ratio": 1.4819277108433735,
+    "no_speech_prob": 0.08382844924926758
+  },
+  {
+    "id": 31,
+    "seek": 12520,
+    "start": 125.68,
+    "end": 129.68,
+    "text": " und was f\u00fcr famili\u00e4re Bitterkeit zum Vorschein kommt.",
+    "tokens": [
+      50388, 674, 390, 2959, 42155, 12277, 363, 3904, 9238, 5919, 31438, 1876,
+      259, 10047, 13, 50588
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.23674645824967144,
+    "compression_ratio": 1.4482758620689655,
+    "no_speech_prob": 0.030667101964354515
+  },
+  {
+    "id": 32,
+    "seek": 12520,
+    "start": 129.68,
+    "end": 133.68,
+    "text": " Und zwar durchaus auch oder gerade in beg\u00fcterten Kreisen,",
+    "tokens": [
+      50588, 2719, 19054, 42840, 2168, 4513, 12117, 294, 4612, 774, 391, 1147,
+      23625, 11106, 11, 50788
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.23674645824967144,
+    "compression_ratio": 1.4482758620689655,
+    "no_speech_prob": 0.030667101964354515
+  },
+  {
+    "id": 33,
+    "seek": 12520,
+    "start": 133.68,
+    "end": 136.48,
+    "text": " wo alle mehr als genug zum Bei\u00dfen haben.",
+    "tokens": [
+      50788, 6020, 5430, 5417, 3907, 33194, 5919, 879, 6230, 268, 3084, 13,
+      50928
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.23674645824967144,
+    "compression_ratio": 1.4482758620689655,
+    "no_speech_prob": 0.030667101964354515
+  },
+  {
+    "id": 34,
+    "seek": 12520,
+    "start": 136.48,
+    "end": 140.88,
+    "text": " Ich habe eine Erbgeschichte, der hat eine sehr schwierige Jugend,",
+    "tokens": [
+      50928, 3141, 6015, 3018, 3300, 65, 23378, 18972, 11, 1163, 2385, 3018,
+      5499, 27546, 3969, 35303, 11, 51148
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.23674645824967144,
+    "compression_ratio": 1.4482758620689655,
+    "no_speech_prob": 0.030667101964354515
+  },
+  {
+    "id": 35,
+    "seek": 12520,
+    "start": 140.88,
+    "end": 144.04,
+    "text": " ist aus allen Schulen rausgefallen.",
+    "tokens": [51148, 1418, 3437, 18440, 41909, 17202, 432, 24425, 13, 51306],
+    "temperature": 0.0,
+    "avg_logprob": -0.23674645824967144,
+    "compression_ratio": 1.4482758620689655,
+    "no_speech_prob": 0.030667101964354515
+  },
+  {
+    "id": 36,
+    "seek": 12520,
+    "start": 144.04,
+    "end": 147.72,
+    "text": " Zum Gl\u00fcck ging er ins Ausland, wurde selbstst\u00e4ndig",
+    "tokens": [
+      51306, 23906, 33508, 21924, 1189, 1028, 9039, 1661, 11, 11191, 13053,
+      16913, 328, 51490
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.23674645824967144,
+    "compression_ratio": 1.4482758620689655,
+    "no_speech_prob": 0.030667101964354515
+  },
+  {
+    "id": 37,
+    "seek": 12520,
+    "start": 147.72,
+    "end": 153.2,
+    "text": " und ist heute ein toller junger Mann, der seinen Weg gefunden hat.",
+    "tokens": [
+      51490, 674, 1418, 9801, 1343, 281, 4658, 14202, 260, 16892, 11, 1163,
+      24427, 18919, 36923, 2385, 13, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.23674645824967144,
+    "compression_ratio": 1.4482758620689655,
+    "no_speech_prob": 0.030667101964354515
+  },
+  {
+    "id": 38,
+    "seek": 15320,
+    "start": 153.2,
+    "end": 157.2,
+    "text": " Aber f\u00fcr die Familie war das wirklich sehr, sehr schwierig,",
+    "tokens": [
+      50364, 5992, 2959, 978, 26021, 1516, 1482, 9696, 5499, 11, 5499, 37845,
+      11, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1666309728031665,
+    "compression_ratio": 1.5419847328244274,
+    "no_speech_prob": 0.003944730386137962
+  },
+  {
+    "id": 39,
+    "seek": 15320,
+    "start": 157.2,
+    "end": 160.2,
+    "text": " weil auch das ganze Dorf hat immer gewusst,",
+    "tokens": [
+      50564, 7689, 2168, 1482, 18898, 13643, 69, 2385, 5578, 6906, 26340, 11,
+      50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1666309728031665,
+    "compression_ratio": 1.5419847328244274,
+    "no_speech_prob": 0.003944730386137962
+  },
+  {
+    "id": 40,
+    "seek": 15320,
+    "start": 160.2,
+    "end": 163.2,
+    "text": " es war wie der Schandfleck der Familie.",
+    "tokens": [
+      50714, 785, 1516, 3355, 1163, 2065, 474, 38921, 547, 1163, 26021, 13,
+      50864
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1666309728031665,
+    "compression_ratio": 1.5419847328244274,
+    "no_speech_prob": 0.003944730386137962
+  },
+  {
+    "id": 41,
+    "seek": 15320,
+    "start": 163.2,
+    "end": 169.2,
+    "text": " Und jetzt funktioniert er, und er wurde jetzt bevorzugt beim Erben.",
+    "tokens": [
+      50864, 2719, 4354, 26160, 1189, 11, 674, 1189, 11191, 4354, 37591, 29742,
+      83, 13922, 3300, 1799, 13, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1666309728031665,
+    "compression_ratio": 1.5419847328244274,
+    "no_speech_prob": 0.003944730386137962
+  },
+  {
+    "id": 42,
+    "seek": 15320,
+    "start": 169.2,
+    "end": 173.2,
+    "text": " Und das ist f\u00fcr die anderen Geschwister nicht nachvollziehbar.",
+    "tokens": [
+      51164, 2719, 1482, 1418, 2959, 978, 11122, 14241, 86, 1964, 1979, 5168,
+      20654, 28213, 5356, 13, 51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1666309728031665,
+    "compression_ratio": 1.5419847328244274,
+    "no_speech_prob": 0.003944730386137962
+  },
+  {
+    "id": 43,
+    "seek": 15320,
+    "start": 173.2,
+    "end": 175.2,
+    "text": " Weil sie haben das Gef\u00fchl,",
+    "tokens": [51364, 18665, 2804, 3084, 1482, 29715, 11, 51464],
+    "temperature": 0.0,
+    "avg_logprob": -0.1666309728031665,
+    "compression_ratio": 1.5419847328244274,
+    "no_speech_prob": 0.003944730386137962
+  },
+  {
+    "id": 44,
+    "seek": 15320,
+    "start": 175.2,
+    "end": 179.2,
+    "text": " wir haben so leiden m\u00fcssen unter diesem Bruder.",
+    "tokens": [
+      51464, 1987, 3084, 370, 476, 4380, 9013, 8662, 10975, 1603, 28230, 13,
+      51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1666309728031665,
+    "compression_ratio": 1.5419847328244274,
+    "no_speech_prob": 0.003944730386137962
+  },
+  {
+    "id": 45,
+    "seek": 15320,
+    "start": 179.2,
+    "end": 182.2,
+    "text": " Der brave Sohn und die liebe Tochter erhoffen sich",
+    "tokens": [
+      51664, 5618, 12653, 407, 12071, 674, 978, 31623, 1407, 26690, 1189, 1289,
+      15945, 3041, 51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1666309728031665,
+    "compression_ratio": 1.5419847328244274,
+    "no_speech_prob": 0.003944730386137962
+  },
+  {
+    "id": 46,
+    "seek": 18220,
+    "start": 182.2,
+    "end": 186.2,
+    "text": " vom Testament einen pekuni\u00e4ren Ausgleich f\u00fcr seelische N\u00f6te.",
+    "tokens": [
+      50364, 10135, 15473, 4891, 520, 74, 24307, 21465, 9039, 70, 8445, 2959,
+      369, 338, 7864, 426, 973, 975, 13, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054172515869140625,
+    "compression_ratio": 1.4797297297297298,
+    "no_speech_prob": 0.023683808743953705
+  },
+  {
+    "id": 47,
+    "seek": 18220,
+    "start": 186.2,
+    "end": 189.2,
+    "text": " Die Erbschaft soll jetzt wieder gut machen,",
+    "tokens": [
+      50564, 3229, 3300, 929, 7118, 7114, 4354, 6216, 5228, 7069, 11, 50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054172515869140625,
+    "compression_ratio": 1.4797297297297298,
+    "no_speech_prob": 0.023683808743953705
+  },
+  {
+    "id": 48,
+    "seek": 18220,
+    "start": 189.2,
+    "end": 191.2,
+    "text": " was fr\u00fcher schiefgelaufen ist.",
+    "tokens": [50714, 390, 32349, 956, 2521, 10345, 20748, 1418, 13, 50814],
+    "temperature": 0.0,
+    "avg_logprob": -0.054172515869140625,
+    "compression_ratio": 1.4797297297297298,
+    "no_speech_prob": 0.023683808743953705
+  },
+  {
+    "id": 49,
+    "seek": 18220,
+    "start": 191.2,
+    "end": 195.2,
+    "text": " Aber vielleicht hat ja auch das ehemalige schwarze Schaf",
+    "tokens": [
+      50814, 5992, 12547, 2385, 2784, 2168, 1482, 7670, 443, 304, 3969, 956,
+      6925, 1381, 2065, 2792, 51014
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054172515869140625,
+    "compression_ratio": 1.4797297297297298,
+    "no_speech_prob": 0.023683808743953705
+  },
+  {
+    "id": 50,
+    "seek": 18220,
+    "start": 195.2,
+    "end": 197.2,
+    "text": " eine Belohnung verdient.",
+    "tokens": [51014, 3018, 6248, 2359, 1063, 6387, 1196, 13, 51114],
+    "temperature": 0.0,
+    "avg_logprob": -0.054172515869140625,
+    "compression_ratio": 1.4797297297297298,
+    "no_speech_prob": 0.023683808743953705
+  },
+  {
+    "id": 51,
+    "seek": 18220,
+    "start": 197.2,
+    "end": 200.2,
+    "text": " Das Beispiel zeigt, wenn um ein Erbe gestritten wird,",
+    "tokens": [
+      51114, 2846, 13772, 29250, 11, 4797, 1105, 1343, 3300, 650, 7219, 81,
+      2987, 4578, 11, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054172515869140625,
+    "compression_ratio": 1.4797297297297298,
+    "no_speech_prob": 0.023683808743953705
+  },
+  {
+    "id": 52,
+    "seek": 18220,
+    "start": 200.2,
+    "end": 204.2,
+    "text": " geht es meist nur vordergr\u00fcndig ums Rein Materielle.",
+    "tokens": [
+      51264, 7095, 785, 36894, 4343, 371, 4687, 861, 9541, 328, 1105, 82, 42116,
+      19188, 16033, 13, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054172515869140625,
+    "compression_ratio": 1.4797297297297298,
+    "no_speech_prob": 0.023683808743953705
+  },
+  {
+    "id": 53,
+    "seek": 18220,
+    "start": 204.2,
+    "end": 208.2,
+    "text": " Subjektive Gef\u00fchle und oftmals diffuse emotionale Bed\u00fcrfnisse",
+    "tokens": [
+      51464, 8511, 14930, 488, 17873, 7254, 306, 674, 11649, 34978, 42165, 8913,
+      1220, 19893, 1655, 69, 31481, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054172515869140625,
+    "compression_ratio": 1.4797297297297298,
+    "no_speech_prob": 0.023683808743953705
+  },
+  {
+    "id": 54,
+    "seek": 18220,
+    "start": 208.2,
+    "end": 211.2,
+    "text": " spielen eine mindestens ebenso gro\u00dfe Rolle,",
+    "tokens": [
+      51664, 30950, 3018, 1575, 42624, 11375, 539, 19691, 35376, 11, 51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054172515869140625,
+    "compression_ratio": 1.4797297297297298,
+    "no_speech_prob": 0.023683808743953705
+  },
+  {
+    "id": 55,
+    "seek": 21120,
+    "start": 211.2,
+    "end": 215.2,
+    "text": " so best\u00e4tigt die Psychoanalytikerin Claudia Den Schertz.",
+    "tokens": [
+      50364, 370, 1151, 3628, 5828, 978, 17303, 78, 29702, 4328, 17314, 259,
+      36785, 6458, 2065, 911, 89, 13, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08814978092274767,
+    "compression_ratio": 1.530612244897959,
+    "no_speech_prob": 0.0011694305576384068
+  },
+  {
+    "id": 56,
+    "seek": 21120,
+    "start": 215.2,
+    "end": 218.2,
+    "text": " D.h., es geht letztlich um was anderes.",
+    "tokens": [
+      50564, 413, 13, 71, 7933, 785, 7095, 35262, 1739, 1105, 390, 31426, 13,
+      50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08814978092274767,
+    "compression_ratio": 1.530612244897959,
+    "no_speech_prob": 0.0011694305576384068
+  },
+  {
+    "id": 57,
+    "seek": 21120,
+    "start": 218.2,
+    "end": 222.2,
+    "text": " Geld und Besitz sind aber greifbarer als emotionale Bed\u00fcrfnisse.",
+    "tokens": [
+      50714, 16535, 674, 8190, 6862, 3290, 4340, 6066, 351, 5356, 260, 3907,
+      8913, 1220, 19893, 1655, 69, 31481, 13, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08814978092274767,
+    "compression_ratio": 1.530612244897959,
+    "no_speech_prob": 0.0011694305576384068
+  },
+  {
+    "id": 58,
+    "seek": 21120,
+    "start": 222.2,
+    "end": 224.2,
+    "text": " Lassen sich quantifizieren.",
+    "tokens": [50914, 441, 8356, 3041, 4426, 351, 590, 5695, 13, 51014],
+    "temperature": 0.0,
+    "avg_logprob": -0.08814978092274767,
+    "compression_ratio": 1.530612244897959,
+    "no_speech_prob": 0.0011694305576384068
+  },
+  {
+    "id": 59,
+    "seek": 21120,
+    "start": 224.2,
+    "end": 227.2,
+    "text": " Es kann eine Scheinobjektivierung vorgenommen werden,",
+    "tokens": [
+      51014, 2313, 4028, 3018, 25321, 259, 996, 14930, 592, 11651, 4245, 29270,
+      4604, 11, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08814978092274767,
+    "compression_ratio": 1.530612244897959,
+    "no_speech_prob": 0.0011694305576384068
+  },
+  {
+    "id": 60,
+    "seek": 21120,
+    "start": 227.2,
+    "end": 231.2,
+    "text": " dass man scheinbar beweisen kann, dass man zu wenig bekommen hat,",
+    "tokens": [
+      51164, 2658, 587, 25690, 259, 5356, 312, 40196, 4028, 11, 2658, 587, 2164,
+      20911, 19256, 2385, 11, 51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08814978092274767,
+    "compression_ratio": 1.530612244897959,
+    "no_speech_prob": 0.0011694305576384068
+  },
+  {
+    "id": 61,
+    "seek": 21120,
+    "start": 231.2,
+    "end": 233.2,
+    "text": " weil man es in Zahlen bemessen kann.",
+    "tokens": [51364, 7689, 587, 785, 294, 44096, 7577, 12431, 4028, 13, 51464],
+    "temperature": 0.0,
+    "avg_logprob": -0.08814978092274767,
+    "compression_ratio": 1.530612244897959,
+    "no_speech_prob": 0.0011694305576384068
+  },
+  {
+    "id": 62,
+    "seek": 21120,
+    "start": 233.2,
+    "end": 236.2,
+    "text": " Das ist bei Emotionalem sehr viel schwieriger.",
+    "tokens": [
+      51464, 2846, 1418, 4643, 3968, 41692, 443, 5499, 5891, 27546, 4810, 13,
+      51614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08814978092274767,
+    "compression_ratio": 1.530612244897959,
+    "no_speech_prob": 0.0011694305576384068
+  },
+  {
+    "id": 63,
+    "seek": 21120,
+    "start": 236.2,
+    "end": 239.2,
+    "text": " Wichtig ist aber, dass es ein unbewusster Vorgang ist,",
+    "tokens": [
+      51614, 343, 7334, 1418, 4340, 11, 2658, 785, 1343, 517, 47465, 301, 3120,
+      691, 4646, 656, 1418, 11, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08814978092274767,
+    "compression_ratio": 1.530612244897959,
+    "no_speech_prob": 0.0011694305576384068
+  },
+  {
+    "id": 64,
+    "seek": 23920,
+    "start": 239.2,
+    "end": 242.2,
+    "text": " es geht nicht nur um Geld und meint aber was anderes.",
+    "tokens": [
+      50364, 785, 7095, 1979, 4343, 1105, 16535, 674, 385, 686, 4340, 390,
+      31426, 13, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11962359619140625,
+    "compression_ratio": 1.5302491103202847,
+    "no_speech_prob": 0.007121098227798939
+  },
+  {
+    "id": 65,
+    "seek": 23920,
+    "start": 242.2,
+    "end": 245.2,
+    "text": " Das geht den meisten Menschen nicht bewusst.",
+    "tokens": [50514, 2846, 7095, 1441, 29708, 8397, 1979, 46221, 13, 50664],
+    "temperature": 0.0,
+    "avg_logprob": -0.11962359619140625,
+    "compression_ratio": 1.5302491103202847,
+    "no_speech_prob": 0.007121098227798939
+  },
+  {
+    "id": 66,
+    "seek": 23920,
+    "start": 245.2,
+    "end": 248.2,
+    "text": " Da brechen gestandene Menschen beim Notar in Tr\u00e4nen aus",
+    "tokens": [
+      50664, 3933, 1403, 2470, 7219, 474, 1450, 8397, 13922, 1726, 289, 294,
+      1765, 737, 2866, 3437, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11962359619140625,
+    "compression_ratio": 1.5302491103202847,
+    "no_speech_prob": 0.007121098227798939
+  },
+  {
+    "id": 67,
+    "seek": 23920,
+    "start": 248.2,
+    "end": 250.2,
+    "text": " und erinnern sich pl\u00f6tzlich daran,",
+    "tokens": [50814, 674, 1189, 19166, 77, 3041, 49033, 24520, 11, 50914],
+    "temperature": 0.0,
+    "avg_logprob": -0.11962359619140625,
+    "compression_ratio": 1.5302491103202847,
+    "no_speech_prob": 0.007121098227798939
+  },
+  {
+    "id": 68,
+    "seek": 23920,
+    "start": 250.2,
+    "end": 254.2,
+    "text": " dass sie schon als Kind immer mit dem Ofenrohr ins Gebirge geschaut haben,",
+    "tokens": [
+      50914, 2658, 2804, 4981, 3907, 9242, 5578, 2194, 1371, 2720, 268, 340,
+      1703, 1028, 2876, 10119, 432, 13511, 1375, 3084, 11, 51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11962359619140625,
+    "compression_ratio": 1.5302491103202847,
+    "no_speech_prob": 0.007121098227798939
+  },
+  {
+    "id": 69,
+    "seek": 23920,
+    "start": 254.2,
+    "end": 257.2,
+    "text": " w\u00e4hrend der j\u00fcngere Bruder alle Freiheiten bekam.",
+    "tokens": [
+      51114, 33624, 1163, 361, 36216, 323, 1603, 28230, 5430, 35939, 38754,
+      9393, 335, 13, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11962359619140625,
+    "compression_ratio": 1.5302491103202847,
+    "no_speech_prob": 0.007121098227798939
+  },
+  {
+    "id": 70,
+    "seek": 23920,
+    "start": 257.2,
+    "end": 261.2,
+    "text": " Nicht, dass man das Geld zum \u00dcberleben br\u00e4uchte, aber ...",
+    "tokens": [
+      51264, 22629, 11, 2658, 587, 1482, 16535, 5919, 18086, 41467, 738, 737,
+      625, 975, 11, 4340, 1097, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11962359619140625,
+    "compression_ratio": 1.5302491103202847,
+    "no_speech_prob": 0.007121098227798939
+  },
+  {
+    "id": 71,
+    "seek": 23920,
+    "start": 262.2,
+    "end": 265.2,
+    "text": " Aus psychologischer Sicht kocht in Erbschaftsfragen",
+    "tokens": [
+      51514, 9039, 4681, 1132, 19674, 36615, 8384, 4701, 294, 3300, 929, 7118,
+      82, 69, 20663, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11962359619140625,
+    "compression_ratio": 1.5302491103202847,
+    "no_speech_prob": 0.007121098227798939
+  },
+  {
+    "id": 72,
+    "seek": 26520,
+    "start": 265.2,
+    "end": 269.2,
+    "text": " die Stimmung bei vermeintlich oder reell benachteiligten Personen",
+    "tokens": [
+      50364, 978, 745, 38412, 4643, 40064, 686, 1739, 4513, 319, 898, 3271,
+      26136, 388, 41498, 40942, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08215368588765462,
+    "compression_ratio": 1.4931506849315068,
+    "no_speech_prob": 0.05830656737089157
+  },
+  {
+    "id": 73,
+    "seek": 26520,
+    "start": 269.2,
+    "end": 271.2,
+    "text": " deshalb so hoch ...",
+    "tokens": [50564, 28457, 370, 19783, 1097, 50664],
+    "temperature": 0.0,
+    "avg_logprob": -0.08215368588765462,
+    "compression_ratio": 1.4931506849315068,
+    "no_speech_prob": 0.05830656737089157
+  },
+  {
+    "id": 74,
+    "seek": 26520,
+    "start": 271.2,
+    "end": 275.2,
+    "text": " Weil es um Liebe geht und unsere Vorstellungen,",
+    "tokens": [
+      50664, 18665, 785, 1105, 28790, 7095, 674, 14339, 12231, 17816, 5084, 11,
+      50864
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08215368588765462,
+    "compression_ratio": 1.4931506849315068,
+    "no_speech_prob": 0.05830656737089157
+  },
+  {
+    "id": 75,
+    "seek": 26520,
+    "start": 275.2,
+    "end": 280.2,
+    "text": " wie eine Familie sein sollte und wie sie dann effektiv ist.",
+    "tokens": [
+      50864, 3355, 3018, 26021, 6195, 18042, 674, 3355, 2804, 3594, 1244, 8192,
+      592, 1418, 13, 51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08215368588765462,
+    "compression_ratio": 1.4931506849315068,
+    "no_speech_prob": 0.05830656737089157
+  },
+  {
+    "id": 76,
+    "seek": 26520,
+    "start": 280.2,
+    "end": 286.2,
+    "text": " Es gibt ja sehr oft ein Lieblingskind oder ein S\u00fcndenbock",
+    "tokens": [
+      51114, 2313, 6089, 2784, 5499, 11649, 1343, 11197, 5199, 1109, 14445,
+      4513, 1343, 318, 27687, 65, 1560, 51414
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08215368588765462,
+    "compression_ratio": 1.4931506849315068,
+    "no_speech_prob": 0.05830656737089157
+  },
+  {
+    "id": 77,
+    "seek": 26520,
+    "start": 286.2,
+    "end": 292.2,
+    "text": " oder ein Kind, das wirklich viel mehr Schwierigkeiten hat als ein anderes.",
+    "tokens": [
+      51414, 4513, 1343, 9242, 11, 1482, 9696, 5891, 5417, 17576, 811, 37545,
+      2385, 3907, 1343, 31426, 13, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08215368588765462,
+    "compression_ratio": 1.4931506849315068,
+    "no_speech_prob": 0.05830656737089157
+  },
+  {
+    "id": 78,
+    "seek": 29220,
+    "start": 292.2,
+    "end": 296.2,
+    "text": " Das ist ja immer eine subjektive Bilanz,",
+    "tokens": [
+      50364, 2846, 1418, 2784, 5578, 3018, 1422, 14930, 488, 22879, 3910, 11,
+      50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054415477405894884,
+    "compression_ratio": 1.468,
+    "no_speech_prob": 0.001151366624981165
+  },
+  {
+    "id": 79,
+    "seek": 29220,
+    "start": 296.2,
+    "end": 301.2,
+    "text": " wie viel Liebe man bekommen hat und auf was man verzichten musste.",
+    "tokens": [
+      50564, 3355, 5891, 28790, 587, 19256, 2385, 674, 2501, 390, 587, 43945,
+      24681, 34497, 13, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054415477405894884,
+    "compression_ratio": 1.468,
+    "no_speech_prob": 0.001151366624981165
+  },
+  {
+    "id": 80,
+    "seek": 29220,
+    "start": 303.2,
+    "end": 306.2,
+    "text": " Pl\u00f6tzlich scheinen die Karten auf dem Tisch zu liegen.",
+    "tokens": [
+      50914, 2149, 44638, 25690, 5636, 978, 591, 11719, 2501, 1371, 48192, 2164,
+      35100, 13, 51064
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054415477405894884,
+    "compression_ratio": 1.468,
+    "no_speech_prob": 0.001151366624981165
+  },
+  {
+    "id": 81,
+    "seek": 29220,
+    "start": 306.2,
+    "end": 308.2,
+    "text": " Nach einer Testamentser\u00f6ffnung",
+    "tokens": [51064, 11815, 6850, 9279, 28401, 260, 30453, 15539, 51164],
+    "temperature": 0.0,
+    "avg_logprob": -0.054415477405894884,
+    "compression_ratio": 1.468,
+    "no_speech_prob": 0.001151366624981165
+  },
+  {
+    "id": 82,
+    "seek": 29220,
+    "start": 308.2,
+    "end": 312.2,
+    "text": " k\u00f6nnen sich bereits ergraute, wohlsituierte Geschwister",
+    "tokens": [
+      51164, 6310, 3041, 23703, 1189, 20735, 1169, 11, 48471, 11784, 6380,
+      23123, 14241, 86, 1964, 51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054415477405894884,
+    "compression_ratio": 1.468,
+    "no_speech_prob": 0.001151366624981165
+  },
+  {
+    "id": 83,
+    "seek": 29220,
+    "start": 312.2,
+    "end": 315.2,
+    "text": " in die Haare geraten, wie einst im Sandkasten.",
+    "tokens": [
+      51364, 294, 978, 4064, 543, 5713, 7186, 11, 3355, 1343, 372, 566, 7985,
+      74, 47552, 13, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054415477405894884,
+    "compression_ratio": 1.468,
+    "no_speech_prob": 0.001151366624981165
+  },
+  {
+    "id": 84,
+    "seek": 29220,
+    "start": 315.2,
+    "end": 320.2,
+    "text": " Neid, Eifersucht und Konkurrenzdenken bestimmen dann die Situation.",
+    "tokens": [
+      51514, 1734, 327, 11, 462, 351, 433, 10084, 674, 12718, 33503, 1095, 89,
+      1556, 2653, 1151, 32076, 3594, 978, 22247, 13, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054415477405894884,
+    "compression_ratio": 1.468,
+    "no_speech_prob": 0.001151366624981165
+  },
+  {
+    "id": 85,
+    "seek": 32020,
+    "start": 320.2,
+    "end": 324.2,
+    "text": " Die Gefahr, nach dem Tod der Eltern zumindest zeitweilig",
+    "tokens": [
+      50364, 3229, 17873, 5398, 11, 5168, 1371, 2465, 1163, 29101, 38082, 49367,
+      826, 388, 328, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054327656451920815,
+    "compression_ratio": 1.4892857142857143,
+    "no_speech_prob": 0.003172483993694186
+  },
+  {
+    "id": 86,
+    "seek": 32020,
+    "start": 324.2,
+    "end": 328.2,
+    "text": " in infantile Verhaltensweisen zur\u00fcckzufallen, ist gro\u00df.",
+    "tokens": [
+      50564, 294, 16757, 794, 4281, 20731, 694, 40196, 15089, 39467, 31181, 11,
+      1418, 17253, 13, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054327656451920815,
+    "compression_ratio": 1.4892857142857143,
+    "no_speech_prob": 0.003172483993694186
+  },
+  {
+    "id": 87,
+    "seek": 32020,
+    "start": 328.2,
+    "end": 331.2,
+    "text": " Auch wenn man mit ihrem Ableben gerechnet hat,",
+    "tokens": [
+      50764, 13382, 4797, 587, 2194, 30859, 316, 638, 1799, 18635, 46248, 2385,
+      11, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054327656451920815,
+    "compression_ratio": 1.4892857142857143,
+    "no_speech_prob": 0.003172483993694186
+  },
+  {
+    "id": 88,
+    "seek": 32020,
+    "start": 331.2,
+    "end": 334.2,
+    "text": " handelt es sich doch um ein ersch\u00fctterndes Ereignis.",
+    "tokens": [
+      50914, 1011, 2018, 785, 3041, 9243, 1105, 1343, 41673, 7695, 391, 273,
+      279, 462, 265, 788, 271, 13, 51064
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054327656451920815,
+    "compression_ratio": 1.4892857142857143,
+    "no_speech_prob": 0.003172483993694186
+  },
+  {
+    "id": 89,
+    "seek": 32020,
+    "start": 334.2,
+    "end": 338.2,
+    "text": " Erst das Begr\u00e4bnis, die vielen Kondolenzbekundungen",
+    "tokens": [
+      51064, 31183, 1482, 879, 861, 737, 65, 10661, 11, 978, 19885, 591, 684,
+      401, 11368, 25714, 997, 5084, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054327656451920815,
+    "compression_ratio": 1.4892857142857143,
+    "no_speech_prob": 0.003172483993694186
+  },
+  {
+    "id": 90,
+    "seek": 32020,
+    "start": 338.2,
+    "end": 342.2,
+    "text": " und dann auch noch dieser willk\u00fcrliche letzte Wille.",
+    "tokens": [
+      51264, 674, 3594, 2168, 3514, 9053, 486, 74, 7963, 68, 35236, 3099, 68,
+      13, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054327656451920815,
+    "compression_ratio": 1.4892857142857143,
+    "no_speech_prob": 0.003172483993694186
+  },
+  {
+    "id": 91,
+    "seek": 32020,
+    "start": 342.2,
+    "end": 344.2,
+    "text": " Was zu viel ist, ist zu viel.",
+    "tokens": [51464, 3027, 2164, 5891, 1418, 11, 1418, 2164, 5891, 13, 51564],
+    "temperature": 0.0,
+    "avg_logprob": -0.054327656451920815,
+    "compression_ratio": 1.4892857142857143,
+    "no_speech_prob": 0.003172483993694186
+  },
+  {
+    "id": 92,
+    "seek": 32020,
+    "start": 344.2,
+    "end": 348.2,
+    "text": " Es kann ja auch sein, dass Eltern z.B. einem Kind mehr vererben,",
+    "tokens": [
+      51564, 2313, 4028, 2784, 2168, 6195, 11, 2658, 29101, 710, 13, 33, 13,
+      6827, 9242, 5417, 1306, 260, 1799, 11, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.054327656451920815,
+    "compression_ratio": 1.4892857142857143,
+    "no_speech_prob": 0.003172483993694186
+  },
+  {
+    "id": 93,
+    "seek": 34820,
+    "start": 348.2,
+    "end": 350.2,
+    "text": " weil das Kind eine eigene Familie hat,",
+    "tokens": [50364, 7689, 1482, 9242, 3018, 38549, 26021, 2385, 11, 50464],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 94,
+    "seek": 34820,
+    "start": 350.2,
+    "end": 353.2,
+    "text": " w\u00e4hrend das andere Kind vielleicht keine Familie hat.",
+    "tokens": [
+      50464, 33624, 1482, 10490, 9242, 12547, 9252, 26021, 2385, 13, 50614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 95,
+    "seek": 34820,
+    "start": 353.2,
+    "end": 356.2,
+    "text": " Die Eltern denken, das Kind, das eine eigene Familie hat,",
+    "tokens": [
+      50614, 3229, 29101, 28780, 11, 1482, 9242, 11, 1482, 3018, 38549, 26021,
+      2385, 11, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 96,
+    "seek": 34820,
+    "start": 356.2,
+    "end": 359.2,
+    "text": " br\u00e4uchte es mehr. Dann wird es auch schwierig.",
+    "tokens": [
+      50764, 738, 737, 625, 975, 785, 5417, 13, 7455, 4578, 785, 2168, 37845,
+      13, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 97,
+    "seek": 34820,
+    "start": 359.2,
+    "end": 361.2,
+    "text": " Nat\u00fcrlich haben die Eltern das Recht,",
+    "tokens": [50914, 33172, 3084, 978, 29101, 1482, 36840, 11, 51014],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 98,
+    "seek": 34820,
+    "start": 361.2,
+    "end": 363.2,
+    "text": " ihr Erbe zu verteilen, wie sie m\u00f6chten.",
+    "tokens": [
+      51014, 5553, 3300, 650, 2164, 16167, 17471, 11, 3355, 2804, 49699, 13,
+      51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 99,
+    "seek": 34820,
+    "start": 363.2,
+    "end": 366.2,
+    "text": " Nur der Lebensentwurf mit Familie wird als h\u00f6her gewertet",
+    "tokens": [
+      51114, 17612, 1163, 21530, 317, 31515, 2194, 26021, 4578, 3907, 48045,
+      6906, 911, 302, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 100,
+    "seek": 34820,
+    "start": 366.2,
+    "end": 368.2,
+    "text": " als der ohne eigene Familie.",
+    "tokens": [51264, 3907, 1163, 15716, 38549, 26021, 13, 51364],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 101,
+    "seek": 34820,
+    "start": 368.2,
+    "end": 371.2,
+    "text": " Das ist nat\u00fcrlich auch eine Einwischung seitens der Eltern",
+    "tokens": [
+      51364, 2846, 1418, 8762, 2168, 3018, 6391, 86, 5494, 1063, 16452, 694,
+      1163, 29101, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 102,
+    "seek": 34820,
+    "start": 371.2,
+    "end": 373.2,
+    "text": " oder ein \u00dcbergriff der Eltern,",
+    "tokens": [51514, 4513, 1343, 18086, 32783, 1163, 29101, 11, 51614],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 103,
+    "seek": 34820,
+    "start": 373.2,
+    "end": 377.2,
+    "text": " der auch zu Recht als Verletzung empfunden wird, als Kr\u00e4nkung.",
+    "tokens": [
+      51614, 1163, 2168, 2164, 36840, 3907, 4281, 2631, 27667, 4012, 69, 10028,
+      4578, 11, 3907, 6332, 4029, 40100, 13, 51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1236092339099293,
+    "compression_ratio": 1.803448275862069,
+    "no_speech_prob": 0.005554150324314833
+  },
+  {
+    "id": 104,
+    "seek": 37720,
+    "start": 377.2,
+    "end": 380.2,
+    "text": " Dass die Eltern tot sind, macht die Sache nicht besser.",
+    "tokens": [
+      50364, 22306, 978, 29101, 1993, 3290, 11, 10857, 978, 31452, 1979, 18021,
+      13, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11614674240795535,
+    "compression_ratio": 1.5802047781569966,
+    "no_speech_prob": 0.10965155810117722
+  },
+  {
+    "id": 105,
+    "seek": 37720,
+    "start": 380.2,
+    "end": 384.2,
+    "text": " Eine Vers\u00f6hnung oder kl\u00e4rende Aussprache wird nie mehr m\u00f6glich sein.",
+    "tokens": [
+      50514, 17664, 12226, 973, 12071, 1063, 4513, 9671, 737, 4542, 68, 21286,
+      1424, 6000, 4578, 2838, 5417, 16294, 6195, 13, 50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11614674240795535,
+    "compression_ratio": 1.5802047781569966,
+    "no_speech_prob": 0.10965155810117722
+  },
+  {
+    "id": 106,
+    "seek": 37720,
+    "start": 384.2,
+    "end": 388.2,
+    "text": " Diese Erkenntnis kann die krisenhafte Stimmung versch\u00e4rfen.",
+    "tokens": [
+      50714, 18993, 3300, 41838, 10661, 4028, 978, 350, 5714, 268, 1641, 16268,
+      745, 38412, 20563, 2713, 6570, 13, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11614674240795535,
+    "compression_ratio": 1.5802047781569966,
+    "no_speech_prob": 0.10965155810117722
+  },
+  {
+    "id": 107,
+    "seek": 37720,
+    "start": 388.2,
+    "end": 391.2,
+    "text": " Es gibt Geschwister, die k\u00f6nnen sich gar nicht vorstellen,",
+    "tokens": [
+      50914, 2313, 6089, 14241, 86, 1964, 11, 978, 6310, 3041, 3691, 1979,
+      34346, 11, 51064
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11614674240795535,
+    "compression_ratio": 1.5802047781569966,
+    "no_speech_prob": 0.10965155810117722
+  },
+  {
+    "id": 108,
+    "seek": 37720,
+    "start": 391.2,
+    "end": 393.2,
+    "text": " dass sie wegen des Erbes in Streit kommen.",
+    "tokens": [
+      51064, 2658, 2804, 32855, 730, 3300, 6446, 294, 19597, 270, 11729, 13,
+      51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11614674240795535,
+    "compression_ratio": 1.5802047781569966,
+    "no_speech_prob": 0.10965155810117722
+  },
+  {
+    "id": 109,
+    "seek": 37720,
+    "start": 393.2,
+    "end": 395.2,
+    "text": " Dann passiert es trotzdem.",
+    "tokens": [51164, 7455, 21671, 785, 28325, 13, 51264],
+    "temperature": 0.0,
+    "avg_logprob": -0.11614674240795535,
+    "compression_ratio": 1.5802047781569966,
+    "no_speech_prob": 0.10965155810117722
+  },
+  {
+    "id": 110,
+    "seek": 37720,
+    "start": 395.2,
+    "end": 399.2,
+    "text": " Das hat damit zu tun, dass manche Konflikte vorher gar nicht sp\u00fcrbar",
+    "tokens": [
+      51264, 2846, 2385, 9479, 2164, 4267, 11, 2658, 587, 1876, 12718, 3423,
+      34165, 29195, 3691, 1979, 637, 1655, 5356, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11614674240795535,
+    "compression_ratio": 1.5802047781569966,
+    "no_speech_prob": 0.10965155810117722
+  },
+  {
+    "id": 111,
+    "seek": 37720,
+    "start": 399.2,
+    "end": 403.2,
+    "text": " oder nicht im Bewusstsein sind, dass da Verletzungen und Kr\u00e4nkungen sind,",
+    "tokens": [
+      51464, 4513, 1979, 566, 40512, 26340, 33042, 3290, 11, 2658, 1120, 4281,
+      2631, 89, 5084, 674, 6332, 4029, 74, 5084, 3290, 11, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11614674240795535,
+    "compression_ratio": 1.5802047781569966,
+    "no_speech_prob": 0.10965155810117722
+  },
+  {
+    "id": 112,
+    "seek": 40320,
+    "start": 403.2,
+    "end": 407.2,
+    "text": " die reaktiviert werden durch den konkreten Erbschaftsfall.",
+    "tokens": [
+      50364, 978, 319, 5886, 592, 4859, 4604, 7131, 1441, 21428, 35383, 3300,
+      929, 7118, 82, 6691, 13, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09842546497072492,
+    "compression_ratio": 1.5254901960784313,
+    "no_speech_prob": 0.10965153574943542
+  },
+  {
+    "id": 113,
+    "seek": 40320,
+    "start": 408.2,
+    "end": 411.2,
+    "text": " Mit einem Schlag kann die Fassade einer heilen Familie",
+    "tokens": [
+      50614, 10821, 6827, 16420, 559, 4028, 978, 479, 640, 762, 6850, 415,
+      17471, 26021, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09842546497072492,
+    "compression_ratio": 1.5254901960784313,
+    "no_speech_prob": 0.10965153574943542
+  },
+  {
+    "id": 114,
+    "seek": 40320,
+    "start": 411.2,
+    "end": 414.2,
+    "text": " in sich zusammenfallen, wenn herauskommt,",
+    "tokens": [
+      50764, 294, 3041, 14311, 24425, 11, 4797, 25089, 74, 22230, 11, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09842546497072492,
+    "compression_ratio": 1.5254901960784313,
+    "no_speech_prob": 0.10965153574943542
+  },
+  {
+    "id": 115,
+    "seek": 40320,
+    "start": 414.2,
+    "end": 417.2,
+    "text": " wer die Firma oder das Haus geerbt hat.",
+    "tokens": [
+      50914, 2612, 978, 50206, 4513, 1482, 22725, 1519, 260, 4517, 2385, 13,
+      51064
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09842546497072492,
+    "compression_ratio": 1.5254901960784313,
+    "no_speech_prob": 0.10965153574943542
+  },
+  {
+    "id": 116,
+    "seek": 40320,
+    "start": 417.2,
+    "end": 422.2,
+    "text": " Jetzt zeigt die liebe Verwandtschaft ihr wahres Gesicht, hei\u00dft es dann.",
+    "tokens": [
+      51064, 12592, 29250, 978, 31623, 4281, 33114, 22165, 5553, 31979, 495,
+      47777, 11, 13139, 785, 3594, 13, 51314
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09842546497072492,
+    "compression_ratio": 1.5254901960784313,
+    "no_speech_prob": 0.10965153574943542
+  },
+  {
+    "id": 117,
+    "seek": 40320,
+    "start": 422.2,
+    "end": 425.2,
+    "text": " Lange hat man vielleicht gute Mine zum, na ja,",
+    "tokens": [
+      51314, 441, 933, 2385, 587, 12547, 21476, 11620, 5919, 11, 1667, 2784, 11,
+      51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09842546497072492,
+    "compression_ratio": 1.5254901960784313,
+    "no_speech_prob": 0.10965153574943542
+  },
+  {
+    "id": 118,
+    "seek": 40320,
+    "start": 425.2,
+    "end": 428.2,
+    "text": " nicht gerade angenehmen Spiel gemacht",
+    "tokens": [51464, 1979, 12117, 2562, 1450, 9547, 14266, 12293, 51614],
+    "temperature": 0.0,
+    "avg_logprob": -0.09842546497072492,
+    "compression_ratio": 1.5254901960784313,
+    "no_speech_prob": 0.10965153574943542
+  },
+  {
+    "id": 119,
+    "seek": 40320,
+    "start": 428.2,
+    "end": 430.2,
+    "text": " und die intrigante Frau des Bruders",
+    "tokens": [51614, 674, 978, 17934, 2879, 13930, 730, 1603, 532, 433, 51714],
+    "temperature": 0.0,
+    "avg_logprob": -0.09842546497072492,
+    "compression_ratio": 1.5254901960784313,
+    "no_speech_prob": 0.10965153574943542
+  },
+  {
+    "id": 120,
+    "seek": 43020,
+    "start": 430.2,
+    "end": 433.2,
+    "text": " und dessen Bevorzugung durch die Eltern ertragen.",
+    "tokens": [
+      50364, 674, 6874, 268, 879, 8453, 29742, 1063, 7131, 978, 29101, 220, 911,
+      20663, 13, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07324493782860893,
+    "compression_ratio": 1.466403162055336,
+    "no_speech_prob": 0.04741424694657326
+  },
+  {
+    "id": 121,
+    "seek": 43020,
+    "start": 433.2,
+    "end": 436.2,
+    "text": " Doch jetzt ist Schluss mit dem angepassten Bravsein,",
+    "tokens": [
+      50514, 21533, 4354, 1418, 36573, 2194, 1371, 15495, 20990, 6266, 4991, 85,
+      33042, 11, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07324493782860893,
+    "compression_ratio": 1.466403162055336,
+    "no_speech_prob": 0.04741424694657326
+  },
+  {
+    "id": 122,
+    "seek": 43020,
+    "start": 436.2,
+    "end": 438.2,
+    "text": " bringt ja eh nichts mehr.",
+    "tokens": [50664, 36008, 2784, 7670, 13004, 5417, 13, 50764],
+    "temperature": 0.0,
+    "avg_logprob": -0.07324493782860893,
+    "compression_ratio": 1.466403162055336,
+    "no_speech_prob": 0.04741424694657326
+  },
+  {
+    "id": 123,
+    "seek": 43020,
+    "start": 438.2,
+    "end": 442.2,
+    "text": " Jetzt wird nicht mehr hinter vorgehaltener Hand gel\u00e4stert.",
+    "tokens": [
+      50764, 12592, 4578, 1979, 5417, 23219, 4245, 432, 15022, 260, 8854, 4087,
+      737, 372, 911, 13, 50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07324493782860893,
+    "compression_ratio": 1.466403162055336,
+    "no_speech_prob": 0.04741424694657326
+  },
+  {
+    "id": 124,
+    "seek": 43020,
+    "start": 442.2,
+    "end": 445.2,
+    "text": " Die systemische Therapeutin Gabriele R\u00fccci meint ...",
+    "tokens": [
+      50964, 3229, 1185, 7864, 334, 24046, 259, 50053, 306, 497, 774, 66, 537,
+      385, 686, 1097, 51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07324493782860893,
+    "compression_ratio": 1.466403162055336,
+    "no_speech_prob": 0.04741424694657326
+  },
+  {
+    "id": 125,
+    "seek": 43020,
+    "start": 445.2,
+    "end": 449.2,
+    "text": " Erben ist eine posthume Familienaufstellung.",
+    "tokens": [
+      51114, 3300, 1799, 1418, 3018, 1366, 392, 2540, 36451, 9507, 30016, 13,
+      51314
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07324493782860893,
+    "compression_ratio": 1.466403162055336,
+    "no_speech_prob": 0.04741424694657326
+  },
+  {
+    "id": 126,
+    "seek": 43020,
+    "start": 449.2,
+    "end": 453.2,
+    "text": " Posthum zeigen sich einfach die Schattenseiten,",
+    "tokens": [
+      51314, 25906, 392, 449, 24687, 3041, 7281, 978, 2065, 32733, 405, 6009,
+      11, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07324493782860893,
+    "compression_ratio": 1.466403162055336,
+    "no_speech_prob": 0.04741424694657326
+  },
+  {
+    "id": 127,
+    "seek": 43020,
+    "start": 453.2,
+    "end": 456.2,
+    "text": " die immer unterdr\u00fcckt worden sind.",
+    "tokens": [51514, 978, 5578, 8662, 16753, 37532, 14054, 3290, 13, 51664],
+    "temperature": 0.0,
+    "avg_logprob": -0.07324493782860893,
+    "compression_ratio": 1.466403162055336,
+    "no_speech_prob": 0.04741424694657326
+  },
+  {
+    "id": 128,
+    "seek": 45620,
+    "start": 456.2,
+    "end": 461.2,
+    "text": " Weil eine Familie funktioniert ja nur, wenn auch viel unterdr\u00fcckt wird.",
+    "tokens": [
+      50364, 18665, 3018, 26021, 26160, 2784, 4343, 11, 4797, 2168, 5891, 8662,
+      16753, 37532, 4578, 13, 50614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07517982584185305,
+    "compression_ratio": 1.560483870967742,
+    "no_speech_prob": 0.025555623695254326
+  },
+  {
+    "id": 129,
+    "seek": 45620,
+    "start": 461.2,
+    "end": 464.2,
+    "text": " Aber wenn der Erblasser tot ist,",
+    "tokens": [
+      50614, 5992, 4797, 1163, 3300, 5199, 12129, 1993, 1418, 11, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07517982584185305,
+    "compression_ratio": 1.560483870967742,
+    "no_speech_prob": 0.025555623695254326
+  },
+  {
+    "id": 130,
+    "seek": 45620,
+    "start": 464.2,
+    "end": 466.2,
+    "text": " ist keine Kontrollfunktion mehr vorhanden,",
+    "tokens": [
+      50764, 1418, 9252, 20629, 3970, 15930, 9780, 5417, 4245, 5543, 268, 11,
+      50864
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07517982584185305,
+    "compression_ratio": 1.560483870967742,
+    "no_speech_prob": 0.025555623695254326
+  },
+  {
+    "id": 131,
+    "seek": 45620,
+    "start": 466.2,
+    "end": 470.2,
+    "text": " der den Deckel runterdr\u00fcckt auf diesen Teil der Geschichte.",
+    "tokens": [
+      50864, 1163, 1441, 12427, 7124, 33295, 16753, 37532, 2501, 12862, 16357,
+      1163, 28896, 13, 51064
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07517982584185305,
+    "compression_ratio": 1.560483870967742,
+    "no_speech_prob": 0.025555623695254326
+  },
+  {
+    "id": 132,
+    "seek": 45620,
+    "start": 471.2,
+    "end": 475.2,
+    "text": " Rituale und Traditionen schwei\u00dfen Siebschaften zusammen.",
+    "tokens": [
+      51114, 497, 270, 901, 68, 674, 22017, 849, 268, 956, 826, 6230, 268, 3559,
+      929, 7118, 268, 14311, 13, 51314
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07517982584185305,
+    "compression_ratio": 1.560483870967742,
+    "no_speech_prob": 0.025555623695254326
+  },
+  {
+    "id": 133,
+    "seek": 45620,
+    "start": 475.2,
+    "end": 478.2,
+    "text": " Auch der Besitz, wenn alles glatt l\u00e4uft.",
+    "tokens": [
+      51314, 13382, 1163, 8190, 6862, 11, 4797, 7874, 1563, 1591, 31807, 13,
+      51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07517982584185305,
+    "compression_ratio": 1.560483870967742,
+    "no_speech_prob": 0.025555623695254326
+  },
+  {
+    "id": 134,
+    "seek": 45620,
+    "start": 478.2,
+    "end": 480.2,
+    "text": " Aber wo l\u00e4uft schon alles glatt?",
+    "tokens": [51464, 5992, 6020, 31807, 4981, 7874, 1563, 1591, 30, 51564],
+    "temperature": 0.0,
+    "avg_logprob": -0.07517982584185305,
+    "compression_ratio": 1.560483870967742,
+    "no_speech_prob": 0.025555623695254326
+  },
+  {
+    "id": 135,
+    "seek": 45620,
+    "start": 480.2,
+    "end": 483.2,
+    "text": " Familien sind dynamische Beziehungssysteme.",
+    "tokens": [
+      51564, 36451, 3290, 5999, 7864, 879, 28213, 5846, 28215, 68, 13, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07517982584185305,
+    "compression_ratio": 1.560483870967742,
+    "no_speech_prob": 0.025555623695254326
+  },
+  {
+    "id": 136,
+    "seek": 48320,
+    "start": 483.2,
+    "end": 486.2,
+    "text": " Die Strukturen \u00e4ndern sich mit jeder neuen Generation.",
+    "tokens": [
+      50364, 3229, 745, 19977, 9873, 47775, 3041, 2194, 19610, 21387, 23898, 13,
+      50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.058624931482168345,
+    "compression_ratio": 1.589090909090909,
+    "no_speech_prob": 0.14796611666679382
+  },
+  {
+    "id": 137,
+    "seek": 48320,
+    "start": 486.2,
+    "end": 490.2,
+    "text": " Mit dem Erwachsenwerden der Kinder, die eigene Wege gehen,",
+    "tokens": [
+      50514, 10821, 1371, 3300, 86, 31625, 1554, 1556, 1163, 14193, 11, 978,
+      38549, 492, 432, 13230, 11, 50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.058624931482168345,
+    "compression_ratio": 1.589090909090909,
+    "no_speech_prob": 0.14796611666679382
+  },
+  {
+    "id": 138,
+    "seek": 48320,
+    "start": 490.2,
+    "end": 492.2,
+    "text": " mit Scheidungen und Trennungen.",
+    "tokens": [
+      50714, 2194, 25321, 327, 5084, 674, 314, 1095, 77, 5084, 13, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.058624931482168345,
+    "compression_ratio": 1.589090909090909,
+    "no_speech_prob": 0.14796611666679382
+  },
+  {
+    "id": 139,
+    "seek": 48320,
+    "start": 492.2,
+    "end": 495.2,
+    "text": " Menschen kommen zur Welt, andere sterben.",
+    "tokens": [
+      50814, 8397, 11729, 7147, 14761, 11, 10490, 18924, 1799, 13, 50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.058624931482168345,
+    "compression_ratio": 1.589090909090909,
+    "no_speech_prob": 0.14796611666679382
+  },
+  {
+    "id": 140,
+    "seek": 48320,
+    "start": 495.2,
+    "end": 499.2,
+    "text": " Allerdings sterben die Alten heutzutage immer sp\u00e4ter.",
+    "tokens": [
+      50964, 1057, 28519, 18924, 1799, 978, 967, 1147, 415, 12950, 325, 609,
+      5578, 24196, 13, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.058624931482168345,
+    "compression_ratio": 1.589090909090909,
+    "no_speech_prob": 0.14796611666679382
+  },
+  {
+    "id": 141,
+    "seek": 48320,
+    "start": 499.2,
+    "end": 501.2,
+    "text": " Sie werden alt und \u00e4lter.",
+    "tokens": [51164, 3559, 4604, 4955, 674, 3078, 75, 391, 13, 51264],
+    "temperature": 0.0,
+    "avg_logprob": -0.058624931482168345,
+    "compression_ratio": 1.589090909090909,
+    "no_speech_prob": 0.14796611666679382
+  },
+  {
+    "id": 142,
+    "seek": 48320,
+    "start": 501.2,
+    "end": 504.2,
+    "text": " Was einerseits erfreulich ist,",
+    "tokens": [
+      51264, 3027, 6850, 44033, 1189, 19325, 425, 480, 1418, 11, 51414
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.058624931482168345,
+    "compression_ratio": 1.589090909090909,
+    "no_speech_prob": 0.14796611666679382
+  },
+  {
+    "id": 143,
+    "seek": 48320,
+    "start": 504.2,
+    "end": 507.2,
+    "text": " andererseits aber Erbschaftsangelegenheiten",
+    "tokens": [
+      51414, 48108, 44033, 4340, 3300, 929, 7118, 82, 933, 22936, 38754, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.058624931482168345,
+    "compression_ratio": 1.589090909090909,
+    "no_speech_prob": 0.14796611666679382
+  },
+  {
+    "id": 144,
+    "seek": 48320,
+    "start": 507.2,
+    "end": 509.2,
+    "text": " auch ziemlich verkomplizieren kann,",
+    "tokens": [
+      51564, 2168, 28901, 1306, 20557, 564, 590, 5695, 4028, 11, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.058624931482168345,
+    "compression_ratio": 1.589090909090909,
+    "no_speech_prob": 0.14796611666679382
+  },
+  {
+    "id": 145,
+    "seek": 48320,
+    "start": 509.2,
+    "end": 512.2,
+    "text": " da sich so ein Testament ja bis zuletzt \u00e4ndern l\u00e4sst.",
+    "tokens": [
+      51664, 1120, 3041, 370, 1343, 15473, 2784, 7393, 43238, 3524, 47775,
+      29335, 13, 51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.058624931482168345,
+    "compression_ratio": 1.589090909090909,
+    "no_speech_prob": 0.14796611666679382
+  },
+  {
+    "id": 146,
+    "seek": 51220,
+    "start": 512.2,
+    "end": 516.2,
+    "text": " Sofern Uropa und Uroma noch gesch\u00e4ftsf\u00e4hig sind.",
+    "tokens": [
+      50364, 407, 28958, 624, 1513, 64, 674, 624, 4397, 64, 3514, 13511, 19210,
+      82, 44616, 328, 3290, 13, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1348091204141833,
+    "compression_ratio": 1.3688888888888888,
+    "no_speech_prob": 0.0007672542706131935
+  },
+  {
+    "id": 147,
+    "seek": 51220,
+    "start": 516.2,
+    "end": 522.2,
+    "text": " Je nachdem, wer die Pflege \u00fcbernimmt oder die Besorgung.",
+    "tokens": [
+      50564, 2588, 5168, 10730, 11, 2612, 978, 17331, 35754, 4502, 77, 15314,
+      4513, 978, 8190, 4646, 1063, 13, 50864
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1348091204141833,
+    "compression_ratio": 1.3688888888888888,
+    "no_speech_prob": 0.0007672542706131935
+  },
+  {
+    "id": 148,
+    "seek": 51220,
+    "start": 522.2,
+    "end": 525.2,
+    "text": " Die Familien sind in aller Welt verteilt.",
+    "tokens": [
+      50864, 3229, 36451, 3290, 294, 8722, 14761, 16167, 2352, 13, 51014
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1348091204141833,
+    "compression_ratio": 1.3688888888888888,
+    "no_speech_prob": 0.0007672542706131935
+  },
+  {
+    "id": 149,
+    "seek": 51220,
+    "start": 525.2,
+    "end": 528.2,
+    "text": " Oder in ganz Deutschland oder in der Schweiz.",
+    "tokens": [
+      51014, 20988, 294, 6312, 14802, 4513, 294, 1163, 46834, 13, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1348091204141833,
+    "compression_ratio": 1.3688888888888888,
+    "no_speech_prob": 0.0007672542706131935
+  },
+  {
+    "id": 150,
+    "seek": 51220,
+    "start": 528.2,
+    "end": 530.2,
+    "text": " Da kommt es immer darauf an,",
+    "tokens": [51164, 3933, 10047, 785, 5578, 18654, 364, 11, 51264],
+    "temperature": 0.0,
+    "avg_logprob": -0.1348091204141833,
+    "compression_ratio": 1.3688888888888888,
+    "no_speech_prob": 0.0007672542706131935
+  },
+  {
+    "id": 151,
+    "seek": 51220,
+    "start": 530.2,
+    "end": 535.2,
+    "text": " auf die Abh\u00e4ngigkeiten im jetzigen Zustand.",
+    "tokens": [
+      51264, 2501, 978, 2847, 34591, 37545, 566, 361, 10074, 3213, 46322, 474,
+      13, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1348091204141833,
+    "compression_ratio": 1.3688888888888888,
+    "no_speech_prob": 0.0007672542706131935
+  },
+  {
+    "id": 152,
+    "seek": 51220,
+    "start": 535.2,
+    "end": 539.2,
+    "text": " Wenn Sie eine 85-j\u00e4hrige Frau haben,",
+    "tokens": [
+      51514, 7899, 3559, 3018, 14695, 12, 49418, 3969, 13930, 3084, 11, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1348091204141833,
+    "compression_ratio": 1.3688888888888888,
+    "no_speech_prob": 0.0007672542706131935
+  },
+  {
+    "id": 153,
+    "seek": 53920,
+    "start": 539.2,
+    "end": 544.2,
+    "text": " die dann von dem Neffen des Sohnes betreut wird,",
+    "tokens": [
+      50364, 978, 3594, 2957, 1371, 1734, 15945, 730, 407, 71, 4081, 778, 265,
+      325, 4578, 11, 50614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08881362584921029,
+    "compression_ratio": 1.4556962025316456,
+    "no_speech_prob": 0.06650927662849426
+  },
+  {
+    "id": 154,
+    "seek": 53920,
+    "start": 544.2,
+    "end": 548.2,
+    "text": " der ihr alle administrativen Arbeiten macht,",
+    "tokens": [
+      50614, 1163, 5553, 5430, 4968, 4481, 5709, 1587, 16779, 10857, 11, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08881362584921029,
+    "compression_ratio": 1.4556962025316456,
+    "no_speech_prob": 0.06650927662849426
+  },
+  {
+    "id": 155,
+    "seek": 53920,
+    "start": 548.2,
+    "end": 552.2,
+    "text": " sie manchmal auch am Sonntag zum Essen mitnimmt,",
+    "tokens": [
+      50814, 2804, 32092, 2168, 669, 5185, 580, 559, 5919, 42098, 2194, 77,
+      15314, 11, 51014
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08881362584921029,
+    "compression_ratio": 1.4556962025316456,
+    "no_speech_prob": 0.06650927662849426
+  },
+  {
+    "id": 156,
+    "seek": 53920,
+    "start": 552.2,
+    "end": 555.2,
+    "text": " hat der nat\u00fcrlich eine reelle Chance,",
+    "tokens": [51014, 2385, 1163, 8762, 3018, 319, 4434, 16428, 11, 51164],
+    "temperature": 0.0,
+    "avg_logprob": -0.08881362584921029,
+    "compression_ratio": 1.4556962025316456,
+    "no_speech_prob": 0.06650927662849426
+  },
+  {
+    "id": 157,
+    "seek": 53920,
+    "start": 555.2,
+    "end": 559.2,
+    "text": " noch mehr zu erben oder bevorzugt zu werden.",
+    "tokens": [
+      51164, 3514, 5417, 2164, 1189, 1799, 4513, 37591, 29742, 83, 2164, 4604,
+      13, 51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08881362584921029,
+    "compression_ratio": 1.4556962025316456,
+    "no_speech_prob": 0.06650927662849426
+  },
+  {
+    "id": 158,
+    "seek": 53920,
+    "start": 559.2,
+    "end": 564.2,
+    "text": " Was f\u00fcr das ganze Familiengef\u00fcge oft sehr abtr\u00e4glich ist.",
+    "tokens": [
+      51364, 3027, 2959, 1482, 18898, 36451, 13529, 774, 432, 11649, 5499, 410,
+      6903, 737, 8856, 1418, 13, 51614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08881362584921029,
+    "compression_ratio": 1.4556962025316456,
+    "no_speech_prob": 0.06650927662849426
+  },
+  {
+    "id": 159,
+    "seek": 53920,
+    "start": 564.2,
+    "end": 568.2,
+    "text": " Je mehr Menschen als Erben oder Erbinnen in Frage kommen,",
+    "tokens": [
+      51614, 2588, 5417, 8397, 3907, 3300, 1799, 4513, 3300, 65, 11399, 294,
+      13685, 11729, 11, 51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08881362584921029,
+    "compression_ratio": 1.4556962025316456,
+    "no_speech_prob": 0.06650927662849426
+  },
+  {
+    "id": 160,
+    "seek": 56820,
+    "start": 568.2,
+    "end": 571.2,
+    "text": " umso mehr Perspektiven gibt es auf den Erbfall.",
+    "tokens": [
+      50364, 1105, 539, 5417, 14006, 23533, 5709, 6089, 785, 2501, 1441, 3300,
+      65, 6691, 13, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05691068649291992,
+    "compression_ratio": 1.4927536231884058,
+    "no_speech_prob": 0.006902206689119339
+  },
+  {
+    "id": 161,
+    "seek": 56820,
+    "start": 571.2,
+    "end": 573.2,
+    "text": " Umso wichtiger ist es,",
+    "tokens": [50514, 3301, 539, 48840, 1418, 785, 11, 50614],
+    "temperature": 0.0,
+    "avg_logprob": -0.05691068649291992,
+    "compression_ratio": 1.4927536231884058,
+    "no_speech_prob": 0.006902206689119339
+  },
+  {
+    "id": 162,
+    "seek": 56820,
+    "start": 573.2,
+    "end": 576.2,
+    "text": " dass ein Testament juristisch einwandfrei formuliert ist",
+    "tokens": [
+      50614, 2658, 1343, 15473, 12721, 468, 5494, 1343, 33114, 42072, 49990,
+      4859, 1418, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05691068649291992,
+    "compression_ratio": 1.4927536231884058,
+    "no_speech_prob": 0.006902206689119339
+  },
+  {
+    "id": 163,
+    "seek": 56820,
+    "start": 576.2,
+    "end": 579.2,
+    "text": " und keinen Interpretationsspielraum zul\u00e4sst.",
+    "tokens": [
+      50764, 674, 20624, 5751, 6629, 763, 4952, 1187, 31502, 43238, 13555, 372,
+      13, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05691068649291992,
+    "compression_ratio": 1.4927536231884058,
+    "no_speech_prob": 0.006902206689119339
+  },
+  {
+    "id": 164,
+    "seek": 56820,
+    "start": 579.2,
+    "end": 582.2,
+    "text": " Das mindert das Konfliktpotenzial.",
+    "tokens": [
+      50914, 2846, 1575, 911, 1482, 12718, 3423, 9874, 17698, 11368, 831, 13,
+      51064
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05691068649291992,
+    "compression_ratio": 1.4927536231884058,
+    "no_speech_prob": 0.006902206689119339
+  },
+  {
+    "id": 165,
+    "seek": 56820,
+    "start": 582.2,
+    "end": 585.2,
+    "text": " Abgesehen davon, wer am Ende seines Lebens",
+    "tokens": [
+      51064, 35407, 18380, 18574, 11, 2612, 669, 15152, 369, 1652, 21530, 51214
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05691068649291992,
+    "compression_ratio": 1.4927536231884058,
+    "no_speech_prob": 0.006902206689119339
+  },
+  {
+    "id": 166,
+    "seek": 56820,
+    "start": 585.2,
+    "end": 587.2,
+    "text": " Geld und Besitz zu verteilen hat,",
+    "tokens": [
+      51214, 16535, 674, 8190, 6862, 2164, 16167, 17471, 2385, 11, 51314
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05691068649291992,
+    "compression_ratio": 1.4927536231884058,
+    "no_speech_prob": 0.006902206689119339
+  },
+  {
+    "id": 167,
+    "seek": 56820,
+    "start": 587.2,
+    "end": 590.2,
+    "text": " kann der famili\u00e4ren Ordnung im Abgang",
+    "tokens": [
+      51314, 4028, 1163, 42155, 21465, 29388, 15539, 566, 2847, 19619, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05691068649291992,
+    "compression_ratio": 1.4927536231884058,
+    "no_speech_prob": 0.006902206689119339
+  },
+  {
+    "id": 168,
+    "seek": 56820,
+    "start": 590.2,
+    "end": 592.2,
+    "text": " noch einen richtigen Schlag versetzen.",
+    "tokens": [
+      51464, 3514, 4891, 22136, 3213, 16420, 559, 1774, 24797, 13, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05691068649291992,
+    "compression_ratio": 1.4927536231884058,
+    "no_speech_prob": 0.006902206689119339
+  },
+  {
+    "id": 169,
+    "seek": 56820,
+    "start": 592.2,
+    "end": 595.2,
+    "text": " Nicht allen Erblassenden ist ihre Macht bewusst,",
+    "tokens": [
+      51564, 22629, 18440, 3300, 5199, 640, 8896, 1418, 14280, 40873, 46221, 11,
+      51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05691068649291992,
+    "compression_ratio": 1.4927536231884058,
+    "no_speech_prob": 0.006902206689119339
+  },
+  {
+    "id": 170,
+    "seek": 59520,
+    "start": 595.2,
+    "end": 597.2,
+    "text": " anderen durchaus.",
+    "tokens": [50364, 11122, 42840, 13, 50464],
+    "temperature": 0.0,
+    "avg_logprob": -0.12494707864428324,
+    "compression_ratio": 1.5018587360594795,
+    "no_speech_prob": 0.005554222036153078
+  },
+  {
+    "id": 171,
+    "seek": 59520,
+    "start": 597.2,
+    "end": 601.2,
+    "text": " Na und, dann kriegt eben der Tierschutz einen fetten Batzen",
+    "tokens": [
+      50464, 6056, 674, 11, 3594, 25766, 10463, 11375, 1163, 314, 4890, 34816,
+      4891, 15136, 1147, 10066, 2904, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12494707864428324,
+    "compression_ratio": 1.5018587360594795,
+    "no_speech_prob": 0.005554222036153078
+  },
+  {
+    "id": 172,
+    "seek": 59520,
+    "start": 601.2,
+    "end": 604.2,
+    "text": " oder die polnische Pflegerin das Haus.",
+    "tokens": [
+      50664, 4513, 978, 1180, 77, 7864, 17331, 306, 1321, 259, 1482, 22725, 13,
+      50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12494707864428324,
+    "compression_ratio": 1.5018587360594795,
+    "no_speech_prob": 0.005554222036153078
+  },
+  {
+    "id": 173,
+    "seek": 59520,
+    "start": 604.2,
+    "end": 607.2,
+    "text": " Da sehe ich auch sehr viel in Erbf\u00e4llen,",
+    "tokens": [
+      50814, 3933, 35995, 1893, 2168, 5499, 5891, 294, 3300, 65, 69, 46181, 11,
+      50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12494707864428324,
+    "compression_ratio": 1.5018587360594795,
+    "no_speech_prob": 0.005554222036153078
+  },
+  {
+    "id": 174,
+    "seek": 59520,
+    "start": 607.2,
+    "end": 611.2,
+    "text": " dass der Erblasser die letzte Rache noch \u00fcber das Testament lebt.",
+    "tokens": [
+      50964, 2658, 1163, 3300, 5199, 12129, 978, 35236, 497, 6000, 3514, 4502,
+      1482, 15473, 476, 4517, 13, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12494707864428324,
+    "compression_ratio": 1.5018587360594795,
+    "no_speech_prob": 0.005554222036153078
+  },
+  {
+    "id": 175,
+    "seek": 59520,
+    "start": 611.2,
+    "end": 615.2,
+    "text": " Mit dem Bewusstsein, dass dann der Krieg Schlachtfeld",
+    "tokens": [
+      51164, 10821, 1371, 40512, 26340, 33042, 11, 2658, 3594, 1163, 35579, 70,
+      16420, 3589, 25115, 51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12494707864428324,
+    "compression_ratio": 1.5018587360594795,
+    "no_speech_prob": 0.005554222036153078
+  },
+  {
+    "id": 176,
+    "seek": 59520,
+    "start": 615.2,
+    "end": 619.2,
+    "text": " f\u00fcr die Nachkommen er\u00f6ffnet ist, sieht man auch viel.",
+    "tokens": [
+      51364, 2959, 978, 11815, 13675, 1189, 30453, 7129, 1418, 11, 14289, 587,
+      2168, 5891, 13, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12494707864428324,
+    "compression_ratio": 1.5018587360594795,
+    "no_speech_prob": 0.005554222036153078
+  },
+  {
+    "id": 177,
+    "seek": 59520,
+    "start": 619.2,
+    "end": 624.2,
+    "text": " T\u00f6chter und S\u00f6hne aus erster Ehe k\u00e4mpfen gegen die letzte Ehefrau",
+    "tokens": [
+      51564, 314, 973, 26690, 674, 318, 23817, 716, 3437, 1189, 3120, 462, 675,
+      16563, 45316, 13953, 978, 35236, 462, 675, 69, 48907, 51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.12494707864428324,
+    "compression_ratio": 1.5018587360594795,
+    "no_speech_prob": 0.005554222036153078
+  },
+  {
+    "id": 178,
+    "seek": 62420,
+    "start": 624.2,
+    "end": 626.2,
+    "text": " des Verstorbenen.",
+    "tokens": [50364, 730, 4281, 372, 284, 1799, 268, 13, 50464],
+    "temperature": 0.0,
+    "avg_logprob": -0.05295475384661259,
+    "compression_ratio": 1.5757575757575757,
+    "no_speech_prob": 0.05663057416677475
+  },
+  {
+    "id": 179,
+    "seek": 62420,
+    "start": 626.2,
+    "end": 629.2,
+    "text": " Cousins entzweien sich, leibliche Kinder ziehen",
+    "tokens": [
+      50464, 383, 563, 1292, 948, 89, 826, 1053, 3041, 11, 476, 897, 10185,
+      14193, 40645, 50614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05295475384661259,
+    "compression_ratio": 1.5757575757575757,
+    "no_speech_prob": 0.05663057416677475
+  },
+  {
+    "id": 180,
+    "seek": 62420,
+    "start": 629.2,
+    "end": 631.2,
+    "text": " gegen Stiefkinder ins Feld.",
+    "tokens": [50614, 13953, 745, 2521, 74, 5669, 1028, 42677, 13, 50714],
+    "temperature": 0.0,
+    "avg_logprob": -0.05295475384661259,
+    "compression_ratio": 1.5757575757575757,
+    "no_speech_prob": 0.05663057416677475
+  },
+  {
+    "id": 181,
+    "seek": 62420,
+    "start": 631.2,
+    "end": 633.2,
+    "text": " Zwischen Paaren entstehen Fronten.",
+    "tokens": [
+      50714, 29385, 6282, 3426, 4484, 35955, 2932, 17348, 268, 13, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05295475384661259,
+    "compression_ratio": 1.5757575757575757,
+    "no_speech_prob": 0.05663057416677475
+  },
+  {
+    "id": 182,
+    "seek": 62420,
+    "start": 633.2,
+    "end": 636.2,
+    "text": " Verschiedene Familienzweige treffen sich vor Gericht.",
+    "tokens": [
+      50814, 12226, 11805, 1450, 36451, 89, 826, 3969, 37620, 3041, 4245, 9409,
+      1405, 13, 50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05295475384661259,
+    "compression_ratio": 1.5757575757575757,
+    "no_speech_prob": 0.05663057416677475
+  },
+  {
+    "id": 183,
+    "seek": 62420,
+    "start": 636.2,
+    "end": 640.2,
+    "text": " Einer gegen viele, zwei gegen zwei, alle gegen alle.",
+    "tokens": [
+      50964, 462, 4564, 13953, 9693, 11, 12002, 13953, 12002, 11, 5430, 13953,
+      5430, 13, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05295475384661259,
+    "compression_ratio": 1.5757575757575757,
+    "no_speech_prob": 0.05663057416677475
+  },
+  {
+    "id": 184,
+    "seek": 62420,
+    "start": 640.2,
+    "end": 644.2,
+    "text": " Die Zeiten, in denen Habgier als Tods\u00fcnde galt,",
+    "tokens": [
+      51164, 3229, 48334, 11, 294, 19998, 14225, 70, 811, 3907, 2465, 82, 25596,
+      290, 3198, 11, 51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05295475384661259,
+    "compression_ratio": 1.5757575757575757,
+    "no_speech_prob": 0.05663057416677475
+  },
+  {
+    "id": 185,
+    "seek": 62420,
+    "start": 644.2,
+    "end": 646.2,
+    "text": " sind offensichtlich vorbei.",
+    "tokens": [51364, 3290, 766, 694, 41971, 38881, 13, 51464],
+    "temperature": 0.0,
+    "avg_logprob": -0.05295475384661259,
+    "compression_ratio": 1.5757575757575757,
+    "no_speech_prob": 0.05663057416677475
+  },
+  {
+    "id": 186,
+    "seek": 62420,
+    "start": 646.2,
+    "end": 649.2,
+    "text": " Das moderne Individuum scheint zuerst an sich selbst",
+    "tokens": [
+      51464, 2846, 10494, 716, 2333, 1843, 12823, 47906, 2164, 16398, 364, 3041,
+      13053, 51614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05295475384661259,
+    "compression_ratio": 1.5757575757575757,
+    "no_speech_prob": 0.05663057416677475
+  },
+  {
+    "id": 187,
+    "seek": 62420,
+    "start": 649.2,
+    "end": 652.2,
+    "text": " und dann an die Seinen im weiteren Sinn zu denken.",
+    "tokens": [
+      51614, 674, 3594, 364, 978, 1100, 5636, 566, 44036, 37962, 2164, 28780,
+      13, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.05295475384661259,
+    "compression_ratio": 1.5757575757575757,
+    "no_speech_prob": 0.05663057416677475
+  },
+  {
+    "id": 188,
+    "seek": 65220,
+    "start": 652.2,
+    "end": 656.2,
+    "text": " Selbst wenn sich Eltern oder Gro\u00dfeltern nach Kr\u00e4ften bem\u00fchen,",
+    "tokens": [
+      50364, 29712, 4797, 3041, 29101, 4513, 34534, 338, 2231, 5168, 6332, 737,
+      14513, 7577, 774, 2932, 11, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09076804103273334,
+    "compression_ratio": 1.4625850340136055,
+    "no_speech_prob": 0.008061185479164124
+  },
+  {
+    "id": 189,
+    "seek": 65220,
+    "start": 656.2,
+    "end": 660.2,
+    "text": " es allen Erben und Erbenen testamentarisch recht zu machen,",
+    "tokens": [
+      50564, 785, 18440, 3300, 1799, 674, 3300, 1799, 268, 35499, 289, 5494,
+      24261, 2164, 7069, 11, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09076804103273334,
+    "compression_ratio": 1.4625850340136055,
+    "no_speech_prob": 0.008061185479164124
+  },
+  {
+    "id": 190,
+    "seek": 65220,
+    "start": 660.2,
+    "end": 663.2,
+    "text": " gibt es keine Garantie f\u00fcr Postumenfrieden,",
+    "tokens": [
+      50764, 6089, 785, 9252, 7995, 394, 414, 2959, 10223, 449, 26939, 2428,
+      268, 11, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09076804103273334,
+    "compression_ratio": 1.4625850340136055,
+    "no_speech_prob": 0.008061185479164124
+  },
+  {
+    "id": 191,
+    "seek": 65220,
+    "start": 663.2,
+    "end": 666.2,
+    "text": " sagt die Psychoanalytikerin Claudia Den Schertz.",
+    "tokens": [
+      50914, 15764, 978, 17303, 78, 29702, 4328, 17314, 259, 36785, 6458, 2065,
+      911, 89, 13, 51064
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09076804103273334,
+    "compression_ratio": 1.4625850340136055,
+    "no_speech_prob": 0.008061185479164124
+  },
+  {
+    "id": 192,
+    "seek": 65220,
+    "start": 666.2,
+    "end": 669.2,
+    "text": " Zu viele Faktoren beeinflussen das Geschehen.",
+    "tokens": [
+      51064, 23164, 9693, 479, 5886, 10948, 17479, 27850, 29202, 1482, 6761,
+      1876, 2932, 13, 51214
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09076804103273334,
+    "compression_ratio": 1.4625850340136055,
+    "no_speech_prob": 0.008061185479164124
+  },
+  {
+    "id": 193,
+    "seek": 65220,
+    "start": 669.2,
+    "end": 671.2,
+    "text": " Oftmals ist es auch so,",
+    "tokens": [51214, 37112, 34978, 1418, 785, 2168, 370, 11, 51314],
+    "temperature": 0.0,
+    "avg_logprob": -0.09076804103273334,
+    "compression_ratio": 1.4625850340136055,
+    "no_speech_prob": 0.008061185479164124
+  },
+  {
+    "id": 194,
+    "seek": 65220,
+    "start": 671.2,
+    "end": 674.2,
+    "text": " dass das Erbe durchaus gleich verteilt wurde.",
+    "tokens": [
+      51314, 2658, 1482, 3300, 650, 42840, 11699, 16167, 2352, 11191, 13, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09076804103273334,
+    "compression_ratio": 1.4625850340136055,
+    "no_speech_prob": 0.008061185479164124
+  },
+  {
+    "id": 195,
+    "seek": 65220,
+    "start": 674.2,
+    "end": 676.2,
+    "text": " Z.B. jeder bekommt ein Haus vererbt.",
+    "tokens": [
+      51464, 1176, 13, 33, 13, 19610, 33429, 1343, 22725, 1306, 260, 4517, 13,
+      51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09076804103273334,
+    "compression_ratio": 1.4625850340136055,
+    "no_speech_prob": 0.008061185479164124
+  },
+  {
+    "id": 196,
+    "seek": 65220,
+    "start": 676.2,
+    "end": 680.2,
+    "text": " Dann entwickeln sich die Wertsteigerungen unterschiedlich.",
+    "tokens": [
+      51564, 7455, 28449, 32099, 3041, 978, 37205, 2941, 4810, 5084, 30058,
+      1739, 13, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09076804103273334,
+    "compression_ratio": 1.4625850340136055,
+    "no_speech_prob": 0.008061185479164124
+  },
+  {
+    "id": 197,
+    "seek": 68020,
+    "start": 680.2,
+    "end": 683.2,
+    "text": " Dann kann das Bed\u00fcrfnis ge\u00e4u\u00dfert werden,",
+    "tokens": [
+      50364, 7455, 4028, 1482, 19893, 1655, 69, 10661, 1519, 737, 43796, 911,
+      4604, 11, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 198,
+    "seek": 68020,
+    "start": 683.2,
+    "end": 685.2,
+    "text": " dass da ein Ausgleich stattfinden muss.",
+    "tokens": [
+      50514, 2658, 1120, 1343, 9039, 70, 8445, 25675, 43270, 6425, 13, 50614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 199,
+    "seek": 68020,
+    "start": 685.2,
+    "end": 687.2,
+    "text": " Das kommt auch vor.",
+    "tokens": [50614, 2846, 10047, 2168, 4245, 13, 50714],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 200,
+    "seek": 68020,
+    "start": 687.2,
+    "end": 690.2,
+    "text": " Manche vererben ja auch schon zu Lebzeiten.",
+    "tokens": [
+      50714, 2458, 1876, 1306, 260, 1799, 2784, 2168, 4981, 2164, 19437, 1381,
+      6009, 13, 50864
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 201,
+    "seek": 68020,
+    "start": 690.2,
+    "end": 693.2,
+    "text": " Dann wird das an die Eltern oft herangetragen.",
+    "tokens": [
+      50864, 7455, 4578, 1482, 364, 978, 29101, 11649, 720, 656, 302, 20663, 13,
+      51014
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 202,
+    "seek": 68020,
+    "start": 693.2,
+    "end": 695.2,
+    "text": " Die m\u00fcssten da den Ausgleich schaffen.",
+    "tokens": [
+      51014, 3229, 28802, 6266, 1120, 1441, 9039, 70, 8445, 30888, 13, 51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 203,
+    "seek": 68020,
+    "start": 695.2,
+    "end": 698.2,
+    "text": " Ansonsten wird es unter den Geschwistern oft ausgetragen.",
+    "tokens": [
+      51114, 1107, 3015, 6266, 4578, 785, 8662, 1441, 14241, 86, 1964, 77,
+      11649, 3437, 847, 20663, 13, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 204,
+    "seek": 68020,
+    "start": 698.2,
+    "end": 700.2,
+    "text": " Das Problem dahinter steht,",
+    "tokens": [51264, 2846, 11676, 16800, 5106, 16361, 11, 51364],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 205,
+    "seek": 68020,
+    "start": 700.2,
+    "end": 703.2,
+    "text": " ist die Illusion einer vollst\u00e4ndigen Gerechtigkeit,",
+    "tokens": [
+      51364, 1418, 978, 10597, 5704, 6850, 15593, 16913, 3213, 460, 48561,
+      16626, 11, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 206,
+    "seek": 68020,
+    "start": 703.2,
+    "end": 706.2,
+    "text": " die es einfach nicht gibt, die nicht herstellbar ist.",
+    "tokens": [
+      51514, 978, 785, 7281, 1979, 6089, 11, 978, 1979, 720, 17816, 5356, 1418,
+      13, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 207,
+    "seek": 68020,
+    "start": 706.2,
+    "end": 708.2,
+    "text": " Bei Erbschaftsstreitereien",
+    "tokens": [51664, 16188, 3300, 929, 7118, 82, 26421, 270, 323, 1053, 51764],
+    "temperature": 0.0,
+    "avg_logprob": -0.10921262194226672,
+    "compression_ratio": 1.592982456140351,
+    "no_speech_prob": 0.04741191864013672
+  },
+  {
+    "id": 208,
+    "seek": 70820,
+    "start": 708.2,
+    "end": 712.2,
+    "text": " schlicht die Kontrahenten immer auch an ihren Sehns\u00fcchten ab.",
+    "tokens": [
+      50364, 956, 20238, 978, 20629, 15688, 317, 268, 5578, 2168, 364, 22347,
+      1100, 71, 3695, 774, 21043, 410, 13, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09558966101669683,
+    "compression_ratio": 1.4784172661870503,
+    "no_speech_prob": 0.1822986751794815
+  },
+  {
+    "id": 209,
+    "seek": 70820,
+    "start": 712.2,
+    "end": 714.2,
+    "text": " Das Idealbild einer guten Familie,",
+    "tokens": [50564, 2846, 13090, 304, 16248, 6850, 31277, 26021, 11, 50664],
+    "temperature": 0.0,
+    "avg_logprob": -0.09558966101669683,
+    "compression_ratio": 1.4784172661870503,
+    "no_speech_prob": 0.1822986751794815
+  },
+  {
+    "id": 210,
+    "seek": 70820,
+    "start": 714.2,
+    "end": 716.2,
+    "text": " diesem Hort der Geborgenheit,",
+    "tokens": [50664, 10975, 389, 477, 1163, 2876, 3918, 1766, 8480, 11, 50764],
+    "temperature": 0.0,
+    "avg_logprob": -0.09558966101669683,
+    "compression_ratio": 1.4784172661870503,
+    "no_speech_prob": 0.1822986751794815
+  },
+  {
+    "id": 211,
+    "seek": 70820,
+    "start": 716.2,
+    "end": 719.2,
+    "text": " ist der emotionale Referenzpunkt.",
+    "tokens": [50764, 1418, 1163, 8913, 1220, 36889, 11368, 31744, 13, 50914],
+    "temperature": 0.0,
+    "avg_logprob": -0.09558966101669683,
+    "compression_ratio": 1.4784172661870503,
+    "no_speech_prob": 0.1822986751794815
+  },
+  {
+    "id": 212,
+    "seek": 70820,
+    "start": 719.2,
+    "end": 721.2,
+    "text": " Gro\u00dfe Fragen stehen im Raum.",
+    "tokens": [50914, 12981, 11451, 25588, 19777, 566, 31359, 13, 51014],
+    "temperature": 0.0,
+    "avg_logprob": -0.09558966101669683,
+    "compression_ratio": 1.4784172661870503,
+    "no_speech_prob": 0.1822986751794815
+  },
+  {
+    "id": 213,
+    "seek": 70820,
+    "start": 721.2,
+    "end": 725.2,
+    "text": " Ist die Gleichbehandlung v\u00f6llig ungleicher Kinder wirklich gerecht?",
+    "tokens": [
+      51014, 12810, 978, 33858, 650, 5543, 17850, 35670, 29038, 8445, 260,
+      14193, 9696, 18635, 4701, 30, 51214
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09558966101669683,
+    "compression_ratio": 1.4784172661870503,
+    "no_speech_prob": 0.1822986751794815
+  },
+  {
+    "id": 214,
+    "seek": 70820,
+    "start": 725.2,
+    "end": 729.2,
+    "text": " Wie l\u00e4sst sich Liebe messen, wenn man sie nicht sp\u00fcrt?",
+    "tokens": [
+      51214, 9233, 29335, 3041, 28790, 2082, 268, 11, 4797, 587, 2804, 1979,
+      637, 1655, 83, 30, 51414
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09558966101669683,
+    "compression_ratio": 1.4784172661870503,
+    "no_speech_prob": 0.1822986751794815
+  },
+  {
+    "id": 215,
+    "seek": 70820,
+    "start": 729.2,
+    "end": 733.2,
+    "text": " Und wo hat die Freiheit der Erblasser echt ihre Grenzen?",
+    "tokens": [
+      51414, 2719, 6020, 2385, 978, 47825, 1163, 3300, 5199, 12129, 13972,
+      14280, 24913, 2904, 30, 51614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09558966101669683,
+    "compression_ratio": 1.4784172661870503,
+    "no_speech_prob": 0.1822986751794815
+  },
+  {
+    "id": 216,
+    "seek": 70820,
+    "start": 733.2,
+    "end": 735.2,
+    "text": " Wie auch immer die Antworten lauten,",
+    "tokens": [51614, 9233, 2168, 5578, 978, 34693, 268, 635, 7886, 11, 51714],
+    "temperature": 0.0,
+    "avg_logprob": -0.09558966101669683,
+    "compression_ratio": 1.4784172661870503,
+    "no_speech_prob": 0.1822986751794815
+  },
+  {
+    "id": 217,
+    "seek": 73520,
+    "start": 735.2,
+    "end": 739.2,
+    "text": " die Probleme, die Testamente in Familien aufwerfen, sind umfassend.",
+    "tokens": [
+      50364, 978, 32891, 11, 978, 9279, 3439, 294, 36451, 2501, 1554, 6570, 11,
+      3290, 1105, 69, 640, 521, 13, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1078144356056496,
+    "compression_ratio": 1.5327510917030567,
+    "no_speech_prob": 0.028857022523880005
+  },
+  {
+    "id": 218,
+    "seek": 73520,
+    "start": 739.2,
+    "end": 744.2,
+    "text": " Das sieht man alle Themen in einer Familie wie Bevorzugung,",
+    "tokens": [
+      50564, 2846, 14289, 587, 5430, 39229, 294, 6850, 26021, 3355, 879, 8453,
+      29742, 1063, 11, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1078144356056496,
+    "compression_ratio": 1.5327510917030567,
+    "no_speech_prob": 0.028857022523880005
+  },
+  {
+    "id": 219,
+    "seek": 73520,
+    "start": 744.2,
+    "end": 751.2,
+    "text": " Heimlichkeiten sp\u00e4ter dann, Darlehen, Schenkungen, heimlich gemacht.",
+    "tokens": [
+      50814, 634, 332, 1739, 21049, 24196, 3594, 11, 7803, 306, 2932, 11, 2065,
+      32160, 5084, 11, 415, 332, 1739, 12293, 13, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1078144356056496,
+    "compression_ratio": 1.5327510917030567,
+    "no_speech_prob": 0.028857022523880005
+  },
+  {
+    "id": 220,
+    "seek": 73520,
+    "start": 751.2,
+    "end": 757.2,
+    "text": " Das ist ein riesiges Konfliktpotenzial, das sich dann beim Erben aufmacht.",
+    "tokens": [
+      51164, 2846, 1418, 1343, 23932, 20609, 12718, 3423, 9874, 17698, 11368,
+      831, 11, 1482, 3041, 3594, 13922, 3300, 1799, 2501, 76, 3589, 13, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1078144356056496,
+    "compression_ratio": 1.5327510917030567,
+    "no_speech_prob": 0.028857022523880005
+  },
+  {
+    "id": 221,
+    "seek": 73520,
+    "start": 757.2,
+    "end": 760.2,
+    "text": " Dann kommen auch noch die Angeheirateten.",
+    "tokens": [
+      51464, 7455, 11729, 2168, 3514, 978, 1107, 432, 675, 347, 267, 19865, 13,
+      51614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1078144356056496,
+    "compression_ratio": 1.5327510917030567,
+    "no_speech_prob": 0.028857022523880005
+  },
+  {
+    "id": 222,
+    "seek": 73520,
+    "start": 760.2,
+    "end": 763.2,
+    "text": " Dann kommen noch irgendwelche Leute,",
+    "tokens": [51614, 7455, 11729, 3514, 26455, 338, 1876, 13495, 11, 51764],
+    "temperature": 0.0,
+    "avg_logprob": -0.1078144356056496,
+    "compression_ratio": 1.5327510917030567,
+    "no_speech_prob": 0.028857022523880005
+  },
+  {
+    "id": 223,
+    "seek": 76320,
+    "start": 763.2,
+    "end": 769.2,
+    "text": " die sich um den Erblasser in der letzten Zeit gek\u00fcmmert haben,",
+    "tokens": [
+      50364, 978, 3041, 1105, 1441, 3300, 5199, 12129, 294, 1163, 18226, 9394,
+      14037, 774, 2174, 911, 3084, 11, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406282369372915,
+    "compression_ratio": 1.497854077253219,
+    "no_speech_prob": 0.04463641718029976
+  },
+  {
+    "id": 224,
+    "seek": 76320,
+    "start": 769.2,
+    "end": 774.2,
+    "text": " sehr viel investiert haben, vielleicht auch, um Erbe zu werden.",
+    "tokens": [
+      50664, 5499, 5891, 1963, 4859, 3084, 11, 12547, 2168, 11, 1105, 3300, 650,
+      2164, 4604, 13, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406282369372915,
+    "compression_ratio": 1.497854077253219,
+    "no_speech_prob": 0.04463641718029976
+  },
+  {
+    "id": 225,
+    "seek": 76320,
+    "start": 774.2,
+    "end": 781.2,
+    "text": " Das ist ein riesiges Feld, das mit sogenannte Liebe, Zuneigung umschrieben wird.",
+    "tokens": [
+      50914, 2846, 1418, 1343, 23932, 20609, 42677, 11, 1482, 2194, 37467, 9358,
+      28790, 11, 1176, 2613, 21034, 1105, 6145, 24027, 4578, 13, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406282369372915,
+    "compression_ratio": 1.497854077253219,
+    "no_speech_prob": 0.04463641718029976
+  },
+  {
+    "id": 226,
+    "seek": 76320,
+    "start": 781.2,
+    "end": 786.2,
+    "text": " Aber es ist wirklich eine subjektive, emotionale Bilanz.",
+    "tokens": [
+      51264, 5992, 785, 1418, 9696, 3018, 1422, 14930, 488, 11, 8913, 1220,
+      22879, 3910, 13, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406282369372915,
+    "compression_ratio": 1.497854077253219,
+    "no_speech_prob": 0.04463641718029976
+  },
+  {
+    "id": 227,
+    "seek": 76320,
+    "start": 786.2,
+    "end": 789.2,
+    "text": " Was man f\u00fcr eine Stellung hatte als Kind,",
+    "tokens": [
+      51514, 3027, 587, 2959, 3018, 37364, 1063, 13299, 3907, 9242, 11, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406282369372915,
+    "compression_ratio": 1.497854077253219,
+    "no_speech_prob": 0.04463641718029976
+  },
+  {
+    "id": 228,
+    "seek": 76320,
+    "start": 789.2,
+    "end": 792.2,
+    "text": " was man f\u00fcr den Verstorbenen getan hat,",
+    "tokens": [
+      51664, 390, 587, 2959, 1441, 4281, 372, 284, 1799, 268, 45599, 2385, 11,
+      51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406282369372915,
+    "compression_ratio": 1.497854077253219,
+    "no_speech_prob": 0.04463641718029976
+  },
+  {
+    "id": 229,
+    "seek": 79220,
+    "start": 792.2,
+    "end": 796.2,
+    "text": " was der Verstorbene versprochen hat, ein ganz wichtiges Thema.",
+    "tokens": [
+      50364, 390, 1163, 4281, 372, 30907, 1450, 1774, 23902, 2385, 11, 1343,
+      6312, 13621, 279, 16306, 13, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07125011112378991,
+    "compression_ratio": 1.4653846153846153,
+    "no_speech_prob": 0.00034061979386024177
+  },
+  {
+    "id": 230,
+    "seek": 79220,
+    "start": 796.2,
+    "end": 802.2,
+    "text": " Weil sehr oft wird ja mit Geld auch Abh\u00e4ngigkeit hergestellt in der Familie.",
+    "tokens": [
+      50564, 18665, 5499, 11649, 4578, 2784, 2194, 16535, 2168, 2847, 34591,
+      16626, 720, 26293, 294, 1163, 26021, 13, 50864
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07125011112378991,
+    "compression_ratio": 1.4653846153846153,
+    "no_speech_prob": 0.00034061979386024177
+  },
+  {
+    "id": 231,
+    "seek": 79220,
+    "start": 802.2,
+    "end": 804.2,
+    "text": " Und das bricht auf.",
+    "tokens": [50864, 2719, 1482, 738, 1405, 2501, 13, 50964],
+    "temperature": 0.0,
+    "avg_logprob": -0.07125011112378991,
+    "compression_ratio": 1.4653846153846153,
+    "no_speech_prob": 0.00034061979386024177
+  },
+  {
+    "id": 232,
+    "seek": 79220,
+    "start": 806.2,
+    "end": 809.2,
+    "text": " Im M\u00e4rchen regnet es Gold oder Sterntaler",
+    "tokens": [
+      51064, 4331, 46084, 2470, 1121, 7129, 785, 6731, 4513, 33539, 580, 17148,
+      51214
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07125011112378991,
+    "compression_ratio": 1.4653846153846153,
+    "no_speech_prob": 0.00034061979386024177
+  },
+  {
+    "id": 233,
+    "seek": 79220,
+    "start": 809.2,
+    "end": 812.2,
+    "text": " f\u00fcr die guten und braven Buben und M\u00e4dchen.",
+    "tokens": [
+      51214, 2959, 978, 31277, 674, 1548, 553, 25489, 268, 674, 49182, 2470, 13,
+      51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07125011112378991,
+    "compression_ratio": 1.4653846153846153,
+    "no_speech_prob": 0.00034061979386024177
+  },
+  {
+    "id": 234,
+    "seek": 79220,
+    "start": 812.2,
+    "end": 816.2,
+    "text": " Im echten Leben sind die Bilanzen selten so gut ausgewogen.",
+    "tokens": [
+      51364, 4331, 308, 21043, 15399, 3290, 978, 363, 21752, 2904, 5851, 1147,
+      370, 5228, 3437, 21306, 8799, 13, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07125011112378991,
+    "compression_ratio": 1.4653846153846153,
+    "no_speech_prob": 0.00034061979386024177
+  },
+  {
+    "id": 235,
+    "seek": 79220,
+    "start": 816.2,
+    "end": 820.2,
+    "text": " Je gr\u00f6sser der pers\u00f6nliche Frust, umso schwerer f\u00e4llt es vermutlich,",
+    "tokens": [
+      51564, 2588, 677, 973, 3810, 260, 1163, 31228, 10185, 1526, 381, 11, 1105,
+      539, 23809, 260, 42870, 785, 26319, 21678, 11, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.07125011112378991,
+    "compression_ratio": 1.4653846153846153,
+    "no_speech_prob": 0.00034061979386024177
+  },
+  {
+    "id": 236,
+    "seek": 82020,
+    "start": 820.2,
+    "end": 823.2,
+    "text": " ein Testament zu akzeptieren, mit dem der Erblasser",
+    "tokens": [
+      50364, 1343, 15473, 2164, 9308, 32082, 5695, 11, 2194, 1371, 1163, 3300,
+      5199, 12129, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08049199160407572,
+    "compression_ratio": 1.638157894736842,
+    "no_speech_prob": 0.0059105451218783855
+  },
+  {
+    "id": 237,
+    "seek": 82020,
+    "start": 823.2,
+    "end": 826.2,
+    "text": " auch seine letzte Pflegekraft bedacht hat.",
+    "tokens": [
+      50514, 2168, 15925, 35236, 17331, 35754, 47288, 2901, 3589, 2385, 13,
+      50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08049199160407572,
+    "compression_ratio": 1.638157894736842,
+    "no_speech_prob": 0.0059105451218783855
+  },
+  {
+    "id": 238,
+    "seek": 82020,
+    "start": 826.2,
+    "end": 829.2,
+    "text": " Dass der Vater einem das antun konnte.",
+    "tokens": [
+      50664, 22306, 1163, 36173, 6827, 1482, 2511, 409, 24058, 13, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08049199160407572,
+    "compression_ratio": 1.638157894736842,
+    "no_speech_prob": 0.0059105451218783855
+  },
+  {
+    "id": 239,
+    "seek": 82020,
+    "start": 829.2,
+    "end": 831.2,
+    "text": " Das ist tats\u00e4chlich so, dass diejenigen,",
+    "tokens": [50814, 2846, 1418, 20796, 370, 11, 2658, 978, 48176, 11, 50914],
+    "temperature": 0.0,
+    "avg_logprob": -0.08049199160407572,
+    "compression_ratio": 1.638157894736842,
+    "no_speech_prob": 0.0059105451218783855
+  },
+  {
+    "id": 240,
+    "seek": 82020,
+    "start": 831.2,
+    "end": 834.2,
+    "text": " die ein gutes Verh\u00e4ltnis zu den Eltern hatten,",
+    "tokens": [
+      50914, 978, 1343, 45859, 4281, 28068, 10661, 2164, 1441, 29101, 20441, 11,
+      51064
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08049199160407572,
+    "compression_ratio": 1.638157894736842,
+    "no_speech_prob": 0.0059105451218783855
+  },
+  {
+    "id": 241,
+    "seek": 82020,
+    "start": 834.2,
+    "end": 837.2,
+    "text": " ihre Eltern auch leichter gehen lassen k\u00f6nnen.",
+    "tokens": [
+      51064, 14280, 29101, 2168, 28333, 260, 13230, 16168, 6310, 13, 51214
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08049199160407572,
+    "compression_ratio": 1.638157894736842,
+    "no_speech_prob": 0.0059105451218783855
+  },
+  {
+    "id": 242,
+    "seek": 82020,
+    "start": 837.2,
+    "end": 840.2,
+    "text": " Das ist dann stimmig, da kann man dankbar zur\u00fcckblicken",
+    "tokens": [
+      51214, 2846, 1418, 3594, 342, 6753, 328, 11, 1120, 4028, 587, 35121, 5356,
+      15089, 5199, 3830, 51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08049199160407572,
+    "compression_ratio": 1.638157894736842,
+    "no_speech_prob": 0.0059105451218783855
+  },
+  {
+    "id": 243,
+    "seek": 82020,
+    "start": 840.2,
+    "end": 843.2,
+    "text": " auf die Beziehung, die man zu den Eltern hatte,",
+    "tokens": [
+      51364, 2501, 978, 879, 28213, 1063, 11, 978, 587, 2164, 1441, 29101,
+      13299, 11, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08049199160407572,
+    "compression_ratio": 1.638157894736842,
+    "no_speech_prob": 0.0059105451218783855
+  },
+  {
+    "id": 244,
+    "seek": 82020,
+    "start": 843.2,
+    "end": 846.2,
+    "text": " und kann einen normalen Trauerprozess durchleben.",
+    "tokens": [
+      51514, 674, 4028, 4891, 2710, 268, 5403, 5486, 4318, 37575, 7131, 41467,
+      13, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08049199160407572,
+    "compression_ratio": 1.638157894736842,
+    "no_speech_prob": 0.0059105451218783855
+  },
+  {
+    "id": 245,
+    "seek": 82020,
+    "start": 846.2,
+    "end": 849.2,
+    "text": " Wobei jeder Mensch selbstverst\u00e4ndlich etwas anderes als normal erlebt.",
+    "tokens": [
+      51664, 6622, 21845, 19610, 27773, 13053, 36068, 1739, 9569, 31426, 3907,
+      2710, 47372, 13, 51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08049199160407572,
+    "compression_ratio": 1.638157894736842,
+    "no_speech_prob": 0.0059105451218783855
+  },
+  {
+    "id": 246,
+    "seek": 84920,
+    "start": 849.2,
+    "end": 853.2,
+    "text": " Das Gef\u00fchl stimmt bei manchen einfach, wenn die Eltern sterben.",
+    "tokens": [
+      50364, 2846, 29715, 37799, 4643, 587, 2470, 7281, 11, 4797, 978, 29101,
+      18924, 1799, 13, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10888050220630786,
+    "compression_ratio": 1.5789473684210527,
+    "no_speech_prob": 0.018542379140853882
+  },
+  {
+    "id": 247,
+    "seek": 84920,
+    "start": 853.2,
+    "end": 855.2,
+    "text": " Sie k\u00f6nnen ihre Trauer bew\u00e4ltigen,",
+    "tokens": [
+      50564, 3559, 6310, 14280, 5403, 5486, 17897, 15510, 3213, 11, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10888050220630786,
+    "compression_ratio": 1.5789473684210527,
+    "no_speech_prob": 0.018542379140853882
+  },
+  {
+    "id": 248,
+    "seek": 84920,
+    "start": 855.2,
+    "end": 858.2,
+    "text": " sagt die Psychoanalytikerin Claudia Den Schertz.",
+    "tokens": [
+      50664, 15764, 978, 17303, 78, 29702, 4328, 17314, 259, 36785, 6458, 2065,
+      911, 89, 13, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10888050220630786,
+    "compression_ratio": 1.5789473684210527,
+    "no_speech_prob": 0.018542379140853882
+  },
+  {
+    "id": 249,
+    "seek": 84920,
+    "start": 858.2,
+    "end": 862.2,
+    "text": " W\u00e4hrend jemand, der ein konflikthaftes Verh\u00e4ltnis zu den Eltern hatte,",
+    "tokens": [
+      50814, 40084, 4542, 21717, 11, 1163, 1343, 5897, 3423, 1035, 13571, 844,
+      279, 4281, 28068, 10661, 2164, 1441, 29101, 13299, 11, 51014
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10888050220630786,
+    "compression_ratio": 1.5789473684210527,
+    "no_speech_prob": 0.018542379140853882
+  },
+  {
+    "id": 250,
+    "seek": 84920,
+    "start": 862.2,
+    "end": 864.2,
+    "text": " vielleicht immer schon das Gef\u00fchl hatte,",
+    "tokens": [51014, 12547, 5578, 4981, 1482, 29715, 13299, 11, 51114],
+    "temperature": 0.0,
+    "avg_logprob": -0.10888050220630786,
+    "compression_ratio": 1.5789473684210527,
+    "no_speech_prob": 0.018542379140853882
+  },
+  {
+    "id": 251,
+    "seek": 84920,
+    "start": 864.2,
+    "end": 867.2,
+    "text": " ich habe da nicht genug gekriegt oder irgendwas stimmt nicht,",
+    "tokens": [
+      51114, 1893, 6015, 1120, 1979, 33194, 14037, 5469, 10463, 4513, 47090,
+      37799, 1979, 11, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10888050220630786,
+    "compression_ratio": 1.5789473684210527,
+    "no_speech_prob": 0.018542379140853882
+  },
+  {
+    "id": 252,
+    "seek": 84920,
+    "start": 867.2,
+    "end": 870.2,
+    "text": " der verliert dann endg\u00fcltig die M\u00f6glichkeit,",
+    "tokens": [
+      51264, 1163, 49331, 83, 3594, 917, 70, 774, 2282, 328, 978, 30662, 11,
+      51414
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10888050220630786,
+    "compression_ratio": 1.5789473684210527,
+    "no_speech_prob": 0.018542379140853882
+  },
+  {
+    "id": 253,
+    "seek": 84920,
+    "start": 870.2,
+    "end": 872.2,
+    "text": " dann auch noch was zu kl\u00e4ren.",
+    "tokens": [51414, 3594, 2168, 3514, 390, 2164, 9671, 21465, 13, 51514],
+    "temperature": 0.0,
+    "avg_logprob": -0.10888050220630786,
+    "compression_ratio": 1.5789473684210527,
+    "no_speech_prob": 0.018542379140853882
+  },
+  {
+    "id": 254,
+    "seek": 84920,
+    "start": 872.2,
+    "end": 876.2,
+    "text": " Und nat\u00fcrlich war die Beziehung zu den Eltern auch nicht so befriedigend,",
+    "tokens": [
+      51514, 2719, 8762, 1516, 978, 879, 28213, 1063, 2164, 1441, 29101, 2168,
+      1979, 370, 21312, 2428, 328, 521, 11, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10888050220630786,
+    "compression_ratio": 1.5789473684210527,
+    "no_speech_prob": 0.018542379140853882
+  },
+  {
+    "id": 255,
+    "seek": 87620,
+    "start": 876.2,
+    "end": 878.2,
+    "text": " die die Kinder hatten, und das sind Gef\u00fchle,",
+    "tokens": [
+      50364, 978, 978, 14193, 20441, 11, 674, 1482, 3290, 17873, 7254, 306, 11,
+      50464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1390840758138628,
+    "compression_ratio": 1.5166666666666666,
+    "no_speech_prob": 0.08504682034254074
+  },
+  {
+    "id": 256,
+    "seek": 87620,
+    "start": 878.2,
+    "end": 881.2,
+    "text": " die dann einen Trauerprozess verkomplizieren k\u00f6nnen.",
+    "tokens": [
+      50464, 978, 3594, 4891, 5403, 5486, 4318, 37575, 1306, 20557, 564, 590,
+      5695, 6310, 13, 50614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1390840758138628,
+    "compression_ratio": 1.5166666666666666,
+    "no_speech_prob": 0.08504682034254074
+  },
+  {
+    "id": 257,
+    "seek": 87620,
+    "start": 881.2,
+    "end": 884.2,
+    "text": " Und vielleicht auch das Verh\u00e4ltnis zu Geschwistern",
+    "tokens": [
+      50614, 2719, 12547, 2168, 1482, 4281, 28068, 10661, 2164, 14241, 86, 1964,
+      77, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1390840758138628,
+    "compression_ratio": 1.5166666666666666,
+    "no_speech_prob": 0.08504682034254074
+  },
+  {
+    "id": 258,
+    "seek": 87620,
+    "start": 884.2,
+    "end": 886.2,
+    "text": " oder anderen Erbberechtigten belasten.",
+    "tokens": [
+      50764, 4513, 11122, 3300, 65, 18582, 4701, 41498, 989, 47552, 13, 50864
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1390840758138628,
+    "compression_ratio": 1.5166666666666666,
+    "no_speech_prob": 0.08504682034254074
+  },
+  {
+    "id": 259,
+    "seek": 87620,
+    "start": 886.2,
+    "end": 889.2,
+    "text": " Allein schon der durch die aktuelle Auseinandersetzung",
+    "tokens": [
+      50864, 25318, 259, 4981, 1163, 7131, 978, 13680, 23635, 316, 438, 259,
+      41430, 38584, 51014
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1390840758138628,
+    "compression_ratio": 1.5166666666666666,
+    "no_speech_prob": 0.08504682034254074
+  },
+  {
+    "id": 260,
+    "seek": 87620,
+    "start": 889.2,
+    "end": 892.2,
+    "text": " wiederbelebte Vergleich kann schlechte Laune machen.",
+    "tokens": [
+      51014, 6216, 650, 28512, 975, 47998, 4028, 22664, 10553, 2369, 2613, 7069,
+      13, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1390840758138628,
+    "compression_ratio": 1.5166666666666666,
+    "no_speech_prob": 0.08504682034254074
+  },
+  {
+    "id": 261,
+    "seek": 87620,
+    "start": 892.2,
+    "end": 897.2,
+    "text": " Hier der ewig hadernde Problemfall, dort die vom Schicksal oder den Eltern",
+    "tokens": [
+      51164, 10886, 1163, 308, 33313, 632, 260, 16404, 11676, 6691, 11, 15775,
+      978, 10135, 2065, 7663, 304, 4513, 1441, 29101, 51414
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1390840758138628,
+    "compression_ratio": 1.5166666666666666,
+    "no_speech_prob": 0.08504682034254074
+  },
+  {
+    "id": 262,
+    "seek": 87620,
+    "start": 897.2,
+    "end": 902.2,
+    "text": " beg\u00fcnstigte Schwester Leichtfu\u00df, das Sunnygirl, dem alles in den Scho\u00df f\u00e4llt.",
+    "tokens": [
+      51414, 4612, 36656, 328, 975, 17576, 3011, 1456, 1405, 14127, 2536, 11,
+      1482, 34665, 21322, 11, 1371, 7874, 294, 1441, 2065, 78, 2536, 42870, 13,
+      51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.1390840758138628,
+    "compression_ratio": 1.5166666666666666,
+    "no_speech_prob": 0.08504682034254074
+  },
+  {
+    "id": 263,
+    "seek": 90220,
+    "start": 902.2,
+    "end": 905.2,
+    "text": " Aber m\u00f6glicherweise ist das auch nur eine Projektion.",
+    "tokens": [
+      50364, 5992, 16294, 44071, 1418, 1482, 2168, 4343, 3018, 34804, 313, 13,
+      50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10636485706676137,
+    "compression_ratio": 1.4416058394160585,
+    "no_speech_prob": 0.20166394114494324
+  },
+  {
+    "id": 264,
+    "seek": 90220,
+    "start": 905.2,
+    "end": 909.2,
+    "text": " Wer wei\u00df? Die Familientherapeutin Gabriele R\u00fccci",
+    "tokens": [
+      50514, 14255, 13385, 30, 3229, 15672, 1196, 511, 64, 22282, 259, 50053,
+      306, 497, 774, 66, 537, 50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10636485706676137,
+    "compression_ratio": 1.4416058394160585,
+    "no_speech_prob": 0.20166394114494324
+  },
+  {
+    "id": 265,
+    "seek": 90220,
+    "start": 909.2,
+    "end": 912.2,
+    "text": " ber\u00e4t zerstrittene Erben und Erbinnen,",
+    "tokens": [
+      50714, 5948, 3628, 44746, 9733, 593, 1450, 3300, 1799, 674, 3300, 65,
+      11399, 11, 50864
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10636485706676137,
+    "compression_ratio": 1.4416058394160585,
+    "no_speech_prob": 0.20166394114494324
+  },
+  {
+    "id": 266,
+    "seek": 90220,
+    "start": 912.2,
+    "end": 915.2,
+    "text": " die nicht gleich zum Anwalt rennen wollen,",
+    "tokens": [
+      50864, 978, 1979, 11699, 5919, 1107, 86, 3198, 8124, 2866, 11253, 11,
+      51014
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10636485706676137,
+    "compression_ratio": 1.4416058394160585,
+    "no_speech_prob": 0.20166394114494324
+  },
+  {
+    "id": 267,
+    "seek": 90220,
+    "start": 915.2,
+    "end": 918.2,
+    "text": " bzw. deren Situation so verfahren wirkt,",
+    "tokens": [
+      51014, 39998, 13, 48300, 22247, 370, 1306, 34394, 1987, 2320, 11, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10636485706676137,
+    "compression_ratio": 1.4416058394160585,
+    "no_speech_prob": 0.20166394114494324
+  },
+  {
+    "id": 268,
+    "seek": 90220,
+    "start": 918.2,
+    "end": 920.2,
+    "text": " dass sie nicht mehr weiter wissen.",
+    "tokens": [51164, 2658, 2804, 1979, 5417, 8988, 16331, 13, 51264],
+    "temperature": 0.0,
+    "avg_logprob": -0.10636485706676137,
+    "compression_ratio": 1.4416058394160585,
+    "no_speech_prob": 0.20166394114494324
+  },
+  {
+    "id": 269,
+    "seek": 90220,
+    "start": 920.2,
+    "end": 922.2,
+    "text": " Wie sollen sie ihre Konflikte l\u00f6sen?",
+    "tokens": [
+      51264, 9233, 24713, 2804, 14280, 12718, 3423, 34165, 25209, 6748, 30,
+      51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10636485706676137,
+    "compression_ratio": 1.4416058394160585,
+    "no_speech_prob": 0.20166394114494324
+  },
+  {
+    "id": 270,
+    "seek": 90220,
+    "start": 922.2,
+    "end": 926.2,
+    "text": " Gibt es au\u00dfer Mord und Totschlag noch irgendeinen anderen Ausweg",
+    "tokens": [
+      51364, 460, 13651, 785, 39428, 376, 765, 674, 314, 1971, 40869, 3514,
+      3418, 27429, 5636, 11122, 9039, 12517, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10636485706676137,
+    "compression_ratio": 1.4416058394160585,
+    "no_speech_prob": 0.20166394114494324
+  },
+  {
+    "id": 271,
+    "seek": 90220,
+    "start": 926.2,
+    "end": 928.2,
+    "text": " aus dem emotionalen Chaos?",
+    "tokens": [51564, 3437, 1371, 6863, 268, 32644, 30, 51664],
+    "temperature": 0.0,
+    "avg_logprob": -0.10636485706676137,
+    "compression_ratio": 1.4416058394160585,
+    "no_speech_prob": 0.20166394114494324
+  },
+  {
+    "id": 272,
+    "seek": 92820,
+    "start": 928.2,
+    "end": 932.2,
+    "text": " Ja, sagt die Psychologin, indem man den Kopf wieder einschaltet.",
+    "tokens": [
+      50364, 3530, 11, 15764, 978, 17303, 1132, 259, 11, 37185, 587, 1441,
+      28231, 6216, 21889, 339, 39931, 13, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11786103002803842,
+    "compression_ratio": 1.4747899159663866,
+    "no_speech_prob": 0.13279756903648376
+  },
+  {
+    "id": 273,
+    "seek": 92820,
+    "start": 932.2,
+    "end": 935.2,
+    "text": " Die Vernunft muss man auch manchmal aktivieren",
+    "tokens": [
+      50564, 3229, 33220, 19333, 6425, 587, 2168, 32092, 31658, 5695, 50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11786103002803842,
+    "compression_ratio": 1.4747899159663866,
+    "no_speech_prob": 0.13279756903648376
+  },
+  {
+    "id": 274,
+    "seek": 92820,
+    "start": 935.2,
+    "end": 939.2,
+    "text": " durch ganz klare Statements, ob die von einem Juristen sind.",
+    "tokens": [
+      50714, 7131, 6312, 9671, 543, 16249, 6400, 11, 1111, 978, 2957, 6827,
+      27544, 4821, 3290, 13, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11786103002803842,
+    "compression_ratio": 1.4747899159663866,
+    "no_speech_prob": 0.13279756903648376
+  },
+  {
+    "id": 275,
+    "seek": 92820,
+    "start": 939.2,
+    "end": 944.2,
+    "text": " Aber auch von meiner Seite, dass ich sage, schauen Sie,",
+    "tokens": [
+      50914, 5992, 2168, 2957, 20529, 19748, 11, 2658, 1893, 19721, 11, 25672,
+      3559, 11, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11786103002803842,
+    "compression_ratio": 1.4747899159663866,
+    "no_speech_prob": 0.13279756903648376
+  },
+  {
+    "id": 276,
+    "seek": 92820,
+    "start": 944.2,
+    "end": 949.2,
+    "text": " es gibt keine L\u00f6sung, wenn Sie sich nicht alle auseinandersetzen.",
+    "tokens": [
+      51164, 785, 6089, 9252, 46934, 11, 4797, 3559, 3041, 1979, 5430, 257, 438,
+      259, 41430, 24797, 13, 51414
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11786103002803842,
+    "compression_ratio": 1.4747899159663866,
+    "no_speech_prob": 0.13279756903648376
+  },
+  {
+    "id": 277,
+    "seek": 92820,
+    "start": 949.2,
+    "end": 954.2,
+    "text": " Das ist meine Aufgabe, eine Familie damit zu begleiten,",
+    "tokens": [
+      51414, 2846, 1418, 10946, 40070, 11, 3018, 26021, 9479, 2164, 4612, 306,
+      6009, 11, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.11786103002803842,
+    "compression_ratio": 1.4747899159663866,
+    "no_speech_prob": 0.13279756903648376
+  },
+  {
+    "id": 278,
+    "seek": 95420,
+    "start": 954.2,
+    "end": 957.2,
+    "text": " \u00fcberhaupt miteinander ins Gespr\u00e4ch zu kommen,",
+    "tokens": [50364, 20023, 43127, 1028, 38746, 10168, 2164, 11729, 11, 50514],
+    "temperature": 0.0,
+    "avg_logprob": -0.10281076163889091,
+    "compression_ratio": 1.512,
+    "no_speech_prob": 0.020009130239486694
+  },
+  {
+    "id": 279,
+    "seek": 95420,
+    "start": 957.2,
+    "end": 961.2,
+    "text": " auch mal abzukl\u00e4ren, wie Sie zu Ihren Bildern kommen,",
+    "tokens": [
+      50514, 2168, 2806, 410, 43994, 75, 21465, 11, 3355, 3559, 2164, 10485,
+      1095, 15746, 1248, 11729, 11, 50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10281076163889091,
+    "compression_ratio": 1.512,
+    "no_speech_prob": 0.020009130239486694
+  },
+  {
+    "id": 280,
+    "seek": 95420,
+    "start": 961.2,
+    "end": 963.2,
+    "text": " dass Ihnen das und das geh\u00f6rt.",
+    "tokens": [50714, 2658, 17280, 1482, 674, 1482, 21544, 13, 50814],
+    "temperature": 0.0,
+    "avg_logprob": -0.10281076163889091,
+    "compression_ratio": 1.512,
+    "no_speech_prob": 0.020009130239486694
+  },
+  {
+    "id": 281,
+    "seek": 95420,
+    "start": 963.2,
+    "end": 967.2,
+    "text": " Und dann kommen sehr interessante Ph\u00e4nomene zum Vorschein.",
+    "tokens": [
+      50814, 2719, 3594, 11729, 5499, 24372, 2623, 4029, 298, 1450, 5919, 31438,
+      1876, 259, 13, 51014
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10281076163889091,
+    "compression_ratio": 1.512,
+    "no_speech_prob": 0.020009130239486694
+  },
+  {
+    "id": 282,
+    "seek": 95420,
+    "start": 967.2,
+    "end": 971.2,
+    "text": " Z.B. der S\u00fcndenbock, der sich gar nicht bewusst ist,",
+    "tokens": [
+      51014, 1176, 13, 33, 13, 1163, 318, 27687, 65, 1560, 11, 1163, 3041, 3691,
+      1979, 46221, 1418, 11, 51214
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10281076163889091,
+    "compression_ratio": 1.512,
+    "no_speech_prob": 0.020009130239486694
+  },
+  {
+    "id": 283,
+    "seek": 95420,
+    "start": 971.2,
+    "end": 976.2,
+    "text": " dass er ein S\u00fcndenbock war und ganz viel Energie der Familie gebraucht hat",
+    "tokens": [
+      51214, 2658, 1189, 1343, 318, 27687, 65, 1560, 1516, 674, 6312, 5891,
+      35309, 1163, 26021, 1519, 6198, 10084, 2385, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10281076163889091,
+    "compression_ratio": 1.512,
+    "no_speech_prob": 0.020009130239486694
+  },
+  {
+    "id": 284,
+    "seek": 95420,
+    "start": 976.2,
+    "end": 980.2,
+    "text": " und dass die anderen Kinder unter ihm gelitten haben.",
+    "tokens": [
+      51464, 674, 2658, 978, 11122, 14193, 8662, 16021, 4087, 2987, 3084, 13,
+      51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10281076163889091,
+    "compression_ratio": 1.512,
+    "no_speech_prob": 0.020009130239486694
+  },
+  {
+    "id": 285,
+    "seek": 98020,
+    "start": 980.2,
+    "end": 982.2,
+    "text": " Das w\u00e4re die bestm\u00f6gliche L\u00f6sung.",
+    "tokens": [50364, 2846, 14558, 978, 1151, 76, 16277, 68, 46934, 13, 50464],
+    "temperature": 0.0,
+    "avg_logprob": -0.19741085147069506,
+    "compression_ratio": 1.4904942965779469,
+    "no_speech_prob": 0.05579521879553795
+  },
+  {
+    "id": 286,
+    "seek": 98020,
+    "start": 982.2,
+    "end": 985.2,
+    "text": " Die betroffene Verwandtschaft findet sich zusammen,",
+    "tokens": [
+      50464, 3229, 778, 340, 602, 1450, 4281, 33114, 22165, 27752, 3041, 14311,
+      11, 50614
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19741085147069506,
+    "compression_ratio": 1.4904942965779469,
+    "no_speech_prob": 0.05579521879553795
+  },
+  {
+    "id": 287,
+    "seek": 98020,
+    "start": 985.2,
+    "end": 989.2,
+    "text": " um einander, m\u00f6glicherweise zum ersten Mal im Leben,",
+    "tokens": [
+      50614, 1105, 1343, 4483, 11, 16294, 44071, 5919, 17324, 5746, 566, 15399,
+      11, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19741085147069506,
+    "compression_ratio": 1.4904942965779469,
+    "no_speech_prob": 0.05579521879553795
+  },
+  {
+    "id": 288,
+    "seek": 98020,
+    "start": 989.2,
+    "end": 991.2,
+    "text": " richtig zuzuh\u00f6ren,",
+    "tokens": [50814, 13129, 2164, 89, 3232, 26377, 11, 50914],
+    "temperature": 0.0,
+    "avg_logprob": -0.19741085147069506,
+    "compression_ratio": 1.4904942965779469,
+    "no_speech_prob": 0.05579521879553795
+  },
+  {
+    "id": 289,
+    "seek": 98020,
+    "start": 991.2,
+    "end": 995.2,
+    "text": " unter Anleitung einer Mediaturin oder Psychologin, versteht sich.",
+    "tokens": [
+      50914, 8662, 1107, 306, 35563, 6850, 3982, 7676, 374, 259, 4513, 17303,
+      1132, 259, 11, 22442, 357, 3041, 13, 51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19741085147069506,
+    "compression_ratio": 1.4904942965779469,
+    "no_speech_prob": 0.05579521879553795
+  },
+  {
+    "id": 290,
+    "seek": 98020,
+    "start": 995.2,
+    "end": 998.2,
+    "text": " Ziel sind erhellende Aha-Momente.",
+    "tokens": [
+      51114, 25391, 3290, 1189, 21288, 5445, 27448, 12, 13255, 1576, 13, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19741085147069506,
+    "compression_ratio": 1.4904942965779469,
+    "no_speech_prob": 0.05579521879553795
+  },
+  {
+    "id": 291,
+    "seek": 98020,
+    "start": 998.2,
+    "end": 1000.2,
+    "text": " Ach, so hat sie es erlebt,",
+    "tokens": [51264, 15847, 11, 370, 2385, 2804, 785, 47372, 11, 51364],
+    "temperature": 0.0,
+    "avg_logprob": -0.19741085147069506,
+    "compression_ratio": 1.4904942965779469,
+    "no_speech_prob": 0.05579521879553795
+  },
+  {
+    "id": 292,
+    "seek": 98020,
+    "start": 1000.2,
+    "end": 1004.2,
+    "text": " dass der Bruder mit den Eltern zeitlebens unter einem Dach wohnte.",
+    "tokens": [
+      51364, 2658, 1163, 1603, 28230, 2194, 1441, 29101, 49367, 28512, 694,
+      8662, 6827, 413, 608, 48471, 9358, 13, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19741085147069506,
+    "compression_ratio": 1.4904942965779469,
+    "no_speech_prob": 0.05579521879553795
+  },
+  {
+    "id": 293,
+    "seek": 98020,
+    "start": 1004.2,
+    "end": 1006.2,
+    "text": " Das ist ein ganz besonderer Moment.",
+    "tokens": [
+      51564, 2846, 1418, 1343, 6312, 4097, 8548, 260, 19093, 13, 51664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.19741085147069506,
+    "compression_ratio": 1.4904942965779469,
+    "no_speech_prob": 0.05579521879553795
+  },
+  {
+    "id": 294,
+    "seek": 100620,
+    "start": 1006.2,
+    "end": 1010.2,
+    "text": " Solch einen Austausch pflegen Familien n\u00e4mlich normalerweise eher nicht,",
+    "tokens": [
+      50364, 7026, 339, 4891, 4126, 8463, 339, 280, 69, 22936, 36451, 21219,
+      2710, 44071, 24332, 1979, 11, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.312609423388232,
+    "compression_ratio": 1.480565371024735,
+    "no_speech_prob": 0.12933020293712616
+  },
+  {
+    "id": 295,
+    "seek": 100620,
+    "start": 1010.2,
+    "end": 1012.2,
+    "text": " sagt Claudia den Scherz.",
+    "tokens": [50564, 15764, 36785, 1441, 2065, 260, 89, 13, 50664],
+    "temperature": 0.0,
+    "avg_logprob": -0.312609423388232,
+    "compression_ratio": 1.480565371024735,
+    "no_speech_prob": 0.12933020293712616
+  },
+  {
+    "id": 296,
+    "seek": 100620,
+    "start": 1012.2,
+    "end": 1016.2,
+    "text": " In der Regel wird versucht, gemeinsam gut zurechtzukommen.",
+    "tokens": [
+      50664, 682, 1163, 33139, 4578, 36064, 11, 29701, 5228, 710, 540, 4701,
+      43994, 5132, 13, 50864
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.312609423388232,
+    "compression_ratio": 1.480565371024735,
+    "no_speech_prob": 0.12933020293712616
+  },
+  {
+    "id": 297,
+    "seek": 100620,
+    "start": 1016.2,
+    "end": 1020.2,
+    "text": " Grunds\u00e4tzliches Erleben kommt meistens zu wenig zur Sprache.",
+    "tokens": [
+      50864, 13941, 82, 33373, 279, 3300, 41467, 10047, 36894, 694, 2164, 20911,
+      7147, 7702, 6000, 13, 51064
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.312609423388232,
+    "compression_ratio": 1.480565371024735,
+    "no_speech_prob": 0.12933020293712616
+  },
+  {
+    "id": 298,
+    "seek": 100620,
+    "start": 1020.2,
+    "end": 1024.2,
+    "text": " Auf diese Weise wird es m\u00f6glich, die Perspektive des anderen zu sehen",
+    "tokens": [
+      51064, 9462, 6705, 41947, 4578, 785, 16294, 11, 978, 14006, 23533, 488,
+      730, 11122, 2164, 11333, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.312609423388232,
+    "compression_ratio": 1.480565371024735,
+    "no_speech_prob": 0.12933020293712616
+  },
+  {
+    "id": 299,
+    "seek": 100620,
+    "start": 1024.2,
+    "end": 1026.2,
+    "text": " und Verst\u00e4ndnis zu haben daf\u00fcr,",
+    "tokens": [51264, 674, 4281, 16913, 10661, 2164, 3084, 13747, 11, 51364],
+    "temperature": 0.0,
+    "avg_logprob": -0.312609423388232,
+    "compression_ratio": 1.480565371024735,
+    "no_speech_prob": 0.12933020293712616
+  },
+  {
+    "id": 300,
+    "seek": 100620,
+    "start": 1026.2,
+    "end": 1030.2,
+    "text": " warum vielleicht im aktuellen Moment ein Bruder mit anderen Eltern",
+    "tokens": [
+      51364, 24331, 12547, 566, 36267, 268, 19093, 1343, 1603, 28230, 2194,
+      11122, 29101, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.312609423388232,
+    "compression_ratio": 1.480565371024735,
+    "no_speech_prob": 0.12933020293712616
+  },
+  {
+    "id": 301,
+    "seek": 100620,
+    "start": 1030.2,
+    "end": 1032.2,
+    "text": " ein bisschen mehr Zeit hat.",
+    "tokens": [51564, 1343, 10763, 5417, 9394, 2385, 13, 51664],
+    "temperature": 0.0,
+    "avg_logprob": -0.312609423388232,
+    "compression_ratio": 1.480565371024735,
+    "no_speech_prob": 0.12933020293712616
+  },
+  {
+    "id": 302,
+    "seek": 103220,
+    "start": 1032.2,
+    "end": 1036.2,
+    "text": " Sie z.B. f\u00fchlte sich ausgeschlossen, eher dagegen vereinnahmt.",
+    "tokens": [
+      50364, 3559, 710, 13, 33, 13, 18813, 75, 975, 3041, 3437, 2880, 29002, 11,
+      24332, 45387, 16443, 7729, 545, 42744, 13, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.3725492446148982,
+    "compression_ratio": 1.5691056910569106,
+    "no_speech_prob": 0.1918252557516098
+  },
+  {
+    "id": 303,
+    "seek": 103220,
+    "start": 1036.2,
+    "end": 1040.2,
+    "text": " Im Wort Mitteilen steckt der Begriff des Teilens.",
+    "tokens": [
+      50564, 4331, 22748, 41526, 17471, 2126, 19951, 1163, 879, 32783, 730,
+      16357, 694, 13, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.3725492446148982,
+    "compression_ratio": 1.5691056910569106,
+    "no_speech_prob": 0.1918252557516098
+  },
+  {
+    "id": 304,
+    "seek": 103220,
+    "start": 1040.2,
+    "end": 1043.2,
+    "text": " Man teilt mit anderen seine Gef\u00fchle,",
+    "tokens": [
+      50764, 2458, 535, 2352, 2194, 11122, 15925, 17873, 7254, 306, 11, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.3725492446148982,
+    "compression_ratio": 1.5691056910569106,
+    "no_speech_prob": 0.1918252557516098
+  },
+  {
+    "id": 305,
+    "seek": 103220,
+    "start": 1043.2,
+    "end": 1047.2,
+    "text": " in der Hoffnung, dass diese sie dann nachvollziehen k\u00f6nnen.",
+    "tokens": [
+      50914, 294, 1163, 29135, 15539, 11, 2658, 6705, 2804, 3594, 5168, 20654,
+      28768, 6310, 13, 51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.3725492446148982,
+    "compression_ratio": 1.5691056910569106,
+    "no_speech_prob": 0.1918252557516098
+  },
+  {
+    "id": 306,
+    "seek": 103220,
+    "start": 1047.2,
+    "end": 1051.2,
+    "text": " Gegenseitige Empathie erweist sich als \u00e4u\u00dferst hilfreich,",
+    "tokens": [
+      51114, 27826, 1288, 270, 3969, 8599, 998, 414, 1189, 826, 468, 3041, 3907,
+      3078, 43796, 16398, 28315, 69, 12594, 11, 51314
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.3725492446148982,
+    "compression_ratio": 1.5691056910569106,
+    "no_speech_prob": 0.1918252557516098
+  },
+  {
+    "id": 307,
+    "seek": 103220,
+    "start": 1051.2,
+    "end": 1054.2,
+    "text": " wenn man sich mit anderen verabschieden kann.",
+    "tokens": [
+      51314, 4797, 587, 3041, 2194, 11122, 1306, 455, 6145, 1091, 268, 4028, 13,
+      51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.3725492446148982,
+    "compression_ratio": 1.5691056910569106,
+    "no_speech_prob": 0.1918252557516098
+  },
+  {
+    "id": 308,
+    "seek": 103220,
+    "start": 1054.2,
+    "end": 1056.2,
+    "text": " Das ist ein sehr wichtiges Thema.",
+    "tokens": [51464, 2846, 1418, 1343, 5499, 13621, 279, 16306, 13, 51564],
+    "temperature": 0.0,
+    "avg_logprob": -0.3725492446148982,
+    "compression_ratio": 1.5691056910569106,
+    "no_speech_prob": 0.1918252557516098
+  },
+  {
+    "id": 309,
+    "seek": 103220,
+    "start": 1056.2,
+    "end": 1058.2,
+    "text": " Das ist ein sehr wichtiges Thema.",
+    "tokens": [51564, 2846, 1418, 1343, 5499, 13621, 279, 16306, 13, 51664],
+    "temperature": 0.0,
+    "avg_logprob": -0.3725492446148982,
+    "compression_ratio": 1.5691056910569106,
+    "no_speech_prob": 0.1918252557516098
+  },
+  {
+    "id": 310,
+    "seek": 105820,
+    "start": 1058.2,
+    "end": 1062.2,
+    "text": " Die gegenseitige Empathie erweist sich als \u00e4u\u00dferst hilfreich,",
+    "tokens": [
+      50364, 3229, 23982, 1288, 270, 3969, 8599, 998, 414, 1189, 826, 468, 3041,
+      3907, 3078, 43796, 16398, 28315, 69, 12594, 11, 50564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06992273330688477,
+    "compression_ratio": 1.4965986394557824,
+    "no_speech_prob": 0.15595762431621552
+  },
+  {
+    "id": 311,
+    "seek": 105820,
+    "start": 1062.2,
+    "end": 1065.2,
+    "text": " wenn es darum geht, eine gemeinsame L\u00f6sung",
+    "tokens": [
+      50564, 4797, 785, 27313, 7095, 11, 3018, 22971, 529, 46934, 50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06992273330688477,
+    "compression_ratio": 1.4965986394557824,
+    "no_speech_prob": 0.15595762431621552
+  },
+  {
+    "id": 312,
+    "seek": 105820,
+    "start": 1065.2,
+    "end": 1067.2,
+    "text": " f\u00fcr einen Erbschaftsstreit zu finden.",
+    "tokens": [
+      50714, 2959, 4891, 3300, 929, 7118, 82, 26421, 270, 2164, 20734, 13, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06992273330688477,
+    "compression_ratio": 1.4965986394557824,
+    "no_speech_prob": 0.15595762431621552
+  },
+  {
+    "id": 313,
+    "seek": 105820,
+    "start": 1067.2,
+    "end": 1070.2,
+    "text": " Also einen Kompromiss, den alle mittragen k\u00f6nnen.",
+    "tokens": [
+      50814, 2743, 4891, 14286, 28722, 891, 11, 1441, 5430, 19130, 20663, 6310,
+      13, 50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06992273330688477,
+    "compression_ratio": 1.4965986394557824,
+    "no_speech_prob": 0.15595762431621552
+  },
+  {
+    "id": 314,
+    "seek": 105820,
+    "start": 1070.2,
+    "end": 1073.2,
+    "text": " Vielleicht auch die polnische Pflegerin,",
+    "tokens": [
+      50964, 29838, 2168, 978, 1180, 77, 7864, 17331, 306, 1321, 259, 11, 51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06992273330688477,
+    "compression_ratio": 1.4965986394557824,
+    "no_speech_prob": 0.15595762431621552
+  },
+  {
+    "id": 315,
+    "seek": 105820,
+    "start": 1073.2,
+    "end": 1076.2,
+    "text": " die dem Vater ja einiges bedeutet hat.",
+    "tokens": [
+      51114, 978, 1371, 36173, 2784, 1343, 20609, 27018, 2385, 13, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06992273330688477,
+    "compression_ratio": 1.4965986394557824,
+    "no_speech_prob": 0.15595762431621552
+  },
+  {
+    "id": 316,
+    "seek": 105820,
+    "start": 1076.2,
+    "end": 1080.2,
+    "text": " Was man im Angedenken an den Verstorbenen nicht vergessen sollte.",
+    "tokens": [
+      51264, 3027, 587, 566, 4521, 6876, 2653, 364, 1441, 4281, 372, 284, 1799,
+      268, 1979, 42418, 18042, 13, 51464
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06992273330688477,
+    "compression_ratio": 1.4965986394557824,
+    "no_speech_prob": 0.15595762431621552
+  },
+  {
+    "id": 317,
+    "seek": 105820,
+    "start": 1080.2,
+    "end": 1083.2,
+    "text": " Das ist vielleicht noch ein wichtiger Punkt.",
+    "tokens": [51464, 2846, 1418, 12547, 3514, 1343, 48840, 25487, 13, 51614],
+    "temperature": 0.0,
+    "avg_logprob": -0.06992273330688477,
+    "compression_ratio": 1.4965986394557824,
+    "no_speech_prob": 0.15595762431621552
+  },
+  {
+    "id": 318,
+    "seek": 105820,
+    "start": 1083.2,
+    "end": 1087.2,
+    "text": " Die Werthaltung der Familie, das Problem zu l\u00f6sen,",
+    "tokens": [
+      51614, 3229, 14255, 392, 29631, 1163, 26021, 11, 1482, 11676, 2164, 25209,
+      6748, 11, 51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.06992273330688477,
+    "compression_ratio": 1.4965986394557824,
+    "no_speech_prob": 0.15595762431621552
+  },
+  {
+    "id": 319,
+    "seek": 108720,
+    "start": 1087.2,
+    "end": 1090.2,
+    "text": " ist auch in Erinnerung an ihre Eltern.",
+    "tokens": [
+      50364, 1418, 2168, 294, 3300, 19166, 1063, 364, 14280, 29101, 13, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406657445998419,
+    "compression_ratio": 1.5035971223021583,
+    "no_speech_prob": 0.0029347010422497988
+  },
+  {
+    "id": 320,
+    "seek": 108720,
+    "start": 1090.2,
+    "end": 1093.2,
+    "text": " Dann kann das einen guten Ausgang finden.",
+    "tokens": [
+      50514, 7455, 4028, 1482, 4891, 31277, 9039, 19619, 20734, 13, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406657445998419,
+    "compression_ratio": 1.5035971223021583,
+    "no_speech_prob": 0.0029347010422497988
+  },
+  {
+    "id": 321,
+    "seek": 108720,
+    "start": 1093.2,
+    "end": 1096.2,
+    "text": " Wenn es nat\u00fcrlich Patchwork-Familien sind,",
+    "tokens": [
+      50664, 7899, 785, 8762, 44359, 1902, 12, 37, 335, 388, 1053, 3290, 11,
+      50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406657445998419,
+    "compression_ratio": 1.5035971223021583,
+    "no_speech_prob": 0.0029347010422497988
+  },
+  {
+    "id": 322,
+    "seek": 108720,
+    "start": 1096.2,
+    "end": 1098.2,
+    "text": " mit verschiedenen Anspr\u00fcchen,",
+    "tokens": [50814, 2194, 41043, 14590, 48715, 2470, 11, 50914],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406657445998419,
+    "compression_ratio": 1.5035971223021583,
+    "no_speech_prob": 0.0029347010422497988
+  },
+  {
+    "id": 323,
+    "seek": 108720,
+    "start": 1098.2,
+    "end": 1101.2,
+    "text": " dann ist die Dynamik schon sehr viel schwieriger.",
+    "tokens": [
+      50914, 3594, 1418, 978, 22947, 1035, 4981, 5499, 5891, 27546, 4810, 13,
+      51064
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406657445998419,
+    "compression_ratio": 1.5035971223021583,
+    "no_speech_prob": 0.0029347010422497988
+  },
+  {
+    "id": 324,
+    "seek": 108720,
+    "start": 1101.2,
+    "end": 1104.2,
+    "text": " Aber auch hier lohnt sich das vern\u00fcnftige Aushandeln",
+    "tokens": [
+      51064, 5992, 2168, 3296, 46957, 580, 3041, 1482, 35793, 3412, 844, 3969,
+      316, 1498, 474, 9878, 51214
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406657445998419,
+    "compression_ratio": 1.5035971223021583,
+    "no_speech_prob": 0.0029347010422497988
+  },
+  {
+    "id": 325,
+    "seek": 108720,
+    "start": 1104.2,
+    "end": 1107.2,
+    "text": " im Gespr\u00e4ch mit allen Beteiligten.",
+    "tokens": [
+      51214, 566, 38746, 10168, 2194, 18440, 363, 3498, 388, 41498, 13, 51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406657445998419,
+    "compression_ratio": 1.5035971223021583,
+    "no_speech_prob": 0.0029347010422497988
+  },
+  {
+    "id": 326,
+    "seek": 108720,
+    "start": 1107.2,
+    "end": 1110.2,
+    "text": " Wer dagegen lieber \u00fcber Jahre prozessiert,",
+    "tokens": [
+      51364, 14255, 45387, 38252, 4502, 15557, 447, 37575, 4859, 11, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406657445998419,
+    "compression_ratio": 1.5035971223021583,
+    "no_speech_prob": 0.0029347010422497988
+  },
+  {
+    "id": 327,
+    "seek": 108720,
+    "start": 1110.2,
+    "end": 1114.2,
+    "text": " vergeudet nicht nur Nervenkraft, sondern auch viel Geld,",
+    "tokens": [
+      51514, 37164, 532, 302, 1979, 4343, 36536, 553, 47288, 11, 11465, 2168,
+      5891, 16535, 11, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406657445998419,
+    "compression_ratio": 1.5035971223021583,
+    "no_speech_prob": 0.0029347010422497988
+  },
+  {
+    "id": 328,
+    "seek": 108720,
+    "start": 1114.2,
+    "end": 1116.2,
+    "text": " sagt Gabriele R\u00fccci.",
+    "tokens": [51714, 15764, 50053, 306, 497, 774, 66, 537, 13, 51814],
+    "temperature": 0.0,
+    "avg_logprob": -0.09406657445998419,
+    "compression_ratio": 1.5035971223021583,
+    "no_speech_prob": 0.0029347010422497988
+  },
+  {
+    "id": 329,
+    "seek": 111620,
+    "start": 1116.2,
+    "end": 1119.2,
+    "text": " Jeder ist allerdings seines eigenen Gl\u00fccks Schmied.",
+    "tokens": [
+      50364, 47274, 1418, 35489, 369, 1652, 28702, 5209, 41687, 2065, 76, 1091,
+      13, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.0997780164082845,
+    "compression_ratio": 1.4816053511705685,
+    "no_speech_prob": 0.15194442868232727
+  },
+  {
+    "id": 330,
+    "seek": 111620,
+    "start": 1119.2,
+    "end": 1121.2,
+    "text": " Man kann ein Testament anfechten,",
+    "tokens": [50514, 2458, 4028, 1343, 15473, 364, 2106, 21043, 11, 50614],
+    "temperature": 0.0,
+    "avg_logprob": -0.0997780164082845,
+    "compression_ratio": 1.4816053511705685,
+    "no_speech_prob": 0.15194442868232727
+  },
+  {
+    "id": 331,
+    "seek": 111620,
+    "start": 1121.2,
+    "end": 1124.2,
+    "text": " man kann den Kontakt zu den Geschwistern abbrechen.",
+    "tokens": [
+      50614, 587, 4028, 1441, 43396, 2164, 1441, 14241, 86, 1964, 77, 410, 2672,
+      2470, 13, 50764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.0997780164082845,
+    "compression_ratio": 1.4816053511705685,
+    "no_speech_prob": 0.15194442868232727
+  },
+  {
+    "id": 332,
+    "seek": 111620,
+    "start": 1124.2,
+    "end": 1128.2,
+    "text": " Zufriedener macht es entt\u00e4uschte Erben vermutlich nicht.",
+    "tokens": [
+      50764, 1176, 2947, 2428, 7971, 10857, 785, 948, 83, 31611, 10553, 3300,
+      1799, 26319, 21678, 1979, 13, 50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.0997780164082845,
+    "compression_ratio": 1.4816053511705685,
+    "no_speech_prob": 0.15194442868232727
+  },
+  {
+    "id": 333,
+    "seek": 111620,
+    "start": 1128.2,
+    "end": 1131.2,
+    "text": " In den Augen der Psychoanalytikerin Claudia Dinschertz",
+    "tokens": [
+      50964, 682, 1441, 29692, 1163, 17303, 78, 29702, 4328, 17314, 259, 36785,
+      413, 1292, 339, 911, 89, 51114
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.0997780164082845,
+    "compression_ratio": 1.4816053511705685,
+    "no_speech_prob": 0.15194442868232727
+  },
+  {
+    "id": 334,
+    "seek": 111620,
+    "start": 1131.2,
+    "end": 1135.2,
+    "text": " verfehlen sie vielmehr ihre pers\u00f6nliche Weiterentwicklung.",
+    "tokens": [
+      51114, 1306, 33865, 6698, 2804, 5891, 1398, 1703, 14280, 31228, 10185,
+      48050, 317, 16038, 17850, 13, 51314
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.0997780164082845,
+    "compression_ratio": 1.4816053511705685,
+    "no_speech_prob": 0.15194442868232727
+  },
+  {
+    "id": 335,
+    "seek": 111620,
+    "start": 1135.2,
+    "end": 1139.2,
+    "text": " Speziell unter analytischen Gesichtspunkten geht es darum,",
+    "tokens": [
+      51314, 3550, 3283, 285, 8662, 10783, 6282, 47777, 4952, 3197, 1147, 7095,
+      785, 27313, 11, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.0997780164082845,
+    "compression_ratio": 1.4816053511705685,
+    "no_speech_prob": 0.15194442868232727
+  },
+  {
+    "id": 336,
+    "seek": 111620,
+    "start": 1139.2,
+    "end": 1141.2,
+    "text": " genau das zu akzeptieren.",
+    "tokens": [51514, 12535, 1482, 2164, 9308, 32082, 5695, 13, 51614],
+    "temperature": 0.0,
+    "avg_logprob": -0.0997780164082845,
+    "compression_ratio": 1.4816053511705685,
+    "no_speech_prob": 0.15194442868232727
+  },
+  {
+    "id": 337,
+    "seek": 111620,
+    "start": 1141.2,
+    "end": 1144.2,
+    "text": " Das kann nicht immer \u00fcberall gerecht zugehen.",
+    "tokens": [
+      51614, 2846, 4028, 1979, 5578, 38035, 18635, 4701, 2164, 24985, 13, 51764
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.0997780164082845,
+    "compression_ratio": 1.4816053511705685,
+    "no_speech_prob": 0.15194442868232727
+  },
+  {
+    "id": 338,
+    "seek": 114420,
+    "start": 1144.2,
+    "end": 1147.2,
+    "text": " Es ist wichtig, das zu akzeptieren, dass es so ist.",
+    "tokens": [
+      50364, 2313, 1418, 13621, 11, 1482, 2164, 9308, 32082, 5695, 11, 2658,
+      785, 370, 1418, 13, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09737201690673829,
+    "compression_ratio": 1.4962686567164178,
+    "no_speech_prob": 0.0005442055407911539
+  },
+  {
+    "id": 339,
+    "seek": 114420,
+    "start": 1147.2,
+    "end": 1150.2,
+    "text": " Sich nicht mit diesem st\u00e4ndigen Kampf um,",
+    "tokens": [
+      50514, 47135, 1979, 2194, 10975, 342, 5524, 3213, 45126, 1105, 11, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09737201690673829,
+    "compression_ratio": 1.4962686567164178,
+    "no_speech_prob": 0.0005442055407911539
+  },
+  {
+    "id": 340,
+    "seek": 114420,
+    "start": 1150.2,
+    "end": 1153.2,
+    "text": " ich will doch noch einen Ausgleich haben,",
+    "tokens": [
+      50664, 1893, 486, 9243, 3514, 4891, 9039, 70, 8445, 3084, 11, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09737201690673829,
+    "compression_ratio": 1.4962686567164178,
+    "no_speech_prob": 0.0005442055407911539
+  },
+  {
+    "id": 341,
+    "seek": 114420,
+    "start": 1153.2,
+    "end": 1156.2,
+    "text": " zu viel Lebensenergie hinein zu investieren.",
+    "tokens": [
+      50814, 2164, 5891, 21530, 7971, 9997, 47551, 259, 2164, 1963, 5695, 13,
+      50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09737201690673829,
+    "compression_ratio": 1.4962686567164178,
+    "no_speech_prob": 0.0005442055407911539
+  },
+  {
+    "id": 342,
+    "seek": 114420,
+    "start": 1158.2,
+    "end": 1160.2,
+    "text": " Haben oder sein?",
+    "tokens": [51064, 47007, 4513, 6195, 30, 51164],
+    "temperature": 0.0,
+    "avg_logprob": -0.09737201690673829,
+    "compression_ratio": 1.4962686567164178,
+    "no_speech_prob": 0.0005442055407911539
+  },
+  {
+    "id": 343,
+    "seek": 114420,
+    "start": 1160.2,
+    "end": 1162.2,
+    "text": " Wer sich f\u00fcr Letzteres entscheidet,",
+    "tokens": [
+      51164, 14255, 3041, 2959, 961, 89, 391, 279, 28398, 39741, 11, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09737201690673829,
+    "compression_ratio": 1.4962686567164178,
+    "no_speech_prob": 0.0005442055407911539
+  },
+  {
+    "id": 344,
+    "seek": 114420,
+    "start": 1162.2,
+    "end": 1165.2,
+    "text": " kommt um kritische Selbstreflexion nicht herum.",
+    "tokens": [
+      51264, 10047, 1105, 42825, 7864, 29712, 33115, 2021, 313, 1979, 49675, 13,
+      51414
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09737201690673829,
+    "compression_ratio": 1.4962686567164178,
+    "no_speech_prob": 0.0005442055407911539
+  },
+  {
+    "id": 345,
+    "seek": 114420,
+    "start": 1165.2,
+    "end": 1168.2,
+    "text": " Eine Psychotherapie kann dabei helfen,",
+    "tokens": [51414, 17664, 17303, 20194, 414, 4028, 14967, 29966, 11, 51564],
+    "temperature": 0.0,
+    "avg_logprob": -0.09737201690673829,
+    "compression_ratio": 1.4962686567164178,
+    "no_speech_prob": 0.0005442055407911539
+  },
+  {
+    "id": 346,
+    "seek": 114420,
+    "start": 1168.2,
+    "end": 1171.2,
+    "text": " verdr\u00e4ngte Konflikte und unterdr\u00fcckte Bed\u00fcrfnisse",
+    "tokens": [
+      51564, 6387, 81, 9935, 975, 12718, 3423, 34165, 674, 8662, 16753, 6536,
+      975, 19893, 1655, 69, 31481, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.09737201690673829,
+    "compression_ratio": 1.4962686567164178,
+    "no_speech_prob": 0.0005442055407911539
+  },
+  {
+    "id": 347,
+    "seek": 114420,
+    "start": 1171.2,
+    "end": 1173.2,
+    "text": " ins Bewusstsein zu holen.",
+    "tokens": [51714, 1028, 40512, 26340, 33042, 2164, 4091, 268, 13, 51814],
+    "temperature": 0.0,
+    "avg_logprob": -0.09737201690673829,
+    "compression_ratio": 1.4962686567164178,
+    "no_speech_prob": 0.0005442055407911539
+  },
+  {
+    "id": 348,
+    "seek": 117320,
+    "start": 1173.2,
+    "end": 1176.2,
+    "text": " Damit der Mensch seine Kindheit emotional bearbeiten",
+    "tokens": [
+      50364, 24495, 1163, 27773, 15925, 9242, 8480, 6863, 6155, 16779, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.106630346200762,
+    "compression_ratio": 1.6666666666666667,
+    "no_speech_prob": 0.00018814014038071036
+  },
+  {
+    "id": 349,
+    "seek": 117320,
+    "start": 1176.2,
+    "end": 1179.2,
+    "text": " und das Gef\u00fchl des Mangels hinter sich lassen kann.",
+    "tokens": [
+      50514, 674, 1482, 29715, 730, 35487, 1625, 23219, 3041, 16168, 4028, 13,
+      50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.106630346200762,
+    "compression_ratio": 1.6666666666666667,
+    "no_speech_prob": 0.00018814014038071036
+  },
+  {
+    "id": 350,
+    "seek": 117320,
+    "start": 1179.2,
+    "end": 1180.2,
+    "text": " Denn ...",
+    "tokens": [50664, 19027, 1097, 50714],
+    "temperature": 0.0,
+    "avg_logprob": -0.106630346200762,
+    "compression_ratio": 1.6666666666666667,
+    "no_speech_prob": 0.00018814014038071036
+  },
+  {
+    "id": 351,
+    "seek": 117320,
+    "start": 1180.2,
+    "end": 1183.2,
+    "text": " Ich werde die Kindheit, in der ich das Kriege nicht mehr habe,",
+    "tokens": [
+      50714, 3141, 24866, 978, 9242, 8480, 11, 294, 1163, 1893, 1482, 35579,
+      432, 1979, 5417, 6015, 11, 50864
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.106630346200762,
+    "compression_ratio": 1.6666666666666667,
+    "no_speech_prob": 0.00018814014038071036
+  },
+  {
+    "id": 352,
+    "seek": 117320,
+    "start": 1183.2,
+    "end": 1186.2,
+    "text": " das ist ein Lebensabschluss, der vorbei ist.",
+    "tokens": [
+      50864, 1482, 1418, 1343, 21530, 455, 6145, 75, 2023, 11, 1163, 38881,
+      1418, 13, 51014
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.106630346200762,
+    "compression_ratio": 1.6666666666666667,
+    "no_speech_prob": 0.00018814014038071036
+  },
+  {
+    "id": 353,
+    "seek": 117320,
+    "start": 1186.2,
+    "end": 1189.2,
+    "text": " Da ist es ganz wichtig, das zu akzeptieren",
+    "tokens": [
+      51014, 3933, 1418, 785, 6312, 13621, 11, 1482, 2164, 9308, 32082, 5695,
+      51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.106630346200762,
+    "compression_ratio": 1.6666666666666667,
+    "no_speech_prob": 0.00018814014038071036
+  },
+  {
+    "id": 354,
+    "seek": 117320,
+    "start": 1189.2,
+    "end": 1191.2,
+    "text": " und angemessen dar\u00fcber zu trauern.",
+    "tokens": [
+      51164, 674, 15495, 76, 12431, 21737, 2164, 944, 84, 1248, 13, 51264
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.106630346200762,
+    "compression_ratio": 1.6666666666666667,
+    "no_speech_prob": 0.00018814014038071036
+  },
+  {
+    "id": 355,
+    "seek": 117320,
+    "start": 1191.2,
+    "end": 1193.2,
+    "text": " Das ist immer der Prozess, um den es geht.",
+    "tokens": [
+      51264, 2846, 1418, 5578, 1163, 1705, 37575, 11, 1105, 1441, 785, 7095, 13,
+      51364
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.106630346200762,
+    "compression_ratio": 1.6666666666666667,
+    "no_speech_prob": 0.00018814014038071036
+  },
+  {
+    "id": 356,
+    "seek": 117320,
+    "start": 1193.2,
+    "end": 1196.2,
+    "text": " Die Trauer \u00fcber das, was nicht gelebt werden konnte.",
+    "tokens": [
+      51364, 3229, 5403, 5486, 4502, 1482, 11, 390, 1979, 20234, 4517, 4604,
+      24058, 13, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.106630346200762,
+    "compression_ratio": 1.6666666666666667,
+    "no_speech_prob": 0.00018814014038071036
+  },
+  {
+    "id": 357,
+    "seek": 117320,
+    "start": 1196.2,
+    "end": 1200.2,
+    "text": " Damit das Leben nach einem Erbschaftsstreit befreiter weitergehen kann,",
+    "tokens": [
+      51514, 24495, 1482, 15399, 5168, 6827, 3300, 929, 7118, 20407, 265, 270,
+      312, 19325, 1681, 8988, 24985, 4028, 11, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.106630346200762,
+    "compression_ratio": 1.6666666666666667,
+    "no_speech_prob": 0.00018814014038071036
+  },
+  {
+    "id": 358,
+    "seek": 120020,
+    "start": 1200.2,
+    "end": 1203.2,
+    "text": " m\u00fcssen alle Beteiligten von gewissen Vorstellungen",
+    "tokens": [
+      50364, 9013, 5430, 363, 3498, 388, 41498, 2957, 6906, 10987, 12231, 17816,
+      5084, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08602275848388671,
+    "compression_ratio": 1.4846153846153847,
+    "no_speech_prob": 0.00831485353410244
+  },
+  {
+    "id": 359,
+    "seek": 120020,
+    "start": 1203.2,
+    "end": 1205.2,
+    "text": " und W\u00fcnschen abr\u00fccken.",
+    "tokens": [50514, 674, 343, 3412, 82, 2470, 410, 81, 26037, 13, 50614],
+    "temperature": 0.0,
+    "avg_logprob": -0.08602275848388671,
+    "compression_ratio": 1.4846153846153847,
+    "no_speech_prob": 0.00831485353410244
+  },
+  {
+    "id": 360,
+    "seek": 120020,
+    "start": 1205.2,
+    "end": 1209.2,
+    "text": " Ohne Abstriche, emotionale wie materielle, hier wie dort,",
+    "tokens": [
+      50614, 876, 716, 2847, 9733, 9304, 11, 8913, 1220, 3355, 2389, 16033, 11,
+      3296, 3355, 15775, 11, 50814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08602275848388671,
+    "compression_ratio": 1.4846153846153847,
+    "no_speech_prob": 0.00831485353410244
+  },
+  {
+    "id": 361,
+    "seek": 120020,
+    "start": 1209.2,
+    "end": 1212.2,
+    "text": " l\u00e4sst sich wohl kein Posthumer Konflikt l\u00f6sen.",
+    "tokens": [
+      50814, 29335, 3041, 24531, 13424, 25906, 392, 15583, 12718, 3423, 9874,
+      25209, 6748, 13, 50964
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08602275848388671,
+    "compression_ratio": 1.4846153846153847,
+    "no_speech_prob": 0.00831485353410244
+  },
+  {
+    "id": 362,
+    "seek": 120020,
+    "start": 1212.2,
+    "end": 1216.2,
+    "text": " V.a. vom Recht haben wollen, hei\u00dft es, Abschied zu nehmen.",
+    "tokens": [
+      50964, 691, 13, 64, 13, 10135, 36840, 3084, 11253, 11, 13139, 785, 11,
+      5813, 11805, 2164, 19905, 13, 51164
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08602275848388671,
+    "compression_ratio": 1.4846153846153847,
+    "no_speech_prob": 0.00831485353410244
+  },
+  {
+    "id": 363,
+    "seek": 120020,
+    "start": 1217.2,
+    "end": 1219.2,
+    "text": " Jeder muss etwas abschreiben.",
+    "tokens": [51214, 47274, 6425, 9569, 1950, 339, 25946, 13, 51314],
+    "temperature": 0.0,
+    "avg_logprob": -0.08602275848388671,
+    "compression_ratio": 1.4846153846153847,
+    "no_speech_prob": 0.00831485353410244
+  },
+  {
+    "id": 364,
+    "seek": 120020,
+    "start": 1219.2,
+    "end": 1224.2,
+    "text": " An seinen Erwartungen und an seinen Vorstellungen.",
+    "tokens": [
+      51314, 1107, 24427, 3300, 29587, 5084, 674, 364, 24427, 12231, 17816,
+      5084, 13, 51564
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08602275848388671,
+    "compression_ratio": 1.4846153846153847,
+    "no_speech_prob": 0.00831485353410244
+  },
+  {
+    "id": 365,
+    "seek": 120020,
+    "start": 1224.2,
+    "end": 1229.2,
+    "text": " Und man muss nie vergessen, f\u00fcr mich ist Erben ein Geschenk.",
+    "tokens": [
+      51564, 2719, 587, 6425, 2838, 42418, 11, 2959, 6031, 1418, 3300, 1799,
+      1343, 6761, 2470, 74, 13, 51814
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08602275848388671,
+    "compression_ratio": 1.4846153846153847,
+    "no_speech_prob": 0.00831485353410244
+  },
+  {
+    "id": 366,
+    "seek": 122920,
+    "start": 1229.2,
+    "end": 1231.2,
+    "text": " Und keine Forderung.",
+    "tokens": [50364, 2719, 9252, 479, 4687, 1063, 13, 50464],
+    "temperature": 0.0,
+    "avg_logprob": -0.10134068657370175,
+    "compression_ratio": 1.51131221719457,
+    "no_speech_prob": 0.00014652869140263647
+  },
+  {
+    "id": 367,
+    "seek": 122920,
+    "start": 1231.2,
+    "end": 1233.2,
+    "text": " Das verwechseln sehr viele Leute.",
+    "tokens": [50464, 2846, 1306, 26934, 77, 5499, 9693, 13495, 13, 50564],
+    "temperature": 0.0,
+    "avg_logprob": -0.10134068657370175,
+    "compression_ratio": 1.51131221719457,
+    "no_speech_prob": 0.00014652869140263647
+  },
+  {
+    "id": 368,
+    "seek": 122920,
+    "start": 1233.2,
+    "end": 1236.2,
+    "text": " Die denken, klar, das muss ich erben.",
+    "tokens": [
+      50564, 3229, 28780, 11, 14743, 11, 1482, 6425, 1893, 1189, 1799, 13, 50714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10134068657370175,
+    "compression_ratio": 1.51131221719457,
+    "no_speech_prob": 0.00014652869140263647
+  },
+  {
+    "id": 369,
+    "seek": 122920,
+    "start": 1236.2,
+    "end": 1240.2,
+    "text": " Da werde ich reich. Da sicher mir meine Millionen.",
+    "tokens": [
+      50714, 3933, 24866, 1893, 319, 480, 13, 3933, 18623, 3149, 10946, 26096,
+      13, 50914
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10134068657370175,
+    "compression_ratio": 1.51131221719457,
+    "no_speech_prob": 0.00014652869140263647
+  },
+  {
+    "id": 370,
+    "seek": 122920,
+    "start": 1242.2,
+    "end": 1246.2,
+    "text": " Nein, nichts steht einem zu, so hart es klingt.",
+    "tokens": [
+      51014, 18878, 11, 13004, 16361, 6827, 2164, 11, 370, 36644, 785, 350,
+      45219, 13, 51214
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10134068657370175,
+    "compression_ratio": 1.51131221719457,
+    "no_speech_prob": 0.00014652869140263647
+  },
+  {
+    "id": 371,
+    "seek": 122920,
+    "start": 1246.2,
+    "end": 1250.2,
+    "text": " Es gibt keinen Anspruch auf Geld oder Gerechtigkeit",
+    "tokens": [
+      51214, 2313, 6089, 20624, 14590, 45788, 2501, 16535, 4513, 460, 48561,
+      16626, 51414
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10134068657370175,
+    "compression_ratio": 1.51131221719457,
+    "no_speech_prob": 0.00014652869140263647
+  },
+  {
+    "id": 372,
+    "seek": 122920,
+    "start": 1250.2,
+    "end": 1252.2,
+    "text": " oder die perfekte elterliche Liebe.",
+    "tokens": [
+      51414, 4513, 978, 13826, 916, 975, 806, 391, 10185, 28790, 13, 51514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10134068657370175,
+    "compression_ratio": 1.51131221719457,
+    "no_speech_prob": 0.00014652869140263647
+  },
+  {
+    "id": 373,
+    "seek": 122920,
+    "start": 1252.2,
+    "end": 1256.2,
+    "text": " Mit einer Erbschaft sollte man also am besten umgehen,",
+    "tokens": [
+      51514, 10821, 6850, 3300, 929, 7118, 18042, 587, 611, 669, 30930, 1105,
+      24985, 11, 51714
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.10134068657370175,
+    "compression_ratio": 1.51131221719457,
+    "no_speech_prob": 0.00014652869140263647
+  },
+  {
+    "id": 374,
+    "seek": 125620,
+    "start": 1256.2,
+    "end": 1259.2,
+    "text": " wie Hans im Gl\u00fcck mit seinem Lohn.",
+    "tokens": [
+      50364, 3355, 17926, 566, 33508, 2194, 29187, 441, 2359, 13, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08026721844306359,
+    "compression_ratio": 0.9875,
+    "no_speech_prob": 0.09394384175539017
+  },
+  {
+    "id": 375,
+    "seek": 125620,
+    "start": 1259.2,
+    "end": 1262.2,
+    "text": " Er nimmt alles als Geschenk und freut sich.",
+    "tokens": [
+      50514, 3300, 38891, 7874, 3907, 6761, 2470, 74, 674, 2130, 325, 3041, 13,
+      50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.08026721844306359,
+    "compression_ratio": 0.9875,
+    "no_speech_prob": 0.09394384175539017
+  },
+  {
+    "id": 376,
+    "seek": 128620,
+    "start": 1286.2,
+    "end": 1289.2,
+    "text": " Und wenn Sie keine Folge mehr verpassen wollen,",
+    "tokens": [
+      50364, 2719, 4797, 3559, 9252, 43597, 5417, 1306, 44270, 11253, 11, 50514
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2585978758962531,
+    "compression_ratio": 1.1339285714285714,
+    "no_speech_prob": 0.984928548336029
+  },
+  {
+    "id": 377,
+    "seek": 128620,
+    "start": 1289.2,
+    "end": 1292.2,
+    "text": " abonnieren Sie Radio Wissen unter bayern2.de",
+    "tokens": [
+      50514, 40676, 5695, 3559, 17296, 343, 10987, 8662, 13642, 1248, 17, 13,
+      1479, 50664
+    ],
+    "temperature": 0.0,
+    "avg_logprob": -0.2585978758962531,
+    "compression_ratio": 1.1339285714285714,
+    "no_speech_prob": 0.984928548336029
+  },
+  {
+    "id": 378,
+    "seek": 128620,
+    "start": 1292.2,
+    "end": 1295.2,
+    "text": " und \u00fcberall, wo es Podcasts gibt.",
+    "tokens": [50664, 674, 38035, 11, 6020, 785, 29972, 82, 6089, 13, 50814],
+    "temperature": 0.0,
+    "avg_logprob": -0.2585978758962531,
+    "compression_ratio": 1.1339285714285714,
+    "no_speech_prob": 0.984928548336029
+  }
+]
