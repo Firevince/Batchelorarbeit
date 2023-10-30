@@ -10,10 +10,11 @@ def concatenate_segments_with_sound(segment_files, output_file, sound_file, dura
 
     concatenated_audio.export(output_file, format="mp3")
 
-if __name__ == "__main__":
+def produce_audio():
     segment_files = []
-    for filename in os.listdir("Audio_segmentation/audio_segments/"):
-        segment_files.append("Audio_segmentation/audio_segments/" + filename)  
+    path = "/Users/br/Projects/Bachelorarbeit/data/audio_segments/"
+    for filename in os.listdir(path ):
+        segment_files.append(path + filename)  
 
     output_file = "concatenated_audio.mp3" 
     sound_file = "beep.mp3"  
