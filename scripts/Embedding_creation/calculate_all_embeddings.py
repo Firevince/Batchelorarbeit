@@ -1,5 +1,5 @@
 import pandas as pd
-from scripts.db_connect import db_get_df, db_save_df
+from db_connect import db_get_df, db_save_df
 from tqdm import tqdm
 from scipy.spatial.distance import cosine
 import json

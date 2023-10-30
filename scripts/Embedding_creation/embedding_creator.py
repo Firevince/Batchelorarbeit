@@ -1,6 +1,6 @@
 import sqlite3
 import pandas as pd
-from scripts.db_connect import db_get_df, db_save_df
+from db_connect import db_get_df, db_save_df
 from transformers import BertModel, BertTokenizer
 import torch
 from tqdm import tqdm
@@ -8,8 +8,8 @@ from scipy.spatial.distance import cosine
 import json
 
 
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-model = BertModel.from_pretrained('bert-base-uncased',output_hidden_states = True)
+tokenizer = BertTokenizer.from_pretrained('bert-base-german-cased')
+model = BertModel.from_pretrained('bert-base-german-cased', output_hidden_states = True)
 
 def dokument_embedding(dokument_text):
     dokument_text = "[CLS]" + dokument_text + "[SEP]"
@@ -24,26 +24,34 @@ def dokument_embedding(dokument_text):
         hidden_states = outputs[2]
     
 
-    # # initial embeddings can be taken from 0th layer of hidden states
-    # word_embed_2 = hidden_states[0]
+   
+    # stack the layer list 
+    token_embeddings = torch.stack(hidden_states, dim=0)
+    # remove the batches dim
+    token_embeddings = torch.squeeze(token_embeddings, dim=1)
+    # Swap dimensions 0 and 1.
+    token_embeddings = token_embeddings.permute(1,0,2)
+    # average all token embeds
+    layer_vecs = torch.mean(token_embeddings, dim=0)
 
-    # # sum of all hidden states
-    # word_embed_3 = torch.stack(hidden_states).sum(0)
 
-    # # sum of second to last layer
-    # word_embed_4 = torch.stack(hidden_states[2:]).sum(0) 
+    # # last layer
+    # embed_1 = layer_vecs[12]
+
+    # Calculate the average of layer 3 to 13
+    embed_2 = torch.mean(layer_vecs[2:], dim=0)
+
+    # # sum of layer 3 to 13
+    # embed_3 = layer_vecs[2:].sum(0)
 
     # # sum of last four layer
-    # word_embed_5 = torch.stack(hidden_states[-4:]).sum(0) 
+    # embed_4 = layer_vecs[-4:].sum(0) 
 
     # #concat last four layers
-    # word_embed_6 = torch.cat([hidden_states[i] for i in [-1,-2,-3,-4]], dim=-1)
-
+    # embed_5 = torch.cat([layer_vecs[i] for i in [-1,-2,-3,-4]], dim=0)
     
-    token_vecs = hidden_states[-2][0]
-    # Calculate the average of all 22 token vectors.
-    sentence_embedding = torch.mean(token_vecs, dim=0)
-    # print ("Our final sentence embedding vector of shape:", sentence_embedding)
-    return sentence_embedding
+
+    return embed_2
+    
 
 
