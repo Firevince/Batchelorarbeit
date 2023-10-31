@@ -8,10 +8,12 @@ from scipy.spatial.distance import cosine
 import json
 
 
-tokenizer = BertTokenizer.from_pretrained('bert-base-german-cased')
-model = BertModel.from_pretrained('bert-base-german-cased', output_hidden_states = True)
+
 
 def dokument_embedding(dokument_text):
+    tokenizer = BertTokenizer.from_pretrained('bert-base-german-cased')
+    model = BertModel.from_pretrained('bert-base-german-cased', output_hidden_states = True)
+
     dokument_text = "[CLS]" + dokument_text + "[SEP]"
     tokens = tokenizer.tokenize(dokument_text)
     attetion_mask = [0 if token == "[PAD]" else 1 for token in tokens]

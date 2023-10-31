@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webseite</title>
+</head>
+<body>
+    <h1>Text und Minutenanzahl eingeben</h1>
+    <form action="/process" method="POST">
+        <label for="text">Text:</label>
+        <input type="text" name="text" id="text" required><br><br>
+        
+        <label for="time">Minutenanzahl:</label>
+        <input type="range" name="time" id="time" min="1" max="60" step="1" value="1"><br><br>
+
+        <input type="submit" value="Start">
+    </form>
+
+    <h2>Audio abspielen:</h2>
+    <audio controls>
+        <source src="/process" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
