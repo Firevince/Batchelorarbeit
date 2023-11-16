@@ -120,8 +120,6 @@ Eine forschungsrichtung, die versucht solche Modelausgaben Menschenlesbar zu ges
 Um die Ähnlichkeit von diesem Satz zu der Frage „“ zu bestimmen nutzen wir die Cosinus distanz als Maß. Es gibt auch die Euclidische Distanz, allerdings gestaltet sich dabei das Problem der Vector Normalisierung.
 
 
-
-
 Diese Komplexen semantischen Unterschiede, oder Gemeinsamkeiten zu erkennen erfordert etwas mehr Raffinesse. 
 
 Um einen Embeddingvektor zu erstellen, benutzen wir das BERT Model. BERT, das Akronym für Bidirectional Encoder Representations from Transformer, ist ein Sprachmodel, das 2018 von Google entwickelt, und zur Benutzung freigegeben wurde. BERT ist ein Neuronales Netzwerk mit 12 Schichten, das für zwei verschiedene Aufgaben gleichzeitig trainiert wurde. Zum einen wurde es auf eine Masked Language Modeling Aufgabe und zum Anderen auf eine Next Sentence Prediction trainiert. 
@@ -149,9 +147,24 @@ Außerdem sollte dem Hörer bewusst sein, dass ein Audiosegment aus einer Episod
 Eine weitere Möglichkeit wäre, zwischen jedem Segment dem Hörer eine kurze Vorstellung der Episode und der Sprecher*in zu ermöglichen oder sogar Kontext zu dieser zu geben. 
 
 
+\section{erstes Exposee}
+
 Die Datengrundlage bilden zunächst einige Podcast-Reihen aus der ARD Audiothek. Diese Audiodateien müssen zuerst transkribiert werden, falls kein Transkript bereits vorliegt. Anschließend werden diese Transkripte mit Zeitstempeln im Audio versehen. Danach müssen die Transkripte einer semantischen Analyse unterzogen werden, wobei Schlagwortextraktion oder Word Embeddings als mögliche Ansätze in Betracht kommen.
 
 Auf Anfrage des Benutzers werden dann die relevantesten Ausschnitte aus den Transkripten herausgesucht und die entsprechenden Audiodateien herausgeschnitten. Ein weiteres System ist dafür verantwortlich, diese Dateien nach ihrer Bedeutung oder inhaltlichen Nähe zu sortieren und sicherzustellen, dass der zuvor festgelegte Zeitrahmen eingehalten wird. Die Audiodateien werden dann zusammengeführt und dem Benutzer über eine benutzerfreundliche Schnittstelle als Stream zum Abspielen angeboten.
 
 Der Hauptteil dieser Arbeit liegt in der semantischen Analyse der Audiotranskripte und der sorgfältigen Auswahl passender Abschnitte zum gewählten Thema. Dies soll durch den Einsatz von Embeddings oder einer Schlagwortsuche realisiert werden. Für die Verwendung von Embeddings könnten maschinelle Lernverfahren, wie beispielsweise das Google Bert, herangezogen werden. Eine zusätzliche Herausforderung besteht darin, die Audioausschnitte entsprechend zuzuschneiden, sodass Sätze sauber getrennt werden und die Übergänge zwischen den verschiedenen Audioausschnitten nicht zu abrupt sind. Dadurch wird gewährleistet, dass der Benutzer nicht zu stark zwischen verschiedenen Themenaspekten hin und her geworfen wird.
-\cite[text]{keylist}
+
+\cite{barthel}
+\cite{choi2018}
+\cite{clark2020}
+\cite{du2017}
+\cite{jones2021}
+\cite{kang2012}
+~\cite{karpukhin2020}
+\cite{laban2022}
+\cite{lochrie2018}
+\cite{maroni2020}
+\cite{moldovan2000}
+\cite{zhang2020}
+\cite{oord2017}
