@@ -1,26 +1,84 @@
 from db_connect import db_get_df, db_save_df
 from scipy.spatial.distance import cosine
 from Embedding_creation.embedding_creator import dokument_embedding
+from Embedding_creation.TF_IDF_creator import calculate_distances
 import json
+import pandas as pd
 
 
-def calculate_document_question_distance(sentence_embedding,document_embedding):
+def get_surrounding_segments(segment):
+    # segment is vertical as are all 
+    df = db_get_df(["filename", "segment_text", "segment_id", "start", "end"], table="transcript_segments")
+
+    id = segment.loc["segment_id"]
+    filename = segment.loc["filename"]
+
+    filtered_rows = df[df["filename"] == filename]
+    filtered_sorted_rows = filtered_rows.sort_values("segment_id").reset_index(drop=True)
     
-    # Calculate the cosine similarity between question and document
-    diff_bank = 1 - cosine(sentence_embedding, document_embedding)
 
-    # print('Vector similarity for *different* meanings:  %.2f' % diff_bank)
+    row_list = []
+    if id > 1 :
+        row_list.append(filtered_sorted_rows.loc[id - 2].to_frame().T)
+        row_list.append(filtered_sorted_rows.loc[id - 1].to_frame().T)
+
+    row_list.append(segment.to_frame().T)
+
+    if id < filtered_sorted_rows.loc[len(filtered_sorted_rows)-3, "segment_id"]:
+        row_list.append(filtered_sorted_rows.loc[id + 1].to_frame().T)
+        row_list.append(filtered_sorted_rows.loc[id + 2].to_frame().T)
+
+    # print("1:", row_list[0])
+    # print("2:", row_list[1])
+
+    rich_segment_df = pd.concat(row_list, axis=0).reset_index(drop=True)
+    print(rich_segment_df)
+    print("done")
+    return rich_segment_df
+
+def enrich_segments(df):
+    enriched_segments_df = get_surrounding_segments(df.loc[0])
+    
+    for i in range(len(df)):
+        enriched_segments_df = pd.concat([enriched_segments_df, get_surrounding_segments(df.loc[i])]).reset_index(drop=True)
+
+    return enriched_segments_df
+
+
+def calculate_document_question_distance(sentence_embedding, document_embedding):
+    diff_bank = 1 - cosine(sentence_embedding, document_embedding)
     return diff_bank
 
 def get_most_similar_documents(message, amount):
-    # Initialisiere den DataFrame mit der Funktion aus db_init.py
-    print("saved")
     df = db_get_df(["filename", "segment_text", "embedding_json", "start", "end"], table="transcript_segments")
     question_embedding = dokument_embedding(message)
     df["distance"] = [calculate_document_question_distance(question_embedding, json.loads(document_embedding))for document_embedding in df["embedding_json"]]
+
     most_similar_documents = df.nsmallest(amount, "distance")
     db_save_df(most_similar_documents, "best_fitting")
     return most_similar_documents
 
-# user_input = "gulliver"
-# db_save_df(get_5_most_similar_documents(user_input), "best_fitting")
+def get_most_similar_documents_tf_idf(message, amount):
+    best_fitting = calculate_distances(message)
+   
+    # reset_ index important
+    most_similar_documents = best_fitting.sort_values("distance").head(amount).reset_index(drop=True)
+
+    most_similar_documents_enriched = enrich_segments(most_similar_documents)
+
+    db_save_df(most_similar_documents_enriched, "best_fitting")
+
+    return most_similar_documents_enriched
+
+# sample_segment = pd.DataFrame(
+#     # columns=[, , , , ],
+#     index=[0],
+#     data= {"filename": "jonathan-swift-gullivers-reisen-2.json",
+#                "segment_text": "ARD. Radio Wissen. Die ganze Welt des Wissens. Ein Podcast von bayern 2 in der ARD-Audiothek.",
+#                "segment_id": 5,
+#                "start": 0.0,
+#                "end": 13.92})
+
+# print(get_surrounding_segments(sample_segment))
+
+get_most_similar_documents_tf_idf("gulliver", 3)
