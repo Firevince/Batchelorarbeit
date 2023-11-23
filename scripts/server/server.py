@@ -1,6 +1,8 @@
 import os
-from flask import Flask, render_template, request, send_file
-from your_module import get_most_similar_documents, produce_snippets, produce_audio
+from flask import Flask, render_template, request, send_from_directory
+from segment_ranking.rank_segments import get_most_similar_documents, get_most_similar_documents_tf_idf
+from Audio_segmentation.split_audio import produce_snippets
+from Audio_segmentation.concat_audio import produce_audio
 
 app = Flask(__name__)
 
@@ -14,13 +16,17 @@ def process():
     user_input_time = int(request.form['time'])
 
     # Führe die gewünschten Funktionen aus
-    get_most_similar_documents(user_input_text, user_input_time)
+    get_most_similar_documents_tf_idf(user_input_text, user_input_time)
     produce_snippets()
     produce_audio()
 
     # Sende das generierte Audio-Datei zurück
-    audio_path = 'temp.mp3'
-    return send_file(audio_path, as_attachment=True)
+    audio_path = '../../concatenated_audio.mp3'
+    return render_template('index.html')
+
+@app.route('/audio/<filename>')
+def audio(filename):
+    return send_from_directory('audio', path=filename)
 
 if __name__ == '__main__':
     app.run(debug=True)

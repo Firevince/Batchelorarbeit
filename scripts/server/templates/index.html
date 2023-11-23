@@ -3,22 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Webseite</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="range"], input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 300px;
+        }
+        audio {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+    </style>
+        <script>
+            function updateSliderValue(value) {
+                document.getElementById("sliderValue").textContent = value;
+            }
+        </script>
 </head>
 <body>
-    <h1>Text und Minutenanzahl eingeben</h1>
+    <h1>Erstelle Deine eigene Podcast Episode!</h1>
     <form action="/process" method="POST">
-        <label for="text">Text:</label>
-        <input type="text" name="text" id="text" required><br><br>
+        <label for="text">Thema:</label>
+        <input type="text" name="text" id="text" required>
         
         <label for="time">Minutenanzahl:</label>
-        <input type="range" name="time" id="time" min="1" max="60" step="1" value="1"><br><br>
-
+        <input type="range" name="time" id="time" min="1" max="60" step="1" value="1" oninput="updateSliderValue(this.value)">
+        <span id="sliderValue">1</span> Minuten
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <input type="submit" value="Start">
     </form>
 
     <h2>Audio abspielen:</h2>
     <audio controls>
-        <source src="/process" type="audio/mpeg">
+        <source src="audio/concatenated_audio.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 </body>
