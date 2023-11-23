@@ -4,6 +4,7 @@ data/Episode_audio_files
 data/transcripts.sqlite
 
 # mp3s in general
+*.mp3
 */*.mp3
 
 # cache files

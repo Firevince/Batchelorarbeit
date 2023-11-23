@@ -17,6 +17,7 @@ def produce_audio():
         segment_files.append(path + filename)  
 
     output_file = "concatenated_audio.mp3" 
+    output_file = "/Users/br/Projects/Bachelorarbeit/scripts/server/audio/" + output_file
     sound_file = "beep.mp3"  
     duration_between_segments_ms = 1000 
 
