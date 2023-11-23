@@ -8,8 +8,6 @@ from scipy.spatial.distance import cosine
 import json
 
 
-
-
 def dokument_embedding(dokument_text):
     tokenizer = BertTokenizer.from_pretrained('bert-base-german-cased')
     model = BertModel.from_pretrained('bert-base-german-cased', output_hidden_states = True)
