@@ -7,6 +7,9 @@ data/transcripts.sqlite
 *.mp3
 */*.mp3
 
+# intermediate files
+*.pkl
+
 # cache files
 */__pycache__
 */*/__pycache__
