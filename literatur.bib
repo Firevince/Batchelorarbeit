@@ -19,7 +19,7 @@
   urldate = {2023-11-08},
   abstract = {We present QuAC, a dataset for Question Answering in Context that contains 14K information-seeking QA dialogs (100K questions in total). The dialogs involve two crowd workers: (1) a student who poses a sequence of freeform questions to learn as much as possible about a hidden Wikipedia text, and (2) a teacher who answers the questions by providing short excerpts from the text. QuAC introduces challenges not found in existing machine comprehension datasets: its questions are often more open-ended, unanswerable, or only meaningful within the dialog context, as we show in a detailed qualitative evaluation. We also report results for a number of reference models, including a recently state-of-the-art reading comprehension architecture extended to model dialog context. Our best model underperforms humans by 20 F1, suggesting that there is significant room for future work on this data. Dataset, baseline, and leaderboard available at http://quac.ai.},
   archiveprefix = {arxiv},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning,noch nicht gelesen},
   file = {/Users/br/Documents/Vincent' Vault/PDFs/Choi et al2018.pdf;/Users/br/Zotero/storage/7Y37KALC/1808.html}
 }
 
@@ -36,8 +36,25 @@
   urldate = {2023-11-08},
   abstract = {Masked language modeling (MLM) pre-training methods such as BERT corrupt the input by replacing some tokens with [MASK] and then train a model to reconstruct the original tokens. While they produce good results when transferred to downstream NLP tasks, they generally require large amounts of compute to be effective. As an alternative, we propose a more sample-efficient pre-training task called replaced token detection. Instead of masking the input, our approach corrupts it by replacing some tokens with plausible alternatives sampled from a small generator network. Then, instead of training a model that predicts the original identities of the corrupted tokens, we train a discriminative model that predicts whether each token in the corrupted input was replaced by a generator sample or not. Thorough experiments demonstrate this new pre-training task is more efficient than MLM because the task is defined over all input tokens rather than just the small subset that was masked out. As a result, the contextual representations learned by our approach substantially outperform the ones learned by BERT given the same model size, data, and compute. The gains are particularly strong for small models; for example, we train a model on one GPU for 4 days that outperforms GPT (trained using 30x more compute) on the GLUE natural language understanding benchmark. Our approach also works well at scale, where it performs comparably to RoBERTa and XLNet while using less than 1/4 of their compute and outperforms them when using the same amount of compute.},
   archiveprefix = {arxiv},
-  keywords = {Computer Science - Computation and Language},
+  keywords = {Computer Science - Computation and Language,noch nicht gelesen},
   file = {/Users/br/Documents/Vincent' Vault/PDFs/Clark et al2020.pdf;/Users/br/Zotero/storage/KQEAMJR3/2003.html}
+}
+
+@misc{devlin2019,
+  title = {{{BERT}}: {{Pre-training}} of {{Deep Bidirectional Transformers}} for {{Language Understanding}}},
+  shorttitle = {{{BERT}}},
+  author = {Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  year = {2019},
+  month = may,
+  number = {arXiv:1810.04805},
+  eprint = {1810.04805},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  urldate = {2023-11-21},
+  abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5\% (7.7\% point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computation and Language,Gelesen,Obsidian Notes},
+  file = {/Users/br/My Drive/Vincent' Vault/Sources/PDFs/devlin2019.pdf;/Users/br/Zotero/storage/WC9M8QI2/1810.html}
 }
 
 @misc{du2017,
@@ -53,8 +70,57 @@
   urldate = {2023-11-08},
   abstract = {We study automatic question generation for sentences from text passages in reading comprehension. We introduce an attention-based sequence learning model for the task and investigate the effect of encoding sentence- vs. paragraph-level information. In contrast to all previous work, our model does not rely on hand-crafted rules or a sophisticated NLP pipeline; it is instead trainable end-to-end via sequence-to-sequence learning. Automatic evaluation results show that our system significantly outperforms the state-of-the-art rule-based system. In human evaluations, questions generated by our system are also rated as being more natural (i.e., grammaticality, fluency) and as more difficult to answer (in terms of syntactic and lexical divergence from the original text and reasoning needed to answer).},
   archiveprefix = {arxiv},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,noch nicht gelesen},
   file = {/Users/br/Documents/Vincent' Vault/PDFs/Du et al2017.pdf;/Users/br/Zotero/storage/N4IELHG4/1705.html}
+}
+
+@book{freiling2019,
+  title = {{Entrepreneurship: Gr{\"u}ndung und Skalierung von Startups}},
+  shorttitle = {{Entrepreneurship}},
+  author = {Freiling, J{\"o}rg and Harima, Jan},
+  year = {2019},
+  publisher = {{Springer Fachmedien Wiesbaden}},
+  address = {{Wiesbaden}},
+  doi = {10.1007/978-3-658-26117-7},
+  urldate = {2023-11-20},
+  isbn = {978-3-658-26116-0 978-3-658-26117-7},
+  langid = {ngerman},
+  keywords = {noch nicht gelesen},
+  file = {/Users/br/My Drive/Vincent' Vault/Sources/PDFs/freiling2019.pdf}
+}
+
+@misc{gehring2017,
+  title = {Convolutional {{Sequence}} to {{Sequence Learning}}},
+  author = {Gehring, Jonas and Auli, Michael and Grangier, David and Yarats, Denis and Dauphin, Yann N.},
+  year = {2017},
+  month = jul,
+  number = {arXiv:1705.03122},
+  eprint = {1705.03122},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  urldate = {2023-11-22},
+  abstract = {The prevalent approach to sequence to sequence learning maps an input sequence to a variable length output sequence via recurrent neural networks. We introduce an architecture based entirely on convolutional neural networks. Compared to recurrent models, computations over all elements can be fully parallelized during training and optimization is easier since the number of non-linearities is fixed and independent of the input length. Our use of gated linear units eases gradient propagation and we equip each decoder layer with a separate attention module. We outperform the accuracy of the deep LSTM setup of Wu et al. (2016) on both WMT'14 English-German and WMT'14 English-French translation at an order of magnitude faster speed, both on GPU and CPU.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computation and Language},
+  file = {/Users/br/My Drive/Vincent' Vault/Sources/PDFs/gehring2017.pdf;/Users/br/Zotero/storage/KGJHIXAE/1705.html}
+}
+
+@misc{hu2021,
+  title = {{{LoRA}}: {{Low-Rank Adaptation}} of {{Large Language Models}}},
+  shorttitle = {{{LoRA}}},
+  author = {Hu, Edward J. and Shen, Yelong and Wallis, Phillip and {Allen-Zhu}, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
+  year = {2021},
+  month = oct,
+  number = {arXiv:2106.09685},
+  eprint = {2106.09685},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2106.09685},
+  urldate = {2023-11-18},
+  abstract = {An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning,noch nicht gelesen},
+  file = {/Users/br/Documents/Vincent' Vault/PDFs/Hu et al2021.pdf;/Users/br/Zotero/storage/4RYBBQ57/2106.html}
 }
 
 @misc{jones2021,
@@ -86,9 +152,10 @@
   issn = {02615177},
   doi = {10.1016/j.tourman.2011.05.005},
   urldate = {2023-11-08},
-  abstract = {This study examines the influence of podcast tours on tourist experiences. Based on theoretical accounts that human voices convey rich social information, this study proposes that podcast tours increase perceived social presence and mindfulness that lead to enhanced tourist experiences and environmental stewardship. A field experiment was conducted at a national park using MP3 players containing podcast tours based on four experimental conditions: 2 information source compositions (single vs. multiple narrator voices) \^A 2 narrating styles (formal vs. conversational). The results support that even if communicated through audio-only media, the human voice creates a positive social context for meaningful interaction which influences tourist experiences and stewardship. Mindfulness was also found to be an important construct affecting the quality of experiences. The findings support the usefulness of podcast tours as interpretative media.},
+  abstract = {This study examines the influence of podcast tours on tourist experiences. Based on theoretical accounts that human voices convey rich social information, this study proposes that podcast tours increase perceived social presence and mindfulness that lead to enhanced tourist experiences and environmental stewardship. A field experiment was conducted at a national park using MP3 players containing podcast tours based on four experimental conditions: 2 information source compositions (single vs. multiple narrator voices) {\^A} 2 narrating styles (formal vs. conversational). The results support that even if communicated through audio-only media, the human voice creates a positive social context for meaningful interaction which influences tourist experiences and stewardship. Mindfulness was also found to be an important construct affecting the quality of experiences. The findings support the usefulness of podcast tours as interpretative media.},
   langid = {english},
-  file = {/Users/br/Documents/Vincent' Vault/PDFs/Kang_Gretzel2012.pdf}
+  keywords = {Obsidian Notes,{\"u}berflogen},
+  file = {/Users/br/My Drive/Vincent' Vault/Sources/PDFs/kang2012.pdf}
 }
 
 @misc{karpukhin2020,
@@ -103,8 +170,25 @@
   urldate = {2023-11-08},
   abstract = {Open-domain question answering relies on efficient passage retrieval to select candidate contexts, where traditional sparse vector space models, such as TF-IDF or BM25, are the de facto method. In this work, we show that retrieval can be practically implemented using dense representations alone, where embeddings are learned from a small number of questions and passages by a simple dual-encoder framework. When evaluated on a wide range of open-domain QA datasets, our dense retriever outperforms a strong Lucene-BM25 system largely by 9\%-19\% absolute in terms of top-20 passage retrieval accuracy, and helps our end-to-end QA system establish new state-of-the-art on multiple open-domain QA benchmarks.},
   archiveprefix = {arxiv},
-  keywords = {Computer Science - Computation and Language},
+  keywords = {Computer Science - Computation and Language,noch nicht gelesen},
   file = {/Users/br/Documents/Vincent' Vault/PDFs/Karpukhin et al2020.pdf;/Users/br/Zotero/storage/62QDY3FJ/2004.html}
+}
+
+@misc{kingma2017,
+  title = {Adam: {{A Method}} for {{Stochastic Optimization}}},
+  shorttitle = {Adam},
+  author = {Kingma, Diederik P. and Ba, Jimmy},
+  year = {2017},
+  month = jan,
+  number = {arXiv:1412.6980},
+  eprint = {1412.6980},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  urldate = {2023-11-22},
+  abstract = {We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. The method is straightforward to implement, is computationally efficient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The hyper-parameters have intuitive interpretations and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework. Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods. Finally, we discuss AdaMax, a variant of Adam based on the infinity norm.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Machine Learning},
+  file = {/Users/br/My Drive/Vincent' Vault/Sources/PDFs/kingma2017.pdf;/Users/br/Zotero/storage/IDKZQ8S4/1412.html}
 }
 
 @inproceedings{laban2022,
@@ -122,7 +206,24 @@
   isbn = {978-1-4503-9144-3},
   langid = {english},
   keywords = {Gelesen,Obsidian Notes},
-  file = {/Users/br/Documents/Vincent' Vault/PDFs/Laban et al2022.pdf}
+  file = {/Users/br/My Drive/Vincent' Vault/Sources/PDFs/laban2022.pdf}
+}
+
+@misc{liu2019,
+  title = {{{RoBERTa}}: {{A Robustly Optimized BERT Pretraining Approach}}},
+  shorttitle = {{{RoBERTa}}},
+  author = {Liu, Yinhan and Ott, Myle and Goyal, Naman and Du, Jingfei and Joshi, Mandar and Chen, Danqi and Levy, Omer and Lewis, Mike and Zettlemoyer, Luke and Stoyanov, Veselin},
+  year = {2019},
+  month = jul,
+  number = {arXiv:1907.11692},
+  eprint = {1907.11692},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  urldate = {2023-11-21},
+  abstract = {Language model pretraining has led to significant performance gains but careful comparison between different approaches is challenging. Training is computationally expensive, often done on private datasets of different sizes, and, as we will show, hyperparameter choices have significant impact on the final results. We present a replication study of BERT pretraining (Devlin et al., 2019) that carefully measures the impact of many key hyperparameters and training data size. We find that BERT was significantly undertrained, and can match or exceed the performance of every model published after it. Our best model achieves state-of-the-art results on GLUE, RACE and SQuAD. These results highlight the importance of previously overlooked design choices, and raise questions about the source of recently reported improvements. We release our models and code.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computation and Language},
+  file = {/Users/br/My Drive/Vincent' Vault/Sources/PDFs/liu2019.pdf;/Users/br/Zotero/storage/AI2G9PVC/1907.html}
 }
 
 @inproceedings{lochrie2018,
@@ -138,7 +239,7 @@
 }
 
 @article{maroni2020,
-  title = {{K\"UNSTLICHE INTELLIGENZ IM PRODUKTIVEN EINSATZ F\"UR DIE AUTOMATISIERTE ERSCHLIESSUNG IM MULTIMEDIALEN PRODUKTIONSPROZESS}},
+  title = {{K{\"U}NSTLICHE INTELLIGENZ IM PRODUKTIVEN EINSATZ F{\"U}R DIE AUTOMATISIERTE ERSCHLIESSUNG IM MULTIMEDIALEN PRODUKTIONSPROZESS}},
   author = {Maroni, Dirk and K{\"o}hler, Joachim and Fisseler, Jens and Becker, Sven},
   year = {2020},
   langid = {ngerman},
@@ -157,6 +258,7 @@
   address = {{Hong Kong}},
   doi = {10.3115/1075218.1075289},
   urldate = {2023-11-08},
+  keywords = {noch nicht gelesen},
   file = {/Users/br/Documents/Vincent' Vault/PDFs/Moldovan et al2000.pdf}
 }
 
@@ -192,7 +294,25 @@
   urldate = {2023-11-08},
   abstract = {Humans gather information through conversations involving a series of interconnected questions and answers. For machines to assist in information gathering, it is therefore essential to enable them to answer conversational questions. We introduce CoQA, a novel dataset for building Conversational Question Answering systems. Our dataset contains 127k questions with answers, obtained from 8k conversations about text passages from seven diverse domains. The questions are conversational, and the answers are free-form text with their corresponding evidence highlighted in the passage. We analyze CoQA in depth and show that conversational questions have challenging phenomena not present in existing reading comprehension datasets (e.g., coreference and pragmatic reasoning). We evaluate strong dialogue and reading comprehension models on CoQA. The best system obtains an F1 score of 65.4\%, which is 23.4 points behind human performance (88.8\%), indicating that there is ample room for improvement. We present CoQA as a challenge to the community at https://stanfordnlp.github. io/coqa.},
   langid = {english},
+  keywords = {noch nicht gelesen},
   file = {/Users/br/Documents/Vincent' Vault/PDFs/Reddy et al2019.pdf}
+}
+
+@misc{reimers2019,
+  title = {Sentence-{{BERT}}: {{Sentence Embeddings}} Using {{Siamese BERT-Networks}}},
+  shorttitle = {Sentence-{{BERT}}},
+  author = {Reimers, Nils and Gurevych, Iryna},
+  year = {2019},
+  month = aug,
+  number = {arXiv:1908.10084},
+  eprint = {1908.10084},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  urldate = {2023-11-21},
+  abstract = {BERT (Devlin et al., 2018) and RoBERTa (Liu et al., 2019) has set a new state-of-the-art performance on sentence-pair regression tasks like semantic textual similarity (STS). However, it requires that both sentences are fed into the network, which causes a massive computational overhead: Finding the most similar pair in a collection of 10,000 sentences requires about 50 million inference computations ({\textasciitilde}65 hours) with BERT. The construction of BERT makes it unsuitable for semantic similarity search as well as for unsupervised tasks like clustering. In this publication, we present Sentence-BERT (SBERT), a modification of the pretrained BERT network that use siamese and triplet network structures to derive semantically meaningful sentence embeddings that can be compared using cosine-similarity. This reduces the effort for finding the most similar pair from 65 hours with BERT / RoBERTa to about 5 seconds with SBERT, while maintaining the accuracy from BERT. We evaluate SBERT and SRoBERTa on common STS tasks and transfer learning tasks, where it outperforms other state-of-the-art sentence embeddings methods.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computation and Language},
+  file = {/Users/br/My Drive/Vincent' Vault/Sources/PDFs/reimers2019.pdf;/Users/br/Zotero/storage/6WCCSTA9/1908.html}
 }
 
 @inproceedings{sahijwani2020,
@@ -214,6 +334,22 @@
   file = {/Users/br/Documents/Vincent' Vault/PDFs/Sahijwani et al2020.pdf}
 }
 
+@misc{vaswani2023,
+  title = {Attention {{Is All You Need}}},
+  author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, Lukasz and Polosukhin, Illia},
+  year = {2023},
+  month = aug,
+  number = {arXiv:1706.03762},
+  eprint = {1706.03762},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  urldate = {2023-11-18},
+  abstract = {The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Gelesen,Obsidian Notes},
+  file = {/Users/br/My Drive/Vincent' Vault/Sources/PDFs/vaswani2023.pdf;/Users/br/Zotero/storage/UCE2RMK5/1706.html}
+}
+
 @inproceedings{zhang2020,
   title = {{{PEGASUS}}},
   shorttitle = {{{PEGASUS}}},
@@ -227,5 +363,6 @@
   urldate = {2023-11-08},
   abstract = {Recent work pre-training Transformers with self-supervised objectives on large text corpora has shown great success when fine-tuned on downstream NLP tasks including text summarization. However, pre-training objectives tailored for abstractive text summarization have not been explored. Furthermore there is a lack of systematic evaluation across diverse domains. In this work, we propose pre-training large Transformer-based encoder-decoder models on massive text corpora with a new self-supervised objective. In PEGASUS, important sentences are removed/masked from an input document and are generated together as one output sequence from the remaining sentences, similar to an extractive summary. We evaluated our best PEGASUS model on 12 downstream summarization tasks spanning news, science, stories, instructions, emails, patents, and legislative bills. Experiments demonstrate it achieves state-of-the-art performance on all 12 downstream datasets measured by ROUGE scores. Our model also shows surprising performance on low-resource summarization, surpassing previous state-of-the-art results on 6 datasets with only 1000 examples. Finally we validated our results using human evaluation and show that our model summaries achieve human performance on multiple datasets.},
   langid = {english},
-  file = {/Users/br/Documents/Vincent' Vault/PDFs/Zhang et al2020.pdf}
+  keywords = {{\"u}berflogen},
+  file = {/Users/br/My Drive/Vincent' Vault/Sources/PDFs/zhang2020.pdf}
 }

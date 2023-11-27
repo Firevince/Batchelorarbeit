@@ -1,45 +1,16 @@
-\chapter{Introduction}\label{ch:intro}
+\chapter{Priorisierung der Literatur}\label{ch:intro}
 
-\section{Ausgangslage}
- 
-Stand 2023 gibt es auf der Plattform Spotify rund 5 Millionen Podcasts die zusammen ungefähr 70 Millionen Episoden enthalten. Die Podcastbranche wächst seit vielen Jahren stetig und immer mehr Menschen hören regelmäßig Podcasts [Quelle].
-In Deutschland ist die ARD Audiothek ein großer Podcastanbieter mit mitlerweile über 41 Millionen Audioabrufen und über 80.000 verschiedenen Audioinhalten zum Abrufen. Auch die Zahlen der Audiotheksbenutzer, sowie der App-downloads steigen weiterhin. 
+Die wichtigste Literatur stellt der Artikel von \cite{laban2022} dar, da er erst vor einem Jahr erschienen ist und sich auch mit der automatischen Generierung von Podcasts befasst. \cite{laban2022} beschäftigt sich mit der Extrahierung von Semantischen Informationen aus Nachrichtenberichten und der Aufbereitung dieser in Form von sprachsynthetisierten Podcast Episoden.  Dadurch wird dieser Artikel sehr relevant für meine eigene Bachelorarbeit werden. 
 
-Gleichzeitig wächst auch der Markt an AI-basierten Podcasts. So erreichen heute schon AI-basierte Podcasts rund 45 Millionen US-Amerikaner [Quelle]
+Als zweites würde ich die Arbeit von \cite{zhang2020} priorisieren, da sie als Vorarbeit von \cite{laban2022} dient und das wichtige Summarization-Modell PEGASUS vorstellt, das ich auch in meiner Arbeit verwenden kann.
 
+Als weitere Quellen werde ich \cite{karpukhin2020}, \cite{reddy2019} und \cite{choi2018} verwenden, die sich alle mit der automatischen Fragen- und Antwortgenerierung aus Texten beschäftigen.
+\cite{karpukhin2020} ist dabei der neueste Ansatz zur Ermittlung von Kontext, der sich außerdem von dem TF-IDF Algorithmus unterscheidet und sehr gute Ergebnisse verspricht.
 
-\section{Ziel}
+Für das Design der Podcast Episoden werde ich die Artikel von Podcast Übersicht von \cite{jones2021} verwenden, in dem mithilfe von Deep Learning Ansätzen mehr als 100.000 Podcast Episoden analysiert wurden und daraus Aspekte für eine erfolgreiche Podcast Episode kristalisiert wurden. Diese Aspekte werden mir bei der Gestaltung und dem Aufbau einer Episode helfen. 
 
+In dem Paper \cite{kang2012} untersuchten die Autoren den Effekt von mehrere Stimmen auf das Podcasterlebnis. Außerdem untersuchten Sie in Ihrer Studie die Effekte des Erzählstils und finden heraus, dass informelle Sprache und ein ungezwungener Kommunikationsstil das Erlebnis von Zuhörern verbessert. 
 
-Das Ziel dieser Bachelorarbeit besteht darin zu untersuchen, wie sich aus umfangreichem Audiomaterial aus Radioprogrammen oder Podcasts on-the-fly ein eigener Podcast zusammenstellen lässt, der relevante Ausschnitte aus einer Vielzahl von Audiomaterial enthält.
+Im weiteren werde ich noch die Arbeiten von \cite{maroni2020}, \cite{clark2020} und \cite{du2017} verwenden, die sich mit Deep Learning Modellen zur Erschließung von Texten beschäftigen.
 
-Ein möglicher Anwendungsfall wäre ein Benutzer, der sich über das Thema "Überfischung der Meere" informieren möchte und dafür genau 20 Minuten während einer Autofahrt einplant. Das System erstellt nun einen zusammenschnitt aus verschiedenen Podcasts zu diesem Thema der 20 Minuten lang ist und stellt ihn dem Benutzer zur Verfügung. Der Vorteil für den Nutzer liegt darin, dass er selbst das Thema auswählen und die exakte Länge festlegen kann, um beispielsweise während einer 20-minütigen Autofahrt einen Podcast anzuhören.
-
-Für die Interaktion mit dem Benutzer soll außerdem eine Grafische Benutzeroberfläche bereitgestellt werden, die dem Nutzer die Auswahl eines Themas und die Länge des Podcasts ermöglicht.
-
-
-
-\section{Vorgehensweise}
-
-Dieses Projekt lässt sich zunächst in mehrere kleinen Projekte unterteilen. 
-Bei einem so großen Projekt lohnt es sich eine Mikroservice Architektur anzustreben, bei der jeder Teil für sich gesehen eine Aufgabe erfüllt und nicht auf der Zuverlässigkeit eines anderen Systems beruht. 
-Diese Methode wird auch divide-and-conquer genannt. 
-Zunächst müssen die Daten gesammelt und aufbereitet werden. 
-Für dieses Projekt bildet die Datengrundlage die Transkripte, bzw. Manuskripte der Podcasts der ARD-Audiothek. 
-In der Audiothek selber gibt es keine Transkripte zu den Podcasts. 
-Für den Podcast „radiowissen“ von bayern2 gibt es auf deren Seite die Manuskripte in PDF Format. 
-Diese sind zwar inhaltlich hochqualitativ, da Sie exakte Wortwahl der Podcasts enthalten, als PDF Format sind sie allerdings schwierig maschinell auszulesen und weiterhin besitzen sie keine Zeitinformationen zu den einzelnen Wörtern. 
-Die Zeitinformationen in Form von Zeitstempeln für jedes Wort sind wichtig, um die Audiofiles der Podcasts später an den richtigen Stellen zuzuschneiden. 
-
-Ein anderer Ansatz ergibt sich, wenn man die Podcasts transkribiert. 
-Die Vorteile sind, dass die Transkription auch bei Podcasts funktioniert, für die vorab kein Transkript erstellt wurde, was die Mehrzahl aller Podcasts ausmacht. 
-Außerdem kann man bei einer Transkription auch gleichzeitig die Zeitstempel für jedes Wort extrahieren.
-
-
-\section{Anforderungen}
-
-Um das Projekt weiter einzuordnen, bietet es sich an, vorab Anforderungen an das System zu stellen. 
-Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice Einzelne Anforderungen gestellt: 
-
-Zunächst muss die Datengrundlage geschafft werden. Dafür müssen die Podcasts lö
 
