@@ -1,14 +1,8 @@
-\chapter{Introduction}\label{ch:intro}
+\chapter{Einleitung}\label{ch:intro}
 
-\section{Ausgangslage}
- 
-Stand 2023 gibt es auf der Plattform Spotify rund 5 Millionen Podcasts die zusammen ungefähr 70 Millionen Episoden enthalten. Die Podcastbranche wächst seit vielen Jahren stetig und immer mehr Menschen hören regelmäßig Podcasts [Quelle].
-In Deutschland ist die ARD Audiothek ein großer Podcastanbieter mit mitlerweile über 41 Millionen Audioabrufen und über 80.000 verschiedenen Audioinhalten zum Abrufen. Auch die Zahlen der Audiotheksbenutzer, sowie der App-downloads steigen weiterhin. 
+\section{Motivation}
 
-Gleichzeitig wächst auch der Markt an AI-basierten Podcasts. So erreichen heute schon AI-basierte Podcasts rund 45 Millionen US-Amerikaner [Quelle]
-
-
-\section{Ziel}
+\section{Zielsetzung}
 
 
 Das Ziel dieser Bachelorarbeit besteht darin zu untersuchen, wie sich aus umfangreichem Audiomaterial aus Radioprogrammen oder Podcasts on-the-fly ein eigener Podcast zusammenstellen lässt, der relevante Ausschnitte aus einer Vielzahl von Audiomaterial enthält.
@@ -17,29 +11,9 @@ Ein möglicher Anwendungsfall wäre ein Benutzer, der sich über das Thema "Übe
 
 Für die Interaktion mit dem Benutzer soll außerdem eine Grafische Benutzeroberfläche bereitgestellt werden, die dem Nutzer die Auswahl eines Themas und die Länge des Podcasts ermöglicht.
 
+\section{Überblick}
 
 
-\section{Vorgehensweise}
-
-Dieses Projekt lässt sich zunächst in mehrere kleinen Projekte unterteilen. 
-Bei einem so großen Projekt lohnt es sich eine Mikroservice Architektur anzustreben, bei der jeder Teil für sich gesehen eine Aufgabe erfüllt und nicht auf der Zuverlässigkeit eines anderen Systems beruht. 
-Diese Methode wird auch divide-and-conquer genannt. 
-Zunächst müssen die Daten gesammelt und aufbereitet werden. 
-Für dieses Projekt bildet die Datengrundlage die Transkripte, bzw. Manuskripte der Podcasts der ARD-Audiothek. 
-In der Audiothek selber gibt es keine Transkripte zu den Podcasts. 
-Für den Podcast „radiowissen“ von bayern2 gibt es auf deren Seite die Manuskripte in PDF Format. 
-Diese sind zwar inhaltlich hochqualitativ, da Sie exakte Wortwahl der Podcasts enthalten, als PDF Format sind sie allerdings schwierig maschinell auszulesen und weiterhin besitzen sie keine Zeitinformationen zu den einzelnen Wörtern. 
-Die Zeitinformationen in Form von Zeitstempeln für jedes Wort sind wichtig, um die Audiofiles der Podcasts später an den richtigen Stellen zuzuschneiden. 
-
-Ein anderer Ansatz ergibt sich, wenn man die Podcasts transkribiert. 
-Die Vorteile sind, dass die Transkription auch bei Podcasts funktioniert, für die vorab kein Transkript erstellt wurde, was die Mehrzahl aller Podcasts ausmacht. 
-Außerdem kann man bei einer Transkription auch gleichzeitig die Zeitstempel für jedes Wort extrahieren.
 
 
-\section{Anforderungen}
-
-Um das Projekt weiter einzuordnen, bietet es sich an, vorab Anforderungen an das System zu stellen. 
-Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice Einzelne Anforderungen gestellt: 
-
-Zunächst muss die Datengrundlage geschafft werden. Dafür müssen die Podcasts lö
 
