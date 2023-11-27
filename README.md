@@ -1,5 +1,7 @@
 # Exposee für die Anmeldung der Bachelorarbeit
 
+[Exposee](thesis.pdf)
+
 Besteht aus:
 - Deckblatt
 - Textzusammenfassung eines Papers
@@ -9,5 +11,6 @@ Besteht aus:
 
 
 Wurde bestanden am 17.11.23 mit 75/100 Punkten.
+
 
 
