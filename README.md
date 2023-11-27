@@ -11,8 +11,8 @@ Besonders sollen dabei verschiedener Techniken der semantischen Analyse und der 
 
 ## Wichtig!
 
-Noch das [Copyright Statement](https://intern.ohmportal.de/fileadmin/Gelenkte_Doks/Abt/SZS/SB/SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf) am Ende der Arbeit ausfüllen und als PDF speichern.
-It will be included in the final `thesis.pdf`.
+- Noch das [Copyright Statement](https://intern.ohmportal.de/fileadmin/Gelenkte_Doks/Abt/SZS/SB/SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf) am Ende der Arbeit ausfüllen und als PDF speichern.
+Es wird in `thesis.pdf` inkludiert.
 
 - Einen Satz pro Zeile
 - Für Überschriften: [IEEE Style Manual](https://journals.ieeeauthorcenter.ieee.org/your-role-in-article-production/ieee-editorial-style-manual/)
