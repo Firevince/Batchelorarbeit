@@ -1,5 +1,7 @@
 # Bachelorarbeit von Vincent Neumann
-## Automatische Generierung von themenspezifischen Podcasts aus einer großen Audiodatenbank
+[Bachrlorarbeit](thesis.pdf)
+## Titel
+### Automatische Generierung von themenspezifischen Podcasts aus einer großen Audiodatenbank
 
 ## Ziel 
 
