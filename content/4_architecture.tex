@@ -2,6 +2,13 @@
 
 In diesem Kapitel werden wir weiter auf die tatsächliche Implementierung des Systems eingehen.
 
+\section{Anforderungen}
+
+Um das Projekt weiter einzuordnen, bietet es sich an, vorab Anforderungen an das System zu stellen. 
+Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice Einzelne Anforderungen gestellt: 
+
+Zunächst muss die Datengrundlage geschafft werden. Dafür müssen die Podcasts lö
+
 \section{Vorgehensweise}
 
 Dieses Projekt lässt sich zunächst in mehrere kleinen Projekte unterteilen. 
@@ -19,12 +26,7 @@ Die Vorteile sind, dass die Transkription auch bei Podcasts funktioniert, für d
 Außerdem kann man bei einer Transkription auch gleichzeitig die Zeitstempel für jedes Wort extrahieren.
 
 
-\section{Anforderungen}
 
-Um das Projekt weiter einzuordnen, bietet es sich an, vorab Anforderungen an das System zu stellen. 
-Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice Einzelne Anforderungen gestellt: 
-
-Zunächst muss die Datengrundlage geschafft werden. Dafür müssen die Podcasts lö
 
 \section{Podcast zu Text}
 
@@ -85,26 +87,6 @@ Die API stellt, ebenso wie das Tool, eine reihe verschiedener Anbieter zur verf�
 
 \section{Transktript Segment Ranking}
 
-\subsection{NLP}
-
-Das Ziel dieser Arbeit besteht darin, eine Schnittstelle für einen Hörer zu erstellen, die ihm ermöglicht, einen Zusammenschnitt aus vielen verschiedenen Podcast Episoden ist, und genau zu einem Thema passt. 
-Die wichtigste Aufgabe besteht also darin, die wesentlichen Abschnitte aus den Episoden herauszufinden. 
-Bis jetzt haben wir zu jedem Audiofile eine transcript.json, bei der das Transkript in regelmäßigen Zeitabschnitten mit Zeitstempeln markiert ist. 
-Die Aufgabe, auf eine Userfrage hin die wesentlichsten Segmente herauszufinden lässt sich auf mehrere Arten lösen. 
-Dazu werden wir verschiedene Verfahren aus der Wissenschaft im Bereich Natural Language Processing (NLP) verwenden.
-
-\subsection{Was ist überhaupt NLP?}
-
-Die menschliche Sprache ist ein hochkomplexes Konstrukt mit einer Grammatik, die sehr viel flexibler, kreativer, vieldeutiger, und komplexer ist als maschinensprache. 
-Es gibt viele kleine Bedeutungsnuancen, sie ist stark von dem allgemeinen Wissen der Welt geprägt und sie ändert sich im laufe der Zeit. 
-Das alles macht es für Computer sehr schwierig die Menschliche Sprache zu Verstehen. 
-Der Wunsch die menschliche Sprache für den Computer verständlich zu machen ist fast so alt, wie die Computer an sich. 
-In den 1940er Jahren, nach Ende des 2. Weltkrieges 
-Der Bereich des NLP riesig. 
-Es gibt [QUELLE] paper dazu. 
-Es hat viele verschiedene Unterthemen. 
-Die Aufgaben im Bereich des NlP sind vielseitig . Einige Ansätze 
-
 \subsection{Keywordsuche}
 
 
@@ -131,8 +113,6 @@ Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene
 
 \subsection{Embeddings}
 
- 
-
 Ein relativ moderner Ansatz besteht in der Suche mithilfe von Embedding Vektoren. Dabei versuchen wir die Semantik (also die Bedeutung) der einzelnen Segmente Mathematisch mithilfe eines Vektors zu repräsentieren. Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. Ein Vektor, der aus dem Satz „Ich sitze auf einer Bank im Grünen“ und „Im Park steht eine alte Bank“ sollen dabei sehr Ähnlich zueinander sein, der Satz „Ich gehe in die Bank und hebe Geld ab“ aber nicht sehr Ähnlich. Hierbei soll erkannt werden, dass sich die ersten beiden Sätze auf eine Bank zum Sitzen in der Natur beziehen und der dritte Satz das Geldinstitut meint. Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen. 
 Ein Regelbasierender Algorithmus würde die Unterschiede bei solchen Homonymen in keinem Fall erkennen können. Regelbasierte Algorithmen wie z.B. [QUELLE] haben auch Probleme mit negierung wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht außer gegessen“.
 
@@ -153,15 +133,8 @@ Um einen Embeddingvektor zu erstellen, benutzen wir das BERT Model. BERT, das Ak
 Masked Language Modeling
 Bei dieser Aufgabe soll das Model versuchen, aus dem Kontext eines Satzes ein maskiertes Wort in diesem Satz vorherzusagen. Dafür wird dem Model ein Satz gegeben, in dem zufällige Wörter einfach versteckt werden und das Model soll für diese Wörtereine Vorhersage treffen. 
 
-\subsection{Transformer}
 
-
-Eine Transformerarchitektur ist eine der modersten und leistungsfähigsten Architekturen, um NLP Aufgaben zu lösen. Sie bildet dabei den Nachfolger bzw. Konkurenten zu den bis dato vorherschenden Rekurenten Neuronalen Netzen. Der Große Vorteil der Transformer ist, dass sie parallelisierbarer sind, da RNNs häufig mehrschrittige rekurente Abfragen bilden müssen. Das heißt pro Token Output müssen Sie unter Umständen mehrfach das Embedding des Inputs durchsuchen. Audio Segmentierung Die Audios müssen am Ende noch zugeschnitten werden. 
-Für die Bearbeitung von Audio files in Python bietet sich das Python Modul Pydub an. Mit diesem Modul kann man ein Audiofile ähnlich wie ein Array behandeln, aus dem man nun einen Abschnitt von Sekunde 2 bis Sekunde 4 schneiden möchte. 
-Für die Zeitstempel der Start und End zeit jedes Audiosegments nehmen wir die Daten aus der sortierten Ranked segments.json Datei.
-Diese werden dann als extra Audiofiles abgespeichert und im nächsten Schritt wieder Zusammengesetzt.
-
-\section{Audio Zusammensetzung}
+\section{Audio-Zusammensetzung}
 
 
 Um die Audios nun wieder zusammenzusetzen verwenden wir das gleiche Modul Pydub. Es bieten sich mehrere Möglichkeiten an, die Audiosegmente wieder zusammenzusetzen. Man könnte die Segmente einfach ohne Pause hintereinander abspielen. Dabei folgen allerdings mehrere Probleme: 
@@ -173,7 +146,7 @@ Außerdem sollte dem Hörer bewusst sein, dass ein Audiosegment aus einer Episod
 Eine weitere Möglichkeit wäre, zwischen jedem Segment dem Hörer eine kurze Vorstellung der Episode und der Sprecher*in zu ermöglichen oder sogar Kontext zu dieser zu geben. 
 
 
-\section{erstes Exposee}
+% \section{erstes Exposee}
 
 Die Datengrundlage bilden zunächst einige Podcast-Reihen aus der ARD Audiothek. Diese Audiodateien müssen zuerst transkribiert werden, falls kein Transkript bereits vorliegt. Anschließend werden diese Transkripte mit Zeitstempeln im Audio versehen. Danach müssen die Transkripte einer semantischen Analyse unterzogen werden, wobei Schlagwortextraktion oder Word Embeddings als mögliche Ansätze in Betracht kommen.
 

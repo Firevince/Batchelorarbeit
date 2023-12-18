@@ -1,0 +1,36 @@
+\chapter{Ausgangslage und theoretische Grundlagen}\label{ch:data}
+
+\section{Ausgangslage}
+ 
+Stand 2023 gibt es auf der Plattform Spotify rund 5 Millionen Podcasts die zusammen ungefähr 70 Millionen Episoden enthalten. Die Podcastbranche wächst seit vielen Jahren stetig und immer mehr Menschen hören regelmäßig Podcasts [Quelle].
+In Deutschland ist die ARD Audiothek ein großer Podcastanbieter mit mitlerweile über 41 Millionen Audioabrufen und über 80.000 verschiedenen Audioinhalten zum Abrufen. Auch die Zahlen der Audiotheksbenutzer, sowie der App-downloads steigen weiterhin. 
+
+Gleichzeitig wächst auch der Markt an AI-basierten Podcasts. So erreichen heute schon AI-basierte Podcasts rund 45 Millionen US-Amerikaner [Quelle]
+
+\section{Embeddings}
+
+Das Ziel dieser Arbeit besteht darin, eine Schnittstelle für einen Hörer zu erstellen, die ihm ermöglicht, einen Zusammenschnitt aus vielen verschiedenen Podcast Episoden ist, und genau zu einem Thema passt. 
+Die wichtigste Aufgabe besteht also darin, die wesentlichen Abschnitte aus den Episoden herauszufinden. 
+Bis jetzt haben wir zu jedem Audiofile eine transcript.json, bei der das Transkript in regelmäßigen Zeitabschnitten mit Zeitstempeln markiert ist. 
+Die Aufgabe, auf eine Userfrage hin die wesentlichsten Segmente herauszufinden lässt sich auf mehrere Arten lösen. 
+Dazu werden wir verschiedene Verfahren aus der Wissenschaft im Bereich Natural Language Processing (NLP) verwenden.
+
+\section{Motivation für Embeddings}
+
+Die menschliche Sprache ist ein hochkomplexes Konstrukt mit einer Grammatik, die sehr viel flexibler, kreativer, vieldeutiger, und komplexer ist als maschinensprache. 
+Es gibt viele kleine Bedeutungsnuancen, sie ist stark von dem allgemeinen Wissen der Welt geprägt und sie ändert sich im laufe der Zeit. 
+Das alles macht es für Computer sehr schwierig die Menschliche Sprache zu Verstehen. 
+Der Wunsch die menschliche Sprache für den Computer verständlich zu machen ist fast so alt, wie die Computer an sich. 
+In den 1940er Jahren, nach Ende des 2. Weltkrieges 
+Der Bereich des NLP riesig. 
+Es gibt [QUELLE] paper dazu. 
+Es hat viele verschiedene Unterthemen. 
+Die Aufgaben im Bereich des NlP sind vielseitig . Einige Ansätze 
+
+\section{Transformer Architektur}
+
+
+Eine Transformerarchitektur ist eine der modersten und leistungsfähigsten Architekturen, um NLP Aufgaben zu lösen. Sie bildet dabei den Nachfolger bzw. Konkurenten zu den bis dato vorherschenden Rekurenten Neuronalen Netzen. Der Große Vorteil der Transformer ist, dass sie parallelisierbarer sind, da RNNs häufig mehrschrittige rekurente Abfragen bilden müssen. Das heißt pro Token Output müssen Sie unter Umständen mehrfach das Embedding des Inputs durchsuchen. Audio Segmentierung Die Audios müssen am Ende noch zugeschnitten werden. 
+Für die Bearbeitung von Audio files in Python bietet sich das Python Modul Pydub an. Mit diesem Modul kann man ein Audiofile ähnlich wie ein Array behandeln, aus dem man nun einen Abschnitt von Sekunde 2 bis Sekunde 4 schneiden möchte. 
+Für die Zeitstempel der Start und End zeit jedes Audiosegments nehmen wir die Daten aus der sortierten Ranked segments.json Datei.
+Diese werden dann als extra Audiofiles abgespeichert und im nächsten Schritt wieder Zusammengesetzt.
