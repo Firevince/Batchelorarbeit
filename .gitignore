@@ -17,3 +17,8 @@ data/transcripts.sqlite
 .venv/*
 
 .vscode
+
+.env
+
+.DS_Store
+*/.DS_Store

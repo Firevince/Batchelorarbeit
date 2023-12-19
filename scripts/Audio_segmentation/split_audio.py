@@ -34,7 +34,7 @@ def produce_snippets():
     # with open(ranked_json, 'r') as j:
     #     ranked_timestamped = json.loads(j.read())
     
-    ranked_timestamped_df = db_get_df(["filename", "start", "end"], "best_fitting")
+    ranked_timestamped_df = db_get_df("best_fitting")
     path = "/Users/br/Projects/Bachelorarbeit/data/audio_segments"
     delete_files_in_directory(path)
 
