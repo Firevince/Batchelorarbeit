@@ -1,7 +1,9 @@
 from db_connect import db_get_df, db_save_df
 from scipy.spatial.distance import cosine
 from Embedding_creation.embedding_creator import dokument_embedding
+from Embedding_creation.embedding_creator_MINI_L6 import document_embedding_MINI_LM
 from Embedding_creation.TF_IDF_creator import calculate_distances
+from Embedding_creation.embedding_creator_llama_2 import document_embedding_LLama_2
 import json
 import pandas as pd
 
@@ -18,7 +20,7 @@ def get_surrounding_segments(segment):
     
 
     row_list = []
-    if id > 1 :
+    if id >= 2 :
         row_list.append(filtered_sorted_rows.loc[id - 2].to_frame().T)
         row_list.append(filtered_sorted_rows.loc[id - 1].to_frame().T)
 
@@ -36,25 +38,70 @@ def get_surrounding_segments(segment):
     print("done")
     return rich_segment_df
 
+def extend_segment_time(segment):
+    segment = segment.copy()
+    # segment is vertical as are all 
+    df = db_get_df("transcript_segments")
+    id = segment.loc["segment_id"]
+    filename = segment.loc["filename"]
+    print(filename)
+    print(id)
+    filtered_rows = df[df["filename"] == filename]
+    filtered_sorted_rows = filtered_rows.sort_values("segment_id").reset_index(drop=True)
+    if id >= 2 :
+        segment.loc["start"] = filtered_sorted_rows.loc[id - 2, "start"]
+
+    if id < filtered_sorted_rows.loc[len(filtered_sorted_rows)-3, "segment_id"]:
+        segment.loc["end"] = filtered_sorted_rows.loc[id + 2, "end"]
+    return segment.to_frame().T
+
 def enrich_segments(df):
-    enriched_segments_df = get_surrounding_segments(df.loc[0])
+    enriched_segments_df = extend_segment_time(df.iloc[0])
     
     for i in range(len(df)):
-        enriched_segments_df = pd.concat([enriched_segments_df, get_surrounding_segments(df.loc[i])]).reset_index(drop=True)
+        enriched_segments_df = pd.concat([enriched_segments_df, extend_segment_time(df.iloc[i])]).reset_index(drop=True)
 
+    print(enriched_segments_df)
     return enriched_segments_df
 
 
 def calculate_document_question_distance(sentence_embedding, document_embedding):
-    diff_bank = 1 - cosine(sentence_embedding, document_embedding)
+    diff_bank = cosine(sentence_embedding, document_embedding)
     return diff_bank
 
-def get_most_similar_documents(message, amount):
-    df = db_get_df(["filename", "segment_text", "embedding_json", "start", "end"], table="transcript_segments")
+def get_most_similar_documents_Bert(message, amount):
+    df = db_get_df(["filename", "segment_text", "embedding_json", "start", "end"], 
+                   table="transcript_segments")
     question_embedding = dokument_embedding(message)
+
+
     df["distance"] = [calculate_document_question_distance(question_embedding, json.loads(document_embedding))for document_embedding in df["embedding_json"]]
 
     most_similar_documents = df.nsmallest(amount, "distance")
+    db_save_df(most_similar_documents, "best_fitting")
+    return most_similar_documents
+
+
+def get_most_similar_documents_MINI_LM(message, amount):
+    df = db_get_df("transcript_segments_MiniLM_L6")
+    question_embedding = document_embedding_MINI_LM(message)
+
+
+    df["distance"] = [calculate_document_question_distance(question_embedding, json.loads(document_embedding))for document_embedding in df["embedding_json"]]
+
+    most_similar_documents = df.nsmallest(amount, "distance")
+    most_similar_documents = enrich_segments(most_similar_documents)
+    db_save_df(most_similar_documents, "best_fitting")
+    return most_similar_documents
+
+def get_most_similar_documents_Llama2(message, amount):
+    df = db_get_df("transcript_segments_Llama_2")
+    question_embedding = document_embedding_LLama_2(message)
+
+    df["distance"] = [calculate_document_question_distance(question_embedding, json.loads(document_embedding))for document_embedding in df["embedding_json"]]
+
+    most_similar_documents = df.nsmallest(amount, "distance")
+    most_similar_documents = enrich_segments(most_similar_documents)
     db_save_df(most_similar_documents, "best_fitting")
     return most_similar_documents
 
@@ -80,5 +127,10 @@ def get_most_similar_documents_tf_idf(message, amount):
 #                "end": 13.92})
 
 # print(get_surrounding_segments(sample_segment))
+# print(extend_segment_time(sample_segment)[["filename","start", "end"]].to_markdown())
+# with pd.option_context('display.max_colwidth', None,
+#                        'display.max_columns', None,
+#                        'display.max_rows', None):
+#     print(get_most_similar_documents_MINI_LM("Oktoberfest in Bayern", 3)["segment_text"])
 
-get_most_similar_documents_tf_idf("gulliver", 3)
+# print(get_most_similar_documents_Llama2("Reisen", 3))

@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 database_path = os.getenv("DATABASE_PATH")
 
-def db_get_df(coloumns=["*"], table="transcript_segments"):
+def db_get_df(table="transcript_segments", coloumns=["*"]):
     con = sqlite3.connect(database_path)
     df = pd.read_sql_query(f"SELECT {', '.join(coloumns)} FROM {table}", con)
     con.close()
