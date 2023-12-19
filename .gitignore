@@ -15,3 +15,9 @@ data/transcripts.sqlite
 */*/__pycache__
 
 .venv/*
+
+.env
+
+*.out
+
+.vscode

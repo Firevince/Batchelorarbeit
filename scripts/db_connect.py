@@ -1,8 +1,11 @@
 import sqlite3
 import pandas as pd
 import json
+import os
+from dotenv import load_dotenv
 
-database_path = "/Users/br/Projects/Bachelorarbeit/data/transcripts.sqlite"
+load_dotenv()
+database_path = os.getenv("DATABASE_PATH")
 
 def db_get_df(coloumns=["*"], table="transcript_segments"):
     con = sqlite3.connect(database_path)
