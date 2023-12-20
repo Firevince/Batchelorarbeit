@@ -2,10 +2,19 @@
 
 \section{Ausgangslage}
  
-Stand 2023 gibt es auf der Plattform Spotify rund 5 Millionen Podcasts die zusammen ungefähr 70 Millionen Episoden enthalten. Die Podcastbranche wächst seit vielen Jahren stetig und immer mehr Menschen hören regelmäßig Podcasts [Quelle].
-In Deutschland ist die ARD Audiothek ein großer Podcastanbieter mit mitlerweile über 41 Millionen Audioabrufen und über 80.000 verschiedenen Audioinhalten zum Abrufen. Auch die Zahlen der Audiotheksbenutzer, sowie der App-downloads steigen weiterhin. 
+Die Podcastbranche wächst seit vielen Jahren stetig und immer mehr Menschen hören regelmäßig Podcasts 
+In Deutschland ist die ARD Audiothek ein großer Podcastanbieter mit mitlerweile über 41 Millionen Audioabrufen und über 80.000 verschiedenen Audioinhalten zum Abrufen. Auch die Zahlen der Audiotheksbenutzer, sowie der App-downloads steigen weiterhin. \cite{gotting2023}
 
-Gleichzeitig wächst auch der Markt an AI-basierten Podcasts. So erreichen heute schon AI-basierte Podcasts rund 45 Millionen US-Amerikaner [Quelle]
+Gleichzeitig wächst auch der Markt an AI-basierten Podcasts. So erreichen heute schon AI-basierte Podcasts rund 45 Millionen US-Amerikaner 
+
+\section{KI in Podcasts}
+
+Künstliche Intelligenz verändert die Branche des Podcastings in vielerlei Hinsicht. 
+
+Transkriptionsmodelle wie Whisper sind in der Lage live Transkriptionen der Podcasts zu erstellen die eine Qualität bestitzen, die mit professionellen menschlichen Transkriptoren mithalten kann \cite{radford}.
+Diese können außerdem verschiedene Stimmen unterscheiden und die Emotionen der Sprecher erkennen, was es in der Nachbereitung eines Podcasts erheblich erleichtert bestimmte Stellen zu finden \cite{wagner2023}
+Ein großes Entwicklungsfeld in der Podcastbranche ist die komplett automatische Generierung von Podcasts. Die Technologie der automatischen Stimmengenerierung ist soweit fortgeschritten, dass sich künstlich generierte Stimmen fast so gut anhören wie echte Stimmen \cite{shi2023}.
+
 
 \section{Embeddings}
 
@@ -20,6 +29,33 @@ Dazu werden wir verschiedene Verfahren aus der Wissenschaft im Bereich Natural L
 Die menschliche Sprache ist ein hochkomplexes Konstrukt mit einer Grammatik, die sehr viel flexibler, kreativer, vieldeutiger, und komplexer ist als maschinensprache. 
 Es gibt viele kleine Bedeutungsnuancen, sie ist stark von dem allgemeinen Wissen der Welt geprägt und sie ändert sich im laufe der Zeit. 
 Das alles macht es für Computer sehr schwierig die Menschliche Sprache zu Verstehen. 
+Neuere Forschung im Bereich des Natural Language Processing bietet einige Ansätze um dieses Problem zu lösen. 
+Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder Texte in Vektoren umzuwandeln, die den Inhalt dieser Worte oder dieser Texte repräsentiert.
+Diese Vektoren nennt man Embeddings.
+In der Geschichte der Embeddings startet mit stochastischen Verfahren, wie TF-IDF und BM25. 
+Semantische Analysen begannen erst ab ca. 1990 mit der Latenten Semantischen Analyse.
+Word Embeddings kamen erst mit der Veröffentlichung von Word2Vec (2013) in den breiteren Nutzen. 
+Word2Vec verwendet ein neuronales Netz, um mithilfe der benachbarten Wörter Kontextinformationen über das eigentliche Wort zu erhalten. 
+Dafür gibt es die beiden Ansätze continous Bag of Words und Skipgramm.
+Bei dem Ansatz Continous Bag of words werden dem Neuronalen Netz die umgebenden Wörter als Input gegeben, und das Model hat die Aufgabe daraus das Wort zu ermitteln. 
+Dieses Verfahren wird in einem Sliding Window für jedes Wort aus einem Text wiederholt. 
+Für einen bestimmten Korpus aus verschiedenen Dokumenten kann dieses Modell dadurch die beziehungen verschiedener Worte zueinander und die Ähnlichkeit verschieddener Worte, die oft in gleichem Kontext vorkommen erlerenen. 
+Das Verfahren des Skipgramms funktioniert ähnlich, allerdings wird dabei für jedes Wort versucht die umliegenden Wörter zu ermitteln. 
+Dieser Ansatz dauert länger im Training, hat aber den Vorteil, dass er auch seltener vorkommende Wörter gut repräsentieren kann.
+
+Ein Jahr später wurde GloVe (Global Vectors for Word Representations) entwickelt. 
+
+Im Jahre 2018 wurde der Ansatz ElMo (Embeddings from Language Model) für Word Embeddings vorgestellt.
+
+
+
+
+
+
+
+
+
+
 Der Wunsch die menschliche Sprache für den Computer verständlich zu machen ist fast so alt, wie die Computer an sich. 
 In den 1940er Jahren, nach Ende des 2. Weltkrieges 
 Der Bereich des NLP riesig. 
@@ -34,3 +70,7 @@ Eine Transformerarchitektur ist eine der modersten und leistungsfähigsten Archi
 Für die Bearbeitung von Audio files in Python bietet sich das Python Modul Pydub an. Mit diesem Modul kann man ein Audiofile ähnlich wie ein Array behandeln, aus dem man nun einen Abschnitt von Sekunde 2 bis Sekunde 4 schneiden möchte. 
 Für die Zeitstempel der Start und End zeit jedes Audiosegments nehmen wir die Daten aus der sortierten Ranked segments.json Datei.
 Diese werden dann als extra Audiofiles abgespeichert und im nächsten Schritt wieder Zusammengesetzt.
+
+\section{Large Language Model}
+
+\section{Diffusion Model}
