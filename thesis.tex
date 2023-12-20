@@ -93,6 +93,7 @@
 
 % biblatex
 % \usepackage[backend=biber, style=authoryear]{biblatex}
+\usepackage{biblatex}
 % \addbibresource{literatur.bib}
 
 % configure your listings style
@@ -135,6 +136,8 @@
 \makenoidxglossaries
 \loadglsentries{glossary}
 
+\addbibresource{literatur.bib}
+
 \begin{document}
 
 \setcounter{secnumdepth}{3}  % numerate subsections
@@ -173,10 +176,11 @@
 % \lstlistoflistings
 % \cleardoublepage
 
-\bibliographystyle{wmaainf}
-\bibliography{literatur}
-\include{content/a1_supplemental}
+% \bibliographystyle{wmaainf}
 
+% \bibliography{literatur}
+\include{content/a1_supplemental}
+\printbibliography
 \printnoidxglossaries
 
 \end{document}
