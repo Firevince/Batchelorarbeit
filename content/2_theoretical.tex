@@ -32,9 +32,32 @@ Das alles macht es für Computer sehr schwierig die Menschliche Sprache zu Verst
 Neuere Forschung im Bereich des Natural Language Processing bietet einige Ansätze um dieses Problem zu lösen. 
 Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder Texte in Vektoren umzuwandeln, die den Inhalt dieser Worte oder dieser Texte repräsentiert.
 Diese Vektoren nennt man Embeddings.
-In der Geschichte der Embeddings startet mit stochastischen Verfahren, wie TF-IDF und BM25. 
-Semantische Analysen begannen erst ab ca. 1990 mit der Latenten Semantischen Analyse.
-Word Embeddings kamen erst mit der Veröffentlichung von Word2Vec (2013) in den breiteren Nutzen. 
+Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin, passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
+
+Die Geschichte der Embeddings startet mit stochastischen Verfahren, wie TF-IDF und BM25. 
+Term Frequency - inverse Dokument Frequency (TF-IDF) ist ein Algorithmus um Dokumente nach Keyworten zu durchsuchen.
+Das Verfahren verwendet Worthäufigkeiten (Term-Frequency), um Dokumenten, in denen ein Wort häufiger vorkommt zu bevorzugen.
+Außerdem verwendet es die generelle Seltenheit von Wörter (Inverse Document Frequency) um Wörtern, die seltener vorkommen mehr Gewicht bei der Suche einräumen.
+
+Daraus bildet der TF-IDF Algorithmus einen dünnbesetzten Vektor, der die Anzahl und Seltenheit jedes im Dokument vorkommendes Wortes abbildet. 
+Dünnbesetzt heißt in diesem Zusammenhang, dass der Vektor viele Einträge mit dem Wert 0 besitzt. 
+Das folgt aus der Bedingung, dass diese Vektoren untereinander vergleichbar sein müssen und dadurch Einträge für jedes Wort besitzen, welches im gesamten Korpus an Dokumenten vorkommt.
+Jedes einzelne Dokument hat dabei aber nur ein Bruchteil der Gesamtwörter und damit viele Nullwerte.
+
+Best Matching 25 (BM25) ist eine Famile von Algorithmen die versuchen den TF-IDF Algorithmus zu verbessern indem sie versuchen, die Priorisierung Langer Dokumente und zu oft vorkommende Worte auszugleichen.
+
+Außerdem kann man diese Algorithmen noch anpassen, sodass sie auch n-gramme als Einträge der Vektoren miteinbeziehen. 
+Das heißt, dass nicht nur einzelne Wörter berücksichtigt werden, sondern auch häufig zusammen vorkommende Wörter als einzelnes Token in dem Vektor abgebildet werden. 
+Das bewirkt zwar, dass die Ähnlichkeit der Dokumente in der Regel besser ermittelt werden kann, vergrößert aber die Vektoren überproportional.
+
+Semantische Analysen begannen erst ab ca. 1990 mit der Latenten Semantischen Analyse (LSA).
+Diese verwendet Eigenvektoren um aus einer Term-Frequency Matrix versteckte (latente) Eigenschaften zu ermitteln, welche die Dokumente besser repräsentieren als die TF Matrix an sich. 
+Es werden von diesen Eigenvektoren nur die wichtigsten ausgewählt, sodass jedes Dokument sehr gut als eine linearkombination dieser Vektoren repräsentiert werden kann.
+Dann werden nur noch die Koeffizienten dieser Vektoren gespeichert und man kann von einer Dimensionsreduktion profitieren.
+Die resultierenden Koeffizienten-Vektoren sind nun nicht mehr spärlich besetzt sondern Dicht.
+Die resultierenden Eigenvektoren bilden häufig latente Themen der Dokumente ab.
+
+Wirkliche Word Embeddings kamen erst mit der Veröffentlichung von Word2Vec (2013) in den breiteren Nutzen. 
 Word2Vec verwendet ein neuronales Netz, um mithilfe der benachbarten Wörter Kontextinformationen über das eigentliche Wort zu erhalten. 
 Dafür gibt es die beiden Ansätze continous Bag of Words und Skipgramm.
 Bei dem Ansatz Continous Bag of words werden dem Neuronalen Netz die umgebenden Wörter als Input gegeben, und das Model hat die Aufgabe daraus das Wort zu ermitteln. 
