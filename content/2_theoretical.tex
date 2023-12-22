@@ -151,14 +151,39 @@ Dabei wird für jedes Token zunächst durch ein vorher ermitteltes Word Embeddin
 Der Mechanismus des Positional Encodings stellt sicher, dass das Model die Reihenfolge der tokens mitberücksichtigen kann.
 Dieser Mechnisus nimmt berechnet aufgrund der Position des Tokens in der Sequenz ein positional Embedding auf der Grundlage von Sinus und Cosinus funktionen und addiert es auf das vorherige Word Embedding.
 
-Der positional encoded Input wird dann von mehreren Attention Köpfen verarbeitet, der sogenannten Multihead attention. 
+Der positional encoded Input wird dann von mehreren self Attention Köpfen verarbeitet, der sogenannten Multihead self attention. 
 Jeder dieser Köpfe spaltet den Input in eine Query, Key und Value Matrix auf, indem es das ursprüngliche Embedding jeweils mit einer vortrainierten Query, Key und Value Matrix multipliziert.
 Die resultierenden Matrizen werden dann mithilfe folgender Formel zur Attention Matrix umgewandelt:
 
 $Attention(Q,K,V)=softmax(\frac{QK^t}{\sqrt{d_k}})*V$
 
-Der Parameter d stellt dabei die Dimension der Matrix k dar
+Der Parameter d stellt dabei die Dimension der Matrix k dar.
+
+
+Um die Formel besser zu verstehen, können wir an einem Beispiel sehen, was die einzelnen Matrizen für Aufgaben besitzen.
+Als Eingabe nehmen wir den Satz: "Alice fuhr gestern durch die Nürnberger Innenstadt".
+Die Query Matrix beschreibt nun eine Frage an diesen Satz, zum Beispiel "Wer?".
+Die Key Matrix hat nun die Antwort darauf, wo diese Informationen im Satz stehen könnten, also wahrscheinlich im ersten Wort. 
+Die beiden Matrizen werden nun Multipliziert, um die Position der Antwort auf die Frage zu erhalten. 
+Das Ergebnis wird durch Division mit der Dimension der Matrix skaliert und anschließender Softmax funkion normiert, um die Relevanz der Schlüssel anzupassen.
+Anschließend wird die Angepasste Fragen-schlüssel Matrix mit der Value Matrix multipliziert, welche die Informationen der Sequenz beinhaltet. 
+An der ersten Stelle steht Alice.
+
+Diese daraus resultierende Matrix wird nocheinmal mit der ursprünglichen Matrix in einer sogenannten residual Connection addiert und normiert, bevor sie in ein einfaches Neuronales Netz gespeist werden.
 
 \section{Large Language Model}
+
+Large Language Model bezwichnet ein Language Model, das auf vielen Parametern trainiert wurde. 
+Language Model bezeichnet den Bezug zu dem Verständnis Natürlicher Sprache.
+Large Language Models werden vor allem für ChatBots, Text-Übersetzungen, und Sprach-Übersetzungen eingesetzt.
+Bekannte LLMs sind zum Beispiel ChatGPT con OpenAI, welches auf ca. 175 Milliarden Parameter trainiert wurde. [https://www.ankursnewsletter.com/p/gpt-4-gpt-3-and-gpt-35-turbo-a-review]
+Weitere bekannte LLMs sind Google Bart und Gemini, Megatron von NVIDIA oder Ayax von Apple (das erst noch kommt).
+Zu den bekannten kommerziellen LLMs, die von großen Tech Firmen entwickelt werden, kommen immer mehr open-source Modelle in den Vordergrund, die zwar (noch) nicht so Leistungsstark sind, aber auf eigener Hardware laufen können.
+Auf der Plattform Huggingface, welche sich auf das Hosten von open-source Language Modellen fokussiert, gibt es mittlerweile über 400.000 LLMs zum freien Download (stand Dezember 23).
+Ein sehr Leistungsfähiges LLM ist das von Meta entwickelte LLama und deren Nachfolger LLama2.
+
+
+
+
 
 \section{Diffusion Model}
