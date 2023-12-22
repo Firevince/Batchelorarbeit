@@ -57,7 +57,7 @@ Dann werden nur noch die Koeffizienten dieser Vektoren gespeichert und man kann 
 Die resultierenden Koeffizienten-Vektoren sind nun nicht mehr spärlich besetzt sondern Dicht.
 Die resultierenden Eigenvektoren bilden häufig latente Themen der Dokumente ab.
 
-Wirkliche Word Embeddings kamen erst mit der Veröffentlichung von Word2Vec (2013) in den breiteren Nutzen. 
+Wirkliche semantische Word Embeddings kamen erst mit der Veröffentlichung von Word2Vec (2013) in den breiteren Nutzen. 
 Word2Vec verwendet ein neuronales Netz, um mithilfe der benachbarten Wörter Kontextinformationen über das eigentliche Wort zu erhalten. 
 Dafür gibt es die beiden Ansätze continous Bag of Words und Skipgramm.
 Bei dem Ansatz Continous Bag of words werden dem Neuronalen Netz die umgebenden Wörter als Input gegeben, und das Model hat die Aufgabe daraus das Wort zu ermitteln. 
@@ -70,13 +70,38 @@ Ein Jahr später wurde GloVe (Global Vectors for Word Representations) als Forsc
 GloVe verbindet Konzepte aus LSA und Word2Vec, indem es die auf einer globalen Matrix Faktorisierung beruht aber die Distanz von Wörtern zueinander mitberücksichtigt.
 Dadurch schaffte GloVe eine weitere Verbesserung der Embeddings und wird heutzutage noch unter anderem in NLP Bibliotheken wie SpaCy verwendet.[englische Wikipedia referiert auf Buch aus 2018]
 
-Im Jahre 2018 wurde der Ansatz ElMo (Embeddings from Language Model) für Word Embeddings vorgestellt.
-Dieser benutzt ein Bidirectional Long Short Term Memory Model (LSTM) um daraus Embeddings zu generieren.
-Long Short Term Memory Modelle basieren auf Recurenten Neuronalen Netzen (RNN) und gehören zu den Sequenz to Sequenz Modellen. 
+Im Jahre 2018 wurde der Ansatz ELMo (Embeddings from Language Model) für Word Embeddings vorgestellt.
+Dieser benutzt Bidirectionale Long Short Term Memory Modelle (LSTM) um daraus Embeddings zu generieren.
+LSTM Modelle basieren auf Recurenten Neuronalen Netzen (RNN) und gehören zu den Sequenz to Sequenz Modellen. 
 Sie bestehen dabei aus einem Encoder und einem Decoder.
 Der Encoder codiert eine Inputsequenz, zum Beispiel ein Dokument, zu einem Embeddingvektor. 
-Der Decoder dekodiert diesen Embeddingvektor wieder zu einer Sequenz, z.B. einer zusamenfassung des Dokuments.
-Für ELMo ist dabei nur der Encoder wichtig.
+Der Decoder dekodiert diesen Embeddingvektor wieder zu einer Sequenz, z.B. einer Zusammenfassung des Dokuments. [Quelle]
+Für ELMo ist dabei nur der Encoder Teil wichtig.
+Dabei werden zwei Layer von Forward und Backward LSTMs eingesetzt, die für jedes Wort den Kontext vor und nach dem Wort berücksichtigen, um sematische Embeddings zu erstellen. [Quellen]
+
+Ein Jahr später wurden die Erstellung von Word und Sentence Embeddings durch BERT revolutioniert.
+BERT (Bidirectional Encoder Representations from Transformers) \cite{devlin2019} ist ein auf NLP Aufgaben spezialisierter Transformer.
+Das Model wurde von Google 2019 entwickelt und war seinerzeit das Beste Model, indem es in elf verschiedenen Aufgaben im Bereich des NLP State-of-the-art Ergebnisse lieferte.
+Es ist auf zwei Datensätzen, dem BooksCorpus mit 800 Millionen Wörtern und der englischen Wikipedia mit 2,5 Milliarden Wörtern trainiert worden. \cite{devlin2019}
+Dadurch hat BERT von einer große Auswahl an verschiedenen Themen gelernt und kann für diese sinnvolle Semantische Embedding Vektoren erstellen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Unter diesen Aufgaben befinden sich Next Sentence Prediction (NSP) und Masked Language Modeling, auf die es auch trainiert wurde.
+
+
+
+Außerdem kann man das Modell mit wenig aufwand auf andere Aufgaben finetunen und damit sehr gute Ergebnisse im Bereich der Named Entity Recognition, der Sentiment Analyse oder  
 
 
 
@@ -99,11 +124,40 @@ Die Aufgaben im Bereich des NlP sind vielseitig . Einige Ansätze
 
 
 Eine Transformerarchitektur ist eine der modersten und leistungsfähigsten Architekturen, um NLP Aufgaben zu lösen. 
-Sie bildet dabei den Nachfolger bzw. Konkurenten zu den bis dato vorherschenden Rekurenten Neuronalen Netzen (RNN) oder Long-Short Term Memory Systemen (LSTM). 
-Der Große Vorteil der Transformer ist, dass sie parallelisierbarer sind, da RNNs häufig mehrschrittige rekurente Abfragen bilden müssen.
-Das heißt pro Token Output müssen Sie unter Umständen mehrfach das Embedding des Inputs durchsuchen. Audio Segmentierung Die Audios müssen am Ende noch zugeschnitten werden. 
+Sie bildet dabei den Nachfolger bzw. Konkurenten zu den bis dato vorherschenden Rekurenten Neuronalen Netzen (RNN), Gated Recurenten Units (GRU) oder Long-Short Term Memory Systemen (LSTM). 
+Ähnlich wie diese Architekturen, ist auch der Transformer ein Sequenze to Sequenz Model, das der Encoder teil nimmt als Eingabe ein Folge von Tokens (ein Satz, eine Audiodatei) und der Decoder Teil bildet daraus eine andere Sequenz (ein Satz, eine Audiodatei). 
+In diesem Abschnitt gehen wir nur auf den Encoder ein, weil er die Embeddings erstellt.
 
+Der Unterschied von Sequenze to Sequenz Modellen zu einem normalen Neuronalen Netz besteht darin, dass die Eingabe und Ausgabe Sequenzen mit variablen Längen sein können, was bei Neuronalen Netzen nicht funktioniert, da sie eine feste Anzahl an Input und Output Neuronen besitzen.
 
+RNNs sind eine weiterentwicklung normaler Neuronaler Netze, indem Sie mehrere Neuronale Netze hintereinander schalten. 
+Dadurch wird für jedes Inputtoken ein Embedding generiert. 
+Die nächste Zelle des RNN nimmt dann das Embedding der vorhergehenden Zelle und das nächste Input token und generiert daraus wieder ein Embedding.
+
+Ein Problem welches diese Architekturen besitzen ist Vanishing Gradient
+Diese Architekturen versuchen immer im Encoder die gesamte Input Sequenz von rechts nach links (forward)oder von links nach rechts (backward) zu verarbeiten, um daraus ein einzelnes Embedding zu erstellen.
+Informationen, die in der Mitte der Sequenz vorkommen werden wahrscheinlich von danach folgenden Informationen überschrieben, weil das Modell versuchen muss alle Informationen in die selbe Matrix zu speichern. 
+
+Der Ansatz des LSTM versucht dieses Problem zu lösen, indem er Gated Langzeit Gedächtniszellen einführt, die zusätzlich zu den kurzzeit Gedächtniszellen agieren und nicht so leicht überschrieben werden.
+Dadurch können sie wichtige Informationen länger speichern.
+
+Der Unterschied von Transformern zu RNNs, GRUs und LSTMs ist der Attention Mechanismus.
+RNNs, GRUs und LSTMs sind darauf angewiesen, den Input sequentiell Token für Token zu verarbeiten, da jede Zelle asl Input das Embedding der vorrausgehenden Zelle benötigt.
+Das macht das Training eines Models sehr Zeitaufwendig.
+
+Der Große Vorteil der Transformer ist, dass sie parallelisierbarer sind.
+Alle Tokens einer Input Sequenz können synchron verarbeitet werden. 
+Dabei wird für jedes Token zunächst durch ein vorher ermitteltes Word Embedding ersetzt.
+Der Mechanismus des Positional Encodings stellt sicher, dass das Model die Reihenfolge der tokens mitberücksichtigen kann.
+Dieser Mechnisus nimmt berechnet aufgrund der Position des Tokens in der Sequenz ein positional Embedding auf der Grundlage von Sinus und Cosinus funktionen und addiert es auf das vorherige Word Embedding.
+
+Der positional encoded Input wird dann von mehreren Attention Köpfen verarbeitet, der sogenannten Multihead attention. 
+Jeder dieser Köpfe spaltet den Input in eine Query, Key und Value Matrix auf, indem es das ursprüngliche Embedding jeweils mit einer vortrainierten Query, Key und Value Matrix multipliziert.
+Die resultierenden Matrizen werden dann mithilfe folgender Formel zur Attention Matrix umgewandelt:
+
+$Attention(Q,K,V)=softmax(\frac{QK^t}{\sqrt{d_k}})*V$
+
+Der Parameter d stellt dabei die Dimension der Matrix k dar
 
 \section{Large Language Model}
 
