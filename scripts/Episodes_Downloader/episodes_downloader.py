@@ -5,7 +5,7 @@ from scripts.db_connect import db_get_df, db_save_df, db_insert_transcript, db_i
 import sqlite3
 
 
-graphql_url = "https://api.ardaudiothek.de/graphql"
+GRAPHQL_URL = "https://api.ardaudiothek.de/graphql"
 
 
 def download_mp3(url):
@@ -21,16 +21,13 @@ def download_mp3(url):
     return None
 
 def get_graphql(query):
-    response = requests.post(graphql_url, json={"query": query})
-
-    # df = df = pd.DataFrame()
-
+    response = requests.post(GRAPHQL_URL, json={"query": query})
     if response.status_code == 200:
         return response.json()
     else:
         raise f"GraphQL request failed with status code {response.status_code}"
 
-def download_newest_episodes():
+def get_newest_episodes_data():
 
     # GraphQL query
     query = """
@@ -56,10 +53,13 @@ def download_newest_episodes():
     }
     """
     data = get_graphql(query)
-    df = db_get_df(["url", "filename", "file_path", "transkript", "audio_file", "tokens", "embedding"])
+    return data
 
+def save_mp3_from_graphql_data(data):
     download_dir = "./Episode_files"
     os.makedirs(download_dir, exist_ok=True)
+    df = db_get_df("transcript_segments",["url", "filename", "file_path", "transkript", "audio_file", "tokens", "embedding"])
+
     for audio_data in data["data"]["programSet"]["items"]["nodes"]:
 
         audio_url = audio_data["audios"][0]["downloadUrl"]
@@ -114,12 +114,44 @@ def download_episode_from_name(name):
     print(query)
 
 
+def get_names_and_urls_all_episodes():
+    query = """    {
+        programSet(id: 5945518) {
+        title
+        items(
+            orderBy: PUBLISH_DATE_DESC
+            filter: {
+            isPublished: {
+                equalTo: true
+            }
+            }
+        ) {
+          	
+            nodes {
+              title,
+              audios {
+                  downloadUrl
+              }
+            }
+        }
+        }
+    }"""
+    data = get_graphql(query)
+    titles = []
+    audio_urls = []
+    for audio_data in data["data"]["programSet"]["items"]["nodes"]:
+        title = audio_data["title"]
+        audio_url = audio_data["audios"][0]["downloadUrl"]
+        titles.append(title)
+        audio_urls.append(audio_url)
+
+    return (titles, audio_urls)
+    
+
+
 def download_url_and_insert_binary(url, filename):
     
     audio = download_mp3(url)
     db_insert_audio_binary(audio, filename)
 
 
-df = db_get_df(["filename", "download_url"], table="transcripts")
-for index, row in df.iterrows():
-    download_url_and_insert_binary(row['download_url'], row['filename'])
