@@ -1,7 +1,7 @@
 import os
 import requests
 import pandas as pd
-from scripts.db_connect import db_get_df, db_save_df, db_insert_transcript, db_insert_audio_binary
+from db_connect import db_get_df, db_save_df, db_insert_transcript, db_insert_audio_binary
 import sqlite3
 
 
@@ -19,6 +19,14 @@ def download_mp3(url):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
     return None
+
+def download_and_save_mp3_in_dir(url, path, filename):
+    path = os.path.join(path, filename)
+
+    audio = download_mp3(url)
+    with open(path, 'wb') as mp3_file:
+        mp3_file.write(audio)
+    return
 
 def get_graphql(query):
     response = requests.post(GRAPHQL_URL, json={"query": query})
@@ -76,6 +84,7 @@ def save_mp3_from_graphql_data(data):
         df = df._append(df_entry, ignore_index=True)
 
     db_save_df(df, "transcripts")
+
 
 
 def download_episode_from_name(name):
