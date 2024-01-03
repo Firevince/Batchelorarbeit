@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=BA_embedding   # Kurzname des Jobs
+#SBATCH --job-name=BA_transcribe  # Kurzname des Jobs
 #SBATCH --nodes=1                 # Anzahl benötigter Knoten
 #SBATCH --ntasks=1                # Gesamtzahl der Tasks über alle Knoten hinweg
 #SBATCH --partition=p0            # Verwendete Partition (z.B. p0, p1, p2 oder all)
@@ -46,7 +46,7 @@ export PYTHONPATH=/home/neumannvi84434/Bachelorarbeit/Bachelorarbeit/scripts
 cd /home/neumannvi84434/Bachelorarbeit/Bachelorarbeit/scripts
 
 # Run your script with any necessary arguments
-python Embedding_creation/embedding_creator_llama_2.py 
+python audio_transcription/transcribe_all_audios.py
 ########################################################
 
 
