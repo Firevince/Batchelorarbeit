@@ -12,8 +12,11 @@ def download_mp3(url):
     try:
         response = requests.get(url)
         if response.status_code == 200:
-            print(f"Downloaded MP3")
+            print(f"Downloaded {url}")
             return response.content
+        elif response.status_code == 404:
+            print(f"Failed to download MP3. Status code: {response.status_code}")
+            return None
         else:
             print(f"Failed to download MP3. Status code: {response.status_code}")
     except Exception as e:
@@ -24,9 +27,9 @@ def download_and_save_mp3_in_dir(url, path, filename):
     path = os.path.join(path, filename)
 
     audio = download_mp3(url)
-    with open(path, 'wb') as mp3_file:
-        mp3_file.write(audio)
-    return
+    if audio:
+        with open(path, 'wb') as mp3_file:
+            mp3_file.write(audio)
 
 def get_graphql(query):
     response = requests.post(GRAPHQL_URL, json={"query": query})
