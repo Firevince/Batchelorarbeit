@@ -22,3 +22,5 @@ data/transcripts.sqlite
 
 .DS_Store
 */.DS_Store
+
+*.out
