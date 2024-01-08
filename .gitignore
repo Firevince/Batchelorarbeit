@@ -18,6 +18,9 @@ data/transcripts.sqlite
 
 .env
 
+logs/*
 *.out
 
 .vscode
+
+*.png
