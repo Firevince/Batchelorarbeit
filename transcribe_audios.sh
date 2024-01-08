@@ -2,8 +2,8 @@
 #SBATCH --job-name=BA_transcribe  # Kurzname des Jobs
 #SBATCH --nodes=1                 # Anzahl benötigter Knoten
 #SBATCH --ntasks=1                # Gesamtzahl der Tasks über alle Knoten hinweg
-#SBATCH --partition=p0            # Verwendete Partition (z.B. p0, p1, p2 oder all)
-#SBATCH --time=08:00:00           # Gesamtlimit für Laufzeit des Jobs (Format: HH:MM:SS)
+#SBATCH --partition=p2            # Verwendete Partition (z.B. p0, p1, p2 oder all)
+#SBATCH --time=16:00:00           # Gesamtlimit für Laufzeit des Jobs (Format: HH:MM:SS)
 #SBATCH --cpus-per-task=8         # Rechenkerne pro Task
 #SBATCH --mem=48G                 # Gesamter Hauptspeicher pro Knoten
 #SBATCH --gres=gpu:1              # Gesamtzahl GPUs pro Knoten

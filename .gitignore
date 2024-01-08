@@ -24,3 +24,8 @@ data/transcripts.sqlite
 */.DS_Store
 
 *.out
+logs/*
+
+.vscode
+
+*.png
