@@ -1,60 +1,46 @@
-import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_distances, pairwise_distances
 from sklearn.gaussian_process.kernels import DotProduct, WhiteKernel
 from tqdm import tqdm
-from sklearn.metrics.pairwise import linear_kernel
 from db_connect import db_get_df, db_save_df
 import numpy as np
-import json
 import joblib
 from scipy import sparse
 import spacy
 import os
 from dotenv import load_dotenv
 
-
+load_dotenv()
+DATA_PATH = os.getenv("DATA_PATH")
 
 
 def calc_all_tf_idf():
     df = db_get_df(table="transcript_sentences")
     tfidf_vectorizer = TfidfVectorizer()
     tfidf_matrix = tfidf_vectorizer.fit_transform(df['sentence'])
-    # tfidf_array = tfidf_matrix.toarray()
     
-    print(len(tfidf_vectorizer.get_vocab()))
+    vocab_len = len(tfidf_vectorizer.get_vocab())
 
-    joblib.dump(tfidf_vectorizer, 'tfidf_vectorizer_230k.pkl')
-    # sparse.save_npz("tf_idf_matrix.npz", tfidf_matrix)
-    # df['tfidf_representation_json'] =  [json.dumps(tfidf_array[df.index[df['sentence'] == x][0]].tolist()) for x in tqdm(df['sentence'])]
-    # db_save_df(df, tablename="transcript_sentences_tf_idf")
-
-
+    vectorizer_path = os.path.join(DATA_PATH,f'matricies/tfidf_vectorizer{vocab_len//1000}k.pkl')
+    matrix_path = os.path.join(DATA_PATH,f'matricies/tf_idf_matrix{vocab_len//1000}k.npz')
+    joblib.dump(tfidf_vectorizer, vectorizer_path)
+    sparse.save_npz(matrix_path, tfidf_matrix)
 
 def calculate_distances_optimized(message, tfidf_vectorizer, tfidf_matrix):
-    # Vectorize the message using the existing TF-IDF Vectorizer
     tfidf_message = tfidf_vectorizer.transform([message])
-
-    # Initialize an empty array for distances
     all_distances = np.array([])
 
-    # Process in batches to reduce memory usage
     batch_size = 1000
     for i in tqdm(range(0, tfidf_matrix.shape[0], batch_size)):
-        # Calculate distances for the batch
         batch_distances = pairwise_distances(tfidf_matrix[i:i + batch_size], tfidf_message, metric='cosine')
-
-        # Concatenate the results
         all_distances = np.concatenate((all_distances, batch_distances.flatten()))
 
     return all_distances
 
 def calculate_distances(message):
-    load_dotenv()
-    data_path = os.getenv("DATA_PATH")
     df = db_get_df(table="transcript_sentences")
-    tfidf_vectorizer = joblib.load(os.path.join(data_path, 'tfidf_vectorizer_230k.pkl'))
-    tfidf_matrix = sparse.load_npz(os.path.join(data_path,"tf_idf_matrix_230k.npz"))
+    tfidf_vectorizer = joblib.load(os.path.join(DATA_PATH, 'tfidf_vectorizer_230k.pkl'))
+    tfidf_matrix = sparse.load_npz(os.path.join(DATA_PATH,"tf_idf_matrix_230k.npz"))
     print("calculating distances")
     all_distances = calculate_distances_optimized(message, tfidf_vectorizer, tfidf_matrix)
     df["distance"]= all_distances
