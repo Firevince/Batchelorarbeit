@@ -16,7 +16,7 @@ def process():
     user_input_time = int(request.form['time'])
 
     # Führe die gewünschten Funktionen aus
-    get_most_similar_documents_Llama2(user_input_text, user_input_time)
+    get_most_similar_documents_tf_idf(user_input_text, user_input_time)
     produce_snippets()
     produce_audio()
 
