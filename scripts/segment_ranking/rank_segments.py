@@ -1,8 +1,8 @@
 from db_connect import db_get_df, db_save_df
 from scipy.spatial.distance import cosine
-from Embedding_creation.embedding_creator import dokument_embedding
+from scripts.Embedding_creation.embedding_creator_BERT import dokument_embedding
 from Embedding_creation.embedding_creator_MINI_L6 import document_embedding_MINI_LM
-from Embedding_creation.TF_IDF_creator import calculate_distances
+from Embedding_creation.embedding_creator_TF_IDF import calculate_distances
 from Embedding_creation.embedding_creator_llama_2 import document_embedding_LLama_2
 import json
 import pandas as pd
@@ -41,7 +41,7 @@ def get_surrounding_segments(segment):
 def extend_segment_time(segment):
     segment = segment.copy()
     # segment is vertical as are all 
-    df = db_get_df("transcript_segments")
+    df = db_get_df("transcript_sentences")
     id = segment.loc["segment_id"]
     filename = segment.loc["filename"]
     print(filename)
@@ -49,9 +49,11 @@ def extend_segment_time(segment):
     filtered_rows = df[df["filename"] == filename]
     filtered_sorted_rows = filtered_rows.sort_values("segment_id").reset_index(drop=True)
     if id >= 2 :
+        # segment.loc["sentence"] = f'{segment.loc[id -2, "sentence"]} {segment.loc[id -1,"sentence"]} {segment.loc["sentence"]}' 
         segment.loc["start"] = filtered_sorted_rows.loc[id - 2, "start"]
 
     if id < filtered_sorted_rows.loc[len(filtered_sorted_rows)-3, "segment_id"]:
+        # segment.loc["sentence"] = f'{segment.loc["sentence"]} {segment.loc[id +1,"sentence"]} {segment.loc[id+2,"sentence"]}' 
         segment.loc["end"] = filtered_sorted_rows.loc[id + 2, "end"]
     return segment.to_frame().T
 
@@ -134,3 +136,5 @@ def get_most_similar_documents_tf_idf(message, amount):
 #     print(get_most_similar_documents_MINI_LM("Oktoberfest in Bayern", 3)["segment_text"])
 
 # print(get_most_similar_documents_Llama2("Reisen", 3))
+
+# get_most_similar_documents_tf_idf("Oktoberfest", 4)

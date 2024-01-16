@@ -40,7 +40,7 @@ def calculate_distances_optimized(message, tfidf_vectorizer, tfidf_matrix):
 def calculate_distances(message):
     df = db_get_df(table="transcript_sentences")
     tfidf_vectorizer = joblib.load(os.path.join(DATA_PATH, 'tfidf_vectorizer_230k.pkl'))
-    tfidf_matrix = sparse.load_npz(os.path.join(DATA_PATH,"tf_idf_matrix_230k.npz"))
+    tfidf_matrix = sparse.load_npz(os.path.join(DATA_PATH, "tf_idf_matrix_230k.npz"))
     print("calculating distances")
     all_distances = calculate_distances_optimized(message, tfidf_vectorizer, tfidf_matrix)
     df["distance"]= all_distances
