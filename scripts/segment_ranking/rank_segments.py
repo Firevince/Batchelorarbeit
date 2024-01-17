@@ -1,6 +1,6 @@
 from db_connect import db_get_df, db_save_df
 from scipy.spatial.distance import cosine
-from scripts.Embedding_creation.embedding_creator_BERT import dokument_embedding
+from Embedding_creation.embedding_creator_BERT import dokument_embedding
 from Embedding_creation.embedding_creator_MINI_L6 import document_embedding_MINI_LM
 from Embedding_creation.embedding_creator_TF_IDF import calculate_distances
 from Embedding_creation.embedding_creator_llama_2 import document_embedding_LLama_2

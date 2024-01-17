@@ -13,7 +13,8 @@ response = client.chat.completions.create(
   messages=[
     {"role": "system", 
      "content": "Antworte ohne Erklärung nur mit 3 Stichwörtern, die zu dem Userinput passen"},
-    {"role": "user", "content": "Oktoberfest Bayern"}
+    {"role": "user", 
+     "content": "Oktoberfest Bayern"}
   ]
 )
 
