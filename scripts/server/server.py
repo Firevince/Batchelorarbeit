@@ -16,13 +16,18 @@ def process():
     user_input_time = int(request.form['time'])
 
     # Führe die gewünschten Funktionen aus
-    get_most_similar_documents_tf_idf(user_input_text, user_input_time)
+    documents = get_most_similar_documents_tf_idf(user_input_text, user_input_time)
     produce_snippets()
     produce_audio()
+    text = ""
+    if not documents.empty:
+        text = "\n".join(row["sentence"] for _,row in documents.iterrows())
+
 
     # Sende das generierte Audio-Datei zurück
     audio_path = '../../concatenated_audio.mp3'
-    return render_template('index.html')
+    return render_template('index.html', 
+                           text=text)
 
 @app.route('/audio/<filename>')
 def audio(filename):
