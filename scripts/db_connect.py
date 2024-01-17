@@ -1,25 +1,27 @@
-import sqlite3
-import pandas as pd
+from dotenv import load_dotenv
 import json
 import os
-from dotenv import load_dotenv
+import pandas as pd
+import pickle
+import sqlite3
 
 load_dotenv()
-database_path = os.getenv("DATABASE_PATH")
+DATABASE_PATH = os.getenv("DATABASE_PATH")
+DATA_PATH = os.getenv("DATA_PATH")
 
 def db_get_df(table="transcript_segments", coloumns=["*"]):
-    con = sqlite3.connect(database_path)
+    con = sqlite3.connect(DATABASE_PATH)
     df = pd.read_sql_query(f"SELECT {', '.join(coloumns)} FROM {table}", con)
     con.close()
     return df
 
 def db_save_df(df, tablename):
-    with sqlite3.connect(database_path) as con:
+    with sqlite3.connect(DATABASE_PATH) as con:
         df.to_sql(tablename, con, index=False, if_exists='replace')
 
 
 def db_insert_transcript_segment(data, filename):
-    conn = sqlite3.connect(database_path)
+    conn = sqlite3.connect(DATABASE_PATH)
     cursor = conn.cursor()
 
     for item in data:
@@ -48,7 +50,7 @@ def db_insert_transcript_segment(data, filename):
     conn.close()
 
 def create_table_transcript_segments():
-    conn = sqlite3.connect(database_path)
+    conn = sqlite3.connect(DATABASE_PATH)
     cursor = conn.cursor()
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS transcript_segments (
@@ -65,7 +67,7 @@ def create_table_transcript_segments():
     conn.close()
 
 def create_table_transcripts():
-    conn = sqlite3.connect(database_path)
+    conn = sqlite3.connect(DATABASE_PATH)
     cursor = conn.cursor()
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS transcripts (
@@ -79,7 +81,7 @@ def create_table_transcripts():
     conn.close()
 
 def db_insert_transcript(data):
-    conn = sqlite3.connect(database_path)
+    conn = sqlite3.connect(DATABASE_PATH)
     cursor = conn.cursor()
 
     cursor.execute('''
@@ -98,7 +100,7 @@ def db_insert_transcript(data):
     conn.close()
 
 def db_insert_audio_binary(audio_file, filename):
-    conn = sqlite3.connect(database_path)
+    conn = sqlite3.connect(DATABASE_PATH)
     cursor = conn.cursor()
 
     cursor.execute('''
@@ -109,6 +111,26 @@ def db_insert_audio_binary(audio_file, filename):
 
     conn.commit()
     conn.close()
+
+def db_save_df_chunkwise(df, tablename):
+    with sqlite3.connect(DATABASE_PATH) as con:
+        df.to_sql(tablename, con, index=False, if_exists='replace')
+
+
+
+def save_pkl(sentences, embeddings, filename):
+    #Store sentences & embeddings on disc
+    filepath = os.path.join(DATA_PATH, "matrices", filename)
+    with open(filepath, "wb") as fOut:
+        pickle.dump({'sentences': sentences, 'embeddings': embeddings}, fOut, protocol=pickle.HIGHEST_PROTOCOL)
+
+def load_pkl(filename):
+    filepath = os.path.join(DATA_PATH, "matrices", filename)
+    with open(filepath, "rb") as fIn:
+        stored_data = pickle.load(fIn)
+        stored_sentences = stored_data['sentences']
+        stored_embeddings = stored_data['embeddings']   
+    return (stored_sentences, stored_embeddings)
 
 # 'https://media.neuland.br.de/file/2051900/c/feed/jonathan-swift-gullivers-reisen-2.mp3',
 # 'https://media.neuland.br.de/file/2052706/c/feed/weltweite-lieferketten-wer-verbindet-wer-haelt-wer-bedroht-sie.mp3',
