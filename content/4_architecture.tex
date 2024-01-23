@@ -1,6 +1,6 @@
 \chapter{Architektur}\label{ch:method}
 
-In diesem Kapitel werden wir weiter auf die tatsächliche Implementierung des Systems eingehen.
+In diesem Kapitel wird weiter auf die tatsächliche Implementierung des Systems eingehen.
 
 \section{Anforderungen}
 
@@ -87,8 +87,9 @@ Die API stellt, ebenso wie das Tool, eine reihe verschiedener Anbieter zur verf�
 
 \section{Transktript Segment Ranking}
 
-\subsection{Keywordsuche}
+\subsection{Ählichkeitssuche lexikalisch}
 
+\subsubsection{Keywordsuche}
 
 Eine Möglichkeit bietet sich in der Keywordsuche. 
 Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wiederfindet. Ist die möchte ein User beispielsweise einen zusammengeschnittene Podcast Episode über „Zugspitze“, so schaut das System, in welchen Episodensegmenten das Wort „Zugspitze“ auftaucht, und gibt diese zurück. 
@@ -96,7 +97,7 @@ Schwieriger wird es, wenn die Useranfrage mehrere Wörter beinhaltet.
 Möchte sich der User über das Thema „Zugspitze wandern“ informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
 Dann müsste man dementsprechend auch ein Algorithmus entwickeln, der diese dann sinnvoll hierarchisiert. 
 
-\subsection{TF-IDF}
+\subsubsection{TF-IDF}
 
 Einen solchen Ansatz bietet das TF-IDF Maß (Term Frequency – Inverse Document Frequency). 
 Im Bereich des NLP verwendet man das TF-IDF Maß um zu untersuchen welche Wörter in verschiedenen Dokumenten welche Gewichtung erfahren. 
@@ -111,15 +112,34 @@ Da diese beiden Worte aber sehr ähnlich sind und der User bei einer Anfrage nic
 Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort „Klimakrise“ würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
 Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene Zeit überbrücken. Allerdings ist dieser Ansatz wenig Vielversprechend. 
 
-\subsection{Embeddings}
 
-Ein relativ moderner Ansatz besteht in der Suche mithilfe von Embedding Vektoren. Dabei versuchen wir die Semantik (also die Bedeutung) der einzelnen Segmente Mathematisch mithilfe eines Vektors zu repräsentieren. Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. Ein Vektor, der aus dem Satz „Ich sitze auf einer Bank im Grünen“ und „Im Park steht eine alte Bank“ sollen dabei sehr Ähnlich zueinander sein, der Satz „Ich gehe in die Bank und hebe Geld ab“ aber nicht sehr Ähnlich. Hierbei soll erkannt werden, dass sich die ersten beiden Sätze auf eine Bank zum Sitzen in der Natur beziehen und der dritte Satz das Geldinstitut meint. Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen. 
-Ein Regelbasierender Algorithmus würde die Unterschiede bei solchen Homonymen in keinem Fall erkennen können. Regelbasierte Algorithmen wie z.B. [QUELLE] haben auch Probleme mit negierung wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht außer gegessen“.
+\subsection{Ähnlichkeitssuche Semantisch}
 
-\subsection{Cosinus Similarity}
+\subsubsection{Embeddings}
+
+Ein relativ moderner Ansatz besteht in der Suche mithilfe von Embedding Vektoren. 
+Dabei versuchen wir die Semantik (also die Bedeutung) der einzelnen Segmente Mathematisch mithilfe eines Vektors zu repräsentieren. 
+Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. Ein Vektor, der aus dem Satz „Ich sitze auf einer Bank im Grünen“ und „Im Park steht eine alte Bank“ sollen dabei sehr Ähnlich zueinander sein, der Satz „Ich gehe in die Bank und hebe Geld ab“ aber nicht sehr Ähnlich. 
+Hierbei soll erkannt werden, dass sich die ersten beiden Sätze auf eine Bank zum Sitzen in der Natur beziehen und der dritte Satz das Geldinstitut meint. 
+Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen. 
+Ein Regelbasierender Algorithmus würde die Unterschiede bei solchen Homonymen in keinem Fall erkennen können. 
+Regelbasierte Algorithmen wie z.B. [QUELLE] haben auch Probleme mit Negierung wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht außer gegessen“.
+
+Für unsere Aufgabe ist es Sinnvoll nicht nur Inhaltliche Vergleiche zu erstellen, die überprüfen, ob zwei Sätze ungefähr die Gleiche Bedeutung haben, wie "Die Sonne bringt mich zum schwitzen" oder "Ich schmelze in der Hitze".
+Besser wäre eine asymmetrische Ähnlichkeit, wie sie bei Frage und Antwortpaaren vorkommt.
+Zum Beispiel wäre auf die Frage: "Welche Farbe hat der Himmel bei Sonnenuntergang?" ein gute Antwort: "Der Himmel hat bei Sonnenuntergang oft orange und rosa Farbtöne."  und nicht der Satz "Wie sieht der Himmel am Abend aus?"
+Diese Asymmetrische Ähnlichkeit ist schwerer zu ermitteln, da man trivialerweise in der Antwort Informationen findet, die in der Frage nicht vorkommen.
+
+Auf der 
+
+\subsubsection{Cosinus Similarity}
 
 
-Mithilfe der Embedding Vektoren können können wir Sätze finden, die zueinander Ähnlich sind. Aber was bedeutet überhaupt ähnlich? Die Vektoren des BERT Models sind 768 Dimensional, haben also 768 Gleitkommazahlen gespeichert, die zwischen -1 und 1 liegen. Diese Gleitkommazahlen Vektoren könnte man auch als Feature Vektoren begreifen. Zum Beispiel könnte die erste Zahl dieses Vektors für die Erwähnung von Professoren in dem Satz stehen (-1 für keine Professoren; 1 für viele Professoren). Die zweite Zahl könnte für das Thema Essen stehen (-1 für wenig mit Essen zu tun; 1 für sehr viel mit Essen zu tun). Damit hätte der Satz „In der Mensa gibt es jeden Tag Currywurst mit Pommes“ an der ersten Stelle vielleicht eine 0,1, weil der Begriff „Mensa“ leicht mit Uni und Professoren konnotiert wird und die zweite Stelle würde bei 0,94 liegen, da es in dem Satz offensichtlich um das Essen handelt. 
+Mithilfe der Embedding Vektoren können können wir Sätze finden, die zueinander Ähnlich sind. Aber was bedeutet überhaupt ähnlich? Die Vektoren des BERT Models sind 768 Dimensional, haben also 768 Gleitkommazahlen gespeichert, die zwischen -1 und 1 liegen. 
+Diese Gleitkommazahlen Vektoren könnte man auch als Feature Vektoren begreifen. 
+Zum Beispiel könnte die erste Zahl dieses Vektors für die Erwähnung von Professoren in dem Satz stehen (-1 für keine Professoren; 1 für viele Professoren). 
+Die zweite Zahl könnte für das Thema Essen stehen (-1 für wenig mit Essen zu tun; 1 für sehr viel mit Essen zu tun). 
+Damit hätte der Satz „In der Mensa gibt es jeden Tag Currywurst mit Pommes“ an der ersten Stelle vielleicht eine 0,1, weil der Begriff „Mensa“ leicht mit Uni und Professoren konnotiert wird und die zweite Stelle würde bei 0,94 liegen, da es in dem Satz offensichtlich um das Essen handelt. 
 In der Realität wird das Model sehr wahrscheinlich nicht so für Menschen offensichtlichen Merkmale lernen. Ein Grund dafür ist, dass das Model vor allem pro Eintrag eine linearkombination von verschiedenen Menschenoffensichtlichen Merkmalen lernen wird, also jede Zahl eine überlagerung verschiedener Eigenschaften darstellt. 
 Eine forschungsrichtung, die versucht solche Modelausgaben Menschenlesbar zu gestalten liegt in der Explainable AI
 
@@ -128,7 +148,8 @@ Um die Ähnlichkeit von diesem Satz zu der Frage „“ zu bestimmen nutzen wir 
 
 Diese Komplexen semantischen Unterschiede, oder Gemeinsamkeiten zu erkennen erfordert etwas mehr Raffinesse. 
 
-Um einen Embeddingvektor zu erstellen, benutzen wir das BERT Model. BERT, das Akronym für Bidirectional Encoder Representations from Transformer, ist ein Sprachmodel, das 2018 von Google entwickelt, und zur Benutzung freigegeben wurde. BERT ist ein Neuronales Netzwerk mit 12 Schichten, das für zwei verschiedene Aufgaben gleichzeitig trainiert wurde. Zum einen wurde es auf eine Masked Language Modeling Aufgabe und zum Anderen auf eine Next Sentence Prediction trainiert. 
+Um einen Embeddingvektor zu erstellen, benutzen wir das BERT Model. BERT, das Akronym für Bidirectional Encoder Representations from Transformer, ist ein Sprachmodel, das 2018 von Google entwickelt, und zur Benutzung freigegeben wurde. 
+BERT ist ein Neuronales Netzwerk mit 12 Schichten, das für zwei verschiedene Aufgaben gleichzeitig trainiert wurde. Zum einen wurde es auf eine Masked Language Modeling Aufgabe und zum Anderen auf eine Next Sentence Prediction trainiert. 
 
 Masked Language Modeling
 Bei dieser Aufgabe soll das Model versuchen, aus dem Kontext eines Satzes ein maskiertes Wort in diesem Satz vorherzusagen. Dafür wird dem Model ein Satz gegeben, in dem zufällige Wörter einfach versteckt werden und das Model soll für diese Wörtereine Vorhersage treffen. 
@@ -136,6 +157,10 @@ Bei dieser Aufgabe soll das Model versuchen, aus dem Kontext eines Satzes ein ma
 
 \section{Audio-Zusammensetzung}
 
+
+Für die Bearbeitung von Audio files in Python bietet sich das Python Modul Pydub an. Mit diesem Modul kann man ein Audiofile ähnlich wie ein Array behandeln, aus dem man nun einen Abschnitt von Sekunde 2 bis Sekunde 4 schneiden möchte. 
+Für die Zeitstempel der Start und End zeit jedes Audiosegments nehmen wir die Daten aus der sortierten Ranked segments.json Datei.
+Diese werden dann als extra Audiofiles abgespeichert und im nächsten Schritt wieder Zusammengesetzt.
 
 Um die Audios nun wieder zusammenzusetzen verwenden wir das gleiche Modul Pydub. Es bieten sich mehrere Möglichkeiten an, die Audiosegmente wieder zusammenzusetzen. Man könnte die Segmente einfach ohne Pause hintereinander abspielen. Dabei folgen allerdings mehrere Probleme: 
 Zum einen werden die Audiofiles nicht immer an sehr passenden Stellen getrennt, sodass manchmal mitten im Wort abgebrochen wird und das nächste Segment beginnt. 
@@ -153,17 +178,3 @@ Die Datengrundlage bilden zunächst einige Podcast-Reihen aus der ARD Audiothek.
 Auf Anfrage des Benutzers werden dann die relevantesten Ausschnitte aus den Transkripten herausgesucht und die entsprechenden Audiodateien herausgeschnitten. Ein weiteres System ist dafür verantwortlich, diese Dateien nach ihrer Bedeutung oder inhaltlichen Nähe zu sortieren und sicherzustellen, dass der zuvor festgelegte Zeitrahmen eingehalten wird. Die Audiodateien werden dann zusammengeführt und dem Benutzer über eine benutzerfreundliche Schnittstelle als Stream zum Abspielen angeboten.
 
 Der Hauptteil dieser Arbeit liegt in der semantischen Analyse der Audiotranskripte und der sorgfältigen Auswahl passender Abschnitte zum gewählten Thema. Dies soll durch den Einsatz von Embeddings oder einer Schlagwortsuche realisiert werden. Für die Verwendung von Embeddings könnten maschinelle Lernverfahren, wie beispielsweise das Google Bert, herangezogen werden. Eine zusätzliche Herausforderung besteht darin, die Audioausschnitte entsprechend zuzuschneiden, sodass Sätze sauber getrennt werden und die Übergänge zwischen den verschiedenen Audioausschnitten nicht zu abrupt sind. Dadurch wird gewährleistet, dass der Benutzer nicht zu stark zwischen verschiedenen Themenaspekten hin und her geworfen wird.
-
-\cite{barthel}
-\cite{choi2018}
-\cite{clark2020}
-\cite{du2017}
-\cite{jones2021}
-\cite{kang2012}
-~\cite{karpukhin2020}
-\cite{laban2022}
-\cite{lochrie2018}
-\cite{maroni2020}
-\cite{moldovan2000}
-\cite{zhang2020}
-\cite{oord2017}

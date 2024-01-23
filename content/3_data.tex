@@ -46,4 +46,27 @@ Allerdings ist die Transkription meist nicht sehr akkurat.
 Zum Beispiel steht in der Transkription des Satzes ... TODO
 Das liegt daran, das die Transkriptionen mithilfe der Tools vom Fraunhofer Instituts erstellt werden, welches vermutlich veraltete Technik benutzt.
 
+\section{Datenspeicherung}
+
+Die MP3 Datein der einzelnen Podcast Episoden werden in einem seperaten Ordner gespeichert und die Benennung der originalen Datein wird aus der URL übernommen.
+Für die Speicherung der Transkripte, wird das relationale Datenbank Managment System (RDBMS) SQLite  genutzt.
+SQLite ist für Datenanalysezwecke sehr gut geeignet, weil es simpel und performant ist und das Projekt opensource und kostenlos nutzbar ist.
+Im Gegensatz zu anderen RDBMS, wie mySQL oder PostgreSQL arbeitet SQLite Serverlos und speichert alle Tabellen in einer einzigen Datei, was sehr nützlich für den Datenaustausch zwischen verschiedenen Geräten ist.
+Für einige Operationen, wie die Transkription der Audiodatein, oder die Generierung von Embeddings wird die Hardware eines High-Performance Clusters der Technischen Hochschule Nürnberg genutzt. 
+Um die Daten zu analysieren und zu nutzen bietet es sich an auf Consumer-hardware zu wechseln und dafür ist eine gute Portabilität der Datenbank von Vorteil.
+
+SQLite unterstützt Datenmengen bis zu 140 TB, allerdings auf der offiziellen Webseite angegeben, dass ab einer größe über 1 TB auf serverbasierte RDBMS umgestiegen werden sollte, da die Gesammte Datenbank in einem File gespeichert ist und viele Betriebssysteme eine maximale Größe der Datein vorgeben.
+Falls das Projekt in der Zukunft auf mehr Audiomaterial ausgeweitet wird sollte ein Wechsel des DBMS in betracht gezogen werden.
+
+Da SQlite nativ keine Listen oder Tabellen als Einträge in einer Datenbank speichern kann, ist es nicht trivial, die Embeddings abzuspeichern.
+Zunächst wurde die Möglichkeit in betracht gezogen, jeden einzelnen Eintrag aus einem Embedding in als seperaten Eintrag in einer Tabelle zu speichern. 
+
+Das führte allerdings zu dem Problem, dass SQLite die Anzahl an Tokens für einen SQL Befehl limitiert, ???
+
+Als nächstes wurde überprüft, ob man jedes Embedding als Serialisiertes Array abspeichern kann.
+Dafür wurde jedes Embedding in einen JSON String umgewandelt, um diesen abzuspeichern. 
+Dabei kommt leider das Problem auf, dass bei der Verwendung der Daten diese aus dem JSON deserialisiert werden müssen, was bei so vielen Daten zu lange dauert.
+Auf den 300.000 Sätzen mit einem 384 dimensionalen Embedding ca. h.
+
+Es wurde nicht untersucht, ob andere Serialisierungsmethoden, wie Protobuf hier geeignet wären.
 
