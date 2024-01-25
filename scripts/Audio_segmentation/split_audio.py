@@ -31,11 +31,11 @@ def split_audio(audio_filename, start, end):
     return segment
 
 
-def produce_snippets():    
-    ranked_timestamped_df = db_get_df("best_fitting")
+def produce_audio_snippets(best_fitting_df):    
+    # ranked_timestamped_df = db_get_df("best_fitting")
     delete_files_in_directory(AUDIO_SEGMENT_PATH)
 
-    for i, row in ranked_timestamped_df.iterrows():
+    for i, row in best_fitting_df.iterrows():
         audio_filename = row['filename']
         start = row["start"] 
         end = row["end"]    
