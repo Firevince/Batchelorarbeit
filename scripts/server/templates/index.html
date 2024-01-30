@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Webseite</title>
+    <title>Podcast Ersteller</title>
     <style>
         body {
             font-family: Helvetica, sans-serif;
@@ -30,6 +30,30 @@
             width: 100%;
             max-width: 500px;
             margin-top: 20px;
+        }
+        .styled-table {
+            text-align: left;
+            border-collapse: collapse;
+            margin: 100px;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #7172ba;
         }
     </style>
         <script>
@@ -61,8 +85,23 @@
         <source src="audio/concatenated_audio.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <div id="text-container">
-        {{ text }}
+    <div id="text-container" class="styled-table">
+        <table>
+            <tr>
+                <th>Filename</th>
+                <th>Bild</th>
+                <th>Abschnitt</th>
+            </tr>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row['filename'] }}</td>
+                <td><img src="{{ row['image_path'] }}" alt="Picture"></td>
+                <td>
+                    {{ row['sentence'] }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 </body>
 </html>
