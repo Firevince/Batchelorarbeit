@@ -5,6 +5,7 @@ import json
 from db_connect import db_get_df, db_save_df
 import os
 from dotenv import load_dotenv
+from concurrent.futures import ThreadPoolExecutor
 
 load_dotenv()
 AUDIO_SOURCE_PATH = os.getenv("AUDIO_SOURCE_PATH")
@@ -22,26 +23,30 @@ def delete_files_in_directory(directory):
         print(f"Error deleting files: {str(e)}")
 
 
-def split_audio(audio_filename, start, end):
+def split_audio(audio_filename, start, end, output_file):
     file_path = os.path.join(AUDIO_SOURCE_PATH, audio_filename)
     audio_file = AudioSegment.from_file(file_path)
     start_time = start * 1000
     end_time = end * 1000
     segment = audio_file[start_time:end_time]
-    return segment
+    segment.export(output_file, format="wav")
+    print(f"Segment saved as {output_file}")
 
 
-def produce_audio_snippets(best_fitting_df):    
-    # ranked_timestamped_df = db_get_df("best_fitting")
+def produce_audio_snippets(best_fitting_df):
     delete_files_in_directory(AUDIO_SEGMENT_PATH)
+    
+    with ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
+        futures = []
+        for i, row in best_fitting_df.iterrows():
+            audio_filename = row['filename']
+            start = row["start"]
+            end = row["end"]
+            output_file = os.path.join(AUDIO_SEGMENT_PATH, f"segment_{i}.wav")
+            futures.append(executor.submit(split_audio, audio_filename, start, end, output_file))
+            
+        for future in futures:
+            future.result() 
 
-    for i, row in best_fitting_df.iterrows():
-        audio_filename = row['filename']
-        start = row["start"] 
-        end = row["end"]    
-        audio_segment = split_audio(audio_filename, start, end)
 
-        output_file = os.path.join(AUDIO_SEGMENT_PATH, f"segment_{i}.mp3")
-        audio_segment.export(output_file, format="mp3")
-        print(f"Segment {i} saved as {output_file}")
 

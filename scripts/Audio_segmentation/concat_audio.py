@@ -10,7 +10,7 @@ def concatenate_segments_with_sound(segment_files, output_file, inbetween_sound_
         concatenated_audio += inbetween_sound
         concatenated_audio += segment
 
-    concatenated_audio.export(output_file, format="mp3")
+    concatenated_audio.export(output_file, format="wav")
 
 def produce_final_audio():
     segment_files = []
