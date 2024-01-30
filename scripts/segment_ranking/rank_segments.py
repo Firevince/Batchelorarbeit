@@ -1,15 +1,15 @@
 from db_connect import db_get_df, db_save_df
 from scipy.spatial.distance import cosine
-from Embedding_creation.embedding_creator_BERT import dokument_embedding
+# from Embedding_creation.embedding_creator_BERT import dokument_embedding
 from Embedding_creation.embedding_creator_MINI_L6 import document_embedding_MINI_LM
 from Embedding_creation.embedding_creator_TF_IDF import calculate_distances
 from Embedding_creation.embedding_creator_llama_2 import document_embedding_LLama_2
-from chatgpt_sort_segments import gpt_order
+from segment_ranking.chatgpt_help import gpt_order_segments
 import json
 import pandas as pd
 
 
-def extend_segment_time(segment, transcript_df, num_prev_sentences=2, num_next_sentences=2):
+def enrich_segment(segment, transcript_df, num_prev_sentences=2, num_next_sentences=2):
     segment = segment.copy()
     segment_id = segment.loc["segment_id"]
     filename = segment.loc["filename"]
@@ -35,7 +35,7 @@ def extend_segment_time(segment, transcript_df, num_prev_sentences=2, num_next_s
 
 
 def enrich_segments(df_distance, df_all):
-    enriched_segments_df = pd.concat([extend_segment_time(row, df_all) for _, row in df_distance.iterrows()])
+    enriched_segments_df = pd.concat([enrich_segment(row, df_all) for _, row in df_distance.iterrows()])
     enriched_segments_df = enriched_segments_df.reset_index(drop=True)
     return enriched_segments_df
 
@@ -43,17 +43,17 @@ def calculate_document_question_distance(sentence_embedding, document_embedding)
     diff_bank = cosine(sentence_embedding, document_embedding)
     return diff_bank
 
-def get_most_similar_documents_Bert(message, amount):
-    df = db_get_df(["filename", "segment_text", "embedding_json", "start", "end"], 
-                   table="transcript_segments")
-    question_embedding = dokument_embedding(message)
+# def get_most_similar_documents_Bert(message, amount):
+#     df = db_get_df(["filename", "segment_text", "embedding_json", "start", "end"], 
+#                    table="transcript_segments")
+#     question_embedding = dokument_embedding(message)
 
 
-    df["distance"] = [calculate_document_question_distance(question_embedding, json.loads(document_embedding))for document_embedding in df["embedding_json"]]
+#     df["distance"] = [calculate_document_question_distance(question_embedding, json.loads(document_embedding))for document_embedding in df["embedding_json"]]
 
-    most_similar_documents = df.nsmallest(amount, "distance")
-    db_save_df(most_similar_documents, "best_fitting")
-    return most_similar_documents
+#     most_similar_documents = df.nsmallest(amount, "distance")
+#     db_save_df(most_similar_documents, "best_fitting")
+#     return most_similar_documents
 
 def get_most_similar_documents_MINI_LM(message, amount):
     df = db_get_df("transcript_segments_MiniLM_L6")
@@ -87,7 +87,7 @@ def get_most_similar_documents_tf_idf(message, amount):
 
     print(df_distance["sentence"])
     print("asking chatgpt")
-    df_distance = gpt_order(df_distance)
+    df_distance = gpt_order_segments(df_distance)
     print(df_distance["sentence"])
 
     db_save_df(df_distance, "best_fitting")
@@ -112,4 +112,4 @@ def get_most_similar_documents_tf_idf(message, amount):
 
 # print(get_most_similar_documents_Llama2("Reisen", 3))
 
-print(get_most_similar_documents_tf_idf("Oktoberfest", 8))
+# print(get_most_similar_documents_tf_idf("Oktoberfest", 8))
