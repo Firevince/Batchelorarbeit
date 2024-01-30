@@ -7,6 +7,34 @@ In Deutschland ist die ARD Audiothek ein großer Podcastanbieter mit mitlerweile
 
 Gleichzeitig wächst auch der Markt an AI-basierten Podcasts. So erreichen heute schon AI-basierte Podcasts rund 45 Millionen US-Amerikaner 
 
+\section{Related Work}
+
+Im Bereich der automatisierten Podcast Erstellung gibt es einige Versuche mittels künstlich generierter Texte und Stimmen einen eigenen Podcast zu erstellen.
+
+In dem Artikel \glqq NewsPod: Automatic and Interactive News Podcasts\grqq{} \cite{laban2022} wird ein neuer Ansatz für die automatische Erstellung von Podcast Episoden vorgestellt. 
+Dabei ermitteln mehrere Machine Learning Systeme den Inhalt von bestimmten Nachrichtenseiten und extrahieren daraus Fragestellungen, die den Inhalt des Textes wiederspiegeln sollen. Die Autoren benutzen ein GPT-2 Sprachmodell, das auf Fragengenerierung trainiert wurde, um aus jedem Absatz 7 Fragen zu ermitteln. 
+Für jede Frage wird dann eine Seperate Antwort generiert. 
+Der Wichtigste Aspekt an diesem Artikel ist, dass die Benutzer der Software Interaktiv agieren können und selbstgewählte Fragen mithilfe eines Mikrofons oder einer Tastatur stellen können, die dann von dem System beantwortet werden. 
+Die Autoren dieses Papers führen außerdem zwei Studien zur Nutzung dieses Systems durch.
+Der Gegenstand der ersten Studie ist das die Zufriedenheit einer Testgruppe mit der Erzählweise des Textes und der automatisch generierten Stimme des Sprechers. 
+Die zweite Studie untersucht die Interaktion der Zuhörer während der Benutzung des Systems. 
+\cite{laban2022}
+
+In der ersten Studie konnten die Autoren feststellen, dass einer ihrer Ansätze, QA Best,  so erfolgreich war, dass \glqq  80\% of QA Best listeners said they would use the system to listen to the news in the future\grqq{}  \cite{laban2022}.
+Die zweite Studie kommt zu dem Schluss, dass zwar die Bereitschaft eigene Fragen zu stellen mit 85\% der Zuhörer sehr hoch war, die Zufriedenheit der Tester mit der Qualität der Antworten aber sehr gering ausfiel, da \glqq  76\% of the answers were rated Irrelevant/Confusing\grqq{} \cite{laban2022}.
+Als zweites würde ich die Arbeit von \cite{zhang2020} priorisieren, da sie als Vorarbeit von \cite{laban2022} dient und das wichtige Summarization-Modell PEGASUS vorstellt, das ich auch in meiner Arbeit verwenden kann.
+
+Als weitere Quellen werde ich \cite{karpukhin2020}, \cite{reddy2019} und \cite{choi2018} verwenden, die sich alle mit der automatischen Fragen- und Antwortgenerierung aus Texten beschäftigen.
+\cite{karpukhin2020} ist dabei der neueste Ansatz zur Ermittlung von Kontext, der sich außerdem von dem TF-IDF Algorithmus unterscheidet und sehr gute Ergebnisse verspricht.
+
+Für das Design der Podcast Episoden werde ich die Artikel von Podcast Übersicht von \cite{jones2021} verwenden, in dem mithilfe von Deep Learning Ansätzen mehr als 100.000 Podcast Episoden analysiert wurden und daraus Aspekte für eine erfolgreiche Podcast Episode kristalisiert wurden. Diese Aspekte werden mir bei der Gestaltung und dem Aufbau einer Episode helfen. 
+
+In dem Paper \cite{kang2012} untersuchten die Autoren den Effekt von mehrere Stimmen auf das Podcasterlebnis. Außerdem untersuchten Sie in Ihrer Studie die Effekte des Erzählstils und finden heraus, dass informelle Sprache und ein ungezwungener Kommunikationsstil das Erlebnis von Zuhörern verbessert. 
+
+Im weiteren werde ich noch die Arbeiten von \cite{maroni2020}, \cite{clark2020} und \cite{du2017} verwenden, die sich mit Deep Learning Modellen zur Erschließung von Texten beschäftigen.
+
+
+
 \section{KI in Podcasts}
 
 Künstliche Intelligenz verändert die Branche des Podcastings in vielerlei Hinsicht. 
@@ -33,6 +61,8 @@ Neuere Forschung im Bereich des Natural Language Processing bietet einige Ansät
 Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder Texte in Vektoren umzuwandeln, die den Inhalt dieser Worte oder dieser Texte repräsentiert.
 Diese Vektoren nennt man Embeddings.
 Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin, passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
+
+\section{Frühere Embedding verfahren}
 
 Die Geschichte der Embeddings startet mit stochastischen Verfahren, wie TF-IDF und BM25. 
 Term Frequency - inverse Dokument Frequency (TF-IDF) ist ein Algorithmus um Dokumente nach Keyworten zu durchsuchen.

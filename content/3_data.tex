@@ -8,13 +8,23 @@ Die App der Audiothek hat im Google PlayStore über eine Millionen Downloads und
 
 Insgesamt hören in Deutschland ca. 
 
+\section{Podcastreihe Radiowissen}
+
+Zur automatischen Generierung von Podcast Episoden bietet es sich an, dass in den Ausgangsaudios die Sprache klar und verständlich ist und verschiedene Sprecher sich nicht ins Wort fallen und gleichzeitig reden.
+Außerdem ist es wünschenswerte die ausgeschnittenen Audiosegmente an klaren Satzgrenzen zu teilen, sodass der Ausschnitt nicht mitten im Satz beginnt und dem Zuhörer der Kontext vorenthalten wird. 
+Als Datengrundlage wird die Podcastreihe Radiowissen von bayern2 benutzt. 
+Diese ist nicht wie ein klassischer Podcast im Dialogstil aufgebaut, sondern ähnlich wie ein Höhrspiel von einem Manuskript abgelesen.
+Dazu kommen verschiedene Geräusche und verschiedene Stimmen.
+
+
+
 \section{Die ARD-Audiothek API}
 
 Die Inhalte in der ARD Audiothek kann man entweder dirkt über die die Webseite erreichen, oder mithilfe einer frei benutzbare Web-GraphQL API abfragen.
 (https://api.ardaudiothek.de/graphql) 
 Über diese Schnittstelle bekommt man alle Informationen, wie den Titel, die Beschreibungen, die Autoren und auch den Link zu dem mp3 file jeder Episode.
 
-Über die Abfrage \autoref{app:supplemental-information} erhält man alle Podcast Episoden des Podcasts "Radio Wissen" von bayern2.
+Über die Abfrage \autoref{app:supplemental-information} erhält man alle Download Links zu den Podcast Episoden des Podcasts "Radio Wissen" von bayern2.
 Das sind (Stand 3. Januar 24) 2257 Podcast Episoden.
 Dabei kommt es insgesamt 15 mal vor, dass zwei Episoden den selben Titel tragen, aber eine unterschiedliche Download-URL aufweisen.
 Die URL unterscheidet sich nur, indem hinten die Zeichen "-1" oder "-2" angefügt wurden.
@@ -24,6 +34,8 @@ Es gibt auch Fälle in denen beide Links funktionieren, wie zum Beispiel
 https://media.neuland.br.de/file/32891/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben.mp3 und
 https://media.neuland.br.de/file/1858845/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben-1.mp3   
 
+Über eine weitere Anfrage \autoref{app:supplemental-information} bekommt man die Beschreibungen der einzelnen Episoden. 
+
 Eine Vermutung für die doppelte Verfügbarkeit der Episoden gibt es nicht. TODO
 
 Jede dieser Episoden ist ungefähr 20 Minuten lang und verbraucht ungefähr 20 MB Speicherplatz.
@@ -32,8 +44,6 @@ Zusammen sind diese Audiodaten ungefähr 47 GB groß.
 \includegraphics[width=\linewidth]{figures/mp3_length.png}
 
 Die Transkripte der Episoden sind meißt ca. 3000 Wörter lang und benötigen ungefähr 20 KB Speicherplatz. [TODO Graphiken einfügen]
-
-
 
 
 
@@ -69,4 +79,9 @@ Dabei kommt leider das Problem auf, dass bei der Verwendung der Daten diese aus 
 Auf den 300.000 Sätzen mit einem 384 dimensionalen Embedding ca. h.
 
 Es wurde nicht untersucht, ob andere Serialisierungsmethoden, wie Protobuf hier geeignet wären.
+
+Stattdessen wurde das python Modul pickle verwendet, welches arauf spezialisiert ist, python Objekte effizient als bytecode zu serialisieren. 
+Es bietet auch die Möglichkeit Datenstrukturen effizient zu speichern und zu laden und hat seit Python 3.8 auch guten support, um große NumPy Arrays effizient zu speichern, was zuvor nur mit der joblib Bibliothek möglich war.
+
+Für den TF-IDF Algorithmus, bei dem ein Vokabular von mehr als 200.000 Wörtern eine ebensogroße Dimensionalität der Embeddingvektoren benötigt, würde ein normaler Serialisierungsalgorithmus für die 300.000 Sätze ca 60 Milliarden Werte abspeichern.
 

@@ -11,3 +11,9 @@
 *.out
 *.fdb_latexmk
 *.fls
+
+thsesis.pdf
+thesis.synctex.gz
+thesis.synctex(busy)
+
+.DS_Store

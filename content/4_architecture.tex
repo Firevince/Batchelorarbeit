@@ -7,7 +7,8 @@ In diesem Kapitel wird weiter auf die tatsächliche Implementierung des Systems 
 Um das Projekt weiter einzuordnen, bietet es sich an, vorab Anforderungen an das System zu stellen. 
 Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice Einzelne Anforderungen gestellt: 
 
-Zunächst muss die Datengrundlage geschafft werden. Dafür müssen die Podcasts lö
+Zunächst muss die Datengrundlage geschafft werden. 
+Dafür müssen die Podcasts lö
 
 \section{Vorgehensweise}
 
@@ -171,10 +172,4 @@ Außerdem sollte dem Hörer bewusst sein, dass ein Audiosegment aus einer Episod
 Eine weitere Möglichkeit wäre, zwischen jedem Segment dem Hörer eine kurze Vorstellung der Episode und der Sprecher*in zu ermöglichen oder sogar Kontext zu dieser zu geben. 
 
 
-% \section{erstes Exposee}
 
-Die Datengrundlage bilden zunächst einige Podcast-Reihen aus der ARD Audiothek. Diese Audiodateien müssen zuerst transkribiert werden, falls kein Transkript bereits vorliegt. Anschließend werden diese Transkripte mit Zeitstempeln im Audio versehen. Danach müssen die Transkripte einer semantischen Analyse unterzogen werden, wobei Schlagwortextraktion oder Word Embeddings als mögliche Ansätze in Betracht kommen.
-
-Auf Anfrage des Benutzers werden dann die relevantesten Ausschnitte aus den Transkripten herausgesucht und die entsprechenden Audiodateien herausgeschnitten. Ein weiteres System ist dafür verantwortlich, diese Dateien nach ihrer Bedeutung oder inhaltlichen Nähe zu sortieren und sicherzustellen, dass der zuvor festgelegte Zeitrahmen eingehalten wird. Die Audiodateien werden dann zusammengeführt und dem Benutzer über eine benutzerfreundliche Schnittstelle als Stream zum Abspielen angeboten.
-
-Der Hauptteil dieser Arbeit liegt in der semantischen Analyse der Audiotranskripte und der sorgfältigen Auswahl passender Abschnitte zum gewählten Thema. Dies soll durch den Einsatz von Embeddings oder einer Schlagwortsuche realisiert werden. Für die Verwendung von Embeddings könnten maschinelle Lernverfahren, wie beispielsweise das Google Bert, herangezogen werden. Eine zusätzliche Herausforderung besteht darin, die Audioausschnitte entsprechend zuzuschneiden, sodass Sätze sauber getrennt werden und die Übergänge zwischen den verschiedenen Audioausschnitten nicht zu abrupt sind. Dadurch wird gewährleistet, dass der Benutzer nicht zu stark zwischen verschiedenen Themenaspekten hin und her geworfen wird.
