@@ -1,0 +1,17 @@
+FROM python:3.8.10
+
+RUN apt-get update && apt-get install -y ffmpeg
+
+WORKDIR /app
+
+COPY docker_requirements.txt .
+RUN pip install -r docker_requirements.txt
+
+RUN mkdir /app/data
+RUN mkdir /app/data/Podcast_Episoden
+
+ENV PYTHONPATH=/app/scripts
+
+COPY . .
+
+CMD ["python", "scripts/server/server.py"]
