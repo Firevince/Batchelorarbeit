@@ -1,7 +1,7 @@
 import json
 import os
-from scripts.db_connect import db_insert_transcript
 
+from scripts.db_connect import db_insert_transcript
 
 for filename in os.listdir("data/Episode_transcripts_timestamped"):
     # Load JSON data

@@ -1,7 +1,8 @@
-from mutagen.mp3 import MP3
-from mutagen.id3 import ID3, APIC
-from dotenv import load_dotenv
 import os
+
+from dotenv import load_dotenv
+from mutagen.id3 import APIC, ID3
+from mutagen.mp3 import MP3
 
 load_dotenv()
 AUDIO_SOURCE_PATH = os.getenv("AUDIO_SOURCE_PATH")

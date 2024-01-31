@@ -1,7 +1,8 @@
-from db_connect import db_get_df, db_save_df
-from faster_whisper import WhisperModel
 import pandas as pd
 import torch
+from db_connect import db_get_df, db_save_df
+from faster_whisper import WhisperModel
+
 
 def transcribe(filename):
     device = "cuda" if torch.cuda.is_available() else "cpu"

@@ -1,8 +1,9 @@
+import json
 import os
+
 import requests
 from dotenv import load_dotenv
 from openai import OpenAI
-import json
 
 load_dotenv()
 API_KEY = os.getenv("OPENAI_KEY")
@@ -94,4 +95,34 @@ def gpt_order_segments(df):
     #  9. Am nächsten Tag wurde der Streik brutal unterdrückt. 
     #  10. Danach blieb der Widerstand in Amsterdam lange Zeit schwach. 
     #  11. Erst als sich 1943 die deutsche Niederlage abzeichnete, entwickelte sich eine breitere Bewegung."""}
-  
+
+
+
+client = OpenAI(api_key=API_KEY)
+response = client.chat.completions.create(
+    model="gpt-3.5-turbo-1106",
+    response_format={ "type": "json_object" },
+    messages=[
+        {
+            "role": "system", 
+            "content": """
+                Bringe die Abschnitte in eine logische Reihenfolge.
+                Antworte in JSON Format als ein Array 'Reihenfolge' in welchem nur die Nummern der Sätze stehen """
+        },
+        {
+            "role": "user", 
+            "content": """
+                1. Die Siedlung wuchs, wurde zu einem kleinen Hafen, und am 27. Oktober 1275 wurde Amsterdam von Graf Florens V. von Holland erstmals urkundlich erwähnt, noch als Amstelledamme.
+                2. Danach blieb der Widerstand in Amsterdam lange Zeit schwach. 
+                3. Die niederländischen Rebellen blockierten nun den Amsterdamer Hafen, so dass die Stadt schnell verarmte. 
+                4. Die Geschichte der Stadt Amsterdam reicht bis in die Römerzeit zurück. 
+                5. Während der Zeit entwickelte sich Amsterdam von einer auf Pfählen gebauten Siedlung zu der über 800.000 Einwohner zählenden Hauptstadt der Niederlande.
+                6. Um das Jahr 1250 entstanden die ersten von Bauern und Fischern bewohnten Siedlungen bei Amsterdam.
+                7. Demonstranten zogen durch die Straßen und riefen: „Weg mit den Judenpogromen!“ 
+                8. Züge und Straßenbahnen standen still, Werft- und Fabrikarbeiter legten die Arbeit nieder. 
+                9. Die in die Stadt kommenden Kaufleute lehnten sich gegen die vom Adel unterstützten Katholiken auf.
+                10. Erst als sich 1943 die deutsche Niederlage abzeichnete, entwickelte sich eine breitere Bewegung.
+                11. Am nächsten Tag wurde der Streik brutal unterdrückt. 
+            """
+        }
+])

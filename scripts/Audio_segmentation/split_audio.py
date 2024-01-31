@@ -1,11 +1,12 @@
-from pydub import AudioSegment
-import io
 import datetime
+import io
 import json
-from db_connect import db_get_df, db_save_df
 import os
-from dotenv import load_dotenv
 from concurrent.futures import ThreadPoolExecutor
+
+from db_connect import db_get_df, db_save_df
+from dotenv import load_dotenv
+from pydub import AudioSegment
 
 load_dotenv()
 AUDIO_SOURCE_PATH = os.getenv("AUDIO_SOURCE_PATH")

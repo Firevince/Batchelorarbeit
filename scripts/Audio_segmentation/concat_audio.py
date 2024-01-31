@@ -1,5 +1,7 @@
-from pydub import AudioSegment
 import os
+
+from pydub import AudioSegment
+
 
 def concatenate_segments_with_sound(segment_files, output_file, inbetween_sound_file):
     concatenated_audio = AudioSegment.empty()

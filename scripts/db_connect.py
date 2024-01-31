@@ -1,9 +1,10 @@
-from dotenv import load_dotenv
 import json
 import os
-import pandas as pd
 import pickle
 import sqlite3
+
+import pandas as pd
+from dotenv import load_dotenv
 
 load_dotenv()
 DATABASE_PATH = os.getenv("DATABASE_PATH")

@@ -1,9 +1,9 @@
+import os
+
+import pandas as pd
 from db_connect import db_get_df, db_save_df
 from faster_whisper_word_level import transcribe
-import os
-import pandas as pd
 from tqdm import tqdm
-
 
 # directory = "/home/neumannvi84434/Bachelorarbeit/Bachelorarbeit/data/Episode_audio_files"
 directory = "/nfs/scratch/students/neumannvi84434/Podcast_Episoden/"

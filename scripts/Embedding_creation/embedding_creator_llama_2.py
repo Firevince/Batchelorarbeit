@@ -1,8 +1,10 @@
-from transformers import AutoModel, AutoTokenizer
-from sklearn.metrics.pairwise import cosine_similarity
-from db_connect import db_get_df, db_save_df
-import pandas as pd
 from datetime import datetime
+
+import pandas as pd
+from db_connect import db_get_df, db_save_df
+from sklearn.metrics.pairwise import cosine_similarity
+from transformers import AutoModel, AutoTokenizer
+
 
 def calc_part():
     model = AutoModel.from_pretrained('mesolitica/llama2-embedding-1b-8k', trust_remote_code = True)

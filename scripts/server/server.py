@@ -1,9 +1,12 @@
 import os
-from flask import Flask, render_template, request, send_from_directory
-from segment_ranking.rank_segments import get_most_similar_documents_tf_idf, get_most_similar_documents_MINI_LM, get_most_similar_documents_Llama2
-from Audio_segmentation.split_audio import produce_audio_snippets
+
 from Audio_segmentation.concat_audio import produce_final_audio
 from Audio_segmentation.get_audio_metadata import save_all_images
+from Audio_segmentation.split_audio import produce_audio_snippets
+from flask import Flask, render_template, request, send_from_directory
+from segment_ranking.rank_segments import (get_most_similar_documents_Llama2,
+                                           get_most_similar_documents_MINI_LM,
+                                           get_most_similar_documents_tf_idf)
 
 app = Flask(__name__)
 

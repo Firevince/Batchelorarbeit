@@ -1,5 +1,6 @@
-from transformers import BertModel, BertTokenizer
 import torch
+from transformers import BertModel, BertTokenizer
+
 
 def dokument_embedding(dokument_text):
     tokenizer = BertTokenizer.from_pretrained('bert-base-german-cased')
