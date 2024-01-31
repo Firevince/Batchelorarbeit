@@ -1,6 +1,29 @@
 from sentence_transformers import SentenceTransformer
+import numpy as np
+import torch 
+from tqdm import tqdm
 
 def document_embedding_MINI_LM(doc_text):
-    model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+
+    model = SentenceTransformer('paraphrase-MiniLM-L6-v2', device=device)
     doc_embedding = model.encode(doc_text)
     return doc_embedding
+
+def all_document_embeddings_batchwise_MINI_LM(documents):
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model = SentenceTransformer('paraphrase-MiniLM-L6-v2', device=device)
+
+    all_embeddings_list = []
+
+    batch_size = 1000
+    for i in tqdm(range(0, len(documents), batch_size)):
+        batch_embedding = model.encode(documents[i:i+batch_size])
+        all_embeddings_list.append(batch_embedding)
+
+    # Convert the list of batch embeddings to a 2D NumPy array
+    all_embeddings = np.vstack(all_embeddings_list)
+
+    
+    return all_embeddings
+

@@ -1,4 +1,4 @@
-from db_connect import db_get_df, db_save_df
+from db_connect import db_get_df, db_save_df, load_pkl
 from scipy.spatial.distance import cosine
 from Embedding_creation.embedding_creator_BERT import dokument_embedding
 from Embedding_creation.embedding_creator_MINI_L6 import document_embedding_MINI_LM
@@ -85,6 +85,8 @@ def get_most_similar_documents_Bert(message, amount):
 
 
 def get_most_similar_documents_MINI_LM(message, amount):
+
+    
     df = db_get_df("transcript_segments_MiniLM_L6")
     question_embedding = document_embedding_MINI_LM(message)
 

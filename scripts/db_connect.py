@@ -118,19 +118,19 @@ def db_save_df_chunkwise(df, tablename):
 
 
 
-def save_pkl(sentences, embeddings, filename):
+def save_pkl(embeddings, filename):
     #Store sentences & embeddings on disc
     filepath = os.path.join(DATA_PATH, "matrices", filename)
+    print(filepath)
     with open(filepath, "wb") as fOut:
-        pickle.dump({'sentences': sentences, 'embeddings': embeddings}, fOut, protocol=pickle.HIGHEST_PROTOCOL)
+        pickle.dump({'embeddings': embeddings}, fOut, protocol=pickle.HIGHEST_PROTOCOL)
 
 def load_pkl(filename):
     filepath = os.path.join(DATA_PATH, "matrices", filename)
     with open(filepath, "rb") as fIn:
         stored_data = pickle.load(fIn)
-        stored_sentences = stored_data['sentences']
         stored_embeddings = stored_data['embeddings']   
-    return (stored_sentences, stored_embeddings)
+    return stored_embeddings
 
 # 'https://media.neuland.br.de/file/2051900/c/feed/jonathan-swift-gullivers-reisen-2.mp3',
 # 'https://media.neuland.br.de/file/2052706/c/feed/weltweite-lieferketten-wer-verbindet-wer-haelt-wer-bedroht-sie.mp3',
