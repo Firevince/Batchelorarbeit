@@ -136,6 +136,7 @@ def db_save_df_chunkwise(df, tablename):
 def save_pkl(embeddings, filename):
     # Store sentences & embeddings on disc
     filepath = os.path.join(DATA_PATH, "matrices", filename)
+    print(filepath)
     with open(filepath, "wb") as fOut:
         pickle.dump({"embeddings": embeddings}, fOut, protocol=pickle.HIGHEST_PROTOCOL)
 
