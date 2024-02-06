@@ -1,0 +1,9 @@
+node_modules/
+db/
+dist/
+bundle/
+bundle.zip
+
+keys/
+platforms
+.DS_Store

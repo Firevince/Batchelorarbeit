@@ -32,3 +32,4 @@ logs/*
 .vscode
 
 *.png
+.DS_Store
