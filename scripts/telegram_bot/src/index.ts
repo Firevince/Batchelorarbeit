@@ -1,17 +1,14 @@
 import { Context, Telegraf } from 'telegraf'
 import { Update } from 'telegraf/typings/core/types/typegram';
 import { fetchUrlBySearchQuery } from './fetcher';
+import { config } from './config';
 
-const BOT_TOKEN = "6676938301:AAHmBBV9d809u3TiWD3DorGk1QK4S1JoPJU";
-
-
-const bot = new Telegraf(BOT_TOKEN);
+const bot = new Telegraf(config.BOT_TOKEN);
 
 const startBot = async () => {
 	console.log("Bot running");
 	bot.use((ctx) => {		
-		const postJson = ctx.channelPost;
-		const text = (postJson as any)?.text || "";
+		const text = (ctx.update as any).message.text;
 		if(text){ onNextText(text, ctx);}
 	})
     
@@ -25,16 +22,16 @@ const startBot = async () => {
 }
 
 const onNextText = async (text: string, ctx: Context<Update>) => {
+	console.log("searching " + text)
 	const audioUrl = await fetchUrlBySearchQuery(text);
     const title = text;
     ctx.replyWithAudio(
         { url: audioUrl },
         { 
-            title: "Dein Podcast",
+            title: title,
             caption: title
         }
     );
-	ctx.reply('Welcome ' + audioUrl)
 }
 
 startBot();

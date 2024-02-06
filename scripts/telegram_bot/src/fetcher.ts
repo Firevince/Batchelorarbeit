@@ -1,3 +1,10 @@
+const fetch = require('node-fetch');
+import { config } from "./config";
+
 export const fetchUrlBySearchQuery = async (query: string) => {
-	return "https://animaapp.s3.amazonaws.com/sample-files/audio/pixabay-free-service-bell-ring-14610.mp3"
-}
+  const response = await fetch(`${config.BASE_URL}/api?text=${query}`);
+  const data = await response.json() as any;
+  const audioUrl = config.BASE_URL + data?.url;
+  console.log(audioUrl);
+  return audioUrl;
+};
