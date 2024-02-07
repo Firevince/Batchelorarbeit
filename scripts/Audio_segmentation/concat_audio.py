@@ -12,15 +12,16 @@ def concatenate_segments_with_sound(segment_files, output_file, inbetween_sound_
         concatenated_audio += inbetween_sound
         concatenated_audio += segment
 
-    concatenated_audio.export(output_file, format="wav")
+    concatenated_audio.export(output_file, format="mp3")
+
 
 def produce_final_audio():
     segment_files = []
-    output_file = "/Users/br/Projects/Bachelorarbeit/scripts/server/audio/concatenated_audio.mp3" 
-    inbetween_sound_file = "/Users/br/Projects/Bachelorarbeit/data/inter.wav"  
+    output_file = "/Users/br/Projects/Bachelorarbeit/scripts/server/static/audio/concatenated_audio.mp3"
+    inbetween_sound_file = "/Users/br/Projects/Bachelorarbeit/data/inter.wav"
     snippets_path = "/Users/br/Projects/Bachelorarbeit/data/audio_segments/"
 
-    for filename in os.listdir(snippets_path ):
-        segment_files.append(snippets_path + filename)  
+    for filename in sorted(os.listdir(snippets_path)):
+        segment_files.append(snippets_path + filename)
 
     concatenate_segments_with_sound(segment_files, output_file, inbetween_sound_file)
