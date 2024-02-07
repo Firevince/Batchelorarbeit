@@ -8,9 +8,12 @@ load_dotenv()
 AUDIO_SOURCE_PATH = os.getenv("AUDIO_SOURCE_PATH")
 DATA_PATH = os.getenv("DATA_PATH")
 
-def save_image(filename, i):
-    image_path = os.path.join(DATA_PATH, "images/cover_images", f"cover_{i}.jpg")
 
+def save_image(filename, i):
+    # image_path = os.path.join(DATA_PATH, "images/cover_images", f"cover_{i}.jpg")
+    image_path = (
+        f"/Users/br/Projects/Bachelorarbeit/scripts/server/static/images/cover_{i}.jpg"
+    )
     try:
         tags = ID3(filename)
 
@@ -27,14 +30,14 @@ def save_image(filename, i):
 
     except Exception as e:
         print("Error:", e)
-    return image_path
+    return f"static/images/cover_{i}.jpg"
+
 
 def save_all_images(df):
     images = []
     for i, filename in enumerate(df["filename"]):
-        path = os.path.join(AUDIO_SOURCE_PATH,filename)
-        image_path = save_image(path, i)
+        audio_path = os.path.join(AUDIO_SOURCE_PATH, filename)
+        image_path = save_image(audio_path, i)
         images.append(image_path)
     df["image_path"] = images
     return df
-    
