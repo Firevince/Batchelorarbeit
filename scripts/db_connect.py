@@ -154,9 +154,10 @@ def load_pkl(filename):
     return stored_embeddings
 
 
-def load_npz(sparce_matrix, filename):
+def load_npz(filename):
     filepath = os.path.join(DATA_PATH, "matrices", filename)
-    sparse.save_npz(filepath, sparce_matrix)
+    matrix = sparse.load_npz(filepath)
+    return matrix
 
 
 # 'https://media.neuland.br.de/file/2051900/c/feed/jonathan-swift-gullivers-reisen-2.mp3',
