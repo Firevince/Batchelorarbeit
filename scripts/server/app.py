@@ -17,12 +17,23 @@ def index():
 
 
 @app.route("/process", methods=["POST"])
-def process():
+def process_web_post():
     user_input_text = request.form["text"]
     user_input_time = int(request.form["time"])
-    print(f"processing {user_input_text} for {user_input_time} minutes")
+    return process_web(user_input_text, user_input_time)
 
-    df_documents = get_most_similar_segments("TF_IDF_MINI_LM", user_input_text, user_input_time, 3)
+
+@app.route("/process", methods=["GET"])
+def process_web_get():
+    user_input_text = request.args.get("text", default="", type=str)
+    user_input_time = int(request.args.get("time", default=5))
+    return process_web(user_input_text, user_input_time)
+
+
+def process_web(user_input_text, user_input_time):
+    print(f"processing '{user_input_text}' for {user_input_time} minutes")
+
+    df_documents = get_most_similar_segments("TF_IDF", user_input_text, user_input_time, 3)
 
     df_documents = save_all_images(df_documents)
     produce_audio_snippets(df_documents)
@@ -39,7 +50,7 @@ def process():
 def api():
     user_input_text = request.args.get("text", default="", type=str)
     user_input_time = int(request.args.get("time", default=5))
-    print(f"processing {user_input_text} for {user_input_time} minutes")
+    print(f"processing '{user_input_text}' for {user_input_time} minutes")
     documents = get_most_similar_segments("TF_IDF_MINI_LM", user_input_text, user_input_time)
     produce_audio_snippets(documents)
     produce_final_audio()
