@@ -23,32 +23,6 @@ def calc_all_tf_idf():
     save_npz(tfidf_matrix, matrix_name)
 
 
-def calculate_batchwise_distances(message_embedding, tfidf_matrix):
-    all_distances = np.array([])
-
-    batch_size = 1000
-    for i in tqdm(range(0, tfidf_matrix.shape[0], batch_size)):
-        batch_distances = pairwise_distances(
-            tfidf_matrix[i : i + batch_size], message_embedding, metric="cosine"
-        )
-        all_distances = np.concatenate((all_distances, batch_distances.flatten()))
-
-    return all_distances
-
-
-def calculate_distances_batchwise(message, df):
-    print("loading vectorizer")
-    tfidf_vectorizer = load_pkl("tfidf_vectorizer_230k.pkl")
-    tfidf_matrix = load_npz("tf_idf_matrix_230k.npz")
-
-    print("calculating distances")
-    tfidf_message = tfidf_vectorizer.transform([message])
-    all_distances = calculate_batchwise_distances(tfidf_message, tfidf_matrix)
-
-    df["distance"] = all_distances
-    return df
-
-
 ## old code
 
 

@@ -9,9 +9,16 @@ RUN pip install -r docker_requirements.txt
 
 RUN mkdir /app/data
 RUN mkdir /app/data/Podcast_Episoden
+RUN mkdir /app/data/audio_segments
 
 ENV PYTHONPATH=/app/scripts
 
-COPY . .
+COPY .docker_env .env
+COPY scripts /app/scripts
+COPY data/matrices /app/data/matrices
+COPY data/inter.wav /app/data/inter.wav
 
-CMD ["python", "scripts/server/server.py"]
+
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000","--timeout", "600", "scripts.server.app:app"]
+
+

@@ -18,7 +18,7 @@ def document_embedding_MINI_LM(doc_text):
 
     model = SentenceTransformer("paraphrase-MiniLM-L6-v2", device=device)
     doc_embedding = model.encode(doc_text)
-    return doc_embedding
+    return [doc_embedding]
 
 
 def all_document_embeddings_batchwise_MINI_LM(documents):

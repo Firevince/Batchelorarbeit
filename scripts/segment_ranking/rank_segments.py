@@ -2,24 +2,23 @@ import json
 
 import numpy as np
 import pandas as pd
-from db_connect import db_get_df, db_save_df, load_pkl
-from Embedding_creation.embedding_creator_llama_2 import document_embedding_LLama_2
+import scipy.sparse as sparse
+from db_connect import db_get_df, db_save_df, load_npz, load_pkl
 
 # from Embedding_creation.embedding_creator_BERT import dokument_embedding
-from Embedding_creation.embedding_creator_MINI_L6 import document_embedding_MINI_LM
-from Embedding_creation.embedding_creator_TF_IDF import calculate_distances_batchwise
+from embedding_creation.embedding_creator_MINI_L6 import document_embedding_MINI_LM
 from scipy.spatial.distance import cosine
 from segment_ranking.chatgpt_help import gpt_order_segments
 from sklearn.metrics.pairwise import pairwise_distances
 from tqdm import tqdm
 
+# from Embedding_creation.embedding_creator_llama_2 import document_embedding_LLama_2
 
-def enrich_segment(segment, transcript_df, num_prev_sentences=2, num_next_sentences=2):
+
+def enrich_segment(segment, transcript_df, num_prev_sentences=5, num_next_sentences=5):
     segment = segment.copy()
     segment_id = segment.loc["segment_id"]
     filename = segment.loc["filename"]
-    print(filename)
-    print(segment_id)
 
     # Filter rows by filename
     rows_df = transcript_df[transcript_df["filename"] == filename]
@@ -37,9 +36,12 @@ def enrich_segment(segment, transcript_df, num_prev_sentences=2, num_next_senten
     return segment.to_frame().T
 
 
-def enrich_all_segments(df_distance, df_all):
+def enrich_all_segments(df_distance, df_all, segment_size):
     enriched_segments_df = pd.concat(
-        [enrich_segment(row, df_all) for _, row in df_distance.iterrows()]
+        [
+            enrich_segment(row, df_all, segment_size // 2 - 1, segment_size // 2)
+            for _, row in df_distance.iterrows()
+        ]
     )
     enriched_segments_df = enriched_segments_df.reset_index(drop=True)
     return enriched_segments_df
@@ -51,90 +53,92 @@ def calculate_distances_batchwise(message_embedding, embeddings_matrix):
     batch_size = 1000
     for i in tqdm(range(0, embeddings_matrix.shape[0], batch_size)):
         batch_distances = pairwise_distances(
-            embeddings_matrix[i : i + batch_size], [message_embedding], metric="cosine"
+            embeddings_matrix[i : i + batch_size], message_embedding, metric="cosine"
         )
         all_distances = np.concatenate((all_distances, batch_distances.flatten()))
 
     return all_distances
 
 
-# def get_most_similar_documents_Bert(message, amount):
-#     df = db_get_df(["filename", "segment_text", "embedding_json", "start", "end"],
-#                    table="transcript_segments")
-#     question_embedding = dokument_embedding(message)
+def get_embedding(model_type, message):
+    """
+    Generate an embedding for the input message based on the specified model type.
+
+    :param model_type: A string indicating the type of model ('MINI_LM' or 'TF_IDF').
+    :param message: The input message for which to generate the embedding.
+    :return: The embedding of the input message.
+    """
+    if model_type == "MINI_LM":
+        return document_embedding_MINI_LM(message)
+    elif model_type == "TF_IDF":
+        tfidf_vectorizer = load_pkl("tfidf_vectorizer_230k.pkl")
+        return tfidf_vectorizer.transform([message])
+    elif model_type == "TF_IDF_MINI_LM":
+        embed_mini_lm = document_embedding_MINI_LM(message)
+        embed_mini_lm_sparse = sparse.csr_matrix(embed_mini_lm)
+        tfidf_vectorizer = load_pkl("tfidf_vectorizer_230k.pkl")
+        embed_tf_idf = tfidf_vectorizer.transform([message])
+        return sparse.hstack([embed_tf_idf, embed_mini_lm_sparse], format="csr")
+    else:
+        print(f"No embedding method for model type {model_type} found")
 
 
-#     df["distance"] = [cosine(question_embedding, json.loads(document_embedding))for document_embedding in df["embedding_json"]]
+def load_model_data(model_type):
+    """
+    Load model-specific data required for calculating distances.
+
+    :param model_type: A string indicating the type of model ('MINI_LM' or 'TF_IDF').
+    :return: Model-specific data required for calculating distances.
+    """
+    if model_type == "MINI_LM":
+        return load_pkl("MINI_L6_embeddings.pkl")
+    elif model_type == "TF_IDF":
+        return load_npz("tf_idf_matrix_230k.npz")
+    elif model_type == "TF_IDF_MINI_LM":
+        return load_npz("tf_idf_mini_lm_matrix.npz")
+    else:
+        print(f"No model for model type {model_type} found")
+
+
+def get_most_similar_segments(
+    model_type: str, message: str, amount: int, segment_size: int, sort_gpt=False
+):
+    """
+    Find the most similar documents to the given message using the specified model.
+
+    :param model_type: A string indicating the model to use ('MINI_LM' or 'TF_IDF').
+    :param message: The message to find similar documents for.
+    :param amount: The number of similar documents to return.
+    :return: A DataFrame containing the most similar documents.
+    """
+    df = db_get_df("transcript_sentences")
+    message_embedding = get_embedding(model_type, message)
+    model_data = load_model_data(model_type)
+
+    df["distance"] = calculate_distances_batchwise(message_embedding, model_data)
+    most_similar_documents = df.nsmallest(amount, "distance")
+    most_similar_documents = enrich_all_segments(most_similar_documents, df, segment_size)
+
+    if sort_gpt:
+        most_similar_documents = gpt_order_segments(most_similar_documents)
+
+    db_save_df(most_similar_documents, "best_fitting")
+    return most_similar_documents
+
+
+# def get_most_similar_documents_Llama2(message, amount):
+#     df = db_get_df("transcript_segments_Llama_2")
+#     question_embedding = document_embedding_LLama_2(message)
+
+#     df["distance"] = [
+#         cosine(question_embedding, json.loads(document_embedding))
+#         for document_embedding in df["embedding_json"]
+#     ]
 
 #     most_similar_documents = df.nsmallest(amount, "distance")
+#     most_similar_documents = enrich_all_segments(most_similar_documents)
 #     db_save_df(most_similar_documents, "best_fitting")
 #     return most_similar_documents
 
 
-def get_most_similar_documents_MINI_LM(message, amount):
-    df = db_get_df("transcript_sentences")
-    question_embedding = document_embedding_MINI_LM(message)
-    sentence_embeddings = load_pkl("MINI_L6_embeddings.pkl")
-    df["distance"] = calculate_distances_batchwise(
-        question_embedding, sentence_embeddings
-    )
-
-    most_similar_documents = df.nsmallest(amount, "distance")
-    most_similar_documents = enrich_all_segments(most_similar_documents, df)
-    db_save_df(most_similar_documents, "best_fitting")
-    return most_similar_documents
-
-
-def get_most_similar_documents_Llama2(message, amount):
-    df = db_get_df("transcript_segments_Llama_2")
-    question_embedding = document_embedding_LLama_2(message)
-
-    df["distance"] = [
-        cosine(question_embedding, json.loads(document_embedding))
-        for document_embedding in df["embedding_json"]
-    ]
-
-    most_similar_documents = df.nsmallest(amount, "distance")
-    most_similar_documents = enrich_all_segments(most_similar_documents)
-    db_save_df(most_similar_documents, "best_fitting")
-    return most_similar_documents
-
-
-def get_most_similar_documents_tf_idf(message, amount):
-    df = db_get_df(table="transcript_sentences")
-    df_distance = calculate_distances_batchwise(message, df)
-    # reset_ index important
-    df_distance = (
-        df_distance.sort_values("distance").head(amount).reset_index(drop=True)
-    )
-    df_distance = enrich_all_segments(df_distance, df)
-
-    print(df_distance["sentence"])
-    print("asking chatgpt")
-    df_distance = gpt_order_segments(df_distance)
-    print(df_distance["sentence"])
-
-    db_save_df(df_distance, "best_fitting")
-
-    return df_distance
-
-
-# sample_segment = pd.DataFrame(
-#     # columns=[, , , , ],
-#     index=[0],
-#     data= {"filename": "jonathan-swift-gullivers-reisen-2.json",
-#                "segment_text": "ARD. Radio Wissen. Die ganze Welt des Wissens. Ein Podcast von bayern 2 in der ARD-Audiothek.",
-#                "segment_id": 5,
-#                "start": 0.0,
-#                "end": 13.92})
-
-# print(get_surrounding_segments(sample_segment))
-# print(extend_segment_time(sample_segment)[["filename","start", "end"]].to_markdown())
-# with pd.option_context('display.max_colwidth', None,
-#                        'display.max_columns', None,
-#                        'display.max_rows', None):
-#     print(get_most_similar_documents_MINI_LM("Oktoberfest in Bayern", 3)["segment_text"])
-
-# print(get_most_similar_documents_Llama2("Reisen", 3))
-
-# print(get_most_similar_documents_tf_idf("Oktoberfest", 8))
+# print(get_most_similar_documents("TF_IDF_MINI_LM", "Oktoberfest Bayern", 4))

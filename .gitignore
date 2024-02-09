@@ -3,6 +3,7 @@ data/audio_segments
 data/Episode_audio_files
 data/transcripts.sqlite
 data/*.npz
+data/matrices/*.npz
 data/*.txt
 data/*.dic
 
@@ -32,3 +33,11 @@ logs/*
 .vscode
 
 *.png
+.docker_env
+german.dic
+data/inter.wav
+data/images/cover_images/*
+scripts/server/static/images
+.DS_Store
+start_all.sh
+start_sevices.sh
