@@ -1,10 +1,12 @@
 import os
 
-from pydub import AudioSegment
 from dotenv import load_dotenv
+from pydub import AudioSegment
 
 load_dotenv()
 DATA_PATH = os.getenv("DATA_PATH")
+SERVER_PATH = os.getenv("SERVER_PATH")
+
 
 def concatenate_segments_with_sound(segment_files, output_file, inbetween_sound_file):
     concatenated_audio = AudioSegment.empty()
@@ -17,13 +19,14 @@ def concatenate_segments_with_sound(segment_files, output_file, inbetween_sound_
 
     concatenated_audio.export(output_file, format="wav")
 
+
 def produce_final_audio():
     segment_files = []
-    output_file = "/Users/br/Projects/Bachelorarbeit/scripts/server/audio/concatenated_audio.mp3" 
+    output_file = os.path.join(SERVER_PATH, "audio/concatenated_audio.mp3")
     inbetween_sound_file = os.path.join(DATA_PATH, "inter.wav")
     snippets_path = os.path.join(DATA_PATH, "audio_segments/")
 
-    for filename in os.listdir(snippets_path ):
-        segment_files.append(snippets_path + filename)  
+    for filename in os.listdir(snippets_path):
+        segment_files.append(snippets_path + filename)
 
     concatenate_segments_with_sound(segment_files, output_file, inbetween_sound_file)
