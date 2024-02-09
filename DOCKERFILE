@@ -16,7 +16,9 @@ ENV PYTHONPATH=/app/scripts
 COPY .docker_env .env
 COPY scripts /app/scripts
 COPY data/matrices /app/data/matrices
+COPY data/inter.wav /app/data/inter.wav
 
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "scripts.server.app:app"]
+
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000","--timeout", "600", "scripts.server.app:app"]
 
 
