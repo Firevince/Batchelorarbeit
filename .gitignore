@@ -39,3 +39,5 @@ data/inter.wav
 data/images/cover_images/*
 scripts/server/static/images
 .DS_Store
+start_all.sh
+start_sevices.sh
