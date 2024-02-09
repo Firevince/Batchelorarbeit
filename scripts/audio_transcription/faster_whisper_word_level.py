@@ -4,13 +4,13 @@ from db_connect import db_get_df, db_save_df
 from faster_whisper import WhisperModel
 
 
-def transcribe(filename):
+def transcribe(path):
     device = "cuda" if torch.cuda.is_available() else "cpu"
-
+    filename = path.split("/")[-1]
     model_size = "medium"
     model = WhisperModel(model_size, device=device, compute_type="int8")
 
-    segments, _ = model.transcribe(filename, word_timestamps=True)
+    segments, _ = model.transcribe(path, word_timestamps=True)
     words = []
     for segment in segments:
         for i, word in enumerate(segment.words):

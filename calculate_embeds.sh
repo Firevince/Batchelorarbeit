@@ -43,10 +43,10 @@ export PYTHONPATH=/home/neumannvi84434/Bachelorarbeit/Bachelorarbeit/scripts
 
 ############### Starte eigenen Job hier ################
 # Navigate to your script's directory
-cd /home/neumannvi84434/Bachelorarbeit/Bachelorarbeit/scripts
+cd /home/neumannvi84434/Bachelorarbeit/Bachelorarbeit/scripts/Embedding_creation
 
 # Run your script with any necessary arguments
-python Embedding_creation/embedding_creator_llama_2.py 
+python calculate_all_embeddings.py
 ########################################################
 
 
