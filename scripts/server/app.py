@@ -51,7 +51,7 @@ def api():
     user_input_text = request.args.get("text", default="", type=str)
     user_input_time = int(request.args.get("time", default=5))
     print(f"processing '{user_input_text}' for {user_input_time} minutes")
-    documents = get_most_similar_segments("TF_IDF_MINI_LM", user_input_text, user_input_time)
+    documents = get_most_similar_segments("TF_IDF_MINI_LM", user_input_text, user_input_time, 5)
     produce_audio_snippets(documents)
     produce_final_audio()
     return_dict = {"url": "/static/audio/concatenated_audio.mp3"}

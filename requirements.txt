@@ -54,4 +54,6 @@ tqdm==4.66.1
 
 transformers==4.34.1
 
+gunicorn
+
 
