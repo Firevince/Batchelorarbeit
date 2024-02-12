@@ -1,5 +1,15 @@
 \chapter{Datenbeschaffung}\label{ch:data}
 
+\section{Ausgangslage}
+ 
+Die Podcastbranche wächst seit vielen Jahren stetig und immer mehr Menschen hören regelmäßig Podcasts.
+In Deutschland ist die ARD-Audiothek einer der gößten Podcastanbieter mit mitlerweile über 41 Millionen Audioabrufen und über 80.000 verschiedenen Audioinhalten zum Abrufen. 
+Im Appstore und im Google Playstore hat die App jeweils über eine Million downloads.
+\cite{gotting2023}
+
+
+
+
 \section{Die ARD-Audiothek}
 
 Die ARD Audiothek bietet ein gemeinsames Audioportal, das von den Landesrundfunkanstalten der ARD und dem Deutschlandradio betrieben wird.
@@ -56,7 +66,7 @@ Allerdings ist die Transkription meist nicht sehr akkurat.
 Zum Beispiel steht in der Transkription des Satzes ... TODO
 Das liegt daran, das die Transkriptionen mithilfe der Tools vom Fraunhofer Instituts erstellt werden, welches vermutlich veraltete Technik benutzt.
 
-\section{Datenspeicherung}
+\section{Datenspeicherung SQLite}
 
 Die MP3 Datein der einzelnen Podcast Episoden werden in einem seperaten Ordner gespeichert und die Benennung der originalen Datein wird aus der URL übernommen.
 Für die Speicherung der Transkripte, wird das relationale Datenbank Managment System (RDBMS) SQLite  genutzt.
@@ -67,6 +77,8 @@ Um die Daten zu analysieren und zu nutzen bietet es sich an auf Consumer-hardwar
 
 SQLite unterstützt Datenmengen bis zu 140 TB, allerdings auf der offiziellen Webseite angegeben, dass ab einer größe über 1 TB auf serverbasierte RDBMS umgestiegen werden sollte, da die Gesammte Datenbank in einem File gespeichert ist und viele Betriebssysteme eine maximale Größe der Datein vorgeben.
 Falls das Projekt in der Zukunft auf mehr Audiomaterial ausgeweitet wird sollte ein Wechsel des DBMS in betracht gezogen werden.
+
+\section{Datenspeicherung Vektoren}
 
 Da SQlite nativ keine Listen oder Tabellen als Einträge in einer Datenbank speichern kann, ist es nicht trivial, die Embeddings abzuspeichern.
 Zunächst wurde die Möglichkeit in betracht gezogen, jeden einzelnen Eintrag aus einem Embedding in als seperaten Eintrag in einer Tabelle zu speichern. 
@@ -84,4 +96,5 @@ Stattdessen wurde das python Modul pickle verwendet, welches arauf spezialisiert
 Es bietet auch die Möglichkeit Datenstrukturen effizient zu speichern und zu laden und hat seit Python 3.8 auch guten support, um große NumPy Arrays effizient zu speichern, was zuvor nur mit der joblib Bibliothek möglich war.
 
 Für den TF-IDF Algorithmus, bei dem ein Vokabular von mehr als 200.000 Wörtern eine ebensogroße Dimensionalität der Embeddingvektoren benötigt, würde ein normaler Serialisierungsalgorithmus für die 300.000 Sätze ca 60 Milliarden Werte abspeichern.
+
 

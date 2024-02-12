@@ -1,24 +1,39 @@
 \chapter{Architektur}\label{ch:method}
 
-In diesem Kapitel wird weiter auf die tatsächliche Implementierung des Systems eingehen.
-
-\section{Anforderungen}
-
-Um das Projekt weiter einzuordnen, bietet es sich an, vorab Anforderungen an das System zu stellen. 
-Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice Einzelne Anforderungen gestellt: 
-
-Zunächst muss die Datengrundlage geschafft werden. 
-Dafür müssen die Podcast Epsioden Heruntergeladen, transkribiert und anschließend alle Sätze in der Datenbank abgespeichert werden.
-Dieses System muss in der Lage dem Titel eines Podcasts bzw. der ID in der Audiothek, sämtliche noch nicht in der Datenbank gespeicherten Episoden herunterzuladen, zu transkribieren und abzuspeichern.
-In der Zukunft könnte man darüber nachdenken, diesen Teil komplett auf der Serverseite der ARD Audiothek laufen zu lassen.
-
-Das nächste Mikrosystem muss in der Lage sein, diese
-
-\section{Vorgehensweise}
+\section{Mikrosystemarchitektur}
 
 Dieses Projekt lässt sich zunächst in mehrere kleinen Projekte unterteilen. 
 Bei einem so großen Projekt lohnt es sich eine Mikroservice Architektur anzustreben, bei der jeder Teil für sich gesehen eine Aufgabe erfüllt und nicht auf der Zuverlässigkeit eines anderen Systems beruht. 
 Diese Methode wird auch divide-and-conquer genannt. 
+
+Um das Projekt weiter einzuordnen, bietet es sich an, vorab Anforderungen an das System zu stellen. 
+Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice Einzelne Anforderungen gestellt: 
+
+\section{Anforderungen}
+
+Zunächst muss die Datengrundlage geschafft werden. 
+Dafür müssen die Podcast Epsioden heruntergeladen, transkribiert und anschließend alle Sätze in der Datenbank abgespeichert werden.
+Dieses System muss in der Lage dem Titel eines Podcasts bzw. der ID in der Audiothek, sämtliche noch nicht in der Datenbank gespeicherten Episoden herunterzuladen, zu transkribieren und abzuspeichern.
+In der Zukunft könnte man darüber nachdenken, diesen Teil komplett auf der Serverseite der ARD Audiothek laufen zu lassen.
+
+Das nächste Mikrosystem muss in der Lage sein, diese Transkriptdaten in eine Form umzuwandeln, in der eine Suchfunktion relevante Abschnitte aus diesen Daten extrahieren kann.
+Dafür soll es die einzelnen Wörter in sinnvolle Abschnitte Gruppieren und ein Embedding für jeden Abschnitt berechnen.
+
+Ein weiterer Service soll dann die Suchfunktion übernehmen, indem er Stichworte oder Sätze als Parameter erhält und zu diesen die eine bestimmte Anszahl an relevanten Abschnitten zurückgibt.
+
+Diese relevanten Abschnitte können noch weiter von ChatGPT analysiert werden, um zum Besipiel eine Auswahl aus vielen Dokumenten zu treffen, die Reihenfolge der Abschnitte zu bestimmen, oder ähnliche Themen herauszufinden.
+
+Der nächste Service muss in der Lage sein, eine Liste an Segmenten entgegenzunehmen und daraus eine Audiodatei zu erzeugen.
+Dafür muss er die originaldatein an den richtigen Stellen schneiden und die Audioschnipsel zusammenfügen können.
+
+Als letztes muss die Audiodatei ausgeliefert werden. 
+Dafür soll einmal eine API implementiert werden.
+Außerdem soll ein UI als Webseite aufgbaut werden, welche die Anfrage in einem Formular entgegennimmt und dann die Audiodatei ausliefert.
+
+
+\section{Vorgehensweise}
+
+
 Zunächst müssen die Daten gesammelt und aufbereitet werden. 
 Für dieses Projekt bildet die Datengrundlage die Transkripte, bzw. Manuskripte der Podcasts der ARD-Audiothek. 
 In der Audiothek selber gibt es keine Transkripte zu den Podcasts. 
@@ -30,6 +45,13 @@ Ein anderer Ansatz ergibt sich, wenn man die Podcasts transkribiert.
 Die Vorteile sind, dass die Transkription auch bei Podcasts funktioniert, für die vorab kein Transkript erstellt wurde, was die Mehrzahl aller Podcasts ausmacht. 
 Außerdem kann man bei einer Transkription auch gleichzeitig die Zeitstempel für jedes Wort extrahieren.
 
+\section{Programmiersprache Python}
+
+In dieser Arbeit wird die Programmiersprache Python verwendet.
+Python zählt zu den am meißten verwendeten Programmiersprachen weltweit und ist laut dem TIOBE-Index im Jahr 2023 sogar die meißt verwendete Programmiersprache überhaupt \cite{index2023}.
+In dieser Arbeit wird Python verwendet, da es Unterstützung für sehr gute Bibliotheken für Machine Learning und NLP Anwendungen gibt.
+Vor allem die Unterstützung für Transformermodelle mit der Bibliothek transformers, die NLP Bibliothek SpaCy, sowie Datenverwaltungsbibliotheken wie pandas und support für SQLite Datenbanken mit sqlite sind sehr praktisch.
+Dazu ist Python sehr einfach zu verstehen und rechenaufwändige Operationen wie in der transformers Bibliothek sind sehr performant in der Sprache C implementiert.
 
 
 
@@ -45,7 +67,6 @@ Leider legt das FraunhoferIAIS nicht offen, welche Technologie es dafür verwend
 Die Transkripte lassen sich allerdings sehr einfach über eine Graphql Schnittstelle abfragen. 
 
 \subsection{Microsoft Translate}
-
 
 Eine weitere Möglichkeit zur Audiotranskription bietet Microsoft Translate. 
 Soweit man einen Microsoft 365 Account besitzt kann man in dem Webinterface von Microsoft word eine Transkriptionsfunktion benutzen. 
@@ -76,6 +97,8 @@ Für ca. 1000 Episoden bräuchte man demnach ca. 3500 Minuten, d.h. ca. 58 h.
 TODO large ausprobieren, auf den Servern der Uni und mit der Ebu API
 Eurovox
 
+\subsection{Eurovox}
+
 Das Problem der langen Wartezeiten lässt sich umgehen, wenn wir Cloud computing benutzen, das heißt, das Whisper model nicht auf der lokalen Hardware laufen zu lassen, sondern zum Beispiel auf den Servern von Eurovox. 
 Eurovox ist ein Software tool von der EBU, der Europian Broadcast Union. 
 Sie ist ein zusammenschluss von derzeit 68 Rundfunkanstalten in 56 Staaten Europas, Nordafrikas und Vorderasien mit Sitz in Genf. [4] 
@@ -86,9 +109,54 @@ Für dieses Projekt benutzen wir aber zunächst nur die Translation Funktion.
 Außerdem verwenden wir die API von Eurovox um später das ganze Projekt auf mehr Episode Transkripte ausweiten zu können. 
 Laut den Entwicklern soll die API auch demnächst open-sourced werden [QUELLE].
 
-Die API stellt, ebenso wie das Tool, eine reihe verschiedener Anbieter zur verfügung, über die wir die Audios transkribieren lassen können. 
+Die API stellt, ebenso wie das Tool, eine Reihe verschiedener Anbieter zur verfügung, über die wir die Audios transkribieren lassen können. 
 
 
+\section{Datenvorbereitung}
+
+\subsection{Satzbildung}
+
+Die transkribierten Daten, welche Whisper erzeugt enthalten die erkannten Wörter, sowie die einzelnen Zeitstempel für den Start und das Ende jedes Wortes mit einer genauigkeit von Zehntelsekunden.
+Für die spätere Analyse der Daten, ist es Sinnvoll die einzelnen Wörter in größere Segmente zusammenzufassen, damit bei einer Suchfunktion der Kontext von erschiedenen Wörtern miteinbezogen werden kann.
+Ein naheliegender Ansatz besteht darin, die einzelnen Wörter zunächst in Sätze zu gruppieren.
+Für diese Gruppierung werden zwei Ansätze betrachtet.
+Der einfachste Ansatz besteht darin, die von Whisper erzeugten Satzpunkte als  Trennzeichen für einen Satz zu zählen.
+Whisper erkennt von sich aus aufgrund der Tonlage und der Pause zwischen Wörtern und der grammatikalischen Struktur der vorangegangenen Wörtern, ob ein Wort das Ende eines Satzes markiert. ???
+Dann gibt Whisper das Wort mit einem Punkt, einem Fragezeichen, oder einem Ausrufezeichen am Ende als erkanntes Wort aus.
+Diese Punktuation kann man benutzen, um die einzeln Wörter in Sätze zu gruppieren.
+Leider ergibt sich dabei das Problem, dass bestimmte Wörter, oder Abkürzungen zusätzöiche Punkte enthalten.
+Beispiele sind "Mr. Smith", "seinem 26. Studioalbum", "am 10. Januar 2016".
+Mit diesem naiven Ansatz der Satztrennung, würden wir also einige Sätze an ungewollten Stellen in mehrere Sätze auftrennen.
+
+Um dieses Problem zu lösen, muss der Algorithmus verstehen, welche Satzzeichen die wirklichen Satzenden sind.
+Dies erfordert ein verständnis der Satzstruktur und ist deswegen nicht trivial möglich.
+Um die Sätzegrenzen zu finden, wird deshalb die Open-Source Sprachbibliothek SpaCy.\cite{honnibal2017}
+
+David Bowie stirbt am 10. Januar 2016 an Leberkrebs.
+Zwei Tage nach seinem 69. Geburtstag und der Veröffentlichung von Blackstar, seinem 26. Studioalbum.
+
+\subsection{Satzbildung mit SpaCy}
+
+Mithilfe der NLP Bibliothek SpaCy kann man herausfinden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
+SpaCy verwendet dafür Statistische Methoden.
+
+
+\subsection{Lemmatisierung vs. Stemming}
+
+Für Retrieval funktionen ist es Sinnvoll, mehrere Wörter zusammenzufassen.
+Wenn man einen Algorithmus hat, der gezielt Wörter im Korpus suchen kann, ist es Wünschenswert nicht nur exakt die selben Wörter zu suchen, sondern auch verwandte Wörter.
+Zum Beispiel sollte die Suche nach dem Wort "Wanderer" auch Ergebisse für die Worte "Wandererin", "Wanderung" oder "wandern" enthalten, nicht aber das Wort "Wand".
+
+Um diese Abbildung von mehreren Worten auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden:
+Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel "Wanderer" und "Wanderung" zu einem Wort "Wander" zu reduzieren.
+Der Vorteil ist, dass der Algorithmus sehr schnell agieren kann, um die Worte auf ihre Stammform zu reduzieren.
+Die Nachteile sind allerdings, dass die Deutsche Sprache sehr viele verschiedene Wortkonstrukte erlaubt, die nicht alle mithilfe von einzelnen Regeln auf ein gemeinsammes Stammwort gebracht werden können. 
+Zum Beispiel bei dem Plural von "Baum"; "Bäume".
+
+
+\subsection{Kompositatrennung Pyphen vs german compound splitter}
+
+LOL
 
 \section{Transktript Segment Ranking}
 
@@ -122,23 +190,7 @@ Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene
 
 \subsubsection{Embeddings}
 
-Ein relativ moderner Ansatz besteht in der Suche mithilfe von Embedding Vektoren. 
-Dabei versuchen wir die Semantik (also die Bedeutung) der einzelnen Segmente Mathematisch mithilfe eines Vektors zu repräsentieren. 
-Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. Ein Vektor, der aus dem Satz „Ich sitze auf einer Bank im Grünen“ und „Im Park steht eine alte Bank“ sollen dabei sehr Ähnlich zueinander sein, der Satz „Ich gehe in die Bank und hebe Geld ab“ aber nicht sehr Ähnlich. 
-Hierbei soll erkannt werden, dass sich die ersten beiden Sätze auf eine Bank zum Sitzen in der Natur beziehen und der dritte Satz das Geldinstitut meint. 
-Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen. 
-Ein Regelbasierender Algorithmus würde die Unterschiede bei solchen Homonymen in keinem Fall erkennen können. 
-Regelbasierte Algorithmen wie z.B. [QUELLE] haben auch Probleme mit Negierung wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht außer gegessen“.
-
-Für unsere Aufgabe ist es Sinnvoll nicht nur Inhaltliche Vergleiche zu erstellen, die überprüfen, ob zwei Sätze ungefähr die Gleiche Bedeutung haben, wie "Die Sonne bringt mich zum schwitzen" oder "Ich schmelze in der Hitze".
-Besser wäre eine asymmetrische Ähnlichkeit, wie sie bei Frage und Antwortpaaren vorkommt.
-Zum Beispiel wäre auf die Frage: "Welche Farbe hat der Himmel bei Sonnenuntergang?" ein gute Antwort: "Der Himmel hat bei Sonnenuntergang oft orange und rosa Farbtöne."  und nicht der Satz "Wie sieht der Himmel am Abend aus?"
-Diese Asymmetrische Ähnlichkeit ist schwerer zu ermitteln, da man trivialerweise in der Antwort Informationen findet, die in der Frage nicht vorkommen.
-
-Auf der 
-
-\subsubsection{Cosinus Similarity}
-
+\section{Ähnlichkeitsvergleiche}
 
 Mithilfe der Embedding Vektoren können können wir Sätze finden, die zueinander Ähnlich sind. Aber was bedeutet überhaupt ähnlich? Die Vektoren des BERT Models sind 768 Dimensional, haben also 768 Gleitkommazahlen gespeichert, die zwischen -1 und 1 liegen. 
 Diese Gleitkommazahlen Vektoren könnte man auch als Feature Vektoren begreifen. 
@@ -151,13 +203,30 @@ Eine forschungsrichtung, die versucht solche Modelausgaben Menschenlesbar zu ges
 Um die Ähnlichkeit von diesem Satz zu der Frage „“ zu bestimmen nutzen wir die Cosinus distanz als Maß. Es gibt auch die Euclidische Distanz, allerdings gestaltet sich dabei das Problem der Vector Normalisierung.
 
 
-Diese Komplexen semantischen Unterschiede, oder Gemeinsamkeiten zu erkennen erfordert etwas mehr Raffinesse. 
+Diese Komplexen semantischen Unterschiede, oder Gemeinsamkeiten zu erkennen erfordert etwas mehr Raffinesse.
 
-Um einen Embeddingvektor zu erstellen, benutzen wir das BERT Model. BERT, das Akronym für Bidirectional Encoder Representations from Transformer, ist ein Sprachmodel, das 2018 von Google entwickelt, und zur Benutzung freigegeben wurde. 
-BERT ist ein Neuronales Netzwerk mit 12 Schichten, das für zwei verschiedene Aufgaben gleichzeitig trainiert wurde. Zum einen wurde es auf eine Masked Language Modeling Aufgabe und zum Anderen auf eine Next Sentence Prediction trainiert. 
 
-Masked Language Modeling
-Bei dieser Aufgabe soll das Model versuchen, aus dem Kontext eines Satzes ein maskiertes Wort in diesem Satz vorherzusagen. Dafür wird dem Model ein Satz gegeben, in dem zufällige Wörter einfach versteckt werden und das Model soll für diese Wörtereine Vorhersage treffen. 
+\subsubsection{Euclidean Similarity}
+
+Die Euklidische Distanz von zwei Vektoren kann man über den Satz des Pythagoras berechnen.
+Dafür nimmt man für jede Dimension die Differenz beider Vektoren in dieser Dimension, quadriert diese und summiert alle Quadrate zusammen, um dann die quadratwurzel darüber zu ziehen.
+Für die beiden Vektoren 
+$\begin{pmatrix}0\\1\end{pmatrix}$
+und 
+$\begin{pmatrix}-1\\0\end{pmatrix}$
+wäre die Euklidische Distanz $\frac{1}{\sqrt{2}}$, da $\sqrt{(0-(-1))^2 + (1-0)^2}=\frac{1}{\sqrt{2}}$
+Dieses Distanzmaß ist sensibel gegenüber der Länge der Vektoren.
+Wenn die Vektoren nicht normiert wurden, kann die Euklidische Distanz sehr groß werden und die Ergebnisse verfälschen.
+
+\subsubsection{Dotproduct Similarity}
+
+
+
+\subsubsection{Cosinus Similarity}
+
+
+
+ 
 
 
 \section{Audio-Zusammensetzung}

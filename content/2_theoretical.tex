@@ -1,11 +1,38 @@
-\chapter{Ausgangslage und theoretische Grundlagen}\label{ch:data}
+\chapter{Ausgangslage und theoretische Grundlagen}\label{ch:theoretical}
 
-\section{Ausgangslage}
- 
-Die Podcastbranche wächst seit vielen Jahren stetig und immer mehr Menschen hören regelmäßig Podcasts 
-In Deutschland ist die ARD Audiothek ein großer Podcastanbieter mit mitlerweile über 41 Millionen Audioabrufen und über 80.000 verschiedenen Audioinhalten zum Abrufen. Auch die Zahlen der Audiotheksbenutzer, sowie der App-downloads steigen weiterhin. \cite{gotting2023}
+\section{Erstellung einer Podcast Episode}
 
-Gleichzeitig wächst auch der Markt an AI-basierten Podcasts. So erreichen heute schon AI-basierte Podcasts rund 45 Millionen US-Amerikaner 
+Erfolgreiche Podcasts zu erstellen benötigt viele einzelne Schritte.
+Theam:
+Am Anfang benötigt man immer eine Idee, die den Podcast bestimmt.
+Das kann die Abhandlung eines Themas oder das halten an ein bestimmtes Format sein.
+Vorbereitung:
+Dann muss eventuell ein Skript vorgeschrieben werden, Gäste eingeladen werden oder das die Audio-Aufnahmebedingungen geklärt werden.
+Zur vorbereitung von INterview Podcasts muss sich auf den jeweiligen gegenüber vorbereitet, Fragen formuliert und hintergrundwissen recherchiert werden.
+Aufnahme:
+Für die Aufnahme müssen die Sprecher vor Ort oder Remote sprechen.
+Es gibt Audio und Video Podcasts
+Nachbereitung/Editierung:
+Zur Nachbereitung gehört das Anpassen der Lautstärke, herausschneiden von ungewünschten Abschnitten, Einfügen von Geräuschen oder zusätzlichen passagen.
+Shownotes erstellen:
+Der Podcast sollte transkribiert werden und eine Zusammenfassung erstellt werden.
+Showbild erstellen:
+Ein Bild für diese Episode erstellen.
+Werbung schalten:
+Kleine Teaser erstellen, die man z.B. auf Social Media teilen kann.
+
+
+\section{KI in Podcasts}
+
+Künstliche Intelligenz verändert die Branche des Podcastings in vielerlei Hinsicht. 
+
+Transkriptionsmodelle wie Whisper sind in der Lage live Transkriptionen der Podcasts zu erstellen die eine Qualität bestitzen, die mit professionellen menschlichen Transkriptoren mithalten kann \cite{radford}.
+Diese können außerdem verschiedene Stimmen unterscheiden und die Emotionen der Sprecher erkennen, was es in der Nachbereitung eines Podcasts erheblich erleichtert bestimmte Stellen zu finden \cite{wagner2023}
+Es gibt Ansätze, KI gestützt Teaser von längeren Podcast Episoden zu erstellen, welche dann zu Werbezwecken in Sozial Media geteilt werden können. \cite{wang2023}
+
+Ein großes Entwicklungsfeld in der Podcastbranche ist die komplett automatische Generierung von Podcasts. Die Technologie der automatischen Stimmengenerierung ist soweit fortgeschritten, dass sich künstlich generierte Stimmen fast so gut anhören wie echte Stimmen \cite{shi2023}.
+
+So erreichen heute schon AI-basierte Podcasts rund 45 Millionen US-Amerikaner.
 
 \section{Related Work}
 
@@ -31,28 +58,25 @@ Für das Design der Podcast Episoden werde ich die Artikel von Podcast Übersich
 
 In dem Paper \cite{kang2012} untersuchten die Autoren den Effekt von mehrere Stimmen auf das Podcasterlebnis. Außerdem untersuchten Sie in Ihrer Studie die Effekte des Erzählstils und finden heraus, dass informelle Sprache und ein ungezwungener Kommunikationsstil das Erlebnis von Zuhörern verbessert. 
 
+
+
 Im weiteren werde ich noch die Arbeiten von \cite{maroni2020}, \cite{clark2020} und \cite{du2017} verwenden, die sich mit Deep Learning Modellen zur Erschließung von Texten beschäftigen.
 
+\section{Information Retrieval}
 
+Das Thema Information Retrieval (Informationsrückgewinnung) bezeichnet den Vorgang aus einer großen Menge unsortierter Daten bestimmte Informationen wieder zu extrahieren.
+Im Gegensatz zu Data-Mining werden dabei keine neuen Daten erschaffen, sondern lediglich bereits existierendes Wissen verfügbar gestellt.
+Ein bekanntes Beispiele eines Information Retrieval Algorithmus ist der PageRank Algorithmus für die Suchmaschine Google.
+Suchmaschinen sind das Musterbeispiel eines Information Retrieval Systems.
+Ein User gibt Stichworte ein, über die er mehr Informationen erhalten will und erhält daraufhin Links zu Webseiten, die diese Informationen wahrscheinlich enthalten.
 
-\section{KI in Podcasts}
-
-Künstliche Intelligenz verändert die Branche des Podcastings in vielerlei Hinsicht. 
-
-Transkriptionsmodelle wie Whisper sind in der Lage live Transkriptionen der Podcasts zu erstellen die eine Qualität bestitzen, die mit professionellen menschlichen Transkriptoren mithalten kann \cite{radford}.
-Diese können außerdem verschiedene Stimmen unterscheiden und die Emotionen der Sprecher erkennen, was es in der Nachbereitung eines Podcasts erheblich erleichtert bestimmte Stellen zu finden \cite{wagner2023}
-Ein großes Entwicklungsfeld in der Podcastbranche ist die komplett automatische Generierung von Podcasts. Die Technologie der automatischen Stimmengenerierung ist soweit fortgeschritten, dass sich künstlich generierte Stimmen fast so gut anhören wie echte Stimmen \cite{shi2023}.
-
+SPLADE
 
 \section{Embeddings}
 
 Das Ziel dieser Arbeit besteht darin, eine Schnittstelle für einen Hörer zu erstellen, die ihm ermöglicht, einen Zusammenschnitt aus vielen verschiedenen Podcast Episoden ist, und genau zu einem Thema passt. 
 Die wichtigste Aufgabe besteht also darin, die wesentlichen Abschnitte aus den Episoden herauszufinden. 
-Bis jetzt haben wir zu jedem Audiofile eine transcript.json, bei der das Transkript in regelmäßigen Zeitabschnitten mit Zeitstempeln markiert ist. 
-Die Aufgabe, auf eine Userfrage hin die wesentlichsten Segmente herauszufinden lässt sich auf mehrere Arten lösen. 
-Dazu werden wir verschiedene Verfahren aus der Wissenschaft im Bereich Natural Language Processing (NLP) verwenden.
-
-\section{Motivation für Embeddings}
+Dazu muss das System verstehen, welche Abschnitte zu verschiedenen Anfragen passen. 
 
 Die menschliche Sprache ist ein hochkomplexes Konstrukt mit einer Grammatik, die sehr viel flexibler, kreativer, vieldeutiger, und komplexer ist als maschinensprache. 
 Es gibt viele kleine Bedeutungsnuancen, sie ist stark von dem allgemeinen Wissen der Welt geprägt und sie ändert sich im laufe der Zeit. 
@@ -62,9 +86,24 @@ Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder T
 Diese Vektoren nennt man Embeddings.
 Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin, passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
 
-\section{Frühere Embedding verfahren}
+Ein relativ moderner Ansatz besteht in der Suche mithilfe von Embedding Vektoren. 
+Dabei versuchen wir die Semantik (also die Bedeutung) der einzelnen Segmente Mathematisch mithilfe eines Vektors zu repräsentieren. 
+Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. Ein Vektor, der aus dem Satz „Ich sitze auf einer Bank im Grünen“ und „Im Park steht eine alte Bank“ sollen dabei sehr Ähnlich zueinander sein, der Satz „Ich gehe in die Bank und hebe Geld ab“ aber nicht sehr Ähnlich. 
+Hierbei soll erkannt werden, dass sich die ersten beiden Sätze auf eine Bank zum Sitzen in der Natur beziehen und der dritte Satz das Geldinstitut meint. 
+Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen. 
+Ein Regelbasierender Algorithmus würde die Unterschiede bei solchen Homonymen in keinem Fall erkennen können. 
+Regelbasierte Algorithmen wie z.B. [QUELLE] haben auch Probleme mit Negierung wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht außer gegessen“.
 
-Die Geschichte der Embeddings startet mit stochastischen Verfahren, wie TF-IDF und BM25. 
+Für unsere Aufgabe ist es Sinnvoll nicht nur Inhaltliche Vergleiche zu erstellen, die überprüfen, ob zwei Sätze ungefähr die Gleiche Bedeutung haben, wie "Die Sonne bringt mich zum schwitzen" oder "Ich schmelze in der Hitze".
+Besser wäre eine asymmetrische Ähnlichkeit, wie sie bei Frage und Antwortpaaren vorkommt.
+Zum Beispiel wäre auf die Frage: "Welche Farbe hat der Himmel bei Sonnenuntergang?" ein gute Antwort: "Der Himmel hat bei Sonnenuntergang oft orange und rosa Farbtöne."  und nicht der Satz "Wie sieht der Himmel am Abend aus?"
+Diese Asymmetrische Ähnlichkeit ist schwerer zu ermitteln, da man trivialerweise in der Antwort Informationen findet, die in der Frage nicht vorkommen.
+
+Auf der 
+
+\section{Geschichte der Embeddingverfahren}
+
+Die Geschichte der Embeddings startet mit stochastischen Verfahren, wie dem TF-IDF Algorithmus und dem BM25 Algorithmus. 
 Term Frequency - inverse Dokument Frequency (TF-IDF) ist ein Algorithmus um Dokumente nach Keyworten zu durchsuchen.
 Das Verfahren verwendet Worthäufigkeiten (Term-Frequency), um Dokumenten, in denen ein Wort häufiger vorkommt zu bevorzugen.
 Außerdem verwendet es die generelle Seltenheit von Wörter (Inverse Document Frequency) um Wörtern, die seltener vorkommen mehr Gewicht bei der Suche einräumen.
@@ -149,7 +188,11 @@ Es gibt [QUELLE] paper dazu.
 Es hat viele verschiedene Unterthemen. 
 Die Aufgaben im Bereich des NlP sind vielseitig . Einige Ansätze 
 
-\section{Ähnlichkeitsvergleiche}
+
+
+
+
+
 \section{Transformer Architektur}
 
 
@@ -220,7 +263,12 @@ In der Kategorie Question Answering, gibt es über 1300 Einträge und in der Kat
 In beiden Kategorien gibt es Embedding Modelle zu finden.
 Die einzelnen Modelle kann man sich kostenlos herunterladen, sie sind ausführlich dokumentiert und man kann sie untereinander mithilfe des Abschneidens auf verschiedenen Kontroll-Datensätzen vergleichen.
 Durch Leaderboards kann man die besten Modelle bestimmen.
-Zum Beispiel das Massive Text Embedding Benchmark Leaderbord https://huggingface.co/spaces/mteb/leaderboard.
+Zum Beispiel das Massive Text Embedding Benchmark Leaderbord https://huggingface.co/spaces/mteb/leaderboard.\cite{muennighoff2023}
+
+Auf diesem Leaderboard werden Embedding Modelle für unterschiedliche Kategorien evaluiert.
+Semantic Textual Similarity 
+Classification
+
 
 
 
@@ -230,7 +278,8 @@ Zum Beispiel das Massive Text Embedding Benchmark Leaderbord https://huggingface
 Ein sehr Leistungsfähiges LLM ist das von Meta entwickelte LLama und deren Nachfolger LLama2. \cite{touvron2023}
 
 \section{OpenAI Modelle}
-https://twitter.com/Nils_Reimers/status/1487014195568775173
+
+\href{https://twitter.com/Nils_Reimers/status/1487014195568775173}{twitter}
 
 OpenAI stellt außer den Text (GPT-4) und Bild (DALLE) generierungs Modellen auch Modelle zur Embedding erstellung in Ihrer API vor.
 Ada (1024 dimensions)
@@ -240,4 +289,4 @@ Davinci (12288 dimensions)
 
 \section{Dimensionalität}
 
-
+\section{SpaCy und dictionaries}
