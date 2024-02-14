@@ -2,42 +2,49 @@
 data/audio_segments
 data/Episode_audio_files
 data/transcripts.sqlite
+data/test_data/*.txt
+data/milvius/
+data/inter.wav
+data/images/cover_images/*
 data/*.npz
-data/matrices/*.npz
 data/*.txt
 data/*.dic
+data/matrices/*.npz
+data/matrices/*.pkl
 
 # mp3s in general
 *.mp3
 */*.mp3
 
-# intermediate files
-*.pkl
+# images
+*.png
+
+# web server
+scripts/server/static/images
+scripts/server/audio/
 
 # cache files
 */__pycache__
 */*/__pycache__
 
-.venv/*
-
+# vscode
 .vscode
 
+# environmental stuff
+.venv/*
 .env
+.docker_env
 
+# mac files
 .DS_Store
 */.DS_Store
 
+
+# logs from slurm
 *.out
 logs/*
 
-.vscode
-
-*.png
-.docker_env
-german.dic
-data/inter.wav
-data/images/cover_images/*
-scripts/server/static/images
-.DS_Store
+# test scripts
 start_all.sh
 start_sevices.sh
+
