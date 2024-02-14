@@ -4,12 +4,7 @@ import sqlite3
 
 import pandas as pd
 import requests
-from db_connect import (
-    db_get_df,
-    db_insert_audio_binary,
-    db_insert_transcript,
-    db_save_df,
-)
+from db_connect import db_get_df, db_insert_transcript, db_save_df
 
 GRAPHQL_URL = "https://api.ardaudiothek.de/graphql"
 
@@ -45,6 +40,15 @@ def get_graphql(query):
         return response.json()
     else:
         raise f"GraphQL request failed with status code {response.status_code}"
+
+
+def download_on_demand(df, path):
+    base_url = "https://media.neuland.br.de/file/34536/c/feed/"
+    for filename in df["filename"]:
+        if filename not in os.listdir(path):
+            url = base_url + filename
+            download_and_save_mp3_in_dir(url, path, filename)
+    return
 
 
 def get_newest_episodes_data():
@@ -237,9 +241,3 @@ def get_metadata_all_episodes():
     )
 
     return df
-
-
-def download_url_and_insert_binary(url, filename):
-
-    audio = download_mp3(url)
-    db_insert_audio_binary(audio, filename)

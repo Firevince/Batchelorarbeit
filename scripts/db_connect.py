@@ -12,7 +12,7 @@ DATABASE_PATH = os.getenv("DATABASE_PATH")
 DATA_PATH = os.getenv("DATA_PATH")
 
 
-def db_get_df(table="transcript_segments", coloumns=["*"]):
+def db_get_df(table="transcript_sentences", coloumns=["*"]):
     con = sqlite3.connect(DATABASE_PATH)
     df = pd.read_sql_query(f"SELECT {', '.join(coloumns)} FROM {table}", con)
     con.close()
@@ -107,21 +107,6 @@ def db_insert_transcript(data):
         ) VALUES (?, ?, ?)
     """,
         (data["filename"], data["download_url"], data["segment_count"]),
-    )
-
-    conn.commit()
-    conn.close()
-
-
-def db_insert_audio_binary(audio_file, filename):
-    conn = sqlite3.connect(DATABASE_PATH)
-    cursor = conn.cursor()
-
-    cursor.execute(
-        """
-        UPDATE transcripts SET audio_binary=?
-        where filename=?""",
-        (audio_file, filename),
     )
 
     conn.commit()
