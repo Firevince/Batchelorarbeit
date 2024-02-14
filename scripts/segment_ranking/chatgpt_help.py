@@ -22,15 +22,17 @@ def gpt_get_keywords(df):
             {
                 "role": "system",
                 "content": """
-            Schreibe 5 Stichwörter, die zu diesen Textabschnitten passen.
-            Antworte in JSON Format als ein Array 'Stichwörter' in welchem nur Stichwörter stehen """,
+            Schreibe 5 weiterführende Themenüberschriften, die zu diesen Textabschnitten passen.
+            Sie sollen spezifisch auf eine Sache aus diesem Abschnitt abzielen, oder ein ähnliches Thema beschreiben. 
+            Jede Themenüberschrift soll aus 1-3 Wörtern Stichwörtern bestehen.
+            Antworte in JSON Format als ein Array 'Themen' in welchem nur die Themen stehen """,
             },
             {"role": "user", "content": query},
         ],
     )
     keywords = ""
     try:
-        keywords = json.loads(response.choices[0].message.content)["Stichwörter"]
+        keywords = json.loads(response.choices[0].message.content)["Themen"]
     except:
         print("Answer not in right format - no keywords found")
 

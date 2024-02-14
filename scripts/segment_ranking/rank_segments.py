@@ -7,6 +7,9 @@ from db_connect import db_get_df, db_save_df, load_npz, load_pkl
 
 # from Embedding_creation.embedding_creator_BERT import dokument_embedding
 from embedding_creation.embedding_creator_MINI_L6 import document_embedding_MINI_LM
+from embedding_creation.embedding_creator_TF_IDF import (
+    question_embedding_tf_idf_lemma_compound_split,
+)
 from scipy.spatial.distance import cosine
 from segment_ranking.chatgpt_help import gpt_order_segments
 from sklearn.metrics.pairwise import pairwise_distances
@@ -71,13 +74,12 @@ def get_embedding(model_type, message):
     if model_type == "MINI_LM":
         return document_embedding_MINI_LM(message)
     elif model_type == "TF_IDF":
-        tfidf_vectorizer = load_pkl("tfidf_vectorizer_230k.pkl")
-        return tfidf_vectorizer.transform([message])
+        embedding = question_embedding_tf_idf_lemma_compound_split(message)
+        return embedding
     elif model_type == "TF_IDF_MINI_LM":
         embed_mini_lm = document_embedding_MINI_LM(message)
         embed_mini_lm_sparse = sparse.csr_matrix(embed_mini_lm)
-        tfidf_vectorizer = load_pkl("tfidf_vectorizer_230k.pkl")
-        embed_tf_idf = tfidf_vectorizer.transform([message])
+        embed_tf_idf = question_embedding_tf_idf_lemma_compound_split(message)
         return sparse.hstack([embed_tf_idf, embed_mini_lm_sparse], format="csr")
     else:
         print(f"No embedding method for model type {model_type} found")
@@ -93,7 +95,7 @@ def load_model_data(model_type):
     if model_type == "MINI_LM":
         return load_pkl("MINI_L6_embeddings.pkl")
     elif model_type == "TF_IDF":
-        return load_npz("tf_idf_matrix_230k.npz")
+        return load_npz("tf_idf_matrix_compound_split_87k.npz")
     elif model_type == "TF_IDF_MINI_LM":
         return load_npz("tf_idf_mini_lm_matrix.npz")
     else:
@@ -111,7 +113,7 @@ def get_most_similar_segments(
     :param amount: The number of similar documents to return.
     :return: A DataFrame containing the most similar documents.
     """
-    df = db_get_df("transcript_sentences")
+    df = db_get_df("sentences_compound_split")
     message_embedding = get_embedding(model_type, message)
     model_data = load_model_data(model_type)
 
@@ -141,4 +143,4 @@ def get_most_similar_segments(
 #     return most_similar_documents
 
 
-# print(get_most_similar_documents("TF_IDF_MINI_LM", "Oktoberfest Bayern", 4))
+# print(get_most_similar_segments("TF_IDF_MINI_LM", "Oktoberfest Bayern", 4, 4))
