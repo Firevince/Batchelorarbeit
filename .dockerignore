@@ -3,12 +3,10 @@ data/Episode_audio_files
 data/Episode_transcripts
 data/Episode_transcripts_timestamped
 data/images
-data/transcripts.sqlite
 data/vocabulary.txt
 
 .venv/
 .git/
 .gitignore
 .calculate_embeds.sh
-german.dic
 transcribe_audios.sh

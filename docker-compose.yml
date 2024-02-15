@@ -4,11 +4,11 @@ services:
     build:
       context: .
       dockerfile: DOCKERFILE
-    image: podcast-creator
-    container_name: podcast-creator
-    volumes:
-      - /Volumes/Samsung_T5/Podcast_Episoden:/app/data/Podcast_Episoden 
-      - ./data/transcripts.sqlite:/app/data/transcripts.sqlite
+    image: podcast-creator_on_demand
+    container_name: podcast-creator_on_demand
+    # volumes:
+    #   - /Volumes/Samsung_T5/Podcast_Episoden:/app/data/Podcast_Episoden 
+    #   - ./data/transcripts.sqlite:/app/data/transcripts.sqlite
     env_file:
       - .docker_env  
     ports:
