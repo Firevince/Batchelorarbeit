@@ -83,18 +83,42 @@ Falls das Projekt in der Zukunft auf mehr Audiomaterial ausgeweitet wird sollte 
 Da SQlite nativ keine Listen oder Tabellen als Einträge in einer Datenbank speichern kann, ist es nicht trivial, die Embeddings abzuspeichern.
 Zunächst wurde die Möglichkeit in betracht gezogen, jeden einzelnen Eintrag aus einem Embedding in als seperaten Eintrag in einer Tabelle zu speichern. 
 
-Das führte allerdings zu dem Problem, dass SQLite die Anzahl an Tokens für einen SQL Befehl limitiert, ???
+Das führt allerdings zu sehr ineffizienten Abfragen der Daten und beim Einfügen von Daten limitiert SQLite die Anzahl der parameter, sodass längere Embeddings umständlich gestückelt abgespeichert werden müssten.
 
 Als nächstes wurde überprüft, ob man jedes Embedding als Serialisiertes Array abspeichern kann.
 Dafür wurde jedes Embedding in einen JSON String umgewandelt, um diesen abzuspeichern. 
-Dabei kommt leider das Problem auf, dass bei der Verwendung der Daten diese aus dem JSON deserialisiert werden müssen, was bei so vielen Daten zu lange dauert.
-Auf den 300.000 Sätzen mit einem 384 dimensionalen Embedding ca. h.
+Dabei kommt leider das Problem auf, dass die Daten bei der Verwendung wieder deserialisiert werden müssen.
+Dieser Schritt müsste jedes mal wiederholt werden, wenn eine Suche stattfindet und dauert sehr lange und ist sehr ineffizient. 
+Auf den 400.000 Sätzen mit einem 384 dimensionalen Embedding ca. 45 Min.
 
-Es wurde nicht untersucht, ob andere Serialisierungsmethoden, wie Protobuf hier geeignet wären.
+
+\section{Datenspeicherung Dense Vektoren}
+
+Um Dichte Vektoren abzuspeichern bietet es sich an eine seperate Vektordatenbank an.
+Eine Vektordatenbank ist eine nichtrelationale Datenbank, die darauf spezialisiert ist, ungeordnete Informationen zu ordnen.
+Dazu speichert sie die Embeddingvektoren verschiedener Datenquellen effizient ab und erlaubt Zugriff auf schnelle Suchalgorithmen, wie Approximate Nearest Neighbour Algorithmen.
+
+Es gibt verschiedene Approximate Nearest Neighbour Algorithmen, die alle darauf abzielen, den gesamten Suchraum für eine Ähnlichkeitssuche in kleinere Unterräume aufzuteilen.
+Dabei werden oft Baum Strukturen verwendet, um die Suche effizienter zu gestalten.
+Eine bekannte Bibliothek für Nearest Neighbour Searches ist Annoy, die unter anderem bei Spotify für die Recommendations von Songs verwendet wird.
+
+
+In dieser Arbeit wird die Vektordatenbank Milvus verwendet.
+Milvus ist eine Open-Source Vektordatenbank die von dem Unternehmen Zilliz entwickelt wird.
+Laut eigenen Angaben ist sie die am weitseten fortgeschrittene Vektordatenbank und wird von vielen Unternehmen, wie Nvidia, Paypal oder ebay benutzt.
+
+
+
+
+\section{Datenspeicherung Sparce Vektoren}
 
 Stattdessen wurde das python Modul pickle verwendet, welches arauf spezialisiert ist, python Objekte effizient als bytecode zu serialisieren. 
 Es bietet auch die Möglichkeit Datenstrukturen effizient zu speichern und zu laden und hat seit Python 3.8 auch guten support, um große NumPy Arrays effizient zu speichern, was zuvor nur mit der joblib Bibliothek möglich war.
+Pickle speichert die Daten in einem Python spezifischen Format ab, was zwar schlecht für die Portierbarkeit auf andere Systeme ist, es aber erlaubt verschiedene Eigenschaften besser zu speichern als JSON (Zum Beispiel Pointer sharing).
 
 Für den TF-IDF Algorithmus, bei dem ein Vokabular von mehr als 200.000 Wörtern eine ebensogroße Dimensionalität der Embeddingvektoren benötigt, würde ein normaler Serialisierungsalgorithmus für die 300.000 Sätze ca 60 Milliarden Werte abspeichern.
+Wenn man für jeden dieser Werte eine 32 Bit Gleitkommazahl als Datentyp abspeichern würde, käme man auf ca. 240 GB Daten. 
+Ein großteil dieser Werte (~99,9\%) sind dabei 0.
+Ein Numpy Array kann diese Werte sehr effizient zusammenfassen und mithilfe von pickle kann dieses kompakte Array effizient abgespeichert werden, was in einer tatsächlichen Größe von ca. 50 MB entspricht.
 
 

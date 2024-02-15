@@ -138,14 +138,30 @@ Zwei Tage nach seinem 69. Geburtstag und der Veröffentlichung von Blackstar, se
 \subsection{Satzbildung mit SpaCy}
 
 Mithilfe der NLP Bibliothek SpaCy kann man herausfinden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
-SpaCy verwendet dafür Statistische Methoden.
+SpaCy verwendet dafür Machine Learning Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
+Es gibt auch noch die beliebte Bibliothek NLKT, die sich aber eher auf das Unterrichten von NLP spezialisiert hat.
+SpaCy ist eher für den produktiven Einsatz geeignet.
 
-
-\subsection{Lemmatisierung vs. Stemming}
+\subsection{Sätze Normalisieren / cleanen}
 
 Für Retrieval funktionen ist es Sinnvoll, mehrere Wörter zusammenzufassen.
 Wenn man einen Algorithmus hat, der gezielt Wörter im Korpus suchen kann, ist es Wünschenswert nicht nur exakt die selben Wörter zu suchen, sondern auch verwandte Wörter.
 Zum Beispiel sollte die Suche nach dem Wort "Wanderer" auch Ergebisse für die Worte "Wandererin", "Wanderung" oder "wandern" enthalten, nicht aber das Wort "Wand".
+
+\subsubsection{Tokenisierer}
+
+In Machine Leerning Anwendungen nutzt man dafür verschiedene Tokenisierer.
+Es gibt einfache Tokenisierer, wie Whitespace Tokenisierer, die einen Text einfach an Leerzeichen teilen und die einzelnen Wörter als Tokens behandeln.
+Etwas besser sind Wort Tokenizer, die auch Satzzeichen erkennen und dadurch Punkte und Kommata nicht an das Ende des vorangegangenen Wortes anhängen. 
+Einen solchen Tokenizer nutzt beispielsweise spaCy, um "Linguistic Features" zu bestimmen.
+Es gibt Subword tokenisierer, die Worte nocheinmal in kleinere Abschnitte teilen.
+Das Byte-Pair Encoding versucht aufgrund von Statistischen Methoden, häufig vorkommende zusammenhängende Zeichenfolgen als Tokens zu identifizieren.
+Diese Art Tokenizer wird zum Beispiel oft für die Eingabe bei Transformern genutzt. [Quelle]
+Die Transformermodelle von OpenAI benutzen beispielsweise tiktoken als Tokenizer [Quelle], das BERT Modell von Google benutzt den WordPiece Tokenizer.
+
+
+
+\subsubsection{Lemmatisierung vs. Stemming}
 
 Um diese Abbildung von mehreren Worten auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden:
 Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel "Wanderer" und "Wanderung" zu einem Wort "Wander" zu reduzieren.
@@ -154,9 +170,13 @@ Die Nachteile sind allerdings, dass die Deutsche Sprache sehr viele verschiedene
 Zum Beispiel bei dem Plural von "Baum"; "Bäume".
 
 
-\subsection{Kompositatrennung Pyphen vs german compound splitter}
+\subsubsection{Kompositatrennung Pyphen vs german compound splitter}
 
-LOL
+Als weiteren Vorverarbeitungsschritt für die effiziente Keywordsuche kann man zusammengesetzte Wörter in ihre bestandteile auftrennen.
+Das Vokabular des Datensazes besteht zu 61\% aus Nomen. 
+Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, wie zum Beispiel "reichsdeputationshauptschlussakte", oder "hochgeschwindigkeitstransportmittel".
+In dem ganzen Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben.
+Da für exakte Keywortsuche solche Begriffe fast nie auftreten, lohnt es sich, 
 
 \section{Transktript Segment Ranking}
 
@@ -190,7 +210,7 @@ Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene
 
 \subsubsection{Embeddings}
 
-\section{Ähnlichkeitsvergleiche}
+\subsection{Ähnlichkeitsvergleiche}
 
 Mithilfe der Embedding Vektoren können können wir Sätze finden, die zueinander Ähnlich sind. Aber was bedeutet überhaupt ähnlich? Die Vektoren des BERT Models sind 768 Dimensional, haben also 768 Gleitkommazahlen gespeichert, die zwischen -1 und 1 liegen. 
 Diese Gleitkommazahlen Vektoren könnte man auch als Feature Vektoren begreifen. 
@@ -205,6 +225,9 @@ Um die Ähnlichkeit von diesem Satz zu der Frage „“ zu bestimmen nutzen wir 
 
 Diese Komplexen semantischen Unterschiede, oder Gemeinsamkeiten zu erkennen erfordert etwas mehr Raffinesse.
 
+Andere Distanzmaßen:
+Manhatten Distanz (nur x oder y Achse)
+Hamming Distanz (Anzahl verschiedener Einträge)
 
 \subsubsection{Euclidean Similarity}
 
@@ -214,19 +237,37 @@ Für die beiden Vektoren
 $\begin{pmatrix}0\\1\end{pmatrix}$
 und 
 $\begin{pmatrix}-1\\0\end{pmatrix}$
-wäre die Euklidische Distanz $\frac{1}{\sqrt{2}}$, da $\sqrt{(0-(-1))^2 + (1-0)^2}=\frac{1}{\sqrt{2}}$
+wäre die
+
+Euklidische Distanz $\frac{1}{\sqrt{2}}$, da $\sqrt{(0-(-1))^2 + (1-0)^2}=\frac{1}{\sqrt{2}}$
+
 Dieses Distanzmaß ist sensibel gegenüber der Länge der Vektoren.
-Wenn die Vektoren nicht normiert wurden, kann die Euklidische Distanz sehr groß werden und die Ergebnisse verfälschen.
-
-\subsubsection{Dotproduct Similarity}
-
+Wenn die Vektoren nicht normiert wurden, kann die Euklidische Distanz sehr groß werden und die Ergebnisse einer Ähnlichkeitssuche verfälschen.
 
 
 \subsubsection{Cosinus Similarity}
 
+Ein weiteres Ähnlichkeitsmaß kann man über den Winkel zwischen zwei Vektoren definieren.
+Dieser Winkel ist unanhängig davon, wie lang die Vektoren sind, immer gleich.
+Die weitverbreiteste Methode um diesen Winkel zu messen, ist über die Cosinus Ähnlichkeit.
+Diese berechnet den Cosinus des Winkels und kann einfach über die Formel
+
+$\text{cosine\_similarity}(\mathbf{a}, \mathbf{b}) = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\| \|\mathbf{b}\|}$
+
+berechnet werden.
+Dabei wird für beide Vektoren zunächst das Skalarprodukt bestimmt.
+Das Skalarprodukt besitzt die Eigenschaft groß zu sein, wenn beide Vektoren in ähnliche Richtungen zeigen und kleiner, wenn beide Vektoren in unterschiedliche Richtungen zeigen.
+Dabei hat die Länge der unterschiedlichen Vektoren einen Einfluss auf die Größe des Skalarproduktes.
+Um dieser Verzerrung entgegenzuwirken, wird das Skalarprodukt durch das Produkt der Beträge der Vektoren geteilt.
+Dadurch erhält man den cosinus des Winkels zwischen diesen beiden Vektoren.
+
+Wenn beide Vektoren vorher normiert wurden, das heißt der Betrag der Vektoren gleich Eins ist, ist die Cosinus Distanz gleich der Skalarprodukt Distanz der beiden Vektoren.
+Außerdem kann in diesem Fall die Euklidische Distanz asu der Cosinus Distanz errechnet werden durch die Formel: 
+
+$\text{Euclidean distance} = \sqrt{2 - 2 \cos(\theta)}$
 
 
- 
+
 
 
 \section{Audio-Zusammensetzung}
