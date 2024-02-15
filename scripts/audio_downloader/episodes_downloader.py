@@ -42,13 +42,10 @@ def get_graphql(query):
         raise f"GraphQL request failed with status code {response.status_code}"
 
 
-def download_on_demand(df, path):
+def download_on_demand(filename, path):
     base_url = "https://media.neuland.br.de/file/34536/c/feed/"
-    for filename in df["filename"]:
-        if filename not in os.listdir(path):
-            url = base_url + filename
-            download_and_save_mp3_in_dir(url, path, filename)
-    return
+    url = base_url + filename
+    download_and_save_mp3_in_dir(url, path, filename)
 
 
 def get_newest_episodes_data():
