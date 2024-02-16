@@ -4,8 +4,6 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sparse
 from db_connect import db_get_df, db_save_df, load_npz, load_pkl
-
-# from Embedding_creation.embedding_creator_BERT import dokument_embedding
 from embedding_creation.embedding_creator_MINI_L6 import document_embedding_MINI_LM
 from embedding_creation.embedding_creator_TF_IDF import (
     question_embedding_tf_idf_lemma_compound_split,
@@ -14,8 +12,6 @@ from scipy.spatial.distance import cosine
 from segment_ranking.chatgpt_help import gpt_order_segments
 from sklearn.metrics.pairwise import pairwise_distances
 from tqdm import tqdm
-
-# from Embedding_creation.embedding_creator_llama_2 import document_embedding_LLama_2
 
 
 def enrich_segment(segment, transcript_df, num_prev_sentences=5, num_next_sentences=5):

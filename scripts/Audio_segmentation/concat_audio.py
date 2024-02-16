@@ -16,13 +16,12 @@ def concatenate_segments_with_sound(segment_files, output_file, inbetween_sound_
         segment = AudioSegment.from_file(segment_file)
         concatenated_audio += inbetween_sound
         concatenated_audio += segment
-
-    concatenated_audio.export(output_file, format="wav")
+    concatenated_audio.export(output_file, format="mp3")
 
 
 def produce_final_audio(out_filename):
     segment_files = []
-    output_file = os.path.join(SERVER_PATH, "audio", out_filename)
+    output_file = os.path.join(SERVER_PATH, "static/audio", out_filename)
     inbetween_sound_file = os.path.join(DATA_PATH, "inter.wav")
     snippets_path = os.path.join(DATA_PATH, "audio_segments/")
 

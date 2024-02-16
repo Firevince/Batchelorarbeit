@@ -2,16 +2,16 @@ import os
 
 from dotenv import load_dotenv
 from mutagen.id3 import APIC, ID3
-from mutagen.mp3 import MP3
 
 load_dotenv(override=True)
 AUDIO_SOURCE_PATH = os.getenv("AUDIO_SOURCE_PATH")
 DATA_PATH = os.getenv("DATA_PATH")
+SERVER_PATH = os.getenv("SERVER_PATH")
 
 
 def save_image(filename, i):
-    # image_path = os.path.join(DATA_PATH, "images/cover_images", f"cover_{i}.jpg")
-    image_path = f"/Users/br/Projects/Bachelorarbeit/scripts/server/static/images/cover_{i}.jpg"
+    image_path = os.path.join(DATA_PATH, "static/images/cover_images", f"cover_{i}.jpg")
+    # image_path = f"/Users/br/Projects/Bachelorarbeit/scripts/server/static/images/cover_{i}.jpg"
     try:
         tags = ID3(filename)
 

@@ -1,12 +1,9 @@
 import os
 
-import joblib
 import numpy as np
 import torch
 from dotenv import load_dotenv
-from scipy import sparse
 from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import pairwise_distances
 from tqdm import tqdm
 
 load_dotenv()

@@ -1,11 +1,5 @@
-import datetime
-import io
-import json
 import os
-from concurrent.futures import ThreadPoolExecutor
 
-import requests
-from db_connect import db_get_df, db_save_df
 from dotenv import load_dotenv
 from pydub import AudioSegment
 

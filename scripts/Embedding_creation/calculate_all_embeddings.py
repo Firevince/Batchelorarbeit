@@ -1,10 +1,5 @@
-import json
-
 from db_connect import db_get_df, db_save_df, save_pkl
 from embedding_creator_MINI_L6 import all_document_embeddings_batchwise_MINI_LM
-from tqdm import tqdm
-
-from scripts.Embedding_creation.embedding_creator_BERT import dokument_embedding
 
 # embed_func = document_embedding_MINI_LM
 # df = db_get_df(["filename", "segment_text", "start", "end", "segment_id"])
