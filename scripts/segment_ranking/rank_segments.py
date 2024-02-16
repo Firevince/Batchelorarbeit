@@ -120,7 +120,6 @@ def get_most_similar_segments(
     if sort_gpt:
         most_similar_documents = gpt_order_segments(most_similar_documents)
 
-    db_save_df(most_similar_documents, "best_fitting")
     return most_similar_documents
 
 

@@ -24,6 +24,11 @@ def db_save_df(df, tablename):
         df.to_sql(tablename, con, index=False, if_exists="replace")
 
 
+def db_append_df(df, tablename):
+    with sqlite3.connect(DATABASE_PATH) as con:
+        df.to_sql(tablename, con, index=False, if_exists="append")
+
+
 def db_insert_transcript_segment(data, filename):
     conn = sqlite3.connect(DATABASE_PATH)
     cursor = conn.cursor()

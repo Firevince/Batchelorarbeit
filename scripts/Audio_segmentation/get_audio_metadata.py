@@ -2,6 +2,7 @@ import os
 
 from dotenv import load_dotenv
 from mutagen.id3 import APIC, ID3
+from utils.utils import delete_files_in_directory
 
 load_dotenv(override=True)
 AUDIO_SOURCE_PATH = os.getenv("AUDIO_SOURCE_PATH")

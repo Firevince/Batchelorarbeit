@@ -2,21 +2,11 @@ import os
 
 from dotenv import load_dotenv
 from pydub import AudioSegment
+from utils.utils import delete_files_in_directory
 
 load_dotenv()
 AUDIO_SOURCE_PATH = os.getenv("AUDIO_SOURCE_PATH")
 AUDIO_SEGMENT_PATH = os.getenv("AUDIO_SEGMENT_PATH")
-
-
-def delete_files_in_directory(directory):
-    try:
-        for filename in os.listdir(directory):
-            file_path = os.path.join(directory, filename)
-            if os.path.isfile(file_path):
-                os.remove(file_path)
-        print(f"All files in {directory} deleted.")
-    except Exception as e:
-        print(f"Error deleting files: {str(e)}")
 
 
 def split_audio(audio_filename, start, end, output_file):
