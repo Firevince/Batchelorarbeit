@@ -22,6 +22,7 @@ data/matrices/*.pkl
 # web server
 scripts/server/static/images
 scripts/server/audio/
+scripts/server/static/.webassets-cache
 
 # cache files
 */__pycache__
