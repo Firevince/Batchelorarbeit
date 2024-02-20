@@ -25,7 +25,7 @@ def produce_final_audio(out_filename):
     inbetween_sound_file = os.path.join(DATA_PATH, "inter.wav")
     snippets_path = os.path.join(DATA_PATH, "audio_segments/")
 
-    for filename in os.listdir(snippets_path):
+    for filename in sorted(os.listdir(snippets_path)):
         segment_files.append(snippets_path + filename)
 
     concatenate_segments_with_sound(segment_files, output_file, inbetween_sound_file)

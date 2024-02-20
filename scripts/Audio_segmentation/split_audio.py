@@ -16,7 +16,6 @@ def split_audio(audio_filename, start, end, output_file):
     file_path = os.path.join(AUDIO_SOURCE_PATH, audio_filename)
     if not os.path.isfile(file_path):
         print(f"File not found - downloading {audio_filename}")
-        print(AUDIO_SOURCE_PATH)
         download_on_demand(audio_filename, AUDIO_SOURCE_PATH)
 
     audio_file = AudioSegment.from_file(file_path)
@@ -30,7 +29,7 @@ def split_audio(audio_filename, start, end, output_file):
 
 def produce_audio_snippets(best_fitting_df):
     delete_files_in_directory(AUDIO_SEGMENT_PATH)
-
+    print(best_fitting_df["filename"], best_fitting_df["sentence"])
     with ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
         futures = []
         for i, row in best_fitting_df.iterrows():

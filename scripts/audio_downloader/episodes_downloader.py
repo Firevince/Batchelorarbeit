@@ -42,8 +42,8 @@ def get_graphql(query):
 
 
 def download_on_demand(filename, path):
-    base_url = "https://media.neuland.br.de/file/34536/c/feed/"
-    url = base_url + filename
+    df = db_get_df("episodes_metadata")
+    url = df.loc[df["filename"] == filename]["download_url"].values[0]
     download_and_save_mp3_in_dir(url, path, filename)
 
 
@@ -237,3 +237,6 @@ def get_metadata_all_episodes():
     )
 
     return df
+
+
+# download_on_demand("queere-tiere-alles-natur.mp3", "data/episode_audio_files")
