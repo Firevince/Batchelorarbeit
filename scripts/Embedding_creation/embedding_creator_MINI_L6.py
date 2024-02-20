@@ -10,7 +10,7 @@ load_dotenv()
 DATA_PATH = os.getenv("DATA_PATH")
 
 
-def document_embedding_MINI_LM(doc_text):
+def MINI_LM_embed(doc_text):
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     model = SentenceTransformer("paraphrase-MiniLM-L6-v2", device=device)

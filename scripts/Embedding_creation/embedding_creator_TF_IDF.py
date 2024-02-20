@@ -59,7 +59,7 @@ def lemmatize_german_sentence(input_sentence, nlp):
     return lemmatize_sentence
 
 
-def question_embedding_tf_idf_lemma_compound_split(question):
+def tf_idf_embed(question):
     input_file = os.path.join(DATA_PATH, "german.dic")
     ahocs = comp_split.read_dictionary_from_file(input_file)
     nlp = spacy.load("de_core_news_md")

@@ -4,10 +4,8 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sparse
 from db_connect import db_get_df, db_save_df, load_npz, load_pkl
-from embedding_creation.embedding_creator_MINI_L6 import document_embedding_MINI_LM
-from embedding_creation.embedding_creator_TF_IDF import (
-    question_embedding_tf_idf_lemma_compound_split,
-)
+from embedding_creation.embedding_creator_MINI_L6 import MINI_LM_embed
+from embedding_creation.embedding_creator_TF_IDF import tf_idf_embed
 from scipy.spatial.distance import cosine
 from segment_ranking.chatgpt_help import gpt_order_segments
 from sklearn.metrics.pairwise import pairwise_distances
@@ -68,14 +66,14 @@ def get_embedding(model_type, message):
     :return: The embedding of the input message.
     """
     if model_type == "MINI_LM":
-        return document_embedding_MINI_LM(message)
+        return MINI_LM_embed(message)
     elif model_type == "TF_IDF":
-        embedding = question_embedding_tf_idf_lemma_compound_split(message)
+        embedding = tf_idf_embed(message)
         return embedding
     elif model_type == "TF_IDF_MINI_LM":
-        embed_mini_lm = document_embedding_MINI_LM(message)
+        embed_mini_lm = MINI_LM_embed(message)
         embed_mini_lm_sparse = sparse.csr_matrix(embed_mini_lm)
-        embed_tf_idf = question_embedding_tf_idf_lemma_compound_split(message)
+        embed_tf_idf = tf_idf_embed(message)
         return sparse.hstack([embed_tf_idf, embed_mini_lm_sparse], format="csr")
     else:
         print(f"No embedding method for model type {model_type} found")
@@ -99,7 +97,7 @@ def load_model_data(model_type):
 
 
 def get_most_similar_segments(
-    model_type: str, message: str, amount: int, segment_size: int, sort_gpt=False
+    model_type: str, message: str, amount: int, segment_size: int, sort_gpt=True
 ):
     """
     Find the most similar documents to the given message using the specified model.
@@ -109,11 +107,12 @@ def get_most_similar_segments(
     :param amount: The number of similar documents to return.
     :return: A DataFrame containing the most similar documents.
     """
-    df = db_get_df("sentences_compound_split")
+    df = db_get_df("transcript_sentences")
     message_embedding = get_embedding(model_type, message)
     model_data = load_model_data(model_type)
 
     df["distance"] = calculate_distances_batchwise(message_embedding, model_data)
+
     most_similar_documents = df.nsmallest(amount, "distance")
     most_similar_documents = enrich_all_segments(most_similar_documents, df, segment_size)
 
