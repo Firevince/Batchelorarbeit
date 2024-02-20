@@ -4,9 +4,10 @@
 <script src="{{ url_for('static', filename='js/player.js') }}"></script>
 
 <div class="v-wrapper" id="app">
+
   <div class="container">
     <div>Thema deiner Podcasts Episode</div>
-    <div class="search-container ">
+    <div class="search-container">
       <input type="text" class="search-input" placeholder="Search...">
       <button class="search-button">
         <svg viewBox="0 0 20 20" width="20" height="20" class="search-icon">
@@ -14,8 +15,8 @@
         </svg>
       </button>
     </div>
-  
   </div>
+  
 
   <div class="h-wrapper">
     <div class="search-time-container container">
@@ -35,11 +36,11 @@
     </div>
   </div>
 
-  <div class="h-wrapper" >
+  <div class="h-wrapper last-row" >
       <div class="player">
         <div class="player__top">
           <div class="player-cover">
-              <div id="cover-image" class="player-cover__item" style="background-image: url('{{ currentTrack.cover }}');"></div>
+              <div id="cover-image" class="player-cover__item" style="background-image: url(/static/images/radio_wissen.jpg);"></div>
 
         </div>
           <div class="player-controls">
@@ -74,15 +75,15 @@
         <div  class="progress" ref="progress">
           <div class="progress__top">
             <div class="album-info" v-if="currentTrack">
-              <div id="artist" class="album-info__name">{{ currentTrack.artist }}</div>
-              <div id="title" class="album-info__track">{{ currentTrack.name }}</div>
+              <div id="artist" class="album-info__name"></div>
+              <div id="title" class="album-info__track"></div>
             </div>
-            <div id="duration" class="progress__duration">{{ duration }}</div>
+            <div id="duration" class="progress__duration"></div>
           </div>
           <div id="progress-bar" class="progress__bar" @click="clickProgress">
             <div id="progress-indicator" class="progress__current" :style="{ width : barWidth }"></div>
           </div>
-          <div id="current-time" class="progress__time">{{ currentTime }}</div>
+          <div id="current-time" class="progress__time"></div>
         </div>
         <div v-cloak></div>
         <audio id="audio-player" controls hidden></audio>
@@ -132,7 +133,9 @@
       </symbol>
       <symbol id="icon-transcript" viewBox="0 0 32 32">
         <title>icon-transcript</title>
-        <rect x="1" y="1" width="30" height="30" stroke="black" stroke-width="2" fill="white"></rect>
+        <!-- <rect x="1" y="1" width="30" height="30" stroke="black" stroke-width="2" fill="white"></rect> -->
+        <path d="M 1 1 H 31 V 31 H 1 Z" fill="none" stroke-width="2"></path>
+
         <path d="M4 24h24v-4H4v4zm0-7h24v-4H4v4zm0-11v4h24v-4H4z"></path>
       </symbol>
       <symbol id="icon-play" viewBox="0 0 32 32">

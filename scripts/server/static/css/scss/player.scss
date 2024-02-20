@@ -10,16 +10,16 @@ body {
   }
   
   li {
-    background-color: #f4f4f4;
+    background-color: #dfdfdf;
     // color: #acb8cc;
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 5px;
   }
   
-  li:nth-child(odd) {
-    background-color: #e0e0e0;
-  }
+  // li:nth-child(odd) {
+  //   background-color: #e0e0e0;
+  // }
   * {
     box-sizing: border-box;
   }
@@ -34,49 +34,70 @@ body {
   }
 
   .v-wrapper{
-    margin: 4em;
+    width: 836px;
+    margin: 0px auto;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    .v-wrapper > *:not(:last-child) {
+      flex-basis: auto; /* Adjust this based on your needs */
+    }
+    @media screen and (max-width: 600px), (max-height: 500px) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 100%;
+    }
   }
   
   .h-wrapper {
-    
-    width: 100%;
     display: flex;
+    width: 100%;
     flex-direction: row;
     align-items: stretch;
-    justify-content: center;
+    justify-content: space-between;
     // background: url(../img/bg.png) no-repeat center;
     background-size: cover;
+
+
     @media screen and (max-width: 700px), (max-height: 500px) {
       flex-wrap: wrap;
       flex-direction: column;
     }
   }
+  .h-wrapper > * {
+    margin-left: 1em; /* Adds space between items */
+  }
+  .h-wrapper > *:first-child{
+    margin-left: 0em; /* Adds space between items */
+  }
+
 
   .container{
     background: #eef3f7;
     box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
     border-radius: 15px;
-    margin: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
     padding: 30px;
+    @media screen and (max-width: 700px), (max-height: 500px) {
+
+    }
   }
 
   .search-container{
-    flex-shrink: 1;
-    flex-basis: 60%;
     display: flex;
     align-items: center;
   }
 
   .search-input {
     border: none;
+    width: 100%;
     outline: none;
     padding: 10px;
     border-radius: 15px;
-    width: 100%;
     font-size: 16px;
+    margin-top:0.5em;
   }
   
   .search-button {
@@ -121,7 +142,7 @@ body {
   }
   
   .search-time-container{
-    flex: 1;
+    flex-shrink: 1;
   }
 
   .player {
@@ -129,7 +150,6 @@ body {
     width: 410px;
     min-height: 480px;
     height: 100%;
-    margin: 1em;
     flex-shrink: 0;
     // box-shadow: 0px 55px 75px -10px rgba(76, 70, 124, 0.5);
     // box-shadow: 0px 55px 105px 10px rgba(76, 70, 124, 0.35);
@@ -415,10 +435,13 @@ body {
   .transcript-container {
     background: #eef3f7;
     // display: none;
-    height: 100%;
+    // height: 100%;
     width: 410px;
-    margin: 1em;
-    overflow-y: auto;
+    .transcript-text{
+      height: 449px;
+      overflow-y: auto;
+    }
+    
     // box-shadow: 0px 55px 75px -10px rgba(76, 70, 124, 0.5);
     // box-shadow: 0px 55px 105px 10px rgba(76, 70, 124, 0.35);
     box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
@@ -442,7 +465,7 @@ body {
       }
     }
   }
-  
+
   .github-btn {
     position: absolute;
     right: 40px;

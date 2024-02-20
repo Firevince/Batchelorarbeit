@@ -35,6 +35,8 @@ input[type="text"] {
 
     padding-right: 30px; /* Adjust padding for icon */
 }
+
+
 input[type="submit"] {
     transition: background-color 0.3s;
 }
