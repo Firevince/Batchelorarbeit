@@ -55,7 +55,7 @@ Dazu ist Python sehr einfach zu verstehen und rechenaufwändige Operationen wie 
 
 
 
-\section{Podcast zu Text}
+\section{Transkription der Podcasts}
 
 
 \subsection{Fraunhofer}
@@ -94,8 +94,19 @@ Auf einem Macbook Pro 2016 mit einem Intel Core i7 benötigt die Transkription c
 Auf einer T4 GPU, wie sie Google kostenlos auf Google Colab zur verfügung stellt, dauert eine Transkription immer noch 3,5 Minuten. 
 Für ca. 1000 Episoden bräuchte man demnach ca. 3500 Minuten, d.h. ca. 58 h. 
 
+Drawbacks von Whisper:
+Medium Modell immer noch einige Fehler: 
+- gubt statt Grub
+- wenn Sprecherwechsel manchmal ganze Sätze weg (im-bann-des-mondes-archaische-mythen-und-religionen.mp3	)
+
 TODO large ausprobieren, auf den Servern der Uni und mit der Ebu API
 Eurovox
+
+
+Die Transkripte der Episoden sind meißt ca. 3000 Wörter lang und benötigen ungefähr 20 KB Speicherplatz pro Transkript.
+
+\includegraphics[width=\linewidth]{figures/transcript_length.png}
+
 
 \subsection{Eurovox}
 
@@ -141,6 +152,30 @@ Mithilfe der NLP Bibliothek SpaCy kann man herausfinden, welche Satzzeichen wirk
 SpaCy verwendet dafür Machine Learning Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
 Es gibt auch noch die beliebte Bibliothek NLKT, die sich aber eher auf das Unterrichten von NLP spezialisiert hat.
 SpaCy ist eher für den produktiven Einsatz geeignet.
+Auf der offiziellen Webseite von spaCy werden vier verschiedene Modelle für die deutsche Sprache zur verfügung gestellt.
+Das Modell 
+\begin{verbatim}
+    de_core_news_sm 
+\end{verbatim} 
+ist das kleinste Modell mit 13 MB Größe, dann folgt 
+\begin{verbatim} 
+    de_core_news_md 
+\end{verbatim}
+mit einer Größe von 42 MB und 
+\begin{verbatim}
+    de_core_news_lg 
+\end{verbatim}
+ist das größte Modell mit 541 MB.
+Das größte Modell bietet dabei vor allem viele vortrainierte Embedding Vektoren für einzelne Wörter.
+Das vierte Modell ist 
+\begin{verbatim}
+    de_dep_news_trf
+\end{verbatim}
+verbraucht 391 MB Speicherplatz und ist speziell für Transformer-support geeignet.
+spaCy führt eine selbst angegebenen Accuracy Evaluation für Sentence Segmentation, also das Erkennen von Satzenden in einem Text.
+Darin ist der F-Score für das kleine Modell gleich 0,94; für das mittlere Modell 0,95 und für das große Modell ebenfalls 0,95.
+Das Modell mit der Transformer pipeline bietet einen F-score von 0,98 und wird deswegen in dieser Arbeit verwendet. \cite{spacy2024}
+
 
 \subsection{Sätze Normalisieren / cleanen}
 
@@ -266,7 +301,37 @@ Außerdem kann in diesem Fall die Euklidische Distanz asu der Cosinus Distanz er
 
 $\text{Euclidean distance} = \sqrt{2 - 2 \cos(\theta)}$
 
+\subsection{Anreichern der Segmente}
 
+Das Ranking der einzelnen Sätze liefert eine Auswahl der besten Kandidaten für den Podcast.
+Einzelne Sätze, die aus verschiedenen Podcast Episoden stammen ohne Kontext hintereinander abzuspielen bietet für den Zuhörer nur ein mäßiges Hörerlebnis. 
+Es fehlt der Kontext zu den einzelnen Informationen.
+Zum Besipiel bekommt man für die Suchanfrage "Geschichte Amsterdam" mit dem TF-IDF Ansatz Sätze wie "Amsterdam, das bedeutet unbeschwerte Kinderjahre" oder "Amsterdam gefiel ihm".
+Die Sätze an sich bieten kaum interessante Informationen.
+Dem Zuhörer stellen sich sogar noch mehr Fragen, zum Beispiel für wen Amsterdam unbeschwerte Kinderjahre bedeuten oder wem Amsterdam gefiel.
+
+Um dem Zuhörer mehr Informationen zu geben kann man die Größe der einzelnen Segmente Anpassen.
+Dazu kann man mehrere Ansätze betrachten.
+Der einfachste Ansatz ist, für jeden einzelnen Satz die umgebenden Sätze davor und dahinter miteinzubeziehen.
+Die Anzahl der umgebenden Sätze ist dann ein Hyperparameter dieses Systems und kann vom Nutzer durch den Parameter Segmentlänge eingestellt werden, welher die Anzahl der Sätze in einem Segment angibt.
+Falls der auszuschneidende Satz am Anfang oder am Ende des Transkriptes vorkommt, und die Segmentlänge so eingestellt ist, dass mehr Sätze als möglich dem Segment hinzugefügt werden sollten, so wird das Segment an der Transkriptgrenze abgeschnitten.
+Die Evaluation der besten Segmentlänge wurde in dieser Arbeit nicht ausgeführt, als defaultwert ist für die Segmentlänge 5 eingestellt.
+
+Ein weiterer Ansatz wäre auch hier ein mächtiges LLM, wie ChatGPT zu benutzen, um die richtige Segmentlänge für jedes Segment individuell einzustellen.
+Dazu kann man das LLM instruieren, aus einer sehr großen Anzahl an Kontextsätzen (zum Beispiel 50) oder dem ganzen Transkript einer Podcast Episode und der dazugehörigen Frage, die Anzahl der Kontextsätze auf das wesentliche zu beschränken.
+
+% Dieser Ansatz würde allerdings sehr zeit- und rechenaufwändig sein.
+% Wenn man als LLM ChatGPT benutzen würde, dann würden pro einzelnem Segment ca. 50 Sätze (entspricht ca. 500 Tokens) ca. 0.00025 \$ kosten entstehen.
+
+In dieser Arbeit wurde dieser Ansatz ausprobiert mithilfe eines Promptes wie 
+
+Je nachdem welches LLM man dafür benutzt könnten Zeit und kostenfaktoren eine Rolle spielen.
+
+
+\subsection{Ranking mit ChatGPT}
+
+Nachdem nun die Einzelnen Sätze zu gößeren Segmenten erweitert wurden, kann man auch die Reihenfolge der einzelnen Segmente anpassen.
+Wenn man sich beispielsweise über die "Geschichte von Amsterdam" informieren will, kommen dazu verschiedene Ausschnitte aus der Zeit der Gründung der Niederlande, der 
 
 
 
@@ -284,6 +349,32 @@ Um dieses Problem zu lösen könnte man die Audiofiles langsam ausfaden lassen.
 Außerdem sollte dem Hörer bewusst sein, dass ein Audiosegment aus einer Episode aufhört und das nächste beginnt. Dafür bietet sich ein kurzer Signalton zwischen den einzelnen Audiosegmenten an. Dieser sollte nicht nervig sein, da er dem Hörer öfter vorgespielt wird. 
 
 Eine weitere Möglichkeit wäre, zwischen jedem Segment dem Hörer eine kurze Vorstellung der Episode und der Sprecher*in zu ermöglichen oder sogar Kontext zu dieser zu geben. 
+
+\section{Auslieferung}
+
+Für das Deployment dieses Tools wurde das Webframework Flask genutzt.
+Flask ist ein Web Service Gateway Interface Server (WSGI), welches das bereitstellen von Webseiten über die WSGI Schnittstelle ermöglicht, welche dann von einem HTTP Server ausgeliefert werden können.
+In dieser Arbeit wird dafür der WSGI HTTP Server gunicorn verwendet.
+Gunicorn ist für Unix Systeme geeignet, einfach zu konfigurieren und bietet support für mehrere Worker, die mehrere Anfragen gleichzeitig bearbeiten können.
+
+Für die Auslieferung wurde eine API und eine Webseite entwickelt.
+
+\subsection{API}
+
+Über die API kann der Podcast Generator einfach von anderen Anwendungen aufgerufen werden.
+Die API wird aufgerufen über eine GET Request auf die unterseite /api .
+
+Als Parameter akzeptiert die API einen String "text", welcher die Frage des Nutzers angibt.
+Außerdem kann über den Parameter "time" ein Integer wert angegeben werden, welcher die Zeit des Podcasts in Minuten angibt.
+Der optionale Parameter "segment-length" kann als Integer übergeben werden und bestimmt die Länge der einzelnen Segmente.
+
+Die API gibt bei Erfolgreicher verarbeitung den Statuscode 200 zurück und liefert als Inhalt ein JSON String zurück der eine einzige Variable "url" enthält.
+Diese URL verweist auf das generierte MP3 file.
+
+\subsection{Design Webseite}
+
+Das Design der Webseite beruht auf einem Template von https://github.com/muhammed/mini-player.
+Dieses Template wurde erweitert, durch einen Suchbereich und einen Transkript Bereich.
 
 
 

@@ -1,6 +1,8 @@
 \chapter{Anhang}\label{app:supplemental-information}
 
-GraphQL Abfrage um alle Episoden des Podcasts "Radio Wissen" zu erhalten
+
+\label{ch:graphql-1}
+GraphQL Abfrage um alle download Links zu den Episoden des Podcasts "Radio Wissen" zu erhalten
 Die Programset-ID verweist auf den speziellen Podcast.
 
 \begin{verbatim}
@@ -25,5 +27,34 @@ Die Programset-ID verweist auf den speziellen Podcast.
         }
     }
 }
+
+\end{verbatim}
+
+\label{ch:graphql-2}
+GraphQL Abfrage um alle Metadaten zu den Episoden des Podcasts "Radio Wissen" zu erhalten
+Die Programset-ID verweist auf den speziellen Podcast.
+
+\begin{verbatim}
+    {
+        programSet(id: 5945518) {
+        title
+        items(
+            orderBy: PUBLISH_DATE_DESC
+            filter: {
+            isPublished: {
+                equalTo: true
+            }
+            }
+        ) {
+          	
+            nodes {
+              title,
+              keywords
+              publishDate
+              description
+            }
+        }
+        }
+    }
 
 \end{verbatim}
