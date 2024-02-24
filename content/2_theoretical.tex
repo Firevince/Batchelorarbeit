@@ -93,7 +93,7 @@ Diese Vektoren nennt man Embeddings.
 Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin, passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
 
 Ein relativ moderner Ansatz besteht in der Suche mithilfe von Embedding Vektoren. 
-Dabei versuchen wir die Semantik (also die Bedeutung) der einzelnen Segmente Mathematisch mithilfe eines Vektors zu repräsentieren. 
+Dabei versuchen wir die Semantik (also die Bedeutung) der einzelnen Segmente mathematisch mithilfe eines Vektors zu repräsentieren. 
 Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. Ein Vektor, der aus dem Satz „Ich sitze auf einer Bank im Grünen“ und „Im Park steht eine alte Bank“ sollen dabei sehr Ähnlich zueinander sein, der Satz „Ich gehe in die Bank und hebe Geld ab“ aber nicht sehr Ähnlich. 
 Hierbei soll erkannt werden, dass sich die ersten beiden Sätze auf eine Bank zum Sitzen in der Natur beziehen und der dritte Satz das Geldinstitut meint. 
 Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen. 
@@ -106,6 +106,9 @@ Zum Beispiel wäre auf die Frage: "Welche Farbe hat der Himmel bei Sonnenunterga
 Diese Asymmetrische Ähnlichkeit ist schwerer zu ermitteln, da man trivialerweise in der Antwort Informationen findet, die in der Frage nicht vorkommen.
 
 Auf der 
+
+Vergleich Elastic-Search
+Embeddings können grob in zwei verschiedene Kategorien einge
 
 \section{Geschichte der Embeddingverfahren}
 
@@ -252,9 +255,9 @@ Diese daraus resultierende Matrix wird nocheinmal mit der ursprünglichen Matrix
 
 \section{Large Language Model}
 
-Large Language Model bezwichnet ein Language Model, das auf vielen Parametern trainiert wurde. 
+Large Language Model bezeichnet ein Language Model, das auf vielen Parametern trainiert wurde. 
 Language Model bezeichnet den Bezug zu dem Verständnis Natürlicher Sprache.
-Large Language Models werden vor allem für ChatBots, Text-Übersetzungen, und Sprach-Übersetzungen eingesetzt.
+Large Language Modelle werden vor allem für ChatBots, Text-Übersetzungen, und Sprach-Übersetzungen eingesetzt.
 Bekannte LLMs sind zum Beispiel ChatGPT con OpenAI, welches auf ca. 175 Milliarden Parameter trainiert wurde. [https://www.ankursnewsletter.com/p/gpt-4-gpt-3-and-gpt-35-turbo-a-review]
 Weitere bekannte LLMs sind Google Bart und Gemini, Megatron von NVIDIA oder Ayax von Apple (das erst noch kommt).
 Zu den bekannten kommerziellen LLMs, die von großen Tech Firmen entwickelt werden, kommen immer mehr open-source Modelle in den Vordergrund, die zwar (noch) nicht so Leistungsstark sind, aber auf eigener Hardware laufen können.
@@ -267,7 +270,7 @@ Da es mittlerweile eine Vielzahl unterschiedlicher LLMs gibt, die alle verschied
 Eine solche Vergleichsmöglichkeit bietet die Plattform Huggingface, auf der über 400.000 Machine Learning Modelle, davon mehr als 200.000 Transformer gehostet werden.
 In der Kategorie Question Answering, gibt es über 1300 Einträge und in der Kategorie "Sentence Similarity" ca. 3000.
 In beiden Kategorien gibt es Embedding Modelle zu finden.
-Die einzelnen Modelle kann man sich kostenlos herunterladen, sie sind ausführlich dokumentiert und man kann sie untereinander mithilfe des Abschneidens auf verschiedenen Kontroll-Datensätzen vergleichen.
+Die einzelnen Modelle können  kostenlos heruntergeladen werden, sie sind ausführlich dokumentiert und man kann sie untereinander mithilfe einer Punkteabgabe auf verschiedenen Kontroll-Datensätzen vergleichen.
 Durch Leaderboards kann man die besten Modelle bestimmen.
 Zum Beispiel das Massive Text Embedding Benchmark Leaderbord https://huggingface.co/spaces/mteb/leaderboard.\cite{muennighoff2023}
 
@@ -278,20 +281,7 @@ Classification
 
 
 
-\section{SBERT}
 
-\section{LLAMA}
-Ein sehr Leistungsfähiges LLM ist das von Meta entwickelte LLama und deren Nachfolger LLama2. \cite{touvron2023}
-
-\section{OpenAI Modelle}
-
-\href{https://twitter.com/Nils_Reimers/status/1487014195568775173}{twitter}
-
-OpenAI stellt außer den Text (GPT-4) und Bild (DALLE) generierungs Modellen auch Modelle zur Embedding erstellung in Ihrer API vor.
-Ada (1024 dimensions)
-Babbage (2048 dimensions)
-Curie (4096 dimensions)
-Davinci (12288 dimensions)
 
 \section{Dimensionalität}
 

@@ -69,6 +69,7 @@ Allerdings ist die Transkription meist nicht sehr akkurat.
 Nähreres dazu in Kapitel \autoref{ch:method}
 
 \section{Datenspeicherung}
+
 \subsection{Datenspeicherung SQLite}
 
 Die MP3 Datein der einzelnen Podcast Episoden werden in einem seperaten Ordner gespeichert und die Benennung der originalen Datein wird aus der URL übernommen.
@@ -105,6 +106,20 @@ Es gibt verschiedene Approximate Nearest Neighbour Algorithmen, die alle darauf 
 Dabei werden oft Baum Strukturen verwendet, um die Suche effizienter zu gestalten.
 Speziell Algorithmen wie Hierarchical Navigable Small Worlds werden von vielen Vektordatenbanken benutzt.
 
+Vektordatenbanken entwickeln sich in den letzten Jahren stark weiter.
+Bekannte Vektordatenbanken sind zum Beispiel Milvus, die sehr gut auf große Datenmengen skalieren kann und deshalb in vielen großen Unternehmen, wie Nvidia, Paypal oder ebay benutzt.
+Milvus bietet Unterstützung für eine Clusterbasierte Struktur, in der einzelne Container dynamisch zusammenarbeiten können.
+Dadurch wird eine hohe skalierbarkeit auf große Datenmengen erreicht, für kleinere Projekte ist der Setup Aufwand sehr groß und die Lernkurve sehr Steil.
+
+Pinecone, Zilliz, Qdrant
+
+Außerdem gibt es eine erweiterung für die PostGreSQL Datenbank namens pg-Vector
+
+Die Vektordatenbank Redis
+
+Durch die Neuheit der Vektordatenbanken bedingt, gibt es kaum Vergleiche zwischen diesen.
+\cite{blueteamai}
+
 
 % In dieser Arbeit wird die Vektordatenbank Milvus verwendet.
 % Milvus ist eine Open-Source Vektordatenbank die von dem Unternehmen Zilliz entwickelt wird.
@@ -124,7 +139,7 @@ Dafür müssen nur das Model und der Plattformspezifische API-KEY angegeben werd
 Alternativ können auch schon vorgefertigte Embeddings eingefügt und die dazugehörige Embedding Funktion eingetragen werden.
 Standartmäßig ist das Embedding des Sentence Transformer Modells all-MiniLM-L6-v2 eingestellt.
 
-Chroma bietet außerdem sehr guten support für effizientes Retrieval von Dokumenten.
+Chroma bietet außerdem sehr guten Support für effizientes Retrieval von Dokumenten.
  
 
 
@@ -135,6 +150,7 @@ In deisem Projekt wurde erst in einer späten Phase der Umstieg auf die Vektor-d
 
 \subsection{Datenspeicherung Sparce Vektoren}
 
+Chroma bietet leider noch keine Unterstützung zur speicherung von Sparce Vektoren
 Stattdessen wurde das python Modul pickle verwendet, welches arauf spezialisiert ist, python Objekte effizient als bytecode zu serialisieren. 
 Es bietet auch die Möglichkeit Datenstrukturen effizient zu speichern und zu laden und hat seit Python 3.8 auch guten support, um große NumPy Arrays effizient zu speichern, was zuvor nur mit der joblib Bibliothek möglich war.
 Pickle speichert die Daten in einem Python spezifischen Format ab, was zwar schlecht für die Portierbarkeit auf andere Systeme ist, es aber erlaubt verschiedene Eigenschaften besser zu speichern als JSON (Zum Beispiel Pointer sharing).
