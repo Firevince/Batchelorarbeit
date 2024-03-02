@@ -1,16 +1,16 @@
-\chapter{Datenbeschaffung und Speicherung}\label{ch:data}
+\chapter{Datenbeschaffung und Datenspeicherung}\label{ch:data}
 
 \section{Ausgangslage}
 
 Um eine Zusammenstellung verschiedener Audiosegmente möglichst genau und inhaltlich abgestimmt auf ein bestimmtes Thema zu fokussieren, müssen auch zu diesem Thema passende Audioabschnitte in den Daten verfügbar sein.
-Als Audiodaten könnten fast alle Audioressourcen genutzt werden, wie zum Beispiel Beiträge aus Radioprogrammen, die Audiospuren von Videos oder ganze Podcasts Episoden.
+Als Audiodaten könnten fast alle Audioressourcen genutzt werden, wie zum Beispiel Beiträge aus Radioprogrammen, die Audiospuren von Videos oder ganze Podcast Episoden.
 
-Die Qualität dieses Systems würde mit steigender Anzahl an Audiomaterial auch bessere Ergebnisse erzielen, allerdings ist es im Umfang dieser Arbeit nicht möglich alle Daten als Audiomaterial zu verwenden.
+Die Qualität dieses Systems würde mit steigender Anzahl an Audiomaterial bessere Ergebnisse erzielen, da dann zu vielen Themen mehr Inhalte zur Verfügung stehen.
+Allerdings ist es im Umfang dieser Arbeit nicht möglich, alle verfügbaren Audiomaterial für die Erstellung der Podcasts zu verwenden.
 Die Audiodaten müssten dazu erst transkribiert werden und anschließend mit diesen Transkripten Embeddings generiert werden, was Zeit- und Ressourcenintensiv ist.
 Für diese Arbeit wurde versucht möglichst qualitativ hochwertige Daten zu benutzen, um mit den möglichen Ressourcen und in gegebener Zeit einen qualitativ hochwertigen Prototypen zu erstellen. 
 
-Als Audiomaterial würde sich am besten Podcasts eignen, 
-Die beste Audioquelle wäre Audiomaterial, in dem über verschiedene Themen sachlich gesprochen wird, die Informationen aber gleichzeitig faktisch korrekt wären.
+Als Audiomaterial würde sich am besten Podcasts eignen, in denen über verschiedene Themen sachlich gesprochen wird, die Informationen aber gleichzeitig faktisch korrekt wären.
 Außerdem sollten die Audioquellen frei verfügbar sein, damit keine Urheberrechtsverletzung stattfindet.
 
 % Eine Garantie für Sachlichkeit und 
@@ -40,11 +40,11 @@ Außerdem sollten die Audioquellen frei verfügbar sein, damit keine Urheberrech
 \section{Die ARD-Audiothek}
 
 Die ARD-Audiothek ist in Deutschland eine der gößten Audio- und Podcastanbieter mit mitlerweile über 41 Millionen Audioabrufen und über 100.000 verschiedenen verfügbaren Audioinhalten. 
-Die Inhalte unterliegen alle den journalistischen Grundsätzen der ARD und bieten somit einen sorgfältigen Qualitätsstandard. 
+ALle Inhalte unterliegen den journalistischen Grundsätzen der ARD und bieten somit einen sorgfältigen Qualitätsstandard. 
 Die verschiedenen Audioinhalte stammen von den einzelnen Landesrundfunkanstalten, der ARD und dem Deutschlandradio und liefern eine Vielzahl verschiedener Inhalte.
 Sie enthält über 2000 verschiedene Podcasts, in vielen unterschiedlichen Kategorien, wie Comedy, Sport, Wissenschaft, Wirtschaft, Gesellschaft, Kunst, Musik oder Philosophie. 
 In dieser Audiothek gibt es zudem Hörbücher, Hörspiele, oder Podcasts nur für Kinder.
-Die einzelnen Rundfunkanstalten tragen außerdem eigene Podcasts bei, die meist einen regionalen Kontext haben, wie zum Beispiel der Podcast "Giga Grünheide" über das Teslawerk in Brandenburg vom rbb
+Die einzelnen Rundfunkanstalten tragen außerdem eigene Podcasts bei, die meist einen regionalen Kontext haben, wie zum Beispiel der Podcast "Giga Grünheide" über das Teslawerk in Brandenburg vom rbb.
 Alle diese Inhalte sind kostenlos und frei verfügbar und stellen eine gute Quelle für das Audiomaterial dar, das in dieser Arbeit verwendet wird.
 
 
@@ -61,7 +61,7 @@ Alle diese Inhalte sind kostenlos und frei verfügbar und stellen eine gute Quel
 Zur automatischen Generierung von Podcast Episoden bietet es sich an, dass in den Ausgangsaudios die Sprache klar und verständlich ist und verschiedene Sprecher sich nicht ins Wort fallen bzw. gleichzeitig reden.
 Außerdem ist es wünschenswert, die ausgeschnittenen Audiosegmente an klaren Satzgrenzen zu teilen, sodass der Ausschnitt nicht mitten im Satz beginnt und dem Zuhörenden der Kontext vorenthalten wird. 
 
-Als Datengrundlage wird die Podcastreihe Radiowissen von bayern2 benutzt. 
+Aufgrund dieser Kriterien wurde als Datengrundlage die Podcastreihe Radiowissen von bayern2 benutzt. 
 Diese ist nicht wie ein klassischer Podcast im Dialogstil aufgebaut, sondern ähnlich wie bei einem Hörspiel wird der Text von einem Manuskript abgelesen. 
 Dazu kommen verschiedene Geräusche und verschiedene Stimmen, um dem Hörenden mehr Abwechselung zu bieten.
 
@@ -78,12 +78,12 @@ Die Inhalte der ARD-Audiothek kann man entweder direkt über die Webseite erreic
 (https://api.ardaudiothek.de/graphql) 
 Über diese Schnittstelle sind alle Informationen, wie Titel, Beschreibungen, Autoren oder auch der Link zu dem MP3-File jeder Episode abrufbar.
 
-Über die GraphQL-Abfrage \autoref{ch:graphql-1} erhält man alle Download-Links zu den Podcast-Episoden des Podcasts "Radio Wissen" von bayern2.
+Mit einer GraphQL-Abfrage \autoref{ch:graphql-1} erhält man alle Download-Links zu den Podcast-Episoden des Podcasts "Radio Wissen" von bayern2.
 Das sind (Stand 3. Januar 24) 2257 Podcast Episoden.
 
-Alle diese Audiodatein wurden anschließend heruntergeladen und auf einer lokalen Festplatte gespiechert.
-Dabei kam es insgesamt 15 mal vor, dass zwei Episoden den selben Titel tragen, aber eine unterschiedliche Download-URL aufwiesen.
-Die URL unterschieden sich nur, indem hinten die Zeichen "-1" oder "-2" angefügt wurden.
+Alle diese Audiodatein wurden anschließend heruntergeladen und auf einer lokalen Festplatte gespeichert.
+Dabei kam es insgesamt 15-mal vor, dass zwei Episoden denselben Titel tragen, aber eine unterschiedliche Download-URL aufwiesen.
+Die Download-URLs unterscheiden sich nur, indem am Ende die Zeichen "-1" oder "-2" angefügt wurden.
 Zum Beispiel hat die Episode "Quantenphysik - Wahr, aber verrückt" den Downloadlink https://media.neuland.br.de/file/1804047/c/feed/quantenphysik-wahr-aber-verrueckt.mp3 aber auch https://media.neuland.br.de/file/2069613/c/feed/quantenphysik-wahr-aber-verrueckt-1.mp3.
 In diesem Fall liefert nur die zweite URL einen Download, die erste zeigt eine Fehlermeldung an.
 Es gibt auch Fälle in denen beide Links funktionieren, wie zum Beispiel 
@@ -91,8 +91,8 @@ https://media.neuland.br.de/file/32891/c/feed/die-bamberger-hexenprozesse-unschu
 https://media.neuland.br.de/file/1858845/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben-1.mp3   
 Die Daten wurden dementsprechend bereinigt und doppelte Audioinhalte nur einmal abgespeichert.
 
-Für weitere Analysen und die Kategorisierung der Audiodatein ist es außerdem Sinnvoll, die Beschreibungen der einzelnen Episoden und die dazugehörenden Schlagwörter abzufragen, da diese eine Kurze Zusammenfassung oder Einordnung der Episoden enthalten.
-Über das Entstehungsdatum können des witeren Informationen später nach Aktualität gefiltert werden 
+Für weitere Analysen und die Kategorisierung der Audiodatein ist es außerdem Sinnvoll, die Beschreibungen der einzelnen Episoden und die dazugehörenden Schlagwörter abzufragen, da diese eine kurze Zusammenfassung oder Einordnung der Episoden enthalten.
+Außerdem bietet das Entstehungsdatum der Episoden die Möglichkeit, Informationen später nach Aktualität zu filtern.
 Über die Anfrage \autoref{ch:graphql-2} können all diese Informationen abgefragt werden.
 
 Über die API kann auch in einigen Fällen direkt ein Transkript des Audiofiles angefordert werden. 
@@ -102,25 +102,95 @@ Nähreres dazu in Kapitel \autoref{ch:method}
 
 \section{Datenanalyse}
 
-Die 2232 einzigartigen Episoden haben eine durchschnittliche Länge von 22 Minuten und einen durchschnittlichen Größe von 21 MB.
+
+Die 2232 einzigartigen Episoden haben eine durchschnittliche Länge von 22 Minuten und eine durchschnittliche Größe von 21 MB.
 Insgesamt weisen diese Audiodaten eine Größe von ungefähr 47 GB auf. 
 
 \includegraphics[width=\linewidth]{figures/mp3_length.png}
+
+Der Graph zeigt die Verteilung der Längen der Audiodatein.
 
 Der kürzeste Podcast ist "ab-jetzt-in-der-ard-audiothek-kinder-der-flucht-frauen-erzaehlen.mp3", der nur 2 Minuten 30 Sekunden lang ist und ein Teaser für einen anderen Podcast darstellt.
 Die längste MP3 Datei ist mit Abstand "deportation-und-exil-eine-polnische-odyssee-im-zweiten-weltkrieg.mp3" mit einer Länge von mehr als 53 Minuten.
 Diese Episode ist mehr als doppelt so lang wie eine durchschnittliche Episode und bildet einen Ausnahmefall.
 
-Die 
+Für das System werden trotz der verschiedenen Längen alle Audiodatein benutzt, da sie später in kleinere Segmente zerteilt werden.
 
 
+
+\section{Transkription der Podcasts}
+
+
+\subsection{Fraunhofer}
+
+Seit 2015 arbeitet die ARD mit dem Fraunhofer-Institut Institut für Intelligente Analyse- und Informationssysteme (IAIS) zusammen, um „Erschließung von Mediendaten zu forcieren und dabei den Schwerpunkt auf maschinelle Verfahren zu legen“ [1]
+Ein Teil dieses Projektes bezieht sich auf das Audio-Mining. 
+Das Fraunhofer IAIS entwickelte dafür ein System, welches die Audiodatein transkribiert und dabei „in der kompletten ARD, bei Deutschlandradio sowie im ZDF im Einsatz [ist]“. 
+Leider legt das FraunhoferIAIS nicht offen, welche Technologie es dafür verwendet. 
+Die Transkripte lassen sich allerdings sehr einfach über eine Graphql Schnittstelle abfragen. 
+
+\subsection{Microsoft Translate}
+
+Eine weitere Möglichkeit zur Audiotranskription bietet Microsoft Translate. 
+Soweit man einen Microsoft 365 Account besitzt, kann man in dem Webinterface von Microsoft word eine Transkriptionsfunktion benutzen. 
+Dafür müssen die Audiofiles zunächst auf Microsoft Onedrive hochgeladen werden und können dann mit einem Klick übersetzt werden. 
+Microsoft Word stellt dann sogar Timestamps  zur Verfügung für das ganze Dokument. 
+Die Qualität ist außerdem besser als bei kostenlosen Open-Source Alternativen. 
+Dafür skaliert diese Art der Transkription schlecht für größere Datenmengen, da sämtliche files zunächst bei OneDrive hochgeladen werden müssen und dann jedes File von Hand ausgewählt, in Word eingebunden, transkribiert werden und dann abgespeichert werden müssen. 
+
+\subsection{Whisper}
+
+Für die Transkription eignen sich Automatic Speech Recognition Systeme (ASR). 
+Eines der besten kostenlosen ASR Systeme bietet Whisper von OpenAI. 
+Dieses System wurde mit einem maschinellen lernverfahren auf 680 000 Stunden Audiomaterial in verschiedenen Sprachen trainiert. 
+Es ist sehr leistungsstark und kann lokal auf eigener Hardware laufen. [2] [3]
+
+Whisper bietet mehrere verschiedene Modelle zur Transkription an. Es gibt die Modelle tiny, base, small, medium und large. 
+Das Basismodell hat ca. 74 Millionen Parameter und benötigt ca. 1 GB VRAM und ist ca. 16 mal schneller als das large Model. 
+Bei einem Test für die Episode 1968-das-ausnahmejahr aus dem Podcast Radiowissen von br2 schneidet es aber nicht sehr gut ab. 
+Aus dem Wort „Vietnam“ wird „Wirdnam“, aus „Panzer in Prag“ wird „Panzer-Inprac“ und aus  „Ohrfeige“ wird „Urfeige“. 
+Der vorgetragene Text wurde dabei ohne Störgeräusche und von einer Person flüssig vorgetragen. 
+
+Dagegen bietet das Medium Model von Whisper deutlich bessere Ergebnisse für die selbe Episode. 
+Bei der Transkription konnte kein Fehler festgestellt werden. Allerdings ist der Zeitaufwand durch höhere Rechenleistung immens. 
+Auf einem Macbook Pro 2016 mit einem Intel Core i7 benötigt die Transkription ca. 45 min. pro Episode. 
+Auf einer T4 GPU, wie sie Google kostenlos auf Google Colab zur verfügung stellt, dauert eine Transkription immer noch 3,5 Minuten. 
+Für ca. 1000 Episoden bräuchte man demnach ca. 3500 Minuten, d.h. ca. 58 h. 
+
+Drawbacks von Whisper:
+Medium Modell immer noch einige Fehler: 
+- gubt statt Grub
+- wenn Sprecherwechsel manchmal ganze Sätze weg (im-bann-des-mondes-archaische-mythen-und-religionen.mp3	)
+
+TODO large ausprobieren, auf den Servern der Uni und mit der Ebu API
+Eurovox
+
+
+Die Transkripte der Episoden sind meißt ca. 3000 Wörter lang und benötigen ungefähr 20 KB Speicherplatz pro Transkript.
+
+\includegraphics[width=\linewidth]{figures/transcript_length.png}
+
+
+\subsection{Eurovox}
+
+Das Problem der langen Wartezeiten lässt sich umgehen, wenn wir Cloud computing benutzen, das heißt, das Whisper model nicht auf der lokalen Hardware laufen zu lassen, sondern zum Beispiel auf den Servern von Eurovox. 
+Eurovox ist ein Software tool von der EBU, der Europian Broadcast Union. 
+Sie ist ein zusammenschluss von derzeit 68 Rundfunkanstalten in 56 Staaten Europas, Nordafrikas und Vorderasien mit Sitz in Genf. [4] 
+Das tool Eurovox steht dabei allen Mitgliedern zur Verfügung.  
+Mithilfe dieses Tools kann man Text-to-Speech, Übersetzungen und Speech-to-Text Services über eine UI benutzen. 
+Es gibt sogar die Möglichkeit wärend eines Streams live audio captions zu erzeugen. 
+Für dieses Projekt benutzen wir aber zunächst nur die Translation Funktion. 
+Außerdem verwenden wir die API von Eurovox um später das ganze Projekt auf mehr Episode Transkripte ausweiten zu können. 
+Laut den Entwicklern soll die API auch demnächst open-sourced werden [QUELLE].
+
+Die API stellt, ebenso wie das Tool, eine Reihe verschiedener Anbieter zur verfügung, über die wir die Audios transkribieren lassen können. 
 
 
 \section{Datenspeicherung}
 
 \subsection{Datenspeicherung SQLite}
 
-Für die Analyse werden die MP3-Dateien der einzelnen Podcast-Episoden in einem seperaten Ordner gespeichert und die Benennung der originalen Dateien stammt aus der URL.
+Für die Analyse werden die MP3-Dateien der einzelnen Podcast-Episoden in einem seperaten Ordner gespeichert und die Benennung der originalen Dateien stammt aus der Download-URL.
 Zur Speicherung der Transkripte wird das relationale Datenbank Managment System (RDBMS) SQLite  eingesetzt. SQLite ist für Datenanalysezwecke sehr gut geeignet, weil es simpel und performant ist und als opensource-Projekt kostenlos verwendet werden kann.
 Im Gegensatz zu anderen RDBMS, wie mySQL oder PostgreSQL arbeitet SQLite serverunabhängig und speichert alle Tabellen in einer einzigen Datei, was sehr nützlich für den Datenaustausch zwischen verschiedenen Geräten ist.
 Für einige Operationen, wie die Transkription der Audiodateien oder die Generierung von Embeddings wird die Hardware eines High-Performance Clusters der Technischen Hochschule Nürnberg genutzt. 
@@ -128,7 +198,7 @@ Um die Daten zu analysieren und zu nutzen bietet es sich an, auf Consumer-Hardwa
 
 SQLite unterstützt Datenmengen bis zu 140 TB. 
 Allerdings wird auf der offiziellen Webseite angegeben, dass ab einer Größe von 1 TB auf serverbasierte RDBMS umgestiegen werden sollte, da die gesamte Datenbank in einem File gespeichert wird und viele Client-Betriebssysteme eine maximale Größe der Dateien vorgeben. 
-Falls das Projekt in der Zukunft auf mehrere Podcast-Reihen ausgeweitet wird, sollte vor diesem Hintergrund ein Wechsel des DBMS in Betracht gezogen werden.
+Falls das Projekt in der Zukunft auf mehrere Podcastreihen ausgeweitet wird, sollte vor diesem Hintergrund ein Wechsel des DBMS in Betracht gezogen werden.
 
 \subsection{Datenspeicherung Vektoren SQLite}
 
@@ -179,13 +249,13 @@ Speziell Algorithmen wie Hierarchical Navigable Small Worlds werden von vielen V
 
 In dieser Arbeit wird die Vektordatenbank Chroma verwendet. 
 Chroma ist eine einfache Vektordatenbank, die die Daten sowohl lokal als auch über eine Client-Server-Schnittstelle speichern kann.
-Das Projekt ist erst im Mai 2022 als Startup entstanden, verfügt aber mittlerweile über viele Features, die die Datenverwaltung erheblich vereinfachen.
+Das Projekt ist erst im Mai 2022 als Start-up entstanden, verfügt aber mittlerweile über viele Features, die die Datenverwaltung erheblich vereinfachen.
 Die Datenbank ist dabei mit einer NoSQL-Datenbank zu vergleichen, indem die Daten nicht relational in Tabellen gespeichert werden, sondern in einer Collection als Objekte mit verschiedenen Metadaten.
 Jedes dieser Objekte hat eine Document-Eigenschaft, welche den Inhalt des Dokuments repräsentiert.
 Dieser Inhalt ist in diesem Fall ein Ausschnitt aus einem Transkript, könnte aber auch ein Bild oder eine Audiodatei darstellen.
 
 Außerdem besitzt jedes Objekt einen Embedding-Vektor, der mit dem Dokument assoziiert wird. 
-Innerhalb einer Collection müssen alle Objekte mit der selben Embeddingmethode encodiert werden.
+Innerhalb einer Collection müssen alle Objekte mit derselben Embedding-Methode encodiert werden.
 Das sichert die Vergleichbarkeit der verschiedenen Vektoren untereinander.
 
 ChromaDB bietet nativen Support für verschiedene Embedding Modelle von OpenAI, Huggingface, Cohere, instructorembedding und JinaAI.
@@ -198,7 +268,7 @@ Chroma bietet außerdem sehr guten Support für effizientes Retrieval von Dokume
 Dazu sind schon verschiedene verfahren der Nearest Neighbour Suche implementiert.
  
 
-In diessem Projekt wurde erst in einer späten Phase der Umstieg auf die Vektor-Datenbank vollzogen, weshalb einige Funktionen, die in dieser Datenbank automatisch integriert sind, noch einmal sehr ausführlich beschrieben werden.
+In diessem Projekt wurde erst in einer späten Phase der Umstieg auf die Vektordatenbank vollzogen, weshalb einige Funktionen, die in dieser Datenbank automatisch integriert sind, noch einmal sehr ausführlich beschrieben werden.
 
 
 \subsection{Datenspeicherung Sparce Vektoren}
@@ -223,4 +293,58 @@ In der Zukunft könnte dieser Schritt durch einen Umstieg auf eine Plattform wie
 
 % Eine bekannte Bibliothek für Nearest Neighbour Searches ist Annoy, die unter anderem bei Spotify für die Recommendations von Songs verwendet wird. [Quelle]
 % Eine weitere bekannte bekannte Bibliothek für Nearest Neighbour Searches ist FAISS (Facebook AI Similarity Search)
+
+\section{Datenaufbereitung}
+
+\subsection{Satzbildung}
+
+Die transkribierten Daten, welche Whisper erzeugt enthalten die erkannten Wörter, sowie die einzelnen Zeitstempel für den Start und das Ende jedes Wortes mit einer genauigkeit von Zehntelsekunden.
+Für die spätere Analyse der Daten, ist es Sinnvoll die einzelnen Wörter in größere Segmente zusammenzufassen, damit bei einer Suchfunktion der Kontext von erschiedenen Wörtern miteinbezogen werden kann.
+Ein naheliegender Ansatz besteht darin, die einzelnen Wörter zunächst in Sätze zu gruppieren.
+Für diese Gruppierung werden zwei Ansätze betrachtet.
+Der einfachste Ansatz besteht darin, die von Whisper erzeugten Satzpunkte als  Trennzeichen für einen Satz zu zählen.
+Whisper erkennt von sich aus aufgrund der Tonlage und der Pause zwischen Wörtern und der grammatikalischen Struktur der vorangegangenen Wörtern, ob ein Wort das Ende eines Satzes markiert. ???
+Dann gibt Whisper das Wort mit einem Punkt, einem Fragezeichen, oder einem Ausrufezeichen am Ende als erkanntes Wort aus.
+Diese Punktuation kann man benutzen, um die einzeln Wörter in Sätze zu gruppieren.
+Leider ergibt sich dabei das Problem, dass bestimmte Wörter, oder Abkürzungen zusätzöiche Punkte enthalten.
+Beispiele sind "Mr. Smith", "seinem 26. Studioalbum", "am 10. Januar 2016".
+Mit diesem naiven Ansatz der Satztrennung, würden wir also einige Sätze an ungewollten Stellen in mehrere Sätze auftrennen.
+
+Um dieses Problem zu lösen, muss der Algorithmus verstehen, welche Satzzeichen die wirklichen Satzenden sind.
+Dies erfordert ein verständnis der Satzstruktur und ist deswegen nicht trivial möglich.
+Um die Sätzegrenzen zu finden, wird deshalb die Open-Source Sprachbibliothek SpaCy.\cite{honnibal2017}
+
+David Bowie stirbt am 10. Januar 2016 an Leberkrebs.
+Zwei Tage nach seinem 69. Geburtstag und der Veröffentlichung von Blackstar, seinem 26. Studioalbum.
+
+\subsection{Satzbildung mit SpaCy}
+
+Mithilfe der NLP Bibliothek SpaCy kann man herausfinden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
+SpaCy verwendet dafür Machine Learning Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
+Es gibt auch noch die beliebte Bibliothek NLKT, die sich aber eher auf das Unterrichten von NLP spezialisiert hat.
+SpaCy ist eher für den produktiven Einsatz geeignet.
+Auf der offiziellen Webseite von spaCy werden vier verschiedene Modelle für die deutsche Sprache zur verfügung gestellt.
+Das Modell 
+\begin{verbatim}
+    de_core_news_sm 
+\end{verbatim} 
+ist das kleinste Modell mit 13 MB Größe, dann folgt 
+\begin{verbatim} 
+    de_core_news_md 
+\end{verbatim}
+mit einer Größe von 42 MB und 
+\begin{verbatim}
+    de_core_news_lg 
+\end{verbatim}
+ist das größte Modell mit 541 MB.
+Das größte Modell bietet dabei vor allem viele vortrainierte Embedding Vektoren für einzelne Wörter.
+Das vierte Modell ist 
+\begin{verbatim}
+    de_dep_news_trf
+\end{verbatim}
+verbraucht 391 MB Speicherplatz und ist speziell für Transformer-support geeignet.
+spaCy führt eine selbst angegebenen Accuracy Evaluation für Sentence Segmentation, also das Erkennen von Satzenden in einem Text.
+Darin ist der F-Score für das kleine Modell gleich 0,94; für das mittlere Modell 0,95 und für das große Modell ebenfalls 0,95.
+Das Modell mit der Transformer pipeline bietet einen F-score von 0,98 und wird deswegen in dieser Arbeit verwendet. \cite{spacy2024}
+
 

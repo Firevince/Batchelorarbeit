@@ -1,13 +1,17 @@
 \chapter{Architektur}\label{ch:method}
 
+
 \section{Mikrosystemarchitektur}
+
+Der zweite Teil des Systems besteht darin, aus der Anfrage der Nutzenden eine passende Podcastepisode zu erstellen.
+Diesen 
 
 Dieses Projekt lässt sich zunächst in mehrere kleinen Projekte unterteilen. 
 Bei einem so großen Projekt lohnt es sich eine Mikroservice Architektur anzustreben, bei der jeder Teil für sich gesehen eine Aufgabe erfüllt und nicht auf der Zuverlässigkeit eines anderen Systems beruht. 
 Diese Methode wird auch divide-and-conquer genannt. 
 
 Um das Projekt weiter einzuordnen, bietet es sich an, vorab Anforderungen an das System zu stellen. 
-Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice Einzelne Anforderungen gestellt: 
+Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice einzelne Anforderungen gestellt: 
 
 \section{Anforderungen}
 
@@ -55,126 +59,30 @@ Dazu ist Python sehr einfach zu verstehen und rechenaufwändige Operationen wie 
 
 
 
-\section{Transkription der Podcasts}
 
 
-\subsection{Fraunhofer}
+\section{Transktript Segment Ranking}
 
-Seit 2015 arbeitet die ARD mit dem Fraunhofer-Institut Institut für Intelligente Analyse- und Informationssysteme (IAIS) zusammen, um „Erschließung von Mediendaten zu forcieren und dabei den Schwerpunkt auf maschinelle Verfahren zu legen“ [1]
-Ein Teil dieses Projektes bezieht sich auf das Audio-Mining. 
-Das Fraunhofer IAIS entwickelte dafür ein System, welches die Audiodatein transkribiert und dabei „in der kompletten ARD, bei Deutschlandradio sowie im ZDF im Einsatz [ist]“. 
-Leider legt das FraunhoferIAIS nicht offen, welche Technologie es dafür verwendet. 
-Die Transkripte lassen sich allerdings sehr einfach über eine Graphql Schnittstelle abfragen. 
+\subsection{Ählichkeitssuche lexikalisch}
 
-\subsection{Microsoft Translate}
+\subsubsection{Keywordsuche}
 
-Eine weitere Möglichkeit zur Audiotranskription bietet Microsoft Translate. 
-Soweit man einen Microsoft 365 Account besitzt kann man in dem Webinterface von Microsoft word eine Transkriptionsfunktion benutzen. 
-Dafür müssen die Audiofiles zunächst auf Microsoft Onedrive hochgeladen werden und können dann mit einem Klick übersetzt werden. 
-Microsoft Word stellt dann sogar Timestamps  zur Verfügung für das ganze Dokument. 
-Die Qualität ist außerdem besser als bei kostenlosen Open-Source Alternativen. 
-Dafür skaliert diese Art der Transkription schlecht für größere Datenmengen, da sämtliche files zunächst bei OneDrive hochgeladen werden müssen und dann jedes File von Hand ausgewählt, in Word eingebunden, transkribiert werden und dann abgespeichert werden müssen. 
+Eine Möglichkeit bietet sich in der Keywordsuche. 
+Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wiederfindet. Ist die möchte ein User beispielsweise einen zusammengeschnittene Podcast Episode über „Zugspitze“, so schaut das System, in welchen Episodensegmenten das Wort „Zugspitze“ auftaucht, und gibt diese zurück. 
+Schwieriger wird es, wenn die Useranfrage mehrere Wörter beinhaltet. 
+Möchte sich der User über das Thema „Zugspitze wandern“ informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
+Dann müsste man dementsprechend auch ein Algorithmus entwickeln, der diese dann sinnvoll hierarchisiert. 
 
-\subsection{Whisper}
+\subsubsection{TF-IDF}
 
-Für die Transkription eignen sich Automatic Speech Recognition Systeme (ASR). 
-Eines der besten kostenlosen ASR Systeme bietet Whisper von OpenAI. 
-Dieses System wurde mit einem maschinellen lernverfahren auf 680 000 Stunden Audiomaterial in verschiedenen Sprachen trainiert. 
-Es ist sehr leistungsstark und kann lokal auf eigener Hardware laufen. [2] [3]
-
-Whisper bietet mehrere verschiedene Modelle zur Transkription an. Es gibt die Modelle tiny, base, small, medium und large. 
-Das Basismodell hat ca. 74 Millionen Parameter und benötigt ca. 1 GB VRAM und ist ca. 16 mal schneller als das large Model. 
-Bei einem Test für die Episode 1968-das-ausnahmejahr aus dem Podcast Radiowissen von br2 schneidet es aber nicht sehr gut ab. 
-Aus dem Wort „Vietnam“ wird „Wirdnam“, aus „Panzer in Prag“ wird „Panzer-Inprac“ und aus  „Ohrfeige“ wird „Urfeige“. 
-Der vorgetragene Text wurde dabei ohne Störgeräusche und von einer Person flüssig vorgetragen. 
-
-Dagegen bietet das Medium Model von Whisper deutlich bessere Ergebnisse für die selbe Episode. 
-Bei der Transkription konnte kein Fehler festgestellt werden. Allerdings ist der Zeitaufwand durch höhere Rechenleistung immens. 
-Auf einem Macbook Pro 2016 mit einem Intel Core i7 benötigt die Transkription ca. 45 min. pro Episode. 
-Auf einer T4 GPU, wie sie Google kostenlos auf Google Colab zur verfügung stellt, dauert eine Transkription immer noch 3,5 Minuten. 
-Für ca. 1000 Episoden bräuchte man demnach ca. 3500 Minuten, d.h. ca. 58 h. 
-
-Drawbacks von Whisper:
-Medium Modell immer noch einige Fehler: 
-- gubt statt Grub
-- wenn Sprecherwechsel manchmal ganze Sätze weg (im-bann-des-mondes-archaische-mythen-und-religionen.mp3	)
-
-TODO large ausprobieren, auf den Servern der Uni und mit der Ebu API
-Eurovox
-
-
-Die Transkripte der Episoden sind meißt ca. 3000 Wörter lang und benötigen ungefähr 20 KB Speicherplatz pro Transkript.
-
-\includegraphics[width=\linewidth]{figures/transcript_length.png}
-
-
-\subsection{Eurovox}
-
-Das Problem der langen Wartezeiten lässt sich umgehen, wenn wir Cloud computing benutzen, das heißt, das Whisper model nicht auf der lokalen Hardware laufen zu lassen, sondern zum Beispiel auf den Servern von Eurovox. 
-Eurovox ist ein Software tool von der EBU, der Europian Broadcast Union. 
-Sie ist ein zusammenschluss von derzeit 68 Rundfunkanstalten in 56 Staaten Europas, Nordafrikas und Vorderasien mit Sitz in Genf. [4] 
-Das tool Eurovox steht dabei allen Mitgliedern zur Verfügung.  
-Mithilfe dieses Tools kann man Text-to-Speech, Übersetzungen und Speech-to-Text Services über eine UI benutzen. 
-Es gibt sogar die Möglichkeit wärend eines Streams live audio captions zu erzeugen. 
-Für dieses Projekt benutzen wir aber zunächst nur die Translation Funktion. 
-Außerdem verwenden wir die API von Eurovox um später das ganze Projekt auf mehr Episode Transkripte ausweiten zu können. 
-Laut den Entwicklern soll die API auch demnächst open-sourced werden [QUELLE].
-
-Die API stellt, ebenso wie das Tool, eine Reihe verschiedener Anbieter zur verfügung, über die wir die Audios transkribieren lassen können. 
-
-
-\section{Datenvorbereitung}
-
-\subsection{Satzbildung}
-
-Die transkribierten Daten, welche Whisper erzeugt enthalten die erkannten Wörter, sowie die einzelnen Zeitstempel für den Start und das Ende jedes Wortes mit einer genauigkeit von Zehntelsekunden.
-Für die spätere Analyse der Daten, ist es Sinnvoll die einzelnen Wörter in größere Segmente zusammenzufassen, damit bei einer Suchfunktion der Kontext von erschiedenen Wörtern miteinbezogen werden kann.
-Ein naheliegender Ansatz besteht darin, die einzelnen Wörter zunächst in Sätze zu gruppieren.
-Für diese Gruppierung werden zwei Ansätze betrachtet.
-Der einfachste Ansatz besteht darin, die von Whisper erzeugten Satzpunkte als  Trennzeichen für einen Satz zu zählen.
-Whisper erkennt von sich aus aufgrund der Tonlage und der Pause zwischen Wörtern und der grammatikalischen Struktur der vorangegangenen Wörtern, ob ein Wort das Ende eines Satzes markiert. ???
-Dann gibt Whisper das Wort mit einem Punkt, einem Fragezeichen, oder einem Ausrufezeichen am Ende als erkanntes Wort aus.
-Diese Punktuation kann man benutzen, um die einzeln Wörter in Sätze zu gruppieren.
-Leider ergibt sich dabei das Problem, dass bestimmte Wörter, oder Abkürzungen zusätzöiche Punkte enthalten.
-Beispiele sind "Mr. Smith", "seinem 26. Studioalbum", "am 10. Januar 2016".
-Mit diesem naiven Ansatz der Satztrennung, würden wir also einige Sätze an ungewollten Stellen in mehrere Sätze auftrennen.
-
-Um dieses Problem zu lösen, muss der Algorithmus verstehen, welche Satzzeichen die wirklichen Satzenden sind.
-Dies erfordert ein verständnis der Satzstruktur und ist deswegen nicht trivial möglich.
-Um die Sätzegrenzen zu finden, wird deshalb die Open-Source Sprachbibliothek SpaCy.\cite{honnibal2017}
-
-David Bowie stirbt am 10. Januar 2016 an Leberkrebs.
-Zwei Tage nach seinem 69. Geburtstag und der Veröffentlichung von Blackstar, seinem 26. Studioalbum.
-
-\subsection{Satzbildung mit SpaCy}
-
-Mithilfe der NLP Bibliothek SpaCy kann man herausfinden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
-SpaCy verwendet dafür Machine Learning Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
-Es gibt auch noch die beliebte Bibliothek NLKT, die sich aber eher auf das Unterrichten von NLP spezialisiert hat.
-SpaCy ist eher für den produktiven Einsatz geeignet.
-Auf der offiziellen Webseite von spaCy werden vier verschiedene Modelle für die deutsche Sprache zur verfügung gestellt.
-Das Modell 
-\begin{verbatim}
-    de_core_news_sm 
-\end{verbatim} 
-ist das kleinste Modell mit 13 MB Größe, dann folgt 
-\begin{verbatim} 
-    de_core_news_md 
-\end{verbatim}
-mit einer Größe von 42 MB und 
-\begin{verbatim}
-    de_core_news_lg 
-\end{verbatim}
-ist das größte Modell mit 541 MB.
-Das größte Modell bietet dabei vor allem viele vortrainierte Embedding Vektoren für einzelne Wörter.
-Das vierte Modell ist 
-\begin{verbatim}
-    de_dep_news_trf
-\end{verbatim}
-verbraucht 391 MB Speicherplatz und ist speziell für Transformer-support geeignet.
-spaCy führt eine selbst angegebenen Accuracy Evaluation für Sentence Segmentation, also das Erkennen von Satzenden in einem Text.
-Darin ist der F-Score für das kleine Modell gleich 0,94; für das mittlere Modell 0,95 und für das große Modell ebenfalls 0,95.
-Das Modell mit der Transformer pipeline bietet einen F-score von 0,98 und wird deswegen in dieser Arbeit verwendet. \cite{spacy2024}
+Einen solchen Ansatz bietet das TF-IDF Maß (Term Frequency – Inverse Document Frequency). 
+Im Bereich des NLP verwendet man das TF-IDF Maß um zu untersuchen welche Wörter in verschiedenen Dokumenten welche Gewichtung erfahren. 
+Dazu wird zunächst die TF-Matrix, also die Term Frequenzy Matrix berechnet. 
+Hierbei wird erst das Vokabular ermittelt, also die Gesamtheit aller Tokens (Wörter) die es in allen Dokumenten (Transkript Segmenten) des Korpuses (alle heruntergeladenen Episoden) gibt. 
+Dann wird für jedes einzelne Segment die Anzahl jeder in ihm auftretenden Tokens ermittelt. 
+Für den Satz: „Auf der Zugspitze gibt es viele Wanderer, die die Zugspitze lieben“. 
+In diesem Fall würde in der TF Matrix an der Stelle Zugspitze eine 2 Stehen, in der Zeile Wandern aber 0, da zwar das Wort Wanderer, aber nicht das Wort wandern vorkommt. 
+Da diese beiden Worte aber sehr ähnlich sind und der User bei einer Anfrage nicht immer nach verschiedenen Versionen eines Wortes suchen will, um dann ein zufriedenstellendes Audio zu erhalten
 
 
 \subsection{Sätze Normalisieren / cleanen}
@@ -213,28 +121,6 @@ Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, 
 In dem ganzen Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben.
 Da für exakte Keywortsuche solche Begriffe fast nie auftreten, lohnt es sich, 
 
-\section{Transktript Segment Ranking}
-
-\subsection{Ählichkeitssuche lexikalisch}
-
-\subsubsection{Keywordsuche}
-
-Eine Möglichkeit bietet sich in der Keywordsuche. 
-Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wiederfindet. Ist die möchte ein User beispielsweise einen zusammengeschnittene Podcast Episode über „Zugspitze“, so schaut das System, in welchen Episodensegmenten das Wort „Zugspitze“ auftaucht, und gibt diese zurück. 
-Schwieriger wird es, wenn die Useranfrage mehrere Wörter beinhaltet. 
-Möchte sich der User über das Thema „Zugspitze wandern“ informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
-Dann müsste man dementsprechend auch ein Algorithmus entwickeln, der diese dann sinnvoll hierarchisiert. 
-
-\subsubsection{TF-IDF}
-
-Einen solchen Ansatz bietet das TF-IDF Maß (Term Frequency – Inverse Document Frequency). 
-Im Bereich des NLP verwendet man das TF-IDF Maß um zu untersuchen welche Wörter in verschiedenen Dokumenten welche Gewichtung erfahren. 
-Dazu wird zunächst die TF-Matrix, also die Term Frequenzy Matrix berechnet. 
-Hierbei wird erst das Vokabular ermittelt, also die Gesamtheit aller Tokens (Wörter) die es in allen Dokumenten (Transkript Segmenten) des Korpuses (alle heruntergeladenen Episoden) gibt. 
-Dann wird für jedes einzelne Segment die Anzahl jeder in ihm auftretenden Tokens ermittelt. 
-Für den Satz: „Auf der Zugspitze gibt es viele Wanderer, die die Zugspitze lieben“. 
-In diesem Fall würde in der TF Matrix an der Stelle Zugspitze eine 2 Stehen, in der Zeile Wandern aber 0, da zwar das Wort Wanderer, aber nicht das Wort wandern vorkommt. 
-Da diese beiden Worte aber sehr ähnlich sind und der User bei einer Anfrage nicht immer nach verschiedenen Versionen eines Wortes suchen will, um dann ein zufriedenstellendes Audio zu erhalten
 
 
 Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort „Klimakrise“ würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
