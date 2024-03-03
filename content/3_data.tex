@@ -18,24 +18,18 @@ Außerdem sollten die Audioquellen frei verfügbar sein, damit keine Urheberrech
 % Es sollten nicht die Vortragenden Personen wichtig sein  und sie nicht emotional oder persönlich 
 % Als Audioquelle kommen vor allem wissensbasierte Podcasts in Frage, 
 % Wissensbasierte Podcasts bieten als Audioform die besten qualitativen Inhalt für die Audiosegmente, wenn sie 
-% Die Audioform mit dem meisten 
 
 % Als Anbieter von Audiomaterial bieten sich zum Beispiel YouTube oder Spotify an, die sehr viele 
 
-
-% Am besten 
 
 % Für die Grundlage der Audiosegmente bieten sich insbesondere wissensbasierte Podcasts an, die den Zuhörenden Informationen vermitteln wollen, wenn sie 
 
 
 % Videos wie zum Beispiel von Youtube, setzen oft vorraus, dass der Zuschauer auch das Videomaterial sehen kann und somit würde nur das Hören der Audiospur zu verwirrung führen.
 
-%  im gegensatz zu Radioprogrammen keine Musik
 % Die Podcastbranche wächst seit vielen Jahren stetig und immer mehr Menschen hören regelmäßig Podcasts.
 % In Deutschland schon über 29\%.
-% Genauso wächst auch die Anzahl an verschiedenen Podcasts.
 
-% Daraus kann man ableiten, dass  
 
 \section{Die ARD-Audiothek}
 
@@ -88,7 +82,7 @@ Zum Beispiel hat die Episode "Quantenphysik - Wahr, aber verrückt" den Download
 In diesem Fall liefert nur die zweite URL einen Download, die erste zeigt eine Fehlermeldung an.
 Es gibt auch Fälle in denen beide Links funktionieren, wie zum Beispiel 
 https://media.neuland.br.de/file/32891/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben.mp3 und
-https://media.neuland.br.de/file/1858845/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben-1.mp3   
+https://media.neuland.br.de/file/1858845/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben-1.mp3 
 Die Daten wurden dementsprechend bereinigt und doppelte Audioinhalte nur einmal abgespeichert.
 
 Für weitere Analysen und die Kategorisierung der Audiodatein ist es außerdem Sinnvoll, die Beschreibungen der einzelnen Episoden und die dazugehörenden Schlagwörter abzufragen, da diese eine kurze Zusammenfassung oder Einordnung der Episoden enthalten.
@@ -118,7 +112,7 @@ Für das System werden trotz der verschiedenen Längen alle Audiodatein benutzt,
 
 
 
-\section{Transkription der Podcasts}
+\section{Transkription der Podcasts (ASR)}
 
 
 \subsection{Fraunhofer}
@@ -184,6 +178,143 @@ Außerdem verwenden wir die API von Eurovox um später das ganze Projekt auf meh
 Laut den Entwicklern soll die API auch demnächst open-sourced werden [QUELLE].
 
 Die API stellt, ebenso wie das Tool, eine Reihe verschiedener Anbieter zur verfügung, über die wir die Audios transkribieren lassen können. 
+
+
+\section{Embedding erstellung}
+
+
+
+\section{Datenaufbereitung}
+
+\subsection{Satzbildung}
+
+Die transkribierten Daten, welche Whisper erzeugt enthalten die erkannten Wörter, sowie die einzelnen Zeitstempel für den Start und das Ende jedes Wortes mit einer genauigkeit von Zehntelsekunden.
+Für die spätere Analyse der Daten, ist es Sinnvoll die einzelnen Wörter in größere Segmente zusammenzufassen, damit bei einer Suchfunktion der Kontext von erschiedenen Wörtern miteinbezogen werden kann.
+
+Für die Wahl der richtigen Segmentgröße gibt es keine einheitliche Lösung.
+Da wichtige Informationen über mehrere Sätze verteilt liegen können, kann es bei einfacher segmentierung zu dem Problem kommen, dass die Information in zwei Segmente gestückelt wurde.
+Um dem entgegenzuwirken ist es sinnvoll, die einzelnen Segmente überlappend zu erstellen.
+
+Ein naheliegender Ansatz besteht darin, die einzelnen Wörter zunächst in Sätze zu gruppieren.
+Für diese Gruppierung werden zwei Ansätze betrachtet.
+Der einfachste Ansatz besteht darin, die von Whisper erzeugten Satzpunkte als  Trennzeichen für einen Satz zu zählen.
+Whisper erkennt von sich aus aufgrund der Tonlage und der Pause zwischen Wörtern und der grammatikalischen Struktur der vorangegangenen Wörtern, ob ein Wort das Ende eines Satzes markiert. ???
+Dann gibt Whisper das Wort mit einem Punkt, einem Fragezeichen, oder einem Ausrufezeichen am Ende als erkanntes Wort aus.
+Diese Punktuation kann man benutzen, um die einzeln Wörter in Sätze zu gruppieren.
+Leider ergibt sich dabei das Problem, dass bestimmte Wörter, oder Abkürzungen zusätzöiche Punkte enthalten.
+Beispiele sind "Mr. Smith", "seinem 26. Studioalbum", "am 10. Januar 2016".
+Mit diesem naiven Ansatz der Satztrennung, würden wir also einige Sätze an ungewollten Stellen in mehrere Sätze auftrennen.
+
+Um dieses Problem zu lösen, muss der Algorithmus verstehen, welche Satzzeichen die wirklichen Satzenden sind.
+Dies erfordert ein verständnis der Satzstruktur und ist deswegen nicht trivial möglich.
+Um die Sätzegrenzen zu finden, wird deshalb die Open-Source Sprachbibliothek SpaCy.\cite{honnibal2017}
+
+David Bowie stirbt am 10. Januar 2016 an Leberkrebs.
+Zwei Tage nach seinem 69. Geburtstag und der Veröffentlichung von Blackstar, seinem 26. Studioalbum.
+
+\subsection{Satzbildung mit SpaCy}
+
+Mithilfe der NLP Bibliothek SpaCy kann man herausfinden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
+SpaCy verwendet dafür Machine Learning Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
+Es gibt auch noch die beliebte Bibliothek NLKT, die sich aber eher auf das Unterrichten von NLP spezialisiert hat.
+SpaCy ist eher für den produktiven Einsatz geeignet.
+Auf der offiziellen Webseite von spaCy werden vier verschiedene Modelle für die deutsche Sprache zur verfügung gestellt.
+Das Modell 
+\begin{verbatim}
+    de_core_news_sm 
+\end{verbatim} 
+ist das kleinste Modell mit 13 MB Größe, dann folgt 
+\begin{verbatim} 
+    de_core_news_md 
+\end{verbatim}
+mit einer Größe von 42 MB und 
+\begin{verbatim}
+    de_core_news_lg 
+\end{verbatim}
+ist das größte Modell mit 541 MB.
+Das größte Modell bietet dabei vor allem viele vortrainierte Embedding Vektoren für einzelne Wörter.
+Das vierte Modell ist 
+\begin{verbatim}
+    de_dep_news_trf
+\end{verbatim}
+verbraucht 391 MB Speicherplatz und ist speziell für Transformer-support geeignet.
+spaCy führt eine selbst angegebenen Accuracy Evaluation für Sentence Segmentation, also das Erkennen von Satzenden in einem Text.
+Darin ist der F-Score für das kleine Modell gleich 0,94; für das mittlere Modell 0,95 und für das große Modell ebenfalls 0,95.
+Das Modell mit der Transformer pipeline bietet einen F-score von 0,98 und wird deswegen in dieser Arbeit verwendet. \cite{spacy2024}
+
+
+
+
+\subsubsection{Embeddings}
+
+\subsection{Ählichkeitssuche lexikalisch}
+
+\subsubsection{Keywordsuche}
+
+Eine Möglichkeit bietet sich in der Keywordsuche. 
+Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wiederfindet. Ist die möchte ein User beispielsweise einen zusammengeschnittene Podcast Episode über „Zugspitze“, so schaut das System, in welchen Episodensegmenten das Wort „Zugspitze“ auftaucht, und gibt diese zurück. 
+Schwieriger wird es, wenn die Useranfrage mehrere Wörter beinhaltet. 
+Möchte sich der User über das Thema „Zugspitze wandern“ informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
+Dann müsste man dementsprechend auch ein Algorithmus entwickeln, der diese dann sinnvoll hierarchisiert. 
+
+\subsubsection{TF-IDF}
+
+Einen solchen Ansatz bietet das TF-IDF Maß (Term Frequency – Inverse Document Frequency). 
+Im Bereich des NLP verwendet man das TF-IDF Maß um zu untersuchen welche Wörter in verschiedenen Dokumenten welche Gewichtung erfahren. 
+Dazu wird zunächst die TF-Matrix, also die Term Frequenzy Matrix berechnet. 
+Hierbei wird erst das Vokabular ermittelt, also die Gesamtheit aller Tokens (Wörter) die es in allen Dokumenten (Transkript Segmenten) des Korpuses (alle heruntergeladenen Episoden) gibt. 
+Dann wird für jedes einzelne Segment die Anzahl jeder in ihm auftretenden Tokens ermittelt. 
+Für den Satz: „Auf der Zugspitze gibt es viele Wanderer, die die Zugspitze lieben“. 
+In diesem Fall würde in der TF Matrix an der Stelle Zugspitze eine 2 Stehen, in der Zeile Wandern aber 0, da zwar das Wort Wanderer, aber nicht das Wort wandern vorkommt. 
+Da diese beiden Worte aber sehr ähnlich sind und der User bei einer Anfrage nicht immer nach verschiedenen Versionen eines Wortes suchen will, um dann ein zufriedenstellendes Audio zu erhalten
+
+
+\subsection{Sätze Normalisieren / cleanen}
+
+Für Retrieval funktionen ist es Sinnvoll, mehrere Wörter zusammenzufassen.
+Wenn man einen Algorithmus hat, der gezielt Wörter im Korpus suchen kann, ist es Wünschenswert nicht nur exakt die selben Wörter zu suchen, sondern auch verwandte Wörter.
+Zum Beispiel sollte die Suche nach dem Wort "Wanderer" auch Ergebisse für die Worte "Wandererin", "Wanderung" oder "wandern" enthalten, nicht aber das Wort "Wand".
+
+\subsubsection{Tokenisierer}
+
+In Machine Leerning Anwendungen nutzt man dafür verschiedene Tokenisierer.
+Es gibt einfache Tokenisierer, wie Whitespace Tokenisierer, die einen Text einfach an Leerzeichen teilen und die einzelnen Wörter als Tokens behandeln.
+Etwas besser sind Wort Tokenizer, die auch Satzzeichen erkennen und dadurch Punkte und Kommata nicht an das Ende des vorangegangenen Wortes anhängen. 
+Einen solchen Tokenizer nutzt beispielsweise spaCy, um "Linguistic Features" zu bestimmen.
+Es gibt Subword tokenisierer, die Worte nocheinmal in kleinere Abschnitte teilen.
+Das Byte-Pair Encoding versucht aufgrund von Statistischen Methoden, häufig vorkommende zusammenhängende Zeichenfolgen als Tokens zu identifizieren.
+Diese Art Tokenizer wird zum Beispiel oft für die Eingabe bei Transformern genutzt. [Quelle]
+Die Transformermodelle von OpenAI benutzen beispielsweise tiktoken als Tokenizer [Quelle], das BERT Modell von Google benutzt den WordPiece Tokenizer.
+
+
+
+\subsubsection{Lemmatisierung vs. Stemming}
+
+Um diese Abbildung von mehreren Worten auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden:
+Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel "Wanderer" und "Wanderung" zu einem Wort "Wander" zu reduzieren.
+Der Vorteil ist, dass der Algorithmus sehr schnell agieren kann, um die Worte auf ihre Stammform zu reduzieren.
+Die Nachteile sind allerdings, dass die Deutsche Sprache sehr viele verschiedene Wortkonstrukte erlaubt, die nicht alle mithilfe von einzelnen Regeln auf ein gemeinsammes Stammwort gebracht werden können. 
+Zum Beispiel bei dem Plural von "Baum"; "Bäume".
+
+
+\subsubsection{Kompositatrennung Pyphen vs german compound splitter}
+
+Als weiteren Vorverarbeitungsschritt für die effiziente Keywordsuche kann man zusammengesetzte Wörter in ihre bestandteile auftrennen.
+Das Vokabular des Datensazes besteht zu 61\% aus Nomen. 
+Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, wie zum Beispiel "reichsdeputationshauptschlussakte", oder "hochgeschwindigkeitstransportmittel".
+In dem ganzen Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben.
+Da für exakte Keywortsuche solche Begriffe fast nie auftreten, lohnt es sich, 
+
+
+
+Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort „Klimakrise“ würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
+Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene Zeit überbrücken. Allerdings ist dieser Ansatz wenig Vielversprechend. 
+
+
+\subsection{Embeddings Dense}
+
+Dazu werden die einzelnen Sagmente mit den verschiedenen Modellen embedded.
+Am Anfang des Segments kann noch einmal der Titel der Episode angefügt werden, was eventuell die Performance steigert.\cite{jones2021}
 
 
 \section{Datenspeicherung}
@@ -293,58 +424,4 @@ In der Zukunft könnte dieser Schritt durch einen Umstieg auf eine Plattform wie
 
 % Eine bekannte Bibliothek für Nearest Neighbour Searches ist Annoy, die unter anderem bei Spotify für die Recommendations von Songs verwendet wird. [Quelle]
 % Eine weitere bekannte bekannte Bibliothek für Nearest Neighbour Searches ist FAISS (Facebook AI Similarity Search)
-
-\section{Datenaufbereitung}
-
-\subsection{Satzbildung}
-
-Die transkribierten Daten, welche Whisper erzeugt enthalten die erkannten Wörter, sowie die einzelnen Zeitstempel für den Start und das Ende jedes Wortes mit einer genauigkeit von Zehntelsekunden.
-Für die spätere Analyse der Daten, ist es Sinnvoll die einzelnen Wörter in größere Segmente zusammenzufassen, damit bei einer Suchfunktion der Kontext von erschiedenen Wörtern miteinbezogen werden kann.
-Ein naheliegender Ansatz besteht darin, die einzelnen Wörter zunächst in Sätze zu gruppieren.
-Für diese Gruppierung werden zwei Ansätze betrachtet.
-Der einfachste Ansatz besteht darin, die von Whisper erzeugten Satzpunkte als  Trennzeichen für einen Satz zu zählen.
-Whisper erkennt von sich aus aufgrund der Tonlage und der Pause zwischen Wörtern und der grammatikalischen Struktur der vorangegangenen Wörtern, ob ein Wort das Ende eines Satzes markiert. ???
-Dann gibt Whisper das Wort mit einem Punkt, einem Fragezeichen, oder einem Ausrufezeichen am Ende als erkanntes Wort aus.
-Diese Punktuation kann man benutzen, um die einzeln Wörter in Sätze zu gruppieren.
-Leider ergibt sich dabei das Problem, dass bestimmte Wörter, oder Abkürzungen zusätzöiche Punkte enthalten.
-Beispiele sind "Mr. Smith", "seinem 26. Studioalbum", "am 10. Januar 2016".
-Mit diesem naiven Ansatz der Satztrennung, würden wir also einige Sätze an ungewollten Stellen in mehrere Sätze auftrennen.
-
-Um dieses Problem zu lösen, muss der Algorithmus verstehen, welche Satzzeichen die wirklichen Satzenden sind.
-Dies erfordert ein verständnis der Satzstruktur und ist deswegen nicht trivial möglich.
-Um die Sätzegrenzen zu finden, wird deshalb die Open-Source Sprachbibliothek SpaCy.\cite{honnibal2017}
-
-David Bowie stirbt am 10. Januar 2016 an Leberkrebs.
-Zwei Tage nach seinem 69. Geburtstag und der Veröffentlichung von Blackstar, seinem 26. Studioalbum.
-
-\subsection{Satzbildung mit SpaCy}
-
-Mithilfe der NLP Bibliothek SpaCy kann man herausfinden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
-SpaCy verwendet dafür Machine Learning Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
-Es gibt auch noch die beliebte Bibliothek NLKT, die sich aber eher auf das Unterrichten von NLP spezialisiert hat.
-SpaCy ist eher für den produktiven Einsatz geeignet.
-Auf der offiziellen Webseite von spaCy werden vier verschiedene Modelle für die deutsche Sprache zur verfügung gestellt.
-Das Modell 
-\begin{verbatim}
-    de_core_news_sm 
-\end{verbatim} 
-ist das kleinste Modell mit 13 MB Größe, dann folgt 
-\begin{verbatim} 
-    de_core_news_md 
-\end{verbatim}
-mit einer Größe von 42 MB und 
-\begin{verbatim}
-    de_core_news_lg 
-\end{verbatim}
-ist das größte Modell mit 541 MB.
-Das größte Modell bietet dabei vor allem viele vortrainierte Embedding Vektoren für einzelne Wörter.
-Das vierte Modell ist 
-\begin{verbatim}
-    de_dep_news_trf
-\end{verbatim}
-verbraucht 391 MB Speicherplatz und ist speziell für Transformer-support geeignet.
-spaCy führt eine selbst angegebenen Accuracy Evaluation für Sentence Segmentation, also das Erkennen von Satzenden in einem Text.
-Darin ist der F-Score für das kleine Modell gleich 0,94; für das mittlere Modell 0,95 und für das große Modell ebenfalls 0,95.
-Das Modell mit der Transformer pipeline bietet einen F-score von 0,98 und wird deswegen in dieser Arbeit verwendet. \cite{spacy2024}
-
 
