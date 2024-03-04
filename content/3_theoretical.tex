@@ -1,61 +1,11 @@
 \chapter{Ausgangslage und theoretische Grundlagen}\label{ch:theoretical}
 
-\section{Related Work}
-
-Im Bereich der automatisierten Podcast Erstellung gibt es einige Versuche mittels künstlich generierter Texte und Stimmen einen eigenen Podcast zu erstellen.
-
-In dem Artikel \glqq NewsPod: Automatic and Interactive News Podcasts\grqq{} \cite{laban2022} wird ein neuer Ansatz für die automatische Erstellung von Podcast Episoden vorgestellt. 
-Dabei ermitteln mehrere Machine Learning Systeme den Inhalt von bestimmten Nachrichtenseiten und extrahieren daraus Fragestellungen, die den Inhalt des Textes wiederspiegeln sollen. Die Autoren benutzen ein GPT-2 Sprachmodell, das auf Fragengenerierung trainiert wurde, um aus jedem Absatz 7 Fragen zu ermitteln. 
-Für jede Frage wird dann eine separate Antwort generiert. 
-Der wichtigste Aspekt an diesem Artikel ist, dass die Benutzer der Software interaktiv agieren und selbstgewählte Fragen mithilfe eines Mikrofons oder einer Tastatur stellen können, die dann von dem System beantwortet werden. 
-Die Autoren dieses Papers führten außerdem zwei Studien zur Nutzung dieses Systems durch.
-Der Gegenstand der ersten Studie ist, ob die Zufriedenheit einer Testgruppe mit der Erzählweise des Textes und der automatisch generierten Stimme des Sprechers korreliert. 
-Die zweite Studie untersucht die Interaktion der Zuhörenden während der Benutzung des Systems. 
-\cite{laban2022}
-
-In der ersten Studie konnten die Autoren feststellen, dass einer ihrer Ansätze, QA Best,  so erfolgreich war, dass \glqq  80\% of QA Best listeners said they would use the system to listen to the news in the future\grqq{}  \cite{laban2022}.
-Die zweite Studie kommt zu dem Schluss, dass zwar die Bereitschaft eigene Fragen zu stellen mit 85\% der Zuhörenden sehr hoch war, die Zufriedenheit der Testenden mit der Qualität der Antworten aber sehr gering ausfiel, da \glqq  76\% of the answers were rated Irrelevant/Confusing\grqq{} \cite{laban2022}.
-
-
-In der Text Retrieval Conference (TREC), wurde im Jahr 2020 die Aufgabe gestellt, einen großen Datensatz an Podcasttranskripten zu analysieren.
-Dazu sollten die Teilnehmer versuchen aus über 100.000 Podcast Transkripten die wichtigsten Segmente zu verschiedenen Themen zu herauszufiltern.
-Die Transkripte wurden im vorfeld durch eine System zur Automatic Speech Recognition (ASR) erstellt.
-Die einzelnen Transkriptsegmente waren dabei jeweils genau zwei Minuten lang und überlappten sich um eine Minute.
-Insgesammt nahmen neun Teilnahmer an dieser Aufgabe teil und reichten eine Lösung ein.
-Am besten schnitten dabei die Lösungen der Universität Maryland ab, die zur Datenaufbereitung eine  Mischung aus Stemming und word2vec benutzten und für die Retrival funktion Combination und Rerank verwendeten ???
-
-
-
-Für das Design der Podcast Episoden werde ich die Artikel von Podcast Übersicht von \cite{jones2021} verwenden, in dem mithilfe von Deep Learning Ansätzen mehr als 100.000 Podcast Episoden analysiert wurden und daraus Aspekte für eine erfolgreiche Podcast Episode herauskristallisiert wurden. Diese Aspekte werden mir bei der Gestaltung und dem Aufbau einer Episode helfen. 
-
-
-Das Fraunhofer-Institut für Intelligente Anlyse- und Informationssysteme (IAIS) stellte 2015 außerdem die Audiominig Plattform medas vor, welche die Suchfunktionen für verschiedene Audioinhalte verbessern sollte.
-Dazu erstellten sie ein System, dass diese Inhalte Automatisch mit ASR transkribieren kann, eine Sprechererkennung durchführen und Keywörter extrahieren kann.
-Diese Daten sind über eine REST schnittstelle abrufbar.
-Allerdings sind die viele der verwendeten Technologien mittlerweile längst nicht mehr State-of-the-Art, und werden deswegen in dieser Arbeit kaum verwedet.
-In Kapitel \autoref{ch:method} wir darauf näher eingegangen.
-\cite{maroni2020}
-
-
-
-
-
-Neben diesem Artikel würde ich die Arbeit von \cite{zhang2020} hervorheben, da sie als Vorarbeit von \cite{laban2022} dient und das wichtige Summarization-Modell PEGASUS vorstellt, das ich auch in meiner Arbeit verwenden kann. 
-
-Als weitere Quellen werde ich \cite{karpukhin2020}, \cite{reddy2019} und \cite{choi2018} verwenden, die sich alle mit der automatischen Fragen- und Antwortgenerierung aus Texten beschäftigen.
-\cite{karpukhin2020} ist dabei der neueste Ansatz zur Ermittlung von Kontext, der sich außerdem von dem TF-IDF Algorithmus unterscheidet und sehr gute Ergebnisse verspricht.
-
-
-
-In dem Paper \cite{kang2012} untersuchten die Autoren den Effekt von mehrere Stimmen auf das Podcasterlebnis. Außerdem analysierten sie in ihrer Studie die Effekte des Erzählstils und fanden heraus, dass informelle Sprache und ein ungezwungener Kommunikationsstil das Erlebnis von Zuhörenden verbessert. 
-
-
-
-Im weiteren werde ich noch die Arbeiten von \cite{maroni2020}, \cite{clark2020} und \cite{du2017} verwenden, die sich mit Deep Learning Modellen zur Erschließung von Texten beschäftigen.
-
-
 
 \section{Information Retrieval}
+
+Das Ziel dieser Arbeit besteht darin, eine Schnittstelle für einen Hörenden zu erstellen, die ihm ermöglicht, einen Zusammenschnitt aus vielen verschiedenen Podcast Episoden zu erstellen, der genau zu einem Thema passt. 
+Die wichtigste Aufgabe besteht also darin, die wesentlichen Abschnitte aus den Episoden herauszufinden. 
+Dazu muss das System verstehen, welche Abschnitte zu verschiedenen Anfragen passen. 
 
 Das Thema Information Retrieval (Informationsrückgewinnung) bezeichnet den Vorgang, aus einer großen Menge unsortierter Daten bestimmte Informationen wieder zu extrahieren.
 Im Gegensatz zu Data-Mining werden dabei keine neuen Daten erschaffen, sondern lediglich bereits existierendes Wissen wieder zur Verfügung gestellt wird.
@@ -63,29 +13,29 @@ Ein bekanntes Beispiel eines Information Retrieval Algorithmus ist der PageRank 
 Suchmaschinen sind das Musterbeispiel eines Information Retrieval Systems.
 Ein User gibt Stichworte ein, über die er mehr Informationen erhalten möchte und erhält daraufhin Links zu Webseiten, die diese Informationen wahrscheinlich enthalten.
 
+In diesem System wird die Informationsrückgewinnung auf den Daten von Podcasttranskripten betrieben.
+Dazu werden die Techniken der Text Embeddings benutzt, um relevante Informationen zu einem bestimmten Thema aus einer groen Anzahl an Dokumenten zurückzugewinnen.
 SPLADE
 
 \section{Embeddings}
 
-Das Ziel dieser Arbeit besteht darin, eine Schnittstelle für einen Hörenden zu erstellen, die ihm ermöglicht, einen Zusammenschnitt aus vielen verschiedenen Podcast Episoden zu erstellen, der genau zu einem Thema passt. 
-Die wichtigste Aufgabe besteht also darin, die wesentlichen Abschnitte aus den Episoden herauszufinden. 
-Dazu muss das System verstehen, welche Abschnitte zu verschiedenen Anfragen passen. 
-
+Text Embeddings sind ein Weg die menschliche Sprache für Computer verständlich zu machen. 
 Die menschliche Sprache ist ein hochkomplexes Konstrukt mit einer Grammatik, die sehr viel flexibler, kreativer, vieldeutiger und komplexer ist als Maschinensprache. 
-Es gibt viele kleine Bedeutungsnuancen. Zudem ist die Sprache stark von dem allgemeinen Wissen der Welt geprägt und sie ändert sich im Laufe der Zeit. 
+Es gibt viele kleine Bedeutungsnuancen und zudem ist die Sprache stark von dem allgemeinen Wissen der Welt geprägt und sie ändert sich im Laufe der Zeit. 
 Das alles macht es für Computer sehr schwierig die menschliche Sprache zu verstehen. 
 Neuere Forschung im Bereich des Natural Language Processing bietet einige Ansätze, um dieses Problem zu lösen. 
 Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder Texte in Vektoren umzuwandeln, die den Inhalt dieser Worte oder dieser Texte repräsentieren.
 Diese Vektoren nennt man Embeddings.
 Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin, passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
 
-Ein relativ moderner Ansatz besteht in der Suche mithilfe von Embedding Vektoren. 
-Dabei versuchen wir die Semantik (also die Bedeutung) der einzelnen Segmente mathematisch mithilfe eines Vektors zu repräsentieren. 
-Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. Ein Vektor, der aus dem Satz „Ich sitze auf einer Bank im Grünen“ besteht und ein Vektor mit dem Satz „Im Park steht eine alte Bank“ sollen dabei sehr ähnlich zueinander sein, der Vektor mit dem Satz „Ich gehe in die Bank und hebe Geld ab“ aber sollte dazu wenig Ähnlichkeit aufweisen. 
+Ein relativ moderner Ansatz besteht in der Suche mithilfe von Dichten Embedding Vektoren. 
+Dabei wird versucht, die Semantik (also die Bedeutung) der einzelnen Segmente mathematisch mithilfe eines Vektors zu repräsentieren. 
+Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. 
+Ein Vektor, der aus dem Satz „Ich sitze auf einer Bank im Grünen“ besteht und ein Vektor mit dem Satz „Im Park steht eine alte Bank“ sollen dabei sehr ähnlich zueinander sein, der Embeddingvektor des Satzes „Ich gehe in die Bank und hebe Geld ab“ aber sollte dazu wenig Ähnlichkeit aufweisen. 
 Hierbei soll erkannt werden, dass sich die ersten beiden Sätze auf eine Bank zum Sitzen in der Natur beziehen und der dritte Satz das Geldinstitut meint. 
 Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen. 
-Ein regelbasierender Algorithmus würde die Unterschiede bei solchen Homonymen in keinem Fall erkennen können. 
-Regelbasierte Algorithmen wie z.B. [QUELLE] haben auch Probleme mit Negierungen, wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht außer gegessen“.
+Ein stochastischer Algorithmus würde die Unterschiede bei solchen Homonymen in den meißten Fällen nicht erkennen können. 
+Stochastische Algorithmen wie z.B. TF-IDF haben auch Probleme mit Negierungen, wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht außer gegessen“.
 
 Für unsere Aufgabe ist es sinnvoll nicht nur inhaltliche Vergleiche zu erstellen, die überprüfen, ob zwei Sätze ungefähr die gleiche Bedeutung haben, wie "Die Sonne bringt mich zum schwitzen" oder "Ich schmelze in der Hitze".
 Besser wäre eine asymmetrische Ähnlichkeit, wie sie bei Frage und Antwortpaaren vorkommt.
@@ -191,7 +141,7 @@ Die Aufgaben im Bereich des NlP sind vielseitig . Einige Ansätze
 \section{Transformer Architektur}
 
 
-Eine Transformerarchitektur ist eine der modersten und leistungsfähigsten Architekturen, um NLP Aufgaben zu lösen. 
+Eine Transformerarchitektur ist eine der modersten und leistungsfähigsten Architekturen, um eine Vielzahl von  NLP Aufgaben zu lösen. 
 Sie bildet dabei den Nachfolger bzw. Konkurenten zu den bis dato vorherschenden Rekurenten Neuronalen Netzen (RNN), Gated Recurenten Units (GRU) oder Long-Short Term Memory Systemen (LSTM). 
 Ähnlich wie diese Architekturen, ist auch der Transformer ein Sequenze to Sequenz Model, das der Encoder teil nimmt als Eingabe ein Folge von Tokens (ein Satz, eine Audiodatei) und der Decoder Teil bildet daraus eine andere Sequenz (ein Satz, eine Audiodatei). 
 In diesem Abschnitt gehen wir nur auf den Encoder ein, weil er die Embeddings erstellt.

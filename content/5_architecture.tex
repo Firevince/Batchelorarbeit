@@ -149,7 +149,20 @@ Je nachdem welches LLM man dafür benutzt könnten Zeit und kostenfaktoren eine 
 \subsection{Ranking mit ChatGPT}
 
 Nachdem nun die Einzelnen Sätze zu gößeren Segmenten erweitert wurden, kann man auch die Reihenfolge der einzelnen Segmente anpassen.
-Wenn man sich beispielsweise über die "Geschichte von Amsterdam" informieren will, kommen dazu verschiedene Ausschnitte aus der Zeit der Gründung der Niederlande, der 
+Wenn man sich beispielsweise über die "Geschichte von Amsterdam" informieren will, kommen dazu verschiedene Ausschnitte aus der Zeit der Gründung der Niederlande in 1581, den Besuchen Peter des Großen in Amsterdam im Jahr 1697 oder der Verfolgung der Juden im Zweiten Weltkrieg.
+Die Reihenfolge dieser Ereignisse wird im Retrival Schritt dadurch bestimmt, wie stark die Ähnlichkeit zwischen diesem Segent und der Frage ist.
+In diesem Fall wäre es sehr nützlich die Reihenfolge so umzuändern, dass die Segmente zeitlich sortiert wären.
+In anderen Fällen könnte es Sinnvoll sein, dass Segmente hintereinander erscheinen, die einen Inhaltlichen Zusammenhang besitzen.
+Zum Beispiel würde zu dem Thema "Mauerfall Berlin" mehrere Segmente vorkommen, die sich auch mit der DDR befassen.
+In diesem Fall währe es für Zuhörende spannend diese Segmente hintereinander zu platzieren, um dem Podcast flüssiger und zusammenhängender zu gestalten.
+
+Ein solches Reranking der einzelnen Segmente kann mithilfe von leistungsstarken LLMs wie ChatGPT erreicht werden.
+Dazu werden die einzelnen Segmente nummeriert an die Inferenz API von ChatGPT geschickt und das LLM soll die neue Reihenfolge als Liste zurückgeben.
+Dafür wird der JSON Modus von ChatGPT genutzt, welcher das LLM dazu bringt, die Antwort als JSON String zurückzugeben.
+Ein Beispielprompt kann im Anhang nachgelesen werden \autoref{ch:chatgpt-reranking}.
+
+Da dies eine relativ einfache Aufgabe ist, in der nur eine Liste mit wenigen Zahlen zurückgegeben werden muss, wird in diesem Schritt auf Techniken des Prompt engineerings verzichtet.
+
 
 
 
@@ -164,7 +177,7 @@ Um die Audios nun wieder zusammenzusetzen, verwenden wir das gleiche Modul Pydub
 Es bieten sich mehrere Möglichkeiten an, die Audiosegmente wieder zusammenzusetzen. 
 Man könnte die Segmente einfach ohne Pause hintereinander abspielen. Dabei folgen allerdings mehrere Probleme: 
 Zum einen werden die Audiofiles nicht immer an sehr passenden Stellen getrennt, sodass manchmal mitten im Wort abgebrochen wird und das nächste Segment beginnt. 
-Um dieses Problem zu lösen könnte man die Audiofiles langsam ausfaden lassen.
+Um dieses Problem zu lösen, könnte man die Audiofiles langsam ausfaden lassen.
 
 Außerdem sollte dem Hörer bewusst sein, dass ein Audiosegment aus einer Episode aufhört und das nächste beginnt. 
 Dafür bietet sich ein kurzer Signalton zwischen den einzelnen Audiosegmenten an. 
@@ -172,10 +185,21 @@ Dieser sollte nicht nervig sein, da er dem Hörer öfter vorgespielt wird.
 
 Eine weitere Möglichkeit wäre, zwischen jedem Segment dem Hörer eine kurze Vorstellung der Episode und der Sprecher*in zu ermöglichen oder sogar Kontext zu dieser zu geben. 
 
+\section{Weiterführende Themen}
+
+Um den Zuhörenden die Möglichkeit zu geben, auf verschiedene Themen die im Podcast erwähnt wurden weiter einzugehen wurden entsprechende Themenvorschläge mithilfe von ChatGPT generiert.
+Wenn zum Beispiel in einem Podcast zur "Geschichte von Amsterdam" einzelne Segmente über die Anfangszeit der Niederlande handeln, könnte man sich in einer weiterführenen Episode zum Beispiel über die "Gründung der Niederlande" informieren.
+Zu diesem Zweck werden für jede generierte Podcastepisode fünf weiterführende Themenvorschläge von ChatGPT generiert, die zu den Segmenten passen.
+Dazu wird wieder ChatGPT3.5 im JSON Modus verwendet.
+Ein Beispielprompt ist hier zu lesen \autoref{ch:chatgpt-reranking}.
+Die Themen werden explizit auf 1-3 Wörter beschränkt, da sonst manchmal ganze Sätze als Themenvorschläge geführt werden, wie zum Beispiel "Die Erfahrungen von Juden in Amsterdam während der Nazibesetzung".
+Die Antwort von ChatGPT besteht aus einem JSON Array, welches die weiteführenden Themen enthält.
+
+
 \section{Auslieferung}
 
 Für das Deployment dieses Tools wurde das Webframework Flask genutzt.
-Flask ist ein Web Service Gateway Interface Server (WSGI), welches das bereitstellen von Webseiten über die WSGI Schnittstelle ermöglicht, welche dann von einem HTTP Server ausgeliefert werden können.
+Flask ist ein Web Service Gateway Interface Server (WSGI), welches das Bereitstellen von Webseiten über die WSGI Schnittstelle ermöglicht, welche dann von einem HTTP Server ausgeliefert werden können.
 In dieser Arbeit wird dafür der WSGI HTTP Server gunicorn verwendet.
 Gunicorn ist für Unix Systeme geeignet, einfach zu konfigurieren und bietet support für mehrere Worker, die mehrere Anfragen gleichzeitig bearbeiten können.
 
@@ -193,7 +217,18 @@ Der optionale Parameter "segment-length" kann als Integer übergeben werden und 
 Die API gibt bei Erfolgreicher verarbeitung den Statuscode 200 zurück und liefert als Inhalt ein JSON String zurück der eine einzige Variable "url" enthält.
 Diese URL verweist auf das generierte MP3 file.
 
+Als Demonstration wurde ein Telegram-Bot entwickelt der die API benutzt, um damit die automatische Podcastepisoden zu erstellen.
+Der Telegram-Bot ist öffentlich verfügbar und kann über die Adresse https://t.me/PodcastGenerator gefunden werden.
+
 \subsection{Design Webseite}
+
+Die Webseite des Podcast Generators bieten einen einfachen Weg das System zu benutzen.
+Es gibt die beiden Input Felder Thema und Zeit, und einen Start Button, bei dem die Generierung der Podcasts startet.
+Nachdem die Podcastepisode fertig generiert wurde, wird der vorher ausgegraute Audioplayer aktiv.
+Dann können Nutzende die Audiodatei mithilfe des Players anhören.
+Außerdem ist unter/neben dem Audioplayer eine Box mit den Transkriptabschnitten des Podcasts, sortiert nach der Erscheinung in der generierten Episode.
+Diese Transkriptabschnitte können zur Navigation innerhalb der Podcast Episode verwendet werden.
+
 
 Das Design der Webseite beruht auf einem Template von https://github.com/muhammed/mini-player.
 Dieses Template wurde erweitert, durch einen Suchbereich und einen Transkript Bereich.
