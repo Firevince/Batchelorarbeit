@@ -28,6 +28,8 @@ Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder T
 Diese Vektoren nennt man Embeddings.
 Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin, passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
 
+Embeddings können in zwei verschiedene Kategorien einge
+
 Ein relativ moderner Ansatz besteht in der Suche mithilfe von Dichten Embedding Vektoren. 
 Dabei wird versucht, die Semantik (also die Bedeutung) der einzelnen Segmente mathematisch mithilfe eines Vektors zu repräsentieren. 
 Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. 
@@ -45,7 +47,7 @@ Diese asymmetrische Ähnlichkeit ist schwerer zu ermitteln, da man trivialerweis
 Auf der .... ??? 
 
 Vergleich Elastic-Search
-Embeddings können grob in zwei verschiedene Kategorien einge
+
 
 \section{Geschichte der Embeddingverfahren}
 
@@ -93,81 +95,72 @@ Der Decoder dekodiert diesen Embeddingvektor wieder zu einer Sequenz, z.B. einer
 Für ELMo ist dabei nur der Encoder Teil wichtig.
 Dabei werden zwei Layer von Forward und Backward LSTMs eingesetzt, die für jedes Wort den Kontext vor und nach dem Wort berücksichtigen, um sematische Embeddings zu erstellen. [Quellen]
 
-Ein Jahr später wurden die Erstellung von Word und Sentence Embeddings durch BERT revolutioniert.
+Ein halbes Jahr später wurden die Erstellung von Word und Sentence Embeddings durch BERT revolutioniert.
 BERT (Bidirectional Encoder Representations from Transformers) \cite{devlin2019} ist ein auf NLP Aufgaben spezialisierter Transformer.
-Das Model wurde von Google 2019 entwickelt und war seinerzeit das Beste Model, indem es in elf verschiedenen Aufgaben im Bereich des NLP State-of-the-art Ergebnisse lieferte.
-Es ist auf zwei Datensätzen, dem BooksCorpus mit 800 Millionen Wörtern und der englischen Wikipedia mit 2,5 Milliarden Wörtern trainiert worden. \cite{devlin2019}
-Dadurch hat BERT von einer große Auswahl an verschiedenen Themen gelernt und kann für diese sinnvolle Semantische Embedding Vektoren erstellen.
+Das Model wurde von Google 2019 entwickelt und war seinerzeit das beste Model, indem es in elf verschiedenen Aufgaben im Bereich des NLP State-of-the-art Ergebnisse lieferte.
+Es ist auf zwei Datensätzen, dem BooksCorpus mit 800 Millionen Wörtern und der englischen Wikipedia mit 2,5 Milliarden Wörtern trainiert worden. 
+Die Aufgaben im Trainierprozess waren die Next Sentence Prediction (NSP), bei welchem das Model entscheiden muss, ob zwei Sätze wahrscheinlich zusammen vorkommen und das Masked Language Modeling, bei dem das Model unkenntlich gemachte Wörter in Sätzen wiederherstellen soll.
+Dadurch hat BERT sowohl auf Wort Ebene, asl auch auf Satzebene wichtige Merkmale der Sprache gelernt.
+Durch die große Auswahl an verschiedenen Themen im Trainigsprozess kann das Model für viele verschiedene Sachverhalte sinnvolle semantische Embeddingvektoren erstellen.
+\cite{devlin2019}
 
 
-
-
-
-
-
-
-
-
-
-
-
-Unter diesen Aufgaben befinden sich Next Sentence Prediction (NSP) und Masked Language Modeling, auf die es auch trainiert wurde.
-
-
-
-Außerdem kann man das Modell mit wenig aufwand auf andere Aufgaben finetunen und damit sehr gute Ergebnisse im Bereich der Named Entity Recognition, der Sentiment Analyse oder  
-
-
-
-
-
-
-
-
-
-
-Der Wunsch die menschliche Sprache für den Computer verständlich zu machen ist fast so alt, wie die Computer an sich. 
-In den 1940er Jahren, nach Ende des 2. Weltkrieges 
-Der Bereich des NLP riesig. 
-Es gibt [QUELLE] paper dazu. 
-Es hat viele verschiedene Unterthemen. 
-Die Aufgaben im Bereich des NlP sind vielseitig . Einige Ansätze 
-
-
-
+Seit der Entdeckung der Transformerarchitektur und der Entwicklung von BERT, entwickelt sich der Bereich der Embeddingmodelle rasant.
+Täglich werden neue Modelle publiziert und im Abstand von wenigen Wochen erreichen neue Modelle State of-the-art Performance auf populären Benchmarks wie MTEB.  
 
 
 
 \section{Transformer Architektur}
 
+\subsection{Sequenz to Sequenz Modelle}
 
 Eine Transformerarchitektur ist eine der modersten und leistungsfähigsten Architekturen, um eine Vielzahl von  NLP Aufgaben zu lösen. 
-Sie bildet dabei den Nachfolger bzw. Konkurenten zu den bis dato vorherschenden Rekurenten Neuronalen Netzen (RNN), Gated Recurenten Units (GRU) oder Long-Short Term Memory Systemen (LSTM). 
+Sie bildet dabei den Nachfolger bzw. Konkurenten zu den bis dato vorherschenden Rekurenten neuronalen Netzen (RNN), Gated Recurenten Units (GRU) oder Long-Short Term Memory Systemen (LSTM). 
 Ähnlich wie diese Architekturen, ist auch der Transformer ein Sequenze to Sequenz Model, das der Encoder teil nimmt als Eingabe ein Folge von Tokens (ein Satz, eine Audiodatei) und der Decoder Teil bildet daraus eine andere Sequenz (ein Satz, eine Audiodatei). 
 In diesem Abschnitt gehen wir nur auf den Encoder ein, weil er die Embeddings erstellt.
 
-Der Unterschied von Sequenze to Sequenz Modellen zu einem normalen Neuronalen Netz besteht darin, dass die Eingabe und Ausgabe Sequenzen mit variablen Längen sein können, was bei Neuronalen Netzen nicht funktioniert, da sie eine feste Anzahl an Input und Output Neuronen besitzen.
+Der Unterschied von Sequenze to Sequenz Modellen zu einem gewöhlichen künstlichen neuronalen Netz besteht darin, dass die Eingabe- und Ausgabesignale auch Sequenzen mit variabler Länge sein können.
+Gewöhnliche künstliche neuronalen Netze haben eine feste Anzahl an Eingangs- und Ausgangsneuronen, was es ihnen nur erlaubt Aufgaben zu lösen, bei denen die Eingangs- und Ausgangsdaten eine bestimmte Länge aufweisen.
+Anwendungsfälle für künstliche neuronale Netze sind zum Beispiel Frühwarnsysteme oder Klassifikationsaufgaben (zum Beispiel Ziffererkennung).
 
-RNNs sind eine weiterentwicklung normaler Neuronaler Netze, indem Sie mehrere Neuronale Netze hintereinander schalten. 
-Dadurch wird für jedes Inputtoken ein Embedding generiert. 
-Die nächste Zelle des RNN nimmt dann das Embedding der vorhergehenden Zelle und das nächste Input token und generiert daraus wieder ein Embedding.
+\subsection{RNNs, LSTMs und GRUs}
 
-Ein Problem welches diese Architekturen besitzen ist Vanishing Gradient
-Diese Architekturen versuchen immer im Encoder die gesamte Input Sequenz von rechts nach links (forward)oder von links nach rechts (backward) zu verarbeiten, um daraus ein einzelnes Embedding zu erstellen.
-Informationen, die in der Mitte der Sequenz vorkommen werden wahrscheinlich von danach folgenden Informationen überschrieben, weil das Modell versuchen muss alle Informationen in die selbe Matrix zu speichern. 
+RNNs sind eine weiterentwicklung normaler künstlicher neuronaler Netze, indem sie eine Rückkoppelung des Ausgabesignals erlauben und somit eine variable Länge an Eingabesignalen verarbeiten können.
+Das Eingabesignal muss einer Sequenz entsprechen und wird dafür in Tokens zerlegt.
+Jedes Token wird dabei einmal durch das RNN propagiert, bis ein Ausgabeembedding für dieses Token produziert wurde.
+Das Ausgabeembedding aus der vorherigen Iteration wird dann zusammen mit dem nächsten Token in der Sequenz als Eingabe für die nächste Iteration verwendet.
+Dadurch wird die gesammte Sequenz nacheinander in diesem Netz verarbeitet, wobei jedes Token den Kontext der vorherigen Tokens als Embedding mitgeliefert bekommt.
+Am Ende liefert ein RNN dann ein einziges Embedding, welches die gesamten Informationen der Sequenz repräsentieren soll.
 
-Der Ansatz des LSTM versucht dieses Problem zu lösen, indem er Gated Langzeit Gedächtniszellen einführt, die zusätzlich zu den kurzzeit Gedächtniszellen agieren und nicht so leicht überschrieben werden.
+Ein Problem, welches diese Architekturen besitzen, ist das Problem des Vanishing Gradient.
+RNNs versuchen immer im Encoder die gesamte Inputsequenz von links nach rechts (forward) oder von rechts nach links (backward) zu verarbeiten, um daraus ein einzelnes Embedding zu erstellen.
+Informationen, die in der Mitte der Sequenz vorkommen, werden wahrscheinlich von danach folgenden Informationen überschrieben, weil das Modell versuchen muss, alle Informationen in dieselbe Matrix zu speichern. 
+
+Die Ansätze des LSTM und der GRU versuchen dieses Problem zu lösen, indem sie Gates einsetzen.
+Diese Gates bestimmen, welche Informationen aus dem vorherigen Embedding durch das Embdédding der nächsten Iteration überschrieben werden dürfen.
 Dadurch können sie wichtige Informationen länger speichern.
+Bei einem LSTM werden dafür drei verschiedene Gates benutzt: das Forget Gate, das Input Gate und das Output Gate.
+Jedes dieser Gates hat wiederum eine bestimmte Anzahl an Parametern, die bestimmen welche Informationen vergessen, welche für den Input der nächsten Iteration benutzt und welche bei der nächsten Iteration ausgegeben werden.
+Alle diese Parameter müssen bei Training des LSTMs mittrainiert werden, was zu einem komplizierten Model und langsamen trainingsprozess führt.
+Bei GRUs gibt es nur ein Gate: das Update Gate.
+Sie haben dadurch weniger Parameter, die trainiert werden müssen und vereinfachen damit den Trainingsprozess.
+\cite{pirani2022}
 
-Der Unterschied von Transformern zu RNNs, GRUs und LSTMs ist der Attention Mechanismus.
-RNNs, GRUs und LSTMs sind darauf angewiesen, den Input sequentiell Token für Token zu verarbeiten, da jede Zelle asl Input das Embedding der vorrausgehenden Zelle benötigt.
+\subsection{Transformer Encoder}
+
+Der größte Unterschied der Transformerarchitektur zu RNNs, GRUs und LSTMs ist der Attention Mechanismus.
+RNNs, GRUs und LSTMs sind darauf angewiesen, den Input sequentiell Token für Token zu verarbeiten, da jede Zelle als Input das Embedding der vorrausgehenden Zelle benötigt.
 Das macht das Training eines Models sehr Zeitaufwendig.
 
-Der Große Vorteil der Transformer ist, dass sie parallelisierbarer sind.
-Alle Tokens einer Input Sequenz können synchron verarbeitet werden. 
+Der große Vorteil der Transformer ist, dass sie parallelisierbarer sind.
+Alle Tokens einer Inputsequenz können synchron verarbeitet werden. 
 Dabei wird für jedes Token zunächst durch ein vorher ermitteltes Word Embedding ersetzt.
 Der Mechanismus des Positional Encodings stellt sicher, dass das Model die Reihenfolge der tokens mitberücksichtigen kann.
-Dieser Mechnisus nimmt berechnet aufgrund der Position des Tokens in der Sequenz ein positional Embedding auf der Grundlage von Sinus und Cosinus funktionen und addiert es auf das vorherige Word Embedding.
+Dieser Mechnisus berechnet aufgrund der Position des Tokens in der Sequenz ein positional Embedding auf der Grundlage von Sinus- und Cosinusfunktionen und addiert es mit dem vorherigen Word Embedding.
+Das resultierende Embedding enthält damit sowohl Informationen über das Token selbst, durch das Token Embedding und über die Position in der Sequenz durch das Positional Encoding.
+
+
+\subsection{Multi Head self Attention}
 
 Der positional encoded Input wird dann von mehreren self Attention Köpfen verarbeitet, der sogenannten Multihead self attention. 
 Jeder dieser Köpfe spaltet den Input in eine Query, Key und Value Matrix auf, indem es das ursprüngliche Embedding jeweils mit einer vortrainierten Query, Key und Value Matrix multipliziert.
@@ -177,48 +170,116 @@ $Attention(Q,K,V)=softmax(\frac{QK^t}{\sqrt{d_k}})*V$
 
 Der Parameter d stellt dabei die Dimension der Matrix k dar.
 
-
-Um die Formel besser zu verstehen, können wir an einem Beispiel sehen, was die einzelnen Matrizen für Aufgaben besitzen.
-Als Eingabe nehmen wir den Satz: "Alice fuhr gestern durch die Nürnberger Innenstadt".
+Um die Formel besser zu verstehen, wird an einem Beispiel demonstriert, was die einzelnen Matrizen für Aufgaben besitzen.
+Als Eingabe wird der Satz: "Alice fuhr gestern durch die Nürnberger Innenstadt" benutzt.
 Die Query Matrix beschreibt nun eine Frage an diesen Satz, zum Beispiel "Wer?".
+Wie genau diese Fragen aussehen, ist nicht leicht zu ermitteln und wird nur in seltenen Fällen so ausfallen, wie auch Menschen nach bestimmten Informationen fragen.
+Wichtig ist nur, dass in jedem Attention Kopf eine bestimmte Frage gestellt wird.
 Die Key Matrix hat nun die Antwort darauf, wo diese Informationen im Satz stehen könnten, also wahrscheinlich im ersten Wort. 
-Die beiden Matrizen werden nun Multipliziert, um die Position der Antwort auf die Frage zu erhalten. 
+Die beiden Matrizen werden nun multipliziert, um die Position der Antwort auf die Frage zu erhalten. 
 Das Ergebnis wird durch Division mit der Dimension der Matrix skaliert und anschließender Softmax funkion normiert, um die Relevanz der Schlüssel anzupassen.
-Anschließend wird die Angepasste Fragen-schlüssel Matrix mit der Value Matrix multipliziert, welche die Informationen der Sequenz beinhaltet. 
-An der ersten Stelle steht Alice.
+Anschließend wird die angepasste Fragen-schlüssel Matrix mit der Value Matrix multipliziert, welche die Informationen der Sequenz beinhaltet. 
+Die resultierende Matrix würde dann die Information beinhalten, dass die Antwort auf die Frage "Wer?" für den Satz "Alice fuhr gestern durch die Nürnberger Innenstadt" wahrscheinlich "Alice" ist.
 
-Diese daraus resultierende Matrix wird nocheinmal mit der ursprünglichen Matrix in einer sogenannten residual Connection addiert und normiert, bevor sie in ein einfaches Neuronales Netz gespeist werden.
+Die verschiedenen Köpfe der Multihead Self-Attention liefern nun verschiedene Antworten auf verschiedene Fragen und versuchen damit die Informationen der Sequenz zu codieren.
+Die verschiedenen Matrizen werden dann konkateniert und in einem weiteren einfachen feedforward neuronalen Netz in Ihrer Dimensionalität reduziert.
+Das finale Embedding kann dann für verschiedene Funktionalitäten benutzt werden.
+
+
+Die Transformerarchitektur benutzt dieses Embedding aber um damit im Decoder wieder neue Tokens zu erstellen.
+Dafür wird eine ähnliche Vorgehensweise wie im Encoder betrieben.
+Der größte Unterschied zwischen dem Encoder und dem Decoder ist, dass der Encoder den Input nur ein einziges Mal verarbeiten muss und die daraus entstandene Embeddingmatrix nicht mehr neu berechnet werden muss.
+Dadurch ist dieser Schritt sehr schnell.
+Im Gegensatz dazu wird die Decoderphase für jedes einzelne Outputtoken neu durchlaufen.
+
+Statt die Embeddings der Inpu
+In dieser Arbeit werden aber vor allem die Embeddings des Encoders verwendet.
+
+\cite{vaswani2023}
+
+\includegraphics[width=\linewidth]{figures/transformer_architecture.png}
+
 
 \section{Large Language Model}
 
-Large Language Model bezeichnet ein Language Model, das auf vielen Parametern trainiert wurde. 
-Language Model bezeichnet den Bezug zu dem Verständnis Natürlicher Sprache.
-Large Language Modelle werden vor allem für ChatBots, Text-Übersetzungen, und Sprach-Übersetzungen eingesetzt.
-Bekannte LLMs sind zum Beispiel ChatGPT con OpenAI, welches auf ca. 175 Milliarden Parameter trainiert wurde. [https://www.ankursnewsletter.com/p/gpt-4-gpt-3-and-gpt-35-turbo-a-review]
-Weitere bekannte LLMs sind Google Bart und Gemini, Megatron von NVIDIA oder Ayax von Apple (das erst noch kommt).
-Zu den bekannten kommerziellen LLMs, die von großen Tech Firmen entwickelt werden, kommen immer mehr open-source Modelle in den Vordergrund, die zwar (noch) nicht so Leistungsstark sind, aber auf eigener Hardware laufen können.
+Large Language Model (LLM) bezeichnet ein Language Model, das auf vielen Parametern trainiert wurde. 
+Language Model bezeichnet den Bezug zu dem Verständnis natürlicher Sprache.
+Die meisten modernen LLMs basieren auf der transformerarchitektur, um aus einer Inputsequenz mithilfe des Encoder und des Decoders wieder eine Outputsequenz zu generieren.
+LLMs werden für ChatBots, Text-Übersetzungen, Sprach-Übersetzungen, Named Entity Recognition, Sentiment Analyse oder Klassifikation eingesetzt.
+
+Technisch gesehen ist die Funktionsweise eines LLMs nur eine Next Token Prediction.
+Dabei wird nach Verarbeitung der Input Sequenz eine Wahrscheinlichkeit des Auftretens verschiedener Tokens generiert.
+
+
+
+\section{Chatbots}
+
+
+
+
+Besonders die LLM gestützten Chatbots werden aufgrund ihrer Leistungsfähigkeit immer beliebter.
+Der bekannteste Chatbot ist ChatGPT con OpenAI, welcher auf einem LLM beruht, das auf ca. 175 Milliarden Parameter trainiert wurde. [https://www.ankursnewsletter.com/p/gpt-4-gpt-3-and-gpt-35-turbo-a-review]
+Weitere bekannte ChatBots sind Google Gemini, die Claude Chatbots von der Firma Anthropic oder Pi von Inflection AI.
+
+Zu den bekannten kommerziellen Chatbots, die von großen Tech Firmen entwickelt werden, kommen immer mehr open-source Modelle in den Vordergrund, die zwar (noch) nicht so Leistungsstark sind, aber auf eigener Hardware lokal laufen können.
+Bekannte Open-source Modelle sind zum Beispiel Gemma von Google, LLama 2 von Meta oder Mixtral von Mistral AI.
+Diese Opensource Modelle sind meißt wesentlich kleiner als die kommerziellen Chatbots und können somit auf lokaler consimer Hardware laufen.
+Typische Größen für open-spurce LLMs sind 7 Milliraden, 13 Milliarden, 30 Milliarden und 70 Milliarden Parameter, das neueste Google Gemma Modell hat sogar eine Variante mit 2 Milliarden Paramentern.
+
+
+Die Vorteile eines selbst gehosteten LLMs sind vor allem die Datensicherheit und die Möglichkeit die Modelle auf die eigenen Aufgaben zu spezialisieren durch die Technik des Fine-tunings.
+Dabei werden basis Chatbots wie llama 2 auf weiteren spezifischen Beispielen trainiert um bestimmte Fähigkeiten des Models zu verbessern.
+Zum Beispiel könnte man einen 
+
+
+
 
 
 
 \section{Huggingface}
 
-Da es mittlerweile eine Vielzahl unterschiedlicher LLMs gibt, die alle verschiedene spezielle Aufgaben besitzen und in manchen Aspekten Vor- und Nachteile haben, ist es Sinnvoll, diese untereinander vergleichen zu können.
+Da es mittlerweile eine Vielzahl unterschiedlicher LLMs gibt, die alle verschiedene spezielle Aufgaben besitzen und in manchen Aspekten Vor- und Nachteile haben, ist es sinnvoll, diese untereinander vergleichen zu können.
 Eine solche Vergleichsmöglichkeit bietet die Plattform Huggingface, auf der über 400.000 Machine Learning Modelle, davon mehr als 200.000 Transformer gehostet werden.
+
 In der Kategorie Question Answering, gibt es über 1300 Einträge und in der Kategorie "Sentence Similarity" ca. 3000.
 In beiden Kategorien gibt es Embedding Modelle zu finden.
 Die einzelnen Modelle können  kostenlos heruntergeladen werden, sie sind ausführlich dokumentiert und man kann sie untereinander mithilfe einer Punkteabgabe auf verschiedenen Kontroll-Datensätzen vergleichen.
 Durch Leaderboards kann man die besten Modelle bestimmen.
-Zum Beispiel das Massive Text Embedding Benchmark Leaderbord https://huggingface.co/spaces/mteb/leaderboard.\cite{muennighoff2023}
 
-Auf diesem Leaderboard werden Embedding Modelle für unterschiedliche Kategorien evaluiert.
-Semantic Textual Similarity 
-Classification
+\section{Massive Text Embedding Benchmark}
+
+Zum Beispiel das Massive Text Embedding Benchmark (MTEB) Leaderbord https://huggingface.co/spaces/mteb/leaderboard.
+
+Auf diesem Leaderboard werden Embedding Modelle  auf 58 verschiedenen Datensätzen in 112 unterschiedlichen Sprachen evaluiert.
+Die Datensätze sind dabei in acht verschiedene Aufgabenkategorien geteilt:
+- Bitext Mining
+- Classification
+- Clustering
+- Pair Classification
+- Reranking
+- Retrieval
+- semantic textual similarity
+- Summarization
+
+Für diese Arbeit sind vor allem die einzelnen Aufgabenbereiche Retrival und Reranking interessant.
+\cite{muennighoff2023}
+
+leider ist eine Evaluation auf deutscher Sprache noch nicht möglich, da zu wenige Datensätze zur verfügung stehen. 
+In Zukunft, wenn mehr Datensätze für die deutsche Sprache entwickelt wurden, wird die Evaluation um eine deutsche Kategorie erweitert. \cite{muennighoff2023a}
 
 
+\includegraphics[width=\linewidth]{figures/mteb.png}
 
 
 
 
 \section{Dimensionalität}
+
+Die Dimensionalität von verschiedenen Embeddings hat einfluss auf deren Performance.
+Kleinere Embeddings verbrauchen weniger Speicherplatz und lassen sich schneller untereinander vergleichen, was den Retrival Prozess beschleunigt.
+Andererseit lässt eine kleinere Dimensionalität auch weniger Möglichkeiten für die LLMs semantische Informationen darin zu speichern.
+Das heißt aber nicht, das größere Embeddingvektoren auch gleichzeitig die Semantik besser repräsentieren müssen.
+
+Die Dimensionalität des 
 
 \section{SpaCy und dictionaries}
