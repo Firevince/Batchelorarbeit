@@ -28,44 +28,10 @@ Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder T
 Diese Vektoren nennt man Embeddings.
 Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin, passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
 
-Embeddings können in zwei verschiedene Kategorien einge
-
-Ein relativ moderner Ansatz besteht in der Suche mithilfe von Dichten Embedding Vektoren. 
-Dabei wird versucht, die Semantik (also die Bedeutung) der einzelnen Segmente mathematisch mithilfe eines Vektors zu repräsentieren. 
-Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. 
-Ein Vektor, der aus dem Satz „Ich sitze auf einer Bank im Grünen“ besteht und ein Vektor mit dem Satz „Im Park steht eine alte Bank“ sollen dabei sehr ähnlich zueinander sein, der Embeddingvektor des Satzes „Ich gehe in die Bank und hebe Geld ab“ aber sollte dazu wenig Ähnlichkeit aufweisen. 
-Hierbei soll erkannt werden, dass sich die ersten beiden Sätze auf eine Bank zum Sitzen in der Natur beziehen und der dritte Satz das Geldinstitut meint. 
-Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen. 
-Ein stochastischer Algorithmus würde die Unterschiede bei solchen Homonymen in den meißten Fällen nicht erkennen können. 
-Stochastische Algorithmen wie z.B. TF-IDF haben auch Probleme mit Negierungen, wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht außer gegessen“.
-
-Für unsere Aufgabe ist es sinnvoll nicht nur inhaltliche Vergleiche zu erstellen, die überprüfen, ob zwei Sätze ungefähr die gleiche Bedeutung haben, wie "Die Sonne bringt mich zum schwitzen" oder "Ich schmelze in der Hitze".
-Besser wäre eine asymmetrische Ähnlichkeit, wie sie bei Frage und Antwortpaaren vorkommt.
-Zum Beispiel wäre auf die Frage: "Welche Farbe hat der Himmel bei Sonnenuntergang?" ein gute Antwort: "Der Himmel hat bei Sonnenuntergang oft orange und rosa Farbtöne."  und nicht der Satz "Wie sieht der Himmel am Abend aus?"
-Diese asymmetrische Ähnlichkeit ist schwerer zu ermitteln, da man trivialerweise in der Antwort Informationen findet, die in der Frage nicht vorkommen.
-
-Auf der .... ??? 
-
-Vergleich Elastic-Search
-
-
 \section{Geschichte der Embeddingverfahren}
 
-Die Geschichte der Embeddings startet mit stochastischen Verfahren, wie dem TF-IDF Algorithmus und dem BM25 Algorithmus. 
-Term Frequency - inverse Dokument Frequency (TF-IDF) ist ein Algorithmus um Dokumente nach Keyworten zu durchsuchen.
-Das Verfahren verwendet Worthäufigkeiten (Term-Frequency), um Dokumente, in denen ein Wort häufiger vorkommt zu bevorzugen.
-Außerdem verwendet es die generelle Seltenheit von Wörter (Inverse Document Frequency) um Wörtern, die seltener vorkommen, mehr Gewicht bei der Suche einräumen.
-
-Daraus bildet der TF-IDF Algorithmus einen dünnbesetzten Vektor, der die Anzahl und Seltenheit jedes im Dokument vorkommenden Wortes abbildet. 
-Dünnbesetzt heißt in diesem Zusammenhang, dass der Vektor viele Einträge mit dem Wert 0 besitzt. 
-Das folgt aus der Bedingung, dass diese Vektoren untereinander vergleichbar sein müssen und dadurch Einträge für jedes Wort besitzen, welches im gesamten Korpus an Dokumenten vorkommt.
-Jedes einzelne Dokument hat dabei aber nur ein Bruchteil der Gesamtwörter und damit viele Nullwerte.
-
-Best Matching 25 (BM25) ist eine Famile von Algorithmen die versuchen, den TF-IDF Algorithmus zu verbessern indem sie die Priorisierung langer Dokumente und zu oft vorkommende Worte ausgleichen.
-
-Außerdem kann man diese Algorithmen noch anpassen, sodass sie auch n-gramme als Einträge der Vektoren miteinbeziehen. 
-Das heißt, dass nicht nur einzelne Wörter berücksichtigt werden, sondern auch häufig zusammen vorkommende Wörter als einzelnes Token in dem Vektor abgebildet werden. 
-Das bewirkt zwar, dass die Ähnlichkeit der Dokumente in der Regel besser ermittelt werden kann, vergrößert aber die Vektoren überproportional.
+Die ersten Algorithmen um eine große Anzahl von Dokumenten durchsuchen zu können, waren Suchalgorithmen wie TD-IDF oder BM25, die in den 1970er Jahren aufkamen.
+Diese versuchen Worthäufigkeiten als Anhaltspunkt zu nehmen, um Ähnlichkeiten zwische Dokumenten zu erkennen und Suchfunktionen aufzubauen. 
 
 Semantische Analysen begannen erst ab ca. 1990 mit der Latenten Semantischen Analyse (LSA).
 Diese verwendet Eigenvektoren um aus einer Term-Frequency Matrix versteckte (latente) Eigenschaften zu ermitteln, welche die Dokumente besser repräsentieren als die TF Matrix an sich. 
@@ -109,6 +75,51 @@ Seit der Entdeckung der Transformerarchitektur und der Entwicklung von BERT, ent
 Täglich werden neue Modelle publiziert und im Abstand von wenigen Wochen erreichen neue Modelle State of-the-art Performance auf populären Benchmarks wie MTEB.  
 
 
+\section{Embeddingvektoren}
+
+
+Embeddings können in zwei verschiedene Kategorien eingeteilt werden: die dünnen Vektoren und dichte Vektoren.
+
+Dünne Vektoren, wie der TF-IDF Algorithmus und der BM25 Algorithmus versuchen syntaktische Eigenschaften von Dokumenten zu erfassen,
+Term Frequency - inverse Dokument Frequency (TF-IDF) ist ein Algorithmus, der es erlaubt, Dokumente nach Keyworten zu durchsuchen.
+Das Verfahren verwendet Worthäufigkeiten (Term-Frequency), um Dokumente, in denen ein Wort häufiger vorkommt zu bevorzugen.
+Außerdem verwendet es die generelle Seltenheit von Wörter (Inverse Document Frequency) um Wörtern, die seltener vorkommen, mehr Gewicht bei der Suche einräumen.
+
+Daraus bildet der TF-IDF Algorithmus einen dünnbesetzten Vektor, der die Anzahl und Seltenheit jedes im Dokument vorkommenden Wortes abbildet. 
+Dünnbesetzt heißt in diesem Zusammenhang, dass der Vektor viele Einträge mit dem Wert 0 besitzt. 
+Das folgt aus der Bedingung, dass diese Vektoren untereinander vergleichbar sein müssen und dadurch Einträge für jedes Wort besitzen, welches im gesamten Korpus an Dokumenten vorkommt.
+Jedes einzelne Dokument hat dabei aber nur ein Bruchteil der Gesamtwörter und damit viele Nullwerte.
+
+Best Matching 25 (BM25) ist eine Famile von Algorithmen die versuchen, den TF-IDF Algorithmus zu verbessern, indem sie die Priorisierung langer Dokumente und zu oft vorkommende Worte ausgleichen.
+
+Außerdem kann man diese Algorithmen noch anpassen, sodass sie auch n-gramme als Einträge der Vektoren miteinbeziehen. 
+Das heißt, dass nicht nur einzelne Wörter berücksichtigt werden, sondern auch häufig zusammen vorkommende Wörter als einzelnes Token in dem Vektor abgebildet werden. 
+Das bewirkt zwar, dass die Ähnlichkeit der Dokumente in der Regel besser ermittelt werden kann, vergrößert aber die Vektoren überproportional.
+
+Ein relativ moderner Ansatz besteht in der Suche mithilfe von Dichten Embedding Vektoren. 
+Dabei wird versucht, die Semantik (also die Bedeutung) der einzelnen Segmente mathematisch mithilfe eines Vektors zu repräsentieren. 
+Dieser Vektor soll dann zur Suche nach Ähnlichkeit dienen. 
+Ein Vektor, der aus dem Satz „Ich sitze auf einer Bank im Grünen“ besteht und ein Vektor mit dem Satz „Im Park steht eine alte Bank“ sollen dabei sehr ähnlich zueinander sein, der Embeddingvektor des Satzes „Ich gehe in die Bank und hebe Geld ab“ aber sollte dazu wenig Ähnlichkeit aufweisen. 
+Hierbei soll erkannt werden, dass sich die ersten beiden Sätze auf eine Bank zum Sitzen in der Natur beziehen und der dritte Satz das Geldinstitut meint. 
+Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen. 
+Ein stochastischer Algorithmus würde die Unterschiede bei solchen Homonymen in den meißten Fällen nicht erkennen können. 
+Stochastische Algorithmen wie z.B. TF-IDF haben auch Probleme mit Negierungen, wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht außer gegessen“.
+
+Für unsere Aufgabe ist es sinnvoll nicht nur inhaltliche Vergleiche zu erstellen, die überprüfen, ob zwei Sätze ungefähr die gleiche Bedeutung haben, wie "Die Sonne bringt mich zum schwitzen" oder "Ich schmelze in der Hitze".
+Besser wäre eine asymmetrische Ähnlichkeit, wie sie bei Frage und Antwortpaaren vorkommt.
+Zum Beispiel wäre auf die Frage: "Welche Farbe hat der Himmel bei Sonnenuntergang?" ein gute Antwort: "Der Himmel hat bei Sonnenuntergang oft orange und rosa Farbtöne."  und nicht der Satz "Wie sieht der Himmel am Abend aus?"
+Diese asymmetrische Ähnlichkeit ist schwerer zu ermitteln, da man trivialerweise in der Antwort Informationen findet, die in der Frage nicht vorkommen.
+
+\section{Dimensionalität von Embeddings}
+
+Die Dimensionalität von verschiedenen Embeddings hat Einfluss auf deren Performance.
+Kleinere Embeddings verbrauchen weniger Speicherplatz und lassen sich schneller untereinander vergleichen, was den Retrival Prozess beschleunigt.
+Andererseit lässt eine kleinere Dimensionalität auch weniger Möglichkeiten für die LLMs semantische Informationen darin zu speichern.
+Das heißt aber nicht, das größere Embeddingvektoren auch gleichzeitig die Semantik besser repräsentieren müssen.
+Das hängt vor allem damit zusammen, wie Leistungsstark die Architektur de Models ist und wie viele und welche Trainingsdaten zum trainieren verwendet wurden
+Die Dimensionalität des Models "voyage-lite-02-instruct" ist auf zum Beispiel auf dem Massive Text Embedding Benchmark Leaderbord mit 1024 dimensionalen Embedding Platz 2.
+Auf den Plätzen 3-5 liegen aber Embeddingmodelle mit einer Dimensionalität von 4096.
+
 
 \section{Transformer Architektur}
 
@@ -119,13 +130,13 @@ Sie bildet dabei den Nachfolger bzw. Konkurenten zu den bis dato vorherschenden 
 Ähnlich wie diese Architekturen, ist auch der Transformer ein Sequenze to Sequenz Model, das der Encoder teil nimmt als Eingabe ein Folge von Tokens (ein Satz, eine Audiodatei) und der Decoder Teil bildet daraus eine andere Sequenz (ein Satz, eine Audiodatei). 
 In diesem Abschnitt gehen wir nur auf den Encoder ein, weil er die Embeddings erstellt.
 
-Der Unterschied von Sequenze to Sequenz Modellen zu einem gewöhlichen künstlichen neuronalen Netz besteht darin, dass die Eingabe- und Ausgabesignale auch Sequenzen mit variabler Länge sein können.
+Der Unterschied von Sequenze to Sequenz Modellen zu einem gewöhlichen feed-forward neuronalen Netz besteht darin, dass die Eingabe- und Ausgabesignale auch Sequenzen mit variabler Länge sein können.
 Gewöhnliche künstliche neuronalen Netze haben eine feste Anzahl an Eingangs- und Ausgangsneuronen, was es ihnen nur erlaubt Aufgaben zu lösen, bei denen die Eingangs- und Ausgangsdaten eine bestimmte Länge aufweisen.
 Anwendungsfälle für künstliche neuronale Netze sind zum Beispiel Frühwarnsysteme oder Klassifikationsaufgaben (zum Beispiel Ziffererkennung).
 
 \subsection{RNNs, LSTMs und GRUs}
 
-RNNs sind eine weiterentwicklung normaler künstlicher neuronaler Netze, indem sie eine Rückkoppelung des Ausgabesignals erlauben und somit eine variable Länge an Eingabesignalen verarbeiten können.
+RNNs sind eine weiterentwicklung von feed-forward neuronalen Netze, indem sie eine Rückkoppelung des Ausgabesignals erlauben und somit eine variable Länge an Eingabesignalen verarbeiten können.
 Das Eingabesignal muss einer Sequenz entsprechen und wird dafür in Tokens zerlegt.
 Jedes Token wird dabei einmal durch das RNN propagiert, bis ein Ausgabeembedding für dieses Token produziert wurde.
 Das Ausgabeembedding aus der vorherigen Iteration wird dann zusammen mit dem nächsten Token in der Sequenz als Eingabe für die nächste Iteration verwendet.
@@ -163,7 +174,7 @@ Das resultierende Embedding enthält damit sowohl Informationen über das Token 
 \subsection{Multi Head self Attention}
 
 Der positional encoded Input wird dann von mehreren self Attention Köpfen verarbeitet, der sogenannten Multihead self attention. 
-Jeder dieser Köpfe spaltet den Input in eine Query, Key und Value Matrix auf, indem es das ursprüngliche Embedding jeweils mit einer vortrainierten Query, Key und Value Matrix multipliziert.
+Jeder dieser Köpfe spaltet den Input in eine Query, Key und Value Matrix auf, indem es die ursprüngliche Embeddingmatrix jeweils mit einer vortrainierten Query-, Key- und Valuematrix multipliziert.
 Die resultierenden Matrizen werden dann mithilfe folgender Formel zur Attention Matrix umgewandelt:
 
 $Attention(Q,K,V)=softmax(\frac{QK^t}{\sqrt{d_k}})*V$
@@ -186,15 +197,26 @@ Die verschiedenen Matrizen werden dann konkateniert und in einem weiteren einfac
 Das finale Embedding kann dann für verschiedene Funktionalitäten benutzt werden.
 
 
-Die Transformerarchitektur benutzt dieses Embedding aber um damit im Decoder wieder neue Tokens zu erstellen.
+Die Transformerarchitektur benutzt dieses Embedding, um damit im Decoder wieder neue Tokens zu erstellen.
 Dafür wird eine ähnliche Vorgehensweise wie im Encoder betrieben.
 Der größte Unterschied zwischen dem Encoder und dem Decoder ist, dass der Encoder den Input nur ein einziges Mal verarbeiten muss und die daraus entstandene Embeddingmatrix nicht mehr neu berechnet werden muss.
 Dadurch ist dieser Schritt sehr schnell.
 Im Gegensatz dazu wird die Decoderphase für jedes einzelne Outputtoken neu durchlaufen.
+Zunächst wird dabei wieder eine self-Attention Matrix über den gesamten bisherigen Ausgabetokens generiert.
+Diese self-Attention Matrix wird dann genutzt, um eine weitere Attention Matrix zu errechnen.
+Diese benötigt nun wieder eine seperate Query-, Key- und Valuematrix.
+Im Vergleich zur self Attention werden dabei aber nicht alle Matrizen aus der selben Embeddingmatrix errechnet.
+Nur die Querymatrix wird aus der vorher generierten Self-Attention Matrix generiert.
+Die Key- und die Valuematrix werden dabei aus der Embedding Matrix des Encoders berechnet. 
+Dadurch wird die Information aus dem Userprompt bei der Generierung jedes einzelnen Tokens mitberücksichtigt. 
+Die resultierenden Matrizen aller Attentionköpfe werden dann wieder durch Feedforward Netze propagiert, um sie zusammenzuführen und die Dimensionalität anzupassen.
+Am Ende wird die ganze Matrix durch eine Softmax Funktion geleitet, die dann die Ausgabewahrscheinlichkeiten für alle Tokens generieren.
+Das heißt die Ausgabe ist ein Vektor, der als Dimensionalität die Länge des Vokabulars der Tokens besitzt.
+Welches Token am Ende generiert wird kann zum Beispiel mit einem Greedy-Algorithmus bestimmt werden, der immer das Wort mit der größten Wahrscheinlichkeit auswählt.
+Andere Auswahlmöglichkeiten wären zum Beispiel mit einem Beam-Search Algorithmus möglich, bei dem mehrere Sequenzen generiert werden, um erst später zu schauen, welche Sequenz insgesamt die höchste Wahrscheinlichkeit besitzt.
+In dieser Phase kann auch eine Zufallsvaiable eingeführt werden, die immer ein Token aus den wahrscheinlichsten Tokens auswählt, um bei mehrfacher wiederholung eines Propts verschiedene Ergebnisse zu liefern.
 
-Statt die Embeddings der Inpu
-In dieser Arbeit werden aber vor allem die Embeddings des Encoders verwendet.
-
+Um bei dem Beispiel von oben zu bleiben, würde der Decoder zum Beispiel versuchen den Satz zu vollenden mit  "Alice fuhr gestern durch die Nürnberger Innenstadt und bewunderte die beeindruckenden mittelalterlichen Bauwerke.".
 \cite{vaswani2023}
 
 \includegraphics[width=\linewidth]{figures/transformer_architecture.png}
@@ -203,19 +225,21 @@ In dieser Arbeit werden aber vor allem die Embeddings des Encoders verwendet.
 \section{Large Language Model}
 
 Large Language Model (LLM) bezeichnet ein Language Model, das auf vielen Parametern trainiert wurde. 
-Language Model bezeichnet den Bezug zu dem Verständnis natürlicher Sprache.
-Die meisten modernen LLMs basieren auf der transformerarchitektur, um aus einer Inputsequenz mithilfe des Encoder und des Decoders wieder eine Outputsequenz zu generieren.
-LLMs werden für ChatBots, Text-Übersetzungen, Sprach-Übersetzungen, Named Entity Recognition, Sentiment Analyse oder Klassifikation eingesetzt.
+Language Model bezeichnet dabei den Bezug zu dem Verständnis natürlicher Sprache.
+Die meisten modernen LLMs basieren auf der Transformerarchitektur, um aus einer Inputsequenz mithilfe des Encoder und des Decoders wieder eine Outputsequenz zu generieren.
+
 
 Technisch gesehen ist die Funktionsweise eines LLMs nur eine Next Token Prediction.
 Dabei wird nach Verarbeitung der Input Sequenz eine Wahrscheinlichkeit des Auftretens verschiedener Tokens generiert.
+Dadurch generiert das LLM einfach nur Sätze, die in dem vorherigen Kontext Sinn ergeben.
+Durch weitere Techniken des Finetunings können die LLMs dazu gebracht werden, auf Fragen zu antworten oder Anweisungen zu befolgen.
+Die LLMs werden dabei mit weiteren Besipielen trainiert, in denen zum Beispiel das Antworten auf Fragen explizit demonstriert wird.
+Verschiedene LLMs können dabei auf unterschiedliche Aufgaben spezialisiert werden.
+LLMs werden zum Beispiel für ChatBots, Text-Übersetzungen, Sprach-Übersetzungen, Named Entity Recognition, Sentiment Analyse oder Klassifikation eingesetzt.
 
 
 
 \section{Chatbots}
-
-
-
 
 Besonders die LLM gestützten Chatbots werden aufgrund ihrer Leistungsfähigkeit immer beliebter.
 Der bekannteste Chatbot ist ChatGPT con OpenAI, welcher auf einem LLM beruht, das auf ca. 175 Milliarden Parameter trainiert wurde. [https://www.ankursnewsletter.com/p/gpt-4-gpt-3-and-gpt-35-turbo-a-review]
@@ -223,23 +247,20 @@ Weitere bekannte ChatBots sind Google Gemini, die Claude Chatbots von der Firma 
 
 Zu den bekannten kommerziellen Chatbots, die von großen Tech Firmen entwickelt werden, kommen immer mehr open-source Modelle in den Vordergrund, die zwar (noch) nicht so Leistungsstark sind, aber auf eigener Hardware lokal laufen können.
 Bekannte Open-source Modelle sind zum Beispiel Gemma von Google, LLama 2 von Meta oder Mixtral von Mistral AI.
-Diese Opensource Modelle sind meißt wesentlich kleiner als die kommerziellen Chatbots und können somit auf lokaler consimer Hardware laufen.
+Diese Open-source Modelle sind meißt wesentlich kleiner als die kommerziellen Chatbots und können somit auf lokaler consimer Hardware laufen.
 Typische Größen für open-spurce LLMs sind 7 Milliraden, 13 Milliarden, 30 Milliarden und 70 Milliarden Parameter, das neueste Google Gemma Modell hat sogar eine Variante mit 2 Milliarden Paramentern.
 
 
 Die Vorteile eines selbst gehosteten LLMs sind vor allem die Datensicherheit und die Möglichkeit die Modelle auf die eigenen Aufgaben zu spezialisieren durch die Technik des Fine-tunings.
 Dabei werden basis Chatbots wie llama 2 auf weiteren spezifischen Beispielen trainiert um bestimmte Fähigkeiten des Models zu verbessern.
-Zum Beispiel könnte man einen 
 
-
-
-
-
+In dieser Arbeit wird aufgrund von fehlenden konsistenten Hardwareressourcen und zugunsten der Schnelligkeit noch auf das Kommerzielle Produkt ChatGPT zugegriffen um einige Datenverarbeitungen durchzuführen.
+In Zukunft mit immer besseren und kleineren open-source LLMs könnte man diese Funktionalität auch auf selbstgehosteten LLMs umlagern.
 
 \section{Huggingface}
 
 Da es mittlerweile eine Vielzahl unterschiedlicher LLMs gibt, die alle verschiedene spezielle Aufgaben besitzen und in manchen Aspekten Vor- und Nachteile haben, ist es sinnvoll, diese untereinander vergleichen zu können.
-Eine solche Vergleichsmöglichkeit bietet die Plattform Huggingface, auf der über 400.000 Machine Learning Modelle, davon mehr als 200.000 Transformer gehostet werden.
+Eine solche Vergleichsmöglichkeit bietet die Plattform Huggingface, auf der über 500.000 Machine Learning Modelle, davon mehr als 200.000 Transformer gehostet werden.
 
 In der Kategorie Question Answering, gibt es über 1300 Einträge und in der Kategorie "Sentence Similarity" ca. 3000.
 In beiden Kategorien gibt es Embedding Modelle zu finden.
@@ -252,20 +273,17 @@ Zum Beispiel das Massive Text Embedding Benchmark (MTEB) Leaderbord https://hugg
 
 Auf diesem Leaderboard werden Embedding Modelle  auf 58 verschiedenen Datensätzen in 112 unterschiedlichen Sprachen evaluiert.
 Die Datensätze sind dabei in acht verschiedene Aufgabenkategorien geteilt:
-- Bitext Mining
-- Classification
-- Clustering
-- Pair Classification
-- Reranking
-- Retrieval
-- semantic textual similarity
-- Summarization
+Bitext Mining, Classification, Clustering, Pair Classification, Reranking, Retrieval, semantic textual similarity und Summarization.
 
-Für diese Arbeit sind vor allem die einzelnen Aufgabenbereiche Retrival und Reranking interessant.
+Für diese Arbeit sind vor allem die einzelnen Aufgabenbereiche Retrival und Reranking interessant. In dem Bereich Retrieval ist die Aufgabe, aus einer großen Menge an Daten, relevante Dokumente zu einem bestimmten Thema zu finden.
+Bei der Reranking Aufgabe gilt es, eine Liste an potentiell passenden Dokumenten noch einmal nach Wichtigkeit zu sortieren.
+In dem Aufgabenbereich Retrieval werden die einzelnen Embeddings auf 15 verschiedene Datensätze evaluiert.
+
 \cite{muennighoff2023}
 
-leider ist eine Evaluation auf deutscher Sprache noch nicht möglich, da zu wenige Datensätze zur verfügung stehen. 
+Leider ist eine Evaluation auf deutscher Sprache noch nicht möglich, da zu wenige Datensätze zur verfügung stehen. 
 In Zukunft, wenn mehr Datensätze für die deutsche Sprache entwickelt wurden, wird die Evaluation um eine deutsche Kategorie erweitert. \cite{muennighoff2023a}
+In Kapitel \autoref{ch:experiments} wird versucht die besten Embedding Modelle für die Retrieval Aufgabe des Podcast-Generators zu ermitteln.
 
 
 \includegraphics[width=\linewidth]{figures/mteb.png}
@@ -273,13 +291,6 @@ In Zukunft, wenn mehr Datensätze für die deutsche Sprache entwickelt wurden, w
 
 
 
-\section{Dimensionalität}
 
-Die Dimensionalität von verschiedenen Embeddings hat einfluss auf deren Performance.
-Kleinere Embeddings verbrauchen weniger Speicherplatz und lassen sich schneller untereinander vergleichen, was den Retrival Prozess beschleunigt.
-Andererseit lässt eine kleinere Dimensionalität auch weniger Möglichkeiten für die LLMs semantische Informationen darin zu speichern.
-Das heißt aber nicht, das größere Embeddingvektoren auch gleichzeitig die Semantik besser repräsentieren müssen.
-
-Die Dimensionalität des 
 
 \section{SpaCy und dictionaries}
