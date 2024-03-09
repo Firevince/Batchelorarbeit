@@ -36,15 +36,15 @@ Diese versuchen Worthäufigkeiten als Anhaltspunkt zu nehmen, um Ähnlichkeiten 
 Semantische Analysen begannen erst ab ca. 1990 mit der Latenten Semantischen Analyse (LSA).
 Diese verwendet Eigenvektoren um aus einer Term-Frequency Matrix versteckte (latente) Eigenschaften zu ermitteln, welche die Dokumente besser repräsentieren als die TF Matrix an sich. 
 Es werden von diesen Eigenvektoren nur die wichtigsten ausgewählt, sodass jedes Dokument sehr gut als eine Linearkombination dieser Vektoren repräsentiert werden kann.
-Dann werden nur noch die Koeffizienten dieser Vektoren gespeichert und man kann von einer Dimensionsreduktion profitieren.
-Die resultierenden Koeffizienten-Vektoren sind nun nicht mehr spärlich besetzt sondern dicht und die resultierenden Eigenvektoren bilden häufig latente Themen der Dokumente ab.
+Dann werden nur noch die Koeffizienten dieser Vektoren gespeichert und es kann von einer Dimensionsreduktion profitiert werden.
+Die resultierenden Koeffizienten-Vektoren sind nun nicht mehr dünn besetzt, sondern dicht und die resultierenden Eigenvektoren bilden häufig latente Themen der Dokumente ab.
 
 Wirkliche semantische Word Embeddings kamen erst mit der Veröffentlichung von Word2Vec (2013) zu einer breiteren Nutzung. 
 Word2Vec verwendet ein neuronales Netz, um mithilfe der benachbarten Wörter Kontextinformationen über das eigentliche Wort zu erhalten. 
 Dafür gibt es die beiden Ansätze Continous Bag of Words und Skipgramm.
-Bei dem Ansatz Continous Bag of Words werden dem Neuronalen Netz die umgebenden Wörter als Input gegeben, und das Model hat die Aufgabe daraus das Wort zu ermitteln. 
+Bei dem Ansatz Continous Bag of Words werden dem künstlichen neuronalen Netz die umgebenden Wörter als Input gegeben, und das Model hat die Aufgabe daraus das Wort zu ermitteln. 
 Dieses Verfahren wird in einem Sliding Window für jedes Wort aus einem Text wiederholt. 
-Für einen bestimmten Korpus aus verschiedenen Dokumenten kann dieses Modell dadurch die Beziehungen verschiedener Worte zueinander und die Ähnlichkeit verschieddener Worte, die oft in gleichem Kontext vorkommen, erlernen. 
+Für einen bestimmten Korpus aus verschiedenen Dokumenten kann dieses Modell dadurch die Beziehungen verschiedener Worte zueinander und die Ähnlichkeit verschiedener Worte, die oft in gleichem Kontext vorkommen, erlernen. 
 Das Verfahren des Skipgramms funktioniert ähnlich, allerdings wird dabei für jedes Wort versucht, die umliegenden Wörter zu ermitteln. 
 Dieser Ansatz dauert länger im Training, hat aber den Vorteil, dass er auch seltener vorkommende Wörter gut repräsentieren kann.
 
@@ -290,7 +290,3 @@ In Kapitel \autoref{ch:experiments} wird versucht die besten Embedding Modelle f
 
 
 
-
-
-
-\section{SpaCy und dictionaries}
