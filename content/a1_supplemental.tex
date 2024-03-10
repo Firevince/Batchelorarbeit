@@ -59,6 +59,36 @@ Die Programset-ID verweist auf den speziellen Podcast.
 
 \end{verbatim}
 
+\label{ch:graphql-3}
+GraphQL Abfrage um alle transkripte zu den Episoden des Podcasts "Radio Wissen" zu erhalten
+Die Programset-ID verweist auf den speziellen Podcast.
+
+\begin{verbatim}
+
+    {
+    programSet(id: 5945518) {
+        title
+        items(
+        orderBy: PUBLISH_DATE_DESC
+        filter: {
+            isPublished: {
+            equalTo: true
+            }
+        }
+        ) {
+        nodes {
+            transcript {
+            data
+            }
+            audios {
+            downloadUrl
+            }
+        }
+        }
+    }
+    }
+\end{verbatim}
+
 \label{ch:chatgpt-reranking}
 
 Ein Beispielprompt um Segmente von ChatGPT sortieren zu lassen.

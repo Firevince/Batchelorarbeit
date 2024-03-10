@@ -34,3 +34,20 @@ Laut der Plattform Podcastle, die Software für Aufnahme und Editierung von Podc
 erreichen heute schon AI-basierte Podcasts rund 45 Millionen US-Amerikaner \cite{podcastle2023}.
 Der Podcast "Hacker News Recap" ist ein vollkommen von AI produzierter Podcast und erreicht in vielen Ländern wie Schweden oder Italien die Top 100 bei Apple Podcasts in der Kategorie Daily News \cite{chartable}.
 In Deutschland ist der Podcast immerhin auf Platz 169.
+
+\subsection{Fraunhofer}
+
+Seit 2015 arbeitet die ARD mit dem Fraunhofer-Institut Institut für Intelligente Analyse- und Informationssysteme (IAIS) zusammen, um „Erschließung von Mediendaten zu forcieren und dabei den Schwerpunkt auf maschinelle Verfahren zu legen“ [1]
+Ein Teil dieses Projektes bezieht sich auf das Audio-Mining. 
+Das Fraunhofer IAIS entwickelte dafür ein System, welches die Audiodatein transkribiert und dabei „in der kompletten ARD, bei Deutschlandradio sowie im ZDF im Einsatz [ist]“. 
+Leider legt das FraunhoferIAIS nicht offen, welche Technologie es dafür verwendet. 
+Die Transkripte lassen sich allerdings sehr einfach über eine Graphql Schnittstelle abfragen. 
+
+\subsection{Microsoft Translate}
+
+Eine weitere Möglichkeit zur Audiotranskription bietet Microsoft Translate. 
+Soweit man einen Microsoft 365 Account besitzt, kann man in dem Webinterface von Microsoft word eine Transkriptionsfunktion benutzen. 
+Dafür müssen die Audiofiles zunächst auf Microsoft Onedrive hochgeladen werden und können dann mit einem Klick übersetzt werden. 
+Microsoft Word stellt dann sogar Timestamps  zur Verfügung für das ganze Dokument. 
+Die Qualität ist außerdem besser als bei kostenlosen Open-Source Alternativen. 
+Dafür skaliert diese Art der Transkription schlecht für größere Datenmengen, da sämtliche files zunächst bei OneDrive hochgeladen werden müssen und dann jedes File von Hand ausgewählt, in Word eingebunden, transkribiert werden und dann abgespeichert werden müssen. 

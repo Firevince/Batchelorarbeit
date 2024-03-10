@@ -118,43 +118,55 @@ Für das System werden trotz der verschiedenen Längen alle Audiodatein benutzt,
 
 \subsection{Transkriptionsmethoden im Überblick}
 
+Um automatisch Audioinhalte mittels eines Automatic Speech Recognition Systems (ASR) zu transkribieren, können mittlerweile zahlreiche verschiedene Dienste benutzt werden.
+Dabei muss immer zwischen Geschwindigkeit, Genauigkeit und Kosten abgewogen werden.
+Es gibt viele Cloudanbieter, die die Transkription via API gegen Gebühren vornehmen.
+Außerdem gibt es verschiedene Transkriptionsprogramme, die auf lokaler Hardware eingesetzt werden können.
+Im Folgenden sind mehrere Ansätze beschrieben, die für die Transkription der Daten in Erwägung gezogen wurden.
 
 
-\subsection{Fraunhofer}
+\subsection{Fraunhofer IAIS}
 
-Seit 2015 arbeitet die ARD mit dem Fraunhofer-Institut Institut für Intelligente Analyse- und Informationssysteme (IAIS) zusammen, um „Erschließung von Mediendaten zu forcieren und dabei den Schwerpunkt auf maschinelle Verfahren zu legen“ [1]
-Ein Teil dieses Projektes bezieht sich auf das Audio-Mining. 
-Das Fraunhofer IAIS entwickelte dafür ein System, welches die Audiodatein transkribiert und dabei „in der kompletten ARD, bei Deutschlandradio sowie im ZDF im Einsatz [ist]“. 
-Leider legt das FraunhoferIAIS nicht offen, welche Technologie es dafür verwendet. 
-Die Transkripte lassen sich allerdings sehr einfach über eine Graphql Schnittstelle abfragen. 
+Wie im Kapitel \autoref*{ch:theoretical} beschrieben führt das Fraunhofer-Institut für Intelligente Anlyse- und Informationssysteme (IAIS) schon automatische Transkriptionen der Audioinhalte der ARD-Audiothek durch.
+Die Verwendeung dieser Transkripte führt allerdings gleich zu mehreren Problemen.
+Ein Grund ist die inkonsistente Verfügbarkeit der Daten.
+Von den angefragten Transkripten verfügten 84 Episoden und damit ca. 3,8\% aller Episoden über keine Daten für Transkripte.
+Ein weiterer Grund ist die vorgefertigte Segmentierung des Transkripts.
+Die Transkripte sind in Segmente aufgeteilt, die zwischen 3-30 Sekunden dauern.
+Zeitstempel sind jeweils nur für den Anfang und das Ende jedes Segmentes verfügbar.
+Dadurch ist eine spätere Segmentierung nicht mehr möglich und die vorhanden Segmente sind zu inkonsistent in Länge und beginnen und enden nicht an Satzgrenzen.
 
-\subsection{Microsoft Translate}
 
-Eine weitere Möglichkeit zur Audiotranskription bietet Microsoft Translate. 
-Soweit man einen Microsoft 365 Account besitzt, kann man in dem Webinterface von Microsoft word eine Transkriptionsfunktion benutzen. 
-Dafür müssen die Audiofiles zunächst auf Microsoft Onedrive hochgeladen werden und können dann mit einem Klick übersetzt werden. 
-Microsoft Word stellt dann sogar Timestamps  zur Verfügung für das ganze Dokument. 
-Die Qualität ist außerdem besser als bei kostenlosen Open-Source Alternativen. 
-Dafür skaliert diese Art der Transkription schlecht für größere Datenmengen, da sämtliche files zunächst bei OneDrive hochgeladen werden müssen und dann jedes File von Hand ausgewählt, in Word eingebunden, transkribiert werden und dann abgespeichert werden müssen. 
+
 
 \subsection{Whisper}
 
-Für die Transkription eignen sich Automatic Speech Recognition Systeme (ASR). 
-Eines der besten kostenlosen ASR Systeme bietet Whisper von OpenAI. 
-Dieses System wurde mit einem maschinellen lernverfahren auf 680 000 Stunden Audiomaterial in verschiedenen Sprachen trainiert. 
-Es ist sehr leistungsstark und kann lokal auf eigener Hardware laufen. [2] [3]
+Faster-whisper - word-level timestamps
 
-Whisper bietet mehrere verschiedene Modelle zur Transkription an. Es gibt die Modelle tiny, base, small, medium und large. 
+Eines der besten kostenlosen Open-Source ASR Systeme bietet Whisper von OpenAI. 
+Dieses System wurde mit einem maschinellen lernverfahren auf 680 000 Stunden Audiomaterial in verschiedenen Sprachen trainiert und erreicht damit State-of-the-Art Performance in Transkriptionen.
+Es ist sehr leistungsstark und kann lokal auf eigener Hardware laufen. \cite{radford}
+
+Konkret wurde in dieser Arbeit das Projekt faster-whisper \cite{faster-whisper2024} verwendet, welches die ursprünglichen Whispermodelle mithilfe einer schnelleren Inferenz Engine neu implementiert.
+faster-whisper bietet außerdem word-level timestamps im Gengensatz zu dem ursprünglichen Whisper Projekt.
+
+Whisper bietet mehrere verschiedene Modelle zur Transkription an. 
+Es gibt die Modelle tiny, base, small, medium und large. 
 Das Basismodell hat ca. 74 Millionen Parameter und benötigt ca. 1 GB VRAM und ist ca. 16 mal schneller als das large Model. 
 Bei einem Test für die Episode 1968-das-ausnahmejahr aus dem Podcast Radiowissen von br2 schneidet es aber nicht sehr gut ab. 
 Aus dem Wort „Vietnam“ wird „Wirdnam“, aus „Panzer in Prag“ wird „Panzer-Inprac“ und aus  „Ohrfeige“ wird „Urfeige“. 
 Der vorgetragene Text wurde dabei ohne Störgeräusche und von einer Person flüssig vorgetragen. 
+Eine Evaluation der Transkriptionsfähigkeiten mittels einer Word error rate (WER) ist nicht durchgeführt worden, da notwendige Vergleichstranskripte nicht vorhanden sind.
 
-Dagegen bietet das Medium Model von Whisper deutlich bessere Ergebnisse für die selbe Episode. 
-Bei der Transkription konnte kein Fehler festgestellt werden. Allerdings ist der Zeitaufwand durch höhere Rechenleistung immens. 
+Dagegen bietet das Medium Model von Whisper deutlich bessere Ergebnisse für dieselbe Episode. 
+Bei der Transkription konnte kein Fehler festgestellt werden. 
+Allerdings ist der Zeitaufwand durch höhere Rechenleistung immens. 
 Auf einem Macbook Pro 2016 mit einem Intel Core i7 benötigt die Transkription ca. 45 min. pro Episode. 
 Auf einer T4 GPU, wie sie Google kostenlos auf Google Colab zur verfügung stellt, dauert eine Transkription immer noch 3,5 Minuten. 
 Für ca. 1000 Episoden bräuchte man demnach ca. 3500 Minuten, d.h. ca. 58 h. 
+
+Die Transkription für diese Arbeit wurde auf einem High Performance Cluster der Technischen Hochschule Nürnberg durchgeführt.
+
 
 Drawbacks von Whisper:
 Medium Modell immer noch einige Fehler: 
