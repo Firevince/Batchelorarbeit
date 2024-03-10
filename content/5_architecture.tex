@@ -62,13 +62,15 @@ Dazu ist Python sehr einfach zu verstehen und rechenaufwändige Operationen wie 
 
 \subsection{Ähnlichkeitsvergleiche}
 
-Mithilfe der Embedding Vektoren können können wir Sätze finden, die zueinander Ähnlich sind. Aber was bedeutet überhaupt ähnlich? Die Vektoren des BERT Models sind 768 Dimensional, haben also 768 Gleitkommazahlen gespeichert, die zwischen -1 und 1 liegen. 
+Mithilfe der Embedding Vektoren können wir Sätze finden, die zueinander Ähnlich sind. 
+Aber was bedeutet überhaupt ähnlich? 
+Die Vektoren des BERT Models sind 768 Dimensional, haben also 768 Gleitkommazahlen gespeichert, die zwischen -1 und 1 liegen. 
 Diese Gleitkommazahlen Vektoren könnte man auch als Feature Vektoren begreifen. 
 Zum Beispiel könnte die erste Zahl dieses Vektors für die Erwähnung von Professoren in dem Satz stehen (-1 für keine Professoren; 1 für viele Professoren). 
 Die zweite Zahl könnte für das Thema Essen stehen (-1 für wenig mit Essen zu tun; 1 für sehr viel mit Essen zu tun). 
 Damit hätte der Satz „In der Mensa gibt es jeden Tag Currywurst mit Pommes“ an der ersten Stelle vielleicht eine 0,1, weil der Begriff „Mensa“ leicht mit Uni und Professoren konnotiert wird und die zweite Stelle würde bei 0,94 liegen, da es in dem Satz offensichtlich um das Essen handelt. 
 In der Realität wird das Model sehr wahrscheinlich nicht so für Menschen offensichtlichen Merkmale lernen. Ein Grund dafür ist, dass das Model vor allem pro Eintrag eine linearkombination von verschiedenen Menschenoffensichtlichen Merkmalen lernen wird, also jede Zahl eine überlagerung verschiedener Eigenschaften darstellt. 
-Eine forschungsrichtung, die versucht solche Modelausgaben Menschenlesbar zu gestalten liegt in der Explainable AI
+Eine forschungsrichtung, die versucht solche Modelausgaben Menschenlesbar zu gestalten liegt in der Explainable AI \cite{hassija2024}.
 
 Um die Ähnlichkeit von diesem Satz zu der Frage „“ zu bestimmen nutzen wir die Cosinus distanz als Maß. Es gibt auch die Euclidische Distanz, allerdings gestaltet sich dabei das Problem der Vector Normalisierung.
 
@@ -79,7 +81,7 @@ Andere Distanzmaßen:
 Manhatten Distanz (nur x oder y Achse)
 Hamming Distanz (Anzahl verschiedener Einträge)
 
-\subsubsection{Euclidean Similarity}
+\subsubsection{Euklidische Distanz}
 
 Die Euklidische Distanz von zwei Vektoren kann man über den Satz des Pythagoras berechnen.
 Dafür nimmt man für jede Dimension die Differenz beider Vektoren in dieser Dimension, quadriert diese und summiert alle Quadrate zusammen, um dann die quadratwurzel darüber zu ziehen.
@@ -95,7 +97,7 @@ Dieses Distanzmaß ist sensibel gegenüber der Länge der Vektoren.
 Wenn die Vektoren nicht normiert wurden, kann die Euklidische Distanz sehr groß werden und die Ergebnisse einer Ähnlichkeitssuche verfälschen.
 
 
-\subsubsection{Cosinus Similarity}
+\subsubsection{Cosinus Distanz}
 
 Ein weiteres Ähnlichkeitsmaß kann man über den Winkel zwischen zwei Vektoren definieren.
 Dieser Winkel ist unanhängig davon, wie lang die Vektoren sind, immer gleich.
@@ -118,16 +120,16 @@ $\text{Euclidean distance} = \sqrt{2 - 2 \cos(\theta)}$
 
 
 
-\subsection{Anreichern der Segmente}
+\subsection{Anreicherung der Segmente}
 
 Das Ranking der einzelnen Sätze liefert eine Auswahl der besten Kandidaten für den Podcast.
-Einzelne Sätze, die aus verschiedenen Podcast Episoden stammen ohne Kontext hintereinander abzuspielen bietet für den Zuhörer nur ein mäßiges Hörerlebnis. 
+Einzelne Sätze, die aus verschiedenen Podcast Episoden stammen, ohne Kontext hintereinander abzuspielen bietet für den Zuhörer nur ein mäßiges Hörerlebnis. 
 Es fehlt der Kontext zu den einzelnen Informationen.
 Zum Besipiel bekommt man für die Suchanfrage "Geschichte Amsterdam" mit dem TF-IDF Ansatz Sätze wie "Amsterdam, das bedeutet unbeschwerte Kinderjahre" oder "Amsterdam gefiel ihm".
 Die Sätze an sich bieten kaum interessante Informationen.
 Dem Zuhörer stellen sich sogar noch mehr Fragen, zum Beispiel für wen Amsterdam unbeschwerte Kinderjahre bedeuten oder wem Amsterdam gefiel.
 
-Um dem Zuhörer mehr Informationen zu geben kann man die Größe der einzelnen Segmente Anpassen.
+Um dem Zuhörer mehr Informationen zu geben, kann man die Größe der einzelnen Segmente Anpassen.
 Dazu kann man mehrere Ansätze betrachten.
 Der einfachste Ansatz ist, für jeden einzelnen Satz die umgebenden Sätze davor und dahinter miteinzubeziehen.
 Die Anzahl der umgebenden Sätze ist dann ein Hyperparameter dieses Systems und kann vom Nutzer durch den Parameter Segmentlänge eingestellt werden, welher die Anzahl der Sätze in einem Segment angibt.

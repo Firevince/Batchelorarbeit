@@ -2,9 +2,32 @@
 
 \section{Ausgangslage}
 
-Da wie in Kapite \autoref*{ch:theoretical} beschrieben es für die meisten Embeddings schon eine Evaluation gibt, scheint dieser Teil hier nicht sehr relevant.
-Docheinerseits sind die vorhandenen Bewertungsmetriken für Retrival Aufgaben nicht für die deutsche Sprache erstellt worden.
+Da wie in Kapitel \autoref*{ch:theoretical} beschrieben es für die meisten Embeddings schon eine Evaluation gibt, scheint dieser Teil hier nicht sehr relevant.
+Doch einerseits sind die vorhandenen Bewertungsmetriken für Retrival Aufgaben nicht für die deutsche Sprache erstellt worden.
 Andererseits ist eine explizite Bewertung im Kontext der eigenen Daten sogar noch genauer, da die spezifische Aufgabe relevante Segmente aus einer großen Anzahl von Podcast Episoden zu finden eventuell feinheiten hat
+
+
+Die Güte von einem Information Retrieval System kann mithilfe des normalized discounted cumulative gain (NDCG) beschrieben werden. 
+Dafür muss allerdings für jedes zu suchende Theman bereits eine vorgefertige Vergleichsliste vorhanden sein, mit der man dann die Ergebnisse vergleichen kann.
+
+
+\section{Auswertung}
+
+
+Die Aufgabe besteht darin, zu untersuchen, wie gut eine Suchfunktion mithilfe der Embeddings in der Lage ist, passende Informationen zu einem Thema zu extrahieren.
+
+Für die Evaluation der verschiedenen Embeddings werden verschiedene Kriterien angelegt.
+Einerseits müssen die extrahierten Segmente zu dem Thema passen und nicht irrelevante andere Themen behandeln.
+Das ist der wichtigste Punkte bei der Evaluation.
+
+Ein weiteres Kriterium ist der Inhaltliche Zusammenhang der einzelnen Segmente.
+Die einzelnen Segmente sollten eine inhaltliche Verbindung aufweisen, sodass der/die Hörer*in nicht zwischen verschiedenen Themn hin und hergeworfen wird.
+Zum Beispiel soll ein Podcast über "Geschichte Amsterdam" nicht in einem Segment über die Gründung der Niederlande sprechen und im nächsten Segment davon handeln, wie sich Amsterdam in der Nazi Zeit verhalten hat.
+Gleichzeitig sollen die Segmente auch nicht alle den selben Inhalt aufweisen und zum Beispiel in drei verschiedenen Segmenten wiederholen, dass die Niederlande im goldenen Zeitalter des 17. Jahrhunderts ein florierendes Handelsnetzwerk aufgebaut hatten.
+ 
+Die Themen, nach welchen die Embeddings evaluiert werden sollen sind in drei Kategorien eingeteilt:
+topical, refinding, known items \cite{jones2021}
+
 
 \section{BERT Embeddings}
 
@@ -19,6 +42,9 @@ Bei dieser Aufgabe soll das Model versuchen, aus dem Kontext eines Satzes ein ma
 
 Das Sentence Transformer Projekt baut auf der Architektur von BERT auf. 
 Es wird auch SBERT für Sentence BERT genannt. 
+Uni Darmstadt
+Haben verschiedene Modelle.
+
 Unter dem 
 
 \section{LLama2 Embeddings}
@@ -37,22 +63,7 @@ Babbage (2048 dimensions)
 Curie (4096 dimensions)
 Davinci (12288 dimensions)
 
-\section{Auswertung}
 
-
-Die Aufgabe besteht darin, zu untersuchen, wie gut eine Suchfunktion mithilfe der Embeddings in der Lage ist, passende Informationen zu einem Thema zu extrahieren.
-
-Für die Evaluation der verschiedenen Embeddings werden verschiedene Kriterien angelegt.
-Einerseits müssen die extrahierten Segmente zu dem Thema passen und nicht irrelevante andere Themen behandeln.
-Das ist der wichtigste Punkte bei der Evaluation.
-
-Ein weiteres Kriterium ist der Inhaltliche Zusammenhang der einzelnen Segmente.
-Die einzelnen Segmente sollten eine inhaltliche Verbindung aufweisen, sodass der/die Hörer*in nicht zwischen verschiedenen Themn hin und hergeworfen wird.
-Zum Beispiel soll ein Podcast über "Geschichte Amsterdam" nicht in einem Segment über die Gründung der Niederlande sprechen und im nächsten Segment davon handeln, wie sich Amsterdam in der Nazi Zeit verhalten hat.
-Gleichzeitig sollen die Segmente auch nicht alle den selben Inhalt aufweisen und zum Beispiel in drei verschiedenen Segmenten wiederholen, dass die Niederlande im goldenen Zeitalter des 17. Jahrhunderts ein florierendes Handelsnetzwerk aufgebaut hatten.
- 
-Die Themen, nach welchen die Embeddings evaluiert werden sollen sind in drei Kategorien eingeteilt:
-topical, refinding, known items \cite{jones2021}
 
 
 

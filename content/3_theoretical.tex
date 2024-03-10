@@ -15,9 +15,12 @@ Ein User gibt Stichworte ein, über die er mehr Informationen erhalten möchte u
 
 In dieser Arbeit wird die Informationsrückgewinnung auf Basis der Daten von Podcasttranskripten betrieben.
 Dazu werden die Techniken der Text Embeddings benutzt, um relevante Informationen zu einem bestimmten Thema aus einer großen Anzahl an Dokumenten zurückzugewinnen.
-SPLADE
+
+
 
 \section{Embeddings}
+
+\subsection{Embeddings als Computersprache}
 
 Text Embeddings sind ein Weg die menschliche Sprache für Computer verständlich zu machen. 
 Die menschliche Sprache ist ein hochkomplexes Konstrukt mit einer Grammatik, die sehr viel flexibler, kreativer, vieldeutiger und komplexer ist als Maschinensprache. 
@@ -28,7 +31,7 @@ Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder T
 Diese Vektoren nennt man Embeddings.
 Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin, passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
 
-\section{Geschichte der Embeddingverfahren}
+\subsection{Geschichte der Embeddingverfahren}
 
 Die ersten Algorithmen mit dem Ziel, eine große Anzahl von Dokumenten durchsuchen zu können, waren Suchalgorithmen wie TD-IDF oder BM25, die in den 1970er Jahren aufkamen.
 Diese versuchten Worthäufigkeiten als Anhaltspunkt zu nehmen, um Ähnlichkeiten zwischen Dokumenten zu erkennen und Suchfunktionen aufzubauen. 
@@ -75,8 +78,9 @@ Seit der Entdeckung der Transformerarchitektur und der Entstehung von BERT entwi
 Täglich werden neue Modelle publiziert und im Abstand von wenigen Wochen erreichen neue Modelle State-of-the-art Performance auf populären Benchmarks wie MTEB.  
 
 
-\section{Embeddingvektoren}
+\subsection{Embeddingvektoren}
 
+\subsubsection{Dünne Vektoren}
 
 Embeddings können in zwei verschiedene Kategorien eingeteilt werden: dünne Vektoren und dichte Vektoren.
 
@@ -96,6 +100,8 @@ Außerdem kann man diese Algorithmen noch anpassen, sodass sie auch N-Gramme als
 Das heißt, dass nicht nur einzelne Wörter berücksichtigt werden, sondern auch häufig zusammen vorkommende Wörter (N-Gramme) als einzelnes Token in dem Vektor abgebildet werden. 
 Das bewirkt zwar, dass die Ähnlichkeit der Dokumente in der Regel besser ermittelt werden kann, vergrößert aber die Vektoren.
 
+\subsubsection{Dichte Vektoren}
+
 Ein relativ moderner Ansatz besteht in der Suche mithilfe von dichten Embedding Vektoren. 
 Dabei wird versucht, die Semantik (also die Bedeutung) der einzelnen Segmente mathematisch mithilfe eines Vektors zu repräsentieren. 
 Dieser Vektor soll dann zur Suche nach Ähnlichkeit eingesetzt werden. 
@@ -111,7 +117,7 @@ Besser wäre eine asymmetrische Ähnlichkeit, wie sie bei Frage und Antwortpaare
 Zum Beispiel wäre auf die Frage: "Welche Farbe hat der Himmel bei Sonnenuntergang?" ein gute Antwort: "Der Himmel hat bei Sonnenuntergang oft orange und rosa Farbtöne."  und nicht der Satz "Wie sieht der Himmel am Abend aus?"
 Diese asymmetrische Ähnlichkeit ist schwerer zu ermitteln, da man normalerweise in der Antwort Informationen findet, die in der Frage nicht vorkommen.
 
-\section{Dimensionalität von Embeddings}
+\subsubsection{Dimensionalität von Embeddingvektoren}
 
 Die Dimensionalität von verschiedenen Embeddings hat Einfluss auf deren Performance.
 Kleinere Embeddings verbrauchen weniger Speicherplatz und lassen sich schneller untereinander vergleichen, was den Retrieval Prozess beschleunigt.

@@ -1,57 +1,51 @@
 \chapter{Verwandte Literatur}\label{ch:theoretical}
 
-
-\section{Related Work}
-
 Im Bereich der automatisierten Podcasterstellung gibt es einige Versuche mittels künstlich generierter Texte und Stimmen einen eigenen Podcast zu erstellen.
 
-In dem Artikel \glqq NewsPod: Automatic and Interactive News Podcasts\grqq{} \cite{laban2022} wird ein neuer Ansatz für die automatische Erstellung von Podcast Episoden vorgestellt. 
-Dabei ermitteln mehrere Machine Learning Systeme den Inhalt von bestimmten Nachrichtenseiten und extrahieren daraus Fragestellungen, die den Inhalt des Textes wiederspiegeln sollen. Die Autoren benutzen ein GPT-2 Sprachmodell, das auf Fragengenerierung trainiert wurde, um aus jedem Absatz 7 Fragen zu ermitteln. 
-Für jede Frage wird dann eine separate Antwort generiert. 
-Der wichtigste Aspekt an diesem Artikel ist, dass die Benutzer der Software interaktiv agieren und selbstgewählte Fragen mithilfe eines Mikrofons oder einer Tastatur stellen können, die dann von dem System beantwortet werden. 
+In dem Artikel \glqq NewsPod: Automatic and Interactive News Podcasts\grqq{} wird ein neuer Ansatz für die automatische Erstellung von Podcast Episoden vorgestellt. 
+Dazu wird ein interaktiver Sprachbot entwickelt, der zu bestimmten Nachrichten Fragen beantworten kann und mithilfe einer synthetisch generierten Stimme mit den nutzenden Personen interagiert.
+Dabei ermitteln mehrere Machine Learning Systeme den Inhalt von bestimmten Nachrichtenseiten und extrahieren daraus Fragestellungen, die den Inhalt des Textes wiederspiegeln sollen. 
+Die Autoren benutzen ein GPT-2 Sprachmodell, das auf Fragengenerierung trainiert wurde, um aus jedem Absatz 7 Fragen zu ermitteln. 
+Ein weiteres Question-Answering Sprachmodell wird dann trainiert, um die Ausschnitte in den Artikeln zu finden, welche diese Fragen beantworten.  
+Der Retrieval Step wird hier also nicht durch Embeddings, sondern durch ein Sprachmodell vollzogen.
+
+Der wichtigste Aspekt an diesem Artikel ist, dass die Benutzer der Software interaktiv agieren und selbstgewählte Fragen mithilfe eines Mikrofons oder einer Tastatur stellen können.
+Das Question-Answering Sprachmodell versucht dafür relevante Segmente aus mehreren Nachrichtenartikeln zu finden, die die Fragen der nutzenden Person beantworten.
+Diese werden dann mithilfe einer synthetisch generierten Stimme von Googles Text-To-Speech API vorgelesen.
+
 Die Autoren dieses Papers führten außerdem zwei Studien zur Nutzung dieses Systems durch.
 Der Gegenstand der ersten Studie ist, ob die Zufriedenheit einer Testgruppe mit der Erzählweise des Textes und der automatisch generierten Stimme des Sprechers korreliert. 
+Darin konnten die Autoren feststellen, dass einer ihrer Ansätze, QA Best, so erfolgreich war, dass 80\% der Testpersonen angaben, dass die dieses System in Zukunft nutzen würden, um Nachrichten zu konsumieren.
 Die zweite Studie untersucht die Interaktion der Zuhörenden während der Benutzung des Systems. 
+Diese Studie kommt zu dem Schluss, dass zwar die Bereitschaft eigene Fragen zu stellen mit 85\% der Zuhörenden sehr hoch war, die Zufriedenheit der Testenden mit der Qualität der Antworten aber sehr gering ausfiel, da   76\% der Antworten als Irrelevant/Confusing eigestuft wurden. 
 \cite{laban2022}
 
-In der ersten Studie konnten die Autoren feststellen, dass einer ihrer Ansätze, QA Best,  so erfolgreich war, dass \glqq  80\% of QA Best listeners said they would use the system to listen to the news in the future\grqq{}  \cite{laban2022}.
-Die zweite Studie kommt zu dem Schluss, dass zwar die Bereitschaft eigene Fragen zu stellen mit 85\% der Zuhörenden sehr hoch war, die Zufriedenheit der Testenden mit der Qualität der Antworten aber sehr gering ausfiel, da \glqq  76\% of the answers were rated Irrelevant/Confusing\grqq{} \cite{laban2022}.
 
-
-In dem Paper \cite{jones2021} werden die Ergebnisse der Text Retrieval Conference (TREC) 2020 zur Podcast analyse vorgestellt.
+In dem Paper \cite{jones2021} werden die Ergebnisse der Text Retrieval Conference (TREC) 2020 für die Podcastanalyse vorgestellt.
 Für diese Aufgabe konnten die Teilnehmer einen großen Datensatz an Podcasttranskripten analysieren.
 Dazu sollten die Teilnehmer versuchen aus über 100.000 Podcast Transkripten die wichtigsten Segmente zu verschiedenen Themen herauszufiltern.
-Die Transkripte wurden im vorfeld durch ein System zur Automatic Speech Recognition (ASR) erstellt.
-Die einzelnen Transkriptsegmente waren dabei jeweils genau zwei Minuten lang und überlappten sich um eine Minute.
+Die Transkripte wurden im Vorfeld durch ein System zur Automatic Speech Recognition (ASR) erstellt.
+Jedes Transkriptsegment war dabei jeweils genau zwei Minuten lang und überlappte sich um eine Minute mit einem folgenden Segment.
+Die verschiedenene Themen, die in der Aufgabe gesucht waren, lassen sich in drei Kategorien einteilen: topical, re-finding und known items.
+Bei der Kategorie topical wird verlangt, passende Segmente zu einem bestimmten Thema zu finden.
+Beim re-finding ist die Anfrage darauf abgezielt, einen zuvor bekannten Audioinhalt wiederzufinden.
+Dabei sind nur Teile des Audioinhaltes, oder das Thema bekannt (z.B. eine Podcast Episode, die die Person vor einer Woche gehört hat)
+In der letzten Kategorie des known Items, ist bereits der Titel oder andere Metainformationen bekannt.
+Die einzelnen Themen verfügen dabei außerdem noch über eine Beschreibung, die spezifiziert, was eine Testperson von der Suche mit diesem Prompt erwarten würde.
+
+
 Insgesammt nahmen neun Teilnahmer an dieser Aufgabe teil und reichten eine Lösung ein.
-Am besten schnitten dabei die Lösungen der Universität Maryland ab, die zur Datenaufbereitung eine  Mischung aus Stemming und word2vec benutzten und für die Retrival funktion Combination und Rerank verwendeten ???
+Darunter Universitäten aus den USA und Dublin und ein Team von dem Musikstreamanbieter Spotify.
+Die Evaluation der Ergenbnisse wurde manuell durchgeführt.
+Verschiedene Gutachter des TREC bewerteten die Ergebnisse der Teilnehmer auf einer Skala von 5 - Perfekt bis 0 - nicht passend.
+Am besten schnitten dabei die Lösungen der Universität Maryland ab, die zur Datenaufbereitung eine  Mischung aus Stemming und word2vec benutzten und für die Retrivalfunktion die Search Engine Indri verwendeten.
+Die Indri Search Engine wurde von der University of Massachusetts und Carnegie Mellon University aufgebaut, wird aber zurzeit nicht mehr weiterentwickelt \cite{lemur}.
 
 
-
-Für das Design der Podcast Episoden werde ich die Artikel von Podcast Übersicht von \cite{jones2021} verwenden, in dem mithilfe von Deep Learning Ansätzen mehr als 100.000 Podcast Episoden analysiert wurden und daraus Aspekte für eine erfolgreiche Podcast Episode herauskristallisiert wurden. Diese Aspekte werden mir bei der Gestaltung und dem Aufbau einer Episode helfen. 
-
-
-Das Fraunhofer-Institut für Intelligente Anlyse- und Informationssysteme (IAIS) stellte 2015 außerdem die Audiominig Plattform medas vor, welche die Suchfunktionen für verschiedene Audioinhalte verbessern sollte.
+Speziell für deutsche Audioinhalte stellt das Fraunhofer-Institut für Intelligente Anlyse- und Informationssysteme (IAIS) 2015 die Audiominig Plattform medas vor.
+Diese soll für die ARD-Audiothek die Suchfunktionen für verschiedene Audioinhalte verbessern.
 Dazu erstellten die Forscher ein System, dass diese Inhalte automatisch mit ASR transkribieren kann, eine Sprechererkennung durchführen und Keywörter extrahieren kann.
 Diese Daten sind über eine REST Schnittstelle abrufbar.
 Allerdings sind die viele der verwendeten Technologien mittlerweile längst nicht mehr State-of-the-Art und werden deswegen in dieser Arbeit kaum verwedet.
 In Kapitel \autoref{ch:method} wir darauf näher eingegangen.
 \cite{maroni2020}
-
-
-
-
-
-Neben diesem Artikel würde ich die Arbeit von \cite{zhang2020} hervorheben, da sie als Vorarbeit von \cite{laban2022} dient und das wichtige Summarization-Modell PEGASUS vorstellt, das ich auch in meiner Arbeit verwenden kann. 
-
-Als weitere Quellen werde ich \cite{karpukhin2020}, \cite{reddy2019} und \cite{choi2018} verwenden, die sich alle mit der automatischen Fragen- und Antwortgenerierung aus Texten beschäftigen.
-\cite{karpukhin2020} ist dabei der neueste Ansatz zur Ermittlung von Kontext, der sich außerdem von dem TF-IDF Algorithmus unterscheidet und sehr gute Ergebnisse verspricht.
-
-
-
-In dem Paper \cite{kang2012} untersuchten die Autoren den Effekt von mehrere Stimmen auf das Podcasterlebnis. Außerdem analysierten sie in ihrer Studie die Effekte des Erzählstils und fanden heraus, dass informelle Sprache und ein ungezwungener Kommunikationsstil das Erlebnis von Zuhörenden verbessert. 
-
-
-
-Im weiteren werde ich noch die Arbeiten von \cite{maroni2020}, \cite{clark2020} und \cite{du2017} verwenden, die sich mit Deep Learning Modellen zur Erschließung von Texten beschäftigen.
-
