@@ -3,66 +3,55 @@
 \section{Motivation}
 
 Podcasts sind für viele Menschen ein wichtiges Medium, um sich die Zeit zu vertreiben und sich über verschiedene Themen zu informieren. 
-In Deutschland hören ca. 29\% der Menschen regelmäßig Podcasts \cite{newman2022}.
-In dieser Arbeit wird sich auf die Personen konzentriert, die Podcasts hören, um sich zu verschiedenen Themen weiterzubilden.
+In Deutschland hören etwa 29\% der Menschen regelmäßig Podcasts \cite{newman2022}.
+In dieser Arbeit liegt der Fokus auf den Personen, die Podcasts hören, um sich zu verschiedenen Themen weiterzubilden.
 Mittlerweile gibt es zu fast jedem Thema einen bestimmten Podcast, allein in Deutschland über 90.000 \cite{listennotes}.
-Diese Menge an Podcasts ist für viele Menschen nur schlecht zu durschauen.
-Die meisten Suchfunktionen basieren nur auf den Metadaten der verschiedenen Podcasts und so werden im Zweifel nur Episoden gefunden, deren Titel oder Schlagworte am besten zu der Anfrage passen.
-Oft passen diese Informationen aber leider nicht zu der Anfrage der Nutzenden.
-In diesem Falle kann es besser sein, die tatsächlichen Inhalte einer Episode zu durchsuchen und den Nutzenden nur die für sie relevanten Ausschnitte auszuliefern.
-Außerdem gibt es kaum Möglichkeiten die Informationen aus verschiedenen Podcasts zu bündeln und Podcasthörenden eine Zusammenstellung verschiedener Audiosegmente aus verschiedenen Podcasts anzubieten.
+Diese Menge an Podcasts ist für viele Menschen schwer zu überblicken.
+Die meisten Suchfunktionen basieren nur auf den Metadaten der verschiedenen Podcasts und so werden im Zweifel nur Episoden gefunden, deren Titel oder Schlagworte am besten zur Anfrage passen.
+Oft passen diese Informationen aber leider nicht zu den Anfragen der Nutzenden.
+In diesem Fall kann es besser sein, die tatsächlichen Inhalte einer Episode zu durchsuchen und den Nutzenden nur die für sie relevanten Ausschnitte zu liefern.
+Außerdem gibt es kaum Möglichkeiten, die Informationen aus verschiedenen Podcasts zu bündeln und den Hörern eine Zusammenstellung verschiedener Audiosegmente aus verschiedenen Podcasts anzubieten.
 
-In dieser Bachelorarbeit wird untersucht, wie sich aus umfangreichem Audiomaterial aus Radioprogrammen oder Podcasts ein eigener Podcast zusammenstellen lässt, der relevante Ausschnitte aus einer Vielzahl von Audiomaterial enthält.
+In dieser Bachelorarbeit wird untersucht, wie aus umfangreichem Audiomaterial aus Radioprogrammen oder Podcasts ein eigener Podcast zusammengestellt werden kann, der relevante Ausschnitte aus einer Vielzahl von Quellen enthält.
 
-Ein möglicher Anwendungsfall wäre eine Person, die sich über das Thema ``Überfischung der Meere'' informieren möchte und dafür genau 20 Minuten während einer Autofahrt einplant. 
-Das System erstellt nun einen Zusammenschnitt aus verschiedenen Podcast Episoden zu diesem Thema, der 20 Minuten lang ist und stellt ihn der Person zur Verfügung. 
-Der Vorteil für Nutzende liegt darin, dass sie selbst das Thema auswählen und die exakte Länge festlegen können.
-Außerdem wird das Thema von verschiedenen Sprechern aus unterschiedlichen Perspektiven erklärt, was zu einer Steigerung der Aufmerksamkeit führt \cite{kang2012}. 
-
-
-
-% Wie Studien gezeigt haben, verbessert sich das Audioerlebnis der Zuhörer*innen dabei, wenn mehrere verschiedene Sprecher*innen dabei vorkommen \cite{kang2012}. 
-% Einige Podcasts werden zum Beispiel nur von einer einzigen Person vorgetragen.
-% Außerdem steigert das Vorhandensein verschiedener Meinungen auch das Interesse des Zuhörers an einem bestimmten Thema \cite{phillips2014}.
-% Neben diesen Vorteilen, ist es für die Zuhörer*innen einer Podcast Episode auch ein besonderer Aspekt der Selbstbestimmung, wenn sie die Länge einer Podcast Episode selbst festlegen können.
-
-
-
+Ein möglicher Anwendungsfall wäre eine Person, die sich über das Thema „Überfischung der Meere“ informieren möchte und dafür genau 20 Minuten während einer Autofahrt einplant. 
+Das System erstellt nun einen Zusammenschnitt aus verschiedenen Podcast-Episoden zu diesem Thema, der 20 Minuten lang ist, und stellt ihn der Person zur Verfügung. 
+Der Vorteil für die Nutzenden liegt darin, dass sie selbst das Thema auswählen und die exakte Länge festlegen können.
+Außerdem wird das Thema von verschiedenen Sprechern aus unterschiedlichen Perspektiven erklärt, was zu einer Steigerung der Aufmerksamkeit führt \cite{kang2012}.
 
 \section{Zielsetzung}
 
 Diese Bachelorarbeit ist in zwei Teile aufgeteilt.
-Im ersten Teil dieser Arbeit wird beschrieben, wie ein Prototyp für ein System zur automatischen Podcastgenerierung aufgebaut sein kann.
+Im ersten Teil der Arbeit wird beschrieben, wie ein Prototyp für ein System zur automatischen Podcastgenerierung aufgebaut sein könnte.
 Dazu werden die einzelnen Mikroservices vorgestellt und die Wahl der verwendeten Technologien begründet.
 In einigen Fällen werden mehrere unterschiedliche Services miteinander verglichen.
-Während in anderen Fällen beschrieben wird, wie bei der Entstehung des Projektes bestimmte Technologien durch andere ersetzt wurden, da in der Zwischenzeit neue Erkenntnisse gewonnen worden sind.
-Für die Auswahl der passenden Audiosegmente werden dafür verschiedene Methoden des Natural Language Processings verwendet, insbesondere der Text Embeddings.
-Außerdem werden die Fähigkeiten von Large Language Models benutzt, um die Qualität der generierten Podcastepisoden zu verbessern.
-Für die Interaktion mit dem Benutzer soll außerdem eine Grafische Benutzeroberfläche bereitgestellt werden, die den Nutzenden die Auswahl eines Themas und die Länge der Podcastepisode ermöglicht.
+In anderen Fällen wird beschrieben, wie bei der Entstehung des Projektes bestimmte Technologien durch andere ersetzt wurden, da in der Zwischenzeit neue Erkenntnisse gewonnen worden sind.
+Für die Auswahl der passenden Audiosegmente werden verschiedene Methoden des Natural Language Processing verwendet, insbesondere Text-Embeddings.
+Außerdem werden die Fähigkeiten von Large Language Models genutzt, um die Qualität der generierten Podcastepisoden zu verbessern.
+Für die Interaktion mit dem Benutzer soll außerdem eine grafische Benutzeroberfläche bereitgestellt werden, die den Nutzenden die Auswahl eines Themas und die Länge der Podcastepisode ermöglicht.
 
 Im zweiten Teil der Arbeit geht es insbesondere um die Auswahl der richtigen Embeddings.
-Dabei wird die Fähigkeit relevante Segmente zu finden anhand verschiedener Metriken evaluiert.
+Dabei wird die Fähigkeit, relevante Segmente zu finden, anhand verschiedener Metriken evaluiert.
 Dafür werden die Ausgaben verschiedener Embeddings miteinander verglichen und die Güte mithilfe eines Large Language Models bewertet.
-
 
 \section{Überblick}
 
 Diese Arbeit ist in acht Kapitel aufgeteilt.
 
-Während es im ersten Abschnitt um die Zielsetzung, Motivation und einen kleinen Überblick geht, wird im zweiten Kapitel die verwandte Literatur zusammengefasst.
+Während im ersten Abschnitt die Zielsetzung, Motivation und ein kurzer Überblick behandelt werden, wird im zweiten Kapitel die verwandte Literatur zusammengefasst.
 
-Weiterhin werden im dritten Kapitel theoretische Grundlagen zum Verständnis der später aufgeführten Technologien erklärt.
+Im dritten Kapitel werden theoretische Grundlagen zum Verständnis der später aufgeführten Technologien erklärt.
 
 Das vierte Kapitel behandelt die Beschaffung der Audiodaten.
-Darin werden verschiedene Methoden zur Transkription dieser Audiodaten beschrieben und begründet, welche Wahl der Transkription für diese Arbeit verwendet wird.
-Außerdem werden effiziente Wege für die Datenspeicherungen diskutiert.
+Darin werden verschiedene Methoden zur Transkription dieser Audiodaten beschrieben und begründet, welche Methode der Transkription für diese Arbeit verwendet wird.
+Außerdem werden effiziente Wege für die Datenspeicherung diskutiert.
 
-Die Architektur des Systems wird im fünften Kapitel dargestellt. 
-Dabei wird besonders auf die semantische Analyse der Transkriptionen eingegangen und verschiedene Aspekte des Natural Language Processing und der Large Language Modelle vorgestellt.
+Die Architektur des Systems wird im fünften Kapitel dargestellt.
+Dabei wird besonders auf die semantische Analyse der Transkriptionen eingegangen und verschiedene Aspekte des Natural Language Processing sowie der Large Language Modelle vorgestellt.
 
 Im sechsten Kapitel werden verschiedene Methoden zur semantischen Analyse evaluiert.
 Dabei werden die verwendeten Modelle, die Wahl der Anzahl und Länge der Abschnitte und die finale Zusammensetzung dieser erklärt und begründet.
 
-Daraufhin geht das siebte Kapitel auf den Ausblick für zukünftige Verbesserungen ein.
+Im siebten Kapitel geht es um den Ausblick für zukünftige Verbesserungen.
 
 Das letzte Kapitel fasst die erzielten Ergebnisse zusammen.
