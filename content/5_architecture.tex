@@ -60,6 +60,14 @@ Dazu ist Python sehr einfach zu verstehen und rechenaufwändige Operationen wie 
 \section{Transktript Segment Ranking}
 
 
+
+\subsection{Embeddings Dense}
+
+Dazu werden die einzelnen Segmente mit den verschiedenen Modellen embedded.
+Am Anfang des Segments kann noch einmal der Titel der Episode angefügt werden, was eventuell die Performance steigert.\cite{jones2021}
+
+
+
 \subsection{Ähnlichkeitsvergleiche}
 
 Mithilfe der Embedding Vektoren können wir Sätze finden, die zueinander Ähnlich sind. 
@@ -163,9 +171,6 @@ Dafür wird der JSON Modus von ChatGPT genutzt, welcher das LLM dazu bringt, die
 Ein Beispielprompt kann im Anhang nachgelesen werden \autoref{ch:chatgpt-reranking}.
 
 Da dies eine relativ einfache Aufgabe ist, in der nur eine Liste mit wenigen Zahlen zurückgegeben werden muss, wird in diesem Schritt auf Techniken des Prompt engineerings verzichtet.
-
-
-
 
 \section{Audio-Zusammensetzung}
 

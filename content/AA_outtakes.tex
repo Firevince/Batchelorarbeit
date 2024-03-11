@@ -51,3 +51,39 @@ Dafür müssen die Audiofiles zunächst auf Microsoft Onedrive hochgeladen werde
 Microsoft Word stellt dann sogar Timestamps  zur Verfügung für das ganze Dokument. 
 Die Qualität ist außerdem besser als bei kostenlosen Open-Source Alternativen. 
 Dafür skaliert diese Art der Transkription schlecht für größere Datenmengen, da sämtliche files zunächst bei OneDrive hochgeladen werden müssen und dann jedes File von Hand ausgewählt, in Word eingebunden, transkribiert werden und dann abgespeichert werden müssen. 
+
+\subsection{Satzbildung}
+
+Für Retrieval funktionen ist es sinnvoll, mehrere Wörter zusammenzufassen.
+Wenn man einen Algorithmus hat, der gezielt Wörter im Korpus suchen kann, ist es Wünschenswert nicht nur exakt dieselben Wörter zu suchen, sondern auch verwandte Wörter.
+Zum Beispiel sollte die Suche nach dem Wort "Wanderer" auch Ergebisse für die Worte "Wandererin", "Wanderung" oder "wandern" enthalten, nicht aber das Wort "Wand".
+
+
+\subsection{weitere Schritte}
+
+
+Eine bekannte Bibliothek für Nearest Neighbour Searches ist Annoy, die unter anderem bei Spotify für die Recommendations von Songs verwendet wird. [Quelle]
+Eine weitere bekannte bekannte Bibliothek für Nearest Neighbour Searches ist FAISS (Facebook AI Similarity Search)
+
+\section{Milvus}
+
+Vektordatenbanken entwickeln sich in den letzten Jahren stark weiter.
+In diesem Projekt wurde zunächst die Vektordatenbank Milvus betrachtet.
+Milvus kann sehr gut auf große Datenmengen skalieren und wird deshalb in vielen großen Unternehmen, wie Nvidia, Paypal oder ebay eingesetzt. 
+Außerdem bietet Milvus Unterstützung für eine clusterbasierte Struktur, in der einzelne Container dynamisch zusammenarbeiten können. 
+Dadurch wird eine gute Skalierbarkeit für große Datenmengen erreicht. 
+Für kleinere Projekte ist der Setup-Aufwand sehr groß und die Lernkurve sehr steil.
+
+Pinecone, Zilliz, Qdrant
+
+Außerdem gibt es eine Erweiterung für die PostgreSQL Datenbank namens pg-Vector
+
+Die Vektordatenbank Redis
+
+Durch die Neuheit der Vektordatenbanken bedingt, gibt es kaum Vergleiche zwischen diesen.
+\cite{blueteamai}
+
+
+In dieser Arbeit wird die Vektordatenbank Milvus verwendet.
+Milvus ist eine Open-Source Vektordatenbank die von dem Unternehmen Zilliz entwickelt wird.
+Laut eigenen Angaben ist sie die am weitseten fortgeschrittene Vektordatenbank und wird von vielen Unternehmen, wie Nvidia, Paypal oder ebay benutzt.

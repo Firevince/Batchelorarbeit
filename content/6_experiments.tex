@@ -28,6 +28,8 @@ Gleichzeitig sollen die Segmente auch nicht alle den selben Inhalt aufweisen und
 Die Themen, nach welchen die Embeddings evaluiert werden sollen sind in drei Kategorien eingeteilt:
 topical, refinding, known items \cite{jones2021}
 
+\section{Prompt Engineering}
+
 
 \section{BERT Embeddings}
 
@@ -65,5 +67,50 @@ Davinci (12288 dimensions)
 
 
 
+
+
+\subsection{Ählichkeitssuche lexikalisch}
+
+\subsubsection{Keywordsuche}
+
+Eine Möglichkeit bietet sich in der Keywordsuche. 
+Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wiederfindet. Ist die möchte ein User beispielsweise einen zusammengeschnittene Podcast Episode über „Zugspitze“, so schaut das System, in welchen Episodensegmenten das Wort „Zugspitze“ auftaucht, und gibt diese zurück. 
+Schwieriger wird es, wenn die Useranfrage mehrere Wörter beinhaltet. 
+Möchte sich der User über das Thema „Zugspitze wandern“ informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
+Dann müsste man dementsprechend auch ein Algorithmus entwickeln, der diese dann sinnvoll hierarchisiert. 
+
+\subsubsection{TF-IDF}
+
+Einen solchen Ansatz bietet das TF-IDF Maß (Term Frequency - Inverse Document Frequency). 
+Im Bereich des NLP verwendet man das TF-IDF Maß um zu untersuchen welche Wörter in verschiedenen Dokumenten welche Gewichtung erfahren. 
+Dazu wird zunächst die TF-Matrix, also die Term Frequenzy Matrix berechnet. 
+Hierbei wird erst das Vokabular ermittelt, also die Gesamtheit aller Tokens (Wörter) die es in allen Dokumenten (Transkript Segmenten) des Korpuses (alle heruntergeladenen Episoden) gibt. 
+Dann wird für jedes einzelne Segment die Anzahl jeder in ihm auftretenden Tokens ermittelt. 
+Für den Satz: „Auf der Zugspitze gibt es viele Wanderer, die die Zugspitze lieben“. 
+In diesem Fall würde in der TF Matrix an der Stelle Zugspitze eine 2 Stehen, in der Zeile Wandern aber 0, da zwar das Wort Wanderer, aber nicht das Wort wandern vorkommt. 
+Da diese beiden Worte aber sehr ähnlich sind und der User bei einer Anfrage nicht immer nach verschiedenen Versionen eines Wortes suchen will, um dann ein zufriedenstellendes Audio zu erhalten
+
+\subsubsection{Lemmatisierung vs. Stemming}
+
+Um diese Abbildung von mehreren Worten auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden:
+Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel "Wanderer" und "Wanderung" zu einem Wort "Wander" zu reduzieren.
+Der Vorteil ist, dass der Algorithmus sehr schnell agieren kann, um die Worte auf ihre Stammform zu reduzieren.
+Die Nachteile sind allerdings, dass die Deutsche Sprache sehr viele verschiedene Wortkonstrukte erlaubt, die nicht alle mithilfe von einzelnen Regeln auf ein gemeinsammes Stammwort gebracht werden können. 
+Zum Beispiel bei dem Plural von "Baum"; "Bäume".
+
+
+\subsubsection{Kompositatrennung Pyphen vs german compound splitter}
+
+Als weiteren Vorverarbeitungsschritt für die effiziente Keywordsuche kann man zusammengesetzte Wörter in ihre bestandteile auftrennen.
+Das Vokabular des Datensazes besteht zu 61\% aus Nomen. 
+Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, wie zum Beispiel "reichsdeputationshauptschlussakte", oder "hochgeschwindigkeitstransportmittel".
+In dem ganzen Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben.
+Da für exakte Keywortsuche solche Begriffe fast nie auftreten, lohnt es sich, 
+
+
+
+Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort „Klimakrise“ würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
+Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene Zeit überbrücken. 
+Allerdings ist dieser Ansatz wenig Vielversprechend. 
 
 

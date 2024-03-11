@@ -31,6 +31,19 @@ Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder T
 Diese Vektoren nennt man Embeddings.
 Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin, passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
 
+\subsubsection{Tokenisierer}
+
+Um Textsequenzen mithilfe von Embeddings zu verarbeiten, werden diese Texte zunächst in Tokens zerlegt, bevor sie von einem Embeddingmodel embedded werden.  
+Ein Token kann dabei je nach Modell ein einziges Wort, mehrere Worte oder nur ein Bruchteil eines Wortes sein.
+In Machine Leerning Anwendungen nutzt man dafür verschiedene Tokenisierer.
+Es gibt einfache Tokenisierer, wie Whitespace Tokenisierer, die einen Text einfach an Leerzeichen teilen und die einzelnen Wörter als Tokens behandeln.
+Etwas besser sind Wort Tokenizer, die auch Satzzeichen erkennen und dadurch Punkte und Kommata nicht an das Ende des vorangegangenen Wortes anhängen. 
+Einen solchen Tokenizer nutzt beispielsweise spaCy, um "Linguistic Features" zu bestimmen \cite{honnibal2017}.
+Es gibt Subword tokenisierer, die Worte nocheinmal in kleinere Abschnitte teilen.
+Das Byte-Pair Encoding versucht aufgrund von statistischen Methoden, häufig vorkommende zusammenhängende Zeichenfolgen als Tokens zu identifizieren.
+Diese Art Tokenizer wird am öfftesten für die Eingabe bei Transformern genutzt \cite{zouhar2023}.
+Die Transformermodelle von OpenAI benutzen beispielsweise tiktoken als Tokenizer \cite{tiktoken2024}, das BERT Modell von Google benutzt den WordPiece Tokenizer.
+
 \subsection{Geschichte der Embeddingverfahren}
 
 Die ersten Algorithmen mit dem Ziel, eine große Anzahl von Dokumenten durchsuchen zu können, waren Suchalgorithmen wie TD-IDF oder BM25, die in den 1970er Jahren aufkamen.
@@ -134,9 +147,9 @@ Auf den Plätzen 3-5 liegen aber Embeddingmodelle mit einer Dimensionalität von
 
 Eine Transformerarchitektur ist eine der modernsten und leistungsfähigsten Architekturen, um eine Vielzahl von  NLP Aufgaben zu lösen. 
 Sie bildet dabei den Nachfolger bzw. Konkurrenten zu den bis dato vorherrschenden Rekurrenten neuronalen Netzen (RNN), Gated Recurrenten Units (GRU) oder Long-Short Term Memory Systems (LSTM). 
-Ähnlich wie diese Architekturen, ist auch der Transformer ein Sequenz-zu-Sequenz-Modell. 
+Ähnlich zu diesen Architekturen ist auch der Transformer ein Sequenz-zu-Sequenz-Modell. 
 Der Encoderteil nimmt als Eingabe eine Folge von Tokens (einen Satz, eine Audiodatei) und der Decoderteil bildet daraus eine andere Sequenz (einen Satz, eine Audiodatei). 
-In diesem Abschnitt gehen wir nur auf den Encoder ein, weil er die Embeddings erstellt.
+% In diesem Abschnitt gehen wir nur auf den Encoder ein, weil er die Embeddings erstellt.
 
 Der Unterschied von Sequenz-zu-Sequenz-Modellen zu einem gewöhnlichen feedforward neuronalen Netz besteht darin, dass die Eingabe- und Ausgabesignale auch Sequenzen mit variabler Länge sein können.
 Gewöhnliche künstliche neuronale Netze haben eine feste Anzahl an Eingangs- und Ausgangsneuronen, was es ihnen nur erlaubt, Aufgaben zu lösen, bei denen die Eingangs- und Ausgangsdaten eine bestimmte Länge aufweisen.

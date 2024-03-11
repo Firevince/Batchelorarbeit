@@ -152,7 +152,7 @@ faster-whisper bietet außerdem word-level timestamps im Gengensatz zu dem urspr
 
 Whisper bietet mehrere verschiedene Modelle zur Transkription an. 
 Es gibt die Modelle tiny, base, small, medium und large. 
-Das Basismodell hat ca. 74 Millionen Parameter und benötigt ca. 1 GB VRAM und ist ca. 16 mal schneller als das large Model. 
+Das Basismodell hat ca. 74 Millionen Parameter und benötigt ca. 1 GB VRAM und ist ca. 16-mal schneller als das large Model. 
 Bei einem Test für die Episode 1968-das-ausnahmejahr aus dem Podcast Radiowissen von br2 schneidet es aber nicht sehr gut ab. 
 Aus dem Wort „Vietnam“ wird „Wirdnam“, aus „Panzer in Prag“ wird „Panzer-Inprac“ und aus  „Ohrfeige“ wird „Urfeige“. 
 Der vorgetragene Text wurde dabei ohne Störgeräusche und von einer Person flüssig vorgetragen. 
@@ -161,9 +161,9 @@ Eine Evaluation der Transkriptionsfähigkeiten mittels einer Word error rate (WE
 Dagegen bietet das Medium Model von Whisper deutlich bessere Ergebnisse für dieselbe Episode. 
 Bei der Transkription konnte kein Fehler festgestellt werden. 
 Allerdings ist der Zeitaufwand durch höhere Rechenleistung immens. 
-Auf einem Macbook Pro 2016 mit einem Intel Core i7 benötigt die Transkription ca. 45 min. pro Episode. 
+Auf einem Macbook Pro 2016 mit einem Intel Core i7 benötigt die Transkription ca. 45 Minuten pro Episode. 
 Auf einer T4 GPU, wie sie Google kostenlos auf Google Colab zur verfügung stellt, dauert eine Transkription immer noch 3,5 Minuten. 
-Für ca. 1000 Episoden bräuchte man demnach ca. 3500 Minuten, d.h. ca. 58 h. 
+Für ca. 1000 Episoden bräuchte man demnach ca. 3500 Minuten (ca. 58 Stunden). 
 
 Die Transkription für diese Arbeit wurde auf einem High Performance Cluster der Technischen Hochschule Nürnberg durchgeführt.
 
@@ -199,39 +199,47 @@ Die API stellt, ebenso wie das Tool, eine Reihe verschiedener Anbieter zur verf�
 
 \section{Datenaufbereitung}
 
-\subsection{Satzbildung}
+\subsection{Segmentbildung}
 
-Die transkribierten Daten, welche Whisper erzeugt enthalten die erkannten Wörter, sowie die einzelnen Zeitstempel für den Start und das Ende jedes Wortes mit einer genauigkeit von Zehntelsekunden.
-Für die spätere Analyse der Daten, ist es sinnvoll die einzelnen Wörter in größere Segmente zusammenzufassen, damit bei einer Suchfunktion der Kontext von erschiedenen Wörtern miteinbezogen werden kann.
+Die von Whisper transkribierten Daten enthalten die erkannten Wörter, sowie die einzelnen Zeitstempel für den Start und das Ende jedes Wortes mit einer Genauigkeit von einer Zehntelsekunde.
+Für die spätere Analyse der Daten, ist es sinnvoll, die einzelnen Wörter in größere Segmente zusammenzufassen, damit bei einer Suchfunktion der Kontext von umliegenden Wörtern miteinbezogen werden kann.
 
 Für die Wahl der richtigen Segmentgröße gibt es keine einheitliche Lösung.
-Da wichtige Informationen über mehrere Sätze verteilt liegen können, kann es bei einfacher segmentierung zu dem Problem kommen, dass die Information in zwei Segmente gestückelt wurde.
-Um dem entgegenzuwirken, könnte es sinnvoll sein, die einzelnen Segmente überlappend zu erstellen.
-Dieser Ansatz wurde in der Arbeit nicht verfolgt, bleibt aber für zukünftige Foschung bereit.
+Die Wahl hängt unter anderem von der Strukturiereung des zu embeddenden Inhaltes, den Fähigkeiten des Embeddingmodels und der Länge und Komplexität der einzelnen User querys ab.
 
-Ein naheliegender primitiver Ansatz besteht darin, die einzelnen Wörter zunächst in Sätze zu gruppieren.
+Der primitivste Ansatz wäre, die basis Transkripte einfach in Blöcke einer bestimmten Größe aufzuteilen.
+Dann wäre jedes Segment zum Beispiel 50 Worte lang.
+Der offensichtliche Nachteil eines solchen Ansatzes ist, dass die Segmente keinen Bezug zu dem Inhalt der Traskripte besitzen.
+Die resultierenden Segmente würden mitten im Satz anfangen und aufhören und dadurch auch Informationen schlecht repräsentieren.
+Zusätzlich würden diese Segmente bei der Rückübersetzung in Audio eine schlechte Nutzererfahrung bieten, da auch die Audiosegmente dann mitten im Satz anfangen und enden würden.  
+
+Ein etwas organisierterer Ansatz besteht darin, die einzelnen Wörter zunächst in Sätze zu gruppieren.
 Für diese Gruppierung werden zwei Ansätze betrachtet.
-Der einfachste Ansatz besteht darin, die von Whisper erzeugten Satzpunkte als  Trennzeichen für einen Satz zu zählen.
-Whisper erkennt von sich aus aufgrund der Tonlage und der Pause zwischen Wörtern und der grammatikalischen Struktur der vorangegangenen Wörtern, ob ein Wort das Ende eines Satzes markiert. ???
-Dann gibt Whisper das Wort mit einem Punkt, einem Fragezeichen, oder einem Ausrufezeichen am Ende als erkanntes Wort aus.
-Diese Punktuation kann man benutzen, um die einzeln Wörter in Sätze zu gruppieren.
-Leider ergibt sich dabei das Problem, dass bestimmte Wörter, oder Abkürzungen zusätzöiche Punkte enthalten.
+Der erste Ansatz besteht darin, die von Whisper erzeugten Satzpunkte als  Trennzeichen für einen Satz zu erlauben.
+Als zweiter Ansatz wird eine tiefergehende Analyse der Transkripte mithilfe der Sprachbibliothek spaCy durchgeführt.
+
+\subsection{Satzbildung mit Whisper}
+
+Whisper erkennt von sich aus, ob ein Wort das Ende eines Satzes markiert.
+Das geschieht wahrscheinlich vor allem aufgrund der Tonlage und der Pause zwischen Wörtern und der grammatikalischen Struktur der vorangegangenen Wörtern \cite{biron2021} \cite{radford}.
+Dann gibt Whisper das Wort mit einem Punkt, einem Fragezeichen oder einem Ausrufezeichen am Ende als erkanntes Wort aus.
+Diese Punktuation kann benutzt werden, um die einzeln Wörter in Sätze zu gruppieren.
+Leider ergibt sich dabei das Problem, dass bestimmte Wörter, oder Abkürzungen zusätzliche Punkte enthalten.
 Beispiele sind "Mr. Smith", "seinem 26. Studioalbum", "am 10. Januar 2016".
-Mit diesem naiven Ansatz der Satztrennung, würden wir also einige Sätze an ungewollten Stellen in mehrere Sätze auftrennen.
+Mit diesem naiven Ansatz der Satztrennung würden einige Sätze an ungewollten Stellen in mehrere Sätze aufgetrennt werden.
+Die resultierenden Sätze bieten weniger inhaltlichen Zusamenhang und sind meist grammatikalisch nicht vollständig, was bei einer rücküberführung in Audio eine schlechtere User-experience ermöglicht.
 
-Um dieses Problem zu lösen, muss der Algorithmus verstehen, welche Satzzeichen die wirklichen Satzenden sind.
-Dies erfordert ein verständnis der Satzstruktur und ist deswegen nicht trivial möglich.
-Um die Sätzegrenzen zu finden, wird deshalb die Open-Source Sprachbibliothek SpaCy.\cite{honnibal2017}
 
-David Bowie stirbt am 10. Januar 2016 an Leberkrebs.
-Zwei Tage nach seinem 69. Geburtstag und der Veröffentlichung von Blackstar, seinem 26. Studioalbum.
+\subsection{Satzbildung mit spaCy}
 
-\subsection{Satzbildung mit SpaCy}
+Um dieses Problem zu lösen, muss ein Algorithmus verstehen, welche Satzzeichen die wirklichen Satzenden anzeigen.
+Dies erfordert ein Verständnis der Satzstruktur und ist deswegen nicht trivial möglich.
+Um die Sätzegrenzen zu finden, wird deshalb die Open-Source Sprachbibliothek spaCy verwendet.\cite{honnibal2017}
 
-Mithilfe der NLP Bibliothek SpaCy kann man herausfinden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
-SpaCy verwendet dafür Machine Learning Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
-Es gibt auch noch die beliebte Bibliothek NLKT, die sich aber eher auf das Unterrichten von NLP spezialisiert hat.
-SpaCy ist eher für den produktiven Einsatz geeignet.
+Mithilfe der NLP Bibliothek spaCy kann man herausfinden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
+spaCy verwendet dafür Machine Learning Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
+% Es gibt auch noch die beliebte Bibliothek NLKT, die sich aber eher auf das Unterrichten von NLP spezialisiert hat.
+% Die Bibliothek spaCy ist eher für den produktiven Einsatz geeignet.
 Auf der offiziellen Webseite von spaCy werden vier verschiedene Modelle für die deutsche Sprache zur verfügung gestellt.
 Das Modell 
 \begin{verbatim}
@@ -247,84 +255,28 @@ mit einer Größe von 42 MB und
 \end{verbatim}
 ist das größte Modell mit 541 MB.
 Das größte Modell bietet dabei vor allem viele vortrainierte Embedding Vektoren für einzelne Wörter.
-Das vierte Modell ist 
+Das vierte Modell 
 \begin{verbatim}
     de_dep_news_trf
 \end{verbatim}
-verbraucht 391 MB Speicherplatz und ist speziell für Transformer-support geeignet.
+verbraucht 391 MB Speicherplatz und benutzt eine Transformerarchitektur.
+
 spaCy führt eine selbst angegebenen Accuracy Evaluation für Sentence Segmentation, also das Erkennen von Satzenden in einem Text.
 Darin ist der F-Score für das kleine Modell gleich 0,94; für das mittlere Modell 0,95 und für das große Modell ebenfalls 0,95.
 Das Modell mit der Transformer pipeline bietet einen F-score von 0,98 und wird deswegen in dieser Arbeit verwendet. \cite{spacy2024}
 
+Mithilfe dieses Ansatzes wird der folgende Satz beispielsweise richtig erkannt: 
+"Zwei Tage nach seinem 69. Geburtstag und der Veröffentlichung von Blackstar, seinem 26. Studioalbum."
 
-\subsection{Ählichkeitssuche lexikalisch}
+\subsection{Segmente anpassen}
 
-\subsubsection{Keywordsuche}
-
-Eine Möglichkeit bietet sich in der Keywordsuche. 
-Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wiederfindet. Ist die möchte ein User beispielsweise einen zusammengeschnittene Podcast Episode über „Zugspitze“, so schaut das System, in welchen Episodensegmenten das Wort „Zugspitze“ auftaucht, und gibt diese zurück. 
-Schwieriger wird es, wenn die Useranfrage mehrere Wörter beinhaltet. 
-Möchte sich der User über das Thema „Zugspitze wandern“ informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
-Dann müsste man dementsprechend auch ein Algorithmus entwickeln, der diese dann sinnvoll hierarchisiert. 
-
-\subsubsection{TF-IDF}
-
-Einen solchen Ansatz bietet das TF-IDF Maß (Term Frequency - Inverse Document Frequency). 
-Im Bereich des NLP verwendet man das TF-IDF Maß um zu untersuchen welche Wörter in verschiedenen Dokumenten welche Gewichtung erfahren. 
-Dazu wird zunächst die TF-Matrix, also die Term Frequenzy Matrix berechnet. 
-Hierbei wird erst das Vokabular ermittelt, also die Gesamtheit aller Tokens (Wörter) die es in allen Dokumenten (Transkript Segmenten) des Korpuses (alle heruntergeladenen Episoden) gibt. 
-Dann wird für jedes einzelne Segment die Anzahl jeder in ihm auftretenden Tokens ermittelt. 
-Für den Satz: „Auf der Zugspitze gibt es viele Wanderer, die die Zugspitze lieben“. 
-In diesem Fall würde in der TF Matrix an der Stelle Zugspitze eine 2 Stehen, in der Zeile Wandern aber 0, da zwar das Wort Wanderer, aber nicht das Wort wandern vorkommt. 
-Da diese beiden Worte aber sehr ähnlich sind und der User bei einer Anfrage nicht immer nach verschiedenen Versionen eines Wortes suchen will, um dann ein zufriedenstellendes Audio zu erhalten
-
-
-\subsection{Satzbildung}
-
-Für Retrieval funktionen ist es sinnvoll, mehrere Wörter zusammenzufassen.
-Wenn man einen Algorithmus hat, der gezielt Wörter im Korpus suchen kann, ist es Wünschenswert nicht nur exakt dieselben Wörter zu suchen, sondern auch verwandte Wörter.
-Zum Beispiel sollte die Suche nach dem Wort "Wanderer" auch Ergebisse für die Worte "Wandererin", "Wanderung" oder "wandern" enthalten, nicht aber das Wort "Wand".
-
-\subsubsection{Tokenisierer}
-
-In Machine Leerning Anwendungen nutzt man dafür verschiedene Tokenisierer.
-Es gibt einfache Tokenisierer, wie Whitespace Tokenisierer, die einen Text einfach an Leerzeichen teilen und die einzelnen Wörter als Tokens behandeln.
-Etwas besser sind Wort Tokenizer, die auch Satzzeichen erkennen und dadurch Punkte und Kommata nicht an das Ende des vorangegangenen Wortes anhängen. 
-Einen solchen Tokenizer nutzt beispielsweise spaCy, um "Linguistic Features" zu bestimmen.
-Es gibt Subword tokenisierer, die Worte nocheinmal in kleinere Abschnitte teilen.
-Das Byte-Pair Encoding versucht aufgrund von Statistischen Methoden, häufig vorkommende zusammenhängende Zeichenfolgen als Tokens zu identifizieren.
-Diese Art Tokenizer wird zum Beispiel oft für die Eingabe bei Transformern genutzt. [Quelle]
-Die Transformermodelle von OpenAI benutzen beispielsweise tiktoken als Tokenizer [Quelle], das BERT Modell von Google benutzt den WordPiece Tokenizer.
-
-
-
-\subsubsection{Lemmatisierung vs. Stemming}
-
-Um diese Abbildung von mehreren Worten auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden:
-Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel "Wanderer" und "Wanderung" zu einem Wort "Wander" zu reduzieren.
-Der Vorteil ist, dass der Algorithmus sehr schnell agieren kann, um die Worte auf ihre Stammform zu reduzieren.
-Die Nachteile sind allerdings, dass die Deutsche Sprache sehr viele verschiedene Wortkonstrukte erlaubt, die nicht alle mithilfe von einzelnen Regeln auf ein gemeinsammes Stammwort gebracht werden können. 
-Zum Beispiel bei dem Plural von "Baum"; "Bäume".
-
-
-\subsubsection{Kompositatrennung Pyphen vs german compound splitter}
-
-Als weiteren Vorverarbeitungsschritt für die effiziente Keywordsuche kann man zusammengesetzte Wörter in ihre bestandteile auftrennen.
-Das Vokabular des Datensazes besteht zu 61\% aus Nomen. 
-Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, wie zum Beispiel "reichsdeputationshauptschlussakte", oder "hochgeschwindigkeitstransportmittel".
-In dem ganzen Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben.
-Da für exakte Keywortsuche solche Begriffe fast nie auftreten, lohnt es sich, 
-
-
-
-Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort „Klimakrise“ würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
-Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene Zeit überbrücken. Allerdings ist dieser Ansatz wenig Vielversprechend. 
-
-
-\subsection{Embeddings Dense}
-
-Dazu werden die einzelnen Segmente mit den verschiedenen Modellen embedded.
-Am Anfang des Segments kann noch einmal der Titel der Episode angefügt werden, was eventuell die Performance steigert.\cite{jones2021}
+Da wichtige Informationen über mehrere Sätze verteilt liegen können, kann es bei einfacher Segmentierung in Sätzen zu dem Problem kommen, dass Informationen über mehrere Sätze verteilt sind.
+Oft ist das zum Beispiel bei Pronomen der Fall, wenn diese sich auf ein Nomen in einem vorherigen Satz beziehen.
+% Zum Beispiel die Satz "Die mächtige prächtige Stadt Amsterdam. In ihr blüht das Leben"
+Es gibt mehrere Möglichkeiten dieses Problem anzugehen, zum Beispiel, indem Koreferenzauflösung durchführt wird und dadurch Pronomen durch ihre eigentlichen Substantive ersetzt werden.
+In einem weiteren Ansatz könnten Segmmente aus mehreren Sätzen gewählt werden, die sich gegenseitig überlappen.
+Dann würde jedes Segment auch den Kontext von mehreren Sätzen darstelln und die Informationen über Satzgrenzen hinaus erfassen.
+Beide Ansätze wurden in dieser Arbeit nicht verfolgt, bleiben aber für zukünftige Foschung offen.
 
 
 \section{Datenspeicherung}
@@ -367,31 +319,10 @@ Es gibt verschiedene Approximate Nearest Neighbour Algorithmen, die alle darauf 
 Dabei werden oft Baum-Strukturen verwendet, um die Suche effizienter zu gestalten.
 Speziell Algorithmen wie Hierarchical Navigable Small Worlds werden von vielen Vektordatenbanken benutzt.
 
-% Vektordatenbanken entwickeln sich in den letzten Jahren stark weiter.
-% In diesem Projekt wurde zunächst die Vektordatenbank Milvus betrachtet.
-% Milvus kann sehr gut auf große Datenmengen skalieren und wird deshalb in vielen großen Unternehmen, wie Nvidia, Paypal oder ebay eingesetzt. 
-% Außerdem bietet Milvus Unterstützung für eine clusterbasierte Struktur, in der einzelne Container dynamisch zusammenarbeiten können. 
-% Dadurch wird eine gute Skalierbarkeit für große Datenmengen erreicht. 
-% Für kleinere Projekte ist der Setup-Aufwand sehr groß und die Lernkurve sehr steil.
-
-% Pinecone, Zilliz, Qdrant
-
-% Außerdem gibt es eine Erweiterung für die PostgreSQL Datenbank namens pg-Vector
-
-% Die Vektordatenbank Redis
-
-% Durch die Neuheit der Vektordatenbanken bedingt, gibt es kaum Vergleiche zwischen diesen.
-% \cite{blueteamai}
-
-
-% In dieser Arbeit wird die Vektordatenbank Milvus verwendet.
-% Milvus ist eine Open-Source Vektordatenbank die von dem Unternehmen Zilliz entwickelt wird.
-% Laut eigenen Angaben ist sie die am weitseten fortgeschrittene Vektordatenbank und wird von vielen Unternehmen, wie Nvidia, Paypal oder ebay benutzt.
-
 In dieser Arbeit wird die Vektordatenbank Chroma verwendet. 
 Chroma ist eine einfache Vektordatenbank, die die Daten sowohl lokal als auch über eine Client-Server-Schnittstelle speichern kann.
 Das Projekt ist erst im Mai 2022 als Start-up entstanden, verfügt aber mittlerweile über viele Features, die die Datenverwaltung erheblich vereinfachen.
-Die Datenbank ist dabei mit einer NoSQL-Datenbank zu vergleichen, indem die Daten nicht relational in Tabellen gespeichert werden, sondern in einer Collection als Objekte mit verschiedenen Metadaten.
+Die Datenbank ist dabei mit einer NoSQL-Datenbank zu vergleichen, indem die Daten nicht relational in Tabellen, sondern in einer Collection als Objekte mit verschiedenen Metadaten gespeichert werden.
 Jedes dieser Objekte hat eine Document-Eigenschaft, welche den Inhalt des Dokuments repräsentiert.
 Dieser Inhalt ist in diesem Fall ein Ausschnitt aus einem Transkript, könnte aber auch ein Bild oder eine Audiodatei darstellen.
 
@@ -399,14 +330,14 @@ Außerdem besitzt jedes Objekt einen Embedding-Vektor, der mit dem Dokument asso
 Innerhalb einer Collection müssen alle Objekte mit derselben Embedding-Methode encodiert werden.
 Das sichert die Vergleichbarkeit der verschiedenen Vektoren untereinander.
 
-ChromaDB bietet nativen Support für verschiedene Embedding Modelle von OpenAI, Huggingface, Cohere, instructorembedding und JinaAI.
+ChromaDB bietet nativen Support für verschiedene Embeddingmodelle von OpenAI, Huggingface, Cohere, instructorembedding und JinaAI \cite{chroma}.
 Dafür müssen nur das Model und der plattformspezifische API-KEY angegeben werden und Chroma erstellt automatisch für jedes Dokument das Embedding.
 Standardmäßig ist das Embedding des Sentence Transformer Modells all-MiniLM-L6-v2 eingestellt.
 Alternativ können auch schon vorgefertigte Embeddings eingefügt und die dazugehörige Embedding Funktion eingetragen werden.
-In dieser Arbeit wurden die Embeddings von OpenAI und all-MiniLM-L6-v2 schon vorher erstellt und dort eingetragen.
+In dieser Arbeit wurden die Embeddings von OpenAI und all-MiniLM-L6-v2 schon vorher erstellt und dann erst eingetragen.
 
 Chroma bietet außerdem sehr guten Support für effizientes Retrieval von Dokumenten.
-Dazu sind schon verschiedene verfahren der Nearest Neighbour Suche implementiert.
+Dazu sind schon verschiedene Verfahren der Nearest Neighbour Suche implementiert.
  
 
 In diessem Projekt wurde erst in einer späten Phase der Umstieg auf die Vektordatenbank vollzogen, weshalb einige Funktionen, die in dieser Datenbank automatisch integriert sind, noch einmal sehr ausführlich beschrieben werden.
@@ -416,22 +347,19 @@ In diessem Projekt wurde erst in einer späten Phase der Umstieg auf die Vektord
 
 Chroma bietet leider noch keine Unterstützung zur Speicherung von Sparce Vektoren.
 Stattdessen wurde das Python-Modul pickle verwendet, welches darauf spezialisiert ist, Python Objekte effizient als Bytecode zu serialisieren. 
-Es bietet auch die Möglichkeit, Datenstrukturen effizient zu speichern bzw. zu laden und hat seit Python 3.8 auch guten Support, um große NumPy Arrays effizient zu speichern, was zuvor nur mit der joblib Bibliothek möglich war.
-Pickle speichert die Daten in einem Python spezifischen Format ab, was die Portierbarkeit auf andere Systeme stark einschränkt. Dieses Format erlaubt es aber verschiedene Eigenschaften besser zu speichern als JSON (z.B. Pointer sharing).
+Es bietet auch die Möglichkeit, Datenstrukturen effizient zu serialisieren beziehungsweise zu deserialisieren.
+Seit Python 3.8 gibt es auch die Möglichkeit, große NumPy Arrays effizient zu speichern, was zuvor nur mit der joblib Bibliothek möglich war.
+Pickle speichert die Daten in einem Python spezifischen Format ab, was die Portierbarkeit auf andere Systeme stark einschränkt. 
+Dieses Format erlaubt es aber verschiedene Eigenschaften besser zu speichern als JSON (z.B. Pointer sharing) \cite{pickle}.
 
 Für den TF-IDF Algorithmus, bei dem ein Vokabular von mehr als 200.000 Wörtern eine ebensogroße Dimensionalität der Embeddingvektoren benötigt, würde ein normaler Serialisierungsalgorithmus für die 300.000 Sätze ca 60 Milliarden Werte abspeichern.
 Wenn man für jeden dieser Werte eine 32 Bit Gleitkommazahl als Datentyp abspeichern würde, käme man auf ca. 240 GB Daten. 
 Ein Großteil dieser Werte (~99,9\%) sind dabei 0.
 Ein Numpy Array kann diese Werte sehr effizient zusammenfassen und mithilfe von pickle kann dieses kompakte Array effizient abgespeichert werden, wodurch eine tatsächliche Speichergröße von ca. 50 MB entsteht.
-Dies ermöglicht auch ein effizientes laden und vergleichen der Embeddings, was für 400.000 Sätze auf einem Intel Quad-Core i7 ca. 1 Sekunde benötigt.
+Dies ermöglicht auch ein effizientes laden und vergleichen der Embeddings, was für 400.000 Sätze auf einer Intel Quad-Core i7 CPU nur circa eine Sekunde benötigt.
 
 In der Zukunft könnte dieser Schritt durch einen Umstieg auf eine Plattform wie Elasticsearch vereinfacht werden.
 
 
 
-% \subsection{weitere Schritte}
-
-
-% Eine bekannte Bibliothek für Nearest Neighbour Searches ist Annoy, die unter anderem bei Spotify für die Recommendations von Songs verwendet wird. [Quelle]
-% Eine weitere bekannte bekannte Bibliothek für Nearest Neighbour Searches ist FAISS (Facebook AI Similarity Search)
 
