@@ -128,6 +128,14 @@
 \newcommand{\ie}{\mbox{i.\,e.\ }}
 \newcommand{\wrt}{\mbox{w.\,r.\,t.\ }}
 \newcommand{\etal}{\mbox{\emph{et.\,al.\ }}}
+\newcommand{\myfigure}[3]{%
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\linewidth]{figures/#1}
+        \caption{#2}
+        \label{fig:#3}
+    \end{figure}
+}
 
 
 % TODO remove if not needed...
@@ -169,8 +177,8 @@
 
 
 \backmatter
-% \listoffigures
-% \cleardoublepage
+\listoffigures
+\cleardoublepage
 
 % \listoftables
 % \cleardoublepage
@@ -185,7 +193,6 @@
 % \bibliography{literatur}
 \include{content/a1_supplemental}
 \printbibliography
-
 \printnoidxglossaries
 
 \end{document}

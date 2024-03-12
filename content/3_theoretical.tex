@@ -31,7 +31,7 @@ Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder T
 Diese Vektoren nennt man Embeddings.
 Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin, passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
 
-\subsubsection{Tokenisierer}
+\subsection{Tokenisierer}
 
 Um Textsequenzen mithilfe von Embeddings zu verarbeiten, werden diese Texte zunächst in Tokens zerlegt, bevor sie von einem Embeddingmodel embedded werden.  
 Ein Token kann dabei je nach Modell ein einziges Wort, mehrere Worte oder nur ein Bruchteil eines Wortes sein.
@@ -141,6 +141,65 @@ Das Modell "voyage-lite-02-instruct" belegt zum Beispiel auf dem Massive Text Em
 Auf den Plätzen 3-5 liegen aber Embeddingmodelle mit einer Dimensionalität von 4096.
 
 
+\subsection{Ähnlichkeitsvergleiche}
+
+Mithilfe der Embedding Vektoren können wir Sätze finden, die zueinander Ähnlich sind. 
+Aber was bedeutet überhaupt ähnlich? 
+Die Vektoren des BERT Models sind 768 Dimensional, haben also 768 Gleitkommazahlen gespeichert, die zwischen -1 und 1 liegen. 
+Diese Gleitkommazahlen Vektoren könnte man auch als Feature Vektoren begreifen. 
+Zum Beispiel könnte die erste Zahl dieses Vektors für die Erwähnung von Professoren in dem Satz stehen (-1 für keine Professoren; 1 für viele Professoren). 
+Die zweite Zahl könnte für das Thema Essen stehen (-1 für wenig mit Essen zu tun; 1 für sehr viel mit Essen zu tun). 
+Damit hätte der Satz „In der Mensa gibt es jeden Tag Currywurst mit Pommes“ an der ersten Stelle vielleicht eine 0,1, weil der Begriff „Mensa“ leicht mit Uni und Professoren konnotiert wird und die zweite Stelle würde bei 0,94 liegen, da es in dem Satz offensichtlich um das Essen handelt. 
+In der Realität wird das Model sehr wahrscheinlich nicht so für Menschen offensichtlichen Merkmale lernen. Ein Grund dafür ist, dass das Model vor allem pro Eintrag eine linearkombination von verschiedenen Menschenoffensichtlichen Merkmalen lernen wird, also jede Zahl eine überlagerung verschiedener Eigenschaften darstellt. 
+Eine forschungsrichtung, die versucht solche Modelausgaben Menschenlesbar zu gestalten liegt in der Explainable AI \cite{hassija2024}.
+
+Um die Ähnlichkeit von diesem Satz zu der Frage „“ zu bestimmen nutzen wir die Cosinus distanz als Maß. 
+Es gibt auch die Euclidische Distanz, allerdings gestaltet sich dabei das Problem der Vector Normalisierung.
+
+
+Diese Komplexen semantischen Unterschiede, oder Gemeinsamkeiten zu erkennen erfordert etwas mehr Raffinesse.
+
+Andere Distanzmaßen:
+Manhatten Distanz (nur x oder y Achse)
+Hamming Distanz (Anzahl verschiedener Einträge)
+
+\subsubsection{Euklidische Distanz}
+
+Die Euklidische Distanz von zwei Vektoren kann man über den Satz des Pythagoras berechnen.
+Dafür nimmt man für jede Dimension die Differenz beider Vektoren in dieser Dimension, quadriert diese und summiert alle Quadrate zusammen, um dann die quadratwurzel darüber zu ziehen.
+Für die beiden Vektoren 
+$\begin{pmatrix}0\\1\end{pmatrix}$
+und 
+$\begin{pmatrix}-1\\0\end{pmatrix}$
+wäre die
+
+Euklidische Distanz $\frac{1}{\sqrt{2}}$, da $\sqrt{(0-(-1))^2 + (1-0)^2}=\frac{1}{\sqrt{2}}$
+
+Dieses Distanzmaß ist sensibel gegenüber der Länge der Vektoren.
+Wenn die Vektoren nicht normiert wurden, kann die Euklidische Distanz sehr groß werden und die Ergebnisse einer Ähnlichkeitssuche verfälschen.
+
+
+\subsubsection{Cosinus Distanz}
+
+Ein weiteres Ähnlichkeitsmaß kann man über den Winkel zwischen zwei Vektoren definieren.
+Dieser Winkel ist unanhängig davon, wie lang die Vektoren sind, immer gleich.
+Die weitverbreiteste Methode um diesen Winkel zu messen, ist über die Cosinus Ähnlichkeit.
+Diese berechnet den Cosinus des Winkels und kann einfach über die Formel
+
+$\text{cosine\_similarity}(\mathbf{a}, \mathbf{b}) = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\| \|\mathbf{b}\|}$
+
+berechnet werden.
+Dabei wird für beide Vektoren zunächst das Skalarprodukt bestimmt.
+Das Skalarprodukt besitzt die Eigenschaft groß zu sein, wenn beide Vektoren in ähnliche Richtungen zeigen und kleiner, wenn beide Vektoren in unterschiedliche Richtungen zeigen.
+Dabei hat die Länge der unterschiedlichen Vektoren einen Einfluss auf die Größe des Skalarproduktes.
+Um dieser Verzerrung entgegenzuwirken, wird das Skalarprodukt durch das Produkt der Beträge der Vektoren geteilt.
+Dadurch erhält man den cosinus des Winkels zwischen diesen beiden Vektoren.
+
+Wenn beide Vektoren vorher normiert wurden, das heißt der Betrag der Vektoren gleich Eins ist, ist die Cosinus Distanz gleich der Skalarprodukt Distanz der beiden Vektoren.
+Außerdem kann in diesem Fall die Euklidische Distanz asu der Cosinus Distanz errechnet werden durch die Formel: 
+
+$\text{Euclidean distance} = \sqrt{2 - 2 \cos(\theta)}$
+
 \section{Transformer Architektur}
 
 \subsection{Sequenz to Sequenz Modelle}
@@ -240,7 +299,7 @@ In dieser Phase kann auch eine Zufallsvaiable eingeführt werden, die immer ein 
 Um bei dem Beispiel von oben zu bleiben, würde der Decoder zum Beispiel versuchen, den Satz zu vollenden mit  "Alice fuhr gestern durch die Nürnberger Innenstadt und bewunderte die beeindruckenden mittelalterlichen Bauwerke."
 \cite{vaswani2023}
 
-\includegraphics[width=\linewidth]{figures/transformer_architecture.png}
+\myfigure{transformer_architecture.png}{Transformer Architekut}{transformer_architecture}
 
 
 \section{Large Language Model}
@@ -299,15 +358,14 @@ Bitext Mining, Classification, Clustering, Pair Classification, Reranking, Retri
 Für diese Arbeit sind vor allem die einzelnen Aufgabenbereiche Retrieval und Reranking interessant. Im Bereich Retrieval besteht die Aufgabe, aus einer großen Menge an Daten, relevante Dokumente zu einem bestimmten Thema zu finden.
 Bei der Reranking Aufgabe gilt es, eine Liste an potentiell passenden Dokumenten nach Wichtigkeit zu sortieren.
 Im Aufgabenbereich Retrieval werden die einzelnen Embeddings auf 15 verschiedene Datenbeständen evaluiert.
-
 \cite{muennighoff2023}
 
 Leider ist eine Evaluation auf deutscher Sprache noch nicht möglich, da zu wenig Datenbestände zur Verfügung stehen. 
 In Zukunft, wenn mehr Datenbestände für die deutsche Sprache entwickelt wurden, wird die Evaluation um eine deutsche Kategorie erweitert. \cite{muennighoff2023a}
 In Kapitel \autoref{ch:experiments} wird versucht die besten Embedding Modelle für die Retrieval Aufgabe des Podcast-Generators zu ermitteln.
 
+\myfigure{mteb.png}{MTEB}{mteb}
 
-\includegraphics[width=\linewidth]{figures/mteb.png}
 
 
 

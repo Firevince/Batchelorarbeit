@@ -13,26 +13,12 @@ Für diese Arbeit wurde versucht möglichst qualitativ hochwertige Daten zu benu
 Als Audiomaterial würde sich am besten Podcasts eignen, in denen über verschiedene Themen sachlich gesprochen wird, die Informationen aber gleichzeitig faktisch korrekt wären.
 Außerdem sollten die Audioquellen frei verfügbar sein, damit keine Urheberrechtsverletzung stattfindet.
 
-% Es sollten nicht die Vortragenden Personen wichtig sein  und sie nicht emotional oder persönlich 
-% Als Audioquelle kommen vor allem wissensbasierte Podcasts in Frage, 
-% Wissensbasierte Podcasts bieten als Audioform die besten qualitativen Inhalt für die Audiosegmente, wenn sie 
-
-% Als Anbieter von Audiomaterial bieten sich zum Beispiel YouTube oder Spotify an, die sehr viele 
-
-
-% Für die Grundlage der Audiosegmente bieten sich insbesondere wissensbasierte Podcasts an, die den Zuhörenden Informationen vermitteln wollen, wenn sie 
-
-
-% Videos wie zum Beispiel von Youtube, setzen oft vorraus, dass der Zuschauer auch das Videomaterial sehen kann und somit würde nur das Hören der Audiospur zu verwirrung führen.
-
-% Die Podcastbranche wächst seit vielen Jahren stetig und immer mehr Menschen hören regelmäßig Podcasts.
-% In Deutschland schon über 29\%.
 
 \section{Audiodaten beschaffen}
 
 \subsection{Die ARD-Audiothek}
 
-Die ARD-Audiothek ist in Deutschland eine der gößten Audio- und Podcastanbieter mit mitlerweile über 100.000 verschiedenen verfügbaren Audioinhalten über 41 Millionen Audioabrufen \cite{statista-a}.
+Die ARD-Audiothek ist in Deutschland eine der gößten Audio- und Podcastanbieter mit mitlerweile über 100.000 verschiedenen verfügbaren Audioinhalten über 41 Millionen Audioabrufen~\cite{statista-a}.
 ALle Inhalte unterliegen den journalistischen Grundsätzen der ARD und bieten somit einen sorgfältigen Qualitätsstandard. 
 Die verschiedenen Audioinhalte stammen von den einzelnen Landesrundfunkanstalten, der ARD und dem Deutschlandradio und liefern eine Vielzahl verschiedener Inhalte.
 Sie enthält über 2000 verschiedene Podcasts, in vielen unterschiedlichen Kategorien, wie Comedy, Sport, Wissenschaft, Wirtschaft, Gesellschaft, Kunst, Musik oder Philosophie. 
@@ -56,7 +42,7 @@ Außerdem ist es wünschenswert, die ausgeschnittenen Audiosegmente an klaren Sa
 
 Aufgrund dieser Kriterien wurde als Datengrundlage die Podcastreihe Radiowissen von bayern2 benutzt. 
 Diese ist nicht wie ein klassischer Podcast im Dialogstil aufgebaut, sondern ähnlich wie bei einem Hörspiel wird der Text von einem Manuskript abgelesen. 
-Dazu kommen verschiedene Geräusche und verschiedene Stimmen, um dem Hörenden mehr Abwechselung zu bieten.
+Dazu kommen verschiedene Geräusche und verschiedene Stimmen, um den Hörenden mehr Abwechselung zu bieten.
 
 Der Fokus der einzelnen Episoden liegt auf interessanten Beiträgen zu verschiedenen Themen, die häufig Gebiete der Geschichte, Naturwissenschaft, Gesellschaft oder Philosophie umfasst.
 Beispielepisoden sind: "Fasten - Verzicht und innerer Gewinn?", "Die Maus - Anpassungskünstler und gefürchteter Schädling", oder "Maria Sibylla Merian - Naturforscherin und Künstlerin".
@@ -115,6 +101,19 @@ Für das System werden trotz der verschiedenen Längen alle Audiodatein benutzt,
 
 
 \section{Transkription der Podcasts (ASR)}
+
+\section{Vorgehensweise}
+
+Zunächst müssen die Daten gesammelt und aufbereitet werden. 
+Für dieses Projekt bildet die Datengrundlage die Transkripte, bzw. Manuskripte der Podcasts der ARD-Audiothek. 
+In der Audiothek selber gibt es keine Transkripte zu den Podcasts. 
+Für den Podcast „radiowissen“ von bayern2 gibt es auf deren Seite die Manuskripte in PDF Format. 
+Diese sind zwar inhaltlich hochqualitativ, da Sie exakte Wortwahl der Podcasts enthalten, als PDF Format sind sie allerdings schwierig maschinell auszulesen und weiterhin besitzen sie keine Zeitinformationen zu den einzelnen Wörtern. 
+Die Zeitinformationen in Form von Zeitstempeln für jedes Wort sind wichtig, um die Audiofiles der Podcasts später an den richtigen Stellen zuzuschneiden. 
+
+Ein anderer Ansatz ergibt sich, wenn man die Podcasts transkribiert. 
+Die Vorteile sind, dass die Transkription auch bei Podcasts funktioniert, für die vorab kein Transkript erstellt wurde, was die Mehrzahl aller Podcasts ausmacht. 
+Außerdem kann man bei einer Transkription auch gleichzeitig die Zeitstempel für jedes Wort extrahieren.
 
 \subsection{Transkriptionsmethoden im Überblick}
 
@@ -236,10 +235,8 @@ Um dieses Problem zu lösen, muss ein Algorithmus verstehen, welche Satzzeichen 
 Dies erfordert ein Verständnis der Satzstruktur und ist deswegen nicht trivial möglich.
 Um die Sätzegrenzen zu finden, wird deshalb die Open-Source Sprachbibliothek spaCy verwendet.\cite{honnibal2017}
 
-Mithilfe der NLP Bibliothek spaCy kann man herausfinden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
+Mithilfe der NLP Bibliothek spaCy kann ermittlet werden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
 spaCy verwendet dafür Machine Learning Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
-% Es gibt auch noch die beliebte Bibliothek NLKT, die sich aber eher auf das Unterrichten von NLP spezialisiert hat.
-% Die Bibliothek spaCy ist eher für den produktiven Einsatz geeignet.
 Auf der offiziellen Webseite von spaCy werden vier verschiedene Modelle für die deutsche Sprache zur verfügung gestellt.
 Das Modell 
 \begin{verbatim}
@@ -300,7 +297,7 @@ Zunächst wurde die Möglichkeit in Betracht gezogen, jeden einzelnen Eintrag au
 
 Das führt allerdings zu sehr ineffizienten Abfragen der Daten und beim Einfügen von Daten limitiert SQLite die Anzahl der Parameter, sodass längere Embeddings umständlich gestückelt abgespeichert werden müssten.
 
-Als Nächstes wurde überprüft, ob man die Embeddings als serialisiertes Array abspeichern kann.
+Als Nächstes wurde überprüft, ob die Embeddings als serialisiertes Array abgespeichert werden können.
 Dafür wurde jedes Embedding in einen JSON-String umgewandelt, der dann gespeichert werden soll. 
 Dabei tritt leider das Problem auf, dass die Daten bei der Verwendung wieder deserialisiert werden müssen.
 Dieser Schritt müsste jedes Mal wiederholt werden, wenn eine Suche stattfindet. 
@@ -338,7 +335,6 @@ In dieser Arbeit wurden die Embeddings von OpenAI und all-MiniLM-L6-v2 schon vor
 
 Chroma bietet außerdem sehr guten Support für effizientes Retrieval von Dokumenten.
 Dazu sind schon verschiedene Verfahren der Nearest Neighbour Suche implementiert.
- 
 
 In diessem Projekt wurde erst in einer späten Phase der Umstieg auf die Vektordatenbank vollzogen, weshalb einige Funktionen, die in dieser Datenbank automatisch integriert sind, noch einmal sehr ausführlich beschrieben werden.
 
@@ -353,7 +349,7 @@ Pickle speichert die Daten in einem Python spezifischen Format ab, was die Porti
 Dieses Format erlaubt es aber verschiedene Eigenschaften besser zu speichern als JSON (z.B. Pointer sharing) \cite{pickle}.
 
 Für den TF-IDF Algorithmus, bei dem ein Vokabular von mehr als 200.000 Wörtern eine ebensogroße Dimensionalität der Embeddingvektoren benötigt, würde ein normaler Serialisierungsalgorithmus für die 300.000 Sätze ca 60 Milliarden Werte abspeichern.
-Wenn man für jeden dieser Werte eine 32 Bit Gleitkommazahl als Datentyp abspeichern würde, käme man auf ca. 240 GB Daten. 
+Wenn für jeden dieser Werte eine 32 Bit Gleitkommazahl als Datentyp abgespeichert würde, wären das ungefähr 240 GB Daten. 
 Ein Großteil dieser Werte (~99,9\%) sind dabei 0.
 Ein Numpy Array kann diese Werte sehr effizient zusammenfassen und mithilfe von pickle kann dieses kompakte Array effizient abgespeichert werden, wodurch eine tatsächliche Speichergröße von ca. 50 MB entsteht.
 Dies ermöglicht auch ein effizientes laden und vergleichen der Embeddings, was für 400.000 Sätze auf einer Intel Quad-Core i7 CPU nur circa eine Sekunde benötigt.

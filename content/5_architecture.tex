@@ -13,48 +13,32 @@ Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, w
 \section{Anforderungen}
 
 Zunächst muss die Datengrundlage geschafft werden. 
-Dafür müssen die Podcast Epsioden heruntergeladen, transkribiert und anschließend alle Sätze in der Datenbank abgespeichert werden.
+Dafür müssen die Podcast Episoden heruntergeladen, transkribiert und anschließend alle Sätze in der Datenbank abgespeichert werden.
 Dieses System muss in der Lage dem Titel eines Podcasts bzw. der ID in der Audiothek, sämtliche noch nicht in der Datenbank gespeicherten Episoden herunterzuladen, zu transkribieren und abzuspeichern.
 In der Zukunft könnte man darüber nachdenken, diesen Teil komplett auf der Serverseite der ARD Audiothek laufen zu lassen.
 
 Das nächste Mikrosystem muss in der Lage sein, diese Transkriptdaten in eine Form umzuwandeln, in der eine Suchfunktion relevante Abschnitte aus diesen Daten extrahieren kann.
 Dafür soll es die einzelnen Wörter in sinnvolle Abschnitte Gruppieren und ein Embedding für jeden Abschnitt berechnen.
 
-Ein weiterer Service soll dann die Suchfunktion übernehmen, indem er Stichworte oder Sätze als Parameter erhält und zu diesen die eine bestimmte Anszahl an relevanten Abschnitten zurückgibt.
+Ein weiterer Service soll dann die Suchfunktion übernehmen, indem er Stichworte oder Sätze als Parameter erhält und zu diesen die eine bestimmte Anzahl an relevanten Abschnitten zurückgibt.
 
-Diese relevanten Abschnitte können noch weiter von ChatGPT analysiert werden, um zum Besipiel eine Auswahl aus vielen Dokumenten zu treffen, die Reihenfolge der Abschnitte zu bestimmen, oder ähnliche Themen herauszufinden.
+Diese relevanten Abschnitte können noch weiter von ChatGPT analysiert werden, um zum Beispiel eine Auswahl aus vielen Dokumenten zu treffen, die Reihenfolge der Abschnitte zu bestimmen, oder ähnliche Themen herauszufinden.
 
 Der nächste Service muss in der Lage sein, eine Liste an Segmenten entgegenzunehmen und daraus eine Audiodatei zu erzeugen.
-Dafür muss er die originaldatein an den richtigen Stellen schneiden und die Audioschnipsel zusammenfügen können.
+Dafür muss er die Originaldatein an den richtigen Stellen schneiden und die Audioschnipsel zusammenfügen können.
 
-Als letztes muss die Audiodatei ausgeliefert werden. 
+Als Letztes muss die Audiodatei ausgeliefert werden. 
 Dafür soll einmal eine API implementiert werden.
-Außerdem soll ein UI als Webseite aufgbaut werden, welche die Anfrage in einem Formular entgegennimmt und dann die Audiodatei ausliefert.
-
-
-\section{Vorgehensweise}
-
-
-Zunächst müssen die Daten gesammelt und aufbereitet werden. 
-Für dieses Projekt bildet die Datengrundlage die Transkripte, bzw. Manuskripte der Podcasts der ARD-Audiothek. 
-In der Audiothek selber gibt es keine Transkripte zu den Podcasts. 
-Für den Podcast „radiowissen“ von bayern2 gibt es auf deren Seite die Manuskripte in PDF Format. 
-Diese sind zwar inhaltlich hochqualitativ, da Sie exakte Wortwahl der Podcasts enthalten, als PDF Format sind sie allerdings schwierig maschinell auszulesen und weiterhin besitzen sie keine Zeitinformationen zu den einzelnen Wörtern. 
-Die Zeitinformationen in Form von Zeitstempeln für jedes Wort sind wichtig, um die Audiofiles der Podcasts später an den richtigen Stellen zuzuschneiden. 
-
-Ein anderer Ansatz ergibt sich, wenn man die Podcasts transkribiert. 
-Die Vorteile sind, dass die Transkription auch bei Podcasts funktioniert, für die vorab kein Transkript erstellt wurde, was die Mehrzahl aller Podcasts ausmacht. 
-Außerdem kann man bei einer Transkription auch gleichzeitig die Zeitstempel für jedes Wort extrahieren.
-
+Außerdem soll ein UI als Webseite aufgebaut werden, welche die Anfrage in einem Formular entgegennimmt und dann die Audiodatei ausliefert.
 
 
 \section{Programmiersprache Python}
 
 In dieser Arbeit wird die Programmiersprache Python verwendet.
-Python zählt zu den am meißten verwendeten Programmiersprachen weltweit und ist laut dem TIOBE-Index im Jahr 2023 sogar die meißt verwendete Programmiersprache überhaupt \cite{index2023}.
+Python zählt zu den am meißten verwendeten Programmiersprachen weltweit und ist laut dem TIOBE-Index im Jahr 2023 sogar die meist verwendete Programmiersprache überhaupt \cite{index2023}.
 In dieser Arbeit wird Python verwendet, da es Unterstützung für sehr gute Bibliotheken für Machine Learning und NLP Anwendungen gibt.
 Vor allem die Unterstützung für Transformermodelle mit der Bibliothek transformers, die NLP Bibliothek SpaCy, sowie Datenverwaltungsbibliotheken wie pandas und support für SQLite Datenbanken mit sqlite sind sehr praktisch.
-Dazu ist Python sehr einfach zu verstehen und rechenaufwändige Operationen wie in der transformers Bibliothek sind sehr performant in der Sprache C implementiert.
+Dazu ist Python sehr einfach zu verstehen und rechenaufwändige Operationen wie in der transformers-Bibliothek sind sehr performant in der Sprache C implementiert.
 
 
 \section{Transktript Segment Ranking}
@@ -68,63 +52,6 @@ Am Anfang des Segments kann noch einmal der Titel der Episode angefügt werden, 
 
 
 
-\subsection{Ähnlichkeitsvergleiche}
-
-Mithilfe der Embedding Vektoren können wir Sätze finden, die zueinander Ähnlich sind. 
-Aber was bedeutet überhaupt ähnlich? 
-Die Vektoren des BERT Models sind 768 Dimensional, haben also 768 Gleitkommazahlen gespeichert, die zwischen -1 und 1 liegen. 
-Diese Gleitkommazahlen Vektoren könnte man auch als Feature Vektoren begreifen. 
-Zum Beispiel könnte die erste Zahl dieses Vektors für die Erwähnung von Professoren in dem Satz stehen (-1 für keine Professoren; 1 für viele Professoren). 
-Die zweite Zahl könnte für das Thema Essen stehen (-1 für wenig mit Essen zu tun; 1 für sehr viel mit Essen zu tun). 
-Damit hätte der Satz „In der Mensa gibt es jeden Tag Currywurst mit Pommes“ an der ersten Stelle vielleicht eine 0,1, weil der Begriff „Mensa“ leicht mit Uni und Professoren konnotiert wird und die zweite Stelle würde bei 0,94 liegen, da es in dem Satz offensichtlich um das Essen handelt. 
-In der Realität wird das Model sehr wahrscheinlich nicht so für Menschen offensichtlichen Merkmale lernen. Ein Grund dafür ist, dass das Model vor allem pro Eintrag eine linearkombination von verschiedenen Menschenoffensichtlichen Merkmalen lernen wird, also jede Zahl eine überlagerung verschiedener Eigenschaften darstellt. 
-Eine forschungsrichtung, die versucht solche Modelausgaben Menschenlesbar zu gestalten liegt in der Explainable AI \cite{hassija2024}.
-
-Um die Ähnlichkeit von diesem Satz zu der Frage „“ zu bestimmen nutzen wir die Cosinus distanz als Maß. Es gibt auch die Euclidische Distanz, allerdings gestaltet sich dabei das Problem der Vector Normalisierung.
-
-
-Diese Komplexen semantischen Unterschiede, oder Gemeinsamkeiten zu erkennen erfordert etwas mehr Raffinesse.
-
-Andere Distanzmaßen:
-Manhatten Distanz (nur x oder y Achse)
-Hamming Distanz (Anzahl verschiedener Einträge)
-
-\subsubsection{Euklidische Distanz}
-
-Die Euklidische Distanz von zwei Vektoren kann man über den Satz des Pythagoras berechnen.
-Dafür nimmt man für jede Dimension die Differenz beider Vektoren in dieser Dimension, quadriert diese und summiert alle Quadrate zusammen, um dann die quadratwurzel darüber zu ziehen.
-Für die beiden Vektoren 
-$\begin{pmatrix}0\\1\end{pmatrix}$
-und 
-$\begin{pmatrix}-1\\0\end{pmatrix}$
-wäre die
-
-Euklidische Distanz $\frac{1}{\sqrt{2}}$, da $\sqrt{(0-(-1))^2 + (1-0)^2}=\frac{1}{\sqrt{2}}$
-
-Dieses Distanzmaß ist sensibel gegenüber der Länge der Vektoren.
-Wenn die Vektoren nicht normiert wurden, kann die Euklidische Distanz sehr groß werden und die Ergebnisse einer Ähnlichkeitssuche verfälschen.
-
-
-\subsubsection{Cosinus Distanz}
-
-Ein weiteres Ähnlichkeitsmaß kann man über den Winkel zwischen zwei Vektoren definieren.
-Dieser Winkel ist unanhängig davon, wie lang die Vektoren sind, immer gleich.
-Die weitverbreiteste Methode um diesen Winkel zu messen, ist über die Cosinus Ähnlichkeit.
-Diese berechnet den Cosinus des Winkels und kann einfach über die Formel
-
-$\text{cosine\_similarity}(\mathbf{a}, \mathbf{b}) = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\| \|\mathbf{b}\|}$
-
-berechnet werden.
-Dabei wird für beide Vektoren zunächst das Skalarprodukt bestimmt.
-Das Skalarprodukt besitzt die Eigenschaft groß zu sein, wenn beide Vektoren in ähnliche Richtungen zeigen und kleiner, wenn beide Vektoren in unterschiedliche Richtungen zeigen.
-Dabei hat die Länge der unterschiedlichen Vektoren einen Einfluss auf die Größe des Skalarproduktes.
-Um dieser Verzerrung entgegenzuwirken, wird das Skalarprodukt durch das Produkt der Beträge der Vektoren geteilt.
-Dadurch erhält man den cosinus des Winkels zwischen diesen beiden Vektoren.
-
-Wenn beide Vektoren vorher normiert wurden, das heißt der Betrag der Vektoren gleich Eins ist, ist die Cosinus Distanz gleich der Skalarprodukt Distanz der beiden Vektoren.
-Außerdem kann in diesem Fall die Euklidische Distanz asu der Cosinus Distanz errechnet werden durch die Formel: 
-
-$\text{Euclidean distance} = \sqrt{2 - 2 \cos(\theta)}$
 
 
 
@@ -147,8 +74,6 @@ Die Evaluation der besten Segmentlänge wurde in dieser Arbeit nicht ausgeführt
 Ein weiterer Ansatz wäre auch hier ein mächtiges LLM, wie ChatGPT zu benutzen, um die richtige Segmentlänge für jedes Segment individuell einzustellen.
 Dazu kann man das LLM instruieren, aus einer sehr großen Anzahl an Kontextsätzen (zum Beispiel 50) oder dem ganzen Transkript einer Podcast Episode und der dazugehörigen Frage, die Anzahl der Kontextsätze auf das wesentliche zu beschränken.
 
-% Dieser Ansatz würde allerdings sehr zeit- und rechenaufwändig sein.
-% Wenn man als LLM ChatGPT benutzen würde, dann würden pro einzelnem Segment ca. 50 Sätze (entspricht ca. 500 Tokens) ca. 0.00025 \$ kosten entstehen.
 
 In dieser Arbeit wurde dieser Ansatz ausprobiert mithilfe eines Promptes wie 
 

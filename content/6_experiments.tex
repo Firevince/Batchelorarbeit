@@ -2,16 +2,50 @@
 
 \section{Ausgangslage}
 
-Da wie in Kapitel \autoref*{ch:theoretical} beschrieben es für die meisten Embeddings schon eine Evaluation gibt, scheint dieser Teil hier nicht sehr relevant.
-Doch einerseits sind die vorhandenen Bewertungsmetriken für Retrival Aufgaben nicht für die deutsche Sprache erstellt worden.
-Andererseits ist eine explizite Bewertung im Kontext der eigenen Daten sogar noch genauer, da die spezifische Aufgabe relevante Segmente aus einer großen Anzahl von Podcast Episoden zu finden eventuell feinheiten hat
+In diesem Kapitel werden verschiedene Embeddingmodelle miteinander verglichen, um das Modell mit den besten Retrivaleigenschaften zu ermitteln.
+Wie in Kapitel \autoref*{ch:theoretical} beschrieben, gibt es bereits Rankings von verschiedenen Embeddingmodellen für ihre Retrieval Funktionalität.
+Leider gibt es noch nicht genügend deutsche Datensätze, um die Retrievaleigenschaften der Modelle für Texte der deutschen Sprache zu bewerten.
+Spezielle Datensätzen sind zu Zeitpunkt dieser Arbeit nur für Englisch, Chinesisch, Französisch und Polnisch verfügbar \cite{mteb}.
+
+Die explizite Bewertung im Kontext der eigenen Daten hat außerdem den Vorteil, dass sie noch genauer die Eigenschaften der Modelle für diese Daten bewerten kann.
+
+\section{Themenauswahl}
+
+Die Bewertung des IR Systems erfolgt auf einer Auswahl verschiedener Themen.
+Das System berechnet für jedes Thema ein Embedding, vergleicht es mit den Embeddings in der Datenbank und erstellt daraus eine Ranking Liste.
+Für jedes Thema wird dann eine sortierte Liste der Segmente zurückgeben, welche benutzt wird, um das Model zu evaluieren.
+
+Die Themen, nach welchen die Embeddings evaluiert werden sollen sind in drei Kategorien eingeteilt:
+topical, refinding, known items \cite{jones2021}
+Die entsprechenden Aufgabenstellungen sind in drei Kategorien eingeteilt: topical, re-finding und known items.
+Bei der Kategorie topical wird verlangt, passende Segmente zu einem bestimmten Thema zu finden.
+Beim re-finding geht es darum, einen zuvor bekannten Audioinhalt wiederzufinden.
+Dabei waren nur Teile des Audioinhaltes oder bestimmte Rahmenbedingungen vorgegeben (z.B. eine Podcastepisode, welche die Person vor einer Woche hörte).
+In der letzten Kategorie den known Item sind bereits der Titel bzw. weitere Metainformationen bekannt.
+Die einzelnen Themen verfügten dabei außerdem noch über eine Beschreibung, die spezifiziert, was eine Testperson von der Suche mit diesem Prompt erwarten würde.
+
+
+Bei
+
+
+
+\section{Bewertungsmethoden}
+
+
+Für die Bewertung eines Information Retrival Systems können verschiedene Methoden verwendet werden.
 
 
 Die Güte von einem Information Retrieval System kann mithilfe des normalized discounted cumulative gain (NDCG) beschrieben werden. 
-Dafür muss allerdings für jedes zu suchende Theman bereits eine vorgefertige Vergleichsliste vorhanden sein, mit der man dann die Ergebnisse vergleichen kann.
+Dafür muss allerdings für jedes Thema bereits eine vorgefertige Vergleichsliste vorhanden sein, mit der man dann die Ergebnisse vergleichen kann.
+Diese Vergleichsliste wird normalerweise Manuell erstellt.
+Für 400.000 Segmente auf 9 verschiedenen Themen ein manuelles Ranking durchzuführen ist leider im Rahmen dieser Arbeit nicht durchführbar.
+
+Ein weiterer Ansatz für das Ranking der einzelnen Segmente kann mithilfe von LLMs erfolgen.
+Leistungsstarke LLMs, wie GPT-4 werden mittlerweile in der Forschung für automatische Bewertungsaufgaben benutzt \cite{naismith2023} \cite{nilsson2023}.
 
 
-\section{Auswertung}
+
+\section{Bewertungskriterien}
 
 
 Die Aufgabe besteht darin, zu untersuchen, wie gut eine Suchfunktion mithilfe der Embeddings in der Lage ist, passende Informationen zu einem Thema zu extrahieren.
@@ -25,8 +59,7 @@ Die einzelnen Segmente sollten eine inhaltliche Verbindung aufweisen, sodass der
 Zum Beispiel soll ein Podcast über "Geschichte Amsterdam" nicht in einem Segment über die Gründung der Niederlande sprechen und im nächsten Segment davon handeln, wie sich Amsterdam in der Nazi Zeit verhalten hat.
 Gleichzeitig sollen die Segmente auch nicht alle den selben Inhalt aufweisen und zum Beispiel in drei verschiedenen Segmenten wiederholen, dass die Niederlande im goldenen Zeitalter des 17. Jahrhunderts ein florierendes Handelsnetzwerk aufgebaut hatten.
  
-Die Themen, nach welchen die Embeddings evaluiert werden sollen sind in drei Kategorien eingeteilt:
-topical, refinding, known items \cite{jones2021}
+
 
 \section{Prompt Engineering}
 
