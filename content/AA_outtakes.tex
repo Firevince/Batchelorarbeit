@@ -108,3 +108,9 @@ Die Bibliothek spaCy ist eher für den produktiven Einsatz geeignet.
 
 Dieser Ansatz würde allerdings sehr zeit- und rechenaufwändig sein.
 Wenn man als LLM ChatGPT benutzen würde, dann würden pro einzelnem Segment ca. 50 Sätze (entspricht ca. 500 Tokens) ca. 0.00025 \$ kosten entstehen.
+
+ChatGPT von OpenAI, welcher auf einem LLM beruht, das auf ca. 175 Milliarden Parameter trainiert wurde. [https://www.ankursnewsletter.com/p/gpt-4-gpt-3-and-gpt-35-turbo-a-review]
+
+\section{embedding}
+Dazu werden die einzelnen Segmente mit den verschiedenen Modellen embedded.
+Am Anfang des Segments kann noch einmal der Titel der Episode angefügt werden, was eventuell die Performance steigert.\cite{jones2021}

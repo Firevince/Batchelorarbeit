@@ -1,5 +1,5 @@
-\chapter{Ausgangslage und theoretische Grundlagen}\label{ch:theoretical}
 
+\chapter{Ausgangslage und theoretische Grundlagen}\label{ch:theoretical}
 
 \section{Information Retrieval}
 
@@ -38,11 +38,11 @@ Ein Token kann dabei je nach Modell ein einziges Wort, mehrere Worte oder nur ei
 In Machine Leerning Anwendungen nutzt man dafür verschiedene Tokenisierer.
 Es gibt einfache Tokenisierer, wie Whitespace Tokenisierer, die einen Text einfach an Leerzeichen teilen und die einzelnen Wörter als Tokens behandeln.
 Etwas besser sind Wort Tokenizer, die auch Satzzeichen erkennen und dadurch Punkte und Kommata nicht an das Ende des vorangegangenen Wortes anhängen. 
-Einen solchen Tokenizer nutzt beispielsweise spaCy, um "Linguistic Features" zu bestimmen \cite{honnibal2017}.
+Einen solchen Tokenizer nutzt beispielsweise spaCy, um \qt{Linguistic Features} zu bestimmen~\cite{honnibal2017}.
 Es gibt Subword tokenisierer, die Worte nocheinmal in kleinere Abschnitte teilen.
 Das Byte-Pair Encoding versucht aufgrund von statistischen Methoden, häufig vorkommende zusammenhängende Zeichenfolgen als Tokens zu identifizieren.
-Diese Art Tokenizer wird am öfftesten für die Eingabe bei Transformern genutzt \cite{zouhar2023}.
-Die Transformermodelle von OpenAI benutzen beispielsweise tiktoken als Tokenizer \cite{tiktoken2024}, das BERT Modell von Google benutzt den WordPiece Tokenizer.
+Diese Art Tokenizer wird am öfftesten für die Eingabe bei Transformern genutzt~\cite{zouhar2023}.
+Die Transformermodelle von OpenAI benutzen beispielsweise tiktoken als Tokenizer~\cite{tiktoken2024}, das BERT Modell von Google benutzt den WordPiece Tokenizer.
 
 \subsection{Geschichte der Embeddingverfahren}
 
@@ -78,17 +78,16 @@ Für ELMo ist dabei nur der Encoder Teil wichtig.
 Dabei werden zwei Layer von Forward und Backward LSTMs eingesetzt, die für jedes Wort den Kontext vor und nach dem Wort berücksichtigen, um semantische Embeddings zu erstellen. [Quellen]
 
 Ein halbes Jahr später wurden die Erstellung von Word und Sentence Embeddings durch BERT revolutioniert.
-BERT (Bidirectional Encoder Representations from Transformers) \cite{devlin2019} ist ein auf NLP Aufgaben spezialisierter Transformer.
+BERT (Bidirectional Encoder Representations from Transformers)~\cite{devlin2019} ist ein auf NLP Aufgaben spezialisierter Transformer.
 Das Modell wurde von Google 2019 entwickelt und war seinerzeit das beste Modell, da es in elf verschiedenen Aufgaben im Bereich des NLP State-of-the-art Ergebnisse lieferte.
 Es ist auf zwei Datenbeständen, dem BooksCorpus mit 800 Millionen Wörtern und der englischen Wikipedia mit 2,5 Milliarden Wörtern trainiert worden. 
 Die Aufgaben im Trainierprozess waren die Next Sentence Prediction (NSP), bei der das Modell entscheiden muss, ob zwei Sätze wahrscheinlich zusammen vorkommen und das Masked Language Modeling, bei der das Modell unkenntlich gemachte Wörter in Sätzen wiederherstellen soll.
 Dadurch hat BERT sowohl auf Wortebene als auch auf Satzebene wichtige Merkmale der Sprache gelernt.
-Durch die große Auswahl an verschiedenen Themen im Trainingsprozess kann das Model für viele verschiedene Sachverhalte sinnvolle semantische Embeddingvektoren erstellen.
-\cite{devlin2019}
+Durch die große Auswahl an verschiedenen Themen im Trainingsprozess kann das Model für viele verschiedene Sachverhalte sinnvolle semantische Embeddingvektoren erstellen.~\cite{devlin2019}
 
 
 Seit der Entdeckung der Transformerarchitektur und der Entstehung von BERT entwickelt sich der Bereich der Embeddingmodelle rasant.
-Täglich werden neue Modelle publiziert und im Abstand von wenigen Wochen erreichen neue Modelle State-of-the-art Performance auf populären Benchmarks wie MTEB.  
+Täglich werden neue Modelle publiziert und im Abstand von wenigen Wochen erreichen neue Modelle State-of-the-art Performance auf populären Benchmarks wie MTEB.
 
 
 \subsection{Embeddingvektoren}
@@ -98,7 +97,7 @@ Täglich werden neue Modelle publiziert und im Abstand von wenigen Wochen erreic
 Embeddings können in zwei verschiedene Kategorien eingeteilt werden: dünne Vektoren und dichte Vektoren.
 
 Dünne Vektoren, wie der TF-IDF Algorithmus und der BM25 Algorithmus, versuchen syntaktische Eigenschaften von Dokumenten zu erfassen.
-Term Frequency - inverse Dokument Frequency (TF-IDF) ist ein Algorithmus, der es erlaubt, Dokumente nach Keywörtern zu durchsuchen.
+Term Frequency-Inverse Document Frequency (TF-IDF) ist ein Algorithmus, der es erlaubt, Dokumente nach Keywörtern zu durchsuchen.
 Das Verfahren verwendet Worthäufigkeiten (Term-Frequency), um Dokumente, in denen ein Wort häufiger vorkommt zu bevorzugen.
 Außerdem verwendet es die generelle Auftrittsrate von Wörtern (Inverse Document Frequency) um Wörtern, die seltener vorkommen, mehr Gewicht bei der Suche einzuräumen.
 
@@ -125,9 +124,9 @@ Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen.
 Ein stochastischer Algorithmus würde die Unterschiede bei solchen Homonymen in den meisten Fällen nicht erkennen können. 
 Stochastische Algorithmen wie z.B. TF-IDF haben auch Probleme mit Negierungen, wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht außer gegessen“.
 
-Für unsere Aufgabe ist es sinnvoll, nicht nur inhaltliche Vergleiche zu erstellen, die überprüfen, ob zwei Sätze ungefähr die gleiche Bedeutung haben, wie "Die Sonne bringt mich zum schwitzen" oder "Ich schmelze in der Hitze".
+Für unsere Aufgabe ist es sinnvoll, nicht nur inhaltliche Vergleiche zu erstellen, die überprüfen, ob zwei Sätze ungefähr die gleiche Bedeutung haben, wie \qt{Die Sonne bringt mich zum schwitzen} oder \qt{Ich schmelze in der Hitze}.
 Besser wäre eine asymmetrische Ähnlichkeit, wie sie bei Frage und Antwortpaaren vorkommt.
-Zum Beispiel wäre auf die Frage: "Welche Farbe hat der Himmel bei Sonnenuntergang?" ein gute Antwort: "Der Himmel hat bei Sonnenuntergang oft orange und rosa Farbtöne."  und nicht der Satz "Wie sieht der Himmel am Abend aus?"
+Zum Beispiel wäre auf die Frage: \qt{Welche Farbe hat der Himmel bei Sonnenuntergang?} ein gute Antwort: \qt{Der Himmel hat bei Sonnenuntergang oft orange und rosa Farbtöne.}  und nicht der Satz \qt{Wie sieht der Himmel am Abend aus?}
 Diese asymmetrische Ähnlichkeit ist schwerer zu ermitteln, da man normalerweise in der Antwort Informationen findet, die in der Frage nicht vorkommen.
 
 \subsubsection{Dimensionalität von Embeddingvektoren}
@@ -137,8 +136,8 @@ Kleinere Embeddings verbrauchen weniger Speicherplatz und lassen sich schneller 
 Andererseits bietet eine kleinere Dimensionalität auch weniger Möglichkeiten für die LLMs, semantische Informationen darin zu speichern.
 Das heißt aber nicht, das größere Embeddingvektoren auch gleichzeitig die Semantik besser repräsentieren müssen.
 Dies hängt vor allem damit zusammen, wie leistungsstark die Architektur des Modells ist und wie viele und welche Trainingsdaten zum trainieren verwendet wurden.
-Das Modell "voyage-lite-02-instruct" belegt zum Beispiel auf dem Massive Text Embedding Benchmark Leaderbord mit einer Dimensionalität von 1024 den Platz 2.
-Auf den Plätzen 3-5 liegen aber Embeddingmodelle mit einer Dimensionalität von 4096.
+Das Modell voyage-lite-02-instruct belegt zum Beispiel auf dem Massive Text Embedding Benchmark Leaderbord mit einer Dimensionalität von 1024 den Platz 2.
+Auf den Plätzen drei bis fünf liegen aber Embeddingmodelle mit einer Dimensionalität von 4096.
 
 
 \subsection{Ähnlichkeitsvergleiche}
@@ -151,7 +150,7 @@ Zum Beispiel könnte die erste Zahl dieses Vektors für die Erwähnung von Profe
 Die zweite Zahl könnte für das Thema Essen stehen (-1 für wenig mit Essen zu tun; 1 für sehr viel mit Essen zu tun). 
 Damit hätte der Satz „In der Mensa gibt es jeden Tag Currywurst mit Pommes“ an der ersten Stelle vielleicht eine 0,1, weil der Begriff „Mensa“ leicht mit Uni und Professoren konnotiert wird und die zweite Stelle würde bei 0,94 liegen, da es in dem Satz offensichtlich um das Essen handelt. 
 In der Realität wird das Model sehr wahrscheinlich nicht so für Menschen offensichtlichen Merkmale lernen. Ein Grund dafür ist, dass das Model vor allem pro Eintrag eine linearkombination von verschiedenen Menschenoffensichtlichen Merkmalen lernen wird, also jede Zahl eine überlagerung verschiedener Eigenschaften darstellt. 
-Eine forschungsrichtung, die versucht solche Modelausgaben Menschenlesbar zu gestalten liegt in der Explainable AI \cite{hassija2024}.
+Eine forschungsrichtung, die versucht solche Modelausgaben Menschenlesbar zu gestalten liegt in der Explainable AI~\cite{hassija2024}.
 
 Um die Ähnlichkeit von diesem Satz zu der Frage „“ zu bestimmen nutzen wir die Cosinus distanz als Maß. 
 Es gibt auch die Euclidische Distanz, allerdings gestaltet sich dabei das Problem der Vector Normalisierung.
@@ -171,13 +170,12 @@ Für die beiden Vektoren
 $\begin{pmatrix}0\\1\end{pmatrix}$
 und 
 $\begin{pmatrix}-1\\0\end{pmatrix}$
-wäre die
-
-Euklidische Distanz $\frac{1}{\sqrt{2}}$, da $\sqrt{(0-(-1))^2 + (1-0)^2}=\frac{1}{\sqrt{2}}$
+wäre die Euklidische Distanz 
+$\frac{1}{\sqrt{2}}$, da $\sqrt{(0-(-1))^2 + (1-0)^2}=\frac{1}{\sqrt{2}}$
 
 Dieses Distanzmaß ist sensibel gegenüber der Länge der Vektoren.
 Wenn die Vektoren nicht normiert wurden, kann die Euklidische Distanz sehr groß werden und die Ergebnisse einer Ähnlichkeitssuche verfälschen.
-
+Da die Berechnung der Wurzel für den vergleich von verschiedenen Distanzen nicht relevant ist, wird in Machine Learning Anwendungen häufig die quadratische L2-Norm verwendet.
 
 \subsubsection{Cosinus Distanz}
 
@@ -234,8 +232,7 @@ Bei einem LSTM werden dafür drei verschiedene Gates benutzt: das Forget Gate, d
 Jedes dieser Gates hat wiederum eine bestimmte Anzahl an Parametern, die bestimmen welche Informationen vergessen, welche für den Input der nächsten Iteration benutzt und welche bei der nächsten Iteration ausgegeben werden.
 Alle diese Parameter müssen beim Training des LSTMs mittrainiert werden, was zu einem komplizierten Model und zu einem langsamen Trainingsprozess führt.
 Bei GRUs gibt es nur ein Gate: das Update Gate.
-Sie haben dadurch weniger Parameter, die trainiert werden müssen und vereinfachen damit den Trainingsprozess.
-\cite{pirani2022}
+Sie haben dadurch weniger Parameter, die trainiert werden müssen und vereinfachen damit den Trainingsprozess.~\cite{pirani2022}
 
 \subsection{Transformer Encoder}
 
@@ -263,15 +260,15 @@ $Attention(Q,K,V)=softmax(\frac{QK^t}{\sqrt{d_k}})*V$
 Der Parameter d stellt dabei die Dimension der Matrix k dar.
 
 Um die Formel besser zu verstehen, wird an einem Beispiel demonstriert, was die einzelnen Matrizen für Aufgaben besitzen.
-Als Eingabe wird der Satz: "Alice fuhr gestern durch die Nürnberger Innenstadt" benutzt.
-Die Query Matrix beschreibt nun eine Frage an diesen Satz, zum Beispiel "Wer?".
+Als Eingabe wird der Satz: \qt{Alice fuhr gestern durch die Nürnberger Innenstadt} benutzt.
+Die Query Matrix beschreibt nun eine Frage an diesen Satz, zum Beispiel \qt{Wer?}.
 Wie genau diese Fragen aussehen, ist nicht leicht zu ermitteln und wird nur in seltenen Fällen so ausfallen, wie auch Menschen nach bestimmten Informationen fragen.
 Wichtig ist jedoch, dass in jedem Attention Kopf eine bestimmte Frage gestellt wird.
 Die Key Matrix hat nun die Antwort darauf, wo diese Informationen im Satz stehen könnten, also wahrscheinlich im ersten Wort. 
 Die beiden Matrizen werden nun multipliziert, um die Position der Antwort auf die Frage zu erhalten. 
 Das Ergebnis wird durch Division mit der Dimension der Matrix skaliert und anschließender Softmax-Funkion normiert, um die Relevanz der Schlüssel anzupassen.
 Anschließend wird die angepasste Fragen-Schlüssel Matrix mit der Value Matrix multipliziert, welche die Informationen der Sequenz beinhaltet. 
-Die resultierende Matrix würde dann die Information beinhalten, dass die Antwort auf die Frage "Wer?" für den Satz "Alice fuhr gestern durch die Nürnberger Innenstadt" wahrscheinlich "Alice" ist.
+Die resultierende Matrix würde dann die Information beinhalten, dass die Antwort auf die Frage \qt{Wer?} für den Satz \qt{Alice fuhr gestern durch die Nürnberger Innenstadt} wahrscheinlich \qt{Alice} ist.
 
 Die verschiedenen Köpfe der Multihead Self-Attention liefern nun verschiedene Antworten auf verschiedene Fragen und versuchen damit die Informationen der Sequenz zu codieren.
 Im Anschluss werden die verschiedenen Matrizen konkateniert und in einem weiteren feedforward neuronalen Netz in Ihrer Dimensionalität reduziert.
@@ -296,8 +293,7 @@ Welches Token am Ende generiert wird, kann zum Beispiel mit einem Greedy-Algorit
 Andere Auswahlmöglichkeiten wären zum Beispiel mit einem Beam-Search Algorithmus möglich, bei dem mehrere Sequenzen generiert werden, um erst später zu schauen, welche Sequenz insgesamt die höchste Wahrscheinlichkeit besitzt.
 In dieser Phase kann auch eine Zufallsvaiable eingeführt werden, die immer ein Token aus den wahrscheinlichsten Token auswählt, um bei mehrfacher Wiederholung eines Prompts verschiedene Ergebnisse zu liefern.
 
-Um bei dem Beispiel von oben zu bleiben, würde der Decoder zum Beispiel versuchen, den Satz zu vollenden mit  "Alice fuhr gestern durch die Nürnberger Innenstadt und bewunderte die beeindruckenden mittelalterlichen Bauwerke."
-\cite{vaswani2023}
+Um bei dem Beispiel von oben zu bleiben, würde der Decoder zum Beispiel versuchen, den Satz zu vollenden mit \qt{Alice fuhr gestern durch die Nürnberger Innenstadt und bewunderte die beeindruckenden mittelalterlichen Bauwerke.}~\cite{vaswani2023}
 
 \myfigure{transformer_architecture.png}{Transformer Architekut}{transformer_architecture}
 
@@ -322,7 +318,7 @@ LLMs werden zum Beispiel für ChatBots, Text-Übersetzungen, Sprach-Übersetzung
 \section{Chatbots}
 
 Besonders die LLM gestützten Chatbots werden aufgrund ihrer Leistungsfähigkeit immer beliebter.
-Der bekannteste Chatbot ist ChatGPT von OpenAI, welcher auf einem LLM beruht, das auf ca. 175 Milliarden Parameter trainiert wurde. [https://www.ankursnewsletter.com/p/gpt-4-gpt-3-and-gpt-35-turbo-a-review]
+Der bekannteste Chatbot ist ChatGPT von OpenAI, welcher über 100 Millionen Nutzer und über eine Milliarde Aufrufe im Monat~\cite{tong2023}
 Weitere bekannte ChatBots sind Google Gemini, die Claude Chatbots von der Firma Anthropic oder Pi von Inflection AI.
 
 Neben den bekannten kommerziellen Chatbots, die von großen Tech Firmen entwickelt werden, entstehen immer mehr Open-Source Modelle, die zwar (noch) nicht so leistungsstark sind, aber auf eigener Hardware lokal laufen können.
@@ -342,7 +338,7 @@ In Zukunft könnte aufgrund der immer besseren und kleineren Open-Source LLMs di
 Da es mittlerweile eine Vielzahl unterschiedlicher LLMs gibt, die alle verschiedene spezielle Aufgaben besitzen und in bestimmten Aspekten jeweils Vor- und Nachteile aufweisen, ist es sinnvoll, diese untereinander vergleichen zu können.
 Eine solche Vergleichsmöglichkeit bietet die Plattform Hugging Face, auf der über 500.000 Machine Learning Modelle, davon mehr als 200.000 Transformer gehostet werden.
 
-In der Kategorie "Question Answering", gibt es über 1300 Einträge und in der Kategorie "Sentence Similarity" ca. 3000.
+In der Kategorie \qt{Question Answering}, gibt es über 1300 Einträge und in der Kategorie \qt{Sentence Similarity} ca. 3000.
 In beiden Kategorien existieren Embedding Modelle.
 Die einzelnen Modelle können kostenlos heruntergeladen werden, sie sind ausführlich dokumentiert und sie sind untereinander mithilfe einer Punkteabgabe auf verschiedenen Kontroll-Datensätzen vergleichbar.
 Durch Leaderboards können die besten Modelle bestimmt werden.
@@ -357,11 +353,10 @@ Bitext Mining, Classification, Clustering, Pair Classification, Reranking, Retri
 
 Für diese Arbeit sind vor allem die einzelnen Aufgabenbereiche Retrieval und Reranking interessant. Im Bereich Retrieval besteht die Aufgabe, aus einer großen Menge an Daten, relevante Dokumente zu einem bestimmten Thema zu finden.
 Bei der Reranking Aufgabe gilt es, eine Liste an potentiell passenden Dokumenten nach Wichtigkeit zu sortieren.
-Im Aufgabenbereich Retrieval werden die einzelnen Embeddings auf 15 verschiedene Datenbeständen evaluiert.
-\cite{muennighoff2023}
+Im Aufgabenbereich Retrieval werden die einzelnen Embeddings auf 15 verschiedene Datenbeständen evaluiert.~\cite{muennighoff2023}
 
 Leider ist eine Evaluation auf deutscher Sprache noch nicht möglich, da zu wenig Datenbestände zur Verfügung stehen. 
-In Zukunft, wenn mehr Datenbestände für die deutsche Sprache entwickelt wurden, wird die Evaluation um eine deutsche Kategorie erweitert. \cite{muennighoff2023a}
+In Zukunft, wenn mehr Datenbestände für die deutsche Sprache entwickelt wurden, wird die Evaluation um eine deutsche Kategorie erweitert.~\cite{muennighoff2023a}
 In Kapitel \autoref{ch:experiments} wird versucht die besten Embedding Modelle für die Retrieval Aufgabe des Podcast-Generators zu ermitteln.
 
 \myfigure{mteb.png}{MTEB}{mteb}

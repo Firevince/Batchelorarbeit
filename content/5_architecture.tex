@@ -7,52 +7,62 @@ Die dazu notwendigen Schritte lassen sich zunächst in mehrere kleinen Projekte 
 Bei einem so großen Projekt lohnt es sich eine Mikroservice Architektur anzustreben, bei der jeder Teil für sich gesehen eine Aufgabe erfüllt und die einzelnen Systeme nur über festgelegte Programmierschnittstellen (APIs) miteinander kommunizieren.
 Diese Methode wird auch divide-and-conquer genannt. 
 
-Um das Projekt weiter einzuordnen, bietet es sich an, vorab Anforderungen an das System zu stellen. 
-Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice einzelne Anforderungen gestellt: 
+
 
 \section{Anforderungen}
 
+Um das Projekt weiter einzuordnen, bietet es sich an, vorab Anforderungen an das System zu stellen. 
+Da das gesamte Projekt als eine Reihe von Mikroservices umgesetzt werden soll, werden folgend für jeden Mikroservice einzelne Anforderungen gestellt.
+
 Zunächst muss die Datengrundlage geschafft werden. 
-Dafür müssen die Podcast Episoden heruntergeladen, transkribiert und anschließend alle Sätze in der Datenbank abgespeichert werden.
-Dieses System muss in der Lage dem Titel eines Podcasts bzw. der ID in der Audiothek, sämtliche noch nicht in der Datenbank gespeicherten Episoden herunterzuladen, zu transkribieren und abzuspeichern.
-In der Zukunft könnte man darüber nachdenken, diesen Teil komplett auf der Serverseite der ARD Audiothek laufen zu lassen.
+Dafür müssen die Podcastepisoden heruntergeladen, transkribiert und anschließend alle Sätze in der Datenbank abgespeichert werden.
+Dieses System muss in der Lage dem Titel eines Podcasts bzw.\ der ID in der Audiothek, sämtliche noch nicht in der Datenbank gespeicherten Episoden herunterzuladen, zu transkribieren und abzuspeichern.
+Dieser Teil wurde in Kapitel \autoref{ch:data} erläutert.
 
 Das nächste Mikrosystem muss in der Lage sein, diese Transkriptdaten in eine Form umzuwandeln, in der eine Suchfunktion relevante Abschnitte aus diesen Daten extrahieren kann.
 Dafür soll es die einzelnen Wörter in sinnvolle Abschnitte Gruppieren und ein Embedding für jeden Abschnitt berechnen.
+Die Embeddings müssen dann jeweils in der Vektordatenbank abgespeichert werden.
 
-Ein weiterer Service soll dann die Suchfunktion übernehmen, indem er Stichworte oder Sätze als Parameter erhält und zu diesen die eine bestimmte Anzahl an relevanten Abschnitten zurückgibt.
+Für den produktiven Einsatz, könnte es vorteilhaft sein diese beiden Services dynamisch zu gestalten, sodass automatisch neue Podcastepisoden transkribiert und in der Datenbank gespeichert werden.
+Für jedes dieser Transkripte könnten dann automatisch Embeddings berechnet werden.
+In der Zukunft könnte man darüber nachdenken, diesen Teil komplett auf der Serverseite der ARD Audiothek zu hosten, um diese Daten auch für andere Anwendungen verfügbar zu machen.
 
-Diese relevanten Abschnitte können noch weiter von ChatGPT analysiert werden, um zum Beispiel eine Auswahl aus vielen Dokumenten zu treffen, die Reihenfolge der Abschnitte zu bestimmen, oder ähnliche Themen herauszufinden.
+
+Ein weiterer Service soll dann die Suchfunktion übernehmen, indem er Stichworte oder Sätze als Parameter erhält und zu diesen eine bestimmte Anzahl an relevanten Abschnitten zurückgibt.
+Dafür muss ein Embedding für die Suchbegriffe errechnet werden und dieses Embedding mit allen Embeddings in der Datenbank zu vergleichen.
+
+Diese relevanten Abschnitte sollen dann noch weiter von LLMs analysiert werden
+Ein weiterer Service erhält die sortierte Liste und nutzt LLMs wie ChatGPT um zum Beispiel eine Auswahl aus vielen Dokumenten zu treffen, die Reihenfolge der Abschnitte zu bestimmen, oder ähnliche Themen herauszufinden.
 
 Der nächste Service muss in der Lage sein, eine Liste an Segmenten entgegenzunehmen und daraus eine Audiodatei zu erzeugen.
-Dafür muss er die Originaldatein an den richtigen Stellen schneiden und die Audioschnipsel zusammenfügen können.
+Dafür muss er die Audiosegmente an den richtigen Stellen aus den originalen Audiodatein schneiden und die Audiossegmente zusammenfügen können.
 
 Als Letztes muss die Audiodatei ausgeliefert werden. 
-Dafür soll einmal eine API implementiert werden.
-Außerdem soll ein UI als Webseite aufgebaut werden, welche die Anfrage in einem Formular entgegennimmt und dann die Audiodatei ausliefert.
-
+Dafür soll zum einen eine API implementiert werden, die eine Anfrage verarbeiten kann und einen Link zu einer Audiodatei zurückgibt.
+Außerdem soll ein Userinterface in Form einer Webseite aufgebaut werden, welche die Anfrage in einem Formular entgegennimmt und dann die Audioinhalte ausliefert.
+Die Webseite soll im Browser verfügbar sein und mehrere User-Anfragen verarbeiten können.
 
 \section{Programmiersprache Python}
 
 In dieser Arbeit wird die Programmiersprache Python verwendet.
-Python zählt zu den am meißten verwendeten Programmiersprachen weltweit und ist laut dem TIOBE-Index im Jahr 2023 sogar die meist verwendete Programmiersprache überhaupt \cite{index2023}.
+Python zählt zu den am meisten verwendeten Programmiersprachen weltweit und ist laut dem TIOBE-Index im Jahr 2023 sogar die meist verwendete Programmiersprache überhaupt~\cite{index2023}.
 In dieser Arbeit wird Python verwendet, da es Unterstützung für sehr gute Bibliotheken für Machine Learning und NLP Anwendungen gibt.
-Vor allem die Unterstützung für Transformermodelle mit der Bibliothek transformers, die NLP Bibliothek SpaCy, sowie Datenverwaltungsbibliotheken wie pandas und support für SQLite Datenbanken mit sqlite sind sehr praktisch.
-Dazu ist Python sehr einfach zu verstehen und rechenaufwändige Operationen wie in der transformers-Bibliothek sind sehr performant in der Sprache C implementiert.
+Vor allem die Unterstützung für Transformermodelle mit der Bibliothek transformers, die NLP Bibliothek spaCy, sowie die Datenverwaltungsbibliotheken pandas sind sehr praktisch.
+Außerdem bietet die Bibliothek sqlite unterstützung zur einfachen Anbindung von SQLite-Datenbanken. 
+Dazu ist Python sehr einfach zu verstehen und rechenaufwändige Operationen, wie die Matrixmuliplikationen in der transformers Bibliothek, sind sehr performant in der Sprache C implementiert.
 
 
-\section{Transktript Segment Ranking}
+\section{Transkript-Segment Ranking}
 
+\subsection{Ranking mit Embeddings}
 
-
-\subsection{Embeddings Dense}
-
-Dazu werden die einzelnen Segmente mit den verschiedenen Modellen embedded.
-Am Anfang des Segments kann noch einmal der Titel der Episode angefügt werden, was eventuell die Performance steigert.\cite{jones2021}
-
-
-
-
+Nachdem bei dem System eine Anfrage der nutzenden Person eingegangen ist, wird diese zunächst mit dem Embeddingmodell in einen Embeddingvektor umgewandelt. 
+Die Wahl des richtigen Embeddingmodells wird in \autoref{ch:experiments} beschrieben.
+Das Ranking der Segmente übernimmt die Vektordatenbank Chroma.
+Für die Distanzfunktion wird standartmäßig die qudratische L2-Norm verwendet.
+Nachdem das Ranking erfolgte, werden die besten 10 Ergebnisse zurückgegeben.
+Dafür wird bei Chroma der Parameter n_results gesetzt.
+Die einzelnen Einträge in Chroma besitzen außerdem einen Parameter segment_id, mit dem man die Informationen zu diesem Segment aus der SQLite Datenbank abrufen kann.
 
 
 \subsection{Anreicherung der Segmente}
@@ -60,35 +70,32 @@ Am Anfang des Segments kann noch einmal der Titel der Episode angefügt werden, 
 Das Ranking der einzelnen Sätze liefert eine Auswahl der besten Kandidaten für den Podcast.
 Einzelne Sätze, die aus verschiedenen Podcast Episoden stammen, ohne Kontext hintereinander abzuspielen bietet für den Zuhörer nur ein mäßiges Hörerlebnis. 
 Es fehlt der Kontext zu den einzelnen Informationen.
-Zum Besipiel bekommt man für die Suchanfrage "Geschichte Amsterdam" mit dem TF-IDF Ansatz Sätze wie "Amsterdam, das bedeutet unbeschwerte Kinderjahre" oder "Amsterdam gefiel ihm".
+Zum Besipiel bekommt man für die Suchanfrage \qt{Geschichte Amsterdam} mit dem TF-IDF Ansatz Sätze wie \qt{Amsterdam, das bedeutet unbeschwerte Kinderjahre} oder \qt{Amsterdam gefiel ihm}.
 Die Sätze an sich bieten kaum interessante Informationen.
-Dem Zuhörer stellen sich sogar noch mehr Fragen, zum Beispiel für wen Amsterdam unbeschwerte Kinderjahre bedeuten oder wem Amsterdam gefiel.
+Den Zuhörenden stellen sich sogar noch mehr Fragen, zum Beispiel für wen Amsterdam unbeschwerte Kinderjahre bedeuten oder wem Amsterdam gefiel.
 
-Um dem Zuhörer mehr Informationen zu geben, kann man die Größe der einzelnen Segmente Anpassen.
-Dazu kann man mehrere Ansätze betrachten.
-Der einfachste Ansatz ist, für jeden einzelnen Satz die umgebenden Sätze davor und dahinter miteinzubeziehen.
+Um den Zuhörenden mehr Informationen zu ermöglichen, kann die Größe der einzelnen Segmente angepasst werden.
+Dazu werden mehrere Ansätze betrachtet.
+
+Der simpelste Ansatz ist, für jeden einzelnen Satz die umgebenden Sätze davor und dahinter miteinzubeziehen.
 Die Anzahl der umgebenden Sätze ist dann ein Hyperparameter dieses Systems und kann vom Nutzer durch den Parameter Segmentlänge eingestellt werden, welher die Anzahl der Sätze in einem Segment angibt.
 Falls der auszuschneidende Satz am Anfang oder am Ende des Transkriptes vorkommt, und die Segmentlänge so eingestellt ist, dass mehr Sätze als möglich dem Segment hinzugefügt werden sollten, so wird das Segment an der Transkriptgrenze abgeschnitten.
 Die Evaluation der besten Segmentlänge wurde in dieser Arbeit nicht ausgeführt, als defaultwert ist für die Segmentlänge 5 eingestellt.
 
 Ein weiterer Ansatz wäre auch hier ein mächtiges LLM, wie ChatGPT zu benutzen, um die richtige Segmentlänge für jedes Segment individuell einzustellen.
-Dazu kann man das LLM instruieren, aus einer sehr großen Anzahl an Kontextsätzen (zum Beispiel 50) oder dem ganzen Transkript einer Podcast Episode und der dazugehörigen Frage, die Anzahl der Kontextsätze auf das wesentliche zu beschränken.
-
-
-In dieser Arbeit wurde dieser Ansatz ausprobiert mithilfe eines Promptes wie 
-
-Je nachdem welches LLM man dafür benutzt könnten Zeit und kostenfaktoren eine Rolle spielen.
-
+Dazu wird das LLM instruiert, aus dem gesamten Transkript einer Podcast Episode und der dazugehörigen Anfrage, die Anzahl der Kontextsätze auf das wesentliche zu beschränken.
+Ein Beipielprompt wäre zum Beispiel \autoref{ch:chatgpt-boundaries}
+Dieser Ansatz führt in der Regel zu längeren Abschnitten, was es schwerer macht, die Zeitvorgaben zu erfüllen.
 
 \subsection{Reranking mit ChatGPT}
 
 Nachdem nun die einzelnen Sätze zu gößeren Segmenten erweitert wurden, kann man auch die Reihenfolge der einzelnen Segmente anpassen.
-Wenn man sich beispielsweise über die "Geschichte von Amsterdam" informieren will, kommen dazu verschiedene Ausschnitte aus der Zeit der Gründung der Niederlande in 1581, den Besuchen Peter des Großen in Amsterdam im Jahr 1697 oder der Verfolgung der Juden im Zweiten Weltkrieg.
+Wenn man sich beispielsweise über die \qt{Geschichte von Amsterdam} informieren will, kommen dazu verschiedene Ausschnitte aus der Zeit der Gründung der Niederlande in 1581, den Besuchen Peter des Großen in Amsterdam im Jahr 1697 oder der Verfolgung der Juden im Zweiten Weltkrieg.
 Die Reihenfolge dieser Ereignisse wird im Retrival Schritt dadurch bestimmt, wie stark die Ähnlichkeit zwischen diesem Segent und der Frage ist.
 In diesem Fall wäre es sehr nützlich die Reihenfolge so umzuändern, dass die Segmente zeitlich sortiert wären.
-In anderen Fällen könnte es Sinnvoll sein, dass Segmente hintereinander erscheinen, die einen Inhaltlichen Zusammenhang besitzen.
-Zum Beispiel würde zu dem Thema "Mauerfall Berlin" mehrere Segmente vorkommen, die sich auch mit der DDR befassen.
-In diesem Fall währe es für Zuhörende spannend diese Segmente hintereinander zu platzieren, um dem Podcast flüssiger und zusammenhängender zu gestalten.
+In anderen Fällen könnte es Sinnvoll sein, dass Segmente hintereinander erscheinen, die einen inhaltlichen Zusammenhang besitzen.
+Zum Beispiel würde zu dem Thema \qt{Mauerfall Berlin} mehrere Segmente vorkommen, die sich auch mit der DDR befassen.
+In diesem Fall wäre es für Zuhörende spannend diese Segmente hintereinander zu platzieren, um dem Podcast flüssiger und zusammenhängender zu gestalten.
 
 Ein solches Reranking der einzelnen Segmente kann mithilfe von leistungsstarken LLMs wie ChatGPT erreicht werden.
 Dazu werden die einzelnen Segmente nummeriert an die Inferenz API von ChatGPT geschickt und das LLM soll die neue Reihenfolge als Liste zurückgeben.
@@ -122,11 +129,11 @@ Dieser Ansatz wurde hier aber nicht weiter verfolgt.
 \section{Weiterführende Themenvorschläge}
 
 Um den Zuhörenden die Möglichkeit zu geben, auf verschiedene Themen, die im Podcast erwähnt wurden, weiter einzugehen, wurden entsprechende Themenvorschläge mithilfe von ChatGPT generiert.
-Wenn zum Beispiel in einem Podcast zur "Geschichte von Amsterdam" einzelne Segmente über die Anfangszeit der Niederlande handeln, könnte man sich in einer weiterführenen Episode zum Beispiel über die "Gründung der Niederlande" informieren.
+Wenn zum Beispiel in einem Podcast zur \qt{Geschichte von Amsterdam} einzelne Segmente über die Anfangszeit der Niederlande handeln, könnte man sich in einer weiterführenen Episode zum Beispiel über die \qt{Gründung der Niederlande} informieren.
 Zu diesem Zweck werden für jede generierte Podcastepisode fünf weiterführende Themenvorschläge von ChatGPT generiert, die zu den Segmenten passen.
 Dazu wird wieder ChatGPT3.5 im JSON Modus verwendet.
 Ein Beispielprompt ist hier zu lesen \autoref{ch:chatgpt-reranking}.
-Die Themen werden explizit auf 1-3 Wörter beschränkt, da sonst manchmal ganze Sätze als Themenvorschläge geführt werden, wie zum Beispiel "Die Erfahrungen von Juden in Amsterdam während der Nazibesetzung".
+Die Themen werden explizit auf 1-3 Wörter beschränkt, da sonst manchmal ganze Sätze als Themenvorschläge geführt werden, wie zum Beispiel \qt{Die Erfahrungen von Juden in Amsterdam während der Nazibesetzung}.
 Die Antwort von ChatGPT besteht aus einem JSON Array, welches die weiteführenden Themen enthält.
 Die einzelnen Themen können je nach Auslieferungsart des Systems zum Beispiel als Buttons angezeigt werden, die eine erneute Suche auslösen, sobald ein nutzende Person ihn drückt.
 
@@ -143,13 +150,13 @@ Für die Auslieferung wurde eine API und eine Webseite entwickelt.
 \subsection{API}
 
 Über die API kann der Podcast Generator einfach von anderen Anwendungen aufgerufen werden.
-Die API wird aufgerufen über eine GET Request auf die unterseite /api .
+Die API wird aufgerufen über eine GET Request auf die unterseite /api.
 
-Als Parameter akzeptiert die API einen String "text", welcher die Frage des Nutzers angibt.
-Außerdem kann über den Parameter "time" ein Integerwert angegeben werden, welcher die Zeit des Podcasts in Minuten angibt.
-Der optionale Parameter "segment-length" kann als Integer übergeben werden und bestimmt die Länge der einzelnen Segmente.
+Als Parameter akzeptiert die API einen String \qt{text}, welcher die Frage des Nutzers angibt.
+Außerdem kann über den Parameter \qt{time} ein Integerwert angegeben werden, welcher die Zeit des Podcasts in Minuten angibt.
+Der optionale Parameter \qt{segment-length} kann als Integer übergeben werden und bestimmt die Länge der einzelnen Segmente.
 
-Die API gibt bei erfolgreicher Verarbeitung den Statuscode 200 zurück und liefert als Inhalt ein JSON String zurück der eine einzige Variable "url" enthält.
+Die API gibt bei erfolgreicher Verarbeitung den Statuscode 200 zurück und liefert als Inhalt ein JSON String zurück der eine einzige Variable \qt{url} enthält.
 Diese URL verweist auf das generierte MP3 file, das ab diesem Zeitpunkt unter der Adresse /static/audios verfügbar ist.
 
 Als Demonstration wurde außerdem ein Telegram-Bot entwickelt der die API benutzt, um damit die automatische Podcastepisoden zu erstellen.

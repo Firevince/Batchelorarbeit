@@ -23,7 +23,7 @@ ALle Inhalte unterliegen den journalistischen Grundsätzen der ARD und bieten so
 Die verschiedenen Audioinhalte stammen von den einzelnen Landesrundfunkanstalten, der ARD und dem Deutschlandradio und liefern eine Vielzahl verschiedener Inhalte.
 Sie enthält über 2000 verschiedene Podcasts, in vielen unterschiedlichen Kategorien, wie Comedy, Sport, Wissenschaft, Wirtschaft, Gesellschaft, Kunst, Musik oder Philosophie. 
 In dieser Audiothek gibt es zudem Hörbücher, Hörspiele, oder Podcasts nur für Kinder.
-Die einzelnen Rundfunkanstalten tragen außerdem eigene Podcasts bei, die meist einen regionalen Kontext haben, wie zum Beispiel der Podcast "Giga Grünheide" über das Teslawerk in Brandenburg vom rbb.
+Die einzelnen Rundfunkanstalten tragen außerdem eigene Podcasts bei, die meist einen regionalen Kontext haben, wie zum Beispiel der Podcast \qt{Giga Grünheide} über das Teslawerk in Brandenburg vom rbb.
 Alle diese Inhalte sind kostenlos und frei verfügbar und stellen eine gute Quelle für das Audiomaterial dar, das in dieser Arbeit verwendet wird.
 
 
@@ -31,9 +31,6 @@ Alle diese Inhalte sind kostenlos und frei verfügbar und stellen eine gute Quel
 
 % Im Appstore und im Google Playstore hat die App der ARD-Audiothek jeweils über eine Million Downloads.
 % \cite{gotting2023}
-
-
-
 
 \subsection{Podcastreihe Radiowissen}
 
@@ -45,12 +42,12 @@ Diese ist nicht wie ein klassischer Podcast im Dialogstil aufgebaut, sondern äh
 Dazu kommen verschiedene Geräusche und verschiedene Stimmen, um den Hörenden mehr Abwechselung zu bieten.
 
 Der Fokus der einzelnen Episoden liegt auf interessanten Beiträgen zu verschiedenen Themen, die häufig Gebiete der Geschichte, Naturwissenschaft, Gesellschaft oder Philosophie umfasst.
-Beispielepisoden sind: "Fasten - Verzicht und innerer Gewinn?", "Die Maus - Anpassungskünstler und gefürchteter Schädling", oder "Maria Sibylla Merian - Naturforscherin und Künstlerin".
+Beispielepisoden sind: \qt{Fasten - Verzicht und innerer Gewinn?}, \qt{Die Maus - Anpassungskünstler und gefürchteter Schädling}, oder \qt{Maria Sibylla Merian - Naturforscherin und Künstlerin}.
 
 Die mehr als 2000 Episoden wurden von mehr als 150 verschiedenen Autoren geskriptet.
 Dadurch sind die einzelnen Episoden unterschiedlich in der Erzählweise.
 In einigen Episoden kommen originale Audiospuren von historischen Aufnahmen vor oder auch Gastbeiträge von Experten. 
-Zudem wird beinahe jeder Podcast abwechselnd von mehreren Stimmen vorgetragen, was nachweislich die Aufmerksamkeit von Zuhörenden verbessert \cite{kang2012}.
+Zudem wird beinahe jeder Podcast abwechselnd von mehreren Stimmen vorgetragen, was nachweislich die Aufmerksamkeit von Zuhörenden verbessert~\cite{kang2012}.
 
 \subsection{Datenbeschaffung über die ARD-Audiotheks API}
 
@@ -59,7 +56,7 @@ Die Inhalte der ARD-Audiothek kann man entweder direkt über die Webseite erreic
 Über diese Schnittstelle sind alle Informationen, wie Titel, Beschreibungen, Autoren oder auch der Link zu dem MP3-File jeder Episode abrufbar.
 
 Zunächst müssen alle Downloadlinks zu den einzelnen Episoden ermittelt werden.
-Mit der GraphQL-Abfrage \autoref{ch:graphql-1} erhält man alle Download-Links zu den Podcast-Episoden des Podcasts "Radio Wissen" von bayern2.
+Mit der GraphQL-Abfrage \autoref{ch:graphql-1} erhält man alle Download-Links zu den Podcast-Episoden des Podcasts \qt{Radio Wissen} von bayern2.
 Das sind (Stand 3. Januar 24) 2257 Podcast Episoden.
 
 Alle diese Audiodatein wurden anschließend heruntergeladen und auf einer lokalen Festplatte gespeichert.
@@ -80,8 +77,8 @@ Die 2232 einzigartigen Episoden haben eine durchschnittliche Länge von 22 Minut
 Insgesamt weisen diese Audiodaten eine Größe von ungefähr 47 GB auf. 
 
 Dabei kam es insgesamt 15-mal vor, dass zwei Episoden denselben Titel tragen, aber eine unterschiedliche Download-URL aufwiesen.
-Die Download-URLs unterscheiden sich nur, indem am Ende die Zeichen "-1" oder "-2" angefügt wurden.
-Zum Beispiel hat die Episode "Quantenphysik - Wahr, aber verrückt" den Downloadlink https://media.neuland.br.de/file/1804047/c/feed/quantenphysik-wahr-aber-verrueckt.mp3 aber auch https://media.neuland.br.de/file/2069613/c/feed/quantenphysik-wahr-aber-verrueckt-1.mp3.
+Die Download-URLs unterscheiden sich nur, indem am Ende die Zeichen \qt{-1} oder \qt{-2} angefügt wurden.
+Zum Beispiel hat die Episode \qt{Quantenphysik - Wahr, aber verrückt} den Downloadlink https://media.neuland.br.de/file/1804047/c/feed/quantenphysik-wahr-aber-verrueckt.mp3 aber auch https://media.neuland.br.de/file/2069613/c/feed/quantenphysik-wahr-aber-verrueckt-1.mp3.
 In diesem Fall liefert nur die zweite URL einen Download, die erste zeigt eine Fehlermeldung an.
 Es gibt auch Fälle in denen beide Links funktionieren, wie zum Beispiel 
 https://media.neuland.br.de/file/32891/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben.mp3 und
@@ -93,11 +90,10 @@ Die Daten wurden dementsprechend bereinigt und doppelte Audioinhalte nur einmal 
 \includegraphics[width=\linewidth]{figures/mp3_length.png}
 
 Der Graph zeigt die Verteilung der Längen der Audiodatein.
-Der kürzeste Podcast ist "ab-jetzt-in-der-ard-audiothek-kinder-der-flucht-frauen-erzaehlen.mp3", der nur 2 Minuten 30 Sekunden lang ist und ein Teaser für einen anderen Podcast darstellt.
-Die längste MP3 Datei ist mit Abstand "deportation-und-exil-eine-polnische-odyssee-im-zweiten-weltkrieg.mp3" mit einer Länge von mehr als 53 Minuten.
+Der kürzeste Podcast ist \qt{ab-jetzt-in-der-ard-audiothek-kinder-der-flucht-frauen-erzaehlen.mp3}, der nur 2 Minuten 30 Sekunden lang ist und ein Teaser für einen anderen Podcast darstellt.
+Die längste MP3 Datei ist mit Abstand \qt{deportation-und-exil-eine-polnische-odyssee-im-zweiten-weltkrieg.mp3} mit einer Länge von mehr als 53 Minuten.
 Diese Episode ist mehr als doppelt so lang wie eine durchschnittliche Episode und bildet einen Ausnahmefall.
 Für das System werden trotz der verschiedenen Längen alle Audiodatein benutzt, da sie später in kleinere Segmente zerteilt werden.
-
 
 
 \section{Transkription der Podcasts (ASR)}
@@ -107,7 +103,7 @@ Für das System werden trotz der verschiedenen Längen alle Audiodatein benutzt,
 Zunächst müssen die Daten gesammelt und aufbereitet werden. 
 Für dieses Projekt bildet die Datengrundlage die Transkripte, bzw. Manuskripte der Podcasts der ARD-Audiothek. 
 In der Audiothek selber gibt es keine Transkripte zu den Podcasts. 
-Für den Podcast „radiowissen“ von bayern2 gibt es auf deren Seite die Manuskripte in PDF Format. 
+Für den Podcast \qt{radiowissen} von bayern2 gibt es auf deren Seite die Manuskripte in PDF Format. 
 Diese sind zwar inhaltlich hochqualitativ, da Sie exakte Wortwahl der Podcasts enthalten, als PDF Format sind sie allerdings schwierig maschinell auszulesen und weiterhin besitzen sie keine Zeitinformationen zu den einzelnen Wörtern. 
 Die Zeitinformationen in Form von Zeitstempeln für jedes Wort sind wichtig, um die Audiofiles der Podcasts später an den richtigen Stellen zuzuschneiden. 
 
@@ -144,9 +140,9 @@ Faster-whisper - word-level timestamps
 
 Eines der besten kostenlosen Open-Source ASR Systeme bietet Whisper von OpenAI. 
 Dieses System wurde mit einem maschinellen lernverfahren auf 680 000 Stunden Audiomaterial in verschiedenen Sprachen trainiert und erreicht damit State-of-the-Art Performance in Transkriptionen.
-Es ist sehr leistungsstark und kann lokal auf eigener Hardware laufen. \cite{radford}
+Es ist sehr leistungsstark und kann lokal auf eigener Hardware laufen.~\cite{radford}
 
-Konkret wurde in dieser Arbeit das Projekt faster-whisper \cite{faster-whisper2024} verwendet, welches die ursprünglichen Whispermodelle mithilfe einer schnelleren Inferenz Engine neu implementiert.
+Konkret wurde in dieser Arbeit das Projekt faster-whisper~\cite{faster-whisper2024} verwendet, welches die ursprünglichen Whispermodelle mithilfe einer schnelleren Inferenz Engine neu implementiert.
 faster-whisper bietet außerdem word-level timestamps im Gengensatz zu dem ursprünglichen Whisper Projekt.
 
 Whisper bietet mehrere verschiedene Modelle zur Transkription an. 
@@ -170,7 +166,7 @@ Die Transkription für diese Arbeit wurde auf einem High Performance Cluster der
 Drawbacks von Whisper:
 Medium Modell immer noch einige Fehler: 
 - gubt statt Grub
-- wenn Sprecherwechsel manchmal ganze Sätze weg (im-bann-des-mondes-archaische-mythen-und-religionen.mp3	)
+- wenn Sprecherwechsel manchmal ganze Sätze weg (im-bann-des-mondes-archaische-mythen-und-religionen.mp3)
 
 TODO large ausprobieren, auf den Servern der Uni und mit der Ebu API
 Eurovox
@@ -220,11 +216,11 @@ Als zweiter Ansatz wird eine tiefergehende Analyse der Transkripte mithilfe der 
 \subsection{Satzbildung mit Whisper}
 
 Whisper erkennt von sich aus, ob ein Wort das Ende eines Satzes markiert.
-Das geschieht wahrscheinlich vor allem aufgrund der Tonlage und der Pause zwischen Wörtern und der grammatikalischen Struktur der vorangegangenen Wörtern \cite{biron2021} \cite{radford}.
+Das geschieht wahrscheinlich vor allem aufgrund der Tonlage und der Pause zwischen Wörtern und der grammatikalischen Struktur der vorangegangenen Wörtern~\cite{biron2021}~\cite{radford}.
 Dann gibt Whisper das Wort mit einem Punkt, einem Fragezeichen oder einem Ausrufezeichen am Ende als erkanntes Wort aus.
 Diese Punktuation kann benutzt werden, um die einzeln Wörter in Sätze zu gruppieren.
 Leider ergibt sich dabei das Problem, dass bestimmte Wörter, oder Abkürzungen zusätzliche Punkte enthalten.
-Beispiele sind "Mr. Smith", "seinem 26. Studioalbum", "am 10. Januar 2016".
+Beispiele sind \qt{Mr. Smith}, \qt{seinem 26. Studioalbum}, \qt{am 10. Januar 2016}.
 Mit diesem naiven Ansatz der Satztrennung würden einige Sätze an ungewollten Stellen in mehrere Sätze aufgetrennt werden.
 Die resultierenden Sätze bieten weniger inhaltlichen Zusamenhang und sind meist grammatikalisch nicht vollständig, was bei einer rücküberführung in Audio eine schlechtere User-experience ermöglicht.
 
@@ -233,7 +229,7 @@ Die resultierenden Sätze bieten weniger inhaltlichen Zusamenhang und sind meist
 
 Um dieses Problem zu lösen, muss ein Algorithmus verstehen, welche Satzzeichen die wirklichen Satzenden anzeigen.
 Dies erfordert ein Verständnis der Satzstruktur und ist deswegen nicht trivial möglich.
-Um die Sätzegrenzen zu finden, wird deshalb die Open-Source Sprachbibliothek spaCy verwendet.\cite{honnibal2017}
+Um die Sätzegrenzen zu finden, wird deshalb die Open-Source Sprachbibliothek spaCy verwendet.~\cite{honnibal2017}
 
 Mithilfe der NLP Bibliothek spaCy kann ermittlet werden, welche Satzzeichen wirklich die Grenze eines Satzes Markieren.
 spaCy verwendet dafür Machine Learning Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
@@ -260,10 +256,10 @@ verbraucht 391 MB Speicherplatz und benutzt eine Transformerarchitektur.
 
 spaCy führt eine selbst angegebenen Accuracy Evaluation für Sentence Segmentation, also das Erkennen von Satzenden in einem Text.
 Darin ist der F-Score für das kleine Modell gleich 0,94; für das mittlere Modell 0,95 und für das große Modell ebenfalls 0,95.
-Das Modell mit der Transformer pipeline bietet einen F-score von 0,98 und wird deswegen in dieser Arbeit verwendet. \cite{spacy2024}
+Das Modell mit der Transformer pipeline bietet einen F-score von 0,98 und wird deswegen in dieser Arbeit verwendet.~\cite{spacy2024}
 
 Mithilfe dieses Ansatzes wird der folgende Satz beispielsweise richtig erkannt: 
-"Zwei Tage nach seinem 69. Geburtstag und der Veröffentlichung von Blackstar, seinem 26. Studioalbum."
+\qt{Zwei Tage nach seinem 69. Geburtstag und der Veröffentlichung von Blackstar, seinem 26. Studioalbum.}
 
 \subsection{Segmente anpassen}
 
@@ -327,7 +323,7 @@ Außerdem besitzt jedes Objekt einen Embedding-Vektor, der mit dem Dokument asso
 Innerhalb einer Collection müssen alle Objekte mit derselben Embedding-Methode encodiert werden.
 Das sichert die Vergleichbarkeit der verschiedenen Vektoren untereinander.
 
-ChromaDB bietet nativen Support für verschiedene Embeddingmodelle von OpenAI, Huggingface, Cohere, instructorembedding und JinaAI \cite{chroma}.
+ChromaDB bietet nativen Support für verschiedene Embeddingmodelle von OpenAI, Huggingface, Cohere, instructorembedding und JinaAI~\cite{chroma}.
 Dafür müssen nur das Model und der plattformspezifische API-KEY angegeben werden und Chroma erstellt automatisch für jedes Dokument das Embedding.
 Standardmäßig ist das Embedding des Sentence Transformer Modells all-MiniLM-L6-v2 eingestellt.
 Alternativ können auch schon vorgefertigte Embeddings eingefügt und die dazugehörige Embedding Funktion eingetragen werden.
@@ -346,7 +342,7 @@ Stattdessen wurde das Python-Modul pickle verwendet, welches darauf spezialisier
 Es bietet auch die Möglichkeit, Datenstrukturen effizient zu serialisieren beziehungsweise zu deserialisieren.
 Seit Python 3.8 gibt es auch die Möglichkeit, große NumPy Arrays effizient zu speichern, was zuvor nur mit der joblib Bibliothek möglich war.
 Pickle speichert die Daten in einem Python spezifischen Format ab, was die Portierbarkeit auf andere Systeme stark einschränkt. 
-Dieses Format erlaubt es aber verschiedene Eigenschaften besser zu speichern als JSON (z.B. Pointer sharing) \cite{pickle}.
+Dieses Format erlaubt es aber verschiedene Eigenschaften besser zu speichern als JSON (z.B. Pointer sharing)~\cite{pickle}.
 
 Für den TF-IDF Algorithmus, bei dem ein Vokabular von mehr als 200.000 Wörtern eine ebensogroße Dimensionalität der Embeddingvektoren benötigt, würde ein normaler Serialisierungsalgorithmus für die 300.000 Sätze ca 60 Milliarden Werte abspeichern.
 Wenn für jeden dieser Werte eine 32 Bit Gleitkommazahl als Datentyp abgespeichert würde, wären das ungefähr 240 GB Daten. 

@@ -5,7 +5,7 @@
 In diesem Kapitel werden verschiedene Embeddingmodelle miteinander verglichen, um das Modell mit den besten Retrivaleigenschaften zu ermitteln.
 Wie in Kapitel \autoref*{ch:theoretical} beschrieben, gibt es bereits Rankings von verschiedenen Embeddingmodellen für ihre Retrieval Funktionalität.
 Leider gibt es noch nicht genügend deutsche Datensätze, um die Retrievaleigenschaften der Modelle für Texte der deutschen Sprache zu bewerten.
-Spezielle Datensätzen sind zu Zeitpunkt dieser Arbeit nur für Englisch, Chinesisch, Französisch und Polnisch verfügbar \cite{mteb}.
+Spezielle Datensätzen sind zu Zeitpunkt dieser Arbeit nur für Englisch, Chinesisch, Französisch und Polnisch verfügbar~\cite{mteb}.
 
 Die explizite Bewertung im Kontext der eigenen Daten hat außerdem den Vorteil, dass sie noch genauer die Eigenschaften der Modelle für diese Daten bewerten kann.
 
@@ -16,12 +16,12 @@ Das System berechnet für jedes Thema ein Embedding, vergleicht es mit den Embed
 Für jedes Thema wird dann eine sortierte Liste der Segmente zurückgeben, welche benutzt wird, um das Model zu evaluieren.
 
 Die Themen, nach welchen die Embeddings evaluiert werden sollen sind in drei Kategorien eingeteilt:
-topical, refinding, known items \cite{jones2021}
+topical, refinding, known items~\cite{jones2021}
 Die entsprechenden Aufgabenstellungen sind in drei Kategorien eingeteilt: topical, re-finding und known items.
 Bei der Kategorie topical wird verlangt, passende Segmente zu einem bestimmten Thema zu finden.
 Beim re-finding geht es darum, einen zuvor bekannten Audioinhalt wiederzufinden.
 Dabei waren nur Teile des Audioinhaltes oder bestimmte Rahmenbedingungen vorgegeben (z.B. eine Podcastepisode, welche die Person vor einer Woche hörte).
-In der letzten Kategorie den known Item sind bereits der Titel bzw. weitere Metainformationen bekannt.
+In der letzten Kategorie den known Item sind bereits der Titel bzw.\ weitere Metainformationen bekannt.
 Die einzelnen Themen verfügten dabei außerdem noch über eine Beschreibung, die spezifiziert, was eine Testperson von der Suche mit diesem Prompt erwarten würde.
 
 
@@ -41,7 +41,7 @@ Diese Vergleichsliste wird normalerweise Manuell erstellt.
 Für 400.000 Segmente auf 9 verschiedenen Themen ein manuelles Ranking durchzuführen ist leider im Rahmen dieser Arbeit nicht durchführbar.
 
 Ein weiterer Ansatz für das Ranking der einzelnen Segmente kann mithilfe von LLMs erfolgen.
-Leistungsstarke LLMs, wie GPT-4 werden mittlerweile in der Forschung für automatische Bewertungsaufgaben benutzt \cite{naismith2023} \cite{nilsson2023}.
+Leistungsstarke LLMs, wie GPT-4 werden mittlerweile in der Forschung für automatische Bewertungsaufgaben benutzt~\cite{naismith2023}~\cite{nilsson2023}.
 
 
 
@@ -56,8 +56,8 @@ Das ist der wichtigste Punkte bei der Evaluation.
 
 Ein weiteres Kriterium ist der Inhaltliche Zusammenhang der einzelnen Segmente.
 Die einzelnen Segmente sollten eine inhaltliche Verbindung aufweisen, sodass der/die Hörer*in nicht zwischen verschiedenen Themn hin und hergeworfen wird.
-Zum Beispiel soll ein Podcast über "Geschichte Amsterdam" nicht in einem Segment über die Gründung der Niederlande sprechen und im nächsten Segment davon handeln, wie sich Amsterdam in der Nazi Zeit verhalten hat.
-Gleichzeitig sollen die Segmente auch nicht alle den selben Inhalt aufweisen und zum Beispiel in drei verschiedenen Segmenten wiederholen, dass die Niederlande im goldenen Zeitalter des 17. Jahrhunderts ein florierendes Handelsnetzwerk aufgebaut hatten.
+Zum Beispiel soll ein Podcast über \qt{Geschichte Amsterdam} nicht in einem Segment über die Gründung der Niederlande sprechen und im nächsten Segment davon handeln, wie sich Amsterdam in der Nazi Zeit verhalten hat.
+Gleichzeitig sollen die Segmente auch nicht alle denselben Inhalt aufweisen und zum Beispiel in drei verschiedenen Segmenten wiederholen, dass die Niederlande im goldenen Zeitalter des 17. Jahrhunderts ein florierendes Handelsnetzwerk aufgebaut hatten.
  
 
 
@@ -107,10 +107,11 @@ Davinci (12288 dimensions)
 \subsubsection{Keywordsuche}
 
 Eine Möglichkeit bietet sich in der Keywordsuche. 
-Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wiederfindet. Ist die möchte ein User beispielsweise einen zusammengeschnittene Podcast Episode über „Zugspitze“, so schaut das System, in welchen Episodensegmenten das Wort „Zugspitze“ auftaucht, und gibt diese zurück. 
+Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wiederfindet. Ist die möchte ein User beispielsweise einen zusammengeschnittene Podcast Episode über \qt{Zugspitze}, so schaut das System, in welchen Episodensegmenten das Wort \qt{Zugspitze} auftaucht, und gibt diese zurück. 
 Schwieriger wird es, wenn die Useranfrage mehrere Wörter beinhaltet. 
-Möchte sich der User über das Thema „Zugspitze wandern“ informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
+Möchte sich der User über das Thema \qt{Zugspitze wandern} informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
 Dann müsste man dementsprechend auch ein Algorithmus entwickeln, der diese dann sinnvoll hierarchisiert. 
+Das Wort \qt{Zugspietzt}
 
 \subsubsection{TF-IDF}
 
@@ -126,23 +127,23 @@ Da diese beiden Worte aber sehr ähnlich sind und der User bei einer Anfrage nic
 \subsubsection{Lemmatisierung vs. Stemming}
 
 Um diese Abbildung von mehreren Worten auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden:
-Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel "Wanderer" und "Wanderung" zu einem Wort "Wander" zu reduzieren.
+Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel \qt{Wanderer} und \qt{Wanderung} zu einem Wort \qt{Wander} zu reduzieren.
 Der Vorteil ist, dass der Algorithmus sehr schnell agieren kann, um die Worte auf ihre Stammform zu reduzieren.
 Die Nachteile sind allerdings, dass die Deutsche Sprache sehr viele verschiedene Wortkonstrukte erlaubt, die nicht alle mithilfe von einzelnen Regeln auf ein gemeinsammes Stammwort gebracht werden können. 
-Zum Beispiel bei dem Plural von "Baum"; "Bäume".
+Zum Beispiel bei dem Plural von \qt{Baum}; \qt{Bäume}.
 
 
 \subsubsection{Kompositatrennung Pyphen vs german compound splitter}
 
 Als weiteren Vorverarbeitungsschritt für die effiziente Keywordsuche kann man zusammengesetzte Wörter in ihre bestandteile auftrennen.
 Das Vokabular des Datensazes besteht zu 61\% aus Nomen. 
-Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, wie zum Beispiel "reichsdeputationshauptschlussakte", oder "hochgeschwindigkeitstransportmittel".
+Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, wie zum Beispiel \qt{Reichsdeputationshauptschlussakte}, oder \qt{Hochgeschwindigkeitstransportmittel}.
 In dem ganzen Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben.
 Da für exakte Keywortsuche solche Begriffe fast nie auftreten, lohnt es sich, 
 
 
 
-Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort „Klimakrise“ würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
+Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort \qt{Klimakrise} würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
 Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene Zeit überbrücken. 
 Allerdings ist dieser Ansatz wenig Vielversprechend. 
 

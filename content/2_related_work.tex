@@ -1,8 +1,8 @@
-\chapter{Verwandte Literatur}\label{ch:theoretical}
+\chapter{Verwandte Literatur}\label{ch:related_work}
 
 Im Bereich der automatisierten Podcasterstellung gibt es einige Versuche mittels künstlich generierter Texte und Stimmen einen eigenen Podcast zu erstellen.
 
-In dem Artikel \glqq NewsPod: Automatic and Interactive News Podcasts\grqq{} wird ein neuer Ansatz für die automatische Erstellung von Podcastepisoden vorgestellt. 
+In dem Artikel \qt{NewsPod: Automatic and Interactive News Podcasts} wird ein neuer Ansatz für die automatische Erstellung von Podcastepisoden vorgestellt. 
 Dazu wird ein interaktiver Sprachbot entwickelt, der zu bestimmten Nachrichten Fragen beantworten kann und mithilfe einer synthetisch generierten Stimme mit den nutzenden Personen interagiert.
 Dabei ermitteln mehrere Machine Learning Systeme den Inhalt von bestimmten Nachrichtenseiten und extrahieren daraus Fragestellungen, die den Inhalt des Textes widerspiegeln sollen. 
 Die Autoren benutzen ein GPT-2 Sprachmodell, das auf Fragengenerierung trainiert wurde, um aus jedem Absatz 7 Fragen zu ermitteln. 
@@ -17,11 +17,10 @@ Die Autoren dieses Papers führten außerdem zwei Studien zur Nutzung dieses Sys
 Der Gegenstand der ersten Studie ist, inwieweit die Zufriedenheit einer Testgruppe mit der Erzählweise des Textes und der automatisch generierten Stimme des Sprechers korreliert. 
 Darin konnten die Autoren feststellen, dass einer ihrer Ansätze, QA Best, so erfolgreich war, dass 80\% der Testpersonen angaben, dass sie dieses System in Zukunft nutzen würden, um Nachrichten zu konsumieren.
 Die zweite Studie untersucht die Interaktion der Zuhörenden während der Benutzung des Systems. 
-Diese Studie kam zu dem Schluss, dass zwar die Bereitschaft eigene Fragen zu stellen mit 85\% der Zuhörenden sehr hoch war, die Zufriedenheit der Testenden mit der Qualität der Antworten aber sehr gering ausfiel, da 76\% der Antworten als verwirrend eingestuft wurden. 
-\cite{laban2022}
+Diese Studie kam zu dem Schluss, dass zwar die Bereitschaft eigene Fragen zu stellen mit 85\% der Zuhörenden sehr hoch war, die Zufriedenheit der Testenden mit der Qualität der Antworten aber sehr gering ausfiel, da 76\% der Antworten als verwirrend eingestuft wurden.~\cite{laban2022}
 
 
-In dem Paper \cite{jones2021} werden die Ergebnisse der Text Retrieval Conference (TREC) 2020 für die Podcastanalyse vorgestellt.
+In dem Paper~\cite{jones2021} werden die Ergebnisse der Text Retrieval Conference (TREC) 2020 für die Podcastanalyse vorgestellt.
 Für diese Aufgabe analysierten die Teilnehmer einen großen Datensatz an Podcasttranskripten.
 Die Teilnehmer versuchten aus über 100.000 Podcasttranskripten die wichtigsten Segmente zu verschiedenen Themen herauszufiltern.
 Im Vorfeld wurden die Transkripte durch ein System zur Automatic Speech Recognition (ASR) erstellt.
@@ -30,7 +29,7 @@ Die entsprechenden Aufgabenstellungen sind in drei Kategorien eingeteilt: topica
 Bei der Kategorie topical wird verlangt, passende Segmente zu einem bestimmten Thema zu finden.
 Beim re-finding geht es darum, einen zuvor bekannten Audioinhalt wiederzufinden.
 Dabei waren nur Teile des Audioinhaltes oder bestimmte Rahmenbedingungen vorgegeben (z.B. eine Podcastepisode, welche die Person vor einer Woche hörte).
-In der letzten Kategorie den known Item sind bereits der Titel bzw. weitere Metainformationen bekannt.
+In der letzten Kategorie den known Item sind bereits der Titel bzw.\ weitere Metainformationen bekannt.
 Die einzelnen Themen verfügten dabei außerdem noch über eine Beschreibung, die spezifiziert, was eine Testperson von der Suche mit diesem Prompt erwarten würde.
 
 
@@ -39,7 +38,7 @@ Darunter Universitäten aus den USA und Dublin sowie ein Team des Musikstreaming
 Die Evaluation der Ergebnisse wurde manuell durchgeführt.
 Verschiedene Gutachter des TREC bewerteten die Ergebnisse der Teilnehmer auf einer Skala von 5 (perfekt) bis 0 (nicht passend).
 Am besten schnitten dabei die Lösungen der Universität Maryland ab, die zur Datenaufbereitung eine Mischung aus Stemming und Word2Vec benutzten und für die Retrievalfunktion die Search Engine Indri einsetzten.
-Die Indri Search Engine wurde von der University of Massachusetts und Carnegie Mellon University aufgebaut, wird aber zurzeit nicht mehr weiterentwickelt \cite{lemur}.
+Die Indri Search Engine wurde von der University of Massachusetts und Carnegie Mellon University aufgebaut, wird aber zurzeit nicht mehr weiterentwickelt~\cite{lemur}.
 
 
 Speziell für deutsche Audioinhalte stellte das Fraunhofer-Institut für Intelligente Anlyse- und Informationssysteme (IAIS) 2015 die Audiominig Plattform medas vor.
@@ -47,5 +46,4 @@ Diese soll für die ARD-Audiothek die Suchfunktionen für verschiedene Audioinha
 Dazu erstellten die Forscher ein System, dass diese Inhalte automatisch mit ASR transkribieren, eine Spracherkennung durchführen und Keywörter extrahieren kann.
 Diese Daten sind über eine REST Schnittstelle abrufbar.
 Allerdings sind viele der beschriebenen Technologien mittlerweile nicht mehr State-of-the-art und spielen deswegen in dieser Arbeit kaum eine Rolle.
-In Kapitel \autoref{ch:method} wird darauf näher eingegangen.
-\cite{maroni2020}
+In Kapitel \autoref{ch:method} wird darauf näher eingegangen.~\cite{maroni2020}
