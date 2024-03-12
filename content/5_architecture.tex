@@ -1,6 +1,6 @@
 \chapter{Architektur}\label{ch:method}
 
-\section{Mikrosystemarchitektur}
+\section{Mikroservicearchitektur}
 
 Der zweite Teil des Systems besteht darin, aus der Anfrage der Nutzenden eine passende Podcastepisode zu erstellen.
 Die dazu notwendigen Schritte lassen sich zunächst in mehrere kleinen Projekte unterteilen. 
@@ -61,16 +61,17 @@ Die Wahl des richtigen Embeddingmodells wird in \autoref{ch:experiments} beschri
 Das Ranking der Segmente übernimmt die Vektordatenbank Chroma.
 Für die Distanzfunktion wird standartmäßig die qudratische L2-Norm verwendet.
 Nachdem das Ranking erfolgte, werden die besten 10 Ergebnisse zurückgegeben.
-Dafür wird bei Chroma der Parameter n_results gesetzt.
-Die einzelnen Einträge in Chroma besitzen außerdem einen Parameter segment_id, mit dem man die Informationen zu diesem Segment aus der SQLite Datenbank abrufen kann.
+Dafür wird bei Chroma der Parameter \verb|n_results| gesetzt.
+Die einzelnen Einträge in Chroma besitzen außerdem einen Parameter \verb|segment_id|, mit dem man die Informationen zu diesem Segment aus der SQLite Datenbank abrufen kann.
 
+\myfigure{retrieval_schema.png}{Retrieval der relevanten Segmente}{retrieval_schema}
 
 \subsection{Anreicherung der Segmente}
 
 Das Ranking der einzelnen Sätze liefert eine Auswahl der besten Kandidaten für den Podcast.
-Einzelne Sätze, die aus verschiedenen Podcast Episoden stammen, ohne Kontext hintereinander abzuspielen bietet für den Zuhörer nur ein mäßiges Hörerlebnis. 
+Einzelne Sätze, die aus verschiedenen Podcast Episoden stammen, ohne Kontext hintereinander abzuspielen bietet für den Zuhörer nur ein geringes Hörerlebnis. 
 Es fehlt der Kontext zu den einzelnen Informationen.
-Zum Besipiel bekommt man für die Suchanfrage \qt{Geschichte Amsterdam} mit dem TF-IDF Ansatz Sätze wie \qt{Amsterdam, das bedeutet unbeschwerte Kinderjahre} oder \qt{Amsterdam gefiel ihm}.
+Zum Beispiel liefert die Suchanfrage \qt{Geschichte Amsterdam} mit dem TF-IDF Ansatz Sätze wie \qt{Amsterdam, das bedeutet unbeschwerte Kinderjahre} oder \qt{Amsterdam gefiel ihm}.
 Die Sätze an sich bieten kaum interessante Informationen.
 Den Zuhörenden stellen sich sogar noch mehr Fragen, zum Beispiel für wen Amsterdam unbeschwerte Kinderjahre bedeuten oder wem Amsterdam gefiel.
 
@@ -89,9 +90,9 @@ Dieser Ansatz führt in der Regel zu längeren Abschnitten, was es schwerer mach
 
 \subsection{Reranking mit ChatGPT}
 
-Nachdem nun die einzelnen Sätze zu gößeren Segmenten erweitert wurden, kann man auch die Reihenfolge der einzelnen Segmente anpassen.
-Wenn man sich beispielsweise über die \qt{Geschichte von Amsterdam} informieren will, kommen dazu verschiedene Ausschnitte aus der Zeit der Gründung der Niederlande in 1581, den Besuchen Peter des Großen in Amsterdam im Jahr 1697 oder der Verfolgung der Juden im Zweiten Weltkrieg.
-Die Reihenfolge dieser Ereignisse wird im Retrival Schritt dadurch bestimmt, wie stark die Ähnlichkeit zwischen diesem Segent und der Frage ist.
+Nachdem nun die einzelnen Sätze zu gößeren Segmenten erweitert wurden, kann auch die Reihenfolge der einzelnen Segmente angepasst werden.
+Wenn eine Person sich beispielsweise über die \qt{Geschichte von Amsterdam} informieren will, kommen dazu verschiedene Ausschnitte aus der Zeit der Gründung der Niederlande in 1581, den Besuchen Peter des Großen in Amsterdam im Jahr 1697 oder der Verfolgung der Juden im Zweiten Weltkrieg.
+Die Reihenfolge dieser Ereignisse wird im Retrival Schritt dadurch bestimmt, wie stark die Ähnlichkeit zwischen diesem Segmenten und der Frage ist.
 In diesem Fall wäre es sehr nützlich die Reihenfolge so umzuändern, dass die Segmente zeitlich sortiert wären.
 In anderen Fällen könnte es Sinnvoll sein, dass Segmente hintereinander erscheinen, die einen inhaltlichen Zusammenhang besitzen.
 Zum Beispiel würde zu dem Thema \qt{Mauerfall Berlin} mehrere Segmente vorkommen, die sich auch mit der DDR befassen.
@@ -107,7 +108,7 @@ Da dies eine relativ einfache Aufgabe ist, in der nur eine Liste mit wenigen Zah
 \section{Audio-Zusammensetzung}
 
 
-Für die Bearbeitung von Audio files in Python bietet sich das Python-Modul Pydub an. 
+Für die Bearbeitung von Audiodatein in Python bietet sich das Python-Modul Pydub an. 
 Mit diesem Modul kann ein Audiofile ähnlich wie ein Array behandelt werden.
 Wenn sich zum Beispiel in einem Audiofile ein wichtiges Segment von Sekunde 34 bis Sekunde 64 erstreckt,  kann dort einfach die Start- und Endzeit in Arrayschreibweise angegeben werden.
 Im Hintergrund verwendet dieses Modul Software-Bibliotheken des Softwareprojekts FFmpeg, welche umfangreichen Support für die Bearbeitung fast aller Audioformate besitzt.\cite{ffmpeg}
@@ -160,7 +161,7 @@ Die API gibt bei erfolgreicher Verarbeitung den Statuscode 200 zurück und liefe
 Diese URL verweist auf das generierte MP3 file, das ab diesem Zeitpunkt unter der Adresse /static/audios verfügbar ist.
 
 Als Demonstration wurde außerdem ein Telegram-Bot entwickelt der die API benutzt, um damit die automatische Podcastepisoden zu erstellen.
-Der Telegram-Bot ist öffentlich verfügbar und kann über die Adresse https://t.me/PodcastGenerator gefunden werden.
+Der Telegram-Bot ist öffentlich verfügbar und kann über die Adresse \url{https://t.me/PodcastGenerator} gefunden werden.
 
 \subsection{Design Webseite}
 
@@ -168,12 +169,12 @@ Die Webseite des Podcast Generators bieten einen einfachen Weg das System zu ben
 Es gibt die beiden Input Felder Thema und Zeit, und einen Start Button, bei dem die Generierung der Podcasts startet.
 Nachdem die Podcastepisode fertig generiert wurde, wird der vorher ausgegraute Audioplayer aktiv.
 Dann können Nutzende die Audiodatei mithilfe des Players anhören.
-Außerdem ist unter/neben dem Audioplayer eine Box mit den Transkriptabschnitten des Podcasts, sortiert nach der Erscheinung in der generierten Episode.
+Außerdem ist neben dem Audioplayer eine Box mit den Transkriptabschnitten des Podcasts, sortiert nach der Erscheinung in der generierten Episode.
 Diese Transkriptabschnitte können zur Navigation innerhalb der Podcastepisode verwendet werden.
 
 
-Das Design der Webseite beruht auf einem Template von https://github.com/muhammed/mini-player.
+Das Design der Webseite beruht auf einem Template von \url{https://github.com/muhammed/mini-player}.
 Dieses Template wurde erweitert, durch einen Suchbereich und einen Transkript Bereich.
-
+Insgesamt soll es den nutzenden Personen eine intuitive Benutzung des Tools erlauben und die Möglichkeit liefern die Parameter Thema, Zeit und Segmentlänge der Episode festzulegen. 
 
 

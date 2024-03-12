@@ -92,11 +92,11 @@ Täglich werden neue Modelle publiziert und im Abstand von wenigen Wochen erreic
 
 \subsection{Embeddingvektoren}
 
-\subsubsection{Dünne Vektoren}
+\subsubsection{Sparce Vektoren}
 
-Embeddings können in zwei verschiedene Kategorien eingeteilt werden: dünne Vektoren und dichte Vektoren.
+Embeddings können in zwei verschiedene Kategorien eingeteilt werden: dünne (sparce) Vektoren und dichte (dense) Vektoren.
 
-Dünne Vektoren, wie der TF-IDF Algorithmus und der BM25 Algorithmus, versuchen syntaktische Eigenschaften von Dokumenten zu erfassen.
+Sparce Vektoren, wie der TF-IDF Algorithmus und der BM25 Algorithmus, versuchen syntaktische Eigenschaften von Dokumenten zu erfassen.
 Term Frequency-Inverse Document Frequency (TF-IDF) ist ein Algorithmus, der es erlaubt, Dokumente nach Keywörtern zu durchsuchen.
 Das Verfahren verwendet Worthäufigkeiten (Term-Frequency), um Dokumente, in denen ein Wort häufiger vorkommt zu bevorzugen.
 Außerdem verwendet es die generelle Auftrittsrate von Wörtern (Inverse Document Frequency) um Wörtern, die seltener vorkommen, mehr Gewicht bei der Suche einzuräumen.
@@ -345,7 +345,7 @@ Durch Leaderboards können die besten Modelle bestimmt werden.
 
 \section{Massive Text Embedding Benchmark}
 
-Hier wird beispielhaft das Massive Text Embedding Benchmark (MTEB) Leaderbord https://huggingface.co/spaces/mteb/leaderboard betrachtet.
+Hier wird beispielhaft das Massive Text Embedding Benchmark (MTEB) Leaderbord \url{https://huggingface.co/spaces/mteb/leaderboard} betrachtet.
 
 Auf diesem Leaderboard werden Embedding Modelle auf 58 verschiedenen Datenbeständen in 112 Sprachen evaluiert.
 Die Datenbestände sind dabei in acht verschiedene Aufgabenkategorien geteilt:
@@ -359,7 +359,9 @@ Leider ist eine Evaluation auf deutscher Sprache noch nicht möglich, da zu weni
 In Zukunft, wenn mehr Datenbestände für die deutsche Sprache entwickelt wurden, wird die Evaluation um eine deutsche Kategorie erweitert.~\cite{muennighoff2023a}
 In Kapitel \autoref{ch:experiments} wird versucht die besten Embedding Modelle für die Retrieval Aufgabe des Podcast-Generators zu ermitteln.
 
-\myfigure{mteb.png}{MTEB}{mteb}
+\myfigure{mteb.png}{Die einzelnen Datensätze in MTEB}{mteb}
+
+\myfigure{mteb_screenshot.png}{Screenshhot des MTEB Leaderboards}{mteb_screenshot}
 
 
 

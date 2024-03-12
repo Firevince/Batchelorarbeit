@@ -27,11 +27,6 @@ Die einzelnen Rundfunkanstalten tragen außerdem eigene Podcasts bei, die meist 
 Alle diese Inhalte sind kostenlos und frei verfügbar und stellen eine gute Quelle für das Audiomaterial dar, das in dieser Arbeit verwendet wird.
 
 
-% Dabei liegt die Nutzung der ARD-Audiothek mit 17,9\% auf Platz vier hinter Spotify, Youtube und Amazon Music \cite{mindline-media2023}.
-
-% Im Appstore und im Google Playstore hat die App der ARD-Audiothek jeweils über eine Million Downloads.
-% \cite{gotting2023}
-
 \subsection{Podcastreihe Radiowissen}
 
 Zur automatischen Generierung von Podcast Episoden bietet es sich an, dass in den Ausgangsaudios die Sprache klar und verständlich ist und verschiedene Sprecher sich nicht ins Wort fallen bzw. gleichzeitig reden.
@@ -52,7 +47,7 @@ Zudem wird beinahe jeder Podcast abwechselnd von mehreren Stimmen vorgetragen, w
 \subsection{Datenbeschaffung über die ARD-Audiotheks API}
 
 Die Inhalte der ARD-Audiothek kann man entweder direkt über die Webseite erreichen oder mithilfe einer frei benutzbare Web-GraphQL API abfragen.
-(https://api.ardaudiothek.de/graphql) 
+(\url{https://api.ardaudiothek.de/graphql}) 
 Über diese Schnittstelle sind alle Informationen, wie Titel, Beschreibungen, Autoren oder auch der Link zu dem MP3-File jeder Episode abrufbar.
 
 Zunächst müssen alle Downloadlinks zu den einzelnen Episoden ermittelt werden.
@@ -78,16 +73,14 @@ Insgesamt weisen diese Audiodaten eine Größe von ungefähr 47 GB auf.
 
 Dabei kam es insgesamt 15-mal vor, dass zwei Episoden denselben Titel tragen, aber eine unterschiedliche Download-URL aufwiesen.
 Die Download-URLs unterscheiden sich nur, indem am Ende die Zeichen \qt{-1} oder \qt{-2} angefügt wurden.
-Zum Beispiel hat die Episode \qt{Quantenphysik - Wahr, aber verrückt} den Downloadlink https://media.neuland.br.de/file/1804047/c/feed/quantenphysik-wahr-aber-verrueckt.mp3 aber auch https://media.neuland.br.de/file/2069613/c/feed/quantenphysik-wahr-aber-verrueckt-1.mp3.
+Zum Beispiel hat die Episode \qt{Quantenphysik - Wahr, aber verrückt} den Downloadlink \url{https://media.neuland.br.de/file/1804047/c/feed/quantenphysik-wahr-aber-verrueckt.mp3} aber auch \url{https://media.neuland.br.de/file/2069613/c/feed/quantenphysik-wahr-aber-verrueckt-1.mp3}.
 In diesem Fall liefert nur die zweite URL einen Download, die erste zeigt eine Fehlermeldung an.
-Es gibt auch Fälle in denen beide Links funktionieren, wie zum Beispiel 
-https://media.neuland.br.de/file/32891/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben.mp3 und
-https://media.neuland.br.de/file/1858845/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben-1.mp3 
+Es gibt auch Fälle in denen beide Links funktionieren, wie zum Beispiel \url{https://media.neuland.br.de/file/32891/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben.mp3} und \url{https://media.neuland.br.de/file/1858845/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben-1.mp3}
 Die Daten wurden dementsprechend bereinigt und doppelte Audioinhalte nur einmal abgespeichert.
 
 
 
-\includegraphics[width=\linewidth]{figures/mp3_length.png}
+\myfigure{mp3_length.png}{Länge der MP3 Datein}{mp3_length}
 
 Der Graph zeigt die Verteilung der Längen der Audiodatein.
 Der kürzeste Podcast ist \qt{ab-jetzt-in-der-ard-audiothek-kinder-der-flucht-frauen-erzaehlen.mp3}, der nur 2 Minuten 30 Sekunden lang ist und ein Teaser für einen anderen Podcast darstellt.
@@ -136,14 +129,12 @@ Dadurch ist eine spätere Segmentierung nicht mehr möglich und die vorhanden Se
 
 \subsection{Whisper}
 
-Faster-whisper - word-level timestamps
-
 Eines der besten kostenlosen Open-Source ASR Systeme bietet Whisper von OpenAI. 
 Dieses System wurde mit einem maschinellen lernverfahren auf 680 000 Stunden Audiomaterial in verschiedenen Sprachen trainiert und erreicht damit State-of-the-Art Performance in Transkriptionen.
 Es ist sehr leistungsstark und kann lokal auf eigener Hardware laufen.~\cite{radford}
 
 Konkret wurde in dieser Arbeit das Projekt faster-whisper~\cite{faster-whisper2024} verwendet, welches die ursprünglichen Whispermodelle mithilfe einer schnelleren Inferenz Engine neu implementiert.
-faster-whisper bietet außerdem word-level timestamps im Gengensatz zu dem ursprünglichen Whisper Projekt.
+faster-whisper bietet außerdem word-level timestamps im Gegensatz zum ursprünglichen Whisper Projekt.
 
 Whisper bietet mehrere verschiedene Modelle zur Transkription an. 
 Es gibt die Modelle tiny, base, small, medium und large. 
@@ -161,36 +152,25 @@ Auf einer T4 GPU, wie sie Google kostenlos auf Google Colab zur verfügung stell
 Für ca. 1000 Episoden bräuchte man demnach ca. 3500 Minuten (ca. 58 Stunden). 
 
 Die Transkription für diese Arbeit wurde auf einem High Performance Cluster der Technischen Hochschule Nürnberg durchgeführt.
+Dabei wurde eine NVIDIA A100 GPU verwendet.
+Über vier seperate Slurm-Jobs wurden die 2237 Episoden innerhalb von ca. 50 Stunden transkribiert.  
 
+Die Transkripte der Episoden sind im durchschnitt ca. 2792 Wörter lang und benötigen ungefähr 20 KB Speicherplatz pro Transkript.
 
-Drawbacks von Whisper:
-Medium Modell immer noch einige Fehler: 
-- gubt statt Grub
-- wenn Sprecherwechsel manchmal ganze Sätze weg (im-bann-des-mondes-archaische-mythen-und-religionen.mp3)
-
-TODO large ausprobieren, auf den Servern der Uni und mit der Ebu API
-Eurovox
-
-
-Die Transkripte der Episoden sind meißt ca. 3000 Wörter lang und benötigen ungefähr 20 KB Speicherplatz pro Transkript.
-
-\includegraphics[width=\linewidth]{figures/transcript_length.png}
+\myfigure{transcript_length.png}{Anzahl der Wörter pro transkript}{transcript_length}
 
 
 \subsection{Eurovox}
 
-Das Problem der langen Wartezeiten lässt sich umgehen, wenn Cloud computing benutzt wird.
+Für die zukünftige Verwendung dieses Systems im öffentlich rechtlichen Kontextes, würde es sich anbieten, weitere Podcastepisoden mittels Cloud computing zu transkribieren.
 Das heißt, das Whisper model nicht auf der lokalen Hardware laufen zu lassen, sondern zum Beispiel auf den Servern von Eurovox. 
 Eurovox ist ein Software tool von der EBU, der Europian Broadcast Union. 
-Sie ist ein zusammenschluss von derzeit 68 Rundfunkanstalten in 56 Staaten Europas, Nordafrikas und Vorderasien mit Sitz in Genf. [4] 
+Sie ist ein Zusammenschluss von derzeit 68 Rundfunkanstalten in 56 Staaten Europas, Nordafrikas und Vorderasien mit Sitz in Genf. 
 Das tool Eurovox steht dabei allen Mitgliedern zur Verfügung.  
 Mithilfe dieses Tools kann man Text-to-Speech, Übersetzungen und Speech-to-Text Services über eine UI benutzen. 
-Es gibt sogar die Möglichkeit wärend eines Streams live audio captions zu erzeugen. 
-Für dieses Projekt benutzen wir aber zunächst nur die Translation Funktion. 
-Außerdem verwenden wir die API von Eurovox um später das ganze Projekt auf mehr Episode Transkripte ausweiten zu können. 
-Laut den Entwicklern soll die API auch demnächst open-sourced werden [QUELLE].
-
-Die API stellt, ebenso wie das Tool, eine Reihe verschiedener Anbieter zur verfügung, über die die Audios transkribieren lassen können. 
+Für dieses Projekt könnte zunächst die Translation Funktion verwendet werden. 
+Leider wurde der Zugang zu der API für dieses Projekt noch nicht freigestellt.~\cite{eurovox2024}
+. 
 
 \section{Datenaufbereitung}
 
@@ -220,7 +200,7 @@ Das geschieht wahrscheinlich vor allem aufgrund der Tonlage und der Pause zwisch
 Dann gibt Whisper das Wort mit einem Punkt, einem Fragezeichen oder einem Ausrufezeichen am Ende als erkanntes Wort aus.
 Diese Punktuation kann benutzt werden, um die einzeln Wörter in Sätze zu gruppieren.
 Leider ergibt sich dabei das Problem, dass bestimmte Wörter, oder Abkürzungen zusätzliche Punkte enthalten.
-Beispiele sind \qt{Mr. Smith}, \qt{seinem 26. Studioalbum}, \qt{am 10. Januar 2016}.
+Beispiele sind \qt{Mr.\ Smith}, \qt{seinem 26. Studioalbum}, \qt{am 10. Januar 2016}.
 Mit diesem naiven Ansatz der Satztrennung würden einige Sätze an ungewollten Stellen in mehrere Sätze aufgetrennt werden.
 Die resultierenden Sätze bieten weniger inhaltlichen Zusamenhang und sind meist grammatikalisch nicht vollständig, was bei einer rücküberführung in Audio eine schlechtere User-experience ermöglicht.
 
@@ -349,9 +329,4 @@ Wenn für jeden dieser Werte eine 32 Bit Gleitkommazahl als Datentyp abgespeiche
 Ein Großteil dieser Werte (~99,9\%) sind dabei 0.
 Ein Numpy Array kann diese Werte sehr effizient zusammenfassen und mithilfe von pickle kann dieses kompakte Array effizient abgespeichert werden, wodurch eine tatsächliche Speichergröße von ca. 50 MB entsteht.
 Dies ermöglicht auch ein effizientes laden und vergleichen der Embeddings, was für 400.000 Sätze auf einer Intel Quad-Core i7 CPU nur circa eine Sekunde benötigt.
-
-In der Zukunft könnte dieser Schritt durch einen Umstieg auf eine Plattform wie Elasticsearch vereinfacht werden.
-
-
-
 
