@@ -9,6 +9,14 @@ Spezielle Datensätzen sind zu Zeitpunkt dieser Arbeit nur für Englisch, Chines
 
 Die explizite Bewertung im Kontext der eigenen Daten hat außerdem den Vorteil, dass sie noch genauer die Eigenschaften der Modelle für diese Daten bewerten kann.
 
+
+\section{Auswahl der Embeddings}
+
+Für die Evaluation werden vier verschiedene Embeddings betrachtet.
+Dabei wird sowohl der Sparse Vektoren des TF-IDF Algorithmus, wie auch die Dense Vektoren von dem all-mini-LM-L6-v2 Model und Embeddings von Voyage AI und OpenAI miteinander verglichen.
+
+Konkret werden Embeddings des TF-IDF Algorithmus
+
 \section{Themenauswahl}
 
 Die Bewertung des IR Systems erfolgt auf einer Auswahl verschiedener Themen.
@@ -20,7 +28,7 @@ topical, refinding, known items~\cite{jones2021}
 Die entsprechenden Aufgabenstellungen sind in drei Kategorien eingeteilt: topical, re-finding und known items.
 Bei der Kategorie topical wird verlangt, passende Segmente zu einem bestimmten Thema zu finden.
 Beim re-finding geht es darum, einen zuvor bekannten Audioinhalt wiederzufinden.
-Dabei waren nur Teile des Audioinhaltes oder bestimmte Rahmenbedingungen vorgegeben (z.B. eine Podcastepisode, welche die Person vor einer Woche hörte).
+Dabei waren nur Teile des Audioinhaltes oder bestimmte Rahmenbedingungen vorgegeben (z.B. eine Podcast-Episode, welche die Person vor einer Woche hörte).
 In der letzten Kategorie den known Item sind bereits der Titel bzw.\ weitere Metainformationen bekannt.
 Die einzelnen Themen verfügten dabei außerdem noch über eine Beschreibung, die spezifiziert, was eine Testperson von der Suche mit diesem Prompt erwarten würde.
 
@@ -62,6 +70,8 @@ Gleichzeitig sollen die Segmente auch nicht alle denselben Inhalt aufweisen und 
 
 
 \section{Prompt Engineering}
+
+
 
 
 \section{BERT Embeddings}

@@ -117,3 +117,15 @@ ChatGPT von OpenAI, welcher auf einem LLM beruht, das auf ca. 175 Milliarden Par
 \section{embedding}
 Dazu werden die einzelnen Segmente mit den verschiedenen Modellen embedded.
 Am Anfang des Segments kann noch einmal der Titel der Episode angefügt werden, was eventuell die Performance steigert.\cite{jones2021}
+
+\section{Distanzmaße}
+
+Um die Ähnlichkeit von diesem Satz zu der Frage „“ zu bestimmen, nutzen wir die Kosinusdistanz als Maß.
+Es gibt auch die euklidische Distanz, allerdings gestaltet sich dabei das Problem der Vektornormalisierung als schwierig.
+
+Diese komplexen semantischen Unterschiede oder Gemeinsamkeiten zu erkennen, erfordert etwas mehr Raffinesse.
+
+Andere Distanzmaße sind:
+
+Manhattan-Distanz (nur x- oder y-Achse)
+Hamming-Distanz (Anzahl verschiedener Einträge)
