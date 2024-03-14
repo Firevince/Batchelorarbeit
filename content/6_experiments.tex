@@ -2,6 +2,8 @@
 
 \section{Ausgangslage}
 
+
+
 In diesem Kapitel werden verschiedene Embeddingmodelle miteinander verglichen, um das Modell mit den besten Retrivaleigenschaften zu ermitteln.
 Wie in Kapitel \autoref*{ch:theoretical} beschrieben, gibt es bereits Rankings von verschiedenen Embeddingmodellen für ihre Retrieval Funktionalität.
 Leider gibt es noch nicht genügend deutsche Datensätze, um die Retrievaleigenschaften der Modelle für Texte der deutschen Sprache zu bewerten.
@@ -9,16 +11,23 @@ Spezielle Datensätzen sind zu Zeitpunkt dieser Arbeit nur für Englisch, Chines
 
 Die explizite Bewertung im Kontext der eigenen Daten hat außerdem den Vorteil, dass sie noch genauer die Eigenschaften der Modelle für diese Daten bewerten kann.
 
+\section{Begründung der Auswahl der Embeddingmodelle}
 
-\section{Auswahl der Embeddings}
+Für die Bewertung werden vier verschiedene Embedding-Modelle miteinander verglichen.
+Die berücksichtigten Modelle decken sowohl Sparse- als auch Dense-Embedding-Ansätze ab, was eine breite Untersuchungspalette bietet.
 
-Für die Evaluation werden vier verschiedene Embeddings betrachtet.
-Dabei wird sowohl der Sparse Vektoren des TF-IDF Algorithmus, wie auch die Dense Vektoren von dem all-mini-LM-L6-v2 Model und Embeddings von Voyage AI und OpenAI miteinander verglichen.
+Der TF-IDF-Algorithmus wurde ausgewählt, da er ein klassischer Vertreter für Sparse-Embeddings ist und als Baseline herangezogen wird. 
+Er hat eine grundlegend andere Retrivaleigenschaften als die Dense-Vektoren, indem er nach lexikalischen Eigenschaften sucht anstatt nach semantischen Ähnlichkeiten.
 
-Konkret werden Embeddings des TF-IDF Algorithmus
 
-TF-IDF - vergleich zu Keyword-suche
-all-mini-LM-L6-v2 - klein, schnell, most downloaded~\cite{2024}
+Als weiteres Modell wurde das sentence Transformer Modell all-mini-LM-L6-v2-Modell ausgewählt.
+Es ist aufgrund seiner geringe Größe und der relativ guten Leistung das am meisten Heruntergeladene Modell in der Kategorie Sentence-similarity auf der Plattform Huggingface~\cite{2024}.
+
+Das Modell voyage-lite-02-instruct-Modell belegt den zweiten Platz der Massive Text Embedding Benchmark, sowohl auf in der Leistung über alle einzelnen Benchmarks, als auch in der Kategorie Retrieval.
+Die Embeddings können dabei über eine API-Schnittstelle erhalten werden.
+Das bestplazierte Modell, konnte leider nicht benutzt werden, da es zu groß ist, um auf der verfügbaren Hardware laufen zu lassen.
+Ein weiteres Embeddingmodell, bei dem die Embeddings per API erhaltbar sind, ist das text-embeddings-small-Modell von OpenAI.
+Dieses Modell erzielt nur Platz 27 in der Kategorie Retrieval auf dem MTEB, wird aber als Vergleich herangezogen.
 
 
 \section{Themenauswahl}
@@ -27,11 +36,15 @@ Die Bewertung des IR Systems erfolgt auf einer Auswahl verschiedener Themen.
 Das System berechnet für jedes Thema ein Embedding, vergleicht es mit den Embeddings in der Datenbank und erstellt daraus eine Ranking Liste.
 Für jedes Thema wird dann eine sortierte Liste der Segmente zurückgeben, welche benutzt wird, um das Model zu evaluieren.
 
-Die Themen, nach welchen die Embeddings evaluiert werden sollen sind in drei Kategorien eingeteilt:
-topical, refinding, known items~\cite{jones2021}
-Die entsprechenden Aufgabenstellungen sind in drei Kategorien eingeteilt: topical, re-finding und known items.
+Die Themen, nach welchen die Embeddings evaluiert werden sollen sind in zwei Kategorien eingeteilt:
+\qt{topical} und \qt{re-findings}~\cite{jones2021}
 Bei der Kategorie topical wird verlangt, passende Segmente zu einem bestimmten Thema zu finden.
+Dazu werden 30 verschiedene Themen von ChatGPT generiert, die aus den Bereichen Geschichte, Naturwissenschaft, Gesellschaft oder Philosophie kommen.
+Als vergleich werden außerdem noch 30 verschiedene 
+
+
 Beim re-finding geht es darum, einen zuvor bekannten Audioinhalt wiederzufinden.
+Dabei wird 
 Dabei waren nur Teile des Audioinhaltes oder bestimmte Rahmenbedingungen vorgegeben (z.B. eine Podcast-Episode, welche die Person vor einer Woche hörte).
 In der letzten Kategorie den known Item sind bereits der Titel bzw.\ weitere Metainformationen bekannt.
 Die einzelnen Themen verfügten dabei außerdem noch über eine Beschreibung, die spezifiziert, was eine Testperson von der Suche mit diesem Prompt erwarten würde.

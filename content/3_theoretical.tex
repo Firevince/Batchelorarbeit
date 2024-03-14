@@ -260,8 +260,8 @@ Die Query-Matrix beschreibt nun eine Frage an diesen Satz, zum Beispiel „Wer?�
 Wie genau diese Fragen aussehen, ist nicht leicht zu ermitteln und wird nur in seltenen Fällen so ausfallen, wie auch Menschen nach bestimmten Informationen fragen.
 Wichtig ist jedoch, dass in jedem Attention-Kopf eine bestimmte Frage gestellt wird.
 Die Key-Matrix hat nun die Antwort darauf, wo diese Informationen im Satz stehen könnten, also wahrscheinlich im ersten Wort.
-Die beiden Matrizen werden nun multipliziert, um die Position der Antwort auf die Frage zu erhalten.
-Das Ergebnis wird durch Division mit der Dimension der Matrix skaliert und anschließend mit der Softmax-Funktion normiert, um die Relevanz der Schlüssel anzupassen.
+Die beiden Matrizen werden multipliziert, um die Position der Antwort auf die Frage zu erhalten.
+Das Ergebnis wird über Division mit der Dimension der Matrix skaliert und anschließend mit der Softmax-Funktion normiert, um die Relevanz der Schlüssel anzupassen.
 Anschließend wird die angepasste Fragen-Schlüssel-Matrix mit der Value-Matrix multipliziert, welche die Informationen der Sequenz beinhaltet.
 Die resultierende Matrix würde dann die Information beinhalten, dass die Antwort auf die Frage „Wer?“ für den Satz „Alice fuhr gestern durch die Nürnberger Innenstadt“ wahrscheinlich „Alice“ ist.~\cite{ng2023}
 
@@ -282,13 +282,13 @@ Nur die Query-Matrix wird aus der vorher generierten Self-Attention-Matrix gener
 Die Key- und die Value-Matrix werden aus der Embedding-Matrix des Encoders berechnet.
 Dadurch wird die Information aus dem Userprompt bei der Generierung jedes einzelnen Tokens mitberücksichtigt.
 Die resultierenden Matrizen aller Attentionköpfe werden wieder durch Feedforward-Netze propagiert, um sie zusammenzuführen und die Dimensionalität anzupassen.
-Am Ende wird die ganze Matrix durch eine Softmax-Funktion geleitet, die dann die Ausgabewahrscheinlichkeiten für alle Tokens generiert.
+Am Ende wird die ganze Matrix durch eine Softmax-Funktion geleitet, die die Ausgabewahrscheinlichkeiten für alle Tokens generiert.
 Das heißt, die Ausgabe ist ein Vektor, der als Dimensionalität die Länge des Vokabulars der Tokens besitzt.
 Welches Token am Ende generiert wird, kann zum Beispiel mit einem Greedy-Algorithmus bestimmt werden, der immer das Wort mit der größten Wahrscheinlichkeit auswählt.
 Andere Auswahlmöglichkeiten wären zum Beispiel mit einem Beam-Search-Algorithmus möglich, bei dem mehrere Sequenzen generiert werden, um erst später zu schauen, welche Sequenz insgesamt die höchste Wahrscheinlichkeit besitzt.
 In dieser Phase kann auch eine Zufallsvariable eingeführt werden, die immer ein Token aus den wahrscheinlichsten Token auswählt, um bei mehrfacher Wiederholung eines Prompts verschiedene Ergebnisse zu liefern.
 
-Um bei dem Beispiel von oben zu bleiben, würde der Decoder zum Beispiel versuchen, den Satz zu vollenden mit „Alice fuhr gestern durch die Nürnberger Innenstadt und bewunderte die beeindruckenden mittelalterlichen Bauwerke.“~\cite{vaswani2023}
+Bei dem Beispiel von oben würde der Decoder ggf. versuchen, den Satz zu vollenden mit „Alice fuhr gestern durch die Nürnberger Innenstadt und bewunderte die beeindruckenden mittelalterlichen Bauwerke.“~\cite{vaswani2023}
 
 \myfigure{transformer_architecture.png}{Transformer Architektur aus \cite{vaswani2023}}{transformer_architecture}
 
@@ -314,7 +314,7 @@ Weitere bekannte Chatbots sind Google Gemini~\cite{gemini}, die Claude-Chatbots~
 
 Neben den bekannten kommerziellen Chatbots, die von großen Tech-Firmen entwickelt werden, entstehen immer mehr Open-Source-Modelle, die zwar (noch) nicht so leistungsstark sind, aber auf eigener Hardware lokal laufen können.
 Bekannte Open-Source-Modelle sind zum Beispiel Gemma von Google~\cite{banks2024}, LLama 2 von Meta~\cite{touvron2023} oder Mixtral von Mistral AI~\cite{jiang2024}.
-Diese Open-Source-Modelle sind meist wesentlich kleiner als die kommerziellen Chatbots und können somit auf lokaler Consumer-Hardware laufen.
+Diese Open-Source-Modelle sind meist wesentlich kleiner als die kommerziellen Chatbots und sind somit auf lokaler Consumer-Hardware ausführbar.
 Typische Größen für Open-Source-LLMs sind 7 Milliarden-, 13 Milliarden-, 30 Milliarden- und 70 Milliarden-Parameter~\cite{touvron2023}, das neueste Google-Gemma-Modell hat sogar eine Variante mit nur 2 Milliarden-Parametern~\cite{banks2024}.
 
 Die Vorteile eines selbst gehosteten LLMs sind vor allem die Datensicherheit und die Möglichkeit, die Modelle auf die eigenen Aufgaben zu spezialisieren durch die Technik des Fine-Tunings~\cite{ouyang}.
@@ -344,7 +344,7 @@ Bitext Mining, Classification, Clustering, Pair Classification, Reranking, Retri
 Für diese Arbeit sind vor allem die einzelnen Aufgabenbereiche Retrieval und Reranking interessant. 
 Im Bereich Retrieval besteht die Aufgabe, aus einer großen Menge an Daten, relevante Dokumente zu einem bestimmten Thema zu finden.
 Bei der Reranking-Aufgabe gilt es, eine Liste an potenziell passenden Dokumenten nach Wichtigkeit zu sortieren.
-Im Aufgabenbereich Retrieval werden die einzelnen Embeddings auf 15 verschiedene Datenbestände evaluiert.~\cite{muennighoff2023}
+Im Aufgabenbereich Retrieval werden die einzelnen Embeddings auf 15 verschiedene Datenbeständen evaluiert.~\cite{muennighoff2023}
 
 Leider ist eine Evaluation auf deutscher Sprache noch nicht möglich, da zu wenig Datenbestände zur Verfügung stehen.
 In Zukunft, wenn mehr Datenbestände für die deutsche Sprache entwickelt wurden, wird die Evaluation um eine deutsche Kategorie erweitert.~\cite{muennighoff2023a}
