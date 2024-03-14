@@ -153,7 +153,7 @@ Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wie
 Schwieriger wird es, wenn die Useranfrage mehrere Wörter beinhaltet. 
 Möchte sich der User über das Thema \qt{Zugspitze wandern} informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
 Dann müsste man dementsprechend auch ein Algorithmus entwickeln, der diese dann sinnvoll hierarchisiert. 
-Das Wort \qt{Zugspietzt}
+Das Wort \qt{Zugspitze}
 
 \subsubsection{TF-IDF}
 
@@ -165,3 +165,13 @@ Dann wird für jedes einzelne Segment die Anzahl jeder in ihm auftretenden Token
 Für den Satz: „Auf der Zugspitze gibt es viele Wanderer, die die Zugspitze lieben“. 
 In diesem Fall würde in der TF Matrix an der Stelle Zugspitze eine 2 Stehen, in der Zeile Wandern aber 0, da zwar das Wort Wanderer, aber nicht das Wort wandern vorkommt. 
 Da diese beiden Worte aber sehr ähnlich sind und der User bei einer Anfrage nicht immer nach verschiedenen Versionen eines Wortes suchen will, um dann ein zufriedenstellendes Audio zu erhalten
+
+Da für exakte Keywortsuche solche Begriffe fast nie auftreten, lohnt es sich, 
+
+
+Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort \qt{Klimakrise} würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
+Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene Zeit überbrücken. 
+Allerdings ist dieser Ansatz wenig Vielversprechend. 
+
+\section{PDFs auslesen}
+da sie die exakte Wortwahl der Podcasts enthalten, als PDF-Format sind sie allerdings schwierig maschinell auszulesen und weiterhin

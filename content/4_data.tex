@@ -13,29 +13,29 @@ Für diese Arbeit wurde versucht, möglichst qualitativ hochwertige Daten zu ben
 Als Audiomaterial würden sich am besten Podcasts eignen, in denen über verschiedene Themen sachlich gesprochen wird, die Informationen aber gleichzeitig faktisch korrekt sind.
 Außerdem sollten die Audioquellen frei verfügbar sein, damit keine Urheberrechtsverletzung stattfindet.
 
-\section{Audiodaten beschaffen}
+\section{Beschaffung der Audiodaten}
 
 \subsection{Die ARD-Audiothek}
 
-Die ARD-Audiothek ist in Deutschland eine der größten Audio- und Podcastanbieter mit mittlerweile über 100.000 verschiedenen verfügbaren Audioinhalten und über 41 Millionen Audioabrufen.
-Alle Inhalte unterliegen den journalistischen Grundsätzen der ARD und bieten somit einen sorgfältigen Qualitätsstandard.
+Die ARD-Audiothek ist in Deutschland eine der größten Audio- und Podcastanbieter mit mittlerweile über 100.000 verschiedenen verfügbaren Audioinhalten und über 116 Millionen Audioabrufen allein im Jahr 2023~\cite{2024a}.
+Alle Inhalte unterliegen den journalistischen Grundsätzen der ARD und bieten somit einen sorgfältigen Qualitätsstandard~\cite{2024b}.
 Die verschiedenen Audioinhalte stammen von den einzelnen Landesrundfunkanstalten, der ARD und dem Deutschlandradio und liefern eine Vielzahl verschiedener Inhalte.
 Sie enthält über 2000 verschiedene Podcasts in vielen unterschiedlichen Kategorien, wie Comedy, Sport, Wissenschaft, Wirtschaft, Gesellschaft, Kunst, Musik oder Philosophie.
 In dieser Audiothek gibt es zudem Hörbücher, Hörspiele oder Podcasts nur für Kinder.
-Die einzelnen Rundfunkanstalten tragen außerdem eigene Podcasts bei, die meist einen regionalen Kontext haben, wie zum Beispiel der Podcast „Giga Grünheide“ über das Tesla-Werk in Brandenburg vom rbb.
-Alle diese Inhalte sind kostenlos und frei verfügbar und stellen eine gute Quelle für das Audiomaterial dar, das in dieser Arbeit verwendet wird.
+Die einzelnen Rundfunkanstalten tragen außerdem eigene Podcasts bei, die meist einen regionalen Kontext haben, wie zum Beispiel der Podcast „Giga Grünheide“ über das Tesla-Werk in Brandenburg vom rbb~\cite{zotero-523}.
+Alle diese Inhalte sind für nicht-kommerzielle Forschungsprojekte kostenlos und frei verfügbar und stellen eine gute Quelle für das Audiomaterial dar, das in dieser Arbeit verwendet wird~\cite{zotero-525}.
 
 \subsection{Podcastreihe Radiowissen}
 
 Zur automatischen Generierung von Podcast-Episoden bietet es sich an, dass in den Ausgangsaudios die Sprache klar und verständlich ist und verschiedene Sprecher sich nicht ins Wort fallen bzw. gleichzeitig reden.
 Außerdem ist es wünschenswert, die ausgeschnittenen Audiosegmente an klaren Satzgrenzen zu teilen, sodass der Ausschnitt nicht mitten im Satz beginnt und den Zuhörenden der Kontext vorenthalten wird.
 
-Aufgrund dieser Kriterien wurde als Datengrundlage die Podcastreihe Radiowissen von Bayern 2 benutzt.
+Aufgrund dieser Kriterien wurde als Datengrundlage die Podcastreihe Radiowissen von Bayern 2~\cite{zotero-527} benutzt.
 Diese ist nicht wie ein klassischer Podcast im Dialogstil aufgebaut, sondern ähnelt einem Hörspiel, bei dem der Text von einem Manuskript abgelesen wird.
 Dazu kommen verschiedene Geräusche und Stimmen, um den Hörenden mehr Abwechslung zu bieten.
 
 Der Fokus der einzelnen Episoden liegt auf interessanten Beiträgen zu verschiedenen Themen, die häufig Gebiete der Geschichte, Naturwissenschaft, Gesellschaft oder Philosophie umfassen.
-Beispielepisoden sind: „Fasten - Verzicht und innerer Gewinn?“, „Die Maus - Anpassungskünstler und gefürchteter Schädling“, oder „Maria Sibylla Merian - Naturforscherin und Künstlerin“.
+Beispielepisoden sind: „Fasten - Verzicht und innerer Gewinn?“, „Die Maus - Anpassungskünstler und gefürchteter Schädling“, oder „Maria Sibylla Merian - Naturforscherin und Künstlerin“.~\cite{zotero-527}
 
 Die mehr als 2000 Episoden wurden von mehr als 150 verschiedenen Autoren geschrieben.
 Dadurch sind die einzelnen Episoden unterschiedlich in ihrer Erzählweise.
@@ -44,23 +44,22 @@ Zudem wird beinahe jeder Podcast abwechselnd von mehreren Stimmen vorgetragen, w
 
 \subsection{Datenbeschaffung über die ARD-Audiothek-API}
 
-Die Inhalte der ARD-Audiothek können entweder direkt über die Webseite erreicht oder mithilfe einer frei benutzbaren Web-GraphQL-API abgefragt werden.
-(\url{https://api.ardaudiothek.de/graphql}) 
+Die Inhalte der ARD-Audiothek können entweder direkt über die Webseite erreicht oder mithilfe einer frei benutzbaren Web-GraphQL-API abgefragt werden~\cite{zotero-529}.
 Über diese Schnittstelle sind alle Informationen, wie Titel, Beschreibungen, Autoren oder auch der Link zum MP3-File jeder Episode abrufbar.
 
 Zunächst müssen alle Downloadlinks zu den einzelnen Episoden ermittelt werden.
-Mit der GraphQL-Abfrage \autoref{ch:graphql-1} werden alle Download-Links zu den Podcast-Episoden des Podcasts „Radio Wissen“ von Bayern 2 ermittelt.
+Mit der GraphQL-Abfrage (s.~\autoref{graphql-1}) werden alle Download-Links zu den Podcast-Episoden des Podcasts „Radio Wissen“ von Bayern 2 ermittelt.
 Das sind (Stand 3. Januar 2024) 2257 Podcast-Episoden.
 
 Alle diese Audiodateien wurden anschließend heruntergeladen und auf einer lokalen Festplatte gespeichert.
 
 Für weitere Analysen und die Kategorisierung der Audiodateien ist es außerdem sinnvoll, die Beschreibungen der einzelnen Episoden und die dazugehörigen Schlagwörter abzufragen, da diese eine kurze Zusammenfassung oder Einordnung der Episoden enthalten.
 Außerdem bietet das Entstehungsdatum der Episoden die Möglichkeit, Informationen später nach Aktualität zu filtern.
-Über die Anfrage \autoref{ch:graphql-2} können all diese Informationen abgefragt werden.
+Über die Anfrage (s.~\autoref{ch:graphql-2} können all diese Informationen abgefragt werden.
 
 Über die API kann auch in einigen Fällen direkt ein Transkript des Audiofiles angefordert werden.
 Allerdings ist die Transkription meist nicht sehr akkurat.
-Näheres dazu in Kapitel \autoref{ch:method}.
+Näheres dazu in \autoref{ch:method}.
 
 \subsection{Audiodatenanalyse}
 
@@ -82,8 +81,8 @@ Die Daten wurden dementsprechend bereinigt und doppelte Audioinhalte nur einmal 
 Zunächst müssen die Daten gesammelt und aufbereitet werden.
 Für dieses Projekt bildet die Datengrundlage die Transkripte bzw. Manuskripte der Podcasts der ARD-Audiothek.
 In der Audiothek selbst gibt es keine Transkripte zu den Podcasts.
-Für den Podcast „Radiowissen“ von Bayern 2 gibt es auf deren Seite die Manuskripte im PDF-Format.
-Diese sind zwar inhaltlich hochqualitativ, da sie die exakte Wortwahl der Podcasts enthalten, als PDF-Format sind sie allerdings schwierig maschinell auszulesen und weiterhin besitzen sie keine Zeitinformationen zu den einzelnen Wörtern.
+Für den Podcast „Radiowissen“ von Bayern 2 gibt es auf deren Seite die Manuskripte im PDF-Format~\cite{rundfunk2024}.
+Diese sind zwar inhaltlich hochqualitativ,  besitzen aber keine Zeitinformationen zu den einzelnen Wörtern.
 Die Zeitinformationen in Form von Zeitstempeln für jedes Wort sind wichtig, um die Audiofiles der Podcasts später an den richtigen Stellen zuzuschneiden.
 
 Ein anderer Ansatz ergibt sich, wenn die Podcasts transkribiert werden.
@@ -111,17 +110,17 @@ Dadurch ist eine spätere Segmentierung nicht mehr möglich und die vorhandenen 
 
 \subsection{Whisper}
 
-Eines der besten kostenlosen Open-Source-ASR-Systeme bietet Whisper von OpenAI.
-Dieses System wurde mit einem maschinellen Lernverfahren auf 680.000 Stunden Audiomaterial in verschiedenen Sprachen trainiert und erreicht damit State-of-the-Art-Performance in Transkriptionen.
+Eines der besten kostenlosen Open-Source-ASR-Systeme bietet Whisper von OpenAI~\cite{radford}.
+Dieses System wurde mit einem maschinellen Lernverfahren auf 680.000 Stunden Audiomaterial in verschiedenen Sprachen trainiert und erreicht damit State-of-the-Art-Performance in Transkriptionen~\cite{radford}.
 Es ist sehr leistungsstark und kann lokal auf eigener Hardware laufen.
 
-Konkret wurde in dieser Arbeit das Projekt faster-whisper verwendet, welches die ursprünglichen Whisper-Modelle mithilfe einer schnelleren Inferenz-Engine neu implementiert.
+Konkret wurde in dieser Arbeit das Projekt faster-whisper~\cite{2024c} verwendet, welches die ursprünglichen Whisper-Modelle mithilfe einer schnelleren Inferenz-Engine neu implementiert.
 faster-whisper bietet außerdem Word-Level-Timestamps im Gegensatz zum ursprünglichen Whisper-Projekt.
 
 Whisper bietet mehrere verschiedene Modelle zur Transkription an.
 Es gibt die Modelle tiny, base, small, medium und large.
 Das Basismodell hat ca. 74 Millionen Parameter und benötigt ca. 1 GB VRAM und ist ca. 16-mal schneller als das Large-Modell.
-Bei einem Test für die Episode 1968-das-ausnahmejahr aus dem Podcast Radiowissen von Bayern 2 schneidet es aber nicht sehr gut ab.
+Bei einem Test für die Episode „1968 - Das Ausnahmejahr“~\cite{zotero-543} aus dem Podcast Radiowissen von Bayern 2 schneidet es aber nicht sehr gut ab.
 Aus dem Wort „Vietnam“ wird „Wirdnam“, aus „Panzer in Prag“ wird „Panzer-Inprac“ und aus „Ohrfeige“ wird „Urfeige“.
 Der vorgetragene Text wurde dabei ohne Störgeräusche und von einer Person flüssig vorgetragen.
 Eine Evaluation der Transkriptionsfähigkeiten mittels einer Word Error Rate (WER) ist nicht durchgeführt worden, da notwendige Vergleichstranskripte nicht vorhanden sind.
@@ -139,7 +138,7 @@ Dabei wurde eine NVIDIA A100-GPU verwendet.
 
 Die Transkripte der Episoden sind im Durchschnitt ca. 2792 Wörter lang und benötigen ungefähr 20 KB Speicherplatz pro Transkript.
 
-\myfigure{transcript_length.png}{Anzahl der Wörter pro transkript}{transcript_length}
+\myfigure{transcript_length.png}{Anzahl der Wörter pro Transkript}{transcript_length}
 
 
 \subsection{Eurovox}
@@ -163,7 +162,7 @@ Für die spätere Analyse der Daten ist es sinnvoll, die einzelnen Wörter in gr
 Für die Wahl der richtigen Segmentgröße gibt es keine einheitliche Lösung.
 Die Wahl hängt unter anderem von der Strukturierung des zu embeddenden Inhaltes, den Fähigkeiten des Embedding-Modells und der Länge und Komplexität der einzelnen User-Queries ab.
 
-Der primitivste Ansatz wäre, die basis Transkripte einfach in Blöcke einer bestimmten Größe aufzuteilen.
+Der primitivste Ansatz wäre, die Transkripte einfach in Blöcke einer bestimmten Größe aufzuteilen.
 Dann wäre jedes Segment zum Beispiel 50 Wörter lang.
 Der offensichtliche Nachteil eines solchen Ansatzes ist, dass die Segmente keinen Bezug zu dem Inhalt der Transkripte besitzen.
 Die resultierenden Segmente würden mitten im Satz anfangen und aufhören und dadurch auch Informationen schlecht repräsentieren.
@@ -189,14 +188,14 @@ Die resultierenden Sätze bieten weniger inhaltlichen Zusammenhang und sind meis
 
 Um dieses Problem zu lösen, muss ein Algorithmus verstehen, welche Satzzeichen die wirklichen Satzenden anzeigen.
 Dies erfordert ein Verständnis der Satzstruktur und ist deswegen nicht trivial möglich.
-Um die Satzgrenzen zu finden, wird deshalb die Open-Source-Sprachbibliothek spaCy verwendet.~\cite{honnibal2017}
+Um die Satzgrenzen zu finden, wird deshalb die Open-Source-Sprachbibliothek spaCy verwendet~\cite{honnibal2017}.
 
 Mithilfe der NLP-Bibliothek spaCy kann ermittelt werden, welche Satzzeichen wirklich die Grenze eines Satzes markieren.
 spaCy verwendet dafür Machine-Learning-Modelle, die aufgrund von vielen Daten gelernt haben, wo das Ende eines Satzes ist.
 Auf der offiziellen Webseite von spaCy werden vier verschiedene Modelle für die deutsche Sprache zur Verfügung gestellt.
 Das Modell \verb|„de_core_news_sm“| ist das kleinste Modell mit 13 MB Größe, dann folgt \verb|„de_core_news_md“| mit einer Größe von 42 MB und \verb|„de_core_news_lg“| ist das größte Modell mit 541 MB.
 Das größte Modell bietet dabei vor allem viele vortrainierte Embedding-Vektoren für einzelne Wörter.
-Das vierte Modell \verb|„de_dep_news_trf“| verbraucht 391 MB Speicherplatz und benutzt eine Transformer-Architektur.
+Das vierte Modell \verb|„de_dep_news_trf“| verbraucht 391 MB Speicherplatz und benutzt eine Transformer-Architektur.~\cite{spacy2024}
 
 spaCy führt eine selbst angegebene Accuracy Evaluation für Sentence Segmentation, also das Erkennen von Satzenden in einem Text, durch.
 Darin ist der F-Score für das kleine Modell gleich 0,94; für das mittlere Modell 0,95 und für das große Modell ebenfalls 0,95.
@@ -210,7 +209,7 @@ Mithilfe dieses Ansatzes wird der folgende Satz beispielsweise richtig erkannt:
 
 Da wichtige Informationen über mehrere Sätze verteilt liegen können, kann es bei einfacher Segmentierung in Sätzen zu dem Problem kommen, dass Informationen über mehrere Sätze verteilt sind.
 Oft ist das zum Beispiel bei Pronomen der Fall, wenn diese sich auf ein Nomen in einem vorherigen Satz beziehen.
-Es gibt mehrere Möglichkeiten, dieses Problem anzugehen, zum Beispiel, indem Koreferenzauflösung durchgeführt wird und dadurch Pronomen durch ihre eigentlichen Substantive ersetzt werden.
+Es gibt mehrere Möglichkeiten, dieses Problem anzugehen, zum Beispiel, indem Koreferenzauflösung~\cite{lee2017} durchgeführt wird und dadurch Pronomen durch ihre eigentlichen Substantive ersetzt werden.
 In einem weiteren Ansatz könnten Segmente aus mehreren Sätzen gewählt werden, die sich gegenseitig überlappen.
 Dann würde jedes Segment auch den Kontext von mehreren Sätzen darstellen und die Informationen über Satzgrenzen hinaus erfassen.
 Beide Ansätze wurden in dieser Arbeit nicht verfolgt, bleiben aber für zukünftige Forschung offen.
@@ -220,27 +219,34 @@ Beide Ansätze wurden in dieser Arbeit nicht verfolgt, bleiben aber für zukünf
 \subsubsection{Lemmatisierung}
 
 Für die Suche mithilfe des TF-IDF Algorithmus, ist es nützlich die Segmente vorher zu bearbeiten.
+Standartmäßig nutzt der TF-IDF Algorithmus als Tokens ganze Wörter.
+Durch effektive Bearbeitungsschritte können allerdings mehrere ähnliche Worte zu einem Stammwort reduziert werden.
+Bei der Suche nach dem Wort \qt{Wandern} sollen zum Beispiel auch Segmente gefunden werden, die die Worte \qt{Wanderung} oder \qt{Wanderer} enthalten.
 Um diese Abbildung von mehreren Worten auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden:
 Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel \qt{Wanderer} und \qt{Wanderung} zu einem Wort \qt{Wander} zu reduzieren.
 Der Vorteil ist, dass der Algorithmus sehr schnell agieren kann, um die Worte auf ihre Stammform zu reduzieren.
 Die Nachteile sind allerdings, dass die Deutsche Sprache sehr viele verschiedene Wortkonstrukte erlaubt, die nicht alle mithilfe von einzelnen Regeln auf ein gemeinsammes Stammwort gebracht werden können. 
 Zum Beispiel bei dem Plural von \qt{Baum}; \qt{Bäume}.
 
+Um auch diese Wörter auf ihre Stammwörter zu reduzieren, kann eine Lemmatisierung erfolgen. 
+Bei der Lemmatisierung gibt es eine vordefinierte Tabelle, die für jedes Wort einen Eintrag auf das Stammwort besitzt. 
+Einen solchen Lemmatisierer bietet zum Beispiel die Sprachbibliothek spaCy. 
+Dafür wird das Modell \verb|„de_core_news_md“| verwendet, da es bei der Accuracy Evaluation einen F-Score von 0,98 erreicht und damit ebenso gut ist wie das \verb|„de_core_news_lg“| und besser als \verb|„de_core_news_sm“|.~\cite{spacy2024}
+Das Vokabular der von Whisper transkribierten Podcast-Episoden umfasst 235.528 verschiedene Wörter.
+Mithilfe des Lemmatisierungsprozesses schrumpft das Vokabular um 15\% auf 200.341.
 
-\subsubsection{Kompositatrennung Pyphen vs german compound splitter}
+
+\subsubsection{Kompositatrennung mit german compound splitter}
 
 Als weiteren Vorverarbeitungsschritt für die effiziente Keywordsuche kann man zusammengesetzte Wörter in ihre bestandteile auftrennen.
 Das Vokabular des Datensazes besteht zu 61\% aus Nomen. 
 Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, wie zum Beispiel \qt{Reichsdeputationshauptschlussakte}, oder \qt{Hochgeschwindigkeitstransportmittel}.
 In dem ganzen Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben.
-Da für exakte Keywortsuche solche Begriffe fast nie auftreten, lohnt es sich, 
+Der Lemmatisierer von spaCy kann viele dieser Worte leider nicht auf Stammworte zurückführen, da sie nicht in seinem Vokabular auftreten.
 
-
-Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort \qt{Klimakrise} würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
-Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene Zeit überbrücken. 
-Allerdings ist dieser Ansatz wenig Vielversprechend. 
-
-
+In dieser Arbeit wird das Projekt \verb|german_compound_splitter|\cite{repodiac2023} verwendet, um zusammengesetzte Nomen in ihre Bestandteile zu zerlegen. 
+Dafür werden die Wörter basierend auf dem Free German Dictionary\cite{2021} so gut wie möglich in ihre einzelnen Grundwörter zerlegt. 
+Mithilfe dieser Aufspaltung zusammengesetzter Nomen schrumpft das Vokabular um weitere 63\% auf nur 73.395 verschiedene Wörter.
 
 
 \section{Datenspeicherung}
@@ -248,22 +254,22 @@ Allerdings ist dieser Ansatz wenig Vielversprechend.
 \subsection{Datenspeicherung SQLite}
 
 Für die Analyse werden die MP3-Dateien der einzelnen Podcast-Episoden in einem separaten Ordner gespeichert und die Benennung der originalen Dateien stammt aus der Download-URL.
-Zur Speicherung der Transkripte wird das relationale Datenbankmanagementsystem (RDBMS) SQLite eingesetzt. 
+Zur Speicherung der Transkripte wird das relationale Datenbankmanagementsystem (RDBMS) SQLite~\cite{zotero-553} eingesetzt. 
 SQLite ist für Datenanalysezwecke sehr gut geeignet, weil es simpel und performant ist und als Open-Source-Projekt kostenlos verwendet werden kann.
 Im Gegensatz zu anderen RDBMS, wie MySQL oder PostgreSQL, arbeitet SQLite serverunabhängig und speichert alle Tabellen in einer einzigen Datei, was sehr nützlich für den Datenaustausch zwischen verschiedenen Geräten ist.
 Für einige Operationen, wie die Transkription der Audiodateien oder die Generierung von Embeddings, wird die Hardware eines High-Performance-Clusters der Technischen Hochschule Nürnberg genutzt.
 Um die Daten zu analysieren und zu nutzen, bietet es sich an, auf Consumer-Hardware zu wechseln, und dafür ist eine gute Portabilität der Datenbank von Vorteil.
 
-SQLite unterstützt Datenmengen bis zu 140 TB.
-Allerdings wird auf der offiziellen Webseite angegeben, dass ab einer Größe von 1 TB auf serverbasierte RDBMS umgestiegen werden sollte, da die gesamte Datenbank in einem File gespeichert wird und viele Client-Betriebssysteme eine maximale Größe der Dateien vorgeben.
+SQLite unterstützt Datenmengen bis zu 281 TB~\cite{zotero-553}.
+Allerdings wird auf der offiziellen Webseite angegeben, dass ab einer Größe von 1 TB auf serverbasierte RDBMS umgestiegen werden sollte, da die gesamte Datenbank in einem File gespeichert wird und viele Client-Betriebssysteme eine maximale Größe der Dateien vorgeben~\cite{zotero-553}.
 Falls das Projekt in der Zukunft auf mehrere Podcastreihen ausgeweitet wird, sollte vor diesem Hintergrund ein Wechsel des DBMS in Betracht gezogen werden.
 
 \subsection{Datenspeicherung Vektoren SQLite}
 
-Da SQLite nativ keine Listen oder Tabellen als Einträge in einer Datenbank speichern kann, ist es nicht trivial, die Embeddings abzuspeichern.
+Da SQLite nativ keine Listen oder Tabellen als Einträge in einer Datenbank speichern kann, ist es nicht trivial, die Embeddings abzuspeichern~\cite{zotero-555}.
 Zunächst wurde die Möglichkeit in Betracht gezogen, jeden einzelnen Eintrag aus einem Embedding-Vektor als separaten Eintrag in einer Tabelle zu speichern.
 
-Das führt allerdings zu sehr ineffizienten Abfragen der Daten und beim Einfügen von Daten limitiert SQLite die Anzahl der Parameter, sodass längere Embeddings umständlich gestückelt abgespeichert werden müssten.
+Das führt allerdings zu sehr ineffizienten Abfragen der Daten und beim Einfügen von Daten limitiert SQLite die Anzahl der Parameter, sodass längere Embeddings umständlich gestückelt abgespeichert werden müssten~\cite{zotero-557}.
 
 Als Nächstes wurde überprüft, ob die Embeddings als serialisiertes Array abgespeichert werden können.
 Dafür wurde jedes Embedding in einen JSON-String umgewandelt, der dann gespeichert werden soll.
@@ -284,7 +290,7 @@ Es gibt verschiedene Approximate Nearest Neighbour-Algorithmen, die alle darauf 
 Dabei werden oft Baum-Strukturen verwendet, um die Suche effizienter zu gestalten.
 Speziell Algorithmen wie Hierarchical Navigable Small Worlds werden von vielen Vektordatenbanken benutzt \cite{malkov2020}.
 
-In dieser Arbeit wird die Vektordatenbank Chroma verwendet.
+In dieser Arbeit wird die Vektordatenbank Chroma~\cite{zotero-559} verwendet.
 Chroma ist eine einfache Vektordatenbank, die die Daten sowohl lokal als auch über eine Client-Server-Schnittstelle speichern kann.
 Das Projekt ist erst im Mai 2022 als Start-up entstanden, verfügt aber mittlerweile über viele Features, die die Datenverwaltung erheblich vereinfachen.
 Die Datenbank ist dabei mit einer NoSQL-Datenbank zu vergleichen, indem die Daten nicht relational in Tabellen, sondern in einer Collection als Objekte mit verschiedenen Metadaten gespeichert werden.
@@ -297,7 +303,7 @@ Das sichert die Vergleichbarkeit der verschiedenen Vektoren untereinander.
 
 ChromaDB bietet nativen Support für verschiedene Embedding-Modelle von OpenAI, Hugging Face, Cohere, Instructorembedding und JinaAI~\cite{chroma}.
 Dafür müssen nur das Modell und der plattformspezifische API-Schlüssel angegeben werden und Chroma erstellt automatisch für jedes Dokument das Embedding.
-Standardmäßig ist das Embedding des Sentence Transformer-Modells all-MiniLM-L6-v2 eingestellt.
+Standardmäßig ist das Embedding des Sentence Transformer-Modells all-MiniLM-L6-v2 eingestellt~\cite{chroma}.
 Alternativ können auch schon vorgefertigte Embeddings eingefügt und die dazugehörige Embedding-Funktion eingetragen werden.
 In dieser Arbeit wurden die Embeddings von OpenAI und all-MiniLM-L6-v2 schon vorher erstellt und dann erst eingetragen.
 

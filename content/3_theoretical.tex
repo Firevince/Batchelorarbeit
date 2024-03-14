@@ -290,65 +290,66 @@ In dieser Phase kann auch eine Zufallsvariable eingeführt werden, die immer ein
 
 Um bei dem Beispiel von oben zu bleiben, würde der Decoder zum Beispiel versuchen, den Satz zu vollenden mit „Alice fuhr gestern durch die Nürnberger Innenstadt und bewunderte die beeindruckenden mittelalterlichen Bauwerke.“~\cite{vaswani2023}
 
-\myfigure{transformer_architecture.png}{Transformer Architekut}{transformer_architecture}
+\myfigure{transformer_architecture.png}{Transformer Architektur aus \cite{vaswani2023}}{transformer_architecture}
 
 
 \section{Large Language Model}
 
 Large Language Model (LLM) bezeichnet ein Sprachmodell, das auf vielen Parametern trainiert wurde.
-Die meisten modernen LLMs basieren auf der Transformerarchitektur, um aus einer Inputsequenz mithilfe des Encoders und des Decoders wieder eine Outputsequenz zu generieren.
+Viele modernen LLMs basieren auf der Transformerarchitektur~\cite{patwardhan2023}, um aus einer Inputsequenz mithilfe des Encoders und des Decoders wieder eine Outputsequenz zu generieren.
 
 Technisch gesehen ist die Funktionsweise eines LLMs nur eine Next-Token-Prediction.
 Dabei wird nach Verarbeitung der Inputsequenz eine Wahrscheinlichkeit des Auftretens verschiedener Token ermittelt.
 Das LLM generiert so einfach nur Sätze, die in dem vorherigen Kontext Sinn ergeben.
 Durch weitere Techniken des Finetunings können die LLMs dazu gebracht werden, auf Fragen zu antworten oder Anweisungen zu befolgen.
-Die LLMs werden mit weiteren Daten trainiert, in denen zum Beispiel das Antworten auf Fragen explizit demonstriert wird.
+Die LLMs werden mit weiteren Daten trainiert, in denen zum Beispiel das Antworten auf Fragen explizit demonstriert wird~\cite{ouyang}.
 Verschiedene LLMs können dabei auf unterschiedliche Aufgaben spezialisiert werden.
-LLMs werden zum Beispiel für Chatbots, Text-Übersetzungen, Sprach-Übersetzungen, Named Entity Recognition, Sentimentanalyse oder Klassifikation eingesetzt.
+LLMs werden zum Beispiel für Chatbots, Text-Übersetzungen, Sprach-Übersetzungen, Named Entity Recognition, Sentimentanalyse oder Klassifikation eingesetzt~\cite{patwardhan2023}.
 
 \section{Chatbots}
 
 Besonders die LLM-gestützten Chatbots werden aufgrund ihrer Leistungsfähigkeit immer beliebter.
-Der bekannteste Chatbot ist ChatGPT von OpenAI, welcher über 100 Millionen Nutzer und über eine Milliarde Aufrufe im Monat hat~\cite{tong2023}.
-Weitere bekannte Chatbots sind Google Gemini, die Claude-Chatbots von der Firma Anthropic oder Pi von Inflection AI.
+Der bekannteste Chatbot ist ChatGPT von OpenAI~\cite{chatgpt}, welcher über 100 Millionen Nutzer und über eine Milliarde Aufrufe im Monat hat~\cite{tong2023}.
+Weitere bekannte Chatbots sind Google Gemini~\cite{gemini}, die Claude-Chatbots~\cite{claude} von der Firma Anthropic oder Pi von Inflection AI~\cite{pi}.
 
 Neben den bekannten kommerziellen Chatbots, die von großen Tech-Firmen entwickelt werden, entstehen immer mehr Open-Source-Modelle, die zwar (noch) nicht so leistungsstark sind, aber auf eigener Hardware lokal laufen können.
-Bekannte Open-Source-Modelle sind zum Beispiel Gemma von Google, LLama 2 von Meta oder Mixtral von Mistral AI.
+Bekannte Open-Source-Modelle sind zum Beispiel Gemma von Google~\cite{banks2024}, LLama 2 von Meta~\cite{touvron2023} oder Mixtral von Mistral AI~\cite{jiang2024}.
 Diese Open-Source-Modelle sind meist wesentlich kleiner als die kommerziellen Chatbots und können somit auf lokaler Consumer-Hardware laufen.
-Typische Größen für Open-Source-LLMs sind 7 Milliarden-, 13 Milliarden-, 30 Milliarden- und 70 Milliarden-Parameter, das neueste Google-Gemma-Modell hat sogar eine Variante mit nur 2 Milliarden-Parametern.
+Typische Größen für Open-Source-LLMs sind 7 Milliarden-, 13 Milliarden-, 30 Milliarden- und 70 Milliarden-Parameter~\cite{touvron2023}, das neueste Google-Gemma-Modell hat sogar eine Variante mit nur 2 Milliarden-Parametern~\cite{banks2024}.
 
-Die Vorteile eines selbst gehosteten LLMs sind vor allem die Datensicherheit und die Möglichkeit, die Modelle auf die eigenen Aufgaben zu spezialisieren durch die Technik des Fine-Tunings.
+Die Vorteile eines selbst gehosteten LLMs sind vor allem die Datensicherheit und die Möglichkeit, die Modelle auf die eigenen Aufgaben zu spezialisieren durch die Technik des Fine-Tunings~\cite{ouyang}.
 Dabei werden Basis-Chatbots wie LLama 2 auf weiteren spezifischen Beispielen trainiert, um bestimmte Fähigkeiten des Modells zu verbessern.
 
-In dieser Arbeit wird aufgrund von fehlenden konsistenten Hardwareressourcen und zugunsten der Schnelligkeit noch auf das kommerzielle Produkt ChatGPT zugegriffen, um eigene Datenverarbeitungen durchzuführen.
+In dieser Arbeit wird aufgrund von fehlenden konsistenten Hardwareressourcen und zugunsten der Schnelligkeit noch auf das kommerzielle Produkt ChatGPT~\cite{chatgpt} zugegriffen, um Datenverarbeitungen durchzuführen.
 In Zukunft könnte aufgrund der immer besseren und kleineren Open-Source-LLMs diese Funktionalität auch auf selbstgehostete LLMs verlagert werden.
 
 \section{Hugging Face}
 
 Da es mittlerweile eine Vielzahl unterschiedlicher LLMs gibt, die alle verschiedene spezielle Aufgaben besitzen und in bestimmten Aspekten jeweils Vor- und Nachteile aufweisen, ist es sinnvoll, diese untereinander vergleichen zu können.
-Eine solche Vergleichsmöglichkeit bietet die Plattform Hugging Face, auf der über 500.000 Machine-Learning-Modelle, davon mehr als 200.000 Transformer, gehostet werden.
+Eine solche Vergleichsmöglichkeit bietet die Plattform Hugging Face~\cite{wolf2020}, auf der über 500.000 Machine-Learning-Modelle, davon mehr als 200.000 Transformer, gehostet werden.
 
-In der Kategorie „Question Answering“ gibt es über 1300 Einträge und in der Kategorie „Sentence Similarity“ ca. 3000.
+In der Kategorie „Question Answering“ gibt es über 1300 Einträge und in der Kategorie „Sentence Similarity“ ca. 3000~\cite{2024}.
 In beiden Kategorien existieren Embedding-Modelle.
 Die einzelnen Modelle können kostenlos heruntergeladen werden, sie sind ausführlich dokumentiert und sie sind untereinander mithilfe einer Punkteabgabe auf verschiedenen Kontroll-Datensätzen vergleichbar.
 Durch Leaderboards können die besten Modelle bestimmt werden.
 
 \section{Massive Text Embedding Benchmark}
 
-Hier wird beispielhaft das Massive Text Embedding Benchmark (MTEB) Leaderboard \url{https://huggingface.co/spaces/mteb/leaderboard} betrachtet.
+Hier wird beispielhaft das Massive Text Embedding Benchmark (MTEB)~\cite{muennighoff2023} Leaderboard  betrachtet.
 
-Auf diesem Leaderboard werden Embedding-Modelle auf 58 verschiedenen Datenbeständen in 112 Sprachen evaluiert.
+Auf diesem Leaderboard werden Embedding-Modelle auf 58 verschiedenen Datenbeständen in 112 Sprachen evaluiert~\cite{muennighoff2023}.
 Die Datenbestände sind dabei in acht verschiedene Aufgabenkategorien geteilt:
 Bitext Mining, Classification, Clustering, Pair Classification, Reranking, Retrieval, Semantic Textual Similarity und Summarization.
 
-Für diese Arbeit sind vor allem die einzelnen Aufgabenbereiche Retrieval und Reranking interessant. Im Bereich Retrieval besteht die Aufgabe, aus einer großen Menge an Daten, relevante Dokumente zu einem bestimmten Thema zu finden.
+Für diese Arbeit sind vor allem die einzelnen Aufgabenbereiche Retrieval und Reranking interessant. 
+Im Bereich Retrieval besteht die Aufgabe, aus einer großen Menge an Daten, relevante Dokumente zu einem bestimmten Thema zu finden.
 Bei der Reranking-Aufgabe gilt es, eine Liste an potenziell passenden Dokumenten nach Wichtigkeit zu sortieren.
 Im Aufgabenbereich Retrieval werden die einzelnen Embeddings auf 15 verschiedene Datenbestände evaluiert.~\cite{muennighoff2023}
 
 Leider ist eine Evaluation auf deutscher Sprache noch nicht möglich, da zu wenig Datenbestände zur Verfügung stehen.
 In Zukunft, wenn mehr Datenbestände für die deutsche Sprache entwickelt wurden, wird die Evaluation um eine deutsche Kategorie erweitert.~\cite{muennighoff2023a}
-In Kapitel \autoref{ch:experiments} wird versucht, die besten Embedding-Modelle für die Retrieval-Aufgabe des Podcast-Generators zu ermitteln.
+In \autoref{ch:experiments} wird versucht, die besten Embedding-Modelle für die Retrieval-Aufgabe des Podcast-Generators zu ermitteln.
 
-\myfigure{mteb.png}{Die einzelnen Datensätze in MTEB}{mteb}
+\myfigure{mteb.png}{Die einzelnen Datensätze in MTEB aus \cite{muennighoff2023}}{mteb}
 
-\myfigure{mteb_screenshot.png}{Screenshhot des MTEB Leaderboards}{mteb_screenshot}
+\myfigure{mteb_screenshot.png}{Screenshhot des MTEB Leaderboards \cite{mteb}}{mteb_screenshot}
