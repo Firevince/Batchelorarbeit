@@ -215,6 +215,34 @@ In einem weiteren Ansatz könnten Segmente aus mehreren Sätzen gewählt werden,
 Dann würde jedes Segment auch den Kontext von mehreren Sätzen darstellen und die Informationen über Satzgrenzen hinaus erfassen.
 Beide Ansätze wurden in dieser Arbeit nicht verfolgt, bleiben aber für zukünftige Forschung offen.
 
+\subsection{Segmente für TF-IDF vorbereiten}
+
+\subsubsection{Lemmatisierung}
+
+Für die Suche mithilfe des TF-IDF Algorithmus, ist es nützlich die Segmente vorher zu bearbeiten.
+Um diese Abbildung von mehreren Worten auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden:
+Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel \qt{Wanderer} und \qt{Wanderung} zu einem Wort \qt{Wander} zu reduzieren.
+Der Vorteil ist, dass der Algorithmus sehr schnell agieren kann, um die Worte auf ihre Stammform zu reduzieren.
+Die Nachteile sind allerdings, dass die Deutsche Sprache sehr viele verschiedene Wortkonstrukte erlaubt, die nicht alle mithilfe von einzelnen Regeln auf ein gemeinsammes Stammwort gebracht werden können. 
+Zum Beispiel bei dem Plural von \qt{Baum}; \qt{Bäume}.
+
+
+\subsubsection{Kompositatrennung Pyphen vs german compound splitter}
+
+Als weiteren Vorverarbeitungsschritt für die effiziente Keywordsuche kann man zusammengesetzte Wörter in ihre bestandteile auftrennen.
+Das Vokabular des Datensazes besteht zu 61\% aus Nomen. 
+Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, wie zum Beispiel \qt{Reichsdeputationshauptschlussakte}, oder \qt{Hochgeschwindigkeitstransportmittel}.
+In dem ganzen Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben.
+Da für exakte Keywortsuche solche Begriffe fast nie auftreten, lohnt es sich, 
+
+
+Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort \qt{Klimakrise} würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
+Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene Zeit überbrücken. 
+Allerdings ist dieser Ansatz wenig Vielversprechend. 
+
+
+
+
 \section{Datenspeicherung}
 
 \subsection{Datenspeicherung SQLite}

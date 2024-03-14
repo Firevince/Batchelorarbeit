@@ -7,9 +7,9 @@ Die generierte Podcast-Episode besteht dabei aus einem Zusammenschnitt aus versc
 Die wichtigste Aufgabe besteht also darin, die wesentlichen Abschnitte aus den Episoden herauszufinden.
 Dazu muss das System verstehen, welche Abschnitte zu verschiedenen Anfragen passen.
 
-Das Thema Information Retrieval (Informationsrückgewinnung) bezeichnet den Vorgang, aus einer großen Menge unsortierter Daten bestimmte Informationen wieder zu extrahieren.
+Das Thema Information Retrieval (Informationsrückgewinnung) bezeichnet den Vorgang, aus einer großen Menge unsortierter Daten bestimmte Informationen wieder zu extrahieren \cite{chowdhury2010}.
 Im Gegensatz zum Data-Mining werden dabei keine neuen Daten erschaffen, sondern lediglich bereits existierendes Wissen wieder zur Verfügung gestellt.
-Ein bekanntes Beispiel eines Information Retrieval Algorithmus ist der PageRank-Algorithmus für die Suchmaschine Google.
+Ein bekanntes Beispiel eines Information Retrieval Algorithmus ist der PageRank-Algorithmus für die Suchmaschine Google \cite{page}.
 Suchmaschinen sind das Paradebeispiel eines Information Retrieval Systems.
 Ein User gibt Stichworte ein, über die er mehr Informationen erhalten möchte und erhält daraufhin Links zu Webseiten, die diese Informationen wahrscheinlich enthalten.
 
@@ -27,64 +27,64 @@ Das alles macht es für Computer sehr schwierig, die menschliche Sprache zu vers
 Neuere Forschung im Bereich des Natural Language Processing bietet einige Ansätze, um dieses Problem zu lösen.
 Es gibt dazu viele verschiedene Methoden, die alle darauf abzielen, Worte oder Texte in Vektoren umzuwandeln, die den Inhalt dieser Worte oder dieser Texte repräsentieren.
 Diese Vektoren nennt man Embeddings.
-Das Ziel dieser Embeddings besteht für unseren Zweck darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
+Das Ziel dieser Embeddings besteht darin, eine Suchfunktion zu beschreiben, die auf eine Anfrage (Query) hin passende Dokumente aus einem großen Korpus an Dokumenten liefern kann.
 
 \subsection{Entwicklung der Embeddingverfahren}
 
-Die ersten Algorithmen mit dem Ziel, eine große Anzahl von Dokumenten durchsuchen zu können, waren Suchalgorithmen wie TF-IDF oder BM25, die in den 1970er Jahren aufkamen.
+Die ersten Algorithmen mit dem Ziel, eine große Anzahl von Dokumenten durchsuchen zu können, waren Suchalgorithmen wie TF-IDF~\cite{sparckjones1972} oder BM25~\cite{harman1995}, die in den 1970er Jahren aufkamen.
 Diese versuchten, Worthäufigkeiten als Anhaltspunkt zu nehmen, um Ähnlichkeiten zwischen Dokumenten zu erkennen und Suchfunktionen aufzubauen.
 
-Semantische Analysen begannen erst ab ca. 1990 mit der Latenten Semantischen Analyse (LSA).
+Semantische Analysen begannen erst ab ca. 1990 mit der Latenten Semantischen Analyse (LSA)~\cite{landauer1997}.
 Diese verwendet Eigenvektoren, um aus einer Term-Frequency Matrix versteckte (latente) Eigenschaften zu ermitteln, welche die Dokumente besser repräsentieren als die TF-Matrix an sich.
 Es werden von diesen Eigenvektoren nur die wichtigsten ausgewählt, sodass jedes Dokument sehr gut als eine Linearkombination dieser Vektoren repräsentiert werden kann.
 So werden nur noch die Koeffizienten dieser Vektoren gespeichert und man kann von einer Dimensionsreduktion profitieren.
 Die resultierenden Koeffizienten-Vektoren sind nun nicht mehr spärlich besetzt, sondern dicht, und die resultierenden Eigenvektoren bilden häufig latente Themen der Dokumente ab.
 
-Semantische Word Embeddings erlangten erst mit der Veröffentlichung von Word2Vec (2013) eine breitere Nutzung.
+Semantische Word Embeddings erlangten erst mit der Veröffentlichung von Word2Vec~\cite{mikolov2013} im Jahr 2013 eine breitere Nutzung.
 Word2Vec verwendet ein neuronales Netz, um mithilfe der benachbarten Wörter Kontextinformationen über das eigentliche Wort zu erhalten.
 Dafür gibt es die beiden Ansätze Continuous Bag of Words und Skip-Gram.
 Beim Continuous Bag of Words-Ansatz erhält das neuronale Netz die umgebenden Wörter als Input und das Modell hat die Aufgabe, daraus das Zielwort zu ermitteln.
 Dieses Verfahren wird in einem Sliding Window für jedes Wort aus einem Text wiederholt.
 Für einen bestimmten Korpus aus verschiedenen Dokumenten kann dieses Modell dadurch die Beziehungen verschiedener Worte zueinander und die Ähnlichkeit verschiedener Worte, die oft im gleichen Kontext vorkommen, erlernen.
 Das Verfahren des Skip-Gram funktioniert ähnlich, allerdings wird dabei für jedes Wort versucht, die umliegenden Worte zu ermitteln.
-Dieser Ansatz dauert länger im Training, hat aber den Vorteil, dass er auch seltener vorkommende Worte gut repräsentieren kann.
+Dieser Ansatz dauert länger im Training, hat aber den Vorteil, dass er auch seltener vorkommende Worte gut repräsentieren kann.~\cite{mikolov2013}
 
-Ein Jahr später wurde GloVe (Global Vectors for Word Representation) als Forschungsprojekt von der Stanford Universität vorgestellt.
+Ein Jahr später wurde GloVe (Global Vectors for Word Representation)~\cite{pennington2014} als Forschungsprojekt von der Stanford Universität vorgestellt.
 GloVe verbindet Konzepte aus LSA und Word2Vec, indem es auf der Faktorisierung einer globalen Matrix beruht, aber die Distanz von Worten zueinander mitberücksichtigt.
-Dadurch schaffte GloVe eine weitere Verbesserung der Embeddings und wird heutzutage noch unter anderem in NLP-Bibliotheken wie spaCy verwendet.
+Dadurch schaffte GloVe eine weitere Verbesserung der Embeddings und wird heutzutage noch unter anderem in NLP-Bibliotheken wie spaCy verwendet~\cite{honnibal2017}.
 
-Im Jahre 2018 wurde der Ansatz ELMo (Embeddings from Language Models) für Word Embeddings vorgestellt.
-Dieser benutzt bidirektionale Long Short-Term Memory Modelle (LSTM), um daraus Embeddings zu generieren.
-LSTM-Modelle basieren auf rekurrenten neuronalen Netzen (RNN) und gehören zu den Sequenz-zu-Sequenz-Modellen.
+Im Jahre 2018 wurde der Ansatz ELMo (Embeddings from Language Models)~\cite{peters2018} für Word Embeddings vorgestellt.
+Dieser benutzt bidirektionale Long Short-Term Memory Modelle (LSTM)~\cite{hochreiter1997}, um daraus Embeddings zu generieren.
+LSTM-Modelle basieren auf rekurrenten neuronalen Netzen (RNN)~\cite{dafontouracosta1996} und gehören zu den Sequenz-zu-Sequenz-Modellen.
 Sie bestehen dabei aus einem Encoder und einem Decoder.
 Der Encoder codiert eine Inputsequenz, zum Beispiel ein Dokument, zu einem Embeddingvektor.
 Der Decoder dekodiert diesen Embeddingvektor wieder in eine Sequenz, z.B. eine Zusammenfassung des Dokuments.
 Für ELMo ist dabei nur der Encoder-Teil wichtig.
 Dabei werden zwei Layer von Forward- und Backward-LSTMs eingesetzt, die für jedes Wort den Kontext vor und nach dem Wort berücksichtigen, um semantische Embeddings zu erstellen.
 
-Ein halbes Jahr später wurden die Erstellung von Word- und Sentence-Embeddings durch BERT revolutioniert.
-BERT (Bidirectional Encoder Representations from Transformers)~\cite{devlin2019} ist ein auf NLP-Aufgaben spezialisierter Transformer.
-Das Modell wurde von Google im Jahr 2019 entwickelt und war seinerzeit das beste Modell, da es in elf verschiedenen Aufgaben im Bereich des NLP State-of-the-Art-Ergebnisse lieferte.
+Ein halbes Jahr später wurden die Erstellung von Word- und Sentence-Embeddings durch BERT (Bidirectional Encoder Representations from Transformers)~\cite{devlin2019}revolutioniert.
+BERT ist ein auf NLP-Aufgaben spezialisierter Transformer.
+Das Modell wurde von Google im Jahr 2019 entwickelt und war seinerzeit das beste Modell, da es in elf verschiedenen Aufgaben im Bereich des NLP State-of-the-Art-Ergebnisse lieferte~\cite{devlin2019}.
 Es ist auf zwei Datenbeständen, dem BooksCorpus mit 800 Millionen Worten und der englischen Wikipedia mit 2,5 Milliarden Worten trainiert worden.
 Die Aufgaben im Trainingsprozess waren die Next Sentence Prediction (NSP), bei der das Modell entscheiden muss, ob zwei Sätze wahrscheinlich zusammen vorkommen, und das Masked Language Modeling, bei dem das Modell unkenntlich gemachte Wörter in Sätzen wiederherstellen soll.
 Dadurch hat BERT sowohl auf Wortebene als auch auf Satzebene wichtige Merkmale der Sprache gelernt.
-Durch die große Auswahl an verschiedenen Themen im Trainingsprozess kann das Modell für viele verschiedene Sachverhalte sinnvolle semantische Embeddingvektoren erstellen.
+Durch die große Auswahl an verschiedenen Themen im Trainingsprozess kann das Modell für viele verschiedene Sachverhalte sinnvolle semantische Embeddingvektoren erstellen.~\cite{devlin2019}
 
 Seit der Entdeckung der Transformerarchitektur und der Entstehung von BERT entwickelt sich der Bereich der Embeddingmodelle rasant.
-Täglich werden neue Modelle publiziert und in Abständen von wenigen Wochen erreichen neue Modelle State-of-the-Art-Performance auf populären Benchmarks wie MTEB.
+Täglich werden neue Modelle publiziert und in Abständen von wenigen Wochen erreichen neue Modelle State-of-the-Art-Performance auf populären Benchmarks wie die Massive Text Embedding Benchmark~\cite{muennighoff2023}.
 
 \subsection{Tokenisierer}
 
 Um Textsequenzen mithilfe von Embeddings zu verarbeiten, werden diese Texte zunächst in Tokens zerlegt, bevor sie von einem Embeddingmodell embedded werden.
-Ein Token kann dabei je nach Modell ein einziges Wort, mehrere Worte oder nur ein Bruchteil eines Wortes sein.
-In Machine Learning-Anwendungen nutzt man dafür verschiedene Tokenisierer.
+Ein Token kann dabei je nach Modell ein einziges Wort, mehrere Worte oder nur ein Bruchteil eines Wortes sein.~\cite{he2006}
+In Machine Learning-Anwendungen nutzt man dafür verschiedene Tokenisierer~\cite{zouhar2023}.
 Es gibt einfache Tokenisierer, wie Whitespace-Tokenisierer, die einen Text einfach an Leerzeichen teilen und die einzelnen Wörter als Tokens behandeln.
 Etwas besser sind Wort-Tokenisierer, die auch Satzzeichen erkennen und dadurch Punkte und Kommata nicht an das Ende des vorangegangenen Wortes anhängen.
 Einen solchen Tokenisierer nutzt beispielsweise spaCy, um \qt{Linguistic Features} zu bestimmen~\cite{honnibal2017}.
 Es gibt Subword-Tokenisierer, die Worte noch einmal in kleinere Abschnitte teilen.
 Das Byte-Pair Encoding versucht aufgrund von statistischen Methoden, häufig vorkommende zusammenhängende Zeichenfolgen als Tokens zu identifizieren.
 Diese Art von Tokenisierer wird am häufigsten für die Eingabe bei Transformern genutzt~\cite{zouhar2023}.
-Die Transformermodelle von OpenAI benutzen beispielsweise tiktoken als Tokenisierer~\cite{tiktoken2024}, das BERT-Modell von Google benutzt den WordPiece-Tokenisierer.
+Die Transformermodelle von OpenAI benutzen beispielsweise tiktoken als Tokenisierer~\cite{tiktoken2024}, das bekannte BERT-Modell von Google benutzt den WordPiece-Tokenisierer~\cite{devlin2019}.
 
 \subsection{Embeddingvektoren}
 
@@ -92,7 +92,7 @@ Die Transformermodelle von OpenAI benutzen beispielsweise tiktoken als Tokenisie
 
 Embeddings können in zwei verschiedene Kategorien eingeteilt werden: dünne (sparse) Vektoren und dichte (dense) Vektoren.
 
-Sparse Vektoren, wie der TF-IDF-Algorithmus und der BM25-Algorithmus, versuchen syntaktische Eigenschaften von Dokumenten zu erfassen.
+Sparse Vektoren, wie der TF-IDF-Algorithmus~\cite{sparckjones1972} und der BM25-Algorithmus~\cite{harman1995}, versuchen syntaktische Eigenschaften von Dokumenten zu erfassen.
 Term Frequency-Inverse Document Frequency (TF-IDF) ist ein Algorithmus, der es erlaubt, Dokumente nach Keywords zu durchsuchen.
 Das Verfahren verwendet Worthäufigkeiten (Term Frequency), um Dokumente, in denen ein Wort häufiger vorkommt, zu bevorzugen.
 Außerdem verwendet es die generelle Auftrittsrate von Wörtern (Inverse Document Frequency), um Wörtern, die seltener vorkommen, mehr Gewicht bei der Suche einzuräumen.
@@ -102,11 +102,11 @@ Dünnbesetzt heißt in diesem Zusammenhang, dass der Vektor viele Einträge mit 
 Das folgt aus der Bedingung, dass diese Vektoren untereinander vergleichbar sein müssen und dadurch Einträge für jedes Wort besitzen, das im gesamten Korpus an Dokumenten vorkommt.
 Jedes einzelne Dokument enthält dabei aber nur einen Bruchteil der Gesamtwörter und damit viele Nullwerte.
 
-Best Matching 25 (BM25) ist eine Familie von Algorithmen, die versuchen, den TF-IDF-Algorithmus zu verbessern, indem sie die Priorisierung langer Dokumente und zu oft vorkommende Worte ausgleichen.
+Best Matching 25 (BM25) ist eine Familie von Algorithmen, die versuchen, den TF-IDF-Algorithmus zu verbessern, indem sie die Priorisierung langer Dokumente und zu oft vorkommende Worte ausgleichen.~\cite{harman1995}
 
 Außerdem kann man diese Algorithmen noch anpassen, sodass sie auch N-Gramme als Einträge der Vektoren miteinbeziehen.
 Das heißt, dass nicht nur einzelne Wörter berücksichtigt werden, sondern auch häufig zusammen vorkommende Wörter (N-Gramme) als einzelne Tokens in dem Vektor abgebildet werden.
-Das bewirkt zwar, dass die Ähnlichkeit der Dokumente in der Regel besser ermittelt werden kann, vergrößert aber die Vektoren.
+Das bewirkt zwar, dass die Ähnlichkeit der Dokumente in der Regel besser ermittelt werden kann, vergrößert aber die Vektoren.~\cite{dey2017}
 
 \subsubsection{Dichte Vektoren}
 
@@ -120,7 +120,7 @@ Ein solch filigranes Verständnis der Bedeutung ist nicht einfach zu erreichen.
 Ein stochastischer Algorithmus würde die Unterschiede bei solchen Homonymen in den meisten Fällen nicht erkennen können. 
 Stochastische Algorithmen wie z.B. TF-IDF haben auch Probleme mit Negierungen, wie zum Beispiel in „Ich habe nichts gegessen.“ und „Nichts habe ich heute gemacht, außer gegessen“.
 
-Für unsere Aufgabe ist es sinnvoll, nicht nur inhaltliche Vergleiche zu erstellen, die überprüfen, ob zwei Sätze ungefähr die gleiche Bedeutung haben, wie „Die Sonne bringt mich zum Schwitzen“ oder „Ich schmelze in der Hitze“.
+Für unsere Aufgabe ist es sinnvoll, nicht nur zu überprüfen, ob zwei Sätze ungefähr die gleiche Bedeutung haben, wie „Die Sonne bringt mich zum Schwitzen“ oder „Ich schmelze in der Hitze“.
 Besser wäre eine asymmetrische Ähnlichkeit, wie sie bei Frage- und Antwortpaaren vorkommt.
 Zum Beispiel wäre auf die Frage: „Welche Farbe hat der Himmel bei Sonnenuntergang?“ eine gute Antwort: „Der Himmel hat bei Sonnenuntergang oft orange und rosa Farbtöne.“ und nicht der Satz „Wie sieht der Himmel am Abend aus?“
 Diese asymmetrische Ähnlichkeit ist schwerer zu ermitteln, da man normalerweise in der Antwort Informationen findet, die in der Frage nicht vorkommen.
@@ -131,32 +131,33 @@ Die Dimensionalität von verschiedenen Embeddings hat Einfluss auf deren Perform
 Kleinere Embeddings verbrauchen weniger Speicherplatz und lassen sich schneller untereinander vergleichen, was den Retrieval-Prozess beschleunigt.
 Andererseits bietet eine kleinere Dimensionalität auch weniger Möglichkeiten für die LLMs, semantische Informationen darin zu speichern.
 Das heißt aber nicht, dass größere Embeddingvektoren auch gleichzeitig die Semantik besser repräsentieren müssen.
+Sparse Vektoren sind meist größer als Dense Vektoren, können aber nur lexikalische Eigenschaften repräsentieren.
+Aber auch bei Dense Vektoren bedeuted eine Dimensionalität nicht gleich eine bessere Performance.
 Dies hängt vor allem damit zusammen, wie leistungsstark die Architektur des Modells ist und welche sowie wie viele Trainingsdaten zum Trainieren verwendet wurden.
-Das Modell voyage-lite-02-instruct belegt zum Beispiel auf dem Massive Text Embedding Benchmark Leaderboard mit einer Dimensionalität von 1024 den zweiten Platz.
+Das Modell voyage-lite-02-instruct belegt zum Beispiel auf dem Massive Text Embedding Benchmark Leaderboard mit einer Dimensionalität von 1024 den zweiten Platz~\cite{mteb}.
 Auf den Plätzen drei bis fünf liegen jedoch Embeddingmodelle mit einer Dimensionalität von 4096.
 
 \subsection{Ähnlichkeitsvergleiche}
 
 Mithilfe der Embedding-Vektoren können Sätze gefunden werden, die eine semantische Ähnlichkeit zueinander aufweisen.
-Zum Beispiel besitzen die Vektoren des all-MiniLM-L6-v2-Modells 384 Dimensionen, haben also 384 Gleitkommazahlen gespeichert, die zwischen -1 und 1 liegen.
+Zum Beispiel besitzen die Vektoren des all-MiniLM-L6-v2-Modells~\cite{minilm2024} 384 Dimensionen, haben also 384 Gleitkommazahlen gespeichert, die zwischen -1 und 1 liegen.
 Diese Gleitkommazahlen-Vektoren könnte man auch als Feature-Vektoren begreifen.
 Zum Beispiel könnte die erste Zahl dieses Vektors für die Erwähnung von Professoren in dem Satz stehen (-1 für keine Professoren; 1 für viele Professoren).
 Die zweite Zahl könnte für das Thema Essen stehen (-1 für wenig mit Essen zu tun; 1 für sehr viel mit Essen zu tun).
 Damit hätte der Satz „In der Mensa gibt es jeden Tag Currywurst mit Pommes“ an der ersten Stelle vielleicht eine 0,1, weil der Begriff „Mensa“ leicht mit Uni und Professoren konnotiert wird.
 An der zweite Stelle würde der Wert zum Beispiel bei 0,94 liegen, da es in dem Satz offensichtlich um das Essen handelt.
-In der Realität wird das Modell sehr wahrscheinlich komplexere Merkmale lernen, die für Menschen nicht so offensichtliche sind.
-Ein Grund dafür ist, dass das Modell vor allem pro Eintrag eine Linearkombination von verschiedenen Merkmalen lernt, also jede Zahl eine Überlagerung verschiedener Eigenschaften darstellt.
-Eine Forschungsrichtung, die versucht, solche Modellausgaben menschenlesbar zu gestalten, liegt in der Explainable AI~\cite{hassija2024}.
+In der Realität wird das Modell sehr wahrscheinlich komplexere Merkmale lernen, die für Menschen nicht so offensichtliche sind~\cite{chen2018}.
+Ein Grund dafür ist, dass das Modell vor allem pro Eintrag eine Linearkombination von verschiedenen Merkmalen lernt, also jede Zahl eine Überlagerung vieler verschiedener Eigenschaften darstellt~\cite{chen2018}.
 
 Die Vergleiche der Embeddings können mit verschiedenen Algorithmen berechnet werden.
 Im Bereich des Machine Learnings werden vor allem die euklidische Distanz und die Kosinusdistanz angewendet.
 
 \subsubsection{Euklidische Distanz}
 
-Die euklidische Distanz von zwei Vektoren kann über den Satz des Pythagoras berechnet werden.
-Dafür wird für jede einzelne Dimension die Differenz beider Vektoren in dieser Dimension gebildet.
-Diese Differenzen werden quadriert und die Summe dieser Quadrate gebildet.
-Im Anschluss wird die Quadratwurzel über der Summe gezogen.
+Die euklidische Distanz zwischen zwei Vektoren kann über den Satz des Pythagoras berechnet werden. 
+Dazu wird für jede einzelne Dimension die Differenz der beiden Vektoren in dieser Dimension gebildet. 
+Diese Differenzen werden quadriert und anschließend wird die Summe dieser Quadrate gebildet. 
+Zum Schluss wird die Quadratwurzel aus dieser Summe gezogen.
 Für die beiden Vektoren
 $\begin{pmatrix}0\\1\end{pmatrix}$
 und
@@ -189,17 +190,19 @@ Um dieser Verzerrung entgegenzuwirken, wird das Skalarprodukt durch das Produkt 
 Dadurch erhält man den Kosinus des Winkels zwischen diesen beiden Vektoren.
 
 Wenn beide Vektoren vorher normiert wurden, das heißt der Betrag der Vektoren gleich Eins ist, ist die Kosinusdistanz gleich der Skalarproduktdistanz der beiden Vektoren.
-Außerdem kann in diesem Fall die euklidische Distanz aus der Kosinusdistanz errechnet werden durch die Formel:
+Außerdem kann in diesem Fall die euklidische Distanz durch folgende Formel aus der Kosinusdistanz errechnet werden:
 
 $\text{euclidean\_distance} = \sqrt{2 - 2 \cos(\theta)}$
+\cite{kryszkiewicz2013}
+
 \section{Transformer-Architektur}
 
 \subsection{Sequenz-zu-Sequenz-Modelle}
 
-Eine Transformerarchitektur ist eine der modernsten und leistungsfähigsten Architekturen, um eine Vielzahl von NLP-Aufgaben zu lösen.
-Sie bildet dabei den Nachfolger bzw. Konkurrenten zu den bis dato vorherrschenden rekurrenten neuronalen Netzen (RNN), Gated Recurrent Units (GRU) oder Long-Short Term Memory Systems (LSTM).
+Eine Transformerarchitektur ist eine der modernsten und leistungsfähigsten Architekturen, um eine Vielzahl von NLP-Aufgaben zu lösen~\cite{patwardhan2023}.
+Sie bildet dabei den Nachfolger bzw. Konkurrenten zu den bis dato vorherrschenden rekurrenten neuronalen Netzen (RNN), Gated Recurrent Units (GRU) oder Long-Short Term Memory Systems (LSTM)~\cite{hochreiter1997}.
 Ähnlich zu diesen Architekturen ist auch der Transformer ein Sequenz-zu-Sequenz-Modell.
-Der Encoderteil nimmt als Eingabe eine Folge von Tokens (einen Satz, eine Audiodatei) und der Decoderteil bildet daraus eine andere Sequenz (einen Satz, eine Audiodatei).
+Der Encoderteil nimmt als Eingabe eine Sequenz von Tokens (einen Satz, eine Audiodatei) und der Decoderteil bildet daraus eine andere Sequenz von Tokens (einen Satz, eine Audiodatei).
 
 Der Unterschied von Sequenz-zu-Sequenz-Modellen zu einem gewöhnlichen feedforward neuronalen Netz besteht darin, dass die Eingabe- und Ausgabesignale auch Sequenzen mit variabler Länge sein können.
 Gewöhnliche künstliche neuronale Netze haben eine feste Anzahl an Eingangs- und Ausgangsneuronen, was es ihnen nur erlaubt, Aufgaben zu lösen, bei denen die Eingangs- und Ausgangsdaten eine bestimmte Länge aufweisen.
@@ -218,7 +221,7 @@ Ein Problem, welches diese Architekturen besitzen, ist das Problem des verschwin
 RNNs versuchen immer im Encoder, die gesamte Inputsequenz von links nach rechts (forward) oder von rechts nach links (backward) zu verarbeiten, um daraus ein einzelnes Embedding zu erstellen.
 Informationen, die in der Mitte der Sequenz vorkommen, werden wahrscheinlich von danach folgenden Informationen überschrieben, weil das Modell versucht, alle Informationen in derselben Matrix zu speichern.
 
-Die Ansätze des Long-Short Term Memory Systems (LSTM) und der Gated Recurrent Unit (GRU) versuchen dieses Problem zu lösen, indem sie Gates einsetzen.
+Die Ansätze des Long-Short Term Memory Systems (LSTM)~\cite{hochreiter1997} und der Gated Recurrent Unit (GRU)~\cite{cho2014} versuchen dieses Problem zu lösen, indem sie Gates einsetzen.
 Diese Gates bestimmen, welche Informationen aus dem vorherigen Embedding durch das Embedding der nächsten Iteration überschrieben werden dürfen.
 Dadurch können sie wichtige Informationen länger speichern.
 Bei einem LSTM werden dafür drei verschiedene Gates benutzt: das Forget Gate, das Input Gate und das Output Gate.
@@ -251,7 +254,7 @@ $Attention(Q,K,V)=softmax(\frac{QK^t}{\sqrt{d_k}})*V$
 
 Der Parameter \textit{d} stellt dabei die Dimension der Matrix \textit{k} dar.
 
-Um die Formel besser zu verstehen, wird an einem Beispiel demonstriert, was die einzelnen Matrizen für Aufgaben besitzen.
+Um die Formel besser zu verstehen, wird an einem Beispiel demonstriert, was die Aufgaben der einzelnen Matrizen sind.
 Als Eingabe wird der Satz: „Alice fuhr gestern durch die Nürnberger Innenstadt“ benutzt.
 Die Query-Matrix beschreibt nun eine Frage an diesen Satz, zum Beispiel „Wer?“.
 Wie genau diese Fragen aussehen, ist nicht leicht zu ermitteln und wird nur in seltenen Fällen so ausfallen, wie auch Menschen nach bestimmten Informationen fragen.
@@ -260,7 +263,7 @@ Die Key-Matrix hat nun die Antwort darauf, wo diese Informationen im Satz stehen
 Die beiden Matrizen werden nun multipliziert, um die Position der Antwort auf die Frage zu erhalten.
 Das Ergebnis wird durch Division mit der Dimension der Matrix skaliert und anschließend mit der Softmax-Funktion normiert, um die Relevanz der Schlüssel anzupassen.
 Anschließend wird die angepasste Fragen-Schlüssel-Matrix mit der Value-Matrix multipliziert, welche die Informationen der Sequenz beinhaltet.
-Die resultierende Matrix würde dann die Information beinhalten, dass die Antwort auf die Frage „Wer?“ für den Satz „Alice fuhr gestern durch die Nürnberger Innenstadt“ wahrscheinlich „Alice“ ist.
+Die resultierende Matrix würde dann die Information beinhalten, dass die Antwort auf die Frage „Wer?“ für den Satz „Alice fuhr gestern durch die Nürnberger Innenstadt“ wahrscheinlich „Alice“ ist.~\cite{ng2023}
 
 Die verschiedenen Köpfe der Multihead Self-Attention liefern nun verschiedene Antworten auf verschiedene Fragen und versuchen damit, die Informationen der Sequenz zu codieren.
 Im Anschluss werden die verschiedenen Matrizen konkateniert und in einem weiteren feedforward neuronalen Netz in ihrer Dimensionalität reduziert.

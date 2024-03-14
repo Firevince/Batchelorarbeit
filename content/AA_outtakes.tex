@@ -129,3 +129,39 @@ Andere Distanzmaße sind:
 
 Manhattan-Distanz (nur x- oder y-Achse)
 Hamming-Distanz (Anzahl verschiedener Einträge)
+
+\section{explainable AI}
+Ein Versuch, die komplexen Features für Menschen zu vereinfachen kann mithilfe eines t-SNE Algorithmuses erreicht werden.
+Eine Forschungsrichtung, die versucht, solche Modellausgaben menschenlesbar zu gestalten, liegt in der Explainable AI~\cite{hassija2024}.
+
+\section{BERT Embeddings}
+
+Um einen Embeddingvektor zu erstellen, benutzen wir das BERT Model. BERT, das Akronym für Bidirectional Encoder Representations from Transformer, ist ein Sprachmodel, das 2018 von Google entwickelt, und zur Benutzung freigegeben wurde. 
+BERT ist ein Neuronales Netzwerk mit 12 Schichten, das für zwei verschiedene Aufgaben gleichzeitig trainiert wurde. Zum einen wurde es auf eine Masked Language Modeling Aufgabe und zum Anderen auf eine Next Sentence Prediction trainiert. 
+
+Masked Language Modeling
+Bei dieser Aufgabe soll das Model versuchen, aus dem Kontext eines Satzes ein maskiertes Wort in diesem Satz vorherzusagen. Dafür wird dem Model ein Satz gegeben, in dem zufällige Wörter einfach versteckt werden und das Model soll für diese Wörtereine Vorhersage treffen.
+
+\section{LLama2 Embeddings}
+
+Ein sehr Leistungsfähiges LLM ist das von Meta entwickelte LLama und deren Nachfolger LLama2. \cite{touvron2023}
+
+\subsubsection{Keywordsuche}
+
+Eine Möglichkeit bietet sich in der Keywordsuche. 
+Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wiederfindet. Ist die möchte ein User beispielsweise einen zusammengeschnittene Podcast Episode über \qt{Zugspitze}, so schaut das System, in welchen Episodensegmenten das Wort \qt{Zugspitze} auftaucht, und gibt diese zurück. 
+Schwieriger wird es, wenn die Useranfrage mehrere Wörter beinhaltet. 
+Möchte sich der User über das Thema \qt{Zugspitze wandern} informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
+Dann müsste man dementsprechend auch ein Algorithmus entwickeln, der diese dann sinnvoll hierarchisiert. 
+Das Wort \qt{Zugspietzt}
+
+\subsubsection{TF-IDF}
+
+Einen solchen Ansatz bietet das TF-IDF Maß (Term Frequency - Inverse Document Frequency). 
+Im Bereich des NLP verwendet man das TF-IDF Maß um zu untersuchen welche Wörter in verschiedenen Dokumenten welche Gewichtung erfahren. 
+Dazu wird zunächst die TF-Matrix, also die Term Frequenzy Matrix berechnet. 
+Hierbei wird erst das Vokabular ermittelt, also die Gesamtheit aller Tokens (Wörter) die es in allen Dokumenten (Transkript Segmenten) des Korpuses (alle heruntergeladenen Episoden) gibt. 
+Dann wird für jedes einzelne Segment die Anzahl jeder in ihm auftretenden Tokens ermittelt. 
+Für den Satz: „Auf der Zugspitze gibt es viele Wanderer, die die Zugspitze lieben“. 
+In diesem Fall würde in der TF Matrix an der Stelle Zugspitze eine 2 Stehen, in der Zeile Wandern aber 0, da zwar das Wort Wanderer, aber nicht das Wort wandern vorkommt. 
+Da diese beiden Worte aber sehr ähnlich sind und der User bei einer Anfrage nicht immer nach verschiedenen Versionen eines Wortes suchen will, um dann ein zufriedenstellendes Audio zu erhalten

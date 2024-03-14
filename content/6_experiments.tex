@@ -17,6 +17,10 @@ Dabei wird sowohl der Sparse Vektoren des TF-IDF Algorithmus, wie auch die Dense
 
 Konkret werden Embeddings des TF-IDF Algorithmus
 
+TF-IDF - vergleich zu Keyword-suche
+all-mini-LM-L6-v2 - klein, schnell, standart
+
+
 \section{Themenauswahl}
 
 Die Bewertung des IR Systems erfolgt auf einer Auswahl verschiedener Themen.
@@ -71,16 +75,13 @@ Gleichzeitig sollen die Segmente auch nicht alle denselben Inhalt aufweisen und 
 
 \section{Prompt Engineering}
 
+Reasoning
+Json
+GPT-4
+beispielprompt
 
 
-
-\section{BERT Embeddings}
-
-Um einen Embeddingvektor zu erstellen, benutzen wir das BERT Model. BERT, das Akronym für Bidirectional Encoder Representations from Transformer, ist ein Sprachmodel, das 2018 von Google entwickelt, und zur Benutzung freigegeben wurde. 
-BERT ist ein Neuronales Netzwerk mit 12 Schichten, das für zwei verschiedene Aufgaben gleichzeitig trainiert wurde. Zum einen wurde es auf eine Masked Language Modeling Aufgabe und zum Anderen auf eine Next Sentence Prediction trainiert. 
-
-Masked Language Modeling
-Bei dieser Aufgabe soll das Model versuchen, aus dem Kontext eines Satzes ein maskiertes Wort in diesem Satz vorherzusagen. Dafür wird dem Model ein Satz gegeben, in dem zufällige Wörter einfach versteckt werden und das Model soll für diese Wörtereine Vorhersage treffen. 
+ 
 
 
 \section{Sentence Transformer Embeddings}
@@ -92,15 +93,10 @@ Haben verschiedene Modelle.
 
 Unter dem 
 
-\section{LLama2 Embeddings}
-
-Ein sehr Leistungsfähiges LLM ist das von Meta entwickelte LLama und deren Nachfolger LLama2. \cite{touvron2023}
 
 \section{OpenAI Embeddings}
 
 \href{https://twitter.com/Nils_Reimers/status/1487014195568775173}{twitter}
-
-
 
 OpenAI stellt außer den Text (GPT-4) und Bild (DALLE) generierungs Modellen auch Modelle zur Embedding erstellung in Ihrer API vor.
 Ada (1024 dimensions)
@@ -108,53 +104,15 @@ Babbage (2048 dimensions)
 Curie (4096 dimensions)
 Davinci (12288 dimensions)
 
+\section{voyage}
+
+über API
+1024 Dimensionen
 
 
+\section{Auswertung}
 
+\myfigure{evaluation_all.png}{Vergleich der verschiedenen Embeddingmodelle (Themen 1-3 Wörter)}{evaluation_all}
 
-\subsection{Ählichkeitssuche lexikalisch}
-
-\subsubsection{Keywordsuche}
-
-Eine Möglichkeit bietet sich in der Keywordsuche. 
-Hierbei wird einfach überprüft, ob sich ein Keyword in einem der Dokumente wiederfindet. Ist die möchte ein User beispielsweise einen zusammengeschnittene Podcast Episode über \qt{Zugspitze}, so schaut das System, in welchen Episodensegmenten das Wort \qt{Zugspitze} auftaucht, und gibt diese zurück. 
-Schwieriger wird es, wenn die Useranfrage mehrere Wörter beinhaltet. 
-Möchte sich der User über das Thema \qt{Zugspitze wandern} informieren so müsste zunächst untersucht werden, welche Dokumente beide Worte enthalten, welche nur eines der beiden enthalten. 
-Dann müsste man dementsprechend auch ein Algorithmus entwickeln, der diese dann sinnvoll hierarchisiert. 
-Das Wort \qt{Zugspietzt}
-
-\subsubsection{TF-IDF}
-
-Einen solchen Ansatz bietet das TF-IDF Maß (Term Frequency - Inverse Document Frequency). 
-Im Bereich des NLP verwendet man das TF-IDF Maß um zu untersuchen welche Wörter in verschiedenen Dokumenten welche Gewichtung erfahren. 
-Dazu wird zunächst die TF-Matrix, also die Term Frequenzy Matrix berechnet. 
-Hierbei wird erst das Vokabular ermittelt, also die Gesamtheit aller Tokens (Wörter) die es in allen Dokumenten (Transkript Segmenten) des Korpuses (alle heruntergeladenen Episoden) gibt. 
-Dann wird für jedes einzelne Segment die Anzahl jeder in ihm auftretenden Tokens ermittelt. 
-Für den Satz: „Auf der Zugspitze gibt es viele Wanderer, die die Zugspitze lieben“. 
-In diesem Fall würde in der TF Matrix an der Stelle Zugspitze eine 2 Stehen, in der Zeile Wandern aber 0, da zwar das Wort Wanderer, aber nicht das Wort wandern vorkommt. 
-Da diese beiden Worte aber sehr ähnlich sind und der User bei einer Anfrage nicht immer nach verschiedenen Versionen eines Wortes suchen will, um dann ein zufriedenstellendes Audio zu erhalten
-
-\subsubsection{Lemmatisierung vs. Stemming}
-
-Um diese Abbildung von mehreren Worten auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden:
-Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel \qt{Wanderer} und \qt{Wanderung} zu einem Wort \qt{Wander} zu reduzieren.
-Der Vorteil ist, dass der Algorithmus sehr schnell agieren kann, um die Worte auf ihre Stammform zu reduzieren.
-Die Nachteile sind allerdings, dass die Deutsche Sprache sehr viele verschiedene Wortkonstrukte erlaubt, die nicht alle mithilfe von einzelnen Regeln auf ein gemeinsammes Stammwort gebracht werden können. 
-Zum Beispiel bei dem Plural von \qt{Baum}; \qt{Bäume}.
-
-
-\subsubsection{Kompositatrennung Pyphen vs german compound splitter}
-
-Als weiteren Vorverarbeitungsschritt für die effiziente Keywordsuche kann man zusammengesetzte Wörter in ihre bestandteile auftrennen.
-Das Vokabular des Datensazes besteht zu 61\% aus Nomen. 
-Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, wie zum Beispiel \qt{Reichsdeputationshauptschlussakte}, oder \qt{Hochgeschwindigkeitstransportmittel}.
-In dem ganzen Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben.
-Da für exakte Keywortsuche solche Begriffe fast nie auftreten, lohnt es sich, 
-
-
-
-Dabei gibt es allerdings keine Möglichkeit, die verschiedenen Treffer dieser suche nach Relevanz zu hierarchisieren. Sucht man zum Beispiel nach dem Stichwort \qt{Klimakrise} würden dabei mehrere Stunden Material zusammenkommen [QUELLE]. 
-Man könnte nun einfach die Ersten Segmente nehmen, die zusammen die vorgegebene Zeit überbrücken. 
-Allerdings ist dieser Ansatz wenig Vielversprechend. 
-
+\myfigure{evaluation_queries.png}{Vergleich der verschiedenen Embeddingmodelle (Fragen)}{evaluation_all}
 
