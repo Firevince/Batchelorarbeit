@@ -68,6 +68,10 @@
 \usepackage{ragged2e}
 \usepackage{lscape}
 
+\usepackage{xurl}
+
+% \def\UrlBreaks{\do\/\do-}s
+
 % pdf hyperref
 \usepackage[
     bookmarks=true,
@@ -91,6 +95,8 @@
     hypertexnames=true,
     linktocpage=true,
 ]{hyperref}
+
+% \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 
 % biblatex
 % \usepackage[backend=biber, style=authoryear]{biblatex}
@@ -158,7 +164,7 @@
 
 % download the following form and complete it (hit save in your editor)
 % https://intern.ohmportal.de/fileadmin/Gelenkte_Doks/Abt/SZS/SB/SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf
-%\includepdf{SB_0050_FO_Pruefungsrechtliche_Erklaerung_und_Erklaerung_zur_Veroeffentlichung_der_Abschlussarbeit_public.pdf}\cleardoublepage
+\includepdf{Pruefungsrechtliche_Erklaerung.pdf}\cleardoublepage
 
 \include{content/0_abstract}\cleardoublepage
 

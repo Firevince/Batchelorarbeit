@@ -2,7 +2,8 @@
 
 
 \label{graphql-1}
-GraphQL Abfrage um alle download Links zu den Episoden des Podcasts "Radio Wissen" zu erhalten
+\subsubsection*{GraphQL Download-Links}
+GraphQL Abfrage um alle Download-Links zu den Episoden des Podcasts \qt{radioWissen} zu erhalten
 Die Programset-ID verweist auf den speziellen Podcast.
 
 \begin{verbatim}
@@ -31,7 +32,8 @@ Die Programset-ID verweist auf den speziellen Podcast.
 \end{verbatim}
 
 \label{ch:graphql-2}
-GraphQL Abfrage um alle Metadaten zu den Episoden des Podcasts "Radio Wissen" zu erhalten
+\subsubsection*{GraphQL Metadaten}
+GraphQL Abfrage um alle Metadaten zu den Episoden des Podcasts \qt{radioWissen} zu erhalten
 Die Programset-ID verweist auf den speziellen Podcast.
 
 \begin{verbatim}
@@ -60,7 +62,9 @@ Die Programset-ID verweist auf den speziellen Podcast.
 \end{verbatim}
 
 \label{ch:graphql-3}
-GraphQL Abfrage um alle transkripte zu den Episoden des Podcasts "Radio Wissen" zu erhalten
+\subsubsection*{GraphQL Transkripte}
+
+GraphQL Abfrage um alle Transkripte zu den Episoden des Podcasts \qt{radioWissen}  zu erhalten
 Die Programset-ID verweist auf den speziellen Podcast.
 
 \begin{verbatim}
@@ -90,6 +94,8 @@ Die Programset-ID verweist auf den speziellen Podcast.
 \end{verbatim}
 
 \label{ch:chatgpt-reranking}
+
+\subsubsection*{ChatGPT Segmente ranken}
 
 Ein Beispielprompt um Segmente von ChatGPT sortieren zu lassen.
 Die einzelnen Segmente werden automatisch ergänzt.
@@ -124,6 +130,7 @@ Beispielantwort:
 
 
 \label{ch:chatgpt-topics}
+\subsubsection*{ChatGPT Themen extrahieren}
 
 Ein Beispielprompt um weiterführende Themen von ChatGPT sortieren zu lassen.
 Die einzelnen Segmente werden automatisch ergänzt.
@@ -162,12 +169,12 @@ Beispielantwort:
 
 
 \label{ch:chatgpt-boundaries}
-
+\subsubsection*{ChatGPT Segment-Grenzen finden}
 Ein Beispielprompt um einen zum Thema passenden wichtigen Ausschnitt aus einem Podcast zu generieren.
 
 Systemprompt:
 
-\begin{verbatim}
+\begin{itshape}
     Schau dir das folgende Dokument an und wähle aus, welcher Abschnitt zur Beantwortung der Frage geeignet ist.
 
     {document}
@@ -177,40 +184,41 @@ Systemprompt:
     einem 'Ende' für die Nummer des Satzes wo der Abschnitt aufhört.
     Wenn es keinen Abschnitt gibt der wirklich passt, antworte mit 'Start': 0 und 'Ende':0
 
-\end{verbatim}
-
-Userprompt:
-
-\begin{verbatim}
-  
-
-\end{verbatim}
+\end{itshape}
 
 
 \label{ch:chatgpt-topicgeneration}
+\subsubsection*{ChatGPT Themengenerierung}
 
 Ein Beispielprompt um Themen zur Evaluation der Embeddingmodelle zu erstellen.
 
-\begin{verbatim}
+\begin{itshape}
 Generiere 30 verschiedene Suchthemen, die aus den Themenbereichen Geschichte, Naturwissenschaft, Gesellschaft oder Philosophie kommen und auch über die deutsche Kultur handeln.
 Die Themen sollen 1-3 verschiedene Wörter umfassen.
-\end{verbatim}
+\end{itshape}
 
 \label{ch:chatgpt-questiongeneration}
 
+\subsubsection*{ChatGPT Fragengenerierung}
+
+
 Ein Beispielprompt um Fragen zur Evaluation der Embeddingmodelle zu erstellen.
 
-\begin{verbatim}
+\begin{itshape}
 Kannst du 30 Fragen generieren, wie "Wann werden Menschen auf dem Mars sein?" oder "Wo wird urbaner Gartenbau betrieben?"
-\end{verbatim}
+\end{itshape}
 
 \label{ch:chatgpt-evaluation}
 
+\subsubsection*{ChatGPT Evaluation}
+
 Ein Beispielprompt um Retrieval Ergebnisse zu evaluieren.
+temperature=0,5
+seed=111
 
 System-prompt:
 
-\begin{verbatim}
+\begin{itshape}
     Du bewertest die Ausgabe eines Text Retrieval Systems. Bewerte, wie gut die gefundenen Textabschnitte zu dem gestellten Thema passen. Berücksichtige dabei folgende Kriterien und vergebe Punkte, wobei zu jedem Kriterium eine Legende erklärt, was die jeweilige Punktzahl bedeutet:
 
     - Precision: Der Text enthält keine irrelevanten Informationen, die nicht zum Thema passen.
@@ -230,15 +238,17 @@ System-prompt:
       3 Punkte: Jeder Textausschnitt liefert einzigartige und neue Informationen.
     
     Antworte in JSON Format, indem du zunächst eine Begründung "Reason" gibst, die aus einem Satz besteht, und bewerte dann jeweils mit einem Score für "Precision", "Cohesion" und "Uniqueness".    
-\end{verbatim}
+\end{itshape}
+
 
 User-Prompt:
 
-\begin{verbatim}  
+\begin{itshape}  
     Textabschnitte: {documents}
 
     -----------
 
     Frage: {query}
-\end{verbatim}
+\end{itshape}
+
 

@@ -43,7 +43,7 @@ Ein weiteres Embeddingmodell, bei dem die Embeddings per API erhaltbar sind, ist
 Dieses Modell erzielt nur Platz 27 in der Kategorie Retrieval auf dem MTEB~\cite{mteb}, wird aber als Vergleich herangezogen.
 
 
-\section*{Vorgehensweise}
+\section{Vorgehensweise}
 
 Die Bewertung des IR Systems erfolgt auf einer Auswahl verschiedener Themen.
 Das System berechnet für jedes Thema ein Embedding, vergleicht es mit den Embeddings in der Datenbank und erstellt daraus eine Ranking Liste.
@@ -78,10 +78,81 @@ Dabei werden wieder 30 verschiedene Themen evaluiert.
 
 \subsection{Auswertung topical}
 
+\autoref{fig:evaluation_all} veranschaulicht die Bewertungen von Segmenten bezogen auf unterschiedliche Themen. \autoref{fig:evaluation_queries} stellt die Bewertungen von Segmenten zu konkreten Fragestellungen dar.
+
+In Abbildung 1 erreicht das TF-IDF-Embedding die höchste Precision, dicht gefolgt vom text-embeddings-small von OpenAI und dem all-mini-LM-L6-v2-Modell von OpenAI. 
+Das voyage-lite-02-instruct von Voyage AI zeigt hingegen die niedrigste Precision.
+In Abbildung 2 verzeichnet das text-embeddings-small von OpenAI die beste Precision, wohingegen das all-mini-LM-L6-v2-Modell einen merklichen Abfall in der Präzision im Vergleich zu Abbildung 1 aufweist.
+
+Es lässt sich erkennen, dass das TF-IDF-Embedding insgesamt gute Ergebnisse bei der Themensuche erzielt, besonders hinsichtlich der Precision und Uniqueness. 
+Das deutet darauf hin, dass TF-IDF besonders effektiv darin ist, relevante und einzigartige Inhalte zu extrahieren.
+Das text-embeddings-small von OpenAI demonstriert eine durchgängig solide Leistung in beiden Abbildungen und könnte als robustes Modell für verschiedene Suchanfragen angesehen werden.
+Die Modelle voyage-lite-02-instruct von Voyage AI und all-mini-LM-L6-v2-Modell zeigen schwächere Ergebnisse, vor allem bei der Beantwortung spezifischer Fragen.
+
+Bezüglich der Precision stellt sich heraus, dass voyage-lite-02-instruct von Voyage AI geringere Werte als das text-embeddings-small von OpenAI erreicht. 
+Das TF-IDF-Embedding zeigt bei Themen, die mit 1-3 Wörtern beschrieben werden, eine höhere Präzision als bei Fragen. 
+Beim all-mini-LM-L6-v2-Modell wird eine Verminderung der Precision festgestellt, wenn es um die Beantwortung von Fragen im Vergleich zu Themen geht.
+
 \myfigure{evaluation_all.png}{Vergleich der verschiedenen Embeddingmodelle (Themen 1-3 Wörter)}{evaluation_all}
 
-\myfigure{evaluation_queries.png}{Vergleich der verschiedenen Embeddingmodelle (Fragen)}{evaluation_all}
+\myfigure{evaluation_queries.png}{Vergleich der verschiedenen Embeddingmodelle (Fragen)}{evaluation_queries}
 
-\myfigure{evaluation_re_finding.png}{Vergleich der Embeddingmodelle (re-finding)}{}
 
-könnte durch Augmentierung der Userfrage durch ChatGPT verbessert werden.\cite{shum2024}\cite{dai2023}
+
+\myfigure{evaluation_individual_topics.png}{Vergleich der Fragen (Themen 1-3 Wörter)}{evaluation_individual_topics}
+
+\myfigure{evaluation_individual_questions.png}{Vergleich der Fragen (Fragen)}{evaluation_individual_questions}
+
+\subsection{Auswertung re-finding}
+
+In \autoref{fig:evaluation_re_finding} wird die Leistungsfähigkeit unterschiedlicher Embedding-Modelle bei der Aufgabe des Wiederfindens von spezifischen Audioinhalten dargestellt. Die Auswertung basiert auf einem Scoring-System, bei dem Suchworte zur Identifikation von Episodentiteln genutzt werden. 
+Die Modelle werden danach bewertet, wie gut sie in der Lage sind, die richtige Episode innerhalb der drei höchsten Similarity Scores zu identifizieren.
+
+Das text-embeddings-small von OpenAI erweist sich als das leistungsfähigste Modell und erreicht die höchsten Werte. 
+Dies deutet auf eine hohe Effizienz des Modells beim Zuordnen von Suchanfragen zu den entsprechenden Audiosegmenten hin. 
+Das all-mini-LM-L6-v2-Modell und das TF-IDF-Embedding zeigen ähnliche Ergebnisse und liegen im mittleren Bereich des Rankings. 
+Das voyage-lite-02-instruct von Voyage AI hingegen zeigt deutliche Schwächen und erreicht die niedrigsten Punktzahlen in dieser spezifischen Aufgabe des re-finding.
+
+Es ist bemerkenswert, dass das TF-IDF-Modell, welches typischerweise auf Keyword-Suche spezialisiert ist, nicht die Spitzenposition einnimmt. Dies könnte auf die Art der Suchanfragen, die Komplexität der Daten oder auf die Spezifität der Themen zurückzuführen sein, die möglicherweise eine tiefere semantische Analyse erfordern, als sie durch reine Keyword-Abgleichung erreicht werden kann.
+
+\myfigure{evaluation_re_finding.png}{Vergleich der Embeddingmodelle (re-finding)}{evaluation_re_finding}
+
+\subsection{Diskussion}
+
+Die in \autoref{fig:evaluation_re_finding} präsentierten Ergebnisse zeigen einige überraschende  Trends in Bezug auf die Leistungsfähigkeit der untersuchten Embedding-Modelle. 
+Die unterdurchschnittliche Performance des voyage-lite-02-instruct Modells von Voyage AI ist dabei besonders bemerkenswert. 
+Eine mögliche Erklärung für dieses Phänomen könnte sein, dass voyage-lite-02-instruct für die Verarbeitung größerer Segmente optimiert ist, da bei der Embeddinggenerierung zunächst ein weiterer Prompt an die Sätze angehangen wird~\cite{zotero-572}. 
+Dies könnte darauf hindeuten, dass die voyage-lite-02-instruct Architektur weniger geeignet für Aufgaben ist, die eine präzise und enge Abstimmung zwischen Suchanfragen und spezifischen Segmenten erfordern, wie es bei der re-finding Aufgabe der Fall ist.
+
+Das text-embeddings-small Modell von OpenAI erweist sich als das effektivste über die verschiedenen evaluierten Szenarien hinweg. 
+Die Embeddings von OpenAI sind anscheinend eine ausgewogene und anpassungsfähige Lösung für eine Vielzahl von Suchaufgaben. 
+Es scheint, dass die allgemeine Architektur und die Trainingsmethodik, die hinter den Embeddings von OpenAI stehen, für die unterschiedlichen Herausforderungen der Inhaltsrecherche besonders gut geeignet sind.
+
+Die Ergebnisse könnten weitere Untersuchungen motivieren, ob dense Embeddings für Themen durch eine Augmentierung der Nutzeranfragen mit Unterstützung durch ChatGPT verbessert werden könnten. Dazu gibt es bereits aktive Forschung~\cite{shum2024}\cite{dai2023}. 
+Die Erweiterung von Suchanfragen durch ChatGPT könnte semantische Embeddings mehr Informationen geben, wodurch sie eventuell bessere Ergebnisse liefern könnten.
+
+
+\subsection{Schlussfolgerung}
+
+Die Untersuchung der Embeddings hat gezeigt, dass die Auswahl und Konfiguration von Embedding-Modellen entscheidend für die Effizienz und Präzision von Information-Retrieval-Systemen ist. 
+Während das text-embeddings-small von OpenAI eine robuste Leistung über verschiedene Aufgaben hinweg bieten, zeigen sich bei den anderen Embedding-Methoden unterschiede.
+
+Das TF-IDF-Embedding und das all-mini-LM-L6-v2-Modell zeigten eine mittelmäßige Performance, was Raum für Verbesserungen lässt. 
+Besonders auffällig war die geringe Leistung des voyage-lite-02-instruct von Voyage AI, was auf eine mögliche Inkompatibilität mit der Anforderung des genauen Matchings bei re-finding Aufgaben hindeutet.
+
+Aus diesen Ergebnissen lässt sich schließen, dass für die Optimierung von Suchalgorithmen eine tiefergehende Betrachtung der verschiedenen Embedding-Modelle erforderlich ist.
+
+\subsection{Kritische Reflexion}
+
+Die Untersuchung unterstreicht die Bedeutung der Segmentgröße in der Datenbank für die Leistung der Embedding-Modelle. 
+Größere Segmente könnten den Kontext für Suchanfragen verbessern, was vor allem bei komplexen Anfragen hilfreich wäre. 
+Zukünftige Experimente sollten sich daher mit der optimalen Balance von Segmentgröße und Suchpräzision befassen.
+
+Eine Vorverarbeitung der Suchanfragen, möglicherweise durch ein Modell wie ChatGPT, könnte ebenso vorteilhaft sein, um Anfragen besser auf die Daten abzustimmen und so die Suchergebnisse zu verfeinern. 
+Auch das Prompt Engineering bietet Raum für Verbesserungen; die Nutzung von Few-shot Prompts~\cite{brown2020} könnte helfen, das Verständnis des Modells für spezifische Aufgaben zu schärfen und so die Bewertungsgenauigkeit zu steigern.
+
+Beim re-finding könnten Methoden entwickelt werden, die spezifische Abschnitte innerhalb einer Datei identifizieren. 
+Dies würde zu einer erhöhten Genauigkeit führen, da nicht nur die richtige Episode, sondern der exakte Abschnitt gefunden wird.
+
+Diese Studie liefert wichtige Einsichten, zeigt jedoch auch, dass die fortlaufende Optimierung der Suchalgorithmen notwendig ist, um die Treffsicherheit und Effektivität von Suchsystemen zu verbessern. 
+Zukünftige Forschung sollte diese Aspekte weiter erforschen.

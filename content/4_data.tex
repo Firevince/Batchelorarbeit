@@ -68,9 +68,9 @@ Insgesamt weisen diese Audiodaten eine Größe von ungefähr 47 GB auf.
 
 Dabei kam es insgesamt 15-mal vor, dass zwei Episoden denselben Titel tragen, aber eine unterschiedliche Download-URL aufwiesen.
 Die Download-URLs unterscheiden sich nur, indem am Ende die Zeichen „-1“ oder „-2“ angefügt wurden.
-Zum Beispiel hat die Episode „Quantenphysik - Wahr, aber verrückt“ den Downloadlink \url{https://media.neuland.br.de/file/1804047/c/feed/quantenphysik-wahr-aber-verrueckt.mp3} aber auch \url{https://media.neuland.br.de/file/2069613/c/feed/quantenphysik-wahr-aber-verrueckt-1.mp3}.
+Zum Beispiel endet der Download-Link der Episode „Quantenphysik - Wahr, aber verrückt“ auf \url{quantenphysik-wahr-aber-verrueckt.mp3} aber auch auf \url{quantenphysik-wahr-aber-verrueckt-1.mp3}.
 In diesem Fall liefert nur die zweite URL einen Download, die erste zeigt eine Fehlermeldung an.
-Es gibt auch Fälle, in denen beide Links funktionieren, wie zum Beispiel \url{https://media.neuland.br.de/file/32891/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben.mp3} und \url{https://media.neuland.br.de/file/1858845/c/feed/die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben-1.mp3}.
+Es gibt auch Fälle, in denen beide Links funktionieren, wie zum Beispiel \url{die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben.mp3} und \url{die-bamberger-hexenprozesse-unschuldig-muss-ich-sterben-1.mp3}.
 Die Daten wurden dementsprechend bereinigt und doppelte Audioinhalte nur einmal abgespeichert.
 
 \myfigure{mp3_length.png}{Länge der MP3 Dateien}{mp3_length}
@@ -264,7 +264,7 @@ SQLite unterstützt Datenmengen bis zu 281 TB~\cite{zotero-553}.
 Allerdings wird auf der offiziellen Webseite angegeben, dass ab einer Größe von 1 TB auf serverbasierte RDBMS umgestiegen werden sollte, da die gesamte Datenbank in einem File gespeichert wird und viele Client-Betriebssysteme eine maximale Größe der Dateien vorgeben~\cite{zotero-553}.
 Falls das Projekt in der Zukunft auf mehrere Podcastreihen ausgeweitet wird, sollte vor diesem Hintergrund ein Wechsel des DBMS in Betracht gezogen werden.
 
-In der SQLite-Datenbank werden Podcast-Transkripte in zwei Tabellen gespeichert: \texttt{transcript\_sentences} und \texttt{transcript\_word\_level}.
+In der SQLite-Datenbank werden Podcast-Transkripte in zwei Tabellen gespeichert:\\ \texttt{transcript\_sentences} und \texttt{transcript\_word\_level}.
 
 Die Tabelle \texttt{transcript\_sentences} enthält die transkribierten Sätze mit folgenden Feldern:
 \begin{itemize}
