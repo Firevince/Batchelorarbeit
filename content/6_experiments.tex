@@ -2,8 +2,6 @@
 
 \section{Ausgangslage}
 
-
-
 In diesem Kapitel werden verschiedene Embeddingmodelle miteinander verglichen, um das Modell mit den besten Retrivaleigenschaften zu ermitteln.
 Wie in Kapitel \autoref*{ch:theoretical} beschrieben, gibt es bereits Rankings von verschiedenen Embeddingmodellen für ihre Retrieval Funktionalität.
 Leider gibt es noch nicht genügend deutsche Datensätze, um die Retrievaleigenschaften der Modelle für Texte der deutschen Sprache zu bewerten.
@@ -11,122 +9,79 @@ Spezielle Datensätzen sind zu Zeitpunkt dieser Arbeit nur für Englisch, Chines
 
 Die explizite Bewertung im Kontext der eigenen Daten hat außerdem den Vorteil, dass sie noch genauer die Eigenschaften der Modelle für diese Daten bewerten kann.
 
-\section{Begründung der Auswahl der Embeddingmodelle}
-
-Für die Bewertung werden vier verschiedene Embedding-Modelle miteinander verglichen.
-Die berücksichtigten Modelle decken sowohl Sparse- als auch Dense-Embedding-Ansätze ab, was eine breite Untersuchungspalette bietet.
-
-Der TF-IDF-Algorithmus wurde ausgewählt, da er ein klassischer Vertreter für Sparse-Embeddings ist und als Baseline herangezogen wird. 
-Er hat eine grundlegend andere Retrivaleigenschaften als die Dense-Vektoren, indem er nach lexikalischen Eigenschaften sucht anstatt nach semantischen Ähnlichkeiten.
-
-
-Als weiteres Modell wurde das sentence Transformer Modell all-mini-LM-L6-v2-Modell ausgewählt.
-Es ist aufgrund seiner geringe Größe und der relativ guten Leistung das am meisten Heruntergeladene Modell in der Kategorie Sentence-similarity auf der Plattform Huggingface~\cite{2024}.
-
-Das Modell voyage-lite-02-instruct-Modell belegt den zweiten Platz der Massive Text Embedding Benchmark, sowohl auf in der Leistung über alle einzelnen Benchmarks, als auch in der Kategorie Retrieval.
-Die Embeddings können dabei über eine API-Schnittstelle erhalten werden.
-Das bestplazierte Modell, konnte leider nicht benutzt werden, da es zu groß ist, um auf der verfügbaren Hardware laufen zu lassen.
-Ein weiteres Embeddingmodell, bei dem die Embeddings per API erhaltbar sind, ist das text-embeddings-small-Modell von OpenAI.
-Dieses Modell erzielt nur Platz 27 in der Kategorie Retrieval auf dem MTEB, wird aber als Vergleich herangezogen.
-
-
-\section{Themenauswahl}
-
-Die Bewertung des IR Systems erfolgt auf einer Auswahl verschiedener Themen.
-Das System berechnet für jedes Thema ein Embedding, vergleicht es mit den Embeddings in der Datenbank und erstellt daraus eine Ranking Liste.
-Für jedes Thema wird dann eine sortierte Liste der Segmente zurückgeben, welche benutzt wird, um das Model zu evaluieren.
-
-Die Themen, nach welchen die Embeddings evaluiert werden sollen sind in zwei Kategorien eingeteilt:
-\qt{topical} und \qt{re-findings}~\cite{jones2021}
-Bei der Kategorie topical wird verlangt, passende Segmente zu einem bestimmten Thema zu finden.
-Dazu werden 30 verschiedene Themen von ChatGPT generiert, die aus den Bereichen Geschichte, Naturwissenschaft, Gesellschaft oder Philosophie kommen.
-Als vergleich werden außerdem noch 30 verschiedene 
-
-
-Beim re-finding geht es darum, einen zuvor bekannten Audioinhalt wiederzufinden.
-Dabei wird 
-Dabei waren nur Teile des Audioinhaltes oder bestimmte Rahmenbedingungen vorgegeben (z.B. eine Podcast-Episode, welche die Person vor einer Woche hörte).
-In der letzten Kategorie den known Item sind bereits der Titel bzw.\ weitere Metainformationen bekannt.
-Die einzelnen Themen verfügten dabei außerdem noch über eine Beschreibung, die spezifiziert, was eine Testperson von der Suche mit diesem Prompt erwarten würde.
-
-
-Bei
-
-
-
 \section{Bewertungsmethoden}
 
-
 Für die Bewertung eines Information Retrival Systems können verschiedene Methoden verwendet werden.
-
 
 Die Güte von einem Information Retrieval System kann mithilfe des normalized discounted cumulative gain (NDCG) beschrieben werden. 
 Dafür muss allerdings für jedes Thema bereits eine vorgefertige Vergleichsliste vorhanden sein, mit der man dann die Ergebnisse vergleichen kann.
 Diese Vergleichsliste wird normalerweise Manuell erstellt.
 Für 400.000 Segmente auf 9 verschiedenen Themen ein manuelles Ranking durchzuführen ist leider im Rahmen dieser Arbeit nicht durchführbar.
 
-Ein weiterer Ansatz für das Ranking der einzelnen Segmente kann mithilfe von LLMs erfolgen.
-Leistungsstarke LLMs, wie GPT-4 werden mittlerweile in der Forschung für automatische Bewertungsaufgaben benutzt~\cite{naismith2023}~\cite{nilsson2023}.
+In dieser Arbeit wird der Ansatz für das Ranking der einzelnen Segmente mithilfe von LLMs verfolgt.
+Leistungsstarke LLMs, wie GPT-4 werden mittlerweile in der Forschung für automatische Bewertungsaufgaben von Texten benutzt~\cite{naismith2023}~\cite{nilsson2023}.
+
+\section{Auswahl der Embeddingmodelle}
+
+Für die Bewertung werden vier verschiedene Embedding-Modelle miteinander verglichen.
+Die berücksichtigten Modelle decken sowohl Sparse- als auch Dense-Embedding-Ansätze ab, was eine breite Untersuchungspalette bietet.
+Leider konnten viele open-source Modelle nicht evaluiert werden, da die Hardwareanforderungen zu hoch waren, bzw. durch schlechte Hardware der Embeddingprozess zu lange gedauert hätte. 
+Zum Beispiel würde das Embedding von 400.00 Sätzen mit dem besten Modell SFR-Embedding-Mistral~\cite{zotero-576} auf dem MTEB auf einem MacBook Pro 2016 mit einem Intel Core i7 über 300 Stunden dauern.
+Der TF-IDF-Algorithmus wurde ausgewählt, da er ein klassischer Vertreter für Sparse-Embeddings ist und als Baseline herangezogen wird. 
+Er hat eine grundlegend andere Retrivaleigenschaften als die Dense-Vektoren, indem er nach lexikalischen Eigenschaften sucht anstatt nach semantischen Ähnlichkeiten.
 
 
+Als weiteres Modell wurde das sentence Transformer Modell all-mini-LM-L6-v2-Modell~\cite{minilm2024} ausgewählt.
+Es ist aufgrund seiner geringe Größe und der relativ guten Leistung das am meisten Heruntergeladene Modell in der Kategorie Sentence-similarity auf der Plattform Huggingface~\cite{2024}.
 
-\section{Bewertungskriterien}
-
-
-Die Aufgabe besteht darin, zu untersuchen, wie gut eine Suchfunktion mithilfe der Embeddings in der Lage ist, passende Informationen zu einem Thema zu extrahieren.
-
-Für die Evaluation der verschiedenen Embeddings werden verschiedene Kriterien angelegt.
-Einerseits müssen die extrahierten Segmente zu dem Thema passen und nicht irrelevante andere Themen behandeln.
-Das ist der wichtigste Punkte bei der Evaluation.
-
-Ein weiteres Kriterium ist der Inhaltliche Zusammenhang der einzelnen Segmente.
-Die einzelnen Segmente sollten eine inhaltliche Verbindung aufweisen, sodass der/die Hörer*in nicht zwischen verschiedenen Themn hin und hergeworfen wird.
-Zum Beispiel soll ein Podcast über \qt{Geschichte Amsterdam} nicht in einem Segment über die Gründung der Niederlande sprechen und im nächsten Segment davon handeln, wie sich Amsterdam in der Nazi Zeit verhalten hat.
-Gleichzeitig sollen die Segmente auch nicht alle denselben Inhalt aufweisen und zum Beispiel in drei verschiedenen Segmenten wiederholen, dass die Niederlande im goldenen Zeitalter des 17. Jahrhunderts ein florierendes Handelsnetzwerk aufgebaut hatten.
- 
+Das Modell voyage-lite-02-instruct-Modell~\cite{zotero-572} belegt den zweiten Platz der Massive Text Embedding Benchmark, sowohl auf in der Leistung über alle einzelnen Benchmarks, als auch in der Kategorie Retrieval.
+Die Embeddings können dabei über eine API-Schnittstelle erhalten werden.
+Das bestplazierte Modell, konnte leider nicht benutzt werden, da es zu groß ist, um auf der verfügbaren Hardware laufen zu lassen.
 
 
-\section{Prompt Engineering}
-
-Reasoning
-Json
-GPT-4
-beispielprompt
+Ein weiteres Embeddingmodell, bei dem die Embeddings per API erhaltbar sind, ist das text-embeddings-small-Modell~\cite{zotero-574} von OpenAI.
+Dieses Modell erzielt nur Platz 27 in der Kategorie Retrieval auf dem MTEB~\cite{mteb}, wird aber als Vergleich herangezogen.
 
 
- 
+\section*{Vorgehensweise}
+
+Die Bewertung des IR Systems erfolgt auf einer Auswahl verschiedener Themen.
+Das System berechnet für jedes Thema ein Embedding, vergleicht es mit den Embeddings in der Datenbank und erstellt daraus eine Ranking Liste.
+Für jedes Thema wird dann eine sortierte Liste der Segmente zurückgeben, welche benutzt wird, um das Model zu evaluieren.
+
+Die Aufgaben, nach welchen die Embeddings evaluiert werden sollen sind in zwei Kategorien eingeteilt:
+\qt{topical} und \qt{re-findings}~\cite{jones2021}
+Bei der Kategorie \qt{topical} wird verlangt, passende Segmente zu einem bestimmten Thema zu finden.
+Dazu werden 30 verschiedene Themen von ChatGPT generiert \ref{ch:chatgpt-topicgeneration}, die aus den Bereichen Geschichte, Naturwissenschaft, Gesellschaft oder Philosophie kommen.
+Als Vergleich werden außerdem noch 30 verschiedene Fragen generiert \ref{ch:chatgpt-questiongeneration}, um zu untersuchen, ob ein größerer spezifizierung des Themas die Retrieval Eigenschaften verbessern kann. 
+Für jedes Modell werden die 10 Segmente mit der größten Similarity ausgewählt.
+Für die Bewertung wird das Modell ChatGPT4 verwendet.
+Dafür werden die Segmente zusammen mit der Originalen Anfrage in einem Prompt an das Modell geschickt.
+ChtGPT4 wird daraufhin Segmente nach den drei Metriken Precision, Cohesion und Uniqueness bewerten.
+Bei der Precision wird inhaltliche Relevanz der Segmente zu dem Thema bewertet auf einer Skala von  null bis fünf.
+Die Cohesion bewertet die inhaltliche Zusammengehörigkeit der einzalnen Segmente zu einander.
+Sie wird auf einer Skala von null bis drei bewertet.
+Das dritte Bewertungskriterium bildet die Uniqueness, bei der untersuht wird, ob sich die einzelnen Segmente inhaltlich überlappen oder jedes einen Eigenen Inhalt darstellt.
+Diese Metrik wird auf einer Skala von null bis zwei evaluiert.
 
 
-\section{Sentence Transformer Embeddings}
-
-Das Sentence Transformer Projekt baut auf der Architektur von BERT auf. 
-Es wird auch SBERT für Sentence BERT genannt. 
-Uni Darmstadt
-Haben verschiedene Modelle.
-
-Unter dem 
-
-
-\section{OpenAI Embeddings}
-
-\href{https://twitter.com/Nils_Reimers/status/1487014195568775173}{twitter}
-
-OpenAI stellt außer den Text (GPT-4) und Bild (DALLE) generierungs Modellen auch Modelle zur Embedding erstellung in Ihrer API vor.
-Ada (1024 dimensions)
-Babbage (2048 dimensions)
-Curie (4096 dimensions)
-Davinci (12288 dimensions)
-
-\section{voyage}
-
-über API
-1024 Dimensionen
+Beim re-finding geht es darum, einen zuvor bekannten Audioinhalt wiederzufinden.
+Dabei werden als Anfrage Suchworte gestellt, die den Titel einer speziellen Episode beschreiben.
+Für jedes Embedding-Modell werden die drei Segmente mit dem größten Similarity Score ermittelt.
+Es wird untersucht, ob unter den Abschnitten auch Segmente sind, die aus der gesuchten Episode stammen.
+Wenn gleich der Erste Treffer aus dieser Episode stammt, werden drei Punkte vergeben, wenn der zweite Treffer übereinstimmt, zwei Punkte und für falls nur der letzte Treffer die richtige Episode markiert wird ein Punkt vergeben.
+Stammt keines der Segmente aus diesem Podcast, wird kein Punkt vergeben.
+Dabei werden wieder 30 verschiedene Themen evaluiert.
 
 
 \section{Auswertung}
 
+\subsection{Auswertung topical}
+
 \myfigure{evaluation_all.png}{Vergleich der verschiedenen Embeddingmodelle (Themen 1-3 Wörter)}{evaluation_all}
 
 \myfigure{evaluation_queries.png}{Vergleich der verschiedenen Embeddingmodelle (Fragen)}{evaluation_all}
+
+\myfigure{evaluation_re_finding.png}{Vergleich der Embeddingmodelle (re-finding)}{}
 
 könnte durch Augmentierung der Userfrage durch ChatGPT verbessert werden.\cite{shum2024}\cite{dai2023}

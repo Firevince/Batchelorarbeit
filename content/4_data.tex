@@ -264,6 +264,28 @@ SQLite unterstützt Datenmengen bis zu 281 TB~\cite{zotero-553}.
 Allerdings wird auf der offiziellen Webseite angegeben, dass ab einer Größe von 1 TB auf serverbasierte RDBMS umgestiegen werden sollte, da die gesamte Datenbank in einem File gespeichert wird und viele Client-Betriebssysteme eine maximale Größe der Dateien vorgeben~\cite{zotero-553}.
 Falls das Projekt in der Zukunft auf mehrere Podcastreihen ausgeweitet wird, sollte vor diesem Hintergrund ein Wechsel des DBMS in Betracht gezogen werden.
 
+In der SQLite-Datenbank werden Podcast-Transkripte in zwei Tabellen gespeichert: \texttt{transcript\_sentences} und \texttt{transcript\_word\_level}.
+
+Die Tabelle \texttt{transcript\_sentences} enthält die transkribierten Sätze mit folgenden Feldern:
+\begin{itemize}
+  \item \texttt{filename} (TEXT): Der Name der Audiodatei, aus der das Transkript stammt.
+  \item \texttt{sentence} (TEXT): Der vollständige transkribierte Satz.
+  \item \texttt{start} (REAL): Die Startzeit des Satzes in der Audiodatei, gemessen in Sekunden.
+  \item \texttt{end} (REAL): Die Endzeit des Satzes in der Audiodatei.
+  \item \texttt{sentence\_id} (INTEGER): Eine eindeutige Identifikationsnummer des Satzes innerhalb des Transkripts.
+\end{itemize}
+
+Die Tabelle \texttt{transcript\_word\_level} dient der detaillierten Erfassung auf Wortebene und umfasst:
+\begin{itemize}
+  \item \texttt{filename} (TEXT): Analog zu \texttt{transcript\_sentences}, der Name der Audiodatei.
+  \item \texttt{word} (TEXT): Das einzelne transkribierte Wort.
+  \item \texttt{start} (REAL): Die Startzeit des Wortes in der Audiodatei.
+  \item \texttt{end} (REAL): Die Endzeit des Wortes in der Audiodatei.
+\end{itemize}
+
+Diese Struktur ermöglicht es, die Daten effizient zu speichern. 
+Die gespeicherten Start- und Endzeiten ermöglichen eine Rücküberführung in die entsprechende Stelle im Audio.
+
 \subsection{Datenspeicherung Vektoren SQLite}
 
 Da SQLite nativ keine Listen oder Tabellen als Einträge in einer Datenbank speichern kann, ist es nicht trivial, die Embeddings abzuspeichern~\cite{zotero-555}.
@@ -296,6 +318,8 @@ Das Projekt ist erst im Mai 2022 als Start-up entstanden, verfügt aber mittlerw
 Die Datenbank ist dabei mit einer NoSQL-Datenbank zu vergleichen, indem die Daten nicht relational in Tabellen, sondern in einer Collection als Objekte mit verschiedenen Metadaten gespeichert werden.
 Jedes dieser Objekte hat eine Document-Eigenschaft, welche den Inhalt des Dokuments repräsentiert.
 Dieser Inhalt ist in diesem Fall ein Ausschnitt aus einem Transkript, könnte aber auch ein Bild oder eine Audiodatei darstellen.
+Für jedes Objekt sind zusätzlich der \texttt{filename} und die \texttt{sentence\_id} gespeichert, um diesen Eintrag in der SQLite-Datenbank zu identifizieren.
+
 
 Außerdem besitzt jedes Objekt einen Embedding-Vektor, der mit dem Dokument assoziiert wird.
 Innerhalb einer Collection müssen alle Objekte mit derselben Embedding-Methode encodiert werden.

@@ -189,7 +189,56 @@ Userprompt:
 
 \label{ch:chatgpt-topicgeneration}
 
+Ein Beispielprompt um Themen zur Evaluation der Embeddingmodelle zu erstellen.
+
 \begin{verbatim}
 Generiere 30 verschiedene Suchthemen, die aus den Themenbereichen Geschichte, Naturwissenschaft, Gesellschaft oder Philosophie kommen und auch über die deutsche Kultur handeln.
 Die Themen sollen 1-3 verschiedene Wörter umfassen.
 \end{verbatim}
+
+\label{ch:chatgpt-questiongeneration}
+
+Ein Beispielprompt um Fragen zur Evaluation der Embeddingmodelle zu erstellen.
+
+\begin{verbatim}
+Kannst du 30 Fragen generieren, wie "Wann werden Menschen auf dem Mars sein?" oder "Wo wird urbaner Gartenbau betrieben?"
+\end{verbatim}
+
+\label{ch:chatgpt-evaluation}
+
+Ein Beispielprompt um Retrieval Ergebnisse zu evaluieren.
+
+System-prompt:
+
+\begin{verbatim}
+    Du bewertest die Ausgabe eines Text Retrieval Systems. Bewerte, wie gut die gefundenen Textabschnitte zu dem gestellten Thema passen. Berücksichtige dabei folgende Kriterien und vergebe Punkte, wobei zu jedem Kriterium eine Legende erklärt, was die jeweilige Punktzahl bedeutet:
+
+    - Precision: Der Text enthält keine irrelevanten Informationen, die nicht zum Thema passen.
+      0 Punkte: Der Text ist völlig irrelevant.
+      1-2 Punkte: Der Text enthält größtenteils irrelevante Informationen.
+      3-4 Punkte: Der Text ist überwiegend relevant mit einigen irrelevanten Details.
+      5 Punkte: Der Text ist vollständig relevant ohne irrelevante Informationen.
+    
+    - Cohesion: Die einzelnen Textausschnitte passen inhaltlich zusammen.
+      0 Punkte: Kein Zusammenhang zwischen den Textausschnitten.
+      1 Punkt: Geringer Zusammenhang zwischen den Textausschnitten.
+      2 Punkte: Hoher Zusammenhang und gute inhaltliche Verknüpfung zwischen den Textausschnitten.
+    
+    - Uniqueness: Die Textausschnitte wiederholen keine Informationen.
+      0 Punkte: Starke Wiederholungen von Informationen.
+      1-2 Punkte: Einige Wiederholungen, aber auch neue Informationen.
+      3 Punkte: Jeder Textausschnitt liefert einzigartige und neue Informationen.
+    
+    Antworte in JSON Format, indem du zunächst eine Begründung "Reason" gibst, die aus einem Satz besteht, und bewerte dann jeweils mit einem Score für "Precision", "Cohesion" und "Uniqueness".    
+\end{verbatim}
+
+User-Prompt:
+
+\begin{verbatim}  
+    Textabschnitte: {documents}
+
+    -----------
+
+    Frage: {query}
+\end{verbatim}
+

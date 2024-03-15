@@ -182,3 +182,51 @@ TF-IDF - vergleich zu Keyword-suche
 all-mini-LM-L6-v2 - klein, schnell, most downloaded~\cite{2024}
 voyage-lite-02-instruct - 1024 dim - platz 2 bei Retrival auf MTEB (Platz 1 konnte nicht zum laufen gebracht werden) 
 OpenAI text-embeddings-small - platz 27 auf MTEB - 1526 dim 
+
+\section{Bewertungskriterien}
+
+
+Die Aufgabe besteht darin, zu untersuchen, wie gut eine Suchfunktion mithilfe der Embeddings in der Lage ist, passende Informationen zu einem Thema zu extrahieren.
+
+Für die Evaluation der verschiedenen Embeddings werden verschiedene Kriterien angelegt.
+Einerseits müssen die extrahierten Segmente zu dem Thema passen und nicht irrelevante andere Themen behandeln.
+Das ist der wichtigste Punkte bei der Evaluation.
+
+Ein weiteres Kriterium ist der Inhaltliche Zusammenhang der einzelnen Segmente.
+Die einzelnen Segmente sollten eine inhaltliche Verbindung aufweisen, sodass der/die Hörer*in nicht zwischen verschiedenen Themn hin und hergeworfen wird.
+Zum Beispiel soll ein Podcast über \qt{Geschichte Amsterdam} nicht in einem Segment über die Gründung der Niederlande sprechen und im nächsten Segment davon handeln, wie sich Amsterdam in der Nazi Zeit verhalten hat.
+Gleichzeitig sollen die Segmente auch nicht alle denselben Inhalt aufweisen und zum Beispiel in drei verschiedenen Segmenten wiederholen, dass die Niederlande im goldenen Zeitalter des 17. Jahrhunderts ein florierendes Handelsnetzwerk aufgebaut hatten.
+
+\section{Prompt Engineering}
+
+Reasoning
+Json
+GPT-4
+beispielprompt
+
+
+\section{Sentence Transformer Embeddings}
+
+Das Sentence Transformer Projekt baut auf der Architektur von BERT auf. 
+Es wird auch SBERT für Sentence BERT genannt. 
+Uni Darmstadt
+Haben verschiedene Modelle.
+
+Unter dem 
+
+
+\section{OpenAI Embeddings}
+
+\href{https://twitter.com/Nils_Reimers/status/1487014195568775173}{twitter}
+
+OpenAI stellt außer den Text (GPT-4) und Bild (DALLE) generierungs Modellen auch Modelle zur Embedding erstellung in Ihrer API vor.
+Ada (1024 dimensions)
+Babbage (2048 dimensions)
+Curie (4096 dimensions)
+Davinci (12288 dimensions)
+
+\section{voyage}
+
+über API
+1024 Dimensionen
+
