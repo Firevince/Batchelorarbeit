@@ -7,7 +7,11 @@ from db_connect import db_get_df, db_save_df, load_npz, load_pkl
 from embedding_creation.embedding_creator_MINI_L6 import MINI_LM_embed
 from embedding_creation.embedding_creator_TF_IDF import tf_idf_embed
 from scipy.spatial.distance import cosine
-from segment_ranking.chatgpt_help import gpt_order_segments
+from segment_ranking.chatgpt_help import gpt_order_segments, gpt_segment_boundaries
+from segment_ranking.chromadb_connect import (
+    get_most_similar_documents_openai,
+    get_most_similar_documents_voyage,
+)
 from sklearn.metrics.pairwise import pairwise_distances
 from tqdm import tqdm
 
@@ -42,6 +46,19 @@ def enrich_all_segments(df_distance, df_all, segment_size):
     )
     enriched_segments_df = enriched_segments_df.reset_index(drop=True)
     return enriched_segments_df
+
+
+def enrich_all_segments_gpt(df_distance, df_all, query):
+    segments = []
+    for filename in df_distance["filename"].unique():
+        df_file = df_all[df_all["filename"] == filename].reset_index(drop=True)
+        df_segment = gpt_segment_boundaries(df_file, query)
+        segments.append(df_segment)
+
+    df_segments = pd.concat(segments)
+    df_segments = df_segment.reset_index(drop=True)
+    print(df_segments)
+    return df_segments
 
 
 def calculate_distances_batchwise(message_embedding, embeddings_matrix):
@@ -97,7 +114,7 @@ def load_model_data(model_type):
 
 
 def get_most_similar_segments(
-    model_type: str, message: str, amount: int, segment_size: int, sort_gpt=True
+    model_type: str, message: str, amount: int, segment_size: int, sort_gpt=False
 ):
     """
     Find the most similar documents to the given message using the specified model.
@@ -107,13 +124,21 @@ def get_most_similar_segments(
     :param amount: The number of similar documents to return.
     :return: A DataFrame containing the most similar documents.
     """
+
+    most_similar_documents = None
     df = db_get_df("transcript_sentences")
-    message_embedding = get_embedding(model_type, message)
-    model_data = load_model_data(model_type)
 
-    df["distance"] = calculate_distances_batchwise(message_embedding, model_data)
+    if model_type == "OPENAI":
+        most_similar_documents = get_most_similar_documents_openai(message, amount)
+    elif model_type == "VOYAGE":
+        most_similar_documents = get_most_similar_documents_voyage(message, amount)
+    else:
+        message_embedding = get_embedding(model_type, message)
+        model_data = load_model_data(model_type)
+        df["distance"] = calculate_distances_batchwise(message_embedding, model_data)
+        most_similar_documents = df.nsmallest(amount, "distance")
 
-    most_similar_documents = df.nsmallest(amount, "distance")
+    # most_similar_documents = enrich_all_segments_gpt(most_similar_documents, df, message)
     most_similar_documents = enrich_all_segments(most_similar_documents, df, segment_size)
 
     if sort_gpt:
