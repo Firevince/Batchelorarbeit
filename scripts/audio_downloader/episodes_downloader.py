@@ -9,19 +9,16 @@ GRAPHQL_URL = "https://api.ardaudiothek.de/graphql"
 
 
 def download_mp3(url):
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            print(f"Downloaded {url}")
-            return response.content
-        elif response.status_code == 404:
-            print(f"Failed to download MP3. Status code: {response.status_code}")
-            return None
-        else:
-            print(f"Failed to download MP3. Status code: {response.status_code}")
-    except Exception as e:
-        print(f"An error occurred: {str(e)}")
-    return None
+
+    response = requests.get(url)
+    if response.status_code == 200:
+        print(f"Downloaded {url}")
+        return response.content
+    elif response.status_code == 404:
+        raise (f"Failed to download MP3. Status code: {response.status_code}")
+    else:
+        print(f"Failed to download MP3. Status code: {response.status_code}")
+        return None
 
 
 def download_and_save_mp3_in_dir(url, path, filename):
@@ -38,7 +35,7 @@ def get_graphql(query):
     if response.status_code == 200:
         return response.json()
     else:
-        raise f"GraphQL request failed with status code {response.status_code}"
+        raise Exception(f"GraphQL request failed with status code {response.status_code}")
 
 
 def download_on_demand(filename, path):

@@ -14,9 +14,15 @@ AUDIO_SEGMENT_PATH = os.getenv("AUDIO_SEGMENT_PATH")
 
 def split_audio(audio_filename, start, end, output_file):
     file_path = os.path.join(AUDIO_SOURCE_PATH, audio_filename)
+
     if not os.path.isfile(file_path):
-        print(f"File not found - downloading {audio_filename}")
-        download_on_demand(audio_filename, AUDIO_SOURCE_PATH)
+        print(f"File not found - trying downloading {audio_filename}")
+        try:
+            download_on_demand(audio_filename, AUDIO_SOURCE_PATH)
+            print("downloaded")
+        except:
+            print("URL not valid - skipping segment")
+            return
 
     audio_file = AudioSegment.from_file(file_path)
     start_time = start * 1000
