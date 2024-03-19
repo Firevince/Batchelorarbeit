@@ -2,75 +2,69 @@
 
 \section{Ausgangslage}
 
-In diesem Kapitel werden verschiedene Embeddingmodelle miteinander verglichen, um das Modell mit den besten Retrivaleigenschaften zu ermitteln.
-Wie in Kapitel \autoref*{ch:theoretical} beschrieben, gibt es bereits Rankings von verschiedenen Embeddingmodellen für ihre Retrieval Funktionalität.
-Leider gibt es noch nicht genügend deutsche Datensätze, um die Retrievaleigenschaften der Modelle für Texte der deutschen Sprache zu bewerten.
-Spezielle Datensätzen sind zu Zeitpunkt dieser Arbeit nur für Englisch, Chinesisch, Französisch und Polnisch verfügbar~\cite{mteb}.
+In diesem Kapitel werden verschiedene Embedding-Modelle miteinander verglichen, um das Modell mit den besten Retrieval-Eigenschaften zu ermitteln.
+Wie in \autoref{ch:theoretical} beschrieben, gibt es bereits Rankings von verschiedenen Embedding-Modellen hinsichtlich ihrer Retrieval-Funktionalität.
+Leider gibt es noch nicht genügend deutsche Datensätze, um die Retrieval-Eigenschaften der Modelle für Texte in deutscher Sprache zu bewerten.
+Spezielle Datensätze sind zum Zeitpunkt dieser Arbeit nur für Englisch, Chinesisch, Französisch und Polnisch verfügbar~\cite{mteb}.
 
-Die explizite Bewertung im Kontext der eigenen Daten hat außerdem den Vorteil, dass sie noch genauer die Eigenschaften der Modelle für diese Daten bewerten kann.
+Die explizite Bewertung im Kontext der eigenen Daten hat außerdem den Vorteil, dass sie die Eigenschaften der Modelle für diese Daten noch genauer bewerten kann.
+
 
 \section{Bewertungsmethoden}
+Für die Bewertung eines Information Retrieval Systems können verschiedene Methoden verwendet werden.
 
-Für die Bewertung eines Information Retrival Systems können verschiedene Methoden verwendet werden.
+Die Güte eines Information Retrieval Systems kann mithilfe des normalized discounted cumulative gain (NDCG)~\cite{dupret2011} beschrieben werden. 
+Dafür muss allerdings für jedes Thema bereits eine vorgefertigte Vergleichsliste, die Ground Truth, vorhanden sein, mit der man dann die Ergebnisse vergleichen kann.
+Diese Vergleichsliste, oder Ground Truth, wird normalerweise manuell erstellt.
+Für 400.000 Segmente über 9 verschiedene Themen ein manuelles Ranking durchzuführen, ist leider im Rahmen dieser Arbeit nicht durchführbar.
 
-Die Güte von einem Information Retrieval System kann mithilfe des normalized discounted cumulative gain (NDCG) beschrieben werden. 
-Dafür muss allerdings für jedes Thema bereits eine vorgefertige Vergleichsliste vorhanden sein, mit der man dann die Ergebnisse vergleichen kann.
-Diese Vergleichsliste wird normalerweise Manuell erstellt.
-Für 400.000 Segmente auf 9 verschiedenen Themen ein manuelles Ranking durchzuführen ist leider im Rahmen dieser Arbeit nicht durchführbar.
+In dieser Arbeit wird der Ansatz verfolgt, das Ranking der einzelnen Segmente mithilfe von LLMs zu erstellen.
+Leistungsstarke LLMs, wie GPT-4, werden mittlerweile in der Forschung für automatische Bewertungsaufgaben von Texten eingesetzt~\cite{naismith2023}~\cite{nilsson2023}.
 
-In dieser Arbeit wird der Ansatz für das Ranking der einzelnen Segmente mithilfe von LLMs verfolgt.
-Leistungsstarke LLMs, wie GPT-4 werden mittlerweile in der Forschung für automatische Bewertungsaufgaben von Texten benutzt~\cite{naismith2023}~\cite{nilsson2023}.
 
-\section{Auswahl der Embeddingmodelle}
+\section{Auswahl der Embedding-Modelle}
 
 Für die Bewertung werden vier verschiedene Embedding-Modelle miteinander verglichen.
 Die berücksichtigten Modelle decken sowohl Sparse- als auch Dense-Embedding-Ansätze ab, was eine breite Untersuchungspalette bietet.
 Leider konnten viele open-source Modelle nicht evaluiert werden, da die Hardwareanforderungen zu hoch waren, bzw. durch schlechte Hardware der Embeddingprozess zu lange gedauert hätte. 
 Zum Beispiel würde das Embedding von 400.00 Sätzen mit dem besten Modell SFR-Embedding-Mistral~\cite{zotero-576} auf dem MTEB auf einem MacBook Pro 2016 mit einem Intel Core i7 über 300 Stunden dauern.
 Der TF-IDF-Algorithmus wurde ausgewählt, da er ein klassischer Vertreter für Sparse-Embeddings ist und als Baseline herangezogen wird. 
-Er hat eine grundlegend andere Retrivaleigenschaften als die Dense-Vektoren, indem er nach lexikalischen Eigenschaften sucht anstatt nach semantischen Ähnlichkeiten.
+Er hat eine grundlegend andere Retrievaleigenschaften als die Dense-Vektoren, indem er nach lexikalischen Eigenschaften sucht anstatt nach semantischen Ähnlichkeiten.
 
 
-Als weiteres Modell wurde das sentence Transformer Modell all-mini-LM-L6-v2-Modell~\cite{minilm2024} ausgewählt.
-Es ist aufgrund seiner geringe Größe und der relativ guten Leistung das am meisten Heruntergeladene Modell in der Kategorie Sentence-similarity auf der Plattform Huggingface~\cite{2024}.
+Als weiteres Modell wurde das Sentence Transformer Modell all-mini-LM-L6-v2-Modell~\cite{minilm2024} ausgewählt.
+Es ist aufgrund seiner geringe Größe und der relativ guten Leistung das am meisten heruntergeladene Modell in der Kategorie Sentence-similarity auf der Plattform Huggingface~\cite{2024}.
 
-Das Modell voyage-lite-02-instruct-Modell~\cite{zotero-572} belegt den zweiten Platz der Massive Text Embedding Benchmark, sowohl auf in der Leistung über alle einzelnen Benchmarks, als auch in der Kategorie Retrieval.
+Das Modell voyage-lite-02-instruct-Modell~\cite{zotero-572} belegt den zweiten Platz der Massive Text Embedding Benchmark, sowohl in der Leistung über alle einzelnen Benchmarks, als auch in der Kategorie Retrieval.
 Die Embeddings können dabei über eine API-Schnittstelle erhalten werden.
-Das bestplazierte Modell, konnte leider nicht benutzt werden, da es zu groß ist, um auf der verfügbaren Hardware laufen zu lassen.
+Das bestplazierte Modell, konnte leider nicht benutzt werden, da es zu groß ist, um auf der verfügbaren Hardware laufen zu können.
 
 
-Ein weiteres Embeddingmodell, bei dem die Embeddings per API erhaltbar sind, ist das text-embeddings-small-Modell~\cite{zotero-574} von OpenAI.
+Ein weiteres Embedding-Modell, bei dem die Embeddings per API übergeben werden, ist das text-embeddings-small-Modell~\cite{zotero-574} von OpenAI.
 Dieses Modell erzielt nur Platz 27 in der Kategorie Retrieval auf dem MTEB~\cite{mteb}, wird aber als Vergleich herangezogen.
 
 
 \section{Vorgehensweise}
+Die Bewertung des IR-Systems erfolgt auf einer Auswahl verschiedener Themen. 
+Das System berechnet für jedes Thema ein Embedding, vergleicht es mit den Embeddings in der Datenbank und erstellt daraus eine Rangliste. 
+Für jedes Thema wird dann eine sortierte Liste der Segmente zurückgegeben, welche zur Evaluierung des Modells benutzt wird.
 
-Die Bewertung des IR Systems erfolgt auf einer Auswahl verschiedener Themen.
-Das System berechnet für jedes Thema ein Embedding, vergleicht es mit den Embeddings in der Datenbank und erstellt daraus eine Ranking Liste.
-Für jedes Thema wird dann eine sortierte Liste der Segmente zurückgeben, welche benutzt wird, um das Model zu evaluieren.
-
-Die Aufgaben, nach welchen die Embeddings evaluiert werden sollen sind in zwei Kategorien eingeteilt:
-\qt{topical} und \qt{re-findings}~\cite{jones2021}
-Bei der Kategorie \qt{topical} wird verlangt, passende Segmente zu einem bestimmten Thema zu finden.
-Dazu werden 30 verschiedene Themen von ChatGPT generiert \ref{ch:chatgpt-topicgeneration}, die aus den Bereichen Geschichte, Naturwissenschaft, Gesellschaft oder Philosophie kommen.
-Als Vergleich werden außerdem noch 30 verschiedene Fragen generiert \ref{ch:chatgpt-questiongeneration}, um zu untersuchen, ob ein größerer spezifizierung des Themas die Retrieval Eigenschaften verbessern kann. 
-Für jedes Modell werden die 10 Segmente mit der größten Similarity ausgewählt.
-Für die Bewertung wird das Modell ChatGPT4 verwendet.
-Dafür werden die Segmente zusammen mit der Originalen Anfrage in einem Prompt an das Modell geschickt.
-ChtGPT4 wird daraufhin Segmente nach den drei Metriken Precision, Cohesion und Uniqueness bewerten.
-Bei der Precision wird inhaltliche Relevanz der Segmente zu dem Thema bewertet auf einer Skala von  null bis fünf.
-Die Cohesion bewertet die inhaltliche Zusammengehörigkeit der einzalnen Segmente zu einander.
-Sie wird auf einer Skala von null bis drei bewertet.
-Das dritte Bewertungskriterium bildet die Uniqueness, bei der untersuht wird, ob sich die einzelnen Segmente inhaltlich überlappen oder jedes einen Eigenen Inhalt darstellt.
+Die Aufgaben, nach denen die Embeddings evaluiert werden sollen, sind in zwei Kategorien eingeteilt: „topical“ und „re-findings“~\cite{jones2021}. 
+Bei der Kategorie „topical“ wird verlangt, passende Segmente zu einem bestimmten Thema zu finden. Dazu werden 30 verschiedene Themen von ChatGPT generiert (siehe \autoref{ch:chatgpt-topicgeneration}), die aus den Bereichen Geschichte, Naturwissenschaft, Gesellschaft oder Philosophie stammen. Als Vergleich werden zudem 30 verschiedene Fragen generiert (siehe \autoref{ch:chatgpt-questiongeneration}), um zu untersuchen, ob eine größere Spezifizierung des Themas die Retrieval-Eigenschaften verbessern kann. 
+Für jedes Modell werden die 10 Segmente mit der größten Ähnlichkeit ausgewählt. 
+Zur Bewertung wird das Modell ChatGPT-4 verwendet. Dafür werden die Segmente zusammen mit der originalen Anfrage in einem Prompt an das Modell geschickt. 
+ChatGPT-4 bewertet daraufhin die Segmente nach den drei Metriken Precision, Cohesion und Uniqueness.
+Bei der Precision wird die inhaltliche Relevanz der Segmente zu dem Thema auf einer Skala von null bis fünf bewertet. 
+Die Cohesion bewertet die inhaltliche Zusammengehörigkeit der einzelnen Segmente zueinander auf einer Skala von null bis drei. 
+Das dritte Bewertungskriterium ist die Uniqueness, bei der untersucht wird, ob sich die einzelnen Segmente inhaltlich überlappen oder jedes einen eigenen Inhalt darstellt. 
 Diese Metrik wird auf einer Skala von null bis zwei evaluiert.
 
-
-Beim re-finding geht es darum, einen zuvor bekannten Audioinhalt wiederzufinden.
+Beim „re-finding“ geht es darum, einen zuvor bekannten Audioinhalt wiederzufinden. 
 Dabei werden als Anfrage Suchworte gestellt, die den Titel einer speziellen Episode beschreiben.
-Für jedes Embedding-Modell werden die drei Segmente mit dem größten Similarity Score ermittelt.
-Es wird untersucht, ob unter den Abschnitten auch Segmente sind, die aus der gesuchten Episode stammen.
-Wenn gleich der Erste Treffer aus dieser Episode stammt, werden drei Punkte vergeben, wenn der zweite Treffer übereinstimmt, zwei Punkte und für falls nur der letzte Treffer die richtige Episode markiert wird ein Punkt vergeben.
-Stammt keines der Segmente aus diesem Podcast, wird kein Punkt vergeben.
+Für jedes Embedding-Modell werden die drei Segmente mit dem größten Ähnlichkeits-Score ermittelt. 
+Es wird untersucht, ob unter den Abschnitten auch Segmente sind, die aus der gesuchten Episode stammen. 
+Wenn der erste Treffer aus dieser Episode stammt, werden drei Punkte vergeben, wenn der zweite Treffer übereinstimmt, zwei Punkte und falls nur der letzte Treffer die richtige Episode markiert, wird ein Punkt vergeben. 
+Stammt keines der Segmente aus diesem Podcast, wird kein Punkt vergeben. 
 Dabei werden wieder 30 verschiedene Themen evaluiert.
 
 
@@ -93,9 +87,9 @@ Bezüglich der Precision stellt sich heraus, dass voyage-lite-02-instruct von Vo
 Das TF-IDF-Embedding zeigt bei Themen, die mit 1-3 Wörtern beschrieben werden, eine höhere Präzision als bei Fragen. 
 Beim all-mini-LM-L6-v2-Modell wird eine Verminderung der Precision festgestellt, wenn es um die Beantwortung von Fragen im Vergleich zu Themen geht.
 
-\myfigure{evaluation_all.png}{Vergleich der verschiedenen Embeddingmodelle (Themen 1-3 Wörter)}{evaluation_all}
+\myfigure{evaluation_all.png}{Vergleich der verschiedenen Embedding-Modelle (Themen 1-3 Wörter)}{evaluation_all}
 
-\myfigure{evaluation_queries.png}{Vergleich der verschiedenen Embeddingmodelle (Fragen)}{evaluation_queries}
+\myfigure{evaluation_queries.png}{Vergleich der verschiedenen Embedding-Modelle (Fragen)}{evaluation_queries}
 
 
 
@@ -105,7 +99,8 @@ Beim all-mini-LM-L6-v2-Modell wird eine Verminderung der Precision festgestellt,
 
 \subsection{Auswertung re-finding}
 
-In \autoref{fig:evaluation_re_finding} wird die Leistungsfähigkeit unterschiedlicher Embedding-Modelle bei der Aufgabe des Wiederfindens von spezifischen Audioinhalten dargestellt. Die Auswertung basiert auf einem Scoring-System, bei dem Suchworte zur Identifikation von Episodentiteln genutzt werden. 
+In \autoref{fig:evaluation_re_finding} wird die Leistungsfähigkeit unterschiedlicher Embedding-Modelle bei der Aufgabe des Wiederfindens von spezifischen Audioinhalten dargestellt. 
+Die Auswertung basiert auf einem Scoring-System, bei dem Suchworte zur Identifikation von Episodentiteln genutzt werden. 
 Die Modelle werden danach bewertet, wie gut sie in der Lage sind, die richtige Episode innerhalb der drei höchsten Similarity Scores zu identifizieren.
 
 Das text-embeddings-small von OpenAI erweist sich als das leistungsfähigste Modell und erreicht die höchsten Werte. 
@@ -113,11 +108,12 @@ Dies deutet auf eine hohe Effizienz des Modells beim Zuordnen von Suchanfragen z
 Das all-mini-LM-L6-v2-Modell und das TF-IDF-Embedding zeigen ähnliche Ergebnisse und liegen im mittleren Bereich des Rankings. 
 Das voyage-lite-02-instruct von Voyage AI hingegen zeigt deutliche Schwächen und erreicht die niedrigsten Punktzahlen in dieser spezifischen Aufgabe des re-finding.
 
-Es ist bemerkenswert, dass das TF-IDF-Modell, welches typischerweise auf Keyword-Suche spezialisiert ist, nicht die Spitzenposition einnimmt. Dies könnte auf die Art der Suchanfragen, die Komplexität der Daten oder auf die Spezifität der Themen zurückzuführen sein, die möglicherweise eine tiefere semantische Analyse erfordern, als sie durch reine Keyword-Abgleichung erreicht werden kann.
+Es ist bemerkenswert, dass das TF-IDF-Modell, welches typischerweise auf Keyword-Suche spezialisiert ist, nicht die Spitzenposition einnimmt. 
+Dies könnte auf die Art der Suchanfragen, die Komplexität der Daten oder auf die Spezifität der Themen zurückzuführen sein, die möglicherweise eine tiefere semantische Analyse erfordern, als sie durch reinen Keyword-Abgleich erreicht werden kann.
 
-\myfigure{evaluation_re_finding.png}{Vergleich der Embeddingmodelle (re-finding)}{evaluation_re_finding}
+\myfigure{evaluation_re_finding.png}{Vergleich der Embedding-Modelle (re-finding)}{evaluation_re_finding}
 
-\subsection{Diskussion}
+\section{Diskussion}
 
 Die in \autoref{fig:evaluation_re_finding} präsentierten Ergebnisse zeigen einige überraschende  Trends in Bezug auf die Leistungsfähigkeit der untersuchten Embedding-Modelle. 
 Die unterdurchschnittliche Performance des voyage-lite-02-instruct Modells von Voyage AI ist dabei besonders bemerkenswert. 
@@ -128,14 +124,14 @@ Das text-embeddings-small Modell von OpenAI erweist sich als das effektivste üb
 Die Embeddings von OpenAI sind anscheinend eine ausgewogene und anpassungsfähige Lösung für eine Vielzahl von Suchaufgaben. 
 Es scheint, dass die allgemeine Architektur und die Trainingsmethodik, die hinter den Embeddings von OpenAI stehen, für die unterschiedlichen Herausforderungen der Inhaltsrecherche besonders gut geeignet sind.
 
-Die Ergebnisse könnten weitere Untersuchungen motivieren, ob dense Embeddings für Themen durch eine Augmentierung der Nutzeranfragen mit Unterstützung durch ChatGPT verbessert werden könnten. Dazu gibt es bereits aktive Forschung~\cite{shum2024}\cite{dai2023}. 
-Die Erweiterung von Suchanfragen durch ChatGPT könnte semantische Embeddings mehr Informationen geben, wodurch sie eventuell bessere Ergebnisse liefern könnten.
+Die Ergebnisse könnten weitere Untersuchungen motivieren, ob Dense Embeddings für Themen durch eine Augmentierung der Nutzeranfragen mit Unterstützung durch ChatGPT verbessert werden könnten. Dazu gibt es bereits aktive Forschung~\cite{shum2024}\cite{dai2023}. 
+Die Erweiterung von Suchanfragen durch ChatGPT könnte semantischen Embeddings mehr Informationen geben, wodurch sie eventuell bessere Ergebnisse liefern könnten.
 
 
-\subsection{Schlussfolgerung}
+\section{Schlussfolgerung}
 
 Die Untersuchung der Embeddings hat gezeigt, dass die Auswahl und Konfiguration von Embedding-Modellen entscheidend für die Effizienz und Präzision von Information-Retrieval-Systemen ist. 
-Während das text-embeddings-small von OpenAI eine robuste Leistung über verschiedene Aufgaben hinweg bieten, zeigen sich bei den anderen Embedding-Methoden unterschiede.
+Während das text-embeddings-small von OpenAI eine robuste Leistung über verschiedene Aufgaben hinweg bietet, zeigen sich bei den anderen Embedding-Methoden Unterschiede.
 
 Das TF-IDF-Embedding und das all-mini-LM-L6-v2-Modell zeigten eine mittelmäßige Performance, was Raum für Verbesserungen lässt. 
 Besonders auffällig war die geringe Leistung des voyage-lite-02-instruct von Voyage AI, was auf eine mögliche Inkompatibilität mit der Anforderung des genauen Matchings bei re-finding Aufgaben hindeutet.
@@ -154,5 +150,5 @@ Auch das Prompt Engineering bietet Raum für Verbesserungen; die Nutzung von Few
 Beim re-finding könnten Methoden entwickelt werden, die spezifische Abschnitte innerhalb einer Datei identifizieren. 
 Dies würde zu einer erhöhten Genauigkeit führen, da nicht nur die richtige Episode, sondern der exakte Abschnitt gefunden wird.
 
-Diese Studie liefert wichtige Einsichten, zeigt jedoch auch, dass die fortlaufende Optimierung der Suchalgorithmen notwendig ist, um die Treffsicherheit und Effektivität von Suchsystemen zu verbessern. 
-Zukünftige Forschung sollte diese Aspekte weiter erforschen.
+Diese Arbeit liefert wichtige Einsichten, zeigt jedoch auch, dass die fortlaufende Optimierung der Suchalgorithmen notwendig ist, um die Treffsicherheit und Effektivität von Suchsystemen zu verbessern. 
+Zukünftige Forschung sollte diese Aspekte weiter untersuchen.

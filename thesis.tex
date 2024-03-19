@@ -70,6 +70,7 @@
 
 \usepackage{xurl}
 
+
 % \def\UrlBreaks{\do\/\do-}s
 
 % pdf hyperref
@@ -99,9 +100,13 @@
 % \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 
 % biblatex
-% \usepackage[backend=biber, style=authoryear]{biblatex}
-\usepackage{biblatex} 
+\usepackage[backend=biber]{biblatex}
+% \usepackage{biblatex} 
 % \addbibresource{literatur.bib}
+
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
 
 % configure your listings style
 \usepackage{listings}

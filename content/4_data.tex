@@ -218,34 +218,30 @@ Beide Ansätze wurden in dieser Arbeit nicht verfolgt, bieten aber Möglichkeite
 
 \subsubsection{Lemmatisierung}
 
-Für die Suche mithilfe des TF-IDF Algorithmus, ist es nützlich die Segmente vorher zu bearbeiten.
-Standardmäßig nutzt der TF-IDF Algorithmus als Tokens ganze Wörter.
-Durch effektive Bearbeitungsschritte können allerdings mehrere ähnliche Worte zu einem Stammwort reduziert werden.
-Bei der Suche nach dem Wort \qt{Wandern} sollen zum Beispiel auch Segmente gefunden werden, die die Worte \qt{Wanderung} oder \qt{Wanderer} enthalten.
-Um diese Abbildung von mehreren Worten auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden:
-Die Methode Stemming versucht regelbasiert Suffixe von Worten zu ersetzen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel \qt{Wanderer} und \qt{Wanderung} zu einem Wort \qt{Wander} zu reduzieren.
-Der Vorteil ist, dass der Algorithmus sehr schnell agieren kann, um die Worte auf ihre Stammform zu reduzieren.
-Die Nachteile sind allerdings, dass die Deutsche Sprache sehr viele verschiedene Wortkonstrukte erlaubt, die nicht alle mithilfe von einzelnen Regeln auf ein gemeinsames Stammwort gebracht werden können. 
-Zum Beispiel bei dem Plural von \qt{Baum}; \qt{Bäume}.
+Für die Suche mithilfe des TF-IDF-Algorithmus ist es nützlich, die Segmente vorher zu bearbeiten. Standardmäßig nutzt der TF-IDF-Algorithmus ganze Wörter als Tokens. 
+Durch effektive Bearbeitungsschritte können jedoch mehrere ähnliche Wörter zu einem Stammwort reduziert werden. 
+Bei der Suche nach dem Wort „Wandern“ sollen zum Beispiel auch Segmente gefunden werden, die die Wörter „Wanderung“ oder „Wanderer“ enthalten. 
+Um diese Abbildung von mehreren Wörtern auf ein Stammwort zu erreichen, gibt es zwei unterschiedliche Methoden: Stemming und Lemmatisierung.
 
-Um auch diese Wörter auf ihre Stammwörter zu reduzieren, kann eine Lemmatisierung erfolgen. 
-Bei der Lemmatisierung gibt es eine vordefinierte Tabelle, die für jedes Wort einen Eintrag auf das Stammwort besitzt. 
+Stemming versucht regelbasiert, Suffixe von Wörtern zu entfernen, um aus Wörtern mit verschiedenen Endungen, wie zum Beispiel „Wanderer“ und „Wanderung“, das Stammwort „Wander“ zu bilden. Der Vorteil ist, dass der Algorithmus sehr schnell agieren kann, um die Wörter auf ihre Stammform zu reduzieren. Die Nachteile sind jedoch, dass die deutsche Sprache sehr viele verschiedene Wortkonstrukte zulässt, die nicht alle mithilfe von einzelnen Regeln auf ein gemeinsames Stammwort gebracht werden können, zum Beispiel der Plural „Bäume“ von „Baum“.
+
+Um auch solche Wörter auf ihre Stammwörter zu reduzieren, kann eine Lemmatisierung erfolgen. 
+Bei der Lemmatisierung gibt es eine vordefinierte Tabelle, die für jedes Wort einen Eintrag zu seinem Stammwort besitzt. 
 Einen solchen Lemmatisierer bietet zum Beispiel die Sprachbibliothek spaCy. 
-Dafür wird das Modell \verb|„de_core_news_md“| verwendet, da es bei der Accuracy Evaluation einen F-Score von 0,98 erreicht und damit ebenso gut ist wie das \verb|„de_core_news_lg“| und besser als \verb|„de_core_news_sm“|.~\cite{spacy2024}
-Das Vokabular der von Whisper transkribierten Podcast-Episoden umfasst 235.528 verschiedene Wörter.
+Dafür wird das Modell \verb|„de_core_news_md“| verwendet, da es bei der Accuracy Evaluation einen F-Score von 0,98 erreicht und damit ebenso gut ist wie das \verb|„de_core_news_lg“| und besser als \verb|„de_core_news_sm“|.~\cite{spacy2024} 
+Das Vokabular der von Whisper transkribierten Podcast-Episoden umfasst 235.528 verschiedene Wörter. 
 Mithilfe des Lemmatisierungsprozesses schrumpft das Vokabular um 15\% auf 200.341.
 
 
 \subsubsection{Kompositatrennung mit german compound splitter}
 
-Als weiteren Vorverarbeitungsschritt für die effiziente Keywordsuche kann man zusammengesetzte Wörter in ihre Bestandteile auftrennen.
-Das Vokabular des Datensatzes besteht zu 61\% aus Nomen. 
-Die meisten der Nomen sind zusammengesetzte Nomen, manche davon sind sehr lang, wie zum Beispiel \qt{Reichsdeputationshauptschlussakte}, oder \qt{Hochgeschwindigkeitstransportmittel}.
-In dem ganzen Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben.
-Der Lemmatisierer von spaCy kann viele dieser Worte leider nicht auf Stammworte zurückführen, da sie nicht in seinem Vokabular auftreten.
+Als weiteren Vorverarbeitungsschritt für die effiziente Keywordsuche kann man zusammengesetzte Wörter in ihre Bestandteile auftrennen. 
+Das Vokabular des Datensatzes besteht zu 61\% aus Nomen. Die meisten dieser Nomen sind zusammengesetzte Wörter, einige davon sind sehr lang, wie zum Beispiel „Reichsdeputationshauptschlussakte“ oder „Hochgeschwindigkeitstransportmittel“. 
+In dem gesamten Vokabular, das aus den Transkriptionen von Whisper stammt, besteht fast die Hälfte (47,8\%) aus zehn oder mehr Buchstaben. 
+Der Lemmatisierer von spaCy kann viele dieser Wörter leider nicht auf Stammwörter zurückführen, da sie nicht in seinem Vokabular vorkommen.
 
-In dieser Arbeit wird das Projekt \verb|german_compound_splitter|\cite{repodiac2023} verwendet, um zusammengesetzte Nomen in ihre Bestandteile zu zerlegen. 
-Dafür werden die Wörter basierend auf dem Free German Dictionary\cite{2021} so gut wie möglich in ihre einzelnen Grundwörter zerlegt. 
+In dieser Arbeit wird das Projekt \verb|german_compound_splitter|~\cite{repodiac2023} verwendet, um zusammengesetzte Nomen in ihre Bestandteile zu zerlegen. 
+Dafür werden die Wörter basierend auf dem Free German Dictionary~\cite{2021} so gut wie möglich in ihre einzelnen Grundwörter zerlegt. 
 Mithilfe dieser Aufspaltung zusammengesetzter Nomen schrumpft das Vokabular um weitere 63\% auf nur 73.395 verschiedene Wörter.
 
 
