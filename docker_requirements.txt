@@ -1,10 +1,13 @@
 python-dotenv
 
 flask
+flask_assets
 pandas
 scipy
 
 spacy
+
+chromadb
 
 
 # kann man weglassen

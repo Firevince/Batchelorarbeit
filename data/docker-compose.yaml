@@ -4,15 +4,13 @@ services:
     build:
       context: .
       dockerfile: DOCKERFILE
-    image: podcast-creator_on_demand_3
-    container_name: podcast-creator_on_demand_3
+    image: chroma-podcasts-transcripts-1
+    container_name: chroma-podcasts-transcripts-1
     # volumes:
     #   - /Volumes/Samsung_T5/Podcast_Episoden:/app/data/Podcast_Episoden 
     #   - ./data/transcripts.sqlite:/app/data/transcripts.sqlite
-    env_file:
-      - .docker_env  
     ports:
-      - "8080:8080"  
+      - "8000:8000"  
     # secrets:
     #   token:
     #     environment: "OPENAI_KEY"

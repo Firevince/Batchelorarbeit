@@ -12,6 +12,13 @@ data/*.dic
 data/matrices/*.npz
 data/matrices/*.pkl
 
+
+# chromadb
+data/chromadb/*
+data/chromadb_slim/*
+chroma.log
+
+
 # mp3s in general
 *.mp3
 */*.mp3
@@ -20,7 +27,7 @@ data/matrices/*.pkl
 *.png
 
 # web server
-scripts/server/static/images
+scripts/server/static/images/*
 scripts/server/audio/
 scripts/server/static/.webassets-cache
 
@@ -48,4 +55,5 @@ logs/*
 # test scripts
 start_all.sh
 start_sevices.sh
+
 
