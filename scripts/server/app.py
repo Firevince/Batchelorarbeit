@@ -102,7 +102,8 @@ def process_web(user_input_text, user_input_time):
 
 def produce_audio(user_query, time):
     print(f"processing '{user_query}' for {time} minutes")
-    documents_df = get_most_similar_segments("TF_IDF", user_query, time, 7)
+
+    documents_df = get_most_similar_segments("OPENAI", user_query, time, 7)
     produce_audio_snippets(documents_df)
 
     out_filename = html.escape(user_query) + ".mp3"
