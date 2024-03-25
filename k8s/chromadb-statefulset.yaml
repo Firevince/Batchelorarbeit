@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: chromadb
+  labels:
+    app.kubernetes.io/instance: chromadb
+    app.kubernetes.io/name: chromadb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: chromadb
+      app.kubernetes.io/name: chromadb
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/instance: chromadb
+        app.kubernetes.io/name: chromadb
+    spec:
+      containers:
+      - name: chromadb
+        image: chromadb/chroma:0.4.24
+        command: ["sleep", "9999999"]
+        ports:
+        - containerPort: 8000
+          name: chromadb-port
+        volumeMounts:
+        - name: chromadb
+          mountPath: /chroma/chroma
+        resources:
+          requests:
+            memory: 1Gi
+            cpu: 2
+          limits:
+            memory: 1Gi
+  volumeClaimTemplates:
+  - metadata:
+      name: chromadb
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 10Gi
