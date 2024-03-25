@@ -1,8 +1,8 @@
 version: v12
 
 branches:
-- name: deploy
-  environment: dev
+- name: master
+  environment: master
 
 kubernetesResources:
   tasks:
