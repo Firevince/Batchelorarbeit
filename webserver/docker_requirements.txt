@@ -6,14 +6,15 @@ pandas
 scipy
 
 spacy
+scikit-learn
 
 chromadb
 
 
 # kann man weglassen
-torch
-transformers
-sentence_transformers
+# torch
+# transformers
+# sentence_transformers
 
 # chatgpt api
 openai
