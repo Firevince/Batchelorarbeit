@@ -20,6 +20,7 @@ spec:
       containers:
       - name: chromadb
         image: chromadb/chroma:0.4.24
+        command: ["sleep", "9999999"]
         ports:
         - containerPort: 8000
           name: chromadb-port

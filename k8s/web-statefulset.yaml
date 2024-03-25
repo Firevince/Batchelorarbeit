@@ -17,6 +17,7 @@ spec:
       containers:
       - name: web
         image: '{{ .Context.Build.Image "webserver" }}'
+        command: ["sleep", "9999999"]
         ports:
         - name: web-port
           containerPort: 8080
