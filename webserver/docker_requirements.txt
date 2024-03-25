@@ -6,6 +6,7 @@ pandas
 scipy
 
 spacy
+scikit-learn
 
 chromadb
 

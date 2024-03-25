@@ -40,6 +40,8 @@ scripts/server/static/.webassets-cache
 # cache files
 */__pycache__
 */*/__pycache__
+*/*/*/__pycache__
+*/*/*/*/__pycache__
 
 # vscode
 .vscode
@@ -52,7 +54,8 @@ scripts/server/static/.webassets-cache
 # mac files
 .DS_Store
 */.DS_Store
-
+*/*/.DS_Store
+*/*/*/.DS_Store
 
 # logs from slurm
 *.out
