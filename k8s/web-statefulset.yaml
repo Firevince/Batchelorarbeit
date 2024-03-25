@@ -46,6 +46,12 @@ spec:
         volumeMounts:
         - name: db
           mountPath: /app/data
+        resources:
+          requests:
+            memory: 1Gi
+            cpu: 2
+          limits:
+            memory: 1Gi
   volumeClaimTemplates:
   - metadata:
       name: db
