@@ -1,16 +1,16 @@
 version: v12
 
 branches:
-  - name: master
+  - name: deploy
     environment: master
 
 kubernetesResources:
+  applyGroups:
+    podcast_generator:
+      index: 1
   tasks:
-    - build:
-        group: apps
+    - build:  
         images:
-          - id: api
-            root: apps/api
-          - id: ui
-            dockerfile: apps/ui/Dockerfile
+          - id: webserver
+            dockerfile: webserver/DOCKERFILE
             memory: 4Gi
