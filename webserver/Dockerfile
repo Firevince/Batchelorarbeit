@@ -5,8 +5,9 @@ WORKDIR /app
 # RUN apk update && \
 #     apk add --no-cache git ffmpeg sqlite
 
-RUN apt-get update 
-RUN apt-get install -y ffmpeg sqlite3
+RUN apt-get update &&\
+    apt-get install -y ffmpeg sqlite3 &&\
+    apt-get autoremove -qq -y && rm -rf /var/lib/apt/lists/*
 # RUN wget https://www.sqlite.org/2024/sqlite-autoconf-3450200.tar.gz && \
 #     tar xvfz sqlite-autoconf-3450200.tar.gz && \
 #     cd sqlite-autoconf-3450200 && \

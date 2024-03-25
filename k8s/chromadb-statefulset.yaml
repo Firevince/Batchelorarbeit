@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: chromadb
-        image: '{{ .Context.Build.Image "chromadb" }}'
+        image: chromadb/chroma:0.4.24
         ports:
         - containerPort: 8000
           name: chromadb-port

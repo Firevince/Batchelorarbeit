@@ -12,9 +12,6 @@ kubernetesResources:
         dockerfile: Dockerfile
         context: webserver
         memory: 8Gi
-      - id: chromadb
-        dockerfile: Dockerfile
-        context: chroma
     apply:
       files:
       - path: k8s/web-service.yaml
