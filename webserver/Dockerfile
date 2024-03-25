@@ -5,8 +5,9 @@ WORKDIR /app
 # RUN apk update && \
 #     apk add --no-cache git ffmpeg sqlite
 
-RUN apt-get update 
-RUN apt-get install -y ffmpeg sqlite3
+RUN apt-get update &&\
+    apt-get install -y ffmpeg sqlite3 &&\
+    apt-get autoremove -qq -y && rm -rf /var/lib/apt/lists/*
 # RUN wget https://www.sqlite.org/2024/sqlite-autoconf-3450200.tar.gz && \
 #     tar xvfz sqlite-autoconf-3450200.tar.gz && \
 #     cd sqlite-autoconf-3450200 && \
@@ -17,21 +18,16 @@ RUN apt-get install -y ffmpeg sqlite3
 COPY docker_requirements.txt .
 RUN pip install -r docker_requirements.txt
 
-RUN mkdir /app/data
-RUN mkdir /app/data/Podcast_Episoden
-RUN mkdir /app/data/audio_segments
-
-
+# TODO: create if not exists
+# RUN mkdir /app/data/Podcast_Episoden
+# RUN mkdir /app/data/audio_segments
 
 ENV PYTHONPATH=/app/scripts
 
-COPY .docker_env .env
 COPY scripts /app/scripts
-COPY data/inter.wav /app/data/inter.wav
-COPY data/transcripts.sqlite /app/data/transcripts.sqlite
-COPY data/german.dic /app/data/german.dic
-
-
+# COPY data/inter.wav /app/data/inter.wav
+# COPY data/transcripts.sqlite /app/data/transcripts.sqlite
+# COPY data/german.dic /app/data/german.dic
 
 CMD ["gunicorn", "-w", "1", "-b", "0.0.0.0:8080", "--timeout", "600", "scripts.server.app:app"]
 

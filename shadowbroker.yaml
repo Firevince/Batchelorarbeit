@@ -1,16 +1,23 @@
 version: v12
 
 branches:
-  - name: master
-    environment: master
+- name: deploy
+  environment: dev
 
 kubernetesResources:
   tasks:
-    - build:
-        group: apps
-        images:
-          - id: api
-            root: apps/api
-          - id: ui
-            dockerfile: apps/ui/Dockerfile
-            memory: 4Gi
+  - build:
+      images:
+      - id: webserver
+        dockerfile: Dockerfile
+        context: webserver
+        memory: 8Gi
+    apply:
+      files:
+      - path: k8s/web-service.yaml
+      - path: k8s/web-statefulset.yaml
+      - path: k8s/chromadb-service.yaml
+      - path: k8s/chromadb-statefulset.yaml
+vault:
+- path: "openai"
+  secretName: "openai"
