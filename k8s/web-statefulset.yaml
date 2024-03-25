@@ -24,8 +24,8 @@ spec:
         env:
         - name: CHROMADB_HOST
           value: 'chroma'
-        - name: CHROMADB_HOST
-          value: 'chroma'
+        - name: CHROMADB_PORT
+          value: '8000'
         - name: OPENAI_KEY
           valueFrom:
             secretKeyRef:
