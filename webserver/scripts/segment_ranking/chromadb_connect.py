@@ -16,7 +16,6 @@ from chromadb import Documents, EmbeddingFunction, Embeddings
 from db_connect import db_get_df, db_save_df, load_npz, load_pkl, save_npz, save_pkl
 from dotenv import load_dotenv
 from tqdm import tqdm
-from transformers import AutoTokenizer
 
 load_dotenv(override=True)
 CHROMADB_PATH = os.getenv("CHROMADB_PATH")
