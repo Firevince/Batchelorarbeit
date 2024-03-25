@@ -1,0 +1,29 @@
+python-dotenv
+
+flask
+flask_assets
+pandas
+scipy
+
+spacy
+
+chromadb
+
+
+# kann man weglassen
+torch
+transformers
+sentence_transformers
+
+# chatgpt api
+openai
+
+voyageai
+
+pydub
+mutagen
+
+gunicorn
+
+git+https://github.com/repodiac/german_compound_splitter
+de-core-news-md @ https://github.com/explosion/spacy-models/releases/download/de_core_news_md-3.7.0/de_core_news_md-3.7.0-py3-none-any.whl

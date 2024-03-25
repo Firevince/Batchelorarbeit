@@ -1,0 +1,65 @@
+# data
+data/audio_segments
+data/Episode_audio_files
+data/transcripts.sqlite
+data/test_data/*.txt
+data/milvius/
+data/inter.wav
+data/images/cover_images/*
+data/*.npz
+data/*.txt
+data/*.dic
+data/matrices/*.npz
+data/matrices/*.pkl
+
+webserver/data/*
+webserver/scripts/server/static/.webassets-cache/*
+webserver/scripts/server/audio/*
+
+
+# chromadb
+data/chromadb/*
+data/chromadb_slim/*
+chroma.log
+
+chroma/chromadb/*
+
+
+# mp3s in general
+*.mp3
+*/*.mp3
+
+# images
+*.png
+
+# web server
+scripts/server/static/images/*
+scripts/server/audio/
+scripts/server/static/.webassets-cache
+
+# cache files
+*/__pycache__
+*/*/__pycache__
+
+# vscode
+.vscode
+
+# environmental stuff
+.venv/*
+.env
+.docker_env
+
+# mac files
+.DS_Store
+*/.DS_Store
+
+
+# logs from slurm
+*.out
+logs/*
+
+# test scripts
+start_all.sh
+start_sevices.sh
+
+transcripts.sqlite

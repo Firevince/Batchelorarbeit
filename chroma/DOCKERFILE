@@ -1,0 +1,8 @@
+FROM chromadb/chroma:latest
+
+WORKDIR /chroma
+
+COPY chromadb /chroma/chroma
+
+
+#RUN ["chroma", "run", "--path", "/app/chromadb"]

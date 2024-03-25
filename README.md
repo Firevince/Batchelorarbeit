@@ -1,32 +1,99 @@
-# podcast-generator
+<div align="center">
 
-Created by _vincent.neumann_
+  <img src="assets/docs/docs_images/logo.png" width="20%" height="20%">
+  
+  # Ba(t)chelorarbeit
 
-_project description_
 
-## Architecture
+[![python][python-shield]][python-url]
+[![pytorch][pytorch-shield]][pytorch-url]
+[![HuggingFace][HuggingFace-shield]][HuggingFace-url]
+[![whisper][whisper-shield]][whisper-url]
 
-_in word and pictures_
+</div>
 
-_should contain services, endpoints, authentication, authorization, etc_
+---
 
-## Configuration
+<details>
+<summary>Table of Contents</summary>
 
-_config parameters and possible values_
+- [Ziel](##ziel)
+- [LaTeX](##bachelorarbeit-latex)
+- [Setup](##setup)
+- [Docker](##docker)
 
-## Development
+</details>
 
-_requirements, setup for local development, etc_
+## <u>Ziel</u>
 
-## FAQ & Troubleshooting
+Das Ziel dieser Bachelorarbeit besteht darin zu untersuchen, wie sich aus umfangreichem Audiomaterial aus Radioprogrammen oder Podcasts on-the-fly ein eigener Podcast zusammenstellen lässt, der relevante Ausschnitte aus einer Vielzahl von Audiomaterial enthält.
 
-_helpful things to know and to do_
+Ein möglicher Anwendungsfall wäre ein/e Benutzer*in, die/der sich über das Thema "Überfischung der Meere" informieren möchte und dafür genau 20 Minuten während einer Autofahrt einplant. 
+Das System erstellt nun einen Zusammenschnitt aus verschiedenen Podcast Episoden zu diesem Thema, der 20 Minuten lang ist und stellt ihn dem/der Benutzer*in zur Verfügung. 
+Der Vorteil für den/die Nutzer*in liegt darin, dass er/sie selbst das Thema auswählen und die exakte Länge festlegen kann, um beispielsweise während einer 20-minütigen Autofahrt einen Podcast anzuhören. 
+Außerdem werden das Thema von verschiednen Personen aus unterschiedlichen Blickpunkten erklärt. 
 
-## Known Bugs
+Für die Interaktion mit dem Benutzer soll außerdem eine Grafische Benutzeroberfläche bereitgestellt werden, die dem Nutzer die Auswahl eines Themas und die Länge der Podcast  Episode ermöglicht.
 
-_short description_
 
-## Maintainers
+## <u>Bachelorarbeit LaTeX</u>
 
-_MCs,  Developers, etc_
+Das ist das Repository zu meiner Bachelorarbeit.
+Die Arbeit ist im Branch LaTeX zu finden.
+Im Branch exposee ist ein kleines Exposee für die Bachelorarbeit, welches im Vorfeld entstand.
 
+
+
+## <u> Setup  </u>
+
+- Clone the repository:
+
+```sh
+mkdir podcast_generator
+cd podcast_generator
+git clone https://github.com/Firevince/Batchelorarbeit.git
+```
+
+
+- Erstelle ein $`\textcolor{red}{\text{.env file}}`$ und ein $`\textcolor{red}{\text{.docker\_env file}}`$ im [root folder](/) und setze die Environment Variablen.
+
+```sh
+# .env example
+OPENAI_KEY=<your_api_token> 
+DATA_PATH=<path/to/data/directory>
+AUDIO_SOURCE_PATH=<path/to/mp3s> # kann sehr viel Daten beanspruchen
+AUDIO_SEGMENT_PATH=<path/to/temporary/audiosegments>
+SERVER_PATH=<path/to/flask/server>
+```
+
+## <u> Docker </u>
+
+### Docker container
+
+Das Projekt kann auch in einem Docker container gestartet werden mit 
+
+```sh
+docker-compose up
+```
+
+
+## <u> Author </u>
+
+[@Vincent](https://github.com/firevince)
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- https://shields.io/badges (Bagde generator) -->
+<!-- https://github.com/Ileriayo/markdown-badges -->
+[python-shield]: https://img.shields.io/badge/Python-3.9-3776AB.svg?style=flat&logo=python&logoColor=white
+[python-url]: https://www.python.org
+
+[pytorch-shield]: https://img.shields.io/badge/PyTorch-latest-EE4C2C.svg?style=flat&logo=pytorch
+[pytorch-url]:https://pytorch.org
+
+[HuggingFace-shield]: https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-latest-orange
+[HuggingFace-url]: https://huggingface.co/
+
+[whisper-shield]: https://img.shields.io/badge/Whisper-74aa9c?logo=openai&logoColor=white
+[whisper-url]: https://github.com/openai/whisper

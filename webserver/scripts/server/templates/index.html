@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast Ersteller</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <script>
+            function updateSliderValue(value) {
+                document.getElementById("sliderValue").textContent = value;
+            }
+        </script>
+</head>
+<body>
+    <h1>Erstelle Deine eigene Podcast Episode!</h1>
+    <form action="/process" method="POST">
+        <label for="text">Thema:</label>
+        <input type="text" name="text" id="text" required>
+        
+        <label for="time">Minutenanzahl:</label>
+        <input type="text" name="time" id="time">
+        
+        <!-- <input type="text" name="time" id="time" min="1" max="60" step="1" value="1" oninput="updateSliderValue(this.value)"> -->
+        <!-- <span id="sliderValue">1</span> Minuten -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Start">
+    </form>
+
+    <h2>Audio abspielen:</h2>
+    <audio controls>
+        <source src="/static/audio/{{audio_filename}}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="keywords">
+        <ul class="link-list">
+            {% for keyword in keywords %}
+            <li><a href="/process?text={{keyword}}" class="link-button">{{keyword}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="text-container" class="styled-table">
+        <table>
+            <tr>
+                <th>Filename</th>
+                <th>Bild</th>
+                <th>Abschnitt</th>
+            </tr>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row['filename'] }}</td>
+                <td><img src="{{ row['image_path'] }}" alt="Picture"></td>
+                <td>
+                    {{ row['sentence'] }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

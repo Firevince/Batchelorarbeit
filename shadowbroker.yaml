@@ -1,0 +1,16 @@
+version: v12
+
+branches:
+  - name: master
+    environment: master
+
+kubernetesResources:
+  tasks:
+    - build:
+        group: apps
+        images:
+          - id: api
+            root: apps/api
+          - id: ui
+            dockerfile: apps/ui/Dockerfile
+            memory: 4Gi
