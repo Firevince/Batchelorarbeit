@@ -2,14 +2,14 @@ version: v12
 
 branches:
   - name: deploy
-    environment: master
+    environment: dev
 
 kubernetesResources:
   applyGroups:
     podcast_generator:
       index: 1
   tasks:
-    - build:  
+    - build:
         images:
           - id: webserver
             dockerfile: webserver/DOCKERFILE
