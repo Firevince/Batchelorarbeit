@@ -19,6 +19,7 @@ from tqdm import tqdm
 from transformers import AutoTokenizer
 
 load_dotenv(override=True)
+CHROMADB_HOST = os.getenv("CHROMADB_HOST")
 CHROMADB_PATH = os.getenv("CHROMADB_PATH")
 CHROMADB_PORT = os.getenv("CHROMADB_PORT")
 OPENAI_KEY = os.getenv("OPENAI_KEY")
@@ -29,7 +30,7 @@ def get_most_similar_documents_openai(query, amount):
     openai_ef = embedding_functions.OpenAIEmbeddingFunction(
         api_key=OPENAI_KEY, model_name="text-embedding-3-small"
     )
-    chroma_client = chromadb.HttpClient(host="localhost", port=CHROMADB_PORT)
+    chroma_client = chromadb.HttpClient(host=CHROMADB_HOST, port=CHROMADB_PORT)
 
     collection = chroma_client.get_collection(name="sentence_openai", embedding_function=openai_ef)
 
@@ -45,7 +46,7 @@ def get_most_similar_documents_openai(query, amount):
 def get_most_similar_documents_voyage(query, amount):
 
     voyage_ef = Embedding_Voyage[str]()
-    chroma_client = chromadb.HttpClient(host="localhost", port=CHROMADB_PORT)
+    chroma_client = chromadb.HttpClient(host=CHROMADB_HOST, port=CHROMADB_PORT)
 
     collection = chroma_client.get_collection(name="sentence_voyage", embedding_function=voyage_ef)
 

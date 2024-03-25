@@ -1,11 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: chromadb-service
+  name: chromadb
+  labels:
+    app.kubernetes.io/instance: chromadb
+    app.kubernetes.io/name: chromadb
 spec:
   ports:
   - port: 8000
-    targetPort: 8000
+    targetPort: chromadb-port
     protocol: TCP
   selector:
-    app: chromadb
+    app.kubernetes.io/instance: chromadb
+    app.kubernetes.io/name: chromadb

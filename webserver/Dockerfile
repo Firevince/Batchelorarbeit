@@ -17,21 +17,16 @@ RUN apt-get install -y ffmpeg sqlite3
 COPY docker_requirements.txt .
 RUN pip install -r docker_requirements.txt
 
-RUN mkdir /app/data
-RUN mkdir /app/data/Podcast_Episoden
-RUN mkdir /app/data/audio_segments
-
-
+# TODO: create if not exists
+# RUN mkdir /app/data/Podcast_Episoden
+# RUN mkdir /app/data/audio_segments
 
 ENV PYTHONPATH=/app/scripts
 
-COPY .docker_env .env
 COPY scripts /app/scripts
-COPY data/inter.wav /app/data/inter.wav
-COPY data/transcripts.sqlite /app/data/transcripts.sqlite
-COPY data/german.dic /app/data/german.dic
-
-
+# COPY data/inter.wav /app/data/inter.wav
+# COPY data/transcripts.sqlite /app/data/transcripts.sqlite
+# COPY data/german.dic /app/data/german.dic
 
 CMD ["gunicorn", "-w", "1", "-b", "0.0.0.0:8080", "--timeout", "600", "scripts.server.app:app"]
 

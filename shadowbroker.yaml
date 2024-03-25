@@ -1,16 +1,26 @@
 version: v12
 
 branches:
-  - name: deploy
-    environment: dev
+- name: deploy
+  environment: dev
 
 kubernetesResources:
-  applyGroups:
-    podcast_generator:
-      index: 1
   tasks:
-    - build:
-        images:
-          - id: webserver
-            dockerfile: webserver/DOCKERFILE
-            memory: 4Gi
+  - build:
+      images:
+      - id: webserver
+        dockerfile: Dockerfile
+        context: webserver
+        memory: 8Gi
+      - id: chromadb
+        dockerfile: Dockerfile
+        context: chroma
+    apply:
+      files:
+      - path: k8s/web-service.yaml
+      - path: k8s/web-statefulset.yaml
+      - path: k8s/chromadb-service.yaml
+      - path: k8s/chromadb-statefulset.yaml
+vault:
+- path: "openai"
+  secretName: "openai"
