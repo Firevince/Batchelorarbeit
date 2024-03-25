@@ -13,18 +13,10 @@ import numpy as np
 import pandas as pd
 import voyageai
 from chromadb import Documents, EmbeddingFunction, Embeddings
+from db_connect import db_get_df, db_save_df, load_npz, load_pkl, save_npz, save_pkl
 from dotenv import load_dotenv
-from embedding_creation.embedding_creator_MINI_L6 import MINI_LM_embed
 from tqdm import tqdm
 from transformers import AutoTokenizer
-from webserver.db_connect import (
-    db_get_df,
-    db_save_df,
-    load_npz,
-    load_pkl,
-    save_npz,
-    save_pkl,
-)
 
 load_dotenv()
 CHROMADB_PATH = os.getenv("CHROMADB_PATH")

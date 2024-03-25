@@ -18,6 +18,8 @@ sentence_transformers
 # chatgpt api
 openai
 
+voyageai
+
 pydub
 mutagen
 

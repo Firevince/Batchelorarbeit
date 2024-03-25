@@ -1,12 +1,18 @@
-FROM python:3.8.10
+FROM python:3.10-bookworm
 
 WORKDIR /app
 
 # RUN apk update && \
 #     apk add --no-cache git ffmpeg sqlite
 
-RUN apt-get update && apt-get install -y ffmpeg
-RUN apt-get install sqlite3 
+RUN apt-get update 
+RUN apt-get install -y ffmpeg sqlite3
+# RUN wget https://www.sqlite.org/2024/sqlite-autoconf-3450200.tar.gz && \
+#     tar xvfz sqlite-autoconf-3450200.tar.gz && \
+#     cd sqlite-autoconf-3450200 && \
+#     ./configure --prefix=/usr && \
+#     make && \
+#     make install
 
 COPY docker_requirements.txt .
 RUN pip install -r docker_requirements.txt
@@ -20,15 +26,13 @@ RUN mkdir /app/data/audio_segments
 ENV PYTHONPATH=/app/scripts
 
 COPY .docker_env .env
-COPY docker_start.sh docker_start.sh
 COPY scripts /app/scripts
-COPY data/matrices /app/data/matrices
 COPY data/inter.wav /app/data/inter.wav
 COPY data/transcripts.sqlite /app/data/transcripts.sqlite
 COPY data/german.dic /app/data/german.dic
-COPY data/chromadb /app/data/
 
 
-CMD docker_start.sh
+
+CMD ["gunicorn", "-w", "1", "-b", "0.0.0.0:8080", "--timeout", "600", "scripts.server.app:app"]
 
 

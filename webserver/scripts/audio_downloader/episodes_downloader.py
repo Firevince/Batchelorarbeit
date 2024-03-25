@@ -3,7 +3,7 @@ import os
 
 import pandas as pd
 import requests
-from webserver.db_connect import db_get_df, db_insert_transcript, db_save_df
+from db_connect import db_get_df, db_insert_transcript, db_save_df
 
 GRAPHQL_URL = "https://api.ardaudiothek.de/graphql"
 

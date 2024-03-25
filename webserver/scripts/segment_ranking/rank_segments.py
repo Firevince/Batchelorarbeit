@@ -3,8 +3,7 @@ import json
 import numpy as np
 import pandas as pd
 import scipy.sparse as sparse
-from embedding_creation.embedding_creator_MINI_L6 import MINI_LM_embed
-from embedding_creation.embedding_creator_TF_IDF import tf_idf_embed
+from db_connect import db_get_df, db_save_df, load_npz, load_pkl
 from scipy.spatial.distance import cosine
 from segment_ranking.chatgpt_help import gpt_order_segments, gpt_segment_boundaries
 from segment_ranking.chromadb_connect import (
@@ -13,7 +12,6 @@ from segment_ranking.chromadb_connect import (
 )
 from sklearn.metrics.pairwise import pairwise_distances
 from tqdm import tqdm
-from webserver.db_connect import db_get_df, db_save_df, load_npz, load_pkl
 
 
 def enrich_segment(segment, transcript_df, num_prev_sentences=5, num_next_sentences=5):

@@ -2,10 +2,10 @@ import os
 from concurrent.futures import ThreadPoolExecutor
 
 from audio_downloader.episodes_downloader import download_on_demand
+from db_connect import db_get_df, db_save_df
 from dotenv import load_dotenv
 from pydub import AudioSegment
 from utils.utils import delete_files_in_directory
-from webserver.db_connect import db_get_df, db_save_df
 
 load_dotenv(override=True)
 AUDIO_SOURCE_PATH = os.getenv("AUDIO_SOURCE_PATH")
