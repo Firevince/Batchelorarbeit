@@ -1,0 +1,24 @@
+#!groovy
+
+@Library('pipeline@v12')
+
+import pub.pipeline.Pipeline
+
+// import pub.quality.Sonarqube
+
+node {
+  pipeline = new Pipeline(this)
+  pipeline.setVerbose(true)
+
+  /**
+   * static code analysis via Sonarqube
+   * see: https://github.com/digitalegarage/core-pipeline#static-code-analysis
+   */
+  // static_code_analysis = new Sonarqube(pipeline)
+
+  // pipeline.on(Pipeline.Event.PRE_BUILD, { event ->
+  //   static_code_analysis.executeWithQualityGate()
+  // })
+
+  pipeline.start()
+}
