@@ -29,10 +29,10 @@ spec:
           mountPath: /chroma/chroma
         resources:
           requests:
-            memory: 1Gi
+            memory: 2Gi
             cpu: 2
           limits:
-            memory: 1Gi
+            memory: 2Gi
   volumeClaimTemplates:
   - metadata:
       name: chromadb
