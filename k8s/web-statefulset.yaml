@@ -23,7 +23,7 @@ spec:
           containerPort: 8080
         env:
         - name: CHROMADB_HOST
-          value: 'chroma'
+          value: 'chromadb'
         - name: CHROMADB_PORT
           value: '8000'
         - name: OPENAI_KEY
