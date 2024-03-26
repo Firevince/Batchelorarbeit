@@ -15,5 +15,10 @@
         "telegraf": "^4.15.3",
         "ts-node": "^10.9.2",
         "typescript": "^5.3.3"
+    },
+    "devDependencies": {
+        "@types/debug": "^4.1.12",
+        "@types/node-fetch": "^2.6.11",
+        "@types/safe-compare": "^1.1.2"
     }
 }
