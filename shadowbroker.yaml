@@ -21,3 +21,13 @@ kubernetesResources:
 vault:
 - path: "openai"
   secretName: "openai"
+ingresses:
+  - name: web
+    services:
+      - name: web
+        port: 5000
+        path: /
+ingressAuthentication:
+  oauth:
+    - ingresses: [web]
+      branches: [master]
