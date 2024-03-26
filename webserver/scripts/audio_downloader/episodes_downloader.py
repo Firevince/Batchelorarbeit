@@ -4,6 +4,7 @@ import os
 import pandas as pd
 import requests
 from db_connect import db_get_df, db_insert_transcript, db_save_df
+from utils.utils import delete_oldest_files
 
 GRAPHQL_URL = "https://api.ardaudiothek.de/graphql"
 
@@ -42,6 +43,7 @@ def download_on_demand(filename, path):
     df = db_get_df("episodes_metadata")
     url = df.loc[df["filename"] == filename]["download_url"].values[0]
     download_and_save_mp3_in_dir(url, path, filename)
+    delete_oldest_files(path)
 
 
 def get_newest_episodes_data():
