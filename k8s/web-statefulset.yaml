@@ -44,12 +44,18 @@ spec:
         volumeMounts:
         - name: db
           mountPath: /app/data
+        - name: audio
+          mountPath: /app/scripts/server/static/audio
         resources:
           requests:
-            memory: 1Gi
+            memory: 5Gi
             cpu: 2
           limits:
-            memory: 1Gi
+            memory: 5Gi
+      volumes:
+      - name: audio
+        emptyDir:
+          sizeLimit: 5Gi
   volumeClaimTemplates:
   - metadata:
       name: db
