@@ -1,3 +1,4 @@
+import glob
 import json
 import os
 
@@ -42,6 +43,17 @@ def download_on_demand(filename, path):
     df = db_get_df("episodes_metadata")
     url = df.loc[df["filename"] == filename]["download_url"].values[0]
     download_and_save_mp3_in_dir(url, path, filename)
+    delete_oldest_files(path)
+
+
+def delete_oldest_files(directory_path, threshold=50, amount=10):
+    files = glob.glob(os.path.join(directory_path, "*"))
+    if len(files) > threshold:
+        # Sort the files by modification time, oldest first
+        files.sort(key=os.path.getmtime)
+        for file in files[:amount]:
+            os.remove(file)
+            print(f"Deleted {file}")
 
 
 def get_newest_episodes_data():
