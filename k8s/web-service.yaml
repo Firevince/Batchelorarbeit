@@ -11,4 +11,5 @@ spec:
     targetPort: web-port
     protocol: TCP
   selector:
-    app: web
+    app.kubernetes.io/instance: web
+    app.kubernetes.io/name: web
