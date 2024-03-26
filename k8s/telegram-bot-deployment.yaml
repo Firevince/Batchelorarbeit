@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telegram-bot-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: telegram-bot
+      app.kubernetes.io/name: telegram-bot
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/instance: telegram-bot
+        app.kubernetes.io/name: telegram-bot
+    spec:
+      containers:
+        - name: telegram-bot
+          image: '{{ .Context.Build.Image "telegram-bot" }}'
+          resources:
+            requests:
+              memory: 256Mi
+              cpu: 500m
+            limits:
+              memory: 256Mi
