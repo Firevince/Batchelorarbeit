@@ -21,3 +21,8 @@ def delete_oldest_files(directory_path, threshold=50, amount=10):
         for file in files[:amount]:
             os.remove(file)
             print(f"Deleted {file}")
+
+
+def create_data_folders():
+    os.makedirs("/app/data/Podcast_Episoden", exist_ok=True)
+    os.makedirs("/app/data/audio_segments", exist_ok=True)

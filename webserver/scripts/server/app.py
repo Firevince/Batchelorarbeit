@@ -11,6 +11,7 @@ from flask import Flask, jsonify, render_template, request, send_from_directory
 from flask_assets import Bundle, Environment
 from segment_ranking.chatgpt_help import gpt_get_keywords
 from segment_ranking.rank_segments import get_most_similar_segments
+from utils.utils import create_data_folders
 
 app = Flask(__name__)
 
@@ -26,6 +27,8 @@ assets.config["PYSCSS_ASSETS_URL"] = assets.url
 assets.config["PYSCSS_ASSETS_ROOT"] = assets.directory
 
 assets.register("scss_all", scss)
+
+create_data_folders()
 
 
 @app.route("/")
