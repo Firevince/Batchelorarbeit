@@ -17,7 +17,7 @@ spec:
       containers:
       - name: web
         image: '{{ .Context.Build.Image "webserver" }}'
-        command: ["sleep", "9999999"]
+        #command: ["sleep", "9999999"]
         ports:
         - name: web-port
           containerPort: 8080
@@ -31,8 +31,6 @@ spec:
             secretKeyRef:
               name: openai
               key: key
-        - name: CHROMADB_PORT
-          value: '8000'
         - name: DATABASE_PATH
           value: /app/data/transcripts.sqlite
         - name: DATA_PATH
