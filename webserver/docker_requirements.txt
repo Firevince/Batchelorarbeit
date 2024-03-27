@@ -1,24 +1,28 @@
 python-dotenv
 
+# webserver
 flask
 flask_assets
+gunicorn
+
+# data-maipulation
 pandas
 scipy
-
-spacy
 scikit-learn
 
+# chroma database
 chromadb
+
+# mp3 manipulation
+pydub
+mutagen
 
 # chatgpt api
 openai
 
+
+# optional
 voyageai
-
-pydub
-mutagen
-
-gunicorn
-
+spacy
 git+https://github.com/repodiac/german_compound_splitter
 de-core-news-md @ https://github.com/explosion/spacy-models/releases/download/de_core_news_md-3.7.0/de_core_news_md-3.7.0-py3-none-any.whl
