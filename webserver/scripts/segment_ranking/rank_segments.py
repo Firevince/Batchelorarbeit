@@ -59,58 +59,6 @@ def enrich_all_segments_gpt(df_distance, df_all, query):
     return df_segments
 
 
-def calculate_distances_batchwise(message_embedding, embeddings_matrix):
-    all_distances = np.array([])
-
-    batch_size = 1000
-    for i in tqdm(range(0, embeddings_matrix.shape[0], batch_size)):
-        batch_distances = pairwise_distances(
-            embeddings_matrix[i : i + batch_size], message_embedding, metric="cosine"
-        )
-        all_distances = np.concatenate((all_distances, batch_distances.flatten()))
-
-    return all_distances
-
-
-def get_embedding(model_type, message):
-    """
-    Generate an embedding for the input message based on the specified model type.
-
-    :param model_type: A string indicating the type of model ('MINI_LM' or 'TF_IDF').
-    :param message: The input message for which to generate the embedding.
-    :return: The embedding of the input message.
-    """
-    if model_type == "MINI_LM":
-        return MINI_LM_embed(message)
-    elif model_type == "TF_IDF":
-        embedding = tf_idf_embed(message)
-        return embedding
-    elif model_type == "TF_IDF_MINI_LM":
-        embed_mini_lm = MINI_LM_embed(message)
-        embed_mini_lm_sparse = sparse.csr_matrix(embed_mini_lm)
-        embed_tf_idf = tf_idf_embed(message)
-        return sparse.hstack([embed_tf_idf, embed_mini_lm_sparse], format="csr")
-    else:
-        print(f"No embedding method for model type {model_type} found")
-
-
-def load_model_data(model_type):
-    """
-    Load model-specific data required for calculating distances.
-
-    :param model_type: A string indicating the type of model ('MINI_LM' or 'TF_IDF').
-    :return: Model-specific data required for calculating distances.
-    """
-    if model_type == "MINI_LM":
-        return load_pkl("MINI_L6_embeddings.pkl")
-    elif model_type == "TF_IDF":
-        return load_npz("tf_idf_matrix_compound_split_87k.npz")
-    elif model_type == "TF_IDF_MINI_LM":
-        return load_npz("tf_idf_mini_lm_matrix.npz")
-    else:
-        print(f"No model for model type {model_type} found")
-
-
 def get_most_similar_segments(
     model_type: str, message: str, amount: int, segment_size: int, sort_gpt=False
 ):
@@ -128,13 +76,8 @@ def get_most_similar_segments(
 
     if model_type == "OPENAI":
         most_similar_documents = get_most_similar_documents_openai(message, amount)
-    elif model_type == "VOYAGE":
-        most_similar_documents = get_most_similar_documents_voyage(message, amount)
     else:
-        message_embedding = get_embedding(model_type, message)
-        model_data = load_model_data(model_type)
-        df["distance"] = calculate_distances_batchwise(message_embedding, model_data)
-        most_similar_documents = df.nsmallest(amount, "distance")
+        raise Exception("Modeltype not supported")
 
     # most_similar_documents = enrich_all_segments_gpt(most_similar_documents, df, message)
     most_similar_documents = enrich_all_segments(most_similar_documents, df, segment_size)
@@ -143,21 +86,3 @@ def get_most_similar_segments(
         most_similar_documents = gpt_order_segments(most_similar_documents)
 
     return most_similar_documents
-
-
-# def get_most_similar_documents_Llama2(message, amount):
-#     df = db_get_df("transcript_segments_Llama_2")
-#     question_embedding = document_embedding_LLama_2(message)
-
-#     df["distance"] = [
-#         cosine(question_embedding, json.loads(document_embedding))
-#         for document_embedding in df["embedding_json"]
-#     ]
-
-#     most_similar_documents = df.nsmallest(amount, "distance")
-#     most_similar_documents = enrich_all_segments(most_similar_documents)
-#     db_save_df(most_similar_documents, "best_fitting")
-#     return most_similar_documents
-
-
-# print(get_most_similar_segments("TF_IDF_MINI_LM", "Oktoberfest Bayern", 4, 4))
