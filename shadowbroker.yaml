@@ -12,12 +12,26 @@ kubernetesResources:
         dockerfile: Dockerfile
         context: webserver
         memory: 8Gi
+      - id: telegram-bot
+        dockerfile: Dockerfile
+        context: telegram-bot
     apply:
       files:
       - path: k8s/web-service.yaml
       - path: k8s/web-statefulset.yaml
       - path: k8s/chromadb-service.yaml
       - path: k8s/chromadb-statefulset.yaml
+      - path: k8s/telegram-bot-deployment.yaml
 vault:
 - path: "openai"
   secretName: "openai"
+ingresses:
+  - name: web
+    services:
+      - name: web
+        port: 8080
+        path: /
+ingressAuthentication:
+  oauth:
+    - ingresses: [web]
+      branches: [master]

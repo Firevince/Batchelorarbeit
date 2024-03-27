@@ -17,13 +17,12 @@ spec:
       containers:
       - name: web
         image: '{{ .Context.Build.Image "webserver" }}'
-        command: ["sleep", "9999999"]
         ports:
         - name: web-port
           containerPort: 8080
         env:
         - name: CHROMADB_HOST
-          value: 'chroma'
+          value: 'chromadb'
         - name: CHROMADB_PORT
           value: '8000'
         - name: OPENAI_KEY
@@ -31,8 +30,6 @@ spec:
             secretKeyRef:
               name: openai
               key: key
-        - name: CHROMADB_PORT
-          value: '8000'
         - name: DATABASE_PATH
           value: /app/data/transcripts.sqlite
         - name: DATA_PATH
@@ -46,12 +43,18 @@ spec:
         volumeMounts:
         - name: db
           mountPath: /app/data
+        - name: audio
+          mountPath: /app/scripts/server/static/audio
         resources:
           requests:
-            memory: 1Gi
+            memory: 5Gi
             cpu: 2
           limits:
-            memory: 1Gi
+            memory: 5Gi
+      volumes:
+      - name: audio
+        emptyDir:
+          sizeLimit: 5Gi
   volumeClaimTemplates:
   - metadata:
       name: db

@@ -20,7 +20,6 @@ spec:
       containers:
       - name: chromadb
         image: chromadb/chroma:0.4.24
-        command: ["sleep", "9999999"]
         ports:
         - containerPort: 8000
           name: chromadb-port
@@ -29,10 +28,10 @@ spec:
           mountPath: /chroma/chroma
         resources:
           requests:
-            memory: 1Gi
+            memory: 4Gi
             cpu: 2
           limits:
-            memory: 1Gi
+            memory: 4Gi
   volumeClaimTemplates:
   - metadata:
       name: chromadb
