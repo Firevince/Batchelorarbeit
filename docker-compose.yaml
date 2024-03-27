@@ -1,0 +1,20 @@
+version: '3'
+services:
+  webserver:
+    build:
+      context: webserver
+      dockerfile: Dockerfile
+    env_file:
+      - webserver/.docker_env  
+    ports:
+      - "8080:8080"  
+  chromadb:
+    build:
+      context: chroma
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"  
+  telegram-bot:
+    build:
+      context: webserver/scripts/telegram_bot
+      dockerfile: Dockerfile

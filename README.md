@@ -19,8 +19,9 @@
 
 - [Ziel](##ziel)
 - [LaTeX](##bachelorarbeit-latex)
+- [Projekt Struktur](##structure)
 - [Setup](##setup)
-- [Docker](##docker)
+- [Deployment](##docker)
 
 </details>
 
@@ -31,27 +32,31 @@ Das Ziel dieser Bachelorarbeit besteht darin zu untersuchen, wie sich aus umfang
 Ein möglicher Anwendungsfall wäre ein/e Benutzer*in, die/der sich über das Thema "Überfischung der Meere" informieren möchte und dafür genau 20 Minuten während einer Autofahrt einplant. 
 Das System erstellt nun einen Zusammenschnitt aus verschiedenen Podcast Episoden zu diesem Thema, der 20 Minuten lang ist und stellt ihn dem/der Benutzer*in zur Verfügung. 
 Der Vorteil für den/die Nutzer*in liegt darin, dass er/sie selbst das Thema auswählen und die exakte Länge festlegen kann, um beispielsweise während einer 20-minütigen Autofahrt einen Podcast anzuhören. 
-Außerdem werden das Thema von verschiednen Personen aus unterschiedlichen Blickpunkten erklärt. 
+Außerdem werden das Thema von verschiedenen Personen aus unterschiedlichen Blickpunkten erklärt. 
 
-Für die Interaktion mit dem Benutzer soll außerdem eine Grafische Benutzeroberfläche bereitgestellt werden, die dem Nutzer die Auswahl eines Themas und die Länge der Podcast  Episode ermöglicht.
+Für die Interaktion mit dem Benutzer soll außerdem eine Grafische Benutzeroberfläche bereitgestellt werden, die dem Nutzer die Auswahl eines Themas und die Länge der Podcast Episode ermöglicht.
 
 
 ## <u>Bachelorarbeit LaTeX</u>
 
-Das ist das Repository zu meiner Bachelorarbeit.
-Die Arbeit ist im Branch LaTeX zu finden.
+Das ist das Repository für das Deployment meiner Bachelorarbeit.
+Das originale Repository mit allen Jupyter-Notebooks zum Testen von verschiedenen Methoden zur Verbesserung ist [hier](https://github.com/Firevince/Batchelorarbeit) zu finden.
+Die gesamte Bachelorarbeit ist dort im Branch LaTeX zu finden.
 Im Branch exposee ist ein kleines Exposee für die Bachelorarbeit, welches im Vorfeld entstand.
 
+## <u> Structure </u>
+
+Das Projekt besteht aus 
 
 
-## <u> Setup  </u>
+## <u> Setup </u>
 
-- Clone the repository:
+- Clone das Repository:
 
 ```sh
 mkdir podcast_generator
 cd podcast_generator
-git clone https://github.com/Firevince/Batchelorarbeit.git
+git clone https://github.com/digitalegarage/podcast-generator.git
 ```
 
 
@@ -59,12 +64,19 @@ git clone https://github.com/Firevince/Batchelorarbeit.git
 
 ```sh
 # .env example
-OPENAI_KEY=<your_api_token> 
-DATA_PATH=<path/to/data/directory>
-AUDIO_SOURCE_PATH=<path/to/mp3s> # kann sehr viel Daten beanspruchen
 AUDIO_SEGMENT_PATH=<path/to/temporary/audiosegments>
+AUDIO_SOURCE_PATH=<path/to/mp3s> # kann sehr viel Daten beanspruchen
+CHROMADB_HOST=localhost
+CHROMADB_PATH=/Users/br/Projects/Bachelorarbeit/webserver/data/chromadb
+CHROMADB_PORT=8000
+DATA_PATH=<path/to/data/directory>
+OPENAI_KEY=<your_api_token> 
 SERVER_PATH=<path/to/flask/server>
 ```
+
+Zur Funktion des Projektes sind die folgenden Files noch notwendig:
+
+
 
 ## <u> Docker </u>
 
