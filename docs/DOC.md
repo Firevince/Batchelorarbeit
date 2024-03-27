@@ -8,17 +8,17 @@
 
 ## Verwendete Bibliotheken
 
-- [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) 
-- [sqlite3](https://docs.python.org/3/library/sqlite3.html)
-- [pydub](https://github.com/jiaaro/pydub)
-- [openai](https://github.com/openai/openai-python)
+- [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) für die Manipulation von Tabellenähnlichen Daten in Python
+- [sqlite3](https://docs.python.org/3/library/sqlite3.html) für den Zugriff auf die SQLite Datenbank
+- [pydub](https://github.com/jiaaro/pydub) vor allem zur Manipulation der Audiofiles
+- [openai](https://github.com/openai/openai-python) für alle Anfragen an das 
 
 ## Openai Schnittstelle
 
 Die Services der OpenAI API werden in verschiedenen Funktionen benutzt.
 Ohne einen gültigen OpenAI API KEY läuft das Projekt im Moment nicht.
 
-Der API Key wird verwendet, um eine User-Anfrage zu embedden, um die Segmente zu sortieren und um weiterführende Themen für eine Episode zu erstellen.
+Der API Key wird verwendet, um eine User-Anfrage zu embedden (mithilfe des `text-embedding-small` Modells), um die Segmente zu sortieren und um weiterführende Themen für eine Episode zu erstellen.
 Der Production API-Key ist im Moment auf 5$ beschränkt.
 Eine Anfrage kostet ca. 0,5 cent.
 

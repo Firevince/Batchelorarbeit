@@ -1,14 +1,12 @@
 <div align="center">
-
-  <img src="assets/docs/docs_images/logo.png" width="20%" height="20%">
   
-  # Ba(t)chelorarbeit
+# Ba(t)chelorarbeit
 
 
 [![python][python-shield]][python-url]
-[![pytorch][pytorch-shield]][pytorch-url]
-[![HuggingFace][HuggingFace-shield]][HuggingFace-url]
-[![whisper][whisper-shield]][whisper-url]
+[![Node][Node-shield]][Node-url]
+[![Telegram][Telegram-shield]][Telegram-url]
+[![OpenAI][openai-shield]][openai-url]
 
 </div>
 
@@ -19,7 +17,7 @@
 
 - [Ziel](#ziel)
 - [LaTeX](#bachelorarbeit-latex)
-- [Projekt Struktur](#structure)
+- [Projekt Struktur](#struktur)
 - [Setup](#setup)
 - [Deployment](#deployment)
 - [Docker-compose](#docker-compose)
@@ -31,9 +29,9 @@
 
 Das Ziel dieser Bachelorarbeit besteht darin zu untersuchen, wie sich aus umfangreichem Audiomaterial aus Radioprogrammen oder Podcasts on-the-fly ein eigener Podcast zusammenstellen lässt, der relevante Ausschnitte aus einer Vielzahl von Audiomaterial enthält.
 
-Ein möglicher Anwendungsfall wäre ein/e Benutzer*in, die/der sich über das Thema "Überfischung der Meere" informieren möchte und dafür genau 20 Minuten während einer Autofahrt einplant. 
-Das System erstellt nun einen Zusammenschnitt aus verschiedenen Podcast Episoden zu diesem Thema, der 20 Minuten lang ist und stellt ihn dem/der Benutzer*in zur Verfügung. 
-Der Vorteil für den/die Nutzer*in liegt darin, dass er/sie selbst das Thema auswählen und die exakte Länge festlegen kann, um beispielsweise während einer 20-minütigen Autofahrt einen Podcast anzuhören. 
+Ein möglicher Anwendungsfall wäre ein/e Benutzer\*in, die/der sich über das Thema "Überfischung der Meere" informieren möchte und dafür genau 20 Minuten während einer Autofahrt einplant. 
+Das System erstellt nun einen Zusammenschnitt aus verschiedenen Podcast Episoden zu diesem Thema, der 20 Minuten lang ist und stellt ihn dem/der Benutzer\*in zur Verfügung. 
+Der Vorteil für den/die Nutzer\*in liegt darin, dass er/sie selbst das Thema auswählen und die exakte Länge festlegen kann, um beispielsweise während einer 20-minütigen Autofahrt einen Podcast anzuhören. 
 Außerdem werden das Thema von verschiedenen Personen aus unterschiedlichen Blickpunkten erklärt. 
 
 Für die Interaktion mit dem Benutzer soll außerdem eine Grafische Benutzeroberfläche bereitgestellt werden, die dem Nutzer die Auswahl eines Themas und die Länge der Podcast Episode ermöglicht.
@@ -47,9 +45,9 @@ Die gesamte Bachelorarbeit ist dort im Branch LaTeX zu finden.
 Im Branch exposee ist ein kleines Exposee für die Bachelorarbeit, welches im Vorfeld entstand.
 
 
-## Structure
+## Struktur
 
-Das Projekt besteht aus 3 Haupt-Branches, master, deploy und self-deploy.
+Das Projekt besteht aus drei Haupt-Branches, master, deploy und self-deploy.
 Die Branches master und deploy sind nahezu identisch. 
 Allerdings wird nur der Branch master vom Shadowbroker auch wirklich deployed.
 Im Branch self-deploy ist eine docker-compose.yaml auf Root Ebene mit der das Projekt gestartet werden kann.
@@ -58,19 +56,19 @@ Außerdem sind die Dockerfiles dort so konfiguriert, dass Sie automatisch laufen
 
 Die Ordnerstruktur sieht wie folgt aus: 
 
-chroma:
+`/chroma`:
 - die Chroma Vektor-Datenbank, diese ist nicht im Repository, da sie ca. 7 GB umfasst. 
 
-docs
+`/docs`
 - weitere Dokumentation des Projektes
 
-k8s
+`/k8s`
 - Kubernetes Files 
 
-telegram-bot
+`/telegram-bot`
 - Der Telegram-Bot in Typescript, der die API vom webserver benutzt, um Telegram Nachrichten zu verarbeiten
 
-webserver
+`/webserver`
 - Der Flask Webserver und die gesamte Logik des Systems. Benutzt sowohl eine eigene SQLite Datenbank als auch die Chroma Datenbank. 
 
 
@@ -87,7 +85,7 @@ git clone https://github.com/digitalegarage/podcast-generator.git
 
 ### Env Variablen
 
-- Erstelle ein $\textcolor{brown}{\text{.env file}}$ und ein $\textcolor{brown}{\text{.docker\_env file}}$ im [root folder](/) und setze die Environment Variablen.
+- Erstelle ein $\textcolor{brown}{\text{.env file}}$ und ein $\textcolor{brown}{\text{.docker-env file}}$ im [root folder](/) und setze die Environment Variablen.
 
 ```sh
 # .env example
@@ -119,7 +117,13 @@ pip install python-dotenv
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+export PYTHONPATH=$PWD/scripts
 ```
+Außerdem muss die PYTHONPATH env Variable auf den scripts Folder zeigen.
+```sh
+export PYTHONPATH=$PWD/webserver/scripts
+```
+
 
 Der Webserver kann dann gestartet werden mit 
 ```sh
@@ -178,11 +182,11 @@ Außerdem gibt es Skripte zum Vergleich von verschiedenen Embeddingmodellen.
 [python-shield]: https://img.shields.io/badge/Python-3.9-3776AB.svg?style=flat&logo=python&logoColor=white
 [python-url]: https://www.python.org
 
-[pytorch-shield]: https://img.shields.io/badge/PyTorch-latest-EE4C2C.svg?style=flat&logo=pytorch
-[pytorch-url]:https://pytorch.org
+[Node-shield]: https://img.shields.io/node/v/typescript?logo=npm
+[Node-url]: https://nodejs.org/en
 
-[HuggingFace-shield]: https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-latest-orange
-[HuggingFace-url]: https://huggingface.co/
+[Telegram-shield]: https://img.shields.io/badge/telegram-latest-50a1db.svg?logo=telegram
+[Telegram-url]: https://t.me/PodcastGenerator
 
-[whisper-shield]: https://img.shields.io/badge/Whisper-74aa9c?logo=openai&logoColor=white
-[whisper-url]: https://github.com/openai/whisper
+[openai-shield]: https://img.shields.io/badge/OpenAI-74aa9c?logo=openai&logoColor=white
+[openai-url]: https://openai.com/
