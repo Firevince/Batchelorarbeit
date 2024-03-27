@@ -17,15 +17,17 @@
 <details>
 <summary>Table of Contents</summary>
 
-- [Ziel](##ziel)
-- [LaTeX](##bachelorarbeit-latex)
-- [Projekt Struktur](##structure)
-- [Setup](##setup)
-- [Deployment](##docker)
+- [Ziel](#ziel)
+- [LaTeX](#bachelorarbeit-latex)
+- [Projekt Struktur](#structure)
+- [Setup](#setup)
+- [Deployment](#deployment)
+- [Docker-compose](#docker-compose)
+- [Weiterentwicklung](#weiterentwicklung)
 
 </details>
 
-## <u>Ziel</u>
+## Ziel
 
 Das Ziel dieser Bachelorarbeit besteht darin zu untersuchen, wie sich aus umfangreichem Audiomaterial aus Radioprogrammen oder Podcasts on-the-fly ein eigener Podcast zusammenstellen lässt, der relevante Ausschnitte aus einer Vielzahl von Audiomaterial enthält.
 
@@ -37,21 +39,45 @@ Außerdem werden das Thema von verschiedenen Personen aus unterschiedlichen Blic
 Für die Interaktion mit dem Benutzer soll außerdem eine Grafische Benutzeroberfläche bereitgestellt werden, die dem Nutzer die Auswahl eines Themas und die Länge der Podcast Episode ermöglicht.
 
 
-## <u>Bachelorarbeit LaTeX</u>
+## Bachelorarbeit LaTeX
 
-Das ist das Repository für das Deployment meiner Bachelorarbeit.
+Das ist das Repository für das Deployment meiner Bachelorarbeit auf der pub. Infrastruktur.
 Das originale Repository mit allen Jupyter-Notebooks zum Testen von verschiedenen Methoden zur Verbesserung ist [hier](https://github.com/Firevince/Batchelorarbeit) zu finden.
 Die gesamte Bachelorarbeit ist dort im Branch LaTeX zu finden.
 Im Branch exposee ist ein kleines Exposee für die Bachelorarbeit, welches im Vorfeld entstand.
 
-## <u> Structure </u>
 
-Das Projekt besteht aus 
+## Structure
+
+Das Projekt besteht aus 3 Haupt-Branches, master, deploy und self-deploy.
+Die Branches master und deploy sind nahezu identisch. 
+Allerdings wird nur der Branch master vom Shadowbroker auch wirklich deployed.
+Im Branch self-deploy ist eine docker-compose.yaml auf Root Ebene mit der das Projekt gestartet werden kann.
+Außerdem sind die Dockerfiles dort so konfiguriert, dass Sie automatisch laufen, ohne über Kubernetes exteren Volumes anzuschließen.
 
 
-## <u> Setup </u>
+Die Ordnerstruktur sieht wie folgt aus: 
 
-- Clone das Repository:
+chroma:
+- die Chroma Vektor-Datenbank, diese ist nicht im Repository, da sie ca. 7 GB umfasst. 
+
+docs
+- weitere Dokumentation des Projektes
+
+k8s
+- Kubernetes Files 
+
+telegram-bot
+- Der Telegram-Bot in Typescript, der die API vom webserver benutzt, um Telegram Nachrichten zu verarbeiten
+
+webserver
+- Der Flask Webserver und die gesamte Logik des Systems. Benutzt sowohl eine eigene SQLite Datenbank als auch die Chroma Datenbank. 
+
+
+
+## Setup 
+
+### Clone das Repository:
 
 ```sh
 mkdir podcast_generator
@@ -59,37 +85,88 @@ cd podcast_generator
 git clone https://github.com/digitalegarage/podcast-generator.git
 ```
 
+### Env Vraiblen
 
-- Erstelle ein $`\textcolor{red}{\text{.env file}}`$ und ein $`\textcolor{red}{\text{.docker\_env file}}`$ im [root folder](/) und setze die Environment Variablen.
+- Erstelle ein $\textcolor{brown}{\text{.env file}}$ und ein $\textcolor{brown}{\text{.docker\_env file}}$ im [root folder](/) und setze die Environment Variablen.
 
 ```sh
 # .env example
 AUDIO_SEGMENT_PATH=<path/to/temporary/audiosegments>
-AUDIO_SOURCE_PATH=<path/to/mp3s> # kann sehr viel Daten beanspruchen
+AUDIO_SOURCE_PATH=<path/to/mp3s>
 CHROMADB_HOST=localhost
-CHROMADB_PATH=/Users/br/Projects/Bachelorarbeit/webserver/data/chromadb
+CHROMADB_PATH=<path/to/chroma/db>
 CHROMADB_PORT=8000
 DATA_PATH=<path/to/data/directory>
 OPENAI_KEY=<your_api_token> 
 SERVER_PATH=<path/to/flask/server>
 ```
 
-Zur Funktion des Projektes sind die folgenden Files noch notwendig:
+### Weitere Files
+
+Zur Funktion des Projektes sind die folgenden Directories/Files noch notwendig:
+
+- chroma/chromadb directory - enthält die Chroma Datenbank (eine sqlite db und eine direcctory mit binary data)
+
+- webserver/data - benötigt noch ein inter.wav als Audio, die zwischen den einzelnen Segmenten gespielt wird, sowie eine transcritpts.sqlite 
+
+Bei Bedarf entweder bei SRE nachfrage, ob sie die Production-Datenbanken sharen können, die Momentan in einem gcp-bucket angeschlossen ist, oder mich anschreiben (zum Beispiel über Telegram @f1revince).
+
+### Development 
+
+Um aktiv zu entwickeln, bietet es sich an, ein python virtual environment im root folder zu erstellen.
+```sh
+pip install python-dotenv 
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Der Webserver kann dann gestartet werden mit 
+```sh
+python webserver/scripts/server/app.py
+```
+oder 
+```sh
+gunicorn -w 4 -b 0.0.0.0:5000 --timeout 600 webserver.scripts.server.app:app
+```
+Die chromadb kann dann gestartet werden über 
+```sh
+chroma run --path data/chromadb 
+```
+Der Telegram-Bot kann gestartet werden über 
+```sh
+npm start --prefix scripts/telegram_bot
+```
 
 
 
-## <u> Docker </u>
 
-### Docker container
+## Deployment
 
-Das Projekt kann auch in einem Docker container gestartet werden mit 
+Der Master-Branch des Projektes wird automatisch über den Shadowbroker deployed. 
+Durch das Jenkinsfile-pub wird das Projekt in die Jenkins CI-Pipeline der pub aufgenommen.
+Die einzelnen Dockercontainer werden gebaut und der Webserver ist dann über 
+https://web.master.podcast-generator.pub-master.tech erreichbar.
+Der Telegram-Bot ist über https://t.me/PodcastGenerator verfügbar.
+
+
+## Docker-compose
+
+
+Wenn alle Daten vorhanden sind, kann das Projekt als docker-compose gestartet werden mit.
 
 ```sh
 docker-compose up
 ```
 
+## Weiterentwicklung
 
-## <u> Author </u>
+Zur Weiterentwicklung des Projektes ist das [Haupt-Repo](https://github.com/Firevince/Batchelorarbeit) vermutlich besser geeignet.
+Darin sind Skripte zur Transkription neuer Podcast-Episoden, dem Einfügen neuer Daten in die Datenbank und Visualisierungen der Daten vorhanden.
+Außerdem gibt es Skripte zum Vergleich von verschiedenen Embeddingmodellen.
+
+
+## Author
 
 [@Vincent](https://github.com/firevince)
 
