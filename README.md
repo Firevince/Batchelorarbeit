@@ -85,7 +85,7 @@ cd podcast_generator
 git clone https://github.com/digitalegarage/podcast-generator.git
 ```
 
-### Env Vraiblen
+### Env Variablen
 
 - Erstelle ein $\textcolor{brown}{\text{.env file}}$ und ein $\textcolor{brown}{\text{.docker\_env file}}$ im [root folder](/) und setze die Environment Variablen.
 
@@ -131,7 +131,7 @@ gunicorn -w 4 -b 0.0.0.0:5000 --timeout 600 webserver.scripts.server.app:app
 ```
 Die chromadb kann dann gestartet werden über 
 ```sh
-chroma run --path data/chromadb 
+chroma run --path chroma/chromadb 
 ```
 Der Telegram-Bot kann gestartet werden über 
 ```sh
